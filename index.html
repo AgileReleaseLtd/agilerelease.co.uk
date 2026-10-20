@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth scroll-pt-24">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' https://www.googletagmanager.com; style-src 'self'; font-src 'self'; img-src 'self' https://*.google-analytics.com https://*.googletagmanager.com; connect-src https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; base-uri 'none'; form-action 'none'; object-src 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4f46e5">
+    <title>Agile Release - Bespoke Software Studio & Consultancy</title>
+    <meta name="description" content="Agile Release is a UK software studio and consultancy. We build and run our own products — including EasyTaxer — and deliver bespoke software for teams that need to ship.">
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" href="favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Agile Release">
+    <meta property="og:title" content="Agile Release - Bespoke Software Studio & Consultancy">
+    <meta property="og:description" content="A UK software studio and consultancy that builds its own products and delivers bespoke software for teams that need to ship.">
+<meta property="og:image" content="https://agilerelease.co.uk/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Agile Release - Bespoke Software Studio & Consultancy">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://agilerelease.co.uk/og-image.png">
+    <meta property="og:url" content="https://agilerelease.co.uk/">
+
+    <link rel="canonical" href="https://agilerelease.co.uk/">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Agile Release",
+      "legalName": "Agile Release Limited",
+      "url": "https://agilerelease.co.uk/",
+      "email": "info@agilerelease.co.uk"
+    }
+    </script>
+
+    <!-- Fonts: Plus Jakarta Sans (matches the EasyTaxer template) -->
+    <link rel="stylesheet" href="css/fonts.css">
+
+    <link rel="stylesheet" href="css/tailwind.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+
+    <script src="js/site.js" defer></script>
+    <script src="js/ga4-config.js" defer></script>
+    <script src="js/consent.js" defer></script>
+
+</head>
+<body class="font-sans text-slate-600 antialiased selection:bg-brand-100 relative">
+
+<!-- Navbar -->
+<nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-20 items-center">
+            <div class="flex items-center gap-2">
+                <a href="index.html" class="flex items-center gap-2 group">
+                    <div class="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center text-white font-bold text-xs group-hover:bg-brand-700 transition">AR</div>
+                    <span class="font-bold text-xl text-slate-900 tracking-tight">Agile Release</span>
+                </a>
+            </div>
+
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#services" class="text-sm font-medium hover:text-brand-600 transition">Services</a>
+                <a href="#websites" class="text-sm font-medium hover:text-brand-600 transition">Websites</a>
+                <a href="#products" class="text-sm font-medium hover:text-brand-600 transition">Products</a>
+                <a href="#approach" class="text-sm font-medium hover:text-brand-600 transition">Approach</a>
+                <a href="about-us.html" class="text-sm font-medium hover:text-brand-600 transition">About</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a href="mailto:info@agilerelease.co.uk" class="hidden sm:block text-sm font-medium text-slate-900 hover:text-brand-600">Contact</a>
+                <a href="#contact" class="bg-slate-900 text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-slate-800 transition shadow-lg shadow-slate-200">Start a project</a>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-slate-600 hover:text-slate-900 focus:outline-none ml-2" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <i id="mobile-menu-icon" aria-hidden="true" class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Navigation Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 absolute w-full shadow-xl z-40">
+        <div class="px-4 py-6 flex flex-col space-y-4">
+            <a href="#services" class="text-base font-semibold text-slate-900">Services</a>
+            <a href="#websites" class="text-base font-semibold text-slate-900">Websites</a>
+            <a href="#products" class="text-base font-semibold text-slate-900">Products</a>
+            <a href="#approach" class="text-base font-semibold text-slate-900">Approach</a>
+            <a href="about-us.html" class="text-base font-semibold text-slate-900">About</a>
+            <hr class="border-slate-100 my-2">
+            <a href="#contact" class="text-base font-semibold text-slate-900">Start a project</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="pt-32 pb-20 hero-bg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-50 border border-brand-100 text-brand-600 text-xs font-bold mb-8">
+            <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
+            UK software studio &amp; consultancy
+        </div>
+        <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 tracking-tight mb-6 leading-tight">
+            We build software <br class="hidden md:block" />
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-violet-600">that actually ships.</span>
+        </h1>
+        <p class="text-lg md:text-xl text-slate-500 max-w-2xl mx-auto mb-10">
+            Agile Release is a product studio and consultancy. We build and run our own products — including the HMRC-recognised tax platform EasyTaxer — and bring that same pragmatic delivery to clients who need real software in production, not another slide deck.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="#contact" class="bg-brand-700 text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-brand-800 transition shadow-xl shadow-brand-200 flex items-center justify-center gap-2">
+                Start a project <i aria-hidden="true" class="fa-solid fa-arrow-right text-sm"></i>
+            </a>
+            <a href="#products" class="bg-white text-slate-700 border border-slate-200 px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-slate-50 transition flex items-center justify-center">
+                See our products
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Capabilities strip -->
+<section class="py-10 border-b border-slate-100 bg-white">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+        <p class="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-6">What we work with, day to day</p>
+        <div class="flex flex-wrap justify-center gap-8 md:gap-16 text-slate-500">
+            <div class="flex items-center gap-2 text-lg font-bold"><i aria-hidden="true" class="fa-solid fa-code text-2xl"></i> Web &amp; APIs</div>
+            <div class="flex items-center gap-2 text-lg font-bold"><i aria-hidden="true" class="fa-brands fa-android text-2xl"></i> Mobile</div>
+            <div class="flex items-center gap-2 text-lg font-bold"><i aria-hidden="true" class="fa-solid fa-cloud text-2xl"></i> Cloud</div>
+            <div class="flex items-center gap-2 text-lg font-bold"><i aria-hidden="true" class="fa-solid fa-diagram-project text-2xl"></i> Integrations</div>
+            <div class="flex items-center gap-2 text-lg font-bold"><i aria-hidden="true" class="fa-solid fa-lock text-2xl"></i> Security</div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Grid (Bento Style) -->
+<section id="services" class="py-24 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">What we do</h2>
+            <p class="text-lg text-slate-500">Product engineering and consultancy from a team that also ships its own software.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Large Feature -->
+            <div class="md:col-span-2 bg-white rounded-3xl p-8 shadow-sm border border-slate-100 hover:shadow-md transition">
+                <div class="h-full flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center text-xl mb-6"><i aria-hidden="true" class="fa-solid fa-rocket"></i></div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-2">Product engineering, end to end</h3>
+                        <p class="text-slate-500">From a blank repository to a live, monitored service. We take on discovery, architecture, build, release and the unglamorous operational work that keeps software running — and we do it in small, shippable increments so you see progress every week, not every quarter.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tall Feature -->
+            <div class="md:col-span-1 bg-slate-900 text-white rounded-3xl p-8 shadow-sm hover:shadow-md transition relative overflow-hidden">
+                <div class="relative z-10">
+                    <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-xl mb-6"><i aria-hidden="true" class="fa-solid fa-compass-drafting"></i></div>
+                    <h3 class="text-2xl font-bold mb-2">Technical consultancy</h3>
+                    <p class="text-slate-300">Architecture reviews, delivery rescues and a straight answer on the build-vs-buy call. We embed with your team and leave it stronger than we found it.</p>
+                </div>
+                <div class="absolute bottom-0 right-0 w-32 h-32 bg-brand-500 rounded-full blur-3xl opacity-20"></div>
+            </div>
+
+            <!-- Small Feature 1 -->
+            <div class="bg-white rounded-3xl p-8 shadow-sm border border-slate-100 hover:shadow-md transition">
+                <div class="w-12 h-12 bg-green-100 text-green-600 rounded-xl flex items-center justify-center text-xl mb-4"><i aria-hidden="true" class="fa-brands fa-android"></i></div>
+                <h3 class="text-xl font-bold text-slate-900 mb-2">Mobile &amp; apps</h3>
+                <p class="text-slate-500 text-sm">Android and cross-platform apps — designed, published and maintained. We run our own portfolio of games, so we know the store lifecycle first-hand.</p>
+            </div>
+
+            <!-- Small Feature 2 -->
+            <div class="bg-white rounded-3xl p-8 shadow-sm border border-slate-100 hover:shadow-md transition">
+                <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center text-xl mb-4"><i aria-hidden="true" class="fa-solid fa-cloud"></i></div>
+                <h3 class="text-xl font-bold text-slate-900 mb-2">Cloud &amp; platform</h3>
+                <p class="text-slate-500 text-sm">Deployment pipelines, infrastructure and observability that a small team can actually operate — no cloud bill surprises.</p>
+            </div>
+
+            <!-- Small Feature 3 -->
+            <div class="bg-white rounded-3xl p-8 shadow-sm border border-slate-100 hover:shadow-md transition">
+                <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center text-xl mb-4"><i aria-hidden="true" class="fa-solid fa-diagram-project"></i></div>
+                <h3 class="text-xl font-bold text-slate-900 mb-2">Integrations &amp; APIs</h3>
+                <p class="text-slate-500 text-sm">Third-party and government APIs, wired up properly. We built a full HMRC Making Tax Digital integration for EasyTaxer — compliance-grade integration is our comfort zone.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Websites for businesses -->
+<section id="websites" class="py-24 bg-white border-t border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Websites for businesses</h2>
+            <p class="text-lg text-slate-500">A fast, good-looking website for your business, live on your own domain. Built by the same team that runs our own products.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Reference: Seyma Driving School -->
+            <div class="md:col-span-2 bg-slate-50 rounded-3xl p-8 shadow-sm border border-slate-100 hover:shadow-md transition flex flex-col justify-between">
+                <div>
+                    <p class="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-6">Recent work</p>
+                    <img src="img/seymadrivingschool.png" width="1200" height="750" alt="The Seyma Driving School home page" class="w-full rounded-2xl border border-slate-100 shadow-sm mb-6">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-2">Seyma Driving School</h3>
+                    <p class="text-slate-600 mb-6">A site for an independent driving instructor in north-east London. We took the look from her flyer, set out her lessons, price and areas, added a revision page for the driving test, and built an enquiry form that opens WhatsApp with the pupil&apos;s details already written. It went from a newly registered domain to a live site in a day.</p>
+                </div>
+                <a href="https://seymadrivingschool.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-brand-600 font-semibold hover:underline">
+                    Visit seymadrivingschool.com <i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                </a>
+            </div>
+
+            <!-- What you get -->
+            <div class="md:col-span-1 bg-slate-900 text-white rounded-3xl p-8 shadow-sm hover:shadow-md transition relative overflow-hidden flex flex-col justify-between">
+                <div class="relative z-10">
+                    <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-xl mb-6"><i aria-hidden="true" class="fa-solid fa-globe"></i></div>
+                    <h3 class="text-2xl font-bold mb-4">What you get</h3>
+                    <ul class="space-y-4 text-slate-300">
+                        <li class="flex items-center gap-2"><i aria-hidden="true" class="fa-solid fa-check text-sm"></i> A design built around your brand</li>
+                        <li class="flex items-center gap-2"><i aria-hidden="true" class="fa-solid fa-check text-sm"></i> Pages that work properly on phones</li>
+                        <li class="flex items-center gap-2"><i aria-hidden="true" class="fa-solid fa-check text-sm"></i> Your own domain, served over HTTPS</li>
+                        <li class="flex items-center gap-2"><i aria-hidden="true" class="fa-solid fa-check text-sm"></i> Enquiries by WhatsApp, phone or email</li>
+                        <li class="flex items-center gap-2"><i aria-hidden="true" class="fa-solid fa-check text-sm"></i> The basics search engines look for</li>
+                    </ul>
+                </div>
+                <a href="#contact" class="relative z-10 mt-8 bg-white text-slate-900 px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-slate-50 transition flex items-center justify-center gap-2">
+                    Get a website for your business <i aria-hidden="true" class="fa-solid fa-arrow-right text-sm"></i>
+                </a>
+                <div class="absolute bottom-0 right-0 w-32 h-32 bg-brand-500 rounded-full blur-3xl opacity-20"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Products / Portfolio -->
+<section id="products" class="py-24 bg-white border-t border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Our products</h2>
+            <p class="text-lg text-slate-500">We don&apos;t just consult on software — we build, own and operate it. Here&apos;s what we run.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- EasyTaxer — real product -->
+            <div class="lg:col-span-2 bg-slate-50 rounded-3xl p-8 shadow-sm border border-slate-100 hover:shadow-md transition flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 bg-sky-600 rounded-xl flex items-center justify-center text-white font-bold text-lg">E</div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-slate-900">EasyTaxer</h3>
+                            <p class="text-sm text-slate-500">HMRC-recognised Making Tax Digital software</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 mb-6">Our flagship product. EasyTaxer helps UK sole traders and landlords meet their Making Tax Digital for Income Tax obligations — recording income and expenses, calculating tax in real time, and submitting quarterly updates and final declarations directly to HMRC. It&apos;s a live, revenue-generating SaaS platform we designed, built and run in-house.</p>
+                </div>
+                <a href="https://www.easytaxer.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-brand-600 font-semibold hover:underline">
+                    Visit easytaxer.com <i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                </a>
+            </div>
+
+            <!-- Android games portfolio -->
+            <div class="bg-slate-900 text-white rounded-3xl p-8 shadow-sm hover:shadow-md transition relative overflow-hidden flex flex-col justify-between">
+                <div class="relative z-10">
+                    <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-xl mb-6"><i aria-hidden="true" class="fa-solid fa-gamepad"></i></div>
+                    <h3 class="text-2xl font-bold mb-2">Android games</h3>
+                    <p class="text-slate-300 mb-4">23 casual, easy-to-pick-up mobile games, live on Google Play — built, shipped and maintained by the same team.</p>
+                </div>
+                <a href="https://play.google.com/store/apps/dev?id=4658730428149254369" target="_blank" rel="noopener noreferrer" class="relative z-10 mt-8 bg-white text-slate-900 px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-slate-50 transition flex items-center justify-center gap-2">
+                    <i aria-hidden="true" class="fa-brands fa-google-play text-sm"></i> See our games on Google Play <i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                </a>
+                <div class="absolute bottom-0 right-0 w-32 h-32 bg-brand-500 rounded-full blur-3xl opacity-20"></div>
+            </div>
+        </div>
+
+        <h3 class="text-xl font-bold text-slate-900 mt-12 mb-4">Our games on Google Play</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <a href="https://play.google.com/store/apps/details?id=uk.co.agilerelease.game2048" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-4 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                <img src="img/games/game2048.webp" width="48" height="48" alt="" loading="lazy" class="w-12 h-12 rounded-xl shrink-0">
+                <span class="block">
+                    <span class="block font-bold text-slate-900 leading-tight">2048 Cosmos</span>
+                    <span class="block text-sm text-slate-500">Number Puzzle</span>
+                </span>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=uk.co.agilerelease.wordsearch" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-4 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                <img src="img/games/wordsearch.webp" width="48" height="48" alt="" loading="lazy" class="w-12 h-12 rounded-xl shrink-0">
+                <span class="block">
+                    <span class="block font-bold text-slate-900 leading-tight">Word Search</span>
+                    <span class="block text-sm text-slate-500">Word Find Puzzle</span>
+                </span>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=uk.co.agilerelease.drop2048" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-4 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                <img src="img/games/drop2048.webp" width="48" height="48" alt="" loading="lazy" class="w-12 h-12 rounded-xl shrink-0">
+                <span class="block">
+                    <span class="block font-bold text-slate-900 leading-tight">2048 Drop</span>
+                    <span class="block text-sm text-slate-500">Falling Tile Merge</span>
+                </span>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=uk.co.agilerelease.idlegalaxy" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-4 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                <img src="img/games/idlegalaxy.webp" width="48" height="48" alt="" loading="lazy" class="w-12 h-12 rounded-xl shrink-0">
+                <span class="block">
+                    <span class="block font-bold text-slate-900 leading-tight">Starbit</span>
+                    <span class="block text-sm text-slate-500">Space Idle Tycoon</span>
+                </span>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=uk.co.agilerelease.blockpuzzle" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-4 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                <img src="img/games/blockpuzzle.webp" width="48" height="48" alt="" loading="lazy" class="w-12 h-12 rounded-xl shrink-0">
+                <span class="block">
+                    <span class="block font-bold text-slate-900 leading-tight">Block Puzzle</span>
+                    <span class="block text-sm text-slate-500">9x9 Sudoku Grid</span>
+                </span>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=uk.co.agilerelease.hexaway" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-4 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                <img src="img/games/hexaway.webp" width="48" height="48" alt="" loading="lazy" class="w-12 h-12 rounded-xl shrink-0">
+                <span class="block">
+                    <span class="block font-bold text-slate-900 leading-tight">Hexodus</span>
+                    <span class="block text-sm text-slate-500">Hexa Block Puzzle</span>
+                </span>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=uk.co.agilerelease.cosmosmerge" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-4 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                <img src="img/games/cosmosmerge.webp" width="48" height="48" alt="" loading="lazy" class="w-12 h-12 rounded-xl shrink-0">
+                <span class="block">
+                    <span class="block font-bold text-slate-900 leading-tight">Cosmos Merge</span>
+                    <span class="block text-sm text-slate-500">Planet Drop</span>
+                </span>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=uk.co.agilerelease.cosmospicross" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-4 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                <img src="img/games/cosmospicross.webp" width="48" height="48" alt="" loading="lazy" class="w-12 h-12 rounded-xl shrink-0">
+                <span class="block">
+                    <span class="block font-bold text-slate-900 leading-tight">Cosmos Nonograms</span>
+                    <span class="block text-sm text-slate-500">Logic Art</span>
+                </span>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=uk.co.agilerelease.wordconnect" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-4 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                <img src="img/games/wordconnect.webp" width="48" height="48" alt="" loading="lazy" class="w-12 h-12 rounded-xl shrink-0">
+                <span class="block">
+                    <span class="block font-bold text-slate-900 leading-tight">Word Connect</span>
+                    <span class="block text-sm text-slate-500">Anagram Puzzle</span>
+                </span>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=uk.co.agilerelease.killersudoku" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-4 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                <img src="img/games/killersudoku.webp" width="48" height="48" alt="" loading="lazy" class="w-12 h-12 rounded-xl shrink-0">
+                <span class="block">
+                    <span class="block font-bold text-slate-900 leading-tight">Killer Sudoku</span>
+                    <span class="block text-sm text-slate-500">Sum Puzzles</span>
+                </span>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=uk.co.agilerelease.jigsaw" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-4 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                <img src="img/games/jigsaw.webp" width="48" height="48" alt="" loading="lazy" class="w-12 h-12 rounded-xl shrink-0">
+                <span class="block">
+                    <span class="block font-bold text-slate-900 leading-tight">Jigsaw Puzzles</span>
+                    <span class="block text-sm text-slate-500">Cosmos Art</span>
+                </span>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=uk.co.agilerelease.mahjong" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-4 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                <img src="img/games/mahjong.webp" width="48" height="48" alt="" loading="lazy" class="w-12 h-12 rounded-xl shrink-0">
+                <span class="block">
+                    <span class="block font-bold text-slate-900 leading-tight">Mahjong Solitaire</span>
+                    <span class="block text-sm text-slate-500">Tile Pairs</span>
+                </span>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=uk.co.agilerelease.triplematch" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-4 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                <img src="img/games/triplematch.webp" width="48" height="48" alt="" loading="lazy" class="w-12 h-12 rounded-xl shrink-0">
+                <span class="block">
+                    <span class="block font-bold text-slate-900 leading-tight">Trinket</span>
+                    <span class="block text-sm text-slate-500">Tile Match Puzzle</span>
+                </span>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=uk.co.agilerelease.starblast" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-4 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                <img src="img/games/starblast.webp" width="48" height="48" alt="" loading="lazy" class="w-12 h-12 rounded-xl shrink-0">
+                <span class="block">
+                    <span class="block font-bold text-slate-900 leading-tight">Star Blast</span>
+                    <span class="block text-sm text-slate-500">Tap Block Puzzle</span>
+                </span>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=uk.co.agilerelease.pipeconnect" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-4 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                <img src="img/games/pipeconnect.webp" width="48" height="48" alt="" loading="lazy" class="w-12 h-12 rounded-xl shrink-0">
+                <span class="block">
+                    <span class="block font-bold text-slate-900 leading-tight">Pipe Connect</span>
+                    <span class="block text-sm text-slate-500">Dot Puzzle</span>
+                </span>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=uk.co.agilerelease.taparrows" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-4 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                <img src="img/games/taparrows.webp" width="48" height="48" alt="" loading="lazy" class="w-12 h-12 rounded-xl shrink-0">
+                <span class="block">
+                    <span class="block font-bold text-slate-900 leading-tight">Tap Away</span>
+                    <span class="block text-sm text-slate-500">Arrow Puzzle</span>
+                </span>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=uk.co.agilerelease.yarnloop" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-4 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                <img src="img/games/yarnloop.webp" width="48" height="48" alt="" loading="lazy" class="w-12 h-12 rounded-xl shrink-0">
+                <span class="block">
+                    <span class="block font-bold text-slate-900 leading-tight">Color Loader</span>
+                    <span class="block text-sm text-slate-500">Tile Puzzle</span>
+                </span>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=uk.co.agilerelease.roost" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-4 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                <img src="img/games/roost.webp" width="48" height="48" alt="" loading="lazy" class="w-12 h-12 rounded-xl shrink-0">
+                <span class="block">
+                    <span class="block font-bold text-slate-900 leading-tight">Roost</span>
+                    <span class="block text-sm text-slate-500">Owl Logic Puzzle</span>
+                </span>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=uk.co.agilerelease.busjam" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-4 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                <img src="img/games/busjam.webp" width="48" height="48" alt="" loading="lazy" class="w-12 h-12 rounded-xl shrink-0">
+                <span class="block">
+                    <span class="block font-bold text-slate-900 leading-tight">Bus Depot</span>
+                    <span class="block text-sm text-slate-500">Color Sort Puzzle</span>
+                </span>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=uk.co.agilerelease.coinsort" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-4 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                <img src="img/games/coinsort.webp" width="48" height="48" alt="" loading="lazy" class="w-12 h-12 rounded-xl shrink-0">
+                <span class="block">
+                    <span class="block font-bold text-slate-900 leading-tight">Coin Sort</span>
+                    <span class="block text-sm text-slate-500">Sorting Puzzle</span>
+                </span>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=uk.co.agilerelease.watersort" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-4 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                <img src="img/games/watersort.webp" width="48" height="48" alt="" loading="lazy" class="w-12 h-12 rounded-xl shrink-0">
+                <span class="block">
+                    <span class="block font-bold text-slate-900 leading-tight">Water Sort</span>
+                    <span class="block text-sm text-slate-500">Pour Color Puzzle</span>
+                </span>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=uk.co.agilerelease.colorbynumber" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-4 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                <img src="img/games/colorbynumber.webp" width="48" height="48" alt="" loading="lazy" class="w-12 h-12 rounded-xl shrink-0">
+                <span class="block">
+                    <span class="block font-bold text-slate-900 leading-tight">Color by Number</span>
+                    <span class="block text-sm text-slate-500">Pixel Art</span>
+                </span>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=uk.co.agilerelease.soccer" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-4 bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                <img src="img/games/soccer.webp" width="48" height="48" alt="" loading="lazy" class="w-12 h-12 rounded-xl shrink-0">
+                <span class="block">
+                    <span class="block font-bold text-slate-900 leading-tight">Curve Soccer</span>
+                    <span class="block text-sm text-slate-500">Football Shots</span>
+                </span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Approach -->
+<section id="approach" class="py-24 bg-slate-50 border-t border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">How we work</h2>
+            <p class="text-lg text-slate-500">Agile in the honest sense of the word — small steps, working software, no theatre.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white rounded-2xl p-6 border border-slate-100">
+                <div class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-4 font-bold">1</div>
+                <h3 class="font-bold text-slate-900 mb-1">Ship early, ship often</h3>
+                <p class="text-sm text-slate-500">You get something working in front of real users fast, then we improve it with evidence rather than guesswork.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 border border-slate-100">
+                <div class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-4 font-bold">2</div>
+                <h3 class="font-bold text-slate-900 mb-1">Owner&apos;s mindset</h3>
+                <p class="text-sm text-slate-500">We treat your product like our own — because we run our own. Decisions are made with the whole lifecycle in view, not just the launch.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 border border-slate-100">
+                <div class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-4 font-bold">3</div>
+                <h3 class="font-bold text-slate-900 mb-1">Built to hand over</h3>
+                <p class="text-sm text-slate-500">Clean code, real tests and documentation, so your team can take the wheel whenever you&apos;re ready.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Let&apos;s build something</h2>
+        <p class="text-lg text-slate-500 mb-8">Have a product to build, a website your business needs, a delivery to rescue, or a technical decision to get right? Tell us what you&apos;re working on and we&apos;ll come back with a straight answer.</p>
+        <a href="mailto:info@agilerelease.co.uk" class="inline-flex items-center gap-2 bg-brand-700 text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-brand-800 transition shadow-xl shadow-brand-200">
+            <i aria-hidden="true" class="fa-solid fa-envelope"></i> info@agilerelease.co.uk
+        </a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-white border-t border-slate-100 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
+            <div class="col-span-2 md:col-span-1">
+                <div class="flex items-center gap-2 mb-4">
+                    <div class="w-6 h-6 bg-brand-600 rounded flex items-center justify-center text-white font-bold text-[10px]">AR</div>
+                    <span class="font-bold text-lg text-slate-900">Agile Release</span>
+                </div>
+                <p class="text-sm text-slate-500">A UK software studio &amp; consultancy that builds and runs its own products.</p>
+            </div>
+            <div>
+                <h4 class="font-bold text-slate-900 mb-4">Company</h4>
+                <ul class="space-y-2 text-sm text-slate-500">
+                    <li><a href="about-us.html" class="hover:text-brand-600">About Us</a></li>
+                    <li><a href="#approach" class="hover:text-brand-600">Approach</a></li>
+                    <li><a href="mailto:info@agilerelease.co.uk" class="hover:text-brand-600">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-slate-900 mb-4">Products</h4>
+                <ul class="space-y-2 text-sm text-slate-500">
+                    <li><a href="https://www.easytaxer.com" target="_blank" rel="noopener noreferrer" class="hover:text-brand-600">EasyTaxer</a></li>
+                    <li><a href="https://play.google.com/store/apps/dev?id=4658730428149254369" target="_blank" rel="noopener noreferrer" class="hover:text-brand-600">Android games</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-slate-900 mb-4">Services</h4>
+                <ul class="space-y-2 text-sm text-slate-500">
+                    <li><a href="#services" class="hover:text-brand-600">Product engineering</a></li>
+                    <li><a href="#services" class="hover:text-brand-600">Consultancy</a></li>
+                    <li><a href="#services" class="hover:text-brand-600">Mobile &amp; apps</a></li>
+                    <li><a href="#websites" class="hover:text-brand-600">Websites for businesses</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-slate-900 mb-4">Legal</h4>
+                <ul class="space-y-2 text-sm text-slate-500">
+                    <li><a href="privacy-policy.html" class="hover:text-brand-600">Privacy Policy</a></li>
+                    <li><a href="terms-and-conditions.html" class="hover:text-brand-600">Terms &amp; Conditions</a></li>
+                    <li><a href="cookie-policy.html" class="hover:text-brand-600">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-slate-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-xs text-slate-400">Agile Release Limited, registered in England &amp; Wales (Company No. 13237670, VAT No. 373385181).</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
