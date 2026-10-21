@@ -1,0 +1,5 @@
+# The build output (scripts/build-pages.sh); the workflow builds it fresh on every publish.
+_site/
+.env
+*.log
+.DS_Store

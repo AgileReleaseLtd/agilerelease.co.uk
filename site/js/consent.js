@@ -5,8 +5,8 @@
  * only after the visitor presses Accept; Google Consent Mode v2, everything denied by default.
  *
  * WHAT THIS FILE DOES
- *   1. Reads the measurement id from `js/ga4-config.js`, a one-line file
- *      committed beside this one (an empty string turns analytics off).
+ *   1. Reads the measurement id from `js/ga4-config.js`, a one-line file that
+ *      scripts/build-pages.sh writes from pages.conf (an empty string turns analytics off).
  *   2. No valid id → it STOPS: no banner, no "Cookie settings" link, nothing stored, nothing loaded.
  *   3. A valid id → the stored choice decides: none yet = the banner (Accept and Reject side by side,
  *      equally easy); "granted" = Google's tag is loaded; "denied" = nothing. A "Cookie settings" button
