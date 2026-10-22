@@ -32,7 +32,11 @@ watch the run in the **Actions** tab. A failed build publishes nothing; the prev
 - adds a `Content-Security-Policy` and a referrer policy as `<meta>` tags at the top of every page. The policy
   allows only this site's own files, plus Google Analytics' hosts when an id is set. Pages therefore must not use
   inline `<script>` code, `<style>` blocks, `style=` attributes or `on…=` handlers, or load anything from
-  another site; the build fails if they do.
+  another site; the build fails if they do;
+- checks that `site/sitemap.xml` lists exactly the published pages (https://<site>/ plus the page path, `index.html`
+  as its directory), that a page's canonical link names that same URL, and that `site/robots.txt` names the
+  sitemap. **Add every new page to `site/sitemap.xml`**, or mark it `<meta name="robots" content="noindex">`; the
+  build fails otherwise.
 
 ### Check locally before pushing
 

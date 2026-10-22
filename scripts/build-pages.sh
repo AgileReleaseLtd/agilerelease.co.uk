@@ -14,7 +14,8 @@
 #   4. adds the Content-Security-Policy and referrer policy as <meta> tags right after
 #      <meta charset>, before anything the page loads. The policy allows Google Analytics hosts only
 #      when GA4_MEASUREMENT_ID is set. (frame-ancestors is not allowed in a <meta> CSP, so it is left out.)
-#   5. checks the result, and fails if anything is not as expected.
+#   5. checks the result, and fails if anything is not as expected -- including that site/sitemap.xml
+#      lists exactly the published pages and site/robots.txt names it.
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -105,6 +106,40 @@ while IFS= read -r -d '' f; do
     [[ "$rel" == *.html ]] && continue
     cmp -s "$f" "${OUT}/${rel}" || bad "${rel}: not copied byte-for-byte"
 done < <(find "$SRC" -type f -print0)
+
+# sitemap.xml lists exactly the published pages, so a new page cannot be forgotten and a deleted one
+# cannot leave a dead URL behind. A page's URL is https://SITE_APEX/ plus its path (index.html is the
+# directory URL); a page that carries a canonical <link> must name that same URL. The only way to keep
+# a page out is to say so in the page: <meta name="robots" content="noindex">.
+SITEMAP_URL="https://${SITE_APEX}/sitemap.xml"
+if [[ ! -f "${OUT}/sitemap.xml" ]]; then
+    bad "sitemap.xml is missing (site/sitemap.xml)"
+else
+    declare -A want=()
+    for p in "${PAGES[@]}"; do
+        case "$p" in
+            index.html) url="https://${SITE_APEX}/" ;;
+            */index.html) url="https://${SITE_APEX}/${p%index.html}" ;;
+            *) url="https://${SITE_APEX}/${p}" ;;
+        esac
+        canon="$(grep -o -E '<link rel="canonical" href="[^"]*"' "${OUT}/${p}" | sed -E 's/.*href="([^"]*)"/\1/' || true)"
+        [[ -z "$canon" || "$canon" == "$url" ]] || bad "${p}: canonical ${canon} is not its published URL ${url}"
+        grep -q -E '<meta name="robots" content="[^"]*noindex' "${OUT}/${p}" && continue
+        want["$url"]=1
+    done
+    mapfile -t LOCS < <(grep -o -E '<loc>[^<]*</loc>' "${OUT}/sitemap.xml" | sed -E 's|</?loc>||g')
+    declare -A have=()
+    for u in "${LOCS[@]}"; do
+        [[ -z "${have[$u]:-}" ]] || bad "sitemap.xml lists ${u} twice"
+        have["$u"]=1
+        [[ -n "${want[$u]:-}" ]] || bad "sitemap.xml lists ${u}, which is not a published page"
+    done
+    for u in "${!want[@]}"; do [[ -n "${have[$u]:-}" ]] || bad "sitemap.xml does not list ${u}"; done
+    [[ "${#want[@]}" -ge 1 && "${#LOCS[@]}" -ge 1 ]] || bad "sitemap.xml check read no pages"
+fi
+[[ -f "${OUT}/robots.txt" ]] || bad "robots.txt is missing (site/robots.txt)"
+grep -q -x -F "Sitemap: ${SITEMAP_URL}" "${OUT}/robots.txt" 2> /dev/null \
+    || bad "robots.txt does not name Sitemap: ${SITEMAP_URL}"
 
 [[ "$fail" -eq 0 ]] || die "checks failed; _site/ must not be published"
 echo "build-pages: _site/ ready for ${SITE_APEX} (${#PAGES[@]} pages; Google Analytics: ${GA4_MEASUREMENT_ID:-off})"
