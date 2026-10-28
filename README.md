@@ -8,6 +8,8 @@ The company website of **Agile Release Limited** (Company No. 13237670): a stati
 | Path | What it is |
 | --- | --- |
 | `site/` | The website, exactly as it is published, apart from what the build adds (below). Plain HTML, CSS and JavaScript; no build tools, no external fonts or scripts. |
+| `site/c/roost/` | The landing page for a Roost friend-challenge link: it sends the visitor to the game on Google Play, with the challenge attached. Not indexed. |
+| `site/.well-known/assetlinks.json` | Android App Links: lets the Roost app open `https://agilerelease.co.uk/c/roost` links itself. Lists the app's package and its signing certificate fingerprints. |
 | `pages.conf` | The site's settings: its domain and its Google Analytics 4 measurement id. |
 | `scripts/build-pages.sh` | Builds `_site/` from `site/` and checks the result. |
 | `.github/workflows/pages.yml` | Runs the build and publishes `_site/` to GitHub Pages. |

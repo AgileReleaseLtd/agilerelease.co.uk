@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "uk.co.agilerelease.roost",
+      "sha256_cert_fingerprints": [
+        "B6:C0:97:5E:6B:61:2C:B5:F5:6F:65:E7:5E:64:CC:DE:B5:73:4A:15:CC:FE:8C:BE:C2:E0:50:05:8A:06:97:55",
+        "A7:F8:69:97:8A:DA:8E:29:3A:24:51:ED:C3:4C:5C:CE:15:DE:54:C0:FB:44:A8:DE:59:96:F0:DD:62:0F:20:16"
+      ]
+    }
+  }
+]

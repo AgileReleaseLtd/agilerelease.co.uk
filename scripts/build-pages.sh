@@ -137,6 +137,15 @@ else
     for u in "${!want[@]}"; do [[ -n "${have[$u]:-}" ]] || bad "sitemap.xml does not list ${u}"; done
     [[ "${#want[@]}" -ge 1 && "${#LOCS[@]}" -ge 1 ]] || bad "sitemap.xml check read no pages"
 fi
+# Android App Links: .well-known/assetlinks.json must be published as valid JSON, and .nojekyll must be there too (a
+# dot-folder is otherwise left out of a Jekyll build).
+[[ -f "${OUT}/.nojekyll" ]] || bad ".nojekyll is missing (site/.nojekyll)"
+if [[ -f "${OUT}/.well-known/assetlinks.json" ]]; then
+    python3 -c 'import json, sys; d = json.load(open(sys.argv[1])); assert isinstance(d, list) and d' \
+        "${OUT}/.well-known/assetlinks.json" 2> /dev/null || bad ".well-known/assetlinks.json is not a JSON list of statements"
+else
+    bad ".well-known/assetlinks.json is missing (site/.well-known/assetlinks.json)"
+fi
 [[ -f "${OUT}/robots.txt" ]] || bad "robots.txt is missing (site/robots.txt)"
 grep -q -x -F "Sitemap: ${SITEMAP_URL}" "${OUT}/robots.txt" 2> /dev/null \
     || bad "robots.txt does not name Sitemap: ${SITEMAP_URL}"
