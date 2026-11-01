@@ -1,0 +1,24 @@
+:root { color-scheme: light dark; }
+body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
+       font: 17px/1.55 -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+       color: #1a1c22; background: #f6f3ec; }
+.card { box-sizing: border-box; width: 100%; max-width: 460px; margin: 24px 16px; padding: 28px 24px;
+        background: #ffffff; border-radius: 18px; box-shadow: 0 6px 24px rgba(0, 0, 0, .08); text-align: center; }
+.kicker { margin: 0; color: #8a6d1f; font-size: .85rem; letter-spacing: .04em; text-transform: uppercase; }
+h1 { margin: 6px 0 10px; font-size: 1.6rem; line-height: 1.25; }
+.target { margin: 0 0 6px; font-size: 1.1rem; }
+.note { margin: 0 0 18px; color: #6a7180; font-size: .95rem; }
+.buttons { display: flex; flex-direction: column; gap: 12px; margin: 0 0 18px; }
+.button { display: block; padding: 14px 18px; border-radius: 999px; border: 2px solid #c9a227;
+          color: #5a4510; font-weight: 600; text-decoration: none; }
+.button.primary { background: #e0b43a; border-color: #e0b43a; color: #1a1c22; }
+.button[hidden] { display: none; }
+.small { margin: 0; color: #6a7180; font-size: .82rem; }
+@media (prefers-color-scheme: dark) {
+  body { color: #e8ecf4; background: #0b1026; }
+  .card { background: #161b33; box-shadow: none; }
+  .kicker { color: #e0b43a; }
+  .note, .small { color: #9aa3b8; }
+  .button { color: #f1d27a; border-color: #e0b43a; }
+  .button.primary { color: #0b1026; }
+}
