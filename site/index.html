@@ -236,7 +236,11 @@
         <!-- Sample websites: each lives in its own repo (websiteNN-business-type), copied in by scripts/sync-sample.sh -->
         <div class="mt-8 bg-slate-50 rounded-3xl p-8 shadow-sm border border-slate-100 hover:shadow-md transition">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                <img src="img/website01-fitness-class.webp" width="1200" height="750" alt="The home page of Ironfern Studio, a sample fitness studio website" class="w-full rounded-2xl border border-slate-100 shadow-sm">
+                <!-- The screenshot opens the sample too, for mouse and touch. Keyboard and screen-reader users get the
+                     "Open the sample site" link below instead of hearing the same link twice. -->
+                <a href="website01-fitness-class/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true" class="block">
+                    <img src="img/website01-fitness-class.webp" width="1200" height="750" alt="" class="w-full rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                </a>
                 <div>
                     <p class="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-6">Sample website</p>
                     <h3 class="text-2xl font-bold text-slate-900 mb-2">Ironfern Studio, a fitness studio</h3>
