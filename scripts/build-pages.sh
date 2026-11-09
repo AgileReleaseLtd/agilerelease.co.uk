@@ -93,6 +93,8 @@ for p in "${PAGES[@]}"; do
     [[ -z "$inline_js" ]] || bad "${p}: inline <script>: ${inline_js}"
     ! grep -q -E '<style|[[:space:]]style="' "$f" || bad "${p}: <style> block or style= attribute"
     ! grep -q -E '<[^>]+[[:space:]]on[a-z]+[[:space:]]*=' "$f" || bad "${p}: on*= event handler"
+    # Placeholders waiting for the owner (website prices, VAT line, Formspree form id) must never go live.
+    ! grep -q -E '£TBC|VAT: TBC|formspree\.io/f/FORM_ID' "$f" || bad "${p}: a placeholder (£TBC, VAT: TBC or FORM_ID) is still there"
     # Removing comments must remove nothing else: the page minus its comments and minus the two added
     # <meta> lines is the source page minus its comments.
     diff -q <(perl -0777 -pe 's{^[ \t]*<!--.*?-->[ \t]*\n}{}gms; s{<!--.*?-->}{}gs' "${SRC}/${p}") \

@@ -41,6 +41,7 @@
     <link rel="stylesheet" href="css/fonts.css">
 
     <link rel="stylesheet" href="css/tailwind.css">
+    <link rel="stylesheet" href="css/site.css">
 
     <!-- Icons -->
     <link rel="stylesheet" href="css/fontawesome.min.css">
@@ -226,7 +227,7 @@
                         <li class="flex items-center gap-2"><i aria-hidden="true" class="fa-solid fa-check text-sm"></i> The basics search engines look for</li>
                     </ul>
                 </div>
-                <a href="#contact" class="relative z-10 mt-8 bg-white text-slate-900 px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-slate-50 transition flex items-center justify-center gap-2">
+                <a href="#contact" data-package="A website: not sure which package" class="relative z-10 mt-8 bg-white text-slate-900 px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-slate-50 transition flex items-center justify-center gap-2">
                     Get a website for your business <i aria-hidden="true" class="fa-solid fa-arrow-right text-sm"></i>
                 </a>
                 <div class="absolute bottom-0 right-0 w-32 h-32 bg-brand-500 rounded-full blur-3xl opacity-20"></div>
@@ -250,6 +251,69 @@
                     </a>
                 </div>
             </div>
+        </div>
+
+        <!-- Website prices (styles in css/site.css). The "Ask about" buttons go to the contact section. -->
+        <div id="prices" class="prices">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold text-slate-900 mb-4">Website prices</h3>
+                <p class="text-lg text-slate-500">One price for the build, agreed before we start. The domain and the site are yours.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="price-card">
+                    <h4 class="text-xl font-bold text-slate-900 mb-2">One-page site</h4>
+                    <p class="text-slate-500 mb-6">Everything a small business needs, on one well-made page.</p>
+                    <p class="price-amount"><small>from</small> <strong>£595</strong> <small>+ VAT</small></p>
+                    <ul class="price-list">
+                        <li><i aria-hidden="true" class="fa-solid fa-check"></i> Your services, prices and opening hours</li>
+                        <li><i aria-hidden="true" class="fa-solid fa-check"></i> Buttons to WhatsApp, call or email you</li>
+                        <li><i aria-hidden="true" class="fa-solid fa-check"></i> The areas you cover, or where to find you</li>
+                        <li><i aria-hidden="true" class="fa-solid fa-check"></i> Works properly on phones</li>
+                        <li><i aria-hidden="true" class="fa-solid fa-check"></i> Your own domain, served over HTTPS</li>
+                    </ul>
+                    <a href="#contact" data-package="A website: One-page site" class="price-cta">Ask about a one-page site</a>
+                </div>
+
+                <div class="price-card is-featured">
+                    <p class="price-badge">Most popular</p>
+                    <h4 class="text-xl font-bold text-slate-900 mb-2">Business site</h4>
+                    <p class="text-slate-500 mb-6">A few pages, for a business with more to show.</p>
+                    <p class="price-amount"><small>from</small> <strong>£1,250</strong> <small>+ VAT</small></p>
+                    <ul class="price-list">
+                        <li><i aria-hidden="true" class="fa-solid fa-check"></i> Up to five pages, such as services, prices, about and questions</li>
+                        <li><i aria-hidden="true" class="fa-solid fa-check"></i> An enquiry form that sends the details to your WhatsApp or email</li>
+                        <li><i aria-hidden="true" class="fa-solid fa-check"></i> A gallery of your work</li>
+                        <li><i aria-hidden="true" class="fa-solid fa-check"></i> Everything in the one-page site</li>
+                    </ul>
+                    <a href="#contact" data-package="A website: Business site" class="price-cta">Ask about a business site</a>
+                </div>
+
+                <div class="price-card">
+                    <h4 class="text-xl font-bold text-slate-900 mb-2">Booking site</h4>
+                    <p class="text-slate-500 mb-6">For businesses that take bookings: classes, appointments or tables.</p>
+                    <p class="price-amount"><small>from</small> <strong>£1,950</strong> <small>+ VAT</small></p>
+                    <ul class="price-list">
+                        <li><i aria-hidden="true" class="fa-solid fa-check"></i> A calendar where customers pick a day and a time</li>
+                        <li><i aria-hidden="true" class="fa-solid fa-check"></i> Bookings reach you as a WhatsApp message, with no booking system to pay for</li>
+                        <li><i aria-hidden="true" class="fa-solid fa-check"></i> Your timetable or appointment times, easy to change</li>
+                        <li><i aria-hidden="true" class="fa-solid fa-check"></i> Everything in the business site</li>
+                    </ul>
+                    <a href="#contact" data-package="A website: Booking site" class="price-cta">Ask about a booking site</a>
+                </div>
+            </div>
+
+            <div class="care-plan">
+                <div>
+                    <h4 class="text-xl font-bold text-white mb-2">Care plan <span class="care-plan-optional">(optional)</span></h4>
+                    <p>After your site goes live, we look after it: we renew your domain, keep the site online, check that everything still works, and make small changes when you need them, such as opening hours, prices, photos or new text (up to 30 minutes a month). For anything bigger, we give you a price first. Without the plan, you renew the domain yourself and we quote for changes when you ask.</p>
+                </div>
+                <div class="care-plan-price">
+                    <p class="price-amount"><strong>£39</strong> <small>a month + VAT</small></p>
+                    <a href="#contact" data-package="A website: Care plan" class="inline-flex items-center gap-2 text-white font-semibold hover:underline">Ask about the care plan <i aria-hidden="true" class="fa-solid fa-arrow-right text-xs"></i></a>
+                </div>
+            </div>
+            <p class="text-sm text-slate-500 text-center mt-6">Prices are plus VAT at 20%. Something bigger or different? Tell us what you need and we&apos;ll give you a price.</p>
         </div>
     </div>
 </section>

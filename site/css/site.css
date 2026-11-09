@@ -1,0 +1,264 @@
+/* Hand-written styles for what css/tailwind.css (prebuilt, only the classes already in use) does not have:
+   the website prices and the contact form on the home page. Colours follow the brand (sky) and slate scales. */
+
+/* ── Website prices ───────────────────────────────────────────────────────────────────────────── */
+.prices {
+    margin-top: 6rem;
+}
+
+.price-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: 0 1px 2px rgb(15 23 42 / 0.05);
+}
+
+.price-card.is-featured {
+    border: 2px solid #0284c7;
+    box-shadow: 0 18px 40px -18px rgb(2 132 199 / 0.45);
+}
+
+.price-badge {
+    align-self: flex-start;
+    margin-bottom: 1rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    background: #e0f2fe;
+    color: #075985;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.price-amount {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.25rem 0.4rem;
+    margin: 0 0 1.5rem;
+}
+
+.price-amount small {
+    color: #64748b;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.price-amount strong {
+    color: #0f172a;
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.price-list {
+    flex: 1;
+    margin: 0 0 2rem;
+    padding: 0;
+    list-style: none;
+}
+
+.price-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    margin-top: 0.75rem;
+}
+
+.price-list i {
+    flex-shrink: 0;
+    margin-top: 0.3rem;
+    color: #0284c7;
+    font-size: 0.8rem;
+}
+
+.price-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    border: 1.5px solid #0f172a;
+    border-radius: 999px;
+    color: #0f172a;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background-color 0.15s, color 0.15s;
+}
+
+.price-cta:hover,
+.is-featured .price-cta {
+    background: #0f172a;
+    color: #fff;
+}
+
+.is-featured .price-cta:hover {
+    background: #1e293b;
+}
+
+.care-plan {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    background: #0f172a;
+    color: #cbd5e1;
+}
+
+.care-plan-optional {
+    color: #cbd5e1;
+    font-weight: 500;
+}
+
+.care-plan .price-amount strong {
+    color: #fff;
+}
+
+.care-plan .price-amount small {
+    color: #94a3b8;
+}
+
+@media (min-width: 768px) {
+    .care-plan {
+        grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+        align-items: center;
+    }
+
+    .care-plan-price {
+        text-align: right;
+    }
+
+    .care-plan .price-amount {
+        justify-content: flex-end;
+    }
+}
+
+/* ── Contact form ─────────────────────────────────────────────────────────────────────────────── */
+.contact-form {
+    margin-top: 3rem;
+    padding: 2rem;
+    border: 1px solid #f1f5f9;
+    border-radius: 1.5rem;
+    background: #f8fafc;
+    text-align: left;
+}
+
+.form-grid {
+    display: grid;
+    gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+    .form-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .form-grid .is-wide {
+        grid-column: 1 / -1;
+    }
+}
+
+.field label {
+    display: block;
+    margin-bottom: 0.4rem;
+    color: #0f172a;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.field label span {
+    color: #64748b;
+    font-weight: 500;
+}
+
+.field input,
+.field select,
+.field textarea {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 0.75rem;
+    background: #fff;
+    color: #0f172a;
+    font: inherit;
+}
+
+.field textarea {
+    min-height: 9rem;
+    resize: vertical;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+    border-color: #0284c7;
+    outline: 3px solid rgb(14 165 233 / 0.35);
+    outline-offset: 0;
+}
+
+.field [aria-invalid="true"] {
+    border-color: #b91c1c;
+}
+
+.field-error {
+    margin: 0.4rem 0 0;
+    color: #b91c1c;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Links inside the form's small print are underlined, not told apart by colour alone. */
+.contact-form p a {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+/* The spam trap: people never see or reach it, so only bots fill it in. */
+.form-trap {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.form-actions button[disabled] {
+    opacity: 0.6;
+    cursor: progress;
+}
+
+.form-status {
+    margin: 1.25rem 0 0;
+    padding: 0.9rem 1rem;
+    border-radius: 0.75rem;
+    background: #fef2f2;
+    color: #991b1b;
+    font-weight: 600;
+}
+
+.form-sent {
+    margin-top: 3rem;
+    padding: 2.5rem 2rem;
+    border: 1px solid #bae6fd;
+    border-radius: 1.5rem;
+    background: #f0f9ff;
+    text-align: center;
+}
+
+.form-sent h3:focus {
+    outline: none;
+}
