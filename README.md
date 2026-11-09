@@ -14,6 +14,11 @@ The company website of **Agile Release Limited** (Company No. 13237670): a stati
 | `scripts/build-pages.sh` | Builds `_site/` from `site/` and checks the result. |
 | `.github/workflows/pages.yml` | Runs the build and publishes `_site/` to GitHub Pages. |
 | `CNAME` | The custom domain, for reference. With the GitHub Actions publishing source the domain is set in Settings → Pages. |
+| `site/websiteNN-*/` | Sample websites for made-up businesses. Each one lives in its own private repo of the same name; `scripts/sync-sample.sh` copies it in. |
+| `LICENSE` | Copyright notice: all rights reserved, and the third-party parts with their own licences. |
+
+**Copyright:** © 2026 Agile Release Limited. All rights reserved. This repository is public so that GitHub
+can publish the website, not as an offer to reuse it; see `LICENSE`.
 
 ## Publishing
 

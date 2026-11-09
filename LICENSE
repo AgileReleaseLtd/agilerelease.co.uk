@@ -1,0 +1,21 @@
+Copyright © 2026 Agile Release Limited. All rights reserved.
+
+Agile Release Limited is registered in England and Wales (company number 13237670).
+
+This repository holds the source of https://agilerelease.co.uk, including the sample websites in
+site/websiteNN-*/. It is public so that GitHub can publish the website, not as an offer to reuse it.
+Apart from what GitHub's Terms of Service allow for public repositories (viewing and forking on GitHub),
+no licence is granted to copy, modify, publish or reuse any of it, in whole or in part, without written
+permission from Agile Release Limited. To ask, email info@agilerelease.co.uk.
+
+The businesses, people, prices and contact details in the sample websites are made up.
+
+Screenshots of client websites, and the names and logos of other companies, belong to their owners.
+
+Third-party parts keep their own licences:
+
+- Font Awesome Free 6.4.0 (site/css/fontawesome.min.css, site/css/fonts/fa-*): fonts SIL Open Font
+  License 1.1, code MIT License, icons CC BY 4.0. https://fontawesome.com/license/free
+- Plus Jakarta Sans (site/css/fonts/plus-jakarta-sans-*): SIL Open Font License 1.1.
+- Archivo (site/website*/css/fonts/archivo-*): SIL Open Font License 1.1.
+- Tailwind CSS v3.4.19 (site/css/tailwind.css): MIT License. https://tailwindcss.com
