@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gantry Motor Works | MOTs, servicing and repairs in Walthamstow (sample website)</title>
+<meta name="description" content="Independent garage in Walthamstow, E17. MOTs for £45, fixed-price servicing and repairs priced before we start. Book online. A sample website by Agile Release.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#141619">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="preload" href="css/fonts/anybody-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="css/fonts/ibm-plex-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js" defer></script>
+<script src="js/core.js" defer></script>
+<script src="js/site.js" defer></script>
+</head>
+<body class="page-home">
+
+<svg class="sprite" aria-hidden="true">
+  <symbol id="i-mot" viewBox="0 0 24 24"><path d="M6 4.5h12v16H6z"/><path d="M9.5 4.5V3h5v1.5M9 12.5l2.2 2.2 4-4.4"/></symbol>
+  <symbol id="i-spanner" viewBox="0 0 24 24"><path d="M14.6 3.3a5 5 0 0 0-4.7 6.9L3.6 16.5a2.1 2.1 0 0 0 3 3l6.3-6.3a5 5 0 0 0 6.9-4.7l-3 1.4-2.6-1.1-1.1-2.6 1.5-2.9Z"/></symbol>
+  <symbol id="i-brake" viewBox="0 0 24 24"><circle cx="11" cy="13" r="8"/><circle cx="11" cy="13" r="2.4"/><path d="M15.5 3.4a10.6 10.6 0 0 1 5.1 5.4M11 8.2v.1M6.2 13h.1M15.8 13h.1M11 17.8v.1"/></symbol>
+  <symbol id="i-scan" viewBox="0 0 24 24"><path d="M3 4.5h18v12H3zM8 20.5h8M12 16.5v4"/><path d="M6 11h2.5l1.5-3 3 6 1.5-3H18"/></symbol>
+  <symbol id="i-gear" viewBox="0 0 24 24"><path d="M10.2 2.8h3.6l.5 2.6 1.6.9 2.5-.9 1.8 3.1-2 1.7v1.8l2 1.7-1.8 3.1-2.5-.9-1.6.9-.5 2.6h-3.6l-.5-2.6-1.6-.9-2.5.9-1.8-3.1 2-1.7v-1.8l-2-1.7 1.8-3.1 2.5.9 1.6-.9Z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-belt" viewBox="0 0 24 24"><path d="M11.5 18.8L19.7 8.9A3.3 3.3 0 0 0 15.4 4L4.6 11.2A5.2 5.2 0 1 0 11.5 18.8Z"/><circle cx="7.5" cy="15.5" r="2.6"/><circle cx="17.2" cy="6.8" r="1.2"/></symbol>
+  <symbol id="i-spring" viewBox="0 0 24 24"><path d="M5 3.5h14M5 20.5h14M7 6.4l10 1.7-10 1.7 10 1.7-10 1.7 10 1.7-10 1.7 10 1.7"/></symbol>
+  <symbol id="i-exhaust" viewBox="0 0 24 24"><path d="M2 15h3.5M5.5 11.5h9v7h-9zM14.5 15H20"/><circle cx="20.6" cy="10.6" r="1.3"/><circle cx="17.6" cy="6.6" r="1.9"/></symbol>
+  <symbol id="i-snow" viewBox="0 0 24 24"><path d="M12 2.5v19M3.8 7.2l16.4 9.6M3.8 16.8l16.4-9.6M9.3 4.2 12 6.6l2.7-2.4M9.3 19.8l2.7-2.4 2.7 2.4M3.6 11.2l3.5 1 .9 3.4M20.4 12.8l-3.5-1-.9-3.4"/></symbol>
+  <symbol id="i-battery" viewBox="0 0 24 24"><path d="M3 7.5h18v12H3zM6.5 7.5v-3h3v3M14.5 7.5v-3h3v3M6 13.5h4M14.5 13.5h4M16.5 11.5v4"/></symbol>
+  <symbol id="i-tyre" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><path d="M12 3v4.5M12 16.5V21M3 12h4.5M16.5 12H21M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M18.4 5.6l-2.8 2.8M8.4 15.6l-2.8 2.8"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13.5 2.5 5 13.5h6l-1 8 8.5-11h-6l1-8Z"/></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24"><path d="M2.5 16.5v-4l2.3-5h10.4l3.6 4.4 2.7 1v3.6"/><path d="M2.5 16.5h2M9.6 16.5h5M19.6 16.5h1.9M5.5 11.9h13"/><circle cx="7" cy="17" r="2.4"/><circle cx="17" cy="17" r="2.4"/></symbol>
+  <symbol id="i-pound" viewBox="0 0 24 24"><path d="M16.5 6.5A4 4 0 0 0 9 8.4V20M6 13h8M6 20h12"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2.8 4.5 5.6v6c0 4.6 3.1 8 7.5 9.6 4.4-1.6 7.5-5 7.5-9.6v-6L12 2.8Z"/><path d="m8.6 12.2 2.4 2.4 4.4-4.6"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 4.5h11a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3v-13ZM4 17.5a3 3 0 0 1 3-3h11"/><path d="M8 8.5h6"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24"><circle cx="7.5" cy="15.5" r="4.5"/><path d="M10.7 12.3 20 3M16 7l3 3M18.5 4.5l2 2"/></symbol>
+  <symbol id="i-train" viewBox="0 0 24 24"><path d="M6 3.5h12v12.5H6zM6 10h12M9.5 20.5 8 16M14.5 20.5 16 16M7.5 18.5h9"/><path d="M9 13h.1M15 13h.1"/></symbol>
+  <symbol id="i-park" viewBox="0 0 24 24"><path d="M4 3.5h16v17H4z"/><path d="M9.5 16.5v-9h3.5a2.75 2.75 0 0 1 0 5.5H9.5"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><path d="M3 5.5h18v13H3z"/><path d="m3.5 6.5 8.5 7 8.5-7"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><path d="M3.5 5h17v15.5h-17zM3.5 10h17M8 3v4M16 3v4"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<aside class="sample-bar" aria-label="About this sample website">
+  <div class="wrap sample-bar-inner">
+    <p><span class="sample-tag">Sample</span> <strong>A sample website by Agile Release.</strong> Gantry Motor Works is not a real garage: the prices, hours and details are examples.</p>
+    <a href="https://agilerelease.co.uk/#websites">Get a site like this <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  </div>
+</aside>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Gantry Motor Works, home">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect class="brand-bg" width="32" height="32" rx="3"/><path class="brand-lift" d="M8 26V8.5h16V26M11.5 19.5h9"/></svg>
+      <span class="brand-text"><span class="brand-name">Gantry</span><span class="brand-sub">Motor Works</span></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="mot.html">Book an MOT</a></li>
+        <li><a href="prices.html">Servicing &amp; prices</a></li>
+        <li><a href="quote.html">Repair quote</a></li>
+        <li><a href="#collect">Collection</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#visit">Find us</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-signal btn-sm header-cta" href="mot.html">Book MOT</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+      <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg><span class="visually-hidden">Menu</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow">Independent garage in Walthamstow, E17</p>
+      <h1 class="display">Fixed right. <span class="hl">Priced first.</span></h1>
+      <p class="lead">MOTs, servicing and repairs on most makes. Four ramps, our own MOT bay and a price before we start. We never do extra work without asking you.</p>
+      <div class="hero-actions">
+        <a class="btn btn-signal" href="mot.html">Book an MOT <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-ghost" href="quote.html">Get a repair quote</a>
+      </div>
+      <p class="status" data-open-status>
+        <span class="status-dot" aria-hidden="true"></span>
+        <span><strong>Monday to Friday 8am to 6pm, Saturday 8am to 1pm.</strong></span>
+      </p>
+    </div>
+
+    <figure class="hero-art">
+      <svg class="lift-art" viewBox="0 0 640 440" aria-hidden="true">
+        <defs>
+          <pattern id="hazard" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect class="hz-dark" width="7" height="14"/></pattern>
+        </defs>
+        <path class="floor" d="M16 393H624"/>
+        <path class="floor-ticks" d="M40 400l-8 8M80 400l-8 8M120 400l-8 8M160 400l-8 8M200 400l-8 8M240 400l-8 8M280 400l-8 8M320 400l-8 8M360 400l-8 8M400 400l-8 8M440 400l-8 8M480 400l-8 8M520 400l-8 8M560 400l-8 8M600 400l-8 8"/>
+        <rect class="lift" x="52" y="34" width="536" height="18"/>
+        <rect class="lift" x="56" y="52" width="30" height="341"/>
+        <rect class="lift" x="554" y="52" width="30" height="341"/>
+        <rect class="lift-shade" x="56" y="331" width="30" height="62"/>
+        <rect class="hz" x="56" y="331" width="30" height="62"/>
+        <rect class="lift-shade" x="554" y="331" width="30" height="62"/>
+        <rect class="hz" x="554" y="331" width="30" height="62"/>
+        <rect class="lift-base" x="44" y="387" width="54" height="7"/>
+        <rect class="lift-base" x="542" y="387" width="54" height="7"/>
+        <rect class="lift-carriage" x="49" y="252" width="44" height="44"/>
+        <rect class="lift-carriage" x="547" y="252" width="44" height="44"/>
+        <path class="lift-cable" d="M71 52V252M569 52V252"/>
+        <rect class="lift-arm" x="90" y="271" width="196" height="9"/>
+        <rect class="lift-arm" x="356" y="271" width="194" height="9"/>
+        <rect class="lift-pad" x="262" y="264" width="26" height="8"/>
+        <rect class="lift-pad" x="356" y="264" width="26" height="8"/>
+
+        <path class="car-body" d="M136 262L132 222Q134 192 158 178L200 154Q210 149 222 149L352 149Q366 149 377 157L420 192L488 202Q510 206 512 226L512 258Q512 265 503 265L482 265A46 46 0 0 0 390 265L256 265A46 46 0 0 0 164 265L144 265Q136 265 136 262Z"/>
+        <path class="car-glass" d="M170 192L204 166Q212 160 224 160L284 160L284 192Z"/>
+        <path class="car-glass" d="M296 160L350 160Q362 160 371 167L404 192L296 192Z"/>
+        <path class="car-line" d="M160 197H412M290 160V258M192 200Q186 230 192 252M404 197Q412 228 402 252M136 246H156M494 246H512"/>
+        <path class="car-handle" d="M262 207H278M372 207H388"/>
+        <path class="car-light" d="M492 210L510 215L510 225L494 222Z"/>
+        <path class="car-tail" d="M134 205L147 203L147 222L134 224Z"/>
+        <path class="car-mirror" d="M399 187L411 182L415 191L403 194Z"/>
+        <rect class="car-pipe" x="148" y="265" width="24" height="6"/>
+
+        <circle class="tyre" cx="210" cy="270" r="38"/>
+        <circle class="rim" cx="210" cy="270" r="24"/>
+        <circle class="hub" cx="210" cy="270" r="7"/>
+        <circle class="tyre" cx="436" cy="270" r="38"/>
+        <circle class="rim" cx="436" cy="270" r="24"/>
+        <path class="caliper" d="M448 249A24 24 0 0 1 458 262"/>
+        <circle class="hub" cx="436" cy="270" r="7"/>
+
+        <path class="leader" d="M502 216L522 128M387 166L384 104M448 302L470 344M222 306L240 344M160 271L124 330"/>
+        <g class="callout"><circle cx="522" cy="118" r="14"/><text x="522" y="123">1</text></g>
+        <g class="callout"><circle cx="384" cy="94" r="14"/><text x="384" y="99">2</text></g>
+        <g class="callout"><circle cx="470" cy="354" r="14"/><text x="470" y="359">3</text></g>
+        <g class="callout"><circle cx="240" cy="354" r="14"/><text x="240" y="359">4</text></g>
+        <g class="callout"><circle cx="124" cy="340" r="14"/><text x="124" y="345">5</text></g>
+      </svg>
+      <figcaption>
+        <span class="figcap-title">A few of the things an MOT checks</span>
+        <ol class="callout-key">
+          <li>Lights</li>
+          <li>Windscreen and wipers</li>
+          <li>Brakes</li>
+          <li>Tyres</li>
+          <li>Exhaust and emissions</li>
+        </ol>
+      </figcaption>
+    </figure>
+  </div>
+  <div class="hazard-band" aria-hidden="true"></div>
+</section>
+
+<section class="doors" aria-label="What would you like to do?">
+  <div class="wrap doors-grid">
+    <article class="door door-mot">
+      <p class="door-kicker"><svg class="icon" aria-hidden="true"><use href="#i-mot"/></svg> MOT test</p>
+      <p class="door-price"><strong data-fill="mot-price">£45</strong> <span>The legal maximum is <span data-fill="mot-max">£54.85</span>. Booked with a service, the MOT is <span data-fill="mot-with-service">£35</span>.</span></p>
+      <a class="btn btn-dark btn-block" href="mot.html">Book an MOT <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </article>
+    <article class="door">
+      <p class="door-kicker"><svg class="icon" aria-hidden="true"><use href="#i-spanner"/></svg> Servicing</p>
+      <p class="door-price"><strong><small>from</small> <span data-fill="service-from">£139</span></strong> <span>Interim, full and major services, priced by engine size. Oil, parts and VAT included.</span></p>
+      <a class="btn btn-outline btn-block" href="prices.html">See service prices</a>
+    </article>
+    <article class="door door-quote">
+      <p class="door-kicker"><svg class="icon" aria-hidden="true"><use href="#i-pound"/></svg> Repair quote</p>
+      <form class="plate-form" data-plate-jump novalidate>
+        <label class="plate-label" for="hero-reg">Start with your registration</label>
+        <div class="plate plate-sm">
+          <span class="plate-band" aria-hidden="true">UK</span>
+          <input class="plate-input" id="hero-reg" name="reg" type="text" maxlength="8" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="AB12 CDE" aria-describedby="hero-reg-status">
+        </div>
+        <p class="plate-status" id="hero-reg-status" data-plate-status>We look up the parts for your car ourselves.</p>
+        <button class="btn btn-outline btn-block" type="submit">Get a quote <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      </form>
+    </article>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="wrap">
+    <header class="section-head">
+      <p class="bay"><span>Bay 01</span> What we do</p>
+      <h2 class="h2">Most makes, most jobs, one workshop</h2>
+      <p>From a bulb to a clutch. If we can't do it properly here, we tell you who can.</p>
+    </header>
+    <ul class="service-grid">
+      <li><a class="service" href="mot.html"><svg class="icon" aria-hidden="true"><use href="#i-mot"/></svg><span class="service-name">MOT tests</span><span class="service-text">Cars and small vans, in our own test bay. <b data-fill="mot-price">£45</b></span></a></li>
+      <li><a class="service" href="prices.html"><svg class="icon" aria-hidden="true"><use href="#i-spanner"/></svg><span class="service-name">Servicing</span><span class="service-text">Interim, full and major, to your car's schedule. <b>From <span data-fill="service-from">£139</span></b></span></a></li>
+      <li><a class="service" href="quote.html?job=brakes"><svg class="icon" aria-hidden="true"><use href="#i-brake"/></svg><span class="service-name">Brakes</span><span class="service-text">Pads, discs, callipers, fluid and handbrakes.</span></a></li>
+      <li><a class="service" href="quote.html?job=warning"><svg class="icon" aria-hidden="true"><use href="#i-scan"/></svg><span class="service-name">Diagnostics</span><span class="service-text">Warning lights read, explained and traced, not guessed.</span></a></li>
+      <li><a class="service" href="quote.html?job=clutch"><svg class="icon" aria-hidden="true"><use href="#i-gear"/></svg><span class="service-name">Clutch and gearbox</span><span class="service-text">Slipping, heavy or noisy clutches, and flywheels.</span></a></li>
+      <li><a class="service" href="quote.html?job=timing"><svg class="icon" aria-hidden="true"><use href="#i-belt"/></svg><span class="service-name">Timing belts</span><span class="service-text">Belt, tensioners and water pump, done on time.</span></a></li>
+      <li><a class="service" href="quote.html?job=suspension"><svg class="icon" aria-hidden="true"><use href="#i-spring"/></svg><span class="service-name">Suspension and steering</span><span class="service-text">Springs, shocks, bushes, joints and knocks.</span></a></li>
+      <li><a class="service" href="quote.html?job=exhaust"><svg class="icon" aria-hidden="true"><use href="#i-exhaust"/></svg><span class="service-name">Exhausts</span><span class="service-text">Blows, rattles, back boxes and DPF problems.</span></a></li>
+      <li><a class="service" href="quote.html?job=aircon"><svg class="icon" aria-hidden="true"><use href="#i-snow"/></svg><span class="service-name">Air conditioning</span><span class="service-text">Regas, leak tests and smells cleared.</span></a></li>
+      <li><a class="service" href="quote.html?job=battery"><svg class="icon" aria-hidden="true"><use href="#i-battery"/></svg><span class="service-name">Batteries</span><span class="service-text">Tested free while you wait, and fitted if needed.</span></a></li>
+      <li><a class="service" href="quote.html?job=tyres"><svg class="icon" aria-hidden="true"><use href="#i-tyre"/></svg><span class="service-name">Tyres and tracking</span><span class="service-text">Budget to premium tyres, punctures and alignment.</span></a></li>
+      <li><a class="service" href="prices.html?fuel=hybrid"><svg class="icon" aria-hidden="true"><use href="#i-bolt"/></svg><span class="service-name">Hybrids</span><span class="service-text">Hybrid servicing, and brakes and tyres on electric cars.</span></a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section-concrete" id="why">
+  <div class="wrap">
+    <header class="section-head">
+      <p class="bay"><span>Bay 02</span> Why Gantry</p>
+      <h2 class="h2">We find it. We price it. You decide.</h2>
+      <p>No upselling and no jargon. We explain what we found, show you, and leave the choice to you.</p>
+    </header>
+    <ol class="reasons">
+      <li class="reason">
+        <svg class="icon" aria-hidden="true"><use href="#i-pound"/></svg>
+        <h3>A price before we start</h3>
+        <p>You get a price first. If we find something else, we send you a price for that too and wait for your yes.</p>
+      </li>
+      <li class="reason">
+        <svg class="icon" aria-hidden="true"><use href="#i-eye"/></svg>
+        <h3>See what we replaced</h3>
+        <p>We keep the old parts for you to look at, and send photos on WhatsApp if you're not here.</p>
+      </li>
+      <li class="reason">
+        <svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg>
+        <h3>12-month guarantee</h3>
+        <p>Parts and labour on our repairs are guaranteed for 12 months or 12,000 miles, whichever comes first.</p>
+      </li>
+      <li class="reason">
+        <svg class="icon" aria-hidden="true"><use href="#i-book"/></svg>
+        <h3>Warranty-safe servicing</h3>
+        <p>We follow your car's service schedule and fit parts that match the original quality, so a new-car warranty stays valid.</p>
+      </li>
+    </ol>
+
+    <div class="creds" aria-labelledby="creds-title">
+      <div class="creds-head">
+        <h3 class="creds-title" id="creds-title">Approvals and memberships</h3>
+        <p class="creds-note">On the real garage's website these show its own numbers and badges. Here they are examples.</p>
+      </div>
+      <ul class="creds-list">
+        <li class="cred">
+          <span class="example-tag">Example</span>
+          <span class="cred-label">DVSA MOT testing station number</span>
+          <span class="cred-value">V00000</span>
+        </li>
+        <li class="cred">
+          <span class="example-tag">Example</span>
+          <span class="cred-label">Motor trade code of practice</span>
+          <span class="cred-value">Logo and member number</span>
+        </li>
+        <li class="cred">
+          <span class="example-tag">Example</span>
+          <span class="cred-label">Technician qualifications</span>
+          <span class="cred-value">Accreditation logo</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark" id="how">
+  <div class="wrap">
+    <header class="section-head">
+      <p class="bay bay-dark"><span>Bay 03</span> Booking</p>
+      <h2 class="h2">Booked in two minutes. Called before any repair.</h2>
+    </header>
+    <ol class="steps">
+      <li class="step">
+        <span class="step-num" aria-hidden="true">01</span>
+        <h3>Pick a day</h3>
+        <p>Choose a day up to three weeks ahead, and a morning or afternoon drop-off.</p>
+      </li>
+      <li class="step">
+        <span class="step-num" aria-hidden="true">02</span>
+        <h3>Send it on WhatsApp</h3>
+        <p>Your booking arrives as a ready-written message. We reply to confirm, usually within the hour.</p>
+      </li>
+      <li class="step">
+        <span class="step-num" aria-hidden="true">03</span>
+        <h3>Drop off, or we collect</h3>
+        <p>Leave the keys at the desk, use the key box out of hours, or we collect from home or work.</p>
+      </li>
+      <li class="step">
+        <span class="step-num" aria-hidden="true">04</span>
+        <h3>We call before any repair</h3>
+        <p>If your car needs work, you get a price first. Nothing is done until you say yes. Pay when you collect.</p>
+      </li>
+    </ol>
+    <p class="section-cta"><a class="btn btn-signal" href="mot.html">Book an MOT or service <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
+  </div>
+</section>
+
+<section class="section" id="collect">
+  <div class="wrap collect">
+    <div class="collect-copy">
+      <p class="bay"><span>Bay 04</span> Collect and deliver</p>
+      <h2 class="h2">We'll collect it, and bring it back</h2>
+      <p class="collect-lead">No need to take a morning off. We pick your car up from home or work and drop it back the same day.</p>
+      <ul class="ticks">
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> <span><strong>Free</strong> in <span data-fill="free-districts">E17, E10 and N17</span>. <strong><span data-fill="collect-fee">£15</span></strong> for the round trip in the other districts below.</span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> <span data-fill="pickup">We collect between 8am and 9:30am and bring the car back by 6pm.</span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> <span>Our drivers are insured on our motor trade policy. We note the mileage and any marks when we collect.</span></li>
+      </ul>
+    </div>
+
+    <div class="checker">
+      <form class="checker-form" data-collect-check novalidate>
+        <h3 class="checker-title"><svg class="icon" aria-hidden="true"><use href="#i-car"/></svg> Do we collect from you?</h3>
+        <label class="field-label" for="collect-postcode">Your postcode</label>
+        <div class="input-row">
+          <input class="input input-postcode" id="collect-postcode" name="postcode" type="text" maxlength="9" autocomplete="postal-code" autocapitalize="characters" spellcheck="false" placeholder="E17 4AB" aria-describedby="collect-result">
+          <button class="btn btn-dark" type="submit">Check</button>
+        </div>
+        <div class="checker-result" id="collect-result" data-collect-result aria-live="polite">The first half is enough, for example E17.</div>
+      </form>
+      <div class="districts">
+        <p class="districts-title">Districts we cover</p>
+        <ul class="district-list" data-district-list>
+          <li><b>E17</b> Walthamstow</li>
+          <li><b>E10</b> Leyton</li>
+          <li><b>N17</b> Tottenham</li>
+          <li><b>E4</b> Chingford</li>
+          <li><b>E11</b> Leytonstone</li>
+          <li><b>E18</b> South Woodford</li>
+          <li><b>E5</b> Clapton</li>
+          <li><b>N15</b> South Tottenham</li>
+          <li><b>N18</b> Upper Edmonton</li>
+          <li><b>IG8</b> Woodford Green</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-concrete" id="faq">
+  <div class="wrap faq-layout">
+    <header class="section-head">
+      <p class="bay"><span>Bay 05</span> Questions</p>
+      <h2 class="h2">MOTs and repairs, answered</h2>
+      <p>Something else? <a href="#visit">Message or call us</a> and a mechanic will answer.</p>
+    </header>
+    <div class="faq">
+      <details>
+        <summary>What happens if my car fails its MOT?</summary>
+        <div class="faq-body">
+          <p>You get a refusal certificate listing what failed, and we give you a price to fix it. Nothing is repaired until you say yes.</p>
+          <p>If we do the repairs and retest the car here within 10 working days, the retest is free. If you take the car away, bring it back within 10 working days for a partial retest at <span data-fill="partial-retest">£22.50</span>. Some small items, like bulbs, wipers and tyres, are retested free if you bring the car back by the end of the next working day.</p>
+          <p>You can only drive a failed car away if your old MOT has not run out and nothing was marked "dangerous". Otherwise it has to be fixed first.</p>
+        </div>
+      </details>
+      <details>
+        <summary>How early can I get my MOT done?</summary>
+        <div class="faq-body">
+          <p>Up to a month (minus a day) before it runs out, and you keep the same renewal date. If it runs out on 15 May, the earliest is 16 April. Your due date is on your last certificate, or on GOV.UK's <a href="https://www.gov.uk/check-mot-history">MOT history checker</a>.</p>
+        </div>
+      </details>
+      <details>
+        <summary>How long does an MOT take? Can I wait?</summary>
+        <div class="faq-body">
+          <p>The test takes 45 minutes to an hour. Morning drop-offs are ready by 1pm and afternoon drop-offs by 5:30pm. You're welcome to wait for an MOT: there's coffee and Wi-Fi in the waiting room.</p>
+        </div>
+      </details>
+      <details>
+        <summary>My MOT has run out. Can I drive the car to you?</summary>
+        <div class="faq-body">
+          <p>Yes, to an MOT that is already booked, as long as the car is roadworthy. Book first and keep the booking message on your phone. Or ask us to collect it.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Will servicing here affect my new-car warranty?</summary>
+        <div class="faq-body">
+          <p>No. Any garage can service a car under warranty, as long as the service follows the maker's schedule and the parts match the original quality. We do both, and stamp your service book or give you a printed record.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Will you do work I haven't agreed to?</summary>
+        <div class="faq-body">
+          <p>Never. If we find something, we send you a price and a photo, and wait for your answer. If it's a safety problem we'll explain why, but it's still your choice.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Do you work on hybrids and electric cars?</summary>
+        <div class="faq-body">
+          <p>Hybrids, yes: servicing, MOTs and most repairs. On fully electric cars we do MOTs, tyres, brakes, suspension and air conditioning. Faults in the battery or motor go to a specialist, and we'll tell you who.</p>
+        </div>
+      </details>
+      <details>
+        <summary>How do I pay?</summary>
+        <div class="faq-body">
+          <p>By card, Apple Pay or Google Pay when you collect the car, or by bank transfer if we deliver it back. There's no deposit for MOTs or servicing.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="visit">
+  <div class="wrap visit">
+    <div class="visit-col">
+      <div class="visit-info">
+        <p class="bay"><span>Bay 06</span> Find us</p>
+        <h2 class="h2">Find the workshop</h2>
+        <p class="visit-address"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> <span data-fill="address">Unit 3, Linnet Yard, Walthamstow, London E17</span></p>
+        <ul class="getting-here">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-train"/></svg> <span data-fill="station">8 minutes' walk from Blackhorse Road station (Victoria line and Overground).</span></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-park"/></svg> <span>Three customer spaces in the yard. Park in any free space and come to the front desk.</span></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-key"/></svg> <span>Dropping off early or late? Use the key box by the door, with your reg on the envelope.</span></li>
+        </ul>
+      </div>
+      <div class="contact-card">
+        <h3 class="contact-title">Message, call or drop in</h3>
+        <p>WhatsApp is quickest. If we're under a car when you call, we'll ring you back.</p>
+        <p>Messages sent after hours are answered first thing the next working day.</p>
+        <div class="contact-actions">
+          <a class="btn btn-dark btn-block" href="https://wa.me/447700900584" data-contact="whatsapp"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg> WhatsApp 07700 900584</a>
+          <a class="btn btn-outline btn-block" href="tel:+442079460584" data-contact="phone"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> Call 020 7946 0584</a>
+          <a class="btn btn-outline btn-block" href="mailto:workshop@gantrymotorworks.example" data-contact="email"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg> Email us</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="board" aria-labelledby="hours-title">
+      <div class="board-head">
+        <h3 class="board-title" id="hours-title"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg> Opening hours</h3>
+        <p class="status status-board" data-open-status><span class="status-dot" aria-hidden="true"></span><span>London time</span></p>
+      </div>
+      <dl class="hours" data-hours>
+        <div><dt>Monday</dt><dd>8am to 6pm</dd></div>
+        <div><dt>Tuesday</dt><dd>8am to 6pm</dd></div>
+        <div><dt>Wednesday</dt><dd>8am to 6pm</dd></div>
+        <div><dt>Thursday</dt><dd>8am to 6pm</dd></div>
+        <div><dt>Friday</dt><dd>8am to 6pm</dd></div>
+        <div><dt>Saturday</dt><dd>8am to 1pm</dd></div>
+        <div><dt>Sunday</dt><dd>Closed</dd></div>
+      </dl>
+      <div class="board-note" data-closures><p>Closed on bank holidays.</p></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a class="brand" href="index.html" aria-label="Gantry Motor Works, home">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect class="brand-bg" width="32" height="32" rx="3"/><path class="brand-lift" d="M8 26V8.5h16V26M11.5 19.5h9"/></svg>
+        <span class="brand-text"><span class="brand-name">Gantry</span><span class="brand-sub">Motor Works</span></span>
+      </a>
+      <p>Independent garage for MOTs, servicing and repairs. Unit 3, Linnet Yard, Walthamstow, London E17.</p>
+    </div>
+    <div class="footer-contact">
+      <p class="footer-head">Workshop</p>
+      <p><a href="tel:+442079460584" data-contact="phone">020 7946 0584</a><br><a href="https://wa.me/447700900584" data-contact="whatsapp">WhatsApp 07700 900584</a></p>
+      <p data-hours-summary>Monday to Friday 8am to 6pm<br>Saturday 8am to 1pm</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="mot.html">Book an MOT</a>
+      <a href="prices.html">Servicing &amp; prices</a>
+      <a href="quote.html">Repair quote</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+    <p class="footer-credit">A sample website by <a href="https://agilerelease.co.uk/#websites">Agile Release</a>. Gantry Motor Works is made up. &copy; 2026 Agile Release Limited. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

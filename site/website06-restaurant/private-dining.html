@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Private dining and groups | Jonjoli (sample website)</title>
+<meta name="description" content="The Marani cellar room, the long table and whole-restaurant hire, with feast menus for groups. Send an enquiry on WhatsApp. A sample website by Agile Release.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#150c10">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="preload" href="css/fonts/eczar-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="css/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js" defer></script>
+<script src="js/time.js" defer></script>
+<script src="js/site.js" defer></script>
+<script src="js/private.js" defer></script>
+</head>
+<body class="page-private">
+
+<svg class="sprite" aria-hidden="true">
+  <symbol id="i-jar" viewBox="0 0 24 24"><path d="M7.5 3.5h9v3h-9z"/><path d="M7.5 6.5C6 7.5 5.5 9 5.5 10.5V19a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-8.5c0-1.5-.5-3-2-4"/><path d="M8.5 14.5c1.2-1.6 2.3-1.6 3.5 0s2.3 1.6 3.5 0"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19.5C4.5 11 9.5 4.5 20 4c-.5 10.5-7 15.5-15 15.5Z"/><path d="M5 19.5 14 10.5"/></symbol>
+  <symbol id="i-oven" viewBox="0 0 24 24"><path d="M3.5 20.5V13a8.5 8.5 0 0 1 17 0v7.5"/><path d="M8.5 20.5V16a3.5 3.5 0 0 1 7 0v4.5"/><path d="M2 20.5h20"/><path d="M12 6.8v-2M7.6 8.6 6.4 7M16.4 8.6 17.6 7"/></symbol>
+  <symbol id="i-dumpling" viewBox="0 0 24 24"><path d="M3.5 16c0-4.2 3.6-7.8 8.5-9.5 4.9 1.7 8.5 5.3 8.5 9.5 0 2.6-3.8 4-8.5 4s-8.5-1.4-8.5-4Z"/><path d="M12 6.5V3.5M10.4 3.5h3.2M12 6.5 7.5 16.5M12 6.5l4.5 10M12 6.5v12"/></symbol>
+  <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 21c-4 0-7-2.8-7-6.6 0-3.4 2.4-5.2 3.6-8.4 1.4 1.6 1.8 3 1.8 4.4C12 8.6 13 6 12.6 3c3.6 2.4 6.4 6.4 6.4 11.2C19 18.2 16 21 12 21Z"/></symbol>
+  <symbol id="i-bowl" viewBox="0 0 24 24"><path d="M3 11.5h18a9 9 0 0 1-18 0Z"/><path d="M8 8c0-1.5 1-2 1-3.5M12 8c0-1.5 1-2 1-3.5M16 8c0-1.5 1-2 1-3.5"/></symbol>
+  <symbol id="i-sweet" viewBox="0 0 24 24"><path d="M12 2v3"/><path d="M12 5c2 0 2.6 1.5 2.6 3.2V18c0 2-1.2 3.5-2.6 3.5S9.4 20 9.4 18V8.2C9.4 6.5 10 5 12 5Z"/><path d="M9.4 9.5h5.2M9.4 13.5h5.2M9.4 17.5h5.2"/></symbol>
+  <symbol id="i-glass" viewBox="0 0 24 24"><path d="M7 3h10c.3 4.5-1.4 8-5 8S6.7 7.5 7 3Z"/><path d="M12 11v9.5M8 20.5h8M7.3 6.5h9.4"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 7 8.5-7"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 19.5c.6-3.4 3-5.3 6-5.3s5.4 1.9 6 5.3"/><path d="M16 5.2a3 3 0 0 1 0 5.6M18 14.5c1.7.7 2.8 2.4 3 5"/></symbol>
+  <symbol id="i-access" viewBox="0 0 24 24"><circle cx="11" cy="4.5" r="1.8"/><path d="M11 7.5v6h5.5l2.5 5.5"/><path d="M11 10.5h5"/><path d="M8.2 10.8A5.5 5.5 0 1 0 15.8 18"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.6v.4"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5 21.5 20h-19Z"/><path d="M12 10v4.5M12 17.3v.2"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3.5" y="8.5" width="17" height="4" rx="1"/><path d="M5 12.5V20h14v-7.5M12 8.5V20"/><path d="M12 8.5C10 5 6.5 4.5 6.5 6.8 6.5 8.5 9.5 8.5 12 8.5ZM12 8.5c2-3.5 5.5-4 5.5-1.7 0 1.7-3 1.7-5.5 1.7Z"/></symbol>
+  <symbol id="i-stairs" viewBox="0 0 24 24"><path d="M3 20h5v-4h4v-4h4V8h5"/></symbol>
+  <symbol id="i-candle" viewBox="0 0 24 24"><path d="M9 21V11h6v10"/><path d="M12 11V9.2"/><path d="M12 8.5c-1.4 0-2-1-2-2.1C10 5 12 3 12 3s2 2 2 3.4c0 1.1-.6 2.1-2 2.1Z"/><path d="M6 21h12"/></symbol>
+  <symbol id="i-train" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="14" rx="3"/><path d="M5 11h14M8.5 21l2-4M15.5 21l-2-4"/><path d="M8.5 14h.01M15.5 14h.01"/></symbol>
+  <symbol id="i-bus" viewBox="0 0 24 24"><rect x="4.5" y="3" width="15" height="15" rx="2.5"/><path d="M4.5 10h15M7 18v2.5M17 18v2.5M8 14.5h.01M16 14.5h.01"/></symbol>
+  <symbol id="i-bike" viewBox="0 0 24 24"><circle cx="6" cy="16" r="3.5"/><circle cx="18" cy="16" r="3.5"/><path d="M6 16 9.5 9h6L18 16M9.5 9 12 16h-2M14 6h3"/></symbol>
+  <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h3l1.5-2.5h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z"/><circle cx="12" cy="13" r="3.5"/></symbol>
+  <symbol id="i-door" viewBox="0 0 24 24"><path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16M3 21h18"/><path d="M14.5 12h.01"/></symbol>
+  <symbol id="i-table" viewBox="0 0 24 24"><path d="M3 9h18M5 9v10M19 9v10M3 9l2-4h14l2 4"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-quiet" viewBox="0 0 24 24"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4Z"/><path d="M15.5 9.5a3.5 3.5 0 0 1 0 5"/></symbol>
+  <symbol id="i-paw" viewBox="0 0 24 24"><path d="M12 12.5c-2.6 0-5.5 3.2-5.5 5.4 0 1.5 1.2 2.3 2.6 2.3 1.2 0 1.8-.6 2.9-.6s1.7.6 2.9.6c1.4 0 2.6-.8 2.6-2.3 0-2.2-2.9-5.4-5.5-5.4Z"/><ellipse cx="5.2" cy="10.5" rx="1.7" ry="2.2"/><ellipse cx="9" cy="6.2" rx="1.7" ry="2.3"/><ellipse cx="15" cy="6.2" rx="1.7" ry="2.3"/><ellipse cx="18.8" cy="10.5" rx="1.7" ry="2.2"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<aside class="sample-bar" aria-label="About this sample website">
+  <div class="wrap sample-bar-inner">
+    <p><strong>Sample website by Agile Release.</strong> Jonjoli is not a real restaurant: the menu, prices and people are examples.</p>
+    <a href="https://agilerelease.co.uk/#websites">Get a site like this <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  </div>
+</aside>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Jonjoli, home">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><circle class="brand-bg" cx="16" cy="16" r="16"/><path d="M16.4 28.5C15 22 15.6 14 17.6 7" fill="none" stroke="#150c10" stroke-width="1.7" stroke-linecap="round"/><path d="M15.7 22.6L13.4 22.1M15.6 19.6L18.1 19.2M15.6 16.4L14 15.8M16.2 13.4L18.3 12.8M16.6 10.6L15.2 10M17.4 7.6L17.9 6.5" stroke="#150c10" stroke-width="1.1" stroke-linecap="round"/><g fill="#150c10"><ellipse cx="11.2" cy="21.6" rx="2.6" ry="1.75" transform="rotate(-38 11.2 21.6)"/><ellipse cx="20.6" cy="18.8" rx="2.6" ry="1.75" transform="rotate(34 20.6 18.8)"/><ellipse cx="12.4" cy="15.2" rx="2.6" ry="1.75" transform="rotate(-34 12.4 15.2)"/><ellipse cx="20.4" cy="12.2" rx="2.6" ry="1.75" transform="rotate(38 20.4 12.2)"/><ellipse cx="13.8" cy="9.4" rx="2.6" ry="1.75" transform="rotate(-40 13.8 9.4)"/><ellipse cx="18.4" cy="5.4" rx="2.6" ry="1.75" transform="rotate(10 18.4 5.4)"/></g></svg>
+      <span class="brand-text"><span class="brand-name">Jonjoli</span><span class="brand-sub">Georgian kitchen</span></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="menu.html#feasts">Feasts</a></li>
+        <li><a href="private-dining.html" aria-current="page">Private dining</a></li>
+        <li><a href="index.html#kitchen">The kitchen</a></li>
+        <li><a href="index.html#visit">Visit</a></li>
+      </ul>
+      <a class="btn btn-primary nav-book" href="book.html">Book a table</a>
+    </nav>
+    <a class="btn btn-primary btn-sm header-cta" href="book.html">Book a table</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+      <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg><span class="visually-hidden">Menu</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="page-head page-head-split">
+  <div class="wrap page-head-inner">
+    <div>
+      <p class="kicker">Private dining and groups</p>
+      <h1 class="h1">A feast of your own</h1>
+      <p class="lead">For birthdays, engagements, leaving dos and long Sunday lunches. Groups of <span data-fill="pd-min">9</span> or more eat one of our feast menus, at the long table by the oven, downstairs in the Marani, or with the whole restaurant to themselves.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#enquire">Send an enquiry <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-ghost" href="#spaces">See the rooms</a>
+      </div>
+    </div>
+    <div class="arch-frame arch-frame-head">
+      <img src="img/qvevri.svg" width="600" height="720" alt="Illustration of the Marani: two qvevri clay jars under a brick arch, lit by candles, with a drinking horn on the floor.">
+    </div>
+  </div>
+</section>
+
+<section class="section" id="spaces" aria-labelledby="spaces-title">
+  <div class="wrap">
+    <header class="section-head" data-reveal>
+      <p class="kicker">The rooms</p>
+      <h2 class="h2" id="spaces-title">Three ways to gather</h2>
+      <p>Minimum spends cover food and drink, before service. There is no room fee when you reach them.</p>
+    </header>
+    <div class="spaces" data-spaces data-reveal></div>
+  </div>
+</section>
+
+<section class="section section-wine" id="group-feasts" aria-labelledby="group-feasts-title">
+  <div class="wrap">
+    <header class="section-head" data-reveal>
+      <p class="kicker">Feast menus for groups</p>
+      <h2 class="h2" id="group-feasts-title">Everyone eats the same feast</h2>
+      <p>It keeps the food coming and the table talking. We change any feast for vegans, vegetarians and most allergies, as long as you tell us at least <span data-fill="final-hours">72</span> hours before.</p>
+    </header>
+    <div class="feast-cards feast-cards-4" data-feasts="all" data-reveal></div>
+  </div>
+</section>
+
+<section class="section" id="extras" aria-labelledby="extras-title">
+  <div class="wrap extras-layout">
+    <header class="section-head section-head-left" data-reveal>
+      <p class="kicker">Extras</p>
+      <h2 class="h2" id="extras-title">Make a night of it</h2>
+      <p>Add any of these when you enquire, or later on.</p>
+    </header>
+    <ul class="extras" data-extras data-reveal></ul>
+  </div>
+</section>
+
+<section class="section section-deep" id="how" aria-labelledby="how-title">
+  <div class="wrap">
+    <header class="section-head" data-reveal>
+      <p class="kicker">How it works</p>
+      <h2 class="h2" id="how-title">From enquiry to first toast</h2>
+    </header>
+    <ol class="steps" data-reveal>
+      <li><span class="step-num" aria-hidden="true">1</span><h3>Send an enquiry</h3><p>Tell us the date, how many of you and what you are celebrating. It takes two minutes.</p></li>
+      <li><span class="step-num" aria-hidden="true">2</span><h3>We hold the date</h3><p>Levan replies within a day with a quote, and holds the room for you for three days.</p></li>
+      <li><span class="step-num" aria-hidden="true">3</span><h3>Pay the deposit</h3><p><span data-fill="pd-deposit">£20</span> a head, by a secure card link. It comes off the final bill.</p></li>
+      <li><span class="step-num" aria-hidden="true">4</span><h3>Final numbers</h3><p>Confirm your numbers and dietary needs <span data-fill="final-hours">72</span> hours before. Then just turn up hungry.</p></li>
+    </ol>
+    <div class="terms" data-reveal>
+      <h3 class="h4">The small print</h3>
+      <ul>
+        <li>If you cancel more than 14 days before, we refund the deposit in full. Between 7 and 14 days, we refund half. Within 7 days, we keep it.</li>
+        <li>You pay for the final numbers you confirm <span data-fill="final-hours">72</span> hours before, even if fewer people come on the night.</li>
+        <li>If the bill for food and drink is below the minimum spend, the difference is added as a room charge.</li>
+        <li>An optional service charge of <span data-fill="service">12.5%</span> is added to the bill, all of it for the team.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="enquire" aria-labelledby="enquire-title">
+  <div class="wrap enquiry">
+    <header class="section-head section-head-left enquiry-head">
+      <p class="kicker">Enquire</p>
+      <h2 class="h2" id="enquire-title">Tell us about your feast</h2>
+      <p>Your enquiry comes to us as a WhatsApp message. <strong>Nothing is booked until we reply</strong> with a quote and you pay the deposit.</p>
+      <p class="enquiry-alt">Rather talk it through? Call Levan on <a href="tel:+442079460618" data-contact="phone">020 7946 0618</a>, or email <a href="mailto:feasts@jonjoli.example" data-contact="email">feasts@jonjoli.example</a>.</p>
+    </header>
+
+    <form class="card enquiry-form" data-enquiry-form novalidate>
+      <div class="field-row">
+        <label class="field">
+          <span class="field-label">How many guests?</span>
+          <input type="number" name="guests" inputmode="numeric" min="9" max="90" value="12" required aria-describedby="guests-hint guests-error">
+          <span class="field-hint" id="guests-hint">From <span data-fill="pd-min">9</span> to 90. A rough number is fine.</span>
+          <span class="field-error" id="guests-error" data-error-for="guests" hidden></span>
+        </label>
+        <label class="field">
+          <span class="field-label">Preferred date</span>
+          <input type="date" name="date" required aria-describedby="date-hint date-error">
+          <span class="field-hint" id="date-hint" data-date-hint>Up to a year ahead.</span>
+          <span class="field-error" id="date-error" data-error-for="date" hidden></span>
+        </label>
+      </div>
+      <label class="check check-inline"><input type="checkbox" name="flexible"> <span>Our dates are flexible</span></label>
+
+      <fieldset class="field">
+        <legend class="field-label">Where would you like to be?</legend>
+        <div class="space-options" data-space-options></div>
+        <span class="field-error" id="space-error" data-error-for="space" hidden>Please choose where you would like to be.</span>
+      </fieldset>
+
+      <p class="spend-line" data-spend-line hidden></p>
+
+      <fieldset class="field">
+        <legend class="field-label">Lunch or dinner?</legend>
+        <div class="options options-3" data-meal-options>
+          <label class="option"><input type="radio" name="meal" value="Lunch"> <span><strong>Lunch</strong></span></label>
+          <label class="option"><input type="radio" name="meal" value="Dinner" checked> <span><strong>Dinner</strong></span></label>
+          <label class="option"><input type="radio" name="meal" value="Not sure yet"> <span><strong>Not sure yet</strong></span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="field">
+        <legend class="field-label">Which feast?</legend>
+        <div class="options options-2" data-menu-options></div>
+      </fieldset>
+
+      <fieldset class="field">
+        <legend class="field-label">Extras <span class="field-optional">Optional</span></legend>
+        <div class="checks checks-2" data-extra-options></div>
+      </fieldset>
+
+      <div class="field-row">
+        <label class="field">
+          <span class="field-label">What is the occasion? <span class="field-optional">Optional</span></span>
+          <input type="text" name="occasion" maxlength="80" placeholder="For example: Dad's 70th">
+        </label>
+        <label class="field">
+          <span class="field-label">Dietary needs <span class="field-optional">Optional</span></span>
+          <input type="text" name="dietary" maxlength="160" placeholder="For example: 2 vegans, 1 coeliac">
+        </label>
+      </div>
+
+      <div class="field-row">
+        <label class="field">
+          <span class="field-label">Your name</span>
+          <input type="text" name="name" autocomplete="name" maxlength="60" required aria-describedby="pd-name-error">
+          <span class="field-error" id="pd-name-error" data-error-for="name" hidden>Please add your name.</span>
+        </label>
+        <label class="field">
+          <span class="field-label">Company <span class="field-optional">Optional</span></span>
+          <input type="text" name="company" autocomplete="organization" maxlength="80">
+        </label>
+      </div>
+
+      <label class="field">
+        <span class="field-label">Anything else? <span class="field-optional">Optional</span></span>
+        <textarea name="note" rows="3" maxlength="500" placeholder="For example: we would love the singers for the first hour"></textarea>
+      </label>
+
+      <div class="send">
+        <button type="submit" class="btn btn-primary btn-lg" value="whatsapp"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg> Send enquiry on WhatsApp</button>
+        <button type="submit" class="btn btn-ghost" value="email"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg> Email it instead</button>
+        <p class="form-note">This website does not keep your details. We reply within a day.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a class="brand" href="index.html" aria-label="Jonjoli, home">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><circle class="brand-bg" cx="16" cy="16" r="16"/><path d="M16.4 28.5C15 22 15.6 14 17.6 7" fill="none" stroke="#150c10" stroke-width="1.7" stroke-linecap="round"/><path d="M15.7 22.6L13.4 22.1M15.6 19.6L18.1 19.2M15.6 16.4L14 15.8M16.2 13.4L18.3 12.8M16.6 10.6L15.2 10M17.4 7.6L17.9 6.5" stroke="#150c10" stroke-width="1.1" stroke-linecap="round"/><g fill="#150c10"><ellipse cx="11.2" cy="21.6" rx="2.6" ry="1.75" transform="rotate(-38 11.2 21.6)"/><ellipse cx="20.6" cy="18.8" rx="2.6" ry="1.75" transform="rotate(34 20.6 18.8)"/><ellipse cx="12.4" cy="15.2" rx="2.6" ry="1.75" transform="rotate(-34 12.4 15.2)"/><ellipse cx="20.4" cy="12.2" rx="2.6" ry="1.75" transform="rotate(38 20.4 12.2)"/><ellipse cx="13.8" cy="9.4" rx="2.6" ry="1.75" transform="rotate(-40 13.8 9.4)"/><ellipse cx="18.4" cy="5.4" rx="2.6" ry="1.75" transform="rotate(10 18.4 5.4)"/></g></svg>
+        <span class="brand-text"><span class="brand-name">Jonjoli</span><span class="brand-sub">Georgian kitchen</span></span>
+      </a>
+      <img class="footer-ka" src="img/ka-jonjoli.svg" alt="Jonjoli, written in Georgian" width="200" height="37">
+      <p>Georgian food and qvevri wine at 4 Tarragon Yard, Clapton, London E5. Open Tuesday to Sunday.</p>
+      <p class="open-status open-status-sm" data-open-status data-short></p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <h2 class="footer-title">Eat with us</h2>
+      <a href="menu.html">Menu and allergens</a>
+      <a href="book.html">Book a table</a>
+      <a href="private-dining.html">Private dining</a>
+      <a href="index.html#vouchers">Gift vouchers</a>
+    </nav>
+    <nav class="footer-nav" aria-label="More">
+      <h2 class="footer-title">Good to know</h2>
+      <a href="index.html#visit">Hours and finding us</a>
+      <a href="index.html#access">Accessibility</a>
+      <a href="index.html#good-to-know">Deposits and service</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+    <p class="footer-credit">A sample website by <a href="https://agilerelease.co.uk/#websites">Agile Release</a>. Jonjoli is made up. &copy; 2026 Agile Release Limited. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy | Kember &amp; Daughter (sample website)</title>
+<meta name="description" content="How Kember &amp; Daughter's website handles your details. A sample website by Agile Release.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#f3f0e9">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="preload" href="css/fonts/schibsted-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js" defer></script>
+<script src="js/site.js" defer></script>
+</head>
+<body class="page-privacy">
+
+<svg class="sprite" aria-hidden="true">
+  <symbol id="i-extension" viewBox="0 0 24 24"><path d="M2.5 20.5h19"/><path d="M4 20.5V10.5l6-5.5 6 5.5v10"/><path d="M16 13.5h4.5v7"/><path d="M8 20.5V16h4v4.5"/></symbol>
+  <symbol id="i-loft" viewBox="0 0 24 24"><path d="M2.5 12.5 12 4l9.5 8.5"/><path d="M12.5 5H18v6"/><path d="M5 10.5v10h14v-9"/><path d="M14.5 7.5h1.5v1.5"/><path d="M2.5 20.5h19"/></symbol>
+  <symbol id="i-kitchen" viewBox="0 0 24 24"><path d="M2.5 20.5h19"/><path d="M3.5 12h17v8.5h-17Z"/><path d="M12 12v8.5M7.5 15v2M16.5 15v2"/><path d="M4.5 3.5h7v5h-7Z"/><path d="M15 12V7a1.8 1.8 0 0 1 3.6 0"/></symbol>
+  <symbol id="i-bathroom" viewBox="0 0 24 24"><path d="M3 12h18v2.5a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5Z"/><path d="M6 12V5.5a2 2 0 0 1 4-.5"/><path d="M8 19.5l-1 2M16 19.5l1 2"/><path d="M9 7.5h2"/></symbol>
+  <symbol id="i-refurb" viewBox="0 0 24 24"><path d="M4 3.5h13v5H4Z"/><path d="M17 6h2.5v5.5H11v3"/><path d="M9.5 14.5h3v6.5h-3Z"/></symbol>
+  <symbol id="i-pencil" viewBox="0 0 24 24"><path d="M4 20l1-4.5L16 4.5l3.5 3.5L8.5 19Z"/><path d="M14 6.5 17.5 10"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4.5 6v5.5c0 4.5 3.2 8 7.5 9.5 4.3-1.5 7.5-5 7.5-9.5V6Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></symbol>
+  <symbol id="i-pound" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M14.5 8.2a2.6 2.6 0 0 0-4.6 1.6V16M8.5 12.5h4.5M8.5 16h7"/></symbol>
+  <symbol id="i-square" viewBox="0 0 24 24"><path d="M4 20V4l16 16Z"/><path d="M8 16v-4.5l4.5 4.5Z"/><path d="M4 8h2M4 12h2"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 7.5h3.5L9 5h6l1.5 2.5H20a1 1 0 0 1 1 1V18a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V8.5a1 1 0 0 1 1-1Z"/><circle cx="12" cy="13" r="3.5"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6Z"/><path d="M14 3v4h4M9 12h6M9 15.5h6M9 8.5h2"/></symbol>
+  <symbol id="i-drag" viewBox="0 0 24 24"><path d="M9 7 4 12l5 5M15 7l5 5-5 5"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3.5 6.5 8.5 7 8.5-7"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="1.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<aside class="sample-bar" aria-label="About this sample website">
+  <div class="wrap sample-bar-inner">
+    <p><strong>Sample website by Agile Release.</strong> Kember &amp; Daughter is not a real business: the projects, prices and people are examples.</p>
+    <a href="https://agilerelease.co.uk/#websites">Get a site like this <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  </div>
+</aside>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Kember &amp; Daughter, builders, home">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect class="mark-bg" width="40" height="40" rx="3"/><path class="mark-house" d="M9 30V17.5L20 9l11 8.5V30M9 30h22"/><path class="mark-loft" d="M20 9v6.5h7.5"/><path class="mark-dim" d="M9 34.5h22M9 32.5v4M31 32.5v4"/></svg>
+      <span class="brand-text"><span class="brand-name">Kember <span class="amp">&amp;</span> Daughter</span><span class="brand-sub">Builders · Beckenham</span></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="how-we-work.html">How we work</a></li>
+        <li><a href="index.html#prices">Prices</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li class="nav-quote"><a href="quote.html">Get a quote</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary btn-sm header-cta" href="quote.html">Get a quote</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+      <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg><span class="visually-hidden">Menu</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="page-head grid-paper">
+  <div class="wrap page-head-inner">
+    <p class="kicker"><span>Privacy</span> Your details</p>
+    <h1 class="h1">Your details</h1>
+    <p class="lead">Short version: this website doesn't collect or keep anything about you.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap prose">
+    <h2>Asking for a quote</h2>
+    <p>When you fill in the quote form, the website writes your answers as a WhatsApp message or an email on your own device. Nothing is sent until you press send in WhatsApp or your email app, and the website itself never receives or stores your name, your address or anything else you type.</p>
+    <p>Once you send it, we see your message, your number or email address, and any photos you attach, like any other message. We use them only to arrange a visit, prepare your quote and, if you go ahead, to run your job.</p>
+    <h2>How long we keep things</h2>
+    <p>If you don't go ahead, we delete your messages and photos after twelve months. If we build for you, we keep the drawings, certificates and job records for as long as our guarantee lasts, plus one year, because you or a future owner may need them.</p>
+    <h2>Cookies and tracking</h2>
+    <p>This website sets no cookies, uses no analytics and loads nothing from other websites, including fonts.</p>
+    <h2>Your rights</h2>
+    <p>You can ask us what we hold about you, or ask us to correct or delete it, by WhatsApp or by email to hello@kemberanddaughter.example. You can also complain to the Information Commissioner's Office (ico.org.uk).</p>
+    <p class="prose-note">Kember &amp; Daughter is a made-up business on a sample website, so this notice is an example of what a small building firm's privacy page could say.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a class="brand brand-light" href="index.html" aria-label="Kember &amp; Daughter, builders, home">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect class="mark-bg" width="40" height="40" rx="3"/><path class="mark-house" d="M9 30V17.5L20 9l11 8.5V30M9 30h22"/><path class="mark-loft" d="M20 9v6.5h7.5"/><path class="mark-dim" d="M9 34.5h22M9 32.5v4M31 32.5v4"/></svg>
+        <span class="brand-text"><span class="brand-name">Kember <span class="amp">&amp;</span> Daughter</span><span class="brand-sub">Builders · Beckenham</span></span>
+      </a>
+      <p>Extensions, loft conversions, kitchens, bathrooms and refurbishments across Beckenham, Bromley and nearby. A family firm since 1998.</p>
+    </div>
+    <div class="footer-cols">
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="projects.html">Projects</a>
+        <a href="how-we-work.html">How we work</a>
+        <a href="quote.html">Get a quote</a>
+        <a href="index.html#prices">Prices</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+      <address class="footer-address">
+        <span>4 Kilnworth Lane, Beckenham BR3</span>
+        <a href="tel:+442079460857" data-contact="phone">020 7946 0857</a>
+        <a href="mailto:hello@kemberanddaughter.example" data-contact="email">hello@kemberanddaughter.example</a>
+      </address>
+    </div>
+    <p class="footer-credit">A sample website by <a href="https://agilerelease.co.uk/#websites">Agile Release</a>. Kember &amp; Daughter is made up. &copy; 2026 Agile Release Limited. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

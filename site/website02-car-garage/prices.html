@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Servicing and prices | Gantry Motor Works, Walthamstow (sample website)</title>
+<meta name="description" content="Interim, full and major service prices by engine size, what each service includes, the MOT price and guide prices for common repairs. A sample website by Agile Release.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#141619">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="preload" href="css/fonts/anybody-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="css/fonts/ibm-plex-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js" defer></script>
+<script src="js/core.js" defer></script>
+<script src="js/site.js" defer></script>
+<script src="js/prices.js" defer></script>
+</head>
+<body class="page-prices">
+
+<svg class="sprite" aria-hidden="true">
+  <symbol id="i-mot" viewBox="0 0 24 24"><path d="M6 4.5h12v16H6z"/><path d="M9.5 4.5V3h5v1.5M9 12.5l2.2 2.2 4-4.4"/></symbol>
+  <symbol id="i-spanner" viewBox="0 0 24 24"><path d="M14.6 3.3a5 5 0 0 0-4.7 6.9L3.6 16.5a2.1 2.1 0 0 0 3 3l6.3-6.3a5 5 0 0 0 6.9-4.7l-3 1.4-2.6-1.1-1.1-2.6 1.5-2.9Z"/></symbol>
+  <symbol id="i-brake" viewBox="0 0 24 24"><circle cx="11" cy="13" r="8"/><circle cx="11" cy="13" r="2.4"/><path d="M15.5 3.4a10.6 10.6 0 0 1 5.1 5.4M11 8.2v.1M6.2 13h.1M15.8 13h.1M11 17.8v.1"/></symbol>
+  <symbol id="i-scan" viewBox="0 0 24 24"><path d="M3 4.5h18v12H3zM8 20.5h8M12 16.5v4"/><path d="M6 11h2.5l1.5-3 3 6 1.5-3H18"/></symbol>
+  <symbol id="i-gear" viewBox="0 0 24 24"><path d="M10.2 2.8h3.6l.5 2.6 1.6.9 2.5-.9 1.8 3.1-2 1.7v1.8l2 1.7-1.8 3.1-2.5-.9-1.6.9-.5 2.6h-3.6l-.5-2.6-1.6-.9-2.5.9-1.8-3.1 2-1.7v-1.8l-2-1.7 1.8-3.1 2.5.9 1.6-.9Z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-belt" viewBox="0 0 24 24"><path d="M11.5 18.8L19.7 8.9A3.3 3.3 0 0 0 15.4 4L4.6 11.2A5.2 5.2 0 1 0 11.5 18.8Z"/><circle cx="7.5" cy="15.5" r="2.6"/><circle cx="17.2" cy="6.8" r="1.2"/></symbol>
+  <symbol id="i-spring" viewBox="0 0 24 24"><path d="M5 3.5h14M5 20.5h14M7 6.4l10 1.7-10 1.7 10 1.7-10 1.7 10 1.7-10 1.7 10 1.7"/></symbol>
+  <symbol id="i-exhaust" viewBox="0 0 24 24"><path d="M2 15h3.5M5.5 11.5h9v7h-9zM14.5 15H20"/><circle cx="20.6" cy="10.6" r="1.3"/><circle cx="17.6" cy="6.6" r="1.9"/></symbol>
+  <symbol id="i-snow" viewBox="0 0 24 24"><path d="M12 2.5v19M3.8 7.2l16.4 9.6M3.8 16.8l16.4-9.6M9.3 4.2 12 6.6l2.7-2.4M9.3 19.8l2.7-2.4 2.7 2.4M3.6 11.2l3.5 1 .9 3.4M20.4 12.8l-3.5-1-.9-3.4"/></symbol>
+  <symbol id="i-battery" viewBox="0 0 24 24"><path d="M3 7.5h18v12H3zM6.5 7.5v-3h3v3M14.5 7.5v-3h3v3M6 13.5h4M14.5 13.5h4M16.5 11.5v4"/></symbol>
+  <symbol id="i-tyre" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><path d="M12 3v4.5M12 16.5V21M3 12h4.5M16.5 12H21M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M18.4 5.6l-2.8 2.8M8.4 15.6l-2.8 2.8"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13.5 2.5 5 13.5h6l-1 8 8.5-11h-6l1-8Z"/></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24"><path d="M2.5 16.5v-4l2.3-5h10.4l3.6 4.4 2.7 1v3.6"/><path d="M2.5 16.5h2M9.6 16.5h5M19.6 16.5h1.9M5.5 11.9h13"/><circle cx="7" cy="17" r="2.4"/><circle cx="17" cy="17" r="2.4"/></symbol>
+  <symbol id="i-pound" viewBox="0 0 24 24"><path d="M16.5 6.5A4 4 0 0 0 9 8.4V20M6 13h8M6 20h12"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2.8 4.5 5.6v6c0 4.6 3.1 8 7.5 9.6 4.4-1.6 7.5-5 7.5-9.6v-6L12 2.8Z"/><path d="m8.6 12.2 2.4 2.4 4.4-4.6"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 4.5h11a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3v-13ZM4 17.5a3 3 0 0 1 3-3h11"/><path d="M8 8.5h6"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24"><circle cx="7.5" cy="15.5" r="4.5"/><path d="M10.7 12.3 20 3M16 7l3 3M18.5 4.5l2 2"/></symbol>
+  <symbol id="i-train" viewBox="0 0 24 24"><path d="M6 3.5h12v12.5H6zM6 10h12M9.5 20.5 8 16M14.5 20.5 16 16M7.5 18.5h9"/><path d="M9 13h.1M15 13h.1"/></symbol>
+  <symbol id="i-park" viewBox="0 0 24 24"><path d="M4 3.5h16v17H4z"/><path d="M9.5 16.5v-9h3.5a2.75 2.75 0 0 1 0 5.5H9.5"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><path d="M3 5.5h18v13H3z"/><path d="m3.5 6.5 8.5 7 8.5-7"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><path d="M3.5 5h17v15.5h-17zM3.5 10h17M8 3v4M16 3v4"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<aside class="sample-bar" aria-label="About this sample website">
+  <div class="wrap sample-bar-inner">
+    <p><span class="sample-tag">Sample</span> <strong>A sample website by Agile Release.</strong> Gantry Motor Works is not a real garage: the prices, hours and details are examples.</p>
+    <a href="https://agilerelease.co.uk/#websites">Get a site like this <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  </div>
+</aside>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Gantry Motor Works, home">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect class="brand-bg" width="32" height="32" rx="3"/><path class="brand-lift" d="M8 26V8.5h16V26M11.5 19.5h9"/></svg>
+      <span class="brand-text"><span class="brand-name">Gantry</span><span class="brand-sub">Motor Works</span></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="mot.html">Book an MOT</a></li>
+        <li><a href="prices.html" aria-current="page">Servicing &amp; prices</a></li>
+        <li><a href="quote.html">Repair quote</a></li>
+        <li><a href="index.html#collect">Collection</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="index.html#visit">Find us</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-signal btn-sm header-cta" href="mot.html">Book MOT</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+      <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg><span class="visually-hidden">Menu</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="page-head">
+  <div class="wrap page-head-inner">
+    <div class="page-head-copy">
+      <p class="bay bay-dark"><span>Prices</span> Servicing, MOTs and repairs</p>
+      <h1 class="h1">Servicing and prices</h1>
+      <p class="lead">Fixed service prices by engine size, with parts, oil, labour and VAT included. Anything else your car needs is priced first, and only done if you say yes.</p>
+    </div>
+    <ul class="head-facts">
+      <li><strong data-fill="mot-price">£45</strong><span>MOT test, or <span data-fill="mot-with-service">£35</span> with a service.</span></li>
+      <li><strong data-fill="service-from">£139</strong><span>Our lowest service price: an interim service on a small car.</span></li>
+      <li><strong data-fill="labour-rate">£96</strong><span>An hour for repairs, VAT included.</span></li>
+    </ul>
+  </div>
+  <div class="hazard-band" aria-hidden="true"></div>
+</section>
+
+<section class="section section-tight" id="mot" aria-labelledby="mot-title">
+  <div class="wrap">
+    <div class="mot-strip">
+      <div class="mot-strip-price">
+        <h2 class="mot-strip-title" id="mot-title">MOT test</h2>
+        <p class="mot-big" data-fill="mot-price">£45</p>
+        <p class="mot-strip-sub">Cars and small vans. The test takes 45 minutes to an hour.</p>
+      </div>
+      <ul class="mot-facts">
+        <li><span>Legal maximum fee</span><b data-fill="mot-max">£54.85</b></li>
+        <li><span>MOT booked with any service</span><b data-fill="mot-with-service">£35</b></li>
+        <li><span>Retest when we do the repairs, within 10 working days</span><b>Free</b></li>
+        <li><span>Partial retest when you bring it back within 10 working days</span><b data-fill="partial-retest">£22.50</b></li>
+      </ul>
+      <div class="mot-strip-cta">
+        <a class="btn btn-dark btn-block" href="mot.html">Book an MOT <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-outline btn-block" href="mot.html?job=both">MOT and service</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-concrete" id="servicing" aria-labelledby="servicing-title">
+  <div class="wrap">
+    <header class="section-head">
+      <p class="bay"><span>Service</span> Prices for your car</p>
+      <h2 class="h2" id="servicing-title">Interim, full or major</h2>
+      <p>Choose your engine size and fuel, and the prices below change to suit. Not sure which service your car is due? Your service book says, or we'll check its schedule for you.</p>
+    </header>
+
+    <form class="spec" data-spec novalidate>
+      <fieldset class="field">
+        <legend class="field-label">Engine size</legend>
+        <div class="segmented segmented-3" data-size-options>
+          <label class="seg"><input type="radio" name="size" value="small"><span><strong>Up to 1.4 L</strong><small>Fiesta, Polo, Corsa, Yaris</small></span></label>
+          <label class="seg"><input type="radio" name="size" value="medium" checked><span><strong>1.4 to 2.0 L</strong><small>Golf, Focus, Qashqai, Octavia</small></span></label>
+          <label class="seg"><input type="radio" name="size" value="large"><span><strong>Over 2.0 L</strong><small>5 Series, XC90, Discovery, vans</small></span></label>
+        </div>
+      </fieldset>
+      <fieldset class="field">
+        <legend class="field-label">Fuel</legend>
+        <div class="segmented segmented-3" data-fuel-options>
+          <label class="seg"><input type="radio" name="fuel" value="petrol" checked><span><strong>Petrol</strong></span></label>
+          <label class="seg"><input type="radio" name="fuel" value="diesel"><span><strong>Diesel</strong></span></label>
+          <label class="seg"><input type="radio" name="fuel" value="hybrid"><span><strong>Hybrid</strong></span></label>
+        </div>
+      </fieldset>
+    </form>
+
+    <div class="svc-grid" data-service-cards aria-live="polite">
+      <article class="svc">
+        <h3 class="svc-name">Interim service</h3>
+        <p class="svc-price">£159</p>
+        <p class="svc-blurb">An oil change and safety check between full services. Good for cars that do a lot of miles.</p>
+      </article>
+      <article class="svc">
+        <h3 class="svc-name">Full service</h3>
+        <p class="svc-price">£249</p>
+        <p class="svc-blurb">The yearly service most cars need. Oil, filters and a thorough check from top to bottom.</p>
+      </article>
+      <article class="svc">
+        <h3 class="svc-name">Major service</h3>
+        <p class="svc-price">£349</p>
+        <p class="svc-blurb">Everything in a full service, plus brake fluid, plugs or fuel filter and the cabin filter.</p>
+      </article>
+    </div>
+
+    <div class="compare-wrap">
+      <table class="compare">
+        <caption>What each service includes <span data-compare-for></span></caption>
+        <thead>
+          <tr>
+            <th scope="col">Included</th>
+            <th scope="col">Interim</th>
+            <th scope="col">Full</th>
+            <th scope="col">Major</th>
+          </tr>
+        </thead>
+        <tbody data-compare></tbody>
+      </table>
+    </div>
+    <p class="compare-note">Electric car? We don't service electric cars, but we do their MOTs, tyres, brakes, suspension and air conditioning. <a href="quote.html">Ask for a quote</a>.</p>
+  </div>
+</section>
+
+<section class="section" id="repairs" aria-labelledby="repairs-title">
+  <div class="wrap repairs">
+    <header class="section-head">
+      <p class="bay"><span>Repairs</span> Guide prices</p>
+      <h2 class="h2" id="repairs-title">Common repairs</h2>
+      <p>Prices include VAT, parts and fitting. A "from" price is the lowest it costs: we confirm the price for your car before any work.</p>
+      <p class="repairs-labour">Other work is charged at <strong data-fill="labour-rate">£96</strong> an hour, VAT included, and we always tell you the price first.</p>
+    </header>
+    <ul class="repair-list" data-repairs>
+      <li class="repair"><span class="repair-name">Diagnostic check</span><span class="repair-price">£60</span></li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a class="brand" href="index.html" aria-label="Gantry Motor Works, home">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect class="brand-bg" width="32" height="32" rx="3"/><path class="brand-lift" d="M8 26V8.5h16V26M11.5 19.5h9"/></svg>
+        <span class="brand-text"><span class="brand-name">Gantry</span><span class="brand-sub">Motor Works</span></span>
+      </a>
+      <p>Independent garage for MOTs, servicing and repairs. Unit 3, Linnet Yard, Walthamstow, London E17.</p>
+    </div>
+    <div class="footer-contact">
+      <p class="footer-head">Workshop</p>
+      <p><a href="tel:+442079460584" data-contact="phone">020 7946 0584</a><br><a href="https://wa.me/447700900584" data-contact="whatsapp">WhatsApp 07700 900584</a></p>
+      <p data-hours-summary>Monday to Friday 8am to 6pm<br>Saturday 8am to 1pm</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="mot.html">Book an MOT</a>
+      <a href="prices.html">Servicing &amp; prices</a>
+      <a href="quote.html">Repair quote</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+    <p class="footer-credit">A sample website by <a href="https://agilerelease.co.uk/#websites">Agile Release</a>. Gantry Motor Works is made up. &copy; 2026 Agile Release Limited. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

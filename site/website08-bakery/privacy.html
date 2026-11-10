@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy | Crumb &amp; Candle (sample website)</title>
+<meta name="description" content="How the Crumb &amp; Candle website handles your details. A sample website by Agile Release.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#fff6f2">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="preload" href="css/fonts/shrikhand-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="css/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js" defer></script>
+<script src="js/time.js" defer></script>
+<script src="js/site.js" defer></script>
+</head>
+<body>
+
+<svg class="sprite" aria-hidden="true">
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 7 8.5-7"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z"/><circle cx="12" cy="13" r="3.5"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.5v.2"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5 2.5 20h19L12 3.5Z"/><path d="M12 10v4.5M12 17.2v.2"/></symbol>
+  <symbol id="i-prev" viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></symbol>
+  <symbol id="i-next" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+  <symbol id="i-loaf" viewBox="0 0 24 24"><path d="M3.8 17.5C3 12 7 7 12 7s9 5 8.2 10.5Z"/><path d="M8.5 11c2-1.3 5-1.3 7 0M8 14c2.4-1.2 5.6-1.2 8 0"/></symbol>
+  <symbol id="i-croissant" viewBox="0 0 24 24"><path d="M2.8 17.2C3.4 11.3 7.2 7.2 12 7.2s8.6 4.1 9.2 10c-1.7-1.3-3.4-1.8-5-1.6-1.2-1.4-2.6-2.1-4.2-2.1s-3 .7-4.2 2.1c-1.6-.2-3.3.3-5 1.6Z"/><path d="M7.8 15.6 6.6 9.6M16.2 15.6l1.2-6M12 13.5V7.2"/></symbol>
+  <symbol id="i-slice" viewBox="0 0 24 24"><path d="M3 15.5 20 9v10H3Z"/><path d="M3 15.5h17M3 12.5l17-6.5"/><circle cx="17.5" cy="5" r="1.8"/></symbol>
+  <symbol id="i-cake" viewBox="0 0 24 24"><path d="M4 20v-7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v7M2.5 20h19"/><path d="M4 15c1.3 1 2.7 1 4 0s2.7-1 4 0 2.7 1 4 0 2.7-1 4 0"/><path d="M12 11V7.5"/><path d="M12 3.2c.9.9 1.1 1.9 0 2.8-1.1-.9-.9-1.9 0-2.8Z"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1 12.5H6L5 8Z"/><path d="M9 10V6.5a3 3 0 0 1 6 0V10"/></symbol>
+  <symbol id="i-train" viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="13.5" rx="3"/><path d="M6 10h12M9 20.5l-1.8 1.5M15 20.5l1.8 1.5M9.5 13.4v.2M14.5 13.4v.2"/></symbol>
+  <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3c.6 4.6 1.9 5.9 6.5 6.5-4.6.6-5.9 1.9-6.5 6.5-.6-4.6-1.9-5.9-6.5-6.5C10.1 8.9 11.4 7.6 12 3Z"/><path d="M18.5 15.5v4M16.5 17.5h4"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14Z"/><path d="M5 19 13 11"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<aside class="sample-bar" aria-label="About this sample website">
+  <div class="wrap sample-bar-inner">
+    <p><strong>Sample website by Agile Release.</strong> Crumb &amp; Candle is not a real bakery: the prices, hours and address are examples.</p>
+    <a href="https://agilerelease.co.uk/#websites">Get a site like this <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a>
+  </div>
+</aside>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Crumb and Candle, home">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect x="1.5" y="1.5" width="37" height="37" rx="11" fill="#c4164e" stroke="#2b0d1e" stroke-width="3"/><path d="M19.5 7.2c2.6 2.7 3.1 5.3.5 6.9-2.6-1.6-2.1-4.2-.5-6.9Z" fill="#ffd15c" stroke="#2b0d1e" stroke-width="1.8" stroke-linejoin="round"/><rect x="18.2" y="14" width="3.6" height="8" rx="1" fill="#fff3dc" stroke="#2b0d1e" stroke-width="1.8"/><path d="M8.5 22.5h23v7.3a2.7 2.7 0 0 1-2.7 2.7H11.2a2.7 2.7 0 0 1-2.7-2.7Z" fill="#fff3dc" stroke="#2b0d1e" stroke-width="2.2" stroke-linejoin="round"/><path d="M8.5 22.5h23v2.6c0 1.2-.8 1.9-1.6 1.9s-1.6-.7-1.6-1.9v1.6c0 1.5-.9 2.2-1.8 2.2s-1.8-.7-1.8-2.2v-1c0 1.1-.8 1.7-1.6 1.7s-1.6-.6-1.6-1.7v2.3c0 1.4-.9 2.1-1.8 2.1s-1.8-.7-1.8-2.1v-2.6c0 1-.8 1.6-1.6 1.6s-1.6-.6-1.6-1.6v1.1c0 1.2-.8 1.8-1.6 1.8s-1.6-.6-1.6-1.8Z" fill="#ff8fab" stroke="#2b0d1e" stroke-width="1.8" stroke-linejoin="round"/></svg>
+      <span class="brand-text"><span class="brand-name">Crumb <span class="brand-amp">&amp;</span> Candle</span><span class="brand-tag">Bakery, Surbiton</span></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="shop.html">Bread &amp; pastries</a></li>
+        <li><a href="cakes.html">Celebration cakes</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="shop.html#allergens">Allergens</a></li>
+        <li><a href="index.html#find-us">Find us</a></li>
+        <li class="nav-order"><a href="cakes.html#order">Order a cake</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary btn-sm header-cta" href="cakes.html#order">Order a cake</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+      <svg class="icon"><use href="#i-menu"/></svg><span class="visually-hidden">Menu</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="page-head">
+  <div class="wrap page-head-inner">
+    <div>
+      <p class="kicker">Privacy</p>
+      <h1 class="h1">Your details</h1>
+      <p class="lead">Short version: this website does not collect or keep anything about you.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+  <div class="prose">
+    <h2>Ordering a cake</h2>
+    <p>When you fill in the cake order form, the website writes your order as a WhatsApp message or an email on your own device. Nothing is sent until you press send in WhatsApp or your email app, and the website itself never receives or stores your name, your number or your order.</p>
+    <p>Once you send it, we see your message and your number or email address, like any other message. We use them only to talk to you about your order: the price, the deposit, any changes and the collection. We keep order chats for two years, for our accounts, then delete them.</p>
+    <h2>Photos you send us</h2>
+    <p>If you send a reference photo, we use it only to make your cake. We do not share it or post it anywhere. If we would like to put a photo of your finished cake in our gallery, we will ask you first.</p>
+    <h2>Deposits</h2>
+    <p>Deposits are paid through a card payment link from our payment provider. We never see or keep your card details.</p>
+    <h2>Cookies and tracking</h2>
+    <p>This website sets no cookies, uses no analytics and loads nothing from other websites, including fonts.</p>
+    <h2>Your rights</h2>
+    <p>You can ask us what we hold about you, or ask us to delete it, on WhatsApp or by email to hello@crumbandcandle.example. You can also complain to the Information Commissioner's Office (ico.org.uk).</p>
+    <p class="prose-note">Crumb &amp; Candle is a made-up business on a sample website, so this notice is an example of what a small bakery's privacy page could say.</p>
+  </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a class="brand brand-light" href="index.html" aria-label="Crumb and Candle, home">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect x="1.5" y="1.5" width="37" height="37" rx="11" fill="#c4164e" stroke="#2b0d1e" stroke-width="3"/><path d="M19.5 7.2c2.6 2.7 3.1 5.3.5 6.9-2.6-1.6-2.1-4.2-.5-6.9Z" fill="#ffd15c" stroke="#2b0d1e" stroke-width="1.8" stroke-linejoin="round"/><rect x="18.2" y="14" width="3.6" height="8" rx="1" fill="#fff3dc" stroke="#2b0d1e" stroke-width="1.8"/><path d="M8.5 22.5h23v7.3a2.7 2.7 0 0 1-2.7 2.7H11.2a2.7 2.7 0 0 1-2.7-2.7Z" fill="#fff3dc" stroke="#2b0d1e" stroke-width="2.2" stroke-linejoin="round"/><path d="M8.5 22.5h23v2.6c0 1.2-.8 1.9-1.6 1.9s-1.6-.7-1.6-1.9v1.6c0 1.5-.9 2.2-1.8 2.2s-1.8-.7-1.8-2.2v-1c0 1.1-.8 1.7-1.6 1.7s-1.6-.6-1.6-1.7v2.3c0 1.4-.9 2.1-1.8 2.1s-1.8-.7-1.8-2.1v-2.6c0 1-.8 1.6-1.6 1.6s-1.6-.6-1.6-1.6v1.1c0 1.2-.8 1.8-1.6 1.8s-1.6-.6-1.6-1.8Z" fill="#ff8fab" stroke="#2b0d1e" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        <span class="brand-text"><span class="brand-name">Crumb <span class="brand-amp">&amp;</span> Candle</span><span class="brand-tag">Bakery, Surbiton</span></span>
+      </a>
+      <p>Bread and pastries baked every morning, and celebration cakes made to order.</p>
+      <p class="footer-address"><svg class="icon"><use href="#i-pin"/></svg> <span>14 Cardell Row, Surbiton, KT6</span></p>
+      <p class="footer-hours"><svg class="icon"><use href="#i-clock"/></svg> <span>Tuesday to Sunday from 7:30am. Closed on Mondays.</span></p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="shop.html">Bread &amp; pastries</a>
+      <a href="cakes.html">Celebration cakes</a>
+      <a href="cakes.html#order">Order a cake</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="shop.html#allergens">Allergens</a>
+      <a href="index.html#find-us">Find us</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+    <p class="footer-credit">A sample website by <a href="https://agilerelease.co.uk/#websites">Agile Release</a>. Crumb &amp; Candle is made up. &copy; 2026 Agile Release Limited. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

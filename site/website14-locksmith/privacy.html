@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy | Nightjar Locksmiths (sample website)</title>
+<meta name="description" content="How Nightjar Locksmiths' website handles your details. A sample website by Agile Release.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#1b2124">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="preload" href="css/fonts/atkinson-hyperlegible-next-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="css/fonts/bitter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js" defer></script>
+<script src="js/core.js" defer></script>
+<script src="js/site.js" defer></script>
+</head>
+<body>
+
+<svg class="sprite" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 7 8.5-7"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24"><circle cx="7.5" cy="15.5" r="4.5"/><path d="m10.7 12.3 9.3-9.3M15.5 7.5l3 3M13 10l2 2"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4.5" y="10.5" width="15" height="10.5" rx="2"/><path d="M8 10.5v-3a4 4 0 0 1 8 0v3M12 14.5V17"/></symbol>
+  <symbol id="i-handle" viewBox="0 0 24 24"><rect x="7" y="3" width="5.5" height="18" rx="2.75"/><path d="M9.75 8h9"/><path d="M9.75 14.5v2.5"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.4 7.5 9.5 4.3-1.1 7.5-4.9 7.5-9.5V6L12 3Z"/><path d="m9 12 2.2 2.2L15.5 10"/></symbol>
+  <symbol id="i-safe" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="15.5" rx="1.5"/><circle cx="11" cy="11.25" r="3.5"/><path d="M11 7.75v1M11 13.75v1M17.5 9.5v3.5M6.5 19v1.5M17.5 19v1.5"/></symbol>
+  <symbol id="i-break" viewBox="0 0 24 24"><path d="M5.5 21V4.5A1.5 1.5 0 0 1 7 3h10a1.5 1.5 0 0 1 1.5 1.5V21M3 21h18"/><path d="m18.5 7-3 3 2.2 2-2.7 3.5 1.5 1.5"/></symbol>
+  <symbol id="i-id" viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="2"/><circle cx="8.5" cy="10.5" r="2.2"/><path d="M5.3 16c.6-1.5 1.8-2.3 3.2-2.3s2.6.8 3.2 2.3M14.5 10h4M14.5 13.5h3"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5 2.5 20h19L12 3.5Z"/><path d="M12 10v4.5M12 17.25v.25"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M19.5 14.5A8 8 0 1 1 9.5 4.5a6.5 6.5 0 0 0 10 10Z"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></symbol>
+  <symbol id="i-sunset" viewBox="0 0 24 24"><path d="M3 17.5h18M6.5 17.5a5.5 5.5 0 0 1 11 0M12 5v3M5 9.5l1.5 1.5M19 9.5 17.5 11M8.5 21h7"/></symbol>
+  <symbol id="i-receipt" viewBox="0 0 24 24"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2V3Z"/><path d="M9 8h6M9 12h6M9 16h3"/></symbol>
+  <symbol id="i-door" viewBox="0 0 24 24"><path d="M5.5 21V4.5A1.5 1.5 0 0 1 7 3h10a1.5 1.5 0 0 1 1.5 1.5V21M3 21h18"/><path d="M15 11.5v1.5"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3.5 11 12 4l8.5 7M6 9.5V20h12V9.5"/><path d="M10 20v-5h4v5"/></symbol>
+  <symbol id="i-cut" viewBox="0 0 24 24"><path d="M3 9h11.5l1.5 2 1.5-2 1.5 2 1.5-2H21v6H3V9Z"/><circle cx="6.5" cy="12" r="1"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h3l1.5-2.5h7L17 8h3v11H4V8Z"/><circle cx="12" cy="13.25" r="3.25"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.75v.25"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m9 9 6 6M15 9l-6 6"/></symbol>
+  <symbol id="i-window" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="1.5"/><path d="M4 12h16M12 3v18"/></symbol>
+  <symbol id="i-hand" viewBox="0 0 24 24"><path d="M8 13V5.5a1.5 1.5 0 0 1 3 0V11M11 10V4a1.5 1.5 0 0 1 3 0v6M14 10.5V5.5a1.5 1.5 0 0 1 3 0V14a7 7 0 0 1-7 7h-.5a6 6 0 0 1-4.6-2.2L3.5 16a1.6 1.6 0 0 1 2.4-2.1L8 16"/></symbol>
+  <symbol id="i-pound" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15 8.5a2.8 2.8 0 0 0-5 1.7V16M8.5 12.5h5M8.5 16h7"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<aside class="sample-bar" aria-label="About this sample website">
+  <div class="wrap sample-bar-inner">
+    <p><strong>Sample website by Agile Release.</strong> Nightjar Locksmiths is not a real business: the prices, people and numbers are examples.</p>
+    <a href="https://agilerelease.co.uk/#websites">Get a site like this <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a>
+  </div>
+</aside>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Nightjar Locksmiths, home">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect class="mark-bg" width="40" height="40" rx="10"/><path class="mark-hole" d="M20 7.5a7.5 7.5 0 0 0-3.6 14.1L14.5 32h11l-1.9-10.4A7.5 7.5 0 0 0 20 7.5Z"/><circle class="mark-moon" cx="20" cy="15" r="4.4"/><circle class="mark-hole" cx="21.9" cy="13.4" r="3.8"/></svg>
+      <span class="brand-text"><span class="brand-name">Nightjar</span><span class="brand-sub">Locksmiths, Hornchurch</span></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="prices.html">Prices</a></li>
+        <li><a href="index.html#areas">Areas</a></li>
+        <li><a href="locked-out.html">Locked out?</a></li>
+        <li><a href="security.html">Security</a></li>
+        <li><a href="prices.html#quote">Get a quote</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <a class="header-call" href="tel:+442079460247" data-contact="phone">
+      <svg class="icon"><use href="#i-phone"/></svg>
+      <span><small>24 hours, every day</small> 020 7946 0247</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+      <svg class="icon"><use href="#i-menu"/></svg><span class="visually-hidden">Menu</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="page-head page-head-short">
+  <div class="wrap">
+    <p class="kicker">Privacy</p>
+    <h1 class="h1">Your details</h1>
+    <p class="lead">Short version: this website doesn't collect or keep anything about you.</p>
+  </div>
+</section>
+
+<section class="section section-white">
+  <div class="wrap prose">
+    <h2>Quotes, bookings and calls</h2>
+    <p>When you use the quote form, the website writes your request as a WhatsApp message (or an email) on your own device. Nothing is sent until you press send, and the website itself never receives or stores your name, postcode, number or note.</p>
+    <p>Once you send it, or when you call us, we see your message, your number and anything you tell us, like any other call or message. We use them only to price and do the job you asked for, and to contact you about it.</p>
+    <h2>When we open a door</h2>
+    <p>Before we let anyone into a home, we check they live there. We write the person's name and the type of ID they showed on the job sheet, with the address and the work done. We don't copy or photograph ID. Job sheets are kept for six years for our accounts and our insurers, then destroyed.</p>
+    <h2>Your postcode on this device</h2>
+    <p>If you check your postcode on this website, your browser remembers the first half of it (for example RM12) so the call button can show your arrival time. It stays on your device, is never sent to us, and you can clear it by clearing this site's data in your browser.</p>
+    <h2>Cookies and tracking</h2>
+    <p>This website sets no cookies, uses no analytics and loads nothing from other websites, including fonts.</p>
+    <h2>Your rights</h2>
+    <p>You can ask us what we hold about you, or ask us to delete it where the law allows, by phone, WhatsApp or email to help@nightjarlocks.example. You can also complain to the Information Commissioner's Office (ico.org.uk).</p>
+    <p class="prose-note">Nightjar Locksmiths is a made-up business on a sample website, so this notice is an example of what a small locksmith's privacy page could say.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a class="brand brand-light" href="index.html" aria-label="Nightjar Locksmiths, home">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect class="mark-bg" width="40" height="40" rx="10"/><path class="mark-hole" d="M20 7.5a7.5 7.5 0 0 0-3.6 14.1L14.5 32h11l-1.9-10.4A7.5 7.5 0 0 0 20 7.5Z"/><circle class="mark-moon" cx="20" cy="15" r="4.4"/><circle class="mark-hole" cx="21.9" cy="13.4" r="3.8"/></svg>
+        <span class="brand-text"><span class="brand-name">Nightjar</span><span class="brand-sub">Locksmiths, Hornchurch</span></span>
+      </a>
+      <p>Lock-outs, lock changes, UPVC door repairs, burglary repairs and safes. 24 hours a day across Havering and nearby.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="prices.html">Prices</a>
+      <a href="index.html#areas">Areas</a>
+      <a href="locked-out.html">Locked out?</a>
+      <a href="security.html">Security</a>
+      <a href="prices.html#quote">Get a quote</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+    <p class="footer-credit">A sample website by <a href="https://agilerelease.co.uk/#websites">Agile Release</a>. Nightjar Locksmiths is made up. &copy; 2026 Agile Release Limited. All rights reserved.</p>
+  </div>
+</footer>
+
+<aside class="callbar" aria-label="Call us, 24 hours">
+  <a class="callbar-eta" href="index.html#areas" data-callbar-eta><small>Typical arrival</small> <strong>20 to 70 min</strong></a>
+  <a class="callbar-call" href="tel:+442079460247" data-contact="phone"><svg class="icon"><use href="#i-phone"/></svg> <span><small>Call, 24 hours</small> 020 7946 0247</span></a>
+</aside>
+
+</body>
+</html>

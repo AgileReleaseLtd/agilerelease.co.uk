@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prices and fee calculator | Quinlan Mensah Solicitors (sample website)</title>
+<meta name="description" content="Our prices for buying, selling and remortgaging a home, probate, wills, LPAs, family and landlord work, with a conveyancing fee calculator. A sample website by Agile Release.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#f7f5ee">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="preload" href="css/fonts/public-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="css/fonts/petrona-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js" defer></script>
+<script src="js/dates.js" defer></script>
+<script src="js/fees.js" defer></script>
+<script src="js/site.js" defer></script>
+<script src="js/prices.js" defer></script>
+</head>
+<body>
+
+<svg class="sprite" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3.5 5 6v5.5c0 4.3 3 7.8 7 9 4-1.2 7-4.7 7-9V6l-7-2.5Z"/><path d="m9 12 2.2 2.2L15.5 10"/></symbol>
+  <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4.5h5.5V10M19.5 4.5 11 13M17.5 14v4.5a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1v-11a1 1 0 0 1 1-1H10"/></symbol>
+  <symbol id="i-house" viewBox="0 0 24 24"><path d="M3.5 11 12 4l8.5 7"/><path d="M5.5 9.5V20h13V9.5"/><path d="M10 20v-5.5h4V20"/></symbol>
+  <symbol id="i-calc" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8.5 11h.01M12 11h.01M15.5 11h.01M8.5 14.5h.01M12 14.5h.01M15.5 14.5h.01M8.5 18h.01M12 18h.01M15.5 18h.01"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 3.5H7a1.5 1.5 0 0 0-1.5 1.5v14A1.5 1.5 0 0 0 7 20.5h10a1.5 1.5 0 0 0 1.5-1.5V8L14 3.5Z"/><path d="M14 3.5V8h4.5M9 12.5h6M9 16h4"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.5h.01"/></symbol>
+  <symbol id="i-quill" viewBox="0 0 24 24"><path d="M19.5 4.5c-6 .5-10.5 5-12 12.5"/><path d="M19.5 4.5c.5 6-3 10-9.5 10.5"/><path d="M4.5 20.5 7.5 17"/></symbol>
+  <symbol id="i-hands" viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 8a4.2 4.2 0 0 1 7.5 2.5c0 5.4-7.5 10-7.5 10Z"/><path d="M9 12.5h6"/></symbol>
+  <symbol id="i-people" viewBox="0 0 24 24"><circle cx="8.5" cy="8" r="3"/><circle cx="16.5" cy="9.5" r="2.5"/><path d="M3 19.5a5.5 5.5 0 0 1 11 0"/><path d="M14 15a4.5 4.5 0 0 1 7 4"/></symbol>
+  <symbol id="i-door" viewBox="0 0 24 24"><path d="M6 20.5V4.5a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v16"/><path d="M3.5 20.5h17"/><circle cx="14.5" cy="12.5" r="1"/></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6.5h11M9 12h11M9 17.5h11M4.5 6.5h.01M4.5 12h.01M4.5 17.5h.01"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5 2.5 20h19L12 3.5Z"/><path d="M12 10v4.5M12 17.5h.01"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<aside class="sample-bar" aria-label="About this sample website">
+  <div class="wrap sample-bar-inner">
+    <p><strong>Sample website by Agile Release.</strong> Quinlan Mensah Solicitors is not a real firm: the people, prices and regulatory numbers are examples.</p>
+    <a href="https://agilerelease.co.uk/#websites">Get a site like this <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a>
+  </div>
+</aside>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Quinlan Mensah Solicitors, home">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect class="bm-tab bm-tab-1" x="5" y="3" width="9" height="9" rx="2"/><rect class="bm-tab bm-tab-2" x="15.5" y="3" width="9" height="9" rx="2"/><rect class="bm-tab bm-tab-3" x="26" y="3" width="9" height="9" rx="2"/><rect class="bm-sheet" x="3" y="8" width="34" height="29" rx="5"/><path class="bm-line" d="M10 17.5h20M10 23h20M10 28.5h12"/></svg>
+      <span class="brand-text"><span class="brand-name">Quinlan Mensah</span><span class="brand-sub">Solicitors</span></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="practice-areas.html">Practice areas</a></li>
+        <li><a href="prices.html" aria-current="page">Prices</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <a class="nav-phone" href="tel:+442079460659" data-contact="phone"><svg class="icon"><use href="#i-phone"/></svg> 020 7946 0659</a>
+      <a class="btn btn-primary nav-cta" href="enquiry.html">Make an enquiry</a>
+    </nav>
+    <a class="btn btn-primary btn-sm header-cta" href="enquiry.html">Make an enquiry</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+      <svg class="icon"><use href="#i-menu"/></svg><span class="visually-hidden">Menu</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+<section class="page-head">
+  <div class="wrap">
+    <p class="tab-kicker">Prices</p>
+    <h1 class="h1">Our prices, in full</h1>
+    <p class="lead">What we charge, what is included and what is not, and the fees we pay to others for you. Every price shows the VAT.</p>
+    <nav class="jump-links" aria-label="On this page">
+      <a href="#calculator"><svg class="icon"><use href="#i-calc"/></svg> Fee calculator</a>
+      <a href="#conveyancing">Buying, selling and remortgaging</a>
+      <a href="#probate">Probate</a>
+      <a href="#other-fees">Wills, LPAs, family and lettings</a>
+      <a href="#rates">Hourly rates</a>
+    </nav>
+  </div>
+</section>
+
+<div class="wrap js-needed">
+  <p class="js-needed-box">The price tables and the calculator on this page need JavaScript turned on. Ring us on <a href="tel:+442079460659">020 7946 0659</a> for a quote.</p>
+</div>
+
+<section class="section section-tight" id="calculator">
+  <div class="wrap">
+    <header class="section-head section-head-left">
+      <p class="tab-kicker">Conveyancing fee calculator</p>
+      <h2 class="h2">Work out what your move will cost</h2>
+      <p>Choose what you are doing and enter the price. You'll see our fee, the VAT and the usual disbursements straight away. <strong>It is an estimate, not a quote:</strong> we confirm a fixed fee in writing once we know more about the property.</p>
+    </header>
+
+    <div class="calc">
+      <form class="calc-form" data-calc novalidate>
+        <fieldset class="field">
+          <legend>What are you doing?</legend>
+          <div class="seg" data-calc-type>
+            <label class="seg-opt"><input type="radio" name="type" value="purchase" checked> <span><svg class="icon"><use href="#i-house"/></svg> Buying</span></label>
+            <label class="seg-opt"><input type="radio" name="type" value="sale"> <span><svg class="icon"><use href="#i-doc"/></svg> Selling</span></label>
+            <label class="seg-opt"><input type="radio" name="type" value="remortgage"> <span><svg class="icon"><use href="#i-calc"/></svg> Remortgaging</span></label>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label for="calc-value" data-value-label>Price of the property</label>
+          <div class="money-input">
+            <span aria-hidden="true">£</span>
+            <input id="calc-value" name="value" type="text" inputmode="numeric" autocomplete="off" value="600,000" aria-describedby="calc-value-hint calc-value-error">
+          </div>
+          <p class="hint" id="calc-value-hint" data-value-hint>The agreed price, or your best guess.</p>
+          <p class="error" id="calc-value-error" data-value-error hidden>Enter a price between £10,000 and £10,000,000.</p>
+        </div>
+
+        <fieldset class="field">
+          <legend>Freehold or leasehold?</legend>
+          <div class="seg seg-2">
+            <label class="seg-opt"><input type="radio" name="tenure" value="freehold" checked> <span>Freehold</span></label>
+            <label class="seg-opt"><input type="radio" name="tenure" value="leasehold"> <span>Leasehold</span></label>
+          </div>
+          <p class="hint">Most houses are freehold. Most flats are leasehold.</p>
+        </fieldset>
+
+        <div class="field">
+          <label for="calc-people" data-people-label>How many people are buying?</label>
+          <select id="calc-people" name="people">
+            <option value="1">1</option>
+            <option value="2" selected>2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+
+        <fieldset class="field" data-for="purchase">
+          <legend>About the purchase</legend>
+          <label class="check"><input type="checkbox" name="mortgage" checked> <span>Buying with a mortgage</span></label>
+          <label class="check"><input type="checkbox" name="newBuild"> <span>A new-build home</span></label>
+          <label class="check"><input type="checkbox" name="lisa"> <span>Using a Lifetime ISA or Help to Buy ISA</span></label>
+        </fieldset>
+
+        <fieldset class="field" data-for="purchase">
+          <legend>For the Stamp Duty estimate</legend>
+          <label class="check"><input type="radio" name="sdlt" value="first"> <span>First-time buyer (everyone buying)</span></label>
+          <label class="check"><input type="radio" name="sdlt" value="standard" checked> <span>Moving home, or it will be my only home</span></label>
+          <label class="check"><input type="radio" name="sdlt" value="additional"> <span>I will own another home as well</span></label>
+        </fieldset>
+        <p class="calc-mini" data-calc-mini aria-hidden="true"><span>Estimated total</span> <strong data-calc-mini-total></strong> <a href="#calc-result" tabindex="-1">See the breakdown</a></p>
+      </form>
+
+      <div class="calc-result" id="calc-result" data-calc-result>
+        <div class="calc-total">
+          <p class="calc-total-label">Estimated total <span class="estimate-tag">Estimate</span></p>
+          <p class="calc-total-figure" data-calc-total aria-live="polite">&nbsp;</p>
+          <p class="calc-total-sub" data-calc-summary>&nbsp;</p>
+        </div>
+        <div class="calc-quote-note" data-calc-quote hidden>
+          <svg class="icon"><use href="#i-info"/></svg>
+          <p>For this price we give each client an individual fixed quote. The total below shows the other costs only.</p>
+        </div>
+        <table class="breakdown">
+          <caption>Our fees</caption>
+          <thead><tr><th scope="col">Item</th><th scope="col" class="num">Amount</th></tr></thead>
+          <tbody data-calc-fees></tbody>
+          <tfoot data-calc-fees-foot></tfoot>
+        </table>
+        <table class="breakdown">
+          <caption>Disbursements (paid to others for you)</caption>
+          <thead><tr><th scope="col">Item</th><th scope="col" class="num">Amount</th></tr></thead>
+          <tbody data-calc-disb></tbody>
+          <tfoot data-calc-disb-foot></tfoot>
+        </table>
+        <div class="calc-sdlt" data-calc-sdlt hidden></div>
+        <div class="calc-lease" data-calc-lease hidden>
+          <h3>Leasehold: costs set by the lease</h3>
+          <p>Most leases charge fees to the landlord or managing agent when a flat is sold or mortgaged. They are not in the total above. Typical amounts:</p>
+          <ul data-calc-lease-list></ul>
+        </div>
+        <p class="calc-time" data-calc-time></p>
+        <p class="calc-disclaimer"><svg class="icon"><use href="#i-info"/></svg> <span>This is an estimate based on the answers above, not a quote. It assumes a straightforward transaction for a home in England or Wales. Search fees vary by council, and some properties need extra work. We confirm your fee in writing before we start.</span></p>
+        <a class="btn btn-primary btn-block" href="enquiry.html?matter=conveyancing" data-calc-enquire>Ask for a fixed quote <svg class="icon"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-tint" id="conveyancing">
+  <div class="wrap">
+    <header class="section-head section-head-left">
+      <p class="tab-kicker">Residential conveyancing</p>
+      <h2 class="h2">Buying, selling and remortgaging</h2>
+      <p>Our legal fees are fixed, by price band, for homes in England and Wales. They cover all the work in our <a href="practice-areas.html#conveyancing">conveyancing guide</a>, from taking your instructions to registering the result at HM Land Registry, including the Stamp Duty Land Tax return on a purchase.</p>
+    </header>
+
+    <div class="sra-note">
+      <svg class="icon"><use href="#i-info"/></svg>
+      <p>The Solicitors Regulation Authority's Transparency Rules require firms that offer residential conveyancing to publish price information: the total cost or a range, what it includes, the likely disbursements, VAT, the key stages and timescales, and the experience of the people doing the work. This section, our <a href="#probate">probate prices</a> and our <a href="practice-areas.html">practice area guides</a> set that out.</p>
+    </div>
+
+    <div class="fee-tables">
+      <div class="fee-table-wrap">
+        <h3 class="h3">Buying a home</h3>
+        <div data-band-table="purchase"></div>
+      </div>
+      <div class="fee-table-wrap">
+        <h3 class="h3">Selling a home</h3>
+        <div data-band-table="sale"></div>
+      </div>
+      <div class="fee-table-wrap">
+        <h3 class="h3">Remortgage</h3>
+        <div data-band-table="remortgage"></div>
+        <p class="table-note">Banded by the amount of the new mortgage. Many lenders offer a free remortgage through their own conveyancers: it is worth asking.</p>
+      </div>
+    </div>
+
+    <div class="price-grid-2">
+      <div class="price-block">
+        <h3 class="h3">Extra legal fees, where they apply</h3>
+        <div data-supplements></div>
+      </div>
+      <div class="price-block">
+        <h3 class="h3">Disbursements on a purchase</h3>
+        <p>Fees we pay to others for you. We ask for the search fees when you instruct us.</p>
+        <div data-disb-purchase></div>
+        <h4 class="h4">HM Land Registry fee to register a purchase</h4>
+        <p>Set by HM Land Registry and based on the price. No VAT. Registering your mortgage at the same time costs nothing extra. A new lease (for example on a new-build flat) costs more.</p>
+        <div data-lr-table></div>
+      </div>
+    </div>
+
+    <div class="price-grid-2">
+      <div class="price-block">
+        <h3 class="h3">Disbursements on a sale or remortgage</h3>
+        <div data-disb-other></div>
+        <h4 class="h4">Leasehold fees set by the lease</h4>
+        <p>Most leases charge fees to the landlord or managing agent. The lease sets the amount, so these are typical ranges only. On a sale, the managing agent also charges for its management pack, often £200 to £500.</p>
+        <div data-lease-table></div>
+      </div>
+      <div class="price-block">
+        <h3 class="h3">Stamp Duty Land Tax</h3>
+        <p>Stamp Duty is a tax on buying property in England, paid to HMRC. It depends on the price and your circumstances, and is not part of our fees. Our calculator gives an estimate, and HMRC has its own <a href="https://www.tax.service.gov.uk/calculate-stamp-duty-land-tax/">Stamp Duty calculator <svg class="icon icon-sm"><use href="#i-external"/></svg></a>. In Wales, Land Transaction Tax applies instead.</p>
+        <h3 class="h3">What is included</h3>
+        <ul class="tick-list">
+          <li>All the legal work from instruction to registration</li>
+          <li>Acting for your lender on a remortgage</li>
+          <li>Paying off one mortgage on a sale</li>
+          <li>The Stamp Duty Land Tax return on a purchase</li>
+          <li>Written reports in plain English, and calls with the person doing your work</li>
+        </ul>
+        <h3 class="h3">What is not included</h3>
+        <ul class="cross-list">
+          <li>Stamp Duty Land Tax itself</li>
+          <li>Defects in the title that need putting right, or indemnity insurance policies</li>
+          <li>A new lease, a lease extension or a deed of variation</li>
+          <li>Shared ownership staircasing, or paying off a Help to Buy equity loan</li>
+          <li>Work on a property outside England and Wales</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="price-grid-2">
+      <div class="price-block">
+        <h3 class="h3">Key stages and timescales</h3>
+        <p>A freehold purchase usually takes <strong>12 to 16 weeks</strong> from instruction to completion, and a leasehold flat <strong>16 to 20 weeks</strong>. A sale takes 10 to 16 weeks, and a remortgage 4 to 6 weeks. A chain, a new-build or a slow managing agent can add time. The stages are:</p>
+        <ol class="stage-list">
+          <li>Taking your instructions, checking ID and funds (days 1 to 3)</li>
+          <li>Receiving the contract papers and ordering searches (weeks 1 to 3)</li>
+          <li>Raising questions and checking your mortgage offer (weeks 3 to 8)</li>
+          <li>Reporting to you and getting the documents signed (weeks 8 to 10)</li>
+          <li>Exchange of contracts and agreeing a completion date (around week 10 to 12)</li>
+          <li>Completion, paying the Stamp Duty and registering you as owner (completion, then 2 to 6 weeks)</li>
+        </ol>
+        <p><a href="practice-areas.html#conveyancing">Read each stage in plain English</a>.</p>
+      </div>
+      <div class="price-block">
+        <h3 class="h3">Who does the work</h3>
+        <ul class="who-list" data-who="conveyancing"></ul>
+        <h3 class="h3">Our assumptions</h3>
+        <p>Our fees assume that:</p>
+        <ul class="plain-list">
+          <li>the transaction is straightforward and finishes in a reasonable time</li>
+          <li>there are no defects in the title, and no indemnity policies are needed</li>
+          <li>everyone in the chain and their lawyers co-operate</li>
+          <li>for leasehold, the existing lease is being transferred, not a new one granted</li>
+        </ul>
+        <p>If something changes, we tell you before doing extra work, and confirm any new price in writing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="probate">
+  <div class="wrap">
+    <header class="section-head section-head-left">
+      <p class="tab-kicker">Probate</p>
+      <h2 class="h2">Probate and estate administration</h2>
+      <p>These prices are for estates where all the assets are in the UK and nobody is disputing the will or the estate. There are two ways we can help.</p>
+    </header>
+
+    <div class="probate-options">
+      <article class="option-card">
+        <p class="option-kicker">Option 1</p>
+        <h3 class="h3">Grant only</h3>
+        <div data-probate-grant></div>
+        <p>We get the grant of probate (or letters of administration). You then collect and share out the estate yourself.</p>
+        <ul class="tick-list">
+          <li>A meeting with a probate solicitor</li>
+          <li>Identifying the executors and beneficiaries</li>
+          <li>Working out the estate's value and the inheritance tax position for an estate where no full HMRC account is needed</li>
+          <li>Preparing and sending the probate application</li>
+          <li>Ordering two copies of the grant for you</li>
+        </ul>
+      </article>
+      <article class="option-card option-card-featured">
+        <p class="option-kicker">Option 2</p>
+        <h3 class="h3">Full estate administration</h3>
+        <div data-probate-full></div>
+        <p>We deal with the whole estate: the grant, collecting the assets, paying debts and sharing out what is left, with estate accounts for the executors to approve.</p>
+        <p>We charge for the time spent at our <a href="#rates">hourly rates</a>. Most straightforward estates take <span data-probate-hours>12 to 22</span> hours of work, which gives the range above. We tell you if it looks like going above it.</p>
+        <div class="probate-example" data-probate-example></div>
+      </article>
+    </div>
+
+    <div class="price-grid-2">
+      <div class="price-block">
+        <h3 class="h3">Our assumptions</h3>
+        <p>The range above is for an estate where:</p>
+        <ul class="plain-list">
+          <li>there is a valid will</li>
+          <li>there is no more than one property</li>
+          <li>there are no more than five bank or building society accounts</li>
+          <li>there are no other assets such as shares or bonds</li>
+          <li>there are no more than four beneficiaries</li>
+          <li>there are no disputes and no claims against the estate</li>
+          <li>no inheritance tax is payable and no full account to HMRC is needed</li>
+        </ul>
+        <h3 class="h3">What would cost more</h3>
+        <ul class="cross-list">
+          <li>Selling or transferring the property: we quote for this separately</li>
+          <li>Inheritance tax to pay, or a full inheritance tax account</li>
+          <li>Shares, other investments or a business</li>
+          <li>No will, a missing will or missing beneficiaries</li>
+          <li>Disputes between beneficiaries, or a claim against the estate</li>
+        </ul>
+      </div>
+      <div class="price-block">
+        <h3 class="h3">Disbursements</h3>
+        <p>Fees we pay to others for you, at cost.</p>
+        <div data-probate-disb></div>
+        <h3 class="h3">Key stages and timescales</h3>
+        <p>A straightforward estate usually takes <strong>6 to 12 months</strong> from start to finish.</p>
+        <ol class="stage-list">
+          <li>First meeting and gathering the paperwork (weeks 1 to 2)</li>
+          <li>Valuing the estate and working out any inheritance tax (weeks 2 to 8)</li>
+          <li>Applying for probate: GOV.UK says the grant usually arrives within 12 weeks of applying</li>
+          <li>Collecting the assets (weeks 4 to 12 after the grant)</li>
+          <li>Notices to creditors, with at least two months for claims, then paying debts</li>
+          <li>Estate accounts and sharing out the estate</li>
+        </ol>
+        <h3 class="h3">Who does the work</h3>
+        <ul class="who-list" data-who="wills"></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-tint" id="other-fees">
+  <div class="wrap">
+    <header class="section-head section-head-left">
+      <p class="tab-kicker">Other fixed fees</p>
+      <h2 class="h2">Wills, LPAs, family and lettings</h2>
+      <p>The rules don't require us to publish these, but we think you should know. Fees shown before and after VAT. Fees paid to others, such as court fees, are on top.</p>
+    </header>
+    <div class="other-fees" data-other-fees></div>
+  </div>
+</section>
+
+<section class="section" id="rates">
+  <div class="wrap two-col">
+    <div>
+      <p class="tab-kicker">Hourly rates</p>
+      <h2 class="h2">When we charge by the hour</h2>
+      <p>Work that cannot be fixed in advance, such as a full estate administration, a contested family case or a defended possession claim, is charged by the time spent. We give you an estimate at the start and update it if it changes.</p>
+      <p>We ask for money on account before paying large disbursements for you, such as searches or court fees.</p>
+    </div>
+    <div data-rates></div>
+  </div>
+  <div class="wrap">
+    <p class="sources-note">Fees paid to others (HM Land Registry, the probate application fee, the Office of the Public Guardian, the divorce court fee, The Gazette) and the Stamp Duty rates come from GOV.UK, HM Land Registry and The Gazette, and were checked in November 2026. Public sector information licensed under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a>.</p>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-top">
+    <div class="footer-brand">
+      <a class="brand brand-light" href="index.html" aria-label="Quinlan Mensah Solicitors, home">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect class="bm-tab bm-tab-1" x="5" y="3" width="9" height="9" rx="2"/><rect class="bm-tab bm-tab-2" x="15.5" y="3" width="9" height="9" rx="2"/><rect class="bm-tab bm-tab-3" x="26" y="3" width="9" height="9" rx="2"/><rect class="bm-sheet" x="3" y="8" width="34" height="29" rx="5"/><path class="bm-line" d="M10 17.5h20M10 23h20M10 28.5h12"/></svg>
+      <span class="brand-text"><span class="brand-name">Quinlan Mensah</span><span class="brand-sub">Solicitors</span></span>
+    </a>
+      <p>Conveyancing, wills, probate, lasting powers of attorney, family law and landlord and tenant advice, from our office in Chiswick.</p>
+      <p class="footer-address"><svg class="icon"><use href="#i-pin"/></svg> <span>6 Halyard Walk, Chiswick, London W4</span></p>
+      <p class="footer-address"><svg class="icon"><use href="#i-clock"/></svg> <span>Monday to Friday, 9:00am to 5:30pm</span></p>
+    </div>
+    <nav class="footer-nav" aria-label="Practice areas">
+      <h2 class="footer-title">How we help</h2>
+      <ul>
+        <li><a href="practice-areas.html#conveyancing">Residential conveyancing</a></li>
+        <li><a href="practice-areas.html#wills">Wills and probate</a></li>
+        <li><a href="practice-areas.html#lpa">Lasting powers of attorney</a></li>
+        <li><a href="practice-areas.html#family">Family law</a></li>
+        <li><a href="practice-areas.html#landlord">Landlord and tenant</a></li>
+      </ul>
+    </nav>
+    <nav class="footer-nav" aria-label="The firm">
+      <h2 class="footer-title">The firm</h2>
+      <ul>
+        <li><a href="prices.html">Prices and fee calculator</a></li>
+        <li><a href="team.html">Our team</a></li>
+        <li><a href="enquiry.html">Make an enquiry</a></li>
+        <li><a href="complaints.html">Complaints procedure</a></li>
+        <li><a href="complaints.html#regulatory">Regulatory information</a></li>
+        <li><a href="privacy.html">Privacy notice</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="wrap footer-reg">
+    <div class="reg-text">
+      <p>Quinlan Mensah Solicitors is authorised and regulated by the Solicitors Regulation Authority, SRA number: <span class="example-slot">example</span>. The SRA's rules are the <a href="https://www.sra.org.uk/solicitors/standards-regulations/">SRA Standards and Regulations</a>.</p>
+      <p>Quinlan Mensah Solicitors is the trading name of Quinlan Mensah Limited, a company registered in England and Wales, company number: <span class="example-slot">example</span>. Registered office: 6 Halyard Walk, Chiswick, London W4.</p>
+      <p>Not happy with our service? Read our <a href="complaints.html">complaints procedure</a>. If we cannot put things right, you may be able to complain to the <a href="complaints.html#legal-ombudsman">Legal Ombudsman</a>.</p>
+    </div>
+    <div class="sra-badge" role="note" aria-label="SRA digital badge, example slot">
+      <span class="sra-badge-head"><svg class="icon"><use href="#i-shield"/></svg> SRA digital badge</span>
+      <span class="sra-badge-body">Example slot. A real firm shows its live badge here. It links to the firm's entry on the SRA register.</span>
+      <span class="example-slot">example</span>
+    </div>
+  </div>
+  <div class="wrap footer-base">
+    <p class="footer-credit">A sample website by <a href="https://agilerelease.co.uk/#websites">Agile Release</a>. Quinlan Mensah Solicitors is made up. &copy; 2026 Agile Release Limited. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -17,5 +17,20 @@ Third-party parts keep their own licences:
 - Font Awesome Free 6.4.0 (site/css/fontawesome.min.css, site/css/fonts/fa-*): fonts SIL Open Font
   License 1.1, code MIT License, icons CC BY 4.0. https://fontawesome.com/license/free
 - Plus Jakarta Sans (site/css/fonts/plus-jakarta-sans-*): SIL Open Font License 1.1.
-- Archivo (site/website*/css/fonts/archivo-*): SIL Open Font License 1.1.
+- Fonts in the sample websites (site/website*/css/fonts/), all SIL Open Font License 1.1: Archivo
+  (website01); Anybody and IBM Plex Sans (website02); Bodoni Moda and Instrument Sans (website03);
+  Cormorant Garamond and Jost (website04); Fraunces and Caveat (website05); Eczar and Hanken Grotesk
+  (website06, whose two Georgian-script images are outlines from Noto Serif Georgian, also SIL Open Font
+  License 1.1); Bricolage Grotesque (website07); Shrikhand and Figtree (website08); Overpass and Overpass
+  Mono (website09); Hubot Sans and Mona Sans (website10); Schibsted Grotesk (website11); Albert Sans
+  (website12); Alegreya and Alegreya Sans (website13); Bitter and Atkinson Hyperlegible Next (website14);
+  Rubik (website15); Newsreader and Nunito Sans (website16); Geologica (website17); Literata and Manrope
+  (website18); Petrona and Public Sans (website19); Besley and Onest (website20); Lexend and Young Serif
+  (website21); Shantell Sans and Andika (website22).
+- website15-removals: the postcode positions in js/postcodes.js are worked out from OS Code-Point Open,
+  under the Open Government Licence v3.0. Contains Ordnance Survey data © Crown copyright and database
+  right 2026. Contains Royal Mail data © Royal Mail copyright and database right 2026. Contains National
+  Statistics data © Crown copyright and database right 2026.
+- website18 to website20 and website22 contain public sector information from GOV.UK, licensed under the
+  Open Government Licence v3.0. https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
 - Tailwind CSS v3.4.19 (site/css/tailwind.css): MIT License. https://tailwindcss.com

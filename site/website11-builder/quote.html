@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Get a quote | Kember &amp; Daughter (sample website)</title>
+<meta name="description" content="Tell us about your extension, loft, kitchen, bathroom or refurbishment and send it on WhatsApp. A sample website by Agile Release.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#f3f0e9">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="preload" href="css/fonts/schibsted-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js" defer></script>
+<script src="js/site.js" defer></script>
+<script src="js/quote.js" defer></script>
+</head>
+<body class="page-quote">
+
+<svg class="sprite" aria-hidden="true">
+  <symbol id="i-extension" viewBox="0 0 24 24"><path d="M2.5 20.5h19"/><path d="M4 20.5V10.5l6-5.5 6 5.5v10"/><path d="M16 13.5h4.5v7"/><path d="M8 20.5V16h4v4.5"/></symbol>
+  <symbol id="i-loft" viewBox="0 0 24 24"><path d="M2.5 12.5 12 4l9.5 8.5"/><path d="M12.5 5H18v6"/><path d="M5 10.5v10h14v-9"/><path d="M14.5 7.5h1.5v1.5"/><path d="M2.5 20.5h19"/></symbol>
+  <symbol id="i-kitchen" viewBox="0 0 24 24"><path d="M2.5 20.5h19"/><path d="M3.5 12h17v8.5h-17Z"/><path d="M12 12v8.5M7.5 15v2M16.5 15v2"/><path d="M4.5 3.5h7v5h-7Z"/><path d="M15 12V7a1.8 1.8 0 0 1 3.6 0"/></symbol>
+  <symbol id="i-bathroom" viewBox="0 0 24 24"><path d="M3 12h18v2.5a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5Z"/><path d="M6 12V5.5a2 2 0 0 1 4-.5"/><path d="M8 19.5l-1 2M16 19.5l1 2"/><path d="M9 7.5h2"/></symbol>
+  <symbol id="i-refurb" viewBox="0 0 24 24"><path d="M4 3.5h13v5H4Z"/><path d="M17 6h2.5v5.5H11v3"/><path d="M9.5 14.5h3v6.5h-3Z"/></symbol>
+  <symbol id="i-pencil" viewBox="0 0 24 24"><path d="M4 20l1-4.5L16 4.5l3.5 3.5L8.5 19Z"/><path d="M14 6.5 17.5 10"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4.5 6v5.5c0 4.5 3.2 8 7.5 9.5 4.3-1.5 7.5-5 7.5-9.5V6Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></symbol>
+  <symbol id="i-pound" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M14.5 8.2a2.6 2.6 0 0 0-4.6 1.6V16M8.5 12.5h4.5M8.5 16h7"/></symbol>
+  <symbol id="i-square" viewBox="0 0 24 24"><path d="M4 20V4l16 16Z"/><path d="M8 16v-4.5l4.5 4.5Z"/><path d="M4 8h2M4 12h2"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 7.5h3.5L9 5h6l1.5 2.5H20a1 1 0 0 1 1 1V18a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V8.5a1 1 0 0 1 1-1Z"/><circle cx="12" cy="13" r="3.5"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6Z"/><path d="M14 3v4h4M9 12h6M9 15.5h6M9 8.5h2"/></symbol>
+  <symbol id="i-drag" viewBox="0 0 24 24"><path d="M9 7 4 12l5 5M15 7l5 5-5 5"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3.5 6.5 8.5 7 8.5-7"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="1.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<aside class="sample-bar" aria-label="About this sample website">
+  <div class="wrap sample-bar-inner">
+    <p><strong>Sample website by Agile Release.</strong> Kember &amp; Daughter is not a real business: the projects, prices and people are examples.</p>
+    <a href="https://agilerelease.co.uk/#websites">Get a site like this <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  </div>
+</aside>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Kember &amp; Daughter, builders, home">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect class="mark-bg" width="40" height="40" rx="3"/><path class="mark-house" d="M9 30V17.5L20 9l11 8.5V30M9 30h22"/><path class="mark-loft" d="M20 9v6.5h7.5"/><path class="mark-dim" d="M9 34.5h22M9 32.5v4M31 32.5v4"/></svg>
+      <span class="brand-text"><span class="brand-name">Kember <span class="amp">&amp;</span> Daughter</span><span class="brand-sub">Builders · Beckenham</span></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="how-we-work.html">How we work</a></li>
+        <li><a href="index.html#prices">Prices</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li class="nav-quote"><a href="quote.html" aria-current="page">Get a quote</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary btn-sm header-cta" href="quote.html">Get a quote</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+      <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg><span class="visually-hidden">Menu</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="page-head grid-paper">
+  <div class="wrap page-head-inner">
+    <p class="kicker"><span>Quote</span> Free visit and quote</p>
+    <h1 class="h1">Tell us about your project</h1>
+    <p class="lead">A few answers help us arrive with the right questions. This page writes your request as a WhatsApp message (or an email) for you to send. Then attach your photos in the chat.</p>
+  </div>
+</section>
+
+<section class="section section-tight">
+  <div class="wrap quote-layout">
+    <form class="quote-form" data-quote-form novalidate aria-labelledby="quote-form-title">
+      <h2 class="visually-hidden" id="quote-form-title">Quote request</h2>
+      <p class="form-required-note">Questions marked <span class="req" aria-hidden="true">*</span><span class="visually-hidden">with a star</span> are needed. Everything else helps but is up to you.</p>
+
+      <fieldset class="form-part" data-part="type">
+        <legend class="part-title"><span class="part-num">1</span> What's the project? <span class="req" aria-hidden="true">*</span></legend>
+        <div class="type-grid" data-types></div>
+        <p class="field-error" id="type-error" data-error-for="type" hidden>Please choose the kind of project.</p>
+      </fieldset>
+
+      <div class="form-part form-part-questions" data-questions>
+        <p class="part-title"><span class="part-num">2</span> The details</p>
+        <p class="part-empty">Choose a project above and the questions for it appear here.</p>
+      </div>
+
+      <p class="inline-guide" data-inline-guide hidden></p>
+
+      <fieldset class="form-part">
+        <legend class="part-title"><span class="part-num">3</span> The property</legend>
+        <div class="field-row">
+          <div class="field field-postcode">
+            <label for="q-postcode" class="field-label">Postcode <span class="req" aria-hidden="true">*</span></label>
+            <input id="q-postcode" name="postcode" type="text" autocomplete="postal-code" autocapitalize="characters" spellcheck="false" maxlength="9" required aria-describedby="postcode-note postcode-error">
+            <p class="field-note" id="postcode-note" data-postcode-note aria-live="polite"></p>
+            <p class="field-error" id="postcode-error" data-error-for="postcode" hidden>Please add the postcode, for example BR3 1AB.</p>
+          </div>
+          <div class="field field-grow">
+            <label for="q-address" class="field-label">House number and street <span class="req" aria-hidden="true">*</span></label>
+            <input id="q-address" name="address" type="text" autocomplete="address-line1" maxlength="120" required aria-describedby="address-error">
+            <p class="field-error" id="address-error" data-error-for="address" hidden>Please add the address of the property.</p>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="form-part">
+        <legend class="part-title"><span class="part-num">4</span> Budget, timing and drawings</legend>
+        <div class="field-row">
+          <div class="field field-grow">
+            <label for="q-budget" class="field-label">Rough budget</label>
+            <select id="q-budget" name="budget" data-options="budgets"></select>
+          </div>
+          <div class="field field-grow">
+            <label for="q-timing" class="field-label">When would you like to start?</label>
+            <select id="q-timing" name="timing" data-options="timings" aria-describedby="timing-note"></select>
+            <p class="field-note" id="timing-note">Our next free build start is around <span data-next-start>the new year</span>.</p>
+          </div>
+        </div>
+        <fieldset class="field">
+          <legend class="field-label">Drawings and planning so far</legend>
+          <div class="choice-grid choice-grid-4" data-drawings></div>
+        </fieldset>
+      </fieldset>
+
+      <fieldset class="form-part">
+        <legend class="part-title"><span class="part-num">5</span> About you</legend>
+        <div class="field-row">
+          <div class="field field-grow">
+            <label for="q-name" class="field-label">Your name <span class="req" aria-hidden="true">*</span></label>
+            <input id="q-name" name="name" type="text" autocomplete="name" maxlength="60" required aria-describedby="name-error">
+            <p class="field-error" id="name-error" data-error-for="name" hidden>Please add your name.</p>
+          </div>
+          <div class="field field-grow">
+            <label for="q-phone" class="field-label">Phone <span class="field-optional">Optional</span></label>
+            <input id="q-phone" name="phone" type="tel" autocomplete="tel" maxlength="20">
+          </div>
+        </div>
+        <div class="field">
+          <label for="q-notes" class="field-label">Anything else? <span class="field-optional">Optional</span></label>
+          <textarea id="q-notes" name="notes" rows="3" maxlength="600" placeholder="For example: we'd like the kitchen to open onto the garden, or the best days for a visit"></textarea>
+        </div>
+      </fieldset>
+
+      <div class="photo-box">
+        <svg class="icon" aria-hidden="true"><use href="#i-camera"/></svg>
+        <div>
+          <p><strong>Photos help most.</strong> This page can't send them, so attach them in WhatsApp once the message opens.</p>
+          <p data-photo-tip>Useful ones: <span data-photo-list>the rooms involved, and the outside of the house</span>.</p>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary" data-via="whatsapp"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg> Send on WhatsApp</button>
+        <button type="submit" class="btn btn-outline" data-via="email"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg> Email it instead</button>
+      </div>
+      <p class="form-note">The request goes from your own phone or email. This website doesn't keep your details. Or call us on <a href="tel:+442079460857" data-contact="phone">020 7946 0857</a>.</p>
+      <noscript><p class="form-note">The quote form needs JavaScript. You can still message us on WhatsApp on 07700 900857 or email hello@kemberanddaughter.example.</p></noscript>
+    </form>
+
+    <aside class="quote-side" aria-label="Rough price and what happens next">
+      <div class="guide-card sheet" data-guide>
+        <p class="stamp" aria-hidden="true">Rough London guide</p>
+        <h2 class="guide-title" data-guide-title aria-live="polite">Rough price guide</h2>
+        <p class="guide-figure" data-guide-figure>Pick a project type to see a rough price.</p>
+        <ul class="guide-list" data-guide-list></ul>
+        <p class="guide-note" data-guide-note>Guides include VAT. Your written quote after the visit is itemised and fixed for the work it describes.</p>
+        <p class="guide-weeks" data-guide-weeks hidden></p>
+      </div>
+      <div class="next-card">
+        <h2 class="next-title">What happens next</h2>
+        <ol class="next-steps">
+          <li><strong>We reply the same working day</strong> to arrange a visit, usually within a week.</li>
+          <li><strong>We visit</strong>, measure up and talk it through. It's free.</li>
+          <li><strong>Your written quote</strong> arrives within ten working days.</li>
+        </ol>
+        <p class="next-more"><a href="how-we-work.html">How the rest of the job runs</a></p>
+      </div>
+    </aside>
+  </div>
+</section>
+
+</main>
+
+<dialog class="dialog" id="quote-dialog" aria-labelledby="sent-title">
+  <div class="dialog-body" data-sent>
+    <div class="dialog-head">
+      <h2 class="dialog-title" id="sent-title" data-sent-title tabindex="-1">Your quote request</h2>
+      <button type="button" class="dialog-close" data-close aria-label="Close"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+    </div>
+    <div class="chat" data-chat>
+      <p class="chat-to" data-chat-to><svg class="icon icon-sm" aria-hidden="true"><use href="#i-chat"/></svg> To Kember &amp; Daughter on WhatsApp</p>
+      <p class="bubble" data-message></p>
+    </div>
+    <div class="sample-note">
+      <p><strong>This is a sample website, so nothing was sent.</strong></p>
+      <p data-sample-explain>On the firm's real website, this button opens WhatsApp with the message above ready to send, and you attach your photos in the chat.</p>
+    </div>
+    <div class="dialog-actions">
+      <button type="button" class="btn btn-outline" data-close>Change my answers</button>
+      <button type="button" class="btn btn-ink" data-done>Done</button>
+    </div>
+  </div>
+</dialog>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a class="brand brand-light" href="index.html" aria-label="Kember &amp; Daughter, builders, home">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect class="mark-bg" width="40" height="40" rx="3"/><path class="mark-house" d="M9 30V17.5L20 9l11 8.5V30M9 30h22"/><path class="mark-loft" d="M20 9v6.5h7.5"/><path class="mark-dim" d="M9 34.5h22M9 32.5v4M31 32.5v4"/></svg>
+        <span class="brand-text"><span class="brand-name">Kember <span class="amp">&amp;</span> Daughter</span><span class="brand-sub">Builders · Beckenham</span></span>
+      </a>
+      <p>Extensions, loft conversions, kitchens, bathrooms and refurbishments across Beckenham, Bromley and nearby. A family firm since 1998.</p>
+    </div>
+    <div class="footer-cols">
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="projects.html">Projects</a>
+        <a href="how-we-work.html">How we work</a>
+        <a href="quote.html">Get a quote</a>
+        <a href="index.html#prices">Prices</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+      <address class="footer-address">
+        <span>4 Kilnworth Lane, Beckenham BR3</span>
+        <a href="tel:+442079460857" data-contact="phone">020 7946 0857</a>
+        <a href="mailto:hello@kemberanddaughter.example" data-contact="email">hello@kemberanddaughter.example</a>
+      </address>
+    </div>
+    <p class="footer-credit">A sample website by <a href="https://agilerelease.co.uk/#websites">Agile Release</a>. Kember &amp; Daughter is made up. &copy; 2026 Agile Release Limited. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

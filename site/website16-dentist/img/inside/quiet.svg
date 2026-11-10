@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" width="400" height="280">
+  <title>Drawing standing in for a photo of the quiet waiting room</title>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#cddbf1"/>
+      <stop offset="1" stop-color="#fbe3d1"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="280" fill="#fcf0e6"/>
+  <rect y="218" width="400" height="62" fill="#f3e3d3"/>
+  <!-- a round window, with ripples on the wall around it -->
+  <g fill="none" stroke="#e8cdb6" stroke-width="2">
+    <circle cx="270" cy="98" r="76"/>
+    <circle cx="270" cy="98" r="96"/>
+  </g>
+  <circle cx="270" cy="98" r="58" fill="url(#sky)"/>
+  <path d="M212 112c20-10 42-12 64-6 18 5 34 5 52-2v8a58 58 0 0 1-116 0Z" fill="#a9bfe8"/>
+  <circle cx="270" cy="98" r="58" fill="none" stroke="#ffffff" stroke-width="8"/>
+  <!-- rug -->
+  <ellipse cx="190" cy="242" rx="150" ry="18" fill="#f7d9c2"/>
+  <!-- armchair -->
+  <path d="M70 150c0-22 14-34 40-34h44c26 0 40 12 40 34v40H70Z" fill="#f2a36c"/>
+  <rect x="56" y="170" width="152" height="46" rx="18" fill="#e88d55"/>
+  <rect x="84" y="176" width="96" height="22" rx="10" fill="#f6b48a"/>
+  <path d="M76 216v14M188 216v14" stroke="#b86a3a" stroke-width="6" stroke-linecap="round"/>
+  <!-- blanket -->
+  <path d="M150 168c10-2 22 2 26 10v34h-30Z" fill="#dfe8f6"/>
+  <!-- side table with a glass of water -->
+  <rect x="226" y="184" width="54" height="8" rx="4" fill="#31508c"/>
+  <path d="M234 192v36M272 192v36" stroke="#31508c" stroke-width="5" stroke-linecap="round"/>
+  <path d="M244 162h16l-2 22h-12Z" fill="#ffffff" stroke="#a9bfe8" stroke-width="2"/>
+  <path d="M247 172h10" stroke="#a9bfe8" stroke-width="2"/>
+  <!-- plant -->
+  <path d="M332 228l-5-32h30l-5 32Z" fill="#ffffff"/>
+  <path d="M342 196c-4-16-16-24-26-24 4 12 12 22 26 24ZM342 196c2-18 12-28 22-30-2 14-8 24-22 30Z" fill="#b9d2c3"/>
+</svg>

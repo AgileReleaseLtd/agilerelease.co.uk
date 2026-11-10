@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Celebration cakes: sizes, prices and ordering | Crumb &amp; Candle (sample website)</title>
+<meta name="description" content="Custom birthday, wedding and celebration cakes. Choose the size, flavour and finish, see a price straight away and send your order on WhatsApp. A sample website by Agile Release.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#fff6f2">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="preload" href="css/fonts/shrikhand-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="css/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js" defer></script>
+<script src="js/time.js" defer></script>
+<script src="js/cake-art.js" defer></script>
+<script src="js/site.js" defer></script>
+<script src="js/order.js" defer></script>
+</head>
+<body class="page-cakes">
+
+<svg class="sprite" aria-hidden="true">
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 7 8.5-7"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z"/><circle cx="12" cy="13" r="3.5"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.5v.2"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5 2.5 20h19L12 3.5Z"/><path d="M12 10v4.5M12 17.2v.2"/></symbol>
+  <symbol id="i-prev" viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></symbol>
+  <symbol id="i-next" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+  <symbol id="i-loaf" viewBox="0 0 24 24"><path d="M3.8 17.5C3 12 7 7 12 7s9 5 8.2 10.5Z"/><path d="M8.5 11c2-1.3 5-1.3 7 0M8 14c2.4-1.2 5.6-1.2 8 0"/></symbol>
+  <symbol id="i-croissant" viewBox="0 0 24 24"><path d="M2.8 17.2C3.4 11.3 7.2 7.2 12 7.2s8.6 4.1 9.2 10c-1.7-1.3-3.4-1.8-5-1.6-1.2-1.4-2.6-2.1-4.2-2.1s-3 .7-4.2 2.1c-1.6-.2-3.3.3-5 1.6Z"/><path d="M7.8 15.6 6.6 9.6M16.2 15.6l1.2-6M12 13.5V7.2"/></symbol>
+  <symbol id="i-slice" viewBox="0 0 24 24"><path d="M3 15.5 20 9v10H3Z"/><path d="M3 15.5h17M3 12.5l17-6.5"/><circle cx="17.5" cy="5" r="1.8"/></symbol>
+  <symbol id="i-cake" viewBox="0 0 24 24"><path d="M4 20v-7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v7M2.5 20h19"/><path d="M4 15c1.3 1 2.7 1 4 0s2.7-1 4 0 2.7 1 4 0 2.7-1 4 0"/><path d="M12 11V7.5"/><path d="M12 3.2c.9.9 1.1 1.9 0 2.8-1.1-.9-.9-1.9 0-2.8Z"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1 12.5H6L5 8Z"/><path d="M9 10V6.5a3 3 0 0 1 6 0V10"/></symbol>
+  <symbol id="i-train" viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="13.5" rx="3"/><path d="M6 10h12M9 20.5l-1.8 1.5M15 20.5l1.8 1.5M9.5 13.4v.2M14.5 13.4v.2"/></symbol>
+  <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3c.6 4.6 1.9 5.9 6.5 6.5-4.6.6-5.9 1.9-6.5 6.5-.6-4.6-1.9-5.9-6.5-6.5C10.1 8.9 11.4 7.6 12 3Z"/><path d="M18.5 15.5v4M16.5 17.5h4"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14Z"/><path d="M5 19 13 11"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<aside class="sample-bar" aria-label="About this sample website">
+  <div class="wrap sample-bar-inner">
+    <p><strong>Sample website by Agile Release.</strong> Crumb &amp; Candle is not a real bakery: the prices, hours and address are examples.</p>
+    <a href="https://agilerelease.co.uk/#websites">Get a site like this <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a>
+  </div>
+</aside>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Crumb and Candle, home">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect x="1.5" y="1.5" width="37" height="37" rx="11" fill="#c4164e" stroke="#2b0d1e" stroke-width="3"/><path d="M19.5 7.2c2.6 2.7 3.1 5.3.5 6.9-2.6-1.6-2.1-4.2-.5-6.9Z" fill="#ffd15c" stroke="#2b0d1e" stroke-width="1.8" stroke-linejoin="round"/><rect x="18.2" y="14" width="3.6" height="8" rx="1" fill="#fff3dc" stroke="#2b0d1e" stroke-width="1.8"/><path d="M8.5 22.5h23v7.3a2.7 2.7 0 0 1-2.7 2.7H11.2a2.7 2.7 0 0 1-2.7-2.7Z" fill="#fff3dc" stroke="#2b0d1e" stroke-width="2.2" stroke-linejoin="round"/><path d="M8.5 22.5h23v2.6c0 1.2-.8 1.9-1.6 1.9s-1.6-.7-1.6-1.9v1.6c0 1.5-.9 2.2-1.8 2.2s-1.8-.7-1.8-2.2v-1c0 1.1-.8 1.7-1.6 1.7s-1.6-.6-1.6-1.7v2.3c0 1.4-.9 2.1-1.8 2.1s-1.8-.7-1.8-2.1v-2.6c0 1-.8 1.6-1.6 1.6s-1.6-.6-1.6-1.6v1.1c0 1.2-.8 1.8-1.6 1.8s-1.6-.6-1.6-1.8Z" fill="#ff8fab" stroke="#2b0d1e" stroke-width="1.8" stroke-linejoin="round"/></svg>
+      <span class="brand-text"><span class="brand-name">Crumb <span class="brand-amp">&amp;</span> Candle</span><span class="brand-tag">Bakery, Surbiton</span></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="shop.html">Bread &amp; pastries</a></li>
+        <li><a href="cakes.html" aria-current="page">Celebration cakes</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="shop.html#allergens">Allergens</a></li>
+        <li><a href="index.html#find-us">Find us</a></li>
+        <li class="nav-order"><a href="cakes.html#order">Order a cake</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary btn-sm header-cta" href="cakes.html#order">Order a cake</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+      <svg class="icon"><use href="#i-menu"/></svg><span class="visually-hidden">Menu</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="page-head">
+  <div class="wrap page-head-inner">
+    <div>
+      <p class="kicker">Celebration cakes</p>
+      <h1 class="h1">Cakes made to order</h1>
+      <p class="lead">Tell us the occasion, the size and the flavour, and we bake it fresh for your collection day. Three layers of sponge, filled and finished by hand.</p>
+    </div>
+    <ul class="fact-chips">
+      <li><svg class="icon"><use href="#i-calendar"/></svg> <span><strong>5 days' notice</strong>, 14 for tiered cakes</span></li>
+      <li><svg class="icon"><use href="#i-cake"/></svg> <span>From <strong data-fill="cake-from">£58</strong>, serves 12 to 14</span></li>
+      <li><svg class="icon"><use href="#i-leaf"/></svg> <span>Eggless, vegan and made without gluten</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section sizes-section" id="sizes" aria-labelledby="sizes-title">
+  <div class="wrap">
+    <header class="section-head">
+      <p class="kicker">Sizes and prices</p>
+      <h2 class="h2" id="sizes-title">How big a cake?</h2>
+      <p>Prices include three layers of sponge, a filling, a smooth buttercream finish, a board and a box. Portions are party slices, about 2.5 cm wide. Cut into wedding-style fingers, a cake serves about twice as many.</p>
+    </header>
+    <ul class="sizes" data-sizes></ul>
+    <noscript><p class="noscript-note">6 inch from £58 (serves 12 to 14), 8 inch from £78 (20 to 24), 10 inch from £105 (32 to 36), two tiers from £210 (35 to 40), three tiers from £360 (70 to 80).</p></noscript>
+    <details class="menu-details" data-menu-details open>
+    <summary class="menu-summary">Sponges, fillings and finishes, with prices</summary>
+    <div class="menu-cols">
+      <div class="menu-col">
+        <h3 class="h4">Sponges</h3>
+        <ul class="menu-list" data-menu="flavours"></ul>
+      </div>
+      <div class="menu-col">
+        <h3 class="h4">Fillings</h3>
+        <ul class="menu-list" data-menu="fillings"></ul>
+      </div>
+      <div class="menu-col">
+        <h3 class="h4">Finishes</h3>
+        <ul class="menu-list" data-menu="finishes"></ul>
+      </div>
+    </div>
+    <p class="menu-note">Extras on the sponge, filling and finish are priced for a 6 inch cake and go up with the size. The order form below works it all out for you.</p>
+    </details>
+  </div>
+</section>
+
+<section class="section order-section" id="order" aria-labelledby="order-title">
+  <div class="wrap">
+    <header class="section-head">
+      <p class="kicker">Order a cake</p>
+      <h2 class="h2" id="order-title">Build your cake</h2>
+      <p>Choose as you go and watch the price. When you send it, your order goes to us as a WhatsApp message. We reply within a working day with the final price and a link to pay the deposit.</p>
+    </header>
+
+    <p class="from-gallery" data-from-gallery hidden></p>
+
+    <noscript>
+      <p class="noscript-note">The order form needs JavaScript. You can still order on WhatsApp on 07700 900736, or call 020 7946 0736: tell us the occasion, the size, the flavour and the collection day.</p>
+    </noscript>
+
+    <form class="order" data-order novalidate>
+      <div class="order-steps">
+
+        <fieldset class="step" id="step-occasion">
+          <legend class="step-title"><span class="step-no" aria-hidden="true">1</span> The occasion</legend>
+          <div class="chips" data-choices="occasion"></div>
+          <p class="field-error" id="occasion-error" data-error="occasion" hidden>Please choose the occasion.</p>
+        </fieldset>
+
+        <fieldset class="step" id="step-size">
+          <legend class="step-title"><span class="step-no" aria-hidden="true">2</span> Size</legend>
+          <div class="cards cards-size" data-choices="size"></div>
+        </fieldset>
+
+        <fieldset class="step" id="step-diet">
+          <legend class="step-title"><span class="step-no" aria-hidden="true">3</span> Dietary needs</legend>
+          <div class="cards cards-diet" data-choices="diet"></div>
+          <p class="step-help"><svg class="icon"><use href="#i-info"/></svg> <span>Our kitchen handles gluten, eggs, milk and nuts, so we cannot make a cake free from traces. <a href="shop.html#allergens">Allergen information</a></span></p>
+        </fieldset>
+
+        <fieldset class="step" id="step-flavour">
+          <legend class="step-title"><span class="step-no" aria-hidden="true">4</span> Flavour and filling</legend>
+          <p class="diet-change" data-diet-change role="status" hidden></p>
+          <div class="sub">
+            <fieldset class="subset">
+              <legend class="sub-title">Sponge</legend>
+              <div class="cards cards-list" data-choices="flavour"></div>
+            </fieldset>
+            <fieldset class="subset">
+              <legend class="sub-title">Filling</legend>
+              <div class="cards cards-list" data-choices="filling"></div>
+            </fieldset>
+          </div>
+        </fieldset>
+
+        <fieldset class="step" id="step-finish">
+          <legend class="step-title"><span class="step-no" aria-hidden="true">5</span> Finish and extras</legend>
+          <div class="cards cards-finish" data-choices="finish"></div>
+          <fieldset class="subset">
+            <legend class="sub-title">Extras</legend>
+            <div class="cards cards-extras" data-choices="extras"></div>
+          </fieldset>
+          <label class="field field-numbers" data-numbers-field hidden>
+            <span class="field-label">Which numbers? <span class="field-optional">Up to 3 digits</span></span>
+            <input type="text" name="numbers" inputmode="numeric" maxlength="3" autocomplete="off" placeholder="For example 30">
+          </label>
+        </fieldset>
+
+        <fieldset class="step" id="step-wording">
+          <legend class="step-title"><span class="step-no" aria-hidden="true">6</span> Wording and photo</legend>
+          <label class="field">
+            <span class="field-label">Wording on the cake <span class="field-optional">Optional, piped in buttercream</span></span>
+            <input type="text" name="wording" maxlength="40" autocomplete="off" placeholder="For example: Happy 30th Sam" aria-describedby="wording-count">
+            <span class="field-hint" id="wording-count" data-wording-count>Up to 40 characters.</span>
+          </label>
+          <div class="photo-note">
+            <svg class="photo-note-icon" aria-hidden="true"><use href="#i-camera"/></svg>
+            <div>
+              <p><strong>Got a photo of a cake you like?</strong> This website cannot take photos. Send your order, then attach the photo in the same WhatsApp chat. A screenshot is fine.</p>
+              <label class="check"><input type="checkbox" name="photo" value="yes"> <span>I will send a reference photo on WhatsApp</span></label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="step" id="step-collect">
+          <legend class="step-title"><span class="step-no" aria-hidden="true">7</span> Collection day and time</legend>
+          <p class="step-help" data-lead-note><svg class="icon"><use href="#i-calendar"/></svg> <span>We need 5 days' notice, or 14 for tiered cakes. Closed on Mondays.</span></p>
+          <div class="collect">
+          <div class="collect-cal">
+          <div class="cal" data-cal>
+            <div class="cal-head">
+              <button type="button" class="cal-nav" data-cal-prev aria-label="Previous month"><svg class="icon"><use href="#i-prev"/></svg></button>
+              <h3 class="cal-title" data-cal-title aria-live="polite">Choose a day</h3>
+              <button type="button" class="cal-nav" data-cal-next aria-label="Next month"><svg class="icon"><use href="#i-next"/></svg></button>
+            </div>
+            <div class="cal-weekdays" aria-hidden="true"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
+            <div class="cal-days" data-cal-days role="group" aria-label="Collection day"></div>
+            <ul class="cal-key">
+              <li><i class="key key-open"></i> Can collect</li>
+              <li><i class="key key-picked"></i> Your day</li>
+              <li><i class="key key-closed"></i> Closed or full</li>
+            </ul>
+          </div>
+          <p class="field-error" id="date-error" data-error="date" role="status" hidden>Please choose a collection day.</p>
+          </div>
+          <div class="collect-slots">
+            <p class="slots-empty" data-slots-empty><svg class="icon"><use href="#i-clock"/></svg> <span>Choose a day on the calendar, then a time to collect.</span></p>
+            <div class="slots" data-slots-wrap hidden>
+              <fieldset class="subset">
+                <legend class="sub-title" data-slots-title>Collection time</legend>
+                <div class="chips chips-slots" data-choices="slot"></div>
+              </fieldset>
+              <p class="field-error" id="slot-error" data-error="slot" hidden>Please choose a collection time.</p>
+            </div>
+          </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="step" id="step-details">
+          <legend class="step-title"><span class="step-no" aria-hidden="true">8</span> Your details</legend>
+          <div class="field-row">
+            <label class="field">
+              <span class="field-label">Your name</span>
+              <input type="text" id="order-name" name="name" autocomplete="name" maxlength="60" required aria-describedby="name-error">
+              <span class="field-error" id="name-error" data-error="name" hidden>Please add your name, so we know whose cake it is.</span>
+            </label>
+            <label class="field">
+              <span class="field-label">Phone <span class="field-optional">Optional</span></span>
+              <input type="tel" name="phone" autocomplete="tel" maxlength="20">
+            </label>
+          </div>
+          <label class="field">
+            <span class="field-label">Anything else? <span class="field-optional">Optional</span></span>
+            <textarea name="notes" rows="3" maxlength="400" placeholder="Colours, a theme, a different flavour for each tier, an allergy we should know about"></textarea>
+          </label>
+        </fieldset>
+      </div>
+
+      <section class="order-summary" aria-labelledby="summary-title">
+        <div class="summary-card" id="summary">
+          <h3 class="summary-title" id="summary-title">Your cake</h3>
+          <div class="summary-art" data-preview></div>
+          <dl class="summary-list" data-summary></dl>
+          <div class="estimate">
+            <p class="estimate-total"><span>Estimate</span> <strong data-total aria-live="polite">£78</strong></p>
+            <p class="estimate-deposit"><span>Deposit to book it (half)</span> <strong data-deposit>£39</strong></p>
+          </div>
+          <p class="estimate-note">We confirm the final price on WhatsApp. <strong>Your order is confirmed only once the deposit is paid.</strong></p>
+          <div class="error-summary" data-errors tabindex="-1" hidden></div>
+          <button type="submit" class="btn btn-primary btn-block" name="via" value="whatsapp"><svg class="icon"><use href="#i-chat"/></svg> Send order on WhatsApp</button>
+          <button type="submit" class="btn btn-light btn-sm btn-block" name="via" value="email"><svg class="icon"><use href="#i-mail"/></svg> Email it instead</button>
+          <p class="form-note">Or call <a href="tel:+442079460736" data-contact="phone">020 7946 0736</a>. Your order is sent from your own phone or email; this website keeps nothing.</p>
+        </div>
+      </section>
+    </form>
+
+    <div class="estimate-bar" data-estimate-bar hidden>
+      <span>Estimate <strong data-bar-total>£78</strong></span>
+      <a class="btn btn-primary btn-sm" href="#summary">Review and send</a>
+    </div>
+  </div>
+</section>
+
+<section class="section how-section" id="how" aria-labelledby="how-title">
+  <div class="wrap">
+    <header class="section-head">
+      <p class="kicker kicker-light">How ordering works</p>
+      <h2 class="h2" id="how-title">Deposits, changes and cancellations</h2>
+      <p>The plain version, so there are no surprises.</p>
+    </header>
+    <ol class="how-steps">
+      <li><span class="how-no">1</span><h3>You send your order</h3><p>On WhatsApp or by email, with a photo if you have one. Nothing is booked yet.</p></li>
+      <li><span class="how-no">2</span><h3>We reply with a price</h3><p>Within one working day: the final price, any questions, and a secure link to pay the deposit.</p></li>
+      <li><span class="how-no">3</span><h3>You pay half</h3><p>Your date and slot are held once the deposit is paid. Until then, the date is not saved for you.</p></li>
+      <li><span class="how-no">4</span><h3>You collect</h3><p>Pay the rest in the shop when you collect, by card, contactless or cash.</p></li>
+    </ol>
+    <dl class="terms">
+      <div>
+        <dt>Deposit</dt>
+        <dd>Half the price, paid within 48 hours of our reply. If it is not paid by then, we may give the slot to someone else.</dd>
+      </div>
+      <div>
+        <dt>Changes</dt>
+        <dd>Wording, colours and decoration can change up to 3 days before collection. The size or flavour can change up to 7 days before, if we can still do it. We will tell you if the price changes.</dd>
+      </div>
+      <div>
+        <dt>Cancelling</dt>
+        <dd>More than 14 days before collection: the deposit back in full. 7 to 14 days before: half the deposit back. Less than 7 days: we keep the deposit, as the ingredients are bought and the time is booked.</dd>
+      </div>
+      <div>
+        <dt>Collection</dt>
+        <dd>In the slot you chose. Bring something flat for the car: a cake travels best in the footwell or on a level boot floor, not on a seat.</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<section class="section faq-section" id="cake-faq" aria-labelledby="cake-faq-title">
+  <div class="wrap faq-layout">
+    <header class="section-head section-head-left">
+      <p class="kicker">Cake questions</p>
+      <h2 class="h2" id="cake-faq-title">Before you order</h2>
+      <p>Not sure? <a href="index.html#find-us">Message us</a> and we will help you choose.</p>
+    </header>
+    <div class="faq">
+      <details>
+        <summary>How many people will my cake feed?</summary>
+        <p>Each size shows its party portions, about 2.5 cm wide. For a wedding or a big buffet, cut into fingers and a cake goes about twice as far.</p>
+      </details>
+      <details>
+        <summary>Can each tier be a different flavour?</summary>
+        <p>Yes, at no extra cost. Choose one flavour in the form and tell us the others in the notes.</p>
+      </details>
+      <details>
+        <summary>Do you make cakes shaped like characters or numbers?</summary>
+        <p>We stick to round cakes and do them well. We can add gold number candles, a theme in the colours, or piped decoration that suits it.</p>
+      </details>
+      <details>
+        <summary>Do you deliver wedding cakes?</summary>
+        <p>Yes. We deliver and set up tiered cakes within 8 miles of the shop for £35. Tell us the venue in the notes and we will add it to the price.</p>
+      </details>
+      <details>
+        <summary>How do I keep the cake until the party?</summary>
+        <p>In its box, somewhere cool, out of the sun. Buttercream cakes are best eaten at room temperature within 3 days. Cakes with fresh fruit or cream cheese go in the fridge, out an hour before serving.</p>
+      </details>
+      <details>
+        <summary>Can we try the flavours first?</summary>
+        <p>For wedding cakes, yes: a tasting box of four flavours is £18, taken off the price if you book. For other cakes, the same sponges are in the shop by the slice.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<dialog class="dialog" id="order-dialog" aria-labelledby="sent-title">
+  <div class="dialog-body">
+    <div class="dialog-head">
+      <h2 class="dialog-title" id="sent-title" tabindex="-1">Your cake order</h2>
+      <button type="button" class="dialog-close" data-close aria-label="Close"><svg class="icon"><use href="#i-close"/></svg></button>
+    </div>
+    <div class="chat">
+      <p class="chat-to"><svg class="icon icon-sm"><use href="#i-chat"/></svg> <span data-sent-to>To Crumb &amp; Candle on WhatsApp</span></p>
+      <p class="bubble" data-message></p>
+    </div>
+    <div class="sample-note">
+      <p><strong>This is a sample website, so nothing was sent.</strong></p>
+      <p data-sent-how>On the bakery's real website, this button opens WhatsApp with the message above ready to send.</p>
+    </div>
+    <div class="next-steps">
+      <h3 class="h4">What happens next</h3>
+      <ol>
+        <li>We reply within one working day with the final price and a link to pay the deposit.</li>
+        <li><strong>Your order is confirmed once the deposit is paid.</strong></li>
+        <li data-sent-photo hidden>Attach your reference photo in the same chat.</li>
+      </ol>
+    </div>
+    <div class="dialog-actions">
+      <button type="button" class="btn btn-light" data-close>Change my order</button>
+      <a class="btn btn-dark" href="https://agilerelease.co.uk/#websites">Get a site like this</a>
+    </div>
+  </div>
+</dialog>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a class="brand brand-light" href="index.html" aria-label="Crumb and Candle, home">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect x="1.5" y="1.5" width="37" height="37" rx="11" fill="#c4164e" stroke="#2b0d1e" stroke-width="3"/><path d="M19.5 7.2c2.6 2.7 3.1 5.3.5 6.9-2.6-1.6-2.1-4.2-.5-6.9Z" fill="#ffd15c" stroke="#2b0d1e" stroke-width="1.8" stroke-linejoin="round"/><rect x="18.2" y="14" width="3.6" height="8" rx="1" fill="#fff3dc" stroke="#2b0d1e" stroke-width="1.8"/><path d="M8.5 22.5h23v7.3a2.7 2.7 0 0 1-2.7 2.7H11.2a2.7 2.7 0 0 1-2.7-2.7Z" fill="#fff3dc" stroke="#2b0d1e" stroke-width="2.2" stroke-linejoin="round"/><path d="M8.5 22.5h23v2.6c0 1.2-.8 1.9-1.6 1.9s-1.6-.7-1.6-1.9v1.6c0 1.5-.9 2.2-1.8 2.2s-1.8-.7-1.8-2.2v-1c0 1.1-.8 1.7-1.6 1.7s-1.6-.6-1.6-1.7v2.3c0 1.4-.9 2.1-1.8 2.1s-1.8-.7-1.8-2.1v-2.6c0 1-.8 1.6-1.6 1.6s-1.6-.6-1.6-1.6v1.1c0 1.2-.8 1.8-1.6 1.8s-1.6-.6-1.6-1.8Z" fill="#ff8fab" stroke="#2b0d1e" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        <span class="brand-text"><span class="brand-name">Crumb <span class="brand-amp">&amp;</span> Candle</span><span class="brand-tag">Bakery, Surbiton</span></span>
+      </a>
+      <p>Bread and pastries baked every morning, and celebration cakes made to order.</p>
+      <p class="footer-address"><svg class="icon"><use href="#i-pin"/></svg> <span>14 Cardell Row, Surbiton, KT6</span></p>
+      <p class="footer-hours"><svg class="icon"><use href="#i-clock"/></svg> <span>Tuesday to Sunday from 7:30am. Closed on Mondays.</span></p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="shop.html">Bread &amp; pastries</a>
+      <a href="cakes.html">Celebration cakes</a>
+      <a href="cakes.html#order">Order a cake</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="shop.html#allergens">Allergens</a>
+      <a href="index.html#find-us">Find us</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+    <p class="footer-credit">A sample website by <a href="https://agilerelease.co.uk/#websites">Agile Release</a>. Crumb &amp; Candle is made up. &copy; 2026 Agile Release Limited. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

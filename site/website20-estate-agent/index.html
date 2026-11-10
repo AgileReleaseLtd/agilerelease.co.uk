@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Transom &amp; Co | Estate and letting agents in Bow, London E3 (sample website)</title>
+<meta name="description" content="Independent estate and letting agents in Bow, Old Ford, Mile End and Fish Island. Homes for sale and to rent, free valuations and landlord services. A sample website by Agile Release.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#3a312e">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="preload" href="css/fonts/onest-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="css/fonts/besley-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js" defer></script>
+<script src="js/art.js" defer></script>
+<script src="js/site.js" defer></script>
+<script src="js/home.js" defer></script>
+</head>
+<body>
+
+<svg class="sprite" aria-hidden="true">
+  <symbol id="i-bed" viewBox="0 0 24 24"><path d="M3 18.5v-7A2 2 0 0 1 5 9.5h14a2 2 0 0 1 2 2v7M3 15.5h18M3 18.5V21M21 18.5V21M6 9.5V7a1.5 1.5 0 0 1 1.5-1.5h3A1.5 1.5 0 0 1 12 7v2.5"/></symbol>
+  <symbol id="i-bath" viewBox="0 0 24 24"><path d="M3.5 12h17v2a5 5 0 0 1-5 5h-7a5 5 0 0 1-5-5v-2ZM6 12V6.2a2.2 2.2 0 0 1 4-1.2M7.5 19l-1 2M16.5 19l1 2"/></symbol>
+  <symbol id="i-sofa" viewBox="0 0 24 24"><path d="M5 11V8a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3M3 13.2a2 2 0 0 1 4 0V15h10v-1.8a2 2 0 0 1 4 0V18a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4.8ZM5.5 19v2M18.5 19v2"/></symbol>
+  <symbol id="i-area" viewBox="0 0 24 24"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5M8 8l8 8M16 8l-8 8" /></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h3l1.6-2.2h6.8L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z"/><circle cx="12" cy="13.2" r="3.4"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 7 8.5-7"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></symbol>
+  <symbol id="i-filter" viewBox="0 0 24 24"><path d="M4 6h16M7 12h10M10 18h4"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M4 11 12 4l8 7M6 9.5V20h12V9.5M10 20v-5h4v5"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="M11 12 19 4M16 7l2.5 2.5M13.5 9.5l2 2"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.5 3 8 7 10 4-2 7-5.5 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 3c1.2 3.2 5 5.4 5 10a5 5 0 0 1-10 0c0-2.6 1.4-4.2 2.6-5.2.2 1.6.9 2.6 2 3.1.5-3-.6-5.6.4-7.9Z"/></symbol>
+  <symbol id="i-plug" viewBox="0 0 24 24"><path d="M9 3v5M15 3v5M6.5 8h11v3a5.5 5.5 0 0 1-11 0V8ZM12 16.5V21"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19c0-8 5-14 15-14 0 10-6 15-14 15M5 19l8-8"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9.5" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+  <symbol id="i-id" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2.2"/><path d="M5.8 16c.6-1.4 1.8-2 3.2-2s2.6.6 3.2 2M14.5 10h4M14.5 13.5h3"/></symbol>
+  <symbol id="i-alarm" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="2.6"/><path d="M12 5.8v.4M17.8 12h-.4M6.2 12h.4"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7V3Z"/><path d="M14 3v4h4M10 12h5M10 16h5"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.6v.2"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+  <symbol id="i-tools" viewBox="0 0 24 24"><path d="M14.6 6.4a4 4 0 0 0-5.2 5.2L4 17l3 3 5.4-5.4a4 4 0 0 0 5.2-5.2l-2.6 2.6-2.4-.6-.6-2.4 2.6-2.6Z"/></symbol>
+  <symbol id="i-pound" viewBox="0 0 24 24"><path d="M16.5 6.8A3.6 3.6 0 0 0 9.8 8.2v4.4c0 2.1-1 4-3 5.4h11M7.6 12.6h6"/></symbol>
+  <symbol id="i-people" viewBox="0 0 24 24"><circle cx="9" cy="8.5" r="3.2"/><path d="M3.5 19.5c.8-3 2.9-4.6 5.5-4.6s4.7 1.6 5.5 4.6M15.5 5.6a3.2 3.2 0 0 1 0 6M17 14.9c1.9.4 3 1.9 3.5 4.6"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<aside class="sample-bar" aria-label="About this sample website">
+  <div class="wrap sample-bar-inner">
+    <p><strong>Sample website by Agile Release.</strong> Transom &amp; Co is not a real agent: the homes, prices and people are examples.</p>
+    <a href="https://agilerelease.co.uk/#websites">Get a site like this <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a>
+  </div>
+</aside>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Transom and Co, home">
+      <svg class="brand-mark" viewBox="0 0 36 36" aria-hidden="true"><rect class="bm-bg" width="36" height="36" rx="9"/><rect class="bm-frame" x="10" y="5.5" width="16" height="25.5" rx="1"/><rect class="bm-glass" x="12" y="7.5" width="12" height="6"/><rect class="bm-door" x="12" y="15.5" width="12" height="15.5"/><circle class="bm-knob" cx="21.4" cy="23.6" r="1.1"/><rect class="bm-frame" x="8" y="31" width="20" height="2"/></svg>
+      <span class="brand-text"><span class="brand-name">Transom <em>&amp; Co</em></span><span class="brand-tag">Estate &amp; letting agents, Bow</span></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="properties.html?mode=sale">Buy</a></li>
+        <li><a href="properties.html?mode=let">Rent</a></li>
+        <li><a href="valuation.html">Sell</a></li>
+        <li><a href="landlords.html">Landlords</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <a class="btn btn-primary btn-sm nav-cta" href="valuation.html">Free valuation</a>
+    </nav>
+    <a class="btn btn-primary btn-sm header-cta" href="valuation.html">Free valuation</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+      <svg class="icon"><use href="#i-menu"/></svg><span class="visually-hidden">Menu</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="kicker"><span class="no">No. 41</span> Cordwain Street, Bow</p>
+      <h1 class="display">Selling and letting homes in <em>Bow</em> since 2012.</h1>
+      <p class="lead">A small, independent office just off Roman Road. Five of us, one patch: Bow, Old Ford, Mile End and Fish Island. The person who values your home is the person who sells it.</p>
+      <ul class="hero-points">
+        <li><strong data-fill="sales-fee">1.44%</strong> <span>including VAT to sell. No sale, no fee.</span></li>
+        <li><strong>6 days</strong> <span>a week, with evening viewings.</span></li>
+        <li><strong>£0</strong> <span>in fees for tenants beyond what the law allows.</span></li>
+      </ul>
+    </div>
+
+    <form class="search-card" data-quick-search aria-labelledby="qs-title">
+      <h2 class="search-title" id="qs-title">Find a home</h2>
+      <fieldset class="seg">
+        <legend class="visually-hidden">Buy or rent</legend>
+        <input type="radio" name="mode" id="qs-sale" value="sale" checked><label for="qs-sale">Buy</label>
+        <input type="radio" name="mode" id="qs-let" value="let"><label for="qs-let">Rent</label>
+      </fieldset>
+      <div class="field">
+        <label for="qs-type">Property type</label>
+        <select id="qs-type" name="type">
+          <option value="">Any type</option>
+          <option value="house">House</option>
+          <option value="flat">Flat or studio</option>
+          <option value="maisonette">Maisonette</option>
+        </select>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="qs-beds">Bedrooms</label>
+          <select id="qs-beds" name="beds">
+            <option value="0">Any</option>
+            <option value="1">1 or more</option>
+            <option value="2">2 or more</option>
+            <option value="3">3 or more</option>
+            <option value="4">4 or more</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="qs-max">Price</label>
+          <select id="qs-max" name="max">
+            <option value="0">Any price</option>
+          </select>
+        </div>
+      </div>
+      <button class="btn btn-primary btn-block" type="submit"><svg class="icon"><use href="#i-search"/></svg> <span data-quick-submit>Search homes for sale</span></button>
+      <p class="search-foot">Selling or letting? <a href="valuation.html">Book a free valuation</a></p>
+    </form>
+  </div>
+  <div class="street" data-street></div>
+</section>
+
+<section class="section" id="latest">
+  <div class="wrap">
+    <header class="section-head section-head-row" data-reveal>
+      <div>
+        <p class="kicker"><span class="no">No. 1</span> Just listed</p>
+        <h2 class="h2">New on our books</h2>
+      </div>
+      <p class="head-links">
+        <a class="link-arrow" href="properties.html?mode=sale">All homes for sale <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a>
+        <a class="link-arrow" href="properties.html?mode=let">All homes to rent <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a>
+      </p>
+    </header>
+    <ul class="cards cards-3" data-latest>
+      <li class="cards-fallback">See every home we have <a href="properties.html?mode=sale">for sale</a> and <a href="properties.html?mode=let">to rent</a>.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section-tint" id="services">
+  <div class="wrap">
+    <header class="section-head" data-reveal>
+      <p class="kicker"><span class="no">No. 2</span> What we do</p>
+      <h2 class="h2">Sales, lettings and management from one office</h2>
+      <p>Every fee is on this website, including VAT. No upfront costs, no long tie-ins.</p>
+    </header>
+    <div class="services" data-reveal>
+      <article class="service">
+        <svg class="service-icon"><use href="#i-home"/></svg>
+        <h3 class="h3">Selling</h3>
+        <p class="service-fee"><strong data-fill="sales-fee">1.44%</strong> <span>including VAT (1.2% + VAT), only when you complete</span></p>
+        <ul class="ticks">
+          <li><svg class="icon"><use href="#i-check"/></svg> Valuation within two working days</li>
+          <li><svg class="icon"><use href="#i-check"/></svg> Photos, floor plan and the main portals</li>
+          <li><svg class="icon"><use href="#i-check"/></svg> Every viewing accompanied, evenings and Saturdays</li>
+          <li><svg class="icon"><use href="#i-check"/></svg> A weekly update until completion</li>
+        </ul>
+        <a class="btn btn-outline" href="valuation.html">Book a valuation</a>
+      </article>
+      <article class="service">
+        <svg class="service-icon"><use href="#i-key"/></svg>
+        <h3 class="h3">Letting</h3>
+        <p class="service-fee"><strong>10.8%</strong> <span>including VAT for Let only, or 13.2% with rent collection</span></p>
+        <ul class="ticks">
+          <li><svg class="icon"><use href="#i-check"/></svg> Tenants referenced and Right to Rent checked</li>
+          <li><svg class="icon"><use href="#i-check"/></svg> Tenancies set up for the Renters' Rights Act</li>
+          <li><svg class="icon"><use href="#i-check"/></svg> Deposits protected within 30 days</li>
+          <li><svg class="icon"><use href="#i-check"/></svg> Fair, fixed asking rents, never bidding wars</li>
+        </ul>
+        <a class="btn btn-outline" href="landlords.html">Landlord services</a>
+      </article>
+      <article class="service service-featured">
+        <svg class="service-icon"><use href="#i-tools"/></svg>
+        <h3 class="h3">Managing</h3>
+        <p class="service-fee"><strong>16.8%</strong> <span>including VAT (14% + VAT) of the rent we collect</span></p>
+        <ul class="ticks">
+          <li><svg class="icon"><use href="#i-check"/></svg> Repairs handled day and night</li>
+          <li><svg class="icon"><use href="#i-check"/></svg> Gas, electrical and EPC checks tracked</li>
+          <li><svg class="icon"><use href="#i-check"/></svg> Two visits a year, with photos</li>
+          <li><svg class="icon"><use href="#i-check"/></svg> Rent paid to you within 3 working days</li>
+        </ul>
+        <a class="btn btn-primary" href="landlords.html">How management works</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark" id="guide">
+  <div class="wrap guide-band">
+    <div class="guide-copy" data-reveal>
+      <p class="kicker kicker-light"><span class="no">No. 3</span> Rough guide</p>
+      <h2 class="h2">What is your home worth?</h2>
+      <p>Pick the type and size for a rough range, based on what we have sold and let around here this year. For a figure you can rely on, we come and look: condition, light, outside space and the lease all change it.</p>
+    </div>
+    <form class="teaser" data-guide-teaser aria-label="Rough guide" data-reveal>
+      <div class="teaser-fields">
+        <div class="field">
+          <label for="g-mode">I want to</label>
+          <select id="g-mode" name="gmode">
+            <option value="sale">Sell</option>
+            <option value="let">Let</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="g-type">Property</label>
+          <select id="g-type" name="gtype">
+            <option value="house">House</option>
+            <option value="flat" selected>Flat</option>
+            <option value="maisonette">Maisonette</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="g-beds">Bedrooms</label>
+          <select id="g-beds" name="gbeds">
+            <option value="0">Studio</option>
+            <option value="1">1</option>
+            <option value="2" selected>2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 or more</option>
+          </select>
+        </div>
+      </div>
+      <p class="teaser-out" data-guide-out aria-live="polite"></p>
+      <a class="btn btn-pink" href="valuation.html" data-guide-link>Book a free valuation <svg class="icon"><use href="#i-arrow"/></svg></a>
+    </form>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="wrap about">
+    <div class="about-copy" data-reveal>
+      <p class="kicker"><span class="no">No. 4</span> About us</p>
+      <h2 class="h2">A small office that knows the streets</h2>
+      <p>Nadia Okafor opened Transom &amp; Co in 2012 in the old ironmonger's at 41 Cordwain Street. We are still there, two minutes from Roman Road market, and most of us live within a mile of the office.</p>
+      <p>We only work in E3 and the edges of E9 and E14. So we know which blocks have major works coming, which roads are quiet, and what sold on your street last month.</p>
+      <h3 class="h4">Areas we cover</h3>
+      <ul class="areas">
+        <li>Bow</li><li>Old Ford</li><li>Mile End</li><li>Bow Common</li><li>Fish Island</li><li>Bromley-by-Bow</li><li>Victoria Park (E3 side)</li>
+      </ul>
+    </div>
+    <ul class="team" data-reveal>
+      <li class="person">
+        <span class="monogram mono-taupe" aria-hidden="true">NO</span>
+        <div><h3 class="person-name">Nadia Okafor</h3><p class="person-role">Director, sales</p>
+        <p>Started Transom in 2012 after nine years selling homes across Tower Hamlets. Does most of the valuations herself.</p></div>
+      </li>
+      <li class="person">
+        <span class="monogram mono-pink" aria-hidden="true">TW</span>
+        <div><h3 class="person-name">Tom Whitlow</h3><p class="person-role">Sales negotiator</p>
+        <p>Runs the viewings and keeps buyers and sellers up to date every week until completion.</p></div>
+      </li>
+      <li class="person">
+        <span class="monogram mono-ochre" aria-hidden="true">SR</span>
+        <div><h3 class="person-name">Shirin Rahman</h3><p class="person-role">Lettings manager</p>
+        <p>Finds and checks tenants, and knows the Renters' Rights Act changes inside out.</p></div>
+      </li>
+      <li class="person">
+        <span class="monogram mono-sage" aria-hidden="true">CP</span>
+        <div><h3 class="person-name">Callum Pryce</h3><p class="person-role">Property manager</p>
+        <p>Looks after our managed homes: repairs, safety checks and the twice-yearly visits.</p></div>
+      </li>
+      <li class="person">
+        <span class="monogram mono-ink" aria-hidden="true">MK</span>
+        <div><h3 class="person-name">Marta Kowalska</h3><p class="person-role">Office and client accounts</p>
+        <p>Pays landlords on time, sends the statements and answers the phone when we are all out.</p></div>
+      </li>
+      <li class="person person-office">
+        <div><h3 class="h4"><svg class="icon"><use href="#i-pin"/></svg> Drop in</h3>
+        <p>The office is open six days a week, and there is always one of us at the desk. No appointment needed for a chat.</p></div>
+        <a class="link-arrow" href="#contact">Opening hours <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section-tint" id="memberships">
+  <div class="wrap">
+    <header class="section-head" data-reveal>
+      <p class="kicker"><span class="no">No. 5</span> Protected</p>
+      <h2 class="h2">The schemes every agent must belong to</h2>
+      <p>Every estate and letting agent in England must belong to a government-approved redress scheme, and letting agents who hold rent or deposits must have client money protection. On a live site, the agent's own scheme names, membership numbers and certificates go in these slots.</p>
+    </header>
+    <ul class="slots" data-reveal>
+      <li class="slot">
+        <span class="tag-example">Example</span>
+        <svg class="slot-icon"><use href="#i-shield"/></svg>
+        <h3 class="h4">Redress scheme</h3>
+        <p class="slot-fill">Scheme name and membership number go here</p>
+        <p>The Property Ombudsman or the Property Redress Scheme. If you have a complaint we cannot settle, the scheme looks at it for free.</p>
+      </li>
+      <li class="slot">
+        <span class="tag-example">Example</span>
+        <svg class="slot-icon"><use href="#i-lock"/></svg>
+        <h3 class="h4">Client money protection</h3>
+        <p class="slot-fill">Scheme name and certificate go here</p>
+        <p>Rent and deposits we hold sit in a separate client account. If they were ever lost, the scheme pays you back.</p>
+      </li>
+      <li class="slot">
+        <span class="tag-example">Example</span>
+        <svg class="slot-icon"><use href="#i-key"/></svg>
+        <h3 class="h4">Deposit protection</h3>
+        <p class="slot-fill">The government-approved scheme we use goes here</p>
+        <p>Every tenant's deposit is protected within 30 days, and the tenant gets the details in writing.</p>
+      </li>
+    </ul>
+    <p class="slots-foot" data-reveal>Our fees are published in full: <a href="landlords.html#fees">landlords' fees</a> and <a href="landlords.html#tenant-fees">what tenants pay</a>.</p>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="wrap faq-layout">
+    <header class="section-head section-head-left" data-reveal>
+      <p class="kicker"><span class="no">No. 6</span> Questions</p>
+      <h2 class="h2">Things people ask us</h2>
+      <p>Anything else? <a href="#contact">Send us a message</a> and we will reply the same day.</p>
+    </header>
+    <div class="faq" data-reveal>
+      <details>
+        <summary>How much does it cost to sell with you?</summary>
+        <p>1.44% of the sale price including VAT (1.2% + VAT), paid only when the sale completes. There is nothing to pay upfront. If you need an EPC, we book one at cost. You can end the agreement with two weeks' notice after the first eight weeks.</p>
+      </details>
+      <details>
+        <summary>What do "under offer" and "sold STC" mean?</summary>
+        <p>Under offer: the seller has accepted an offer, but you can still view and make your own offer. Sold STC (subject to contract): the sale is going through and contracts are not yet exchanged. We keep both on the website until completion, so you can see what is moving.</p>
+      </details>
+      <details>
+        <summary>Do you charge tenants any fees?</summary>
+        <p>No. Tenants pay the rent, a refundable deposit and, if they choose to go ahead, a refundable holding deposit of one week's rent. The law allows a few other charges in specific cases, which we list on our <a href="landlords.html#tenant-fees">fees page</a>.</p>
+      </details>
+      <details>
+        <summary>How do viewings work?</summary>
+        <p>Pick a time on the property's page and send the request on WhatsApp. We confirm by message, usually within the hour. One of us always comes with you, including evenings until 7:30pm and Saturdays.</p>
+      </details>
+      <details>
+        <summary>Is the rough guide a valuation?</summary>
+        <p>No. It is a range based on what we have sold and let nearby, so you know roughly where you stand. A valuation is a visit: we look at the condition, light, outside space and, for flats, the lease and service charge, then give you one figure in writing.</p>
+      </details>
+      <details>
+        <summary>Can tenants have pets?</summary>
+        <p>Since 1 May 2026, tenants can ask to keep a pet and landlords must consider the request and give a reason if they say no. Many of our landlords say yes, and we note which homes welcome pets on each listing.</p>
+      </details>
+      <details>
+        <summary>How long does it take to let a home?</summary>
+        <p>Most homes we market in Bow are let within two to three weeks. References and Right to Rent checks then take three to five working days.</p>
+      </details>
+      <details>
+        <summary>Do you cover my street?</summary>
+        <p>If you are in E3, almost certainly. We also cover the E3 side of Victoria Park and the edges of Hackney Wick and Poplar. Ask us if you are not sure.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="section section-sky" id="contact">
+  <div class="wrap visit">
+    <div class="visit-info" data-reveal>
+      <p class="kicker"><span class="no">No. 7</span> Visit</p>
+      <h2 class="h2">Come and see us</h2>
+      <p class="visit-line"><svg class="icon"><use href="#i-pin"/></svg> <span>41 Cordwain Street, Bow, London E3</span></p>
+      <p class="visit-sub">Two minutes from Roman Road market. Buses stop at the end of the street, and Bow Road and Mile End stations are a ten-minute walk. <a href="https://www.google.com/maps/search/?api=1&amp;query=Roman+Road+Bow+London+E3">Open the area in Google Maps <svg class="icon icon-sm"><use href="#i-external"/></svg></a></p>
+      <h3 class="visit-hours-title"><svg class="icon"><use href="#i-clock"/></svg> Office hours</h3>
+      <p class="open-now" data-open-now></p>
+      <dl class="hours">
+        <div data-day="1"><dt>Monday</dt><dd>9am to 6:30pm</dd></div>
+        <div data-day="2"><dt>Tuesday</dt><dd>9am to 6:30pm</dd></div>
+        <div data-day="3"><dt>Wednesday</dt><dd>9am to 6:30pm</dd></div>
+        <div data-day="4"><dt>Thursday</dt><dd>9am to 6:30pm</dd></div>
+        <div data-day="5"><dt>Friday</dt><dd>9am to 6:30pm</dd></div>
+        <div data-day="6"><dt>Saturday</dt><dd>9:30am to 4pm</dd></div>
+        <div data-day="0"><dt>Sunday</dt><dd>Closed</dd></div>
+      </dl>
+      <p class="visit-sub">Viewings run until 7:30pm on weekdays by arrangement. Closed on bank holidays.</p>
+    </div>
+    <div class="visit-side">
+    <div class="contact-card" data-reveal>
+      <h2 class="contact-title">Ask us anything</h2>
+      <p>WhatsApp is quickest: we reply within the hour while the office is open. Or call, or drop in.</p>
+      <div class="contact-actions">
+        <a class="btn btn-pink btn-block" href="https://wa.me/447700900391" data-contact="whatsapp"><svg class="icon"><use href="#i-chat"/></svg> Message us on WhatsApp</a>
+        <a class="btn btn-ghost-light btn-block" href="tel:+442079460391" data-contact="phone"><svg class="icon"><use href="#i-phone"/></svg> Call 020 7946 0391</a>
+        <a class="btn btn-ghost-light btn-block" href="mailto:hello@transom.example" data-contact="email"><svg class="icon"><use href="#i-mail"/></svg> hello@transom.example</a>
+      </div>
+      <p class="contact-note">Managed tenant with an emergency out of hours, such as no heating, a leak or a break-in? Call 020 7946 0391 and choose option 1.</p>
+    </div>
+    <div class="office-art" data-office-art></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <a class="brand brand-light" href="index.html" aria-label="Transom and Co, home">
+        <svg class="brand-mark" viewBox="0 0 36 36" aria-hidden="true"><rect class="bm-bg" width="36" height="36" rx="9"/><rect class="bm-frame" x="10" y="5.5" width="16" height="25.5" rx="1"/><rect class="bm-glass" x="12" y="7.5" width="12" height="6"/><rect class="bm-door" x="12" y="15.5" width="12" height="15.5"/><circle class="bm-knob" cx="21.4" cy="23.6" r="1.1"/><rect class="bm-frame" x="8" y="31" width="20" height="2"/></svg>
+        <span class="brand-text"><span class="brand-name">Transom <em>&amp; Co</em></span><span class="brand-tag">Estate &amp; letting agents, Bow</span></span>
+      </a>
+      <p>Independent estate and letting agents for Bow, Old Ford, Mile End and Fish Island.</p>
+      <p class="footer-address"><svg class="icon"><use href="#i-pin"/></svg> 41 Cordwain Street, Bow, London E3</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <h2 class="footer-head">Homes and services</h2>
+      <ul>
+        <li><a href="properties.html?mode=sale">Homes for sale</a></li>
+        <li><a href="properties.html?mode=let">Homes to rent</a></li>
+        <li><a href="valuation.html">Free valuation</a></li>
+        <li><a href="landlords.html">Landlords and fees</a></li>
+        <li><a href="landlords.html#tenant-fees">What tenants pay</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </nav>
+    <div class="footer-contact">
+      <h2 class="footer-head">Talk to us</h2>
+      <ul>
+        <li><a href="https://wa.me/447700900391" data-contact="whatsapp"><svg class="icon"><use href="#i-chat"/></svg> WhatsApp 07700 900391</a></li>
+        <li><a href="tel:+442079460391" data-contact="phone"><svg class="icon"><use href="#i-phone"/></svg> 020 7946 0391</a></li>
+        <li><a href="mailto:hello@transom.example" data-contact="email"><svg class="icon"><use href="#i-mail"/></svg> hello@transom.example</a></li>
+      </ul>
+      <p class="footer-hours">Monday to Friday 9am to 6:30pm, Saturday 9:30am to 4pm.</p>
+    </div>
+  </div>
+  <div class="wrap footer-legal">
+    <p class="footer-credit">A sample website by <a href="https://agilerelease.co.uk/#websites">Agile Release</a>. Transom &amp; Co is made up. &copy; 2026 Agile Release Limited. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -234,23 +234,257 @@
             </div>
         </div>
 
-        <!-- Sample websites: each lives in its own repo (websiteNN-business-type), copied in by scripts/sync-sample.sh -->
-        <div class="mt-8 bg-slate-50 rounded-3xl p-8 shadow-sm border border-slate-100 hover:shadow-md transition">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                <!-- The screenshot opens the sample too, for mouse and touch. Keyboard and screen-reader users get the
-                     "Open the sample site" link below instead of hearing the same link twice. -->
-                <a href="website01-fitness-class/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true" class="block">
-                    <img src="img/website01-fitness-class.webp" width="1200" height="750" alt="" class="w-full rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition">
-                </a>
-                <div>
-                    <p class="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-6">Sample website</p>
-                    <h3 class="text-2xl font-bold text-slate-900 mb-2">Ironfern Studio, a fitness studio</h3>
-                    <p class="text-slate-600 mb-6">A made-up studio, built to show what a website can do for a business that runs classes. The home page shows the next classes. On the timetable, visitors pick a day on a four-week calendar, choose a class and book a place, and the booking reaches the studio as a WhatsApp message, so there is no booking system to pay for. Prices, coaches, common questions and opening hours are all there too.</p>
-                    <a href="website01-fitness-class/" target="_blank" rel="noopener" aria-label="Open the sample site (opens in a new tab)" class="inline-flex items-center gap-2 text-brand-600 font-semibold hover:underline">
-                        Open the sample site <i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
-                    </a>
-                </div>
+        <!-- Sample websites (styles in css/site.css). Each lives in its own repo (websiteNN-business-type), copied
+             into site/<repo>/ by scripts/sync-sample.sh. Card images: the sample's home page at 1200x750, as 800x500 WebP. -->
+        <div id="samples" class="samples">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold text-slate-900 mb-4">Sample websites</h3>
+                <p class="text-lg text-slate-500">Made-up local businesses, built to show what we can build for yours. The forms work: book, ask for a quote or place an order, and you will see the message the business would get. Each sample opens in a new tab.</p>
             </div>
+            <ul class="samples-grid">
+                <li>
+                    <a class="sample-card" href="website01-fitness-class/" target="_blank" rel="noopener">
+                        <img src="img/website01-fitness-class.webp" width="800" height="500" loading="lazy" decoding="async" alt="">
+                        <span class="sample-body">
+                            <span class="sample-type">Fitness studio</span>
+                            <span class="sample-name">Ironfern Studio</span>
+                            <span class="sample-text">A four-week class timetable, with places booked by WhatsApp.</span>
+                            <span class="sample-open">Open the sample <i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square"></i><span class="visually-hidden"> (opens in a new tab)</span></span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="sample-card" href="website02-car-garage/" target="_blank" rel="noopener">
+                        <img src="img/website02-car-garage.webp" width="800" height="500" loading="lazy" decoding="async" alt="">
+                        <span class="sample-body">
+                            <span class="sample-type">Car garage</span>
+                            <span class="sample-name">Gantry Motor Works</span>
+                            <span class="sample-text">MOT booking, repair quotes and fixed service prices.</span>
+                            <span class="sample-open">Open the sample <i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square"></i><span class="visually-hidden"> (opens in a new tab)</span></span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="sample-card" href="website03-hair-salon/" target="_blank" rel="noopener">
+                        <img src="img/website03-hair-salon.webp" width="800" height="500" loading="lazy" decoding="async" alt="">
+                        <span class="sample-body">
+                            <span class="sample-type">Hair salon and barbers</span>
+                            <span class="sample-name">Sorrel &amp; Steel</span>
+                            <span class="sample-text">Prices, the team and appointment requests.</span>
+                            <span class="sample-open">Open the sample <i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square"></i><span class="visually-hidden"> (opens in a new tab)</span></span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="sample-card" href="website04-beauty-salon/" target="_blank" rel="noopener">
+                        <img src="img/website04-beauty-salon.webp" width="800" height="500" loading="lazy" decoding="async" alt="">
+                        <span class="sample-body">
+                            <span class="sample-type">Beauty salon</span>
+                            <span class="sample-name">Lunette Beauty Rooms</span>
+                            <span class="sample-text">Treatments, booking, gift vouchers and aftercare advice.</span>
+                            <span class="sample-open">Open the sample <i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square"></i><span class="visually-hidden"> (opens in a new tab)</span></span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="sample-card" href="website05-cafe/" target="_blank" rel="noopener">
+                        <img src="img/website05-cafe.webp" width="800" height="500" loading="lazy" decoding="async" alt="">
+                        <span class="sample-body">
+                            <span class="sample-type">Café</span>
+                            <span class="sample-name">Cobnut Café</span>
+                            <span class="sample-text">Menu, ordering ahead, events and opening hours.</span>
+                            <span class="sample-open">Open the sample <i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square"></i><span class="visually-hidden"> (opens in a new tab)</span></span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="sample-card" href="website06-restaurant/" target="_blank" rel="noopener">
+                        <img src="img/website06-restaurant.webp" width="800" height="500" loading="lazy" decoding="async" alt="">
+                        <span class="sample-body">
+                            <span class="sample-type">Restaurant</span>
+                            <span class="sample-name">Jonjoli</span>
+                            <span class="sample-text">Menu with allergens, table booking and private dining.</span>
+                            <span class="sample-open">Open the sample <i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square"></i><span class="visually-hidden"> (opens in a new tab)</span></span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="sample-card" href="website07-takeaway/" target="_blank" rel="noopener">
+                        <img src="img/website07-takeaway.webp" width="800" height="500" loading="lazy" decoding="async" alt="">
+                        <span class="sample-body">
+                            <span class="sample-type">Takeaway</span>
+                            <span class="sample-name">Kor Charcoal Grill</span>
+                            <span class="sample-text">Menu with a basket, delivery areas and orders by WhatsApp.</span>
+                            <span class="sample-open">Open the sample <i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square"></i><span class="visually-hidden"> (opens in a new tab)</span></span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="sample-card" href="website08-bakery/" target="_blank" rel="noopener">
+                        <img src="img/website08-bakery.webp" width="800" height="500" loading="lazy" decoding="async" alt="">
+                        <span class="sample-body">
+                            <span class="sample-type">Bakery</span>
+                            <span class="sample-name">Crumb &amp; Candle</span>
+                            <span class="sample-text">Celebration cake orders, daily bakes and a gallery.</span>
+                            <span class="sample-open">Open the sample <i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square"></i><span class="visually-hidden"> (opens in a new tab)</span></span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="sample-card" href="website09-plumber/" target="_blank" rel="noopener">
+                        <img src="img/website09-plumber.webp" width="800" height="500" loading="lazy" decoding="async" alt="">
+                        <span class="sample-body">
+                            <span class="sample-type">Plumber and heating</span>
+                            <span class="sample-name">Pinn Plumbing &amp; Heating</span>
+                            <span class="sample-text">Emergency help, boiler service booking and quotes with photos.</span>
+                            <span class="sample-open">Open the sample <i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square"></i><span class="visually-hidden"> (opens in a new tab)</span></span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="sample-card" href="website10-electrician/" target="_blank" rel="noopener">
+                        <img src="img/website10-electrician.webp" width="800" height="500" loading="lazy" decoding="async" alt="">
+                        <span class="sample-body">
+                            <span class="sample-type">Electrician</span>
+                            <span class="sample-name">Earthpin Electrical</span>
+                            <span class="sample-text">Guide prices, quotes, safety advice and landlord checks.</span>
+                            <span class="sample-open">Open the sample <i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square"></i><span class="visually-hidden"> (opens in a new tab)</span></span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="sample-card" href="website11-builder/" target="_blank" rel="noopener">
+                        <img src="img/website11-builder.webp" width="800" height="500" loading="lazy" decoding="async" alt="">
+                        <span class="sample-body">
+                            <span class="sample-type">Builder</span>
+                            <span class="sample-name">Kember &amp; Daughter</span>
+                            <span class="sample-text">Before-and-after projects, how the work runs and quotes.</span>
+                            <span class="sample-open">Open the sample <i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square"></i><span class="visually-hidden"> (opens in a new tab)</span></span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="sample-card" href="website12-cleaning-company/" target="_blank" rel="noopener">
+                        <img src="img/website12-cleaning-company.webp" width="800" height="500" loading="lazy" decoding="async" alt="">
+                        <span class="sample-body">
+                            <span class="sample-type">Cleaning company</span>
+                            <span class="sample-name">Tessel Cleaning</span>
+                            <span class="sample-text">An instant price estimate, booking and cleaning checklists.</span>
+                            <span class="sample-open">Open the sample <i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square"></i><span class="visually-hidden"> (opens in a new tab)</span></span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="sample-card" href="website13-gardener/" target="_blank" rel="noopener">
+                        <img src="img/website13-gardener.webp" width="800" height="500" loading="lazy" decoding="async" alt="">
+                        <span class="sample-body">
+                            <span class="sample-type">Gardener</span>
+                            <span class="sample-name">Hornbeam &amp; Hoe</span>
+                            <span class="sample-text">Regular visit plans, garden projects and quotes.</span>
+                            <span class="sample-open">Open the sample <i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square"></i><span class="visually-hidden"> (opens in a new tab)</span></span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="sample-card" href="website14-locksmith/" target="_blank" rel="noopener">
+                        <img src="img/website14-locksmith.webp" width="800" height="500" loading="lazy" decoding="async" alt="">
+                        <span class="sample-body">
+                            <span class="sample-type">Locksmith</span>
+                            <span class="sample-name">Nightjar Locksmiths</span>
+                            <span class="sample-text">A 24-hour call button, prices up front and lock-out help.</span>
+                            <span class="sample-open">Open the sample <i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square"></i><span class="visually-hidden"> (opens in a new tab)</span></span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="sample-card" href="website15-removals/" target="_blank" rel="noopener">
+                        <img src="img/website15-removals.webp" width="800" height="500" loading="lazy" decoding="async" alt="">
+                        <span class="sample-body">
+                            <span class="sample-type">Removals</span>
+                            <span class="sample-name">Hither &amp; Thither</span>
+                            <span class="sample-text">An instant estimate by postcode, booking and packing help.</span>
+                            <span class="sample-open">Open the sample <i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square"></i><span class="visually-hidden"> (opens in a new tab)</span></span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="sample-card" href="website16-dentist/" target="_blank" rel="noopener">
+                        <img src="img/website16-dentist.webp" width="800" height="500" loading="lazy" decoding="async" alt="">
+                        <span class="sample-body">
+                            <span class="sample-type">Dentist</span>
+                            <span class="sample-name">Harebell Dental</span>
+                            <span class="sample-text">Treatments, NHS and private fees, new patients and emergencies.</span>
+                            <span class="sample-open">Open the sample <i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square"></i><span class="visually-hidden"> (opens in a new tab)</span></span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="sample-card" href="website17-physiotherapist/" target="_blank" rel="noopener">
+                        <img src="img/website17-physiotherapist.webp" width="800" height="500" loading="lazy" decoding="async" alt="">
+                        <span class="sample-body">
+                            <span class="sample-type">Physiotherapist</span>
+                            <span class="sample-name">Spindle Physio</span>
+                            <span class="sample-text">What they treat, prices, insurers and booking.</span>
+                            <span class="sample-open">Open the sample <i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square"></i><span class="visually-hidden"> (opens in a new tab)</span></span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="sample-card" href="website18-accountant/" target="_blank" rel="noopener">
+                        <img src="img/website18-accountant.webp" width="800" height="500" loading="lazy" decoding="async" alt="">
+                        <span class="sample-body">
+                            <span class="sample-type">Accountant</span>
+                            <span class="sample-name">Quarterday</span>
+                            <span class="sample-text">Packages, Making Tax Digital, tax deadlines and enquiries.</span>
+                            <span class="sample-open">Open the sample <i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square"></i><span class="visually-hidden"> (opens in a new tab)</span></span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="sample-card" href="website19-solicitor/" target="_blank" rel="noopener">
+                        <img src="img/website19-solicitor.webp" width="800" height="500" loading="lazy" decoding="async" alt="">
+                        <span class="sample-body">
+                            <span class="sample-type">Solicitor</span>
+                            <span class="sample-name">Quinlan Mensah Solicitors</span>
+                            <span class="sample-text">Practice areas, published prices, the team and enquiries.</span>
+                            <span class="sample-open">Open the sample <i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square"></i><span class="visually-hidden"> (opens in a new tab)</span></span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="sample-card" href="website20-estate-agent/" target="_blank" rel="noopener">
+                        <img src="img/website20-estate-agent.webp" width="800" height="500" loading="lazy" decoding="async" alt="">
+                        <span class="sample-body">
+                            <span class="sample-type">Estate and letting agent</span>
+                            <span class="sample-name">Transom &amp; Co</span>
+                            <span class="sample-text">Property search, valuations and landlord services.</span>
+                            <span class="sample-open">Open the sample <i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square"></i><span class="visually-hidden"> (opens in a new tab)</span></span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="sample-card" href="website21-tutor/" target="_blank" rel="noopener">
+                        <img src="img/website21-tutor.webp" width="800" height="500" loading="lazy" decoding="async" alt="">
+                        <span class="sample-body">
+                            <span class="sample-type">Tutor</span>
+                            <span class="sample-name">Markwell Tuition</span>
+                            <span class="sample-text">A timetable with places left and a free trial lesson.</span>
+                            <span class="sample-open">Open the sample <i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square"></i><span class="visually-hidden"> (opens in a new tab)</span></span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="sample-card" href="website22-nursery/" target="_blank" rel="noopener">
+                        <img src="img/website22-nursery.webp" width="800" height="500" loading="lazy" decoding="async" alt="">
+                        <span class="sample-body">
+                            <span class="sample-type">Nursery</span>
+                            <span class="sample-name">Button Tin Nursery</span>
+                            <span class="sample-text">A day at nursery, fees and funding, and the waiting list.</span>
+                            <span class="sample-open">Open the sample <i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square"></i><span class="visually-hidden"> (opens in a new tab)</span></span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
         </div>
 
         <!-- Website prices (styles in css/site.css). The "Ask about" buttons go to the contact section. -->
@@ -264,7 +498,7 @@
                 <div class="price-card">
                     <h4 class="text-xl font-bold text-slate-900 mb-2">One-page site</h4>
                     <p class="text-slate-500 mb-6">Everything a small business needs, on one well-made page.</p>
-                    <p class="price-amount"><small>from</small> <strong>£595</strong> <small>+ VAT</small></p>
+                    <p class="price-amount"><small>from</small> <strong>£395</strong> <small>+ VAT</small></p>
                     <ul class="price-list">
                         <li><i aria-hidden="true" class="fa-solid fa-check"></i> Your services, prices and opening hours</li>
                         <li><i aria-hidden="true" class="fa-solid fa-check"></i> Buttons to WhatsApp, call or email you</li>
@@ -279,7 +513,7 @@
                     <p class="price-badge">Most popular</p>
                     <h4 class="text-xl font-bold text-slate-900 mb-2">Business site</h4>
                     <p class="text-slate-500 mb-6">A few pages, for a business with more to show.</p>
-                    <p class="price-amount"><small>from</small> <strong>£1,250</strong> <small>+ VAT</small></p>
+                    <p class="price-amount"><small>from</small> <strong>£895</strong> <small>+ VAT</small></p>
                     <ul class="price-list">
                         <li><i aria-hidden="true" class="fa-solid fa-check"></i> Up to five pages, such as services, prices, about and questions</li>
                         <li><i aria-hidden="true" class="fa-solid fa-check"></i> An enquiry form that sends the details to your WhatsApp or email</li>
@@ -292,7 +526,7 @@
                 <div class="price-card">
                     <h4 class="text-xl font-bold text-slate-900 mb-2">Booking site</h4>
                     <p class="text-slate-500 mb-6">For businesses that take bookings: classes, appointments or tables.</p>
-                    <p class="price-amount"><small>from</small> <strong>£1,950</strong> <small>+ VAT</small></p>
+                    <p class="price-amount"><small>from</small> <strong>£1,495</strong> <small>+ VAT</small></p>
                     <ul class="price-list">
                         <li><i aria-hidden="true" class="fa-solid fa-check"></i> A calendar where customers pick a day and a time</li>
                         <li><i aria-hidden="true" class="fa-solid fa-check"></i> Bookings reach you as a WhatsApp message, with no booking system to pay for</li>

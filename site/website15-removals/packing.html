@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Packing and boxes | Hither &amp; Thither removals (sample website)</title>
+<meta name="description" content="Full or partial packing, fragile items packed properly, and boxes, tape and covers delivered. A sample website by Agile Release.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#ff7a2f">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="preload" href="css/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js" defer></script>
+<script src="js/site.js" defer></script>
+<script src="js/packing.js" defer></script>
+</head>
+<body>
+<svg class="sprite" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 7 8.5-7"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.6v.1"/></symbol>
+  <symbol id="i-print" viewBox="0 0 24 24"><path d="M7 9V3.5h10V9"/><rect x="3.5" y="9" width="17" height="8" rx="2"/><path d="M7 14h10v6.5H7Z"/></symbol>
+  <symbol id="i-van" viewBox="0 0 24 24"><path d="M2.5 5.5h11.5v11H2.5Z"/><path d="M14 9h4l3 3.8v3.7h-7"/><circle cx="6.5" cy="17.5" r="2"/><circle cx="17" cy="17.5" r="2"/></symbol>
+  <symbol id="i-lorry" viewBox="0 0 24 24"><path d="M1.5 4.5h13.5v12H1.5Z"/><path d="M15 8.5h4l3 3.8v4.2h-7"/><circle cx="5.5" cy="17.5" r="2"/><circle cx="10" cy="17.5" r="2"/><circle cx="18.5" cy="17.5" r="2"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="M3.5 8 12 4l8.5 4v8.5L12 20.5l-8.5-4Z"/><path d="m3.5 8 8.5 4 8.5-4M12 12v8.5"/><path d="m7.8 6 8.5 4v3"/></symbol>
+  <symbol id="i-house" viewBox="0 0 24 24"><path d="M3.5 11 12 4l8.5 7"/><path d="M6 9.5V20h12V9.5"/><path d="M10 20v-5.5h4V20"/></symbol>
+  <symbol id="i-flat" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="17.5" rx="1"/><path d="M9.5 20.5v-4h5v4M8.5 7h2M13.5 7h2M8.5 11h2M13.5 11h2"/></symbol>
+  <symbol id="i-bed" viewBox="0 0 24 24"><path d="M3 19V6.5M3 14h18v5M21 14v-2a3 3 0 0 0-3-3h-7.5v5"/><circle cx="7" cy="11" r="1.8"/></symbol>
+  <symbol id="i-desk" viewBox="0 0 24 24"><path d="M2.5 11h19M4.5 11v9M19.5 11v9M13.5 11v4.5h6"/><rect x="6" y="3" width="9" height="5.5" rx="1"/><path d="M10.5 8.5V11"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 9.5a6 6 0 0 1 12 0v10a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1Z"/><path d="M9.5 4.2V3h5v1.2M9 13.5h6v3.5H9Z"/></symbol>
+  <symbol id="i-sofa" viewBox="0 0 24 24"><path d="M5 11V8a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3"/><path d="M3 13a2 2 0 0 1 4 0v2h10v-2a2 2 0 0 1 4 0v5H3Z"/><path d="M5 18v2M19 18v2"/></symbol>
+  <symbol id="i-tape" viewBox="0 0 24 24"><circle cx="10" cy="11" r="6.5"/><circle cx="10" cy="11" r="2.5"/><path d="M10 17.5h11"/></symbol>
+  <symbol id="i-glass" viewBox="0 0 24 24"><path d="M7 3.5h10l-.5 4.8a4.5 4.5 0 0 1-9 0Z"/><path d="M12 12.8v7.2M8.5 20.5h7"/><path d="m11 3.8 1.6 2.1-1.2 1.6"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="M8 19V5M4.5 8.5 8 5l3.5 3.5M16 19V5M12.5 8.5 16 5l3.5 3.5M4 20.5h16"/></symbol>
+  <symbol id="i-umbrella" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 18 0Z"/><path d="M12 12v6.5a2 2 0 0 1-4 0M12 3v.1"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3.5 19 6v5.5c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V6Z"/><path d="m8.8 12 2.3 2.3 4.3-4.6"/></symbol>
+  <symbol id="i-badge" viewBox="0 0 24 24"><circle cx="12" cy="9" r="5.5"/><path d="M8.5 13.3 7 21l5-2.5 5 2.5-1.5-7.7"/></symbol>
+  <symbol id="i-route" viewBox="0 0 24 24"><circle cx="5.5" cy="18" r="2.5"/><circle cx="18.5" cy="6" r="2.5"/><path d="M8 18h7.5a3 3 0 0 0 0-6h-7a3 3 0 0 1 0-6H16" stroke-dasharray="2.2 2.6"/></symbol>
+  <symbol id="i-stairs" viewBox="0 0 24 24"><path d="M3 20.5h4.5V16H12v-4.5h4.5V7H21"/></symbol>
+  <symbol id="i-lift" viewBox="0 0 24 24"><rect x="4.5" y="3.5" width="15" height="17" rx="2"/><path d="m9 9.5 3-3 3 3M9 14.5l3 3 3-3"/></symbol>
+  <symbol id="i-parking" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="3.5"/><path d="M9.5 17V7.5H13a2.7 2.7 0 0 1 0 5.4H9.5"/></symbol>
+  <symbol id="i-spanner" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.3 5.2L3.5 17.4a1.5 1.5 0 0 0 0 2.1l1 1a1.5 1.5 0 0 0 2.1 0l5.9-5.9a4 4 0 0 0 5.2-5.3l-2.5 2.5-2.4-.6-.6-2.4Z"/></symbol>
+  <symbol id="i-tv" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="12" rx="1.5"/><path d="M8.5 20.5h7M12 17v3.5"/></symbol>
+  <symbol id="i-frame" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="m7 16 3.5-4 2.5 3 2-2 2 3"/><circle cx="15" cy="8.5" r="1.3"/></symbol>
+  <symbol id="i-wardrobe" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="16.5" rx="1"/><path d="M12 3v16.5M10 10v2M14 10v2M6.5 19.5V21M17.5 19.5V21"/></symbol>
+  <symbol id="i-plate" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/></symbol>
+  <symbol id="i-video" viewBox="0 0 24 24"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="m16 10.5 5-3v9l-5-3"/></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24"><path d="M10 6.5h10M10 12h10M10 17.5h10"/><path d="m3.5 6.5 1.3 1.3 2.2-2.4M3.5 12l1.3 1.3 2.2-2.4M3.5 17.5l1.3 1.3 2.2-2.4"/></symbol>
+  <symbol id="i-blanket" viewBox="0 0 24 24"><path d="M4 5.5h16v13H4Z"/><path d="M4 10h16M4 14.5h16M9 5.5v13M15 5.5v13" stroke-dasharray="1.6 2"/></symbol>
+  <symbol id="i-people" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3.5 19.5a5.5 5.5 0 0 1 11 0"/><circle cx="17" cy="9" r="2.4"/><path d="M15.8 14.1a4.5 4.5 0 0 1 5.2 4.6"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="12" r="4"/><path d="M12 12h8.5M17.5 12v3M20.5 12v2.5"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<aside class="sample-bar" aria-label="About this sample website">
+  <div class="wrap sample-bar-inner">
+    <p><strong>Sample website by Agile Release.</strong> Hither &amp; Thither is not a real business: the prices, vans and people are examples.</p>
+    <a href="https://agilerelease.co.uk/#websites">Get a site like this <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a>
+  </div>
+</aside>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Hither and Thither removals, home">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect class="bm-bg" width="40" height="40" rx="11"/><rect class="bm-post" x="18.5" y="6.5" width="3" height="27" rx="1.2"/><rect class="bm-post" x="14" y="31.5" width="12" height="3" rx="1.5"/><path class="bm-here" d="M5.5 13.5 9.5 9.5H27v8H9.5Z"/><path class="bm-there" d="M34.5 23.5 30.5 19.5H13v8h17.5Z"/></svg>
+      <span class="brand-text"><span class="brand-name">Hither <i>&amp;</i> Thither</span><span class="brand-sub">Removals &middot; man with a van</span></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="quote.html">Estimate</a></li>
+        <li><a href="packing.html" aria-current="page">Packing</a></li>
+        <li><a href="areas.html">Areas</a></li>
+        <li><a href="checklist.html">Checklist</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li class="nav-book"><a href="book.html">Book a move</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary btn-sm header-cta" href="book.html">Book a move</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+      <svg class="icon"><use href="#i-menu"/></svg><span class="visually-hidden">Menu</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="page-head">
+  <div class="wrap page-head-inner">
+    <div>
+    <p class="kicker">Packing and boxes</p>
+    <h1 class="h1">Packed properly, <em class="swoosh">start to finish.</em></h1>
+    <p class="lead">Full packing, just the kitchen and the breakables, or only the fragile things. Or pack it yourself with our boxes, delivered free with your move.</p>
+    <ul class="chips">
+      <li><svg class="icon"><use href="#i-box"/></svg> Boxes and wrap included</li>
+      <li><svg class="icon"><use href="#i-calendar"/></svg> Bigger homes packed the day before</li>
+      <li><svg class="icon"><use href="#i-check"/></svg> Boxes collected free afterwards</li>
+    </ul>
+    </div>
+    <img class="page-head-art" src="img/boxes.svg" alt="" width="380" height="300">
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="wrap">
+    <header class="section-head" data-reveal>
+      <p class="kicker">Packing services</p>
+      <h2 class="h2">How much would you like us to do?</h2>
+      <p>Every option includes the boxes, paper, bubble wrap and tape, and every box is labelled with its room.</p>
+    </header>
+    <ul class="pack-services">
+      <li class="pack-service" data-reveal>
+        <span class="pack-level" aria-hidden="true"><i class="on"></i><i></i><i></i></span>
+        <h3>Fragile items only</h3>
+        <p>We wrap and box the things that break. You pack the rest at your own pace.</p>
+        <ul class="ticks ticks-sm">
+          <li><svg class="icon"><use href="#i-check"/></svg><span>Glass, china and ornaments</span></li>
+          <li><svg class="icon"><use href="#i-check"/></svg><span>Pictures, mirrors and lamps</span></li>
+          <li><svg class="icon"><use href="#i-check"/></svg><span>TVs and screens</span></li>
+        </ul>
+        <p class="pack-from">From <strong data-pack-from="fragile">£50</strong></p>
+      </li>
+      <li class="pack-service pack-service-featured" data-reveal>
+        <p class="pack-badge">Most asked for</p>
+        <span class="pack-level" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></span>
+        <h3>Kitchen and breakables</h3>
+        <p>The room that takes longest to pack, plus everything fragile in the rest of the home.</p>
+        <ul class="ticks ticks-sm">
+          <li><svg class="icon"><use href="#i-check"/></svg><span>The whole kitchen, cupboards and all</span></li>
+          <li><svg class="icon"><use href="#i-check"/></svg><span>Everything in the fragile list</span></li>
+          <li><svg class="icon"><use href="#i-check"/></svg><span>Done on moving morning for most flats</span></li>
+        </ul>
+        <p class="pack-from">From <strong data-pack-from="partial">£90</strong></p>
+      </li>
+      <li class="pack-service" data-reveal>
+        <span class="pack-level" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span>
+        <h3>Full packing</h3>
+        <p>Every room, every drawer, every shelf. You don't lift a thing, and nothing gets missed.</p>
+        <ul class="ticks ticks-sm">
+          <li><svg class="icon"><use href="#i-check"/></svg><span>All rooms, lofts and cupboards</span></li>
+          <li><svg class="icon"><use href="#i-check"/></svg><span>Clothes straight into wardrobe boxes</span></li>
+          <li><svg class="icon"><use href="#i-check"/></svg><span>The day before, for two bedrooms and up</span></li>
+        </ul>
+        <p class="pack-from">From <strong data-pack-from="full">£180</strong></p>
+      </li>
+    </ul>
+
+    <div class="table-card" data-reveal>
+      <table class="price-table">
+        <caption>Packing prices by size of home, boxes and materials included</caption>
+        <thead>
+          <tr><th scope="col">Home</th><th scope="col" class="num">Fragile only</th><th scope="col" class="num">Kitchen and breakables</th><th scope="col" class="num">Full packing</th></tr>
+        </thead>
+        <tbody data-pack-table>
+          <tr><th scope="row">Studio flat</th><td class="num" data-label="Fragile only">£50</td><td class="num" data-label="Kitchen and breakables">£90</td><td class="num" data-label="Full packing">£180</td></tr>
+          <tr><th scope="row">1-bedroom flat</th><td class="num" data-label="Fragile only">£70</td><td class="num" data-label="Kitchen and breakables">£130</td><td class="num" data-label="Full packing">£260</td></tr>
+          <tr><th scope="row">2-bedroom flat or house</th><td class="num" data-label="Fragile only">£95</td><td class="num" data-label="Kitchen and breakables">£180</td><td class="num" data-label="Full packing">£390</td></tr>
+          <tr><th scope="row">3-bedroom house</th><td class="num" data-label="Fragile only">£130</td><td class="num" data-label="Kitchen and breakables">£250</td><td class="num" data-label="Full packing">£560</td></tr>
+          <tr><th scope="row">4-bedroom house</th><td class="num" data-label="Fragile only">£170</td><td class="num" data-label="Kitchen and breakables">£320</td><td class="num" data-label="Full packing">£740</td></tr>
+          <tr><th scope="row">5 bedrooms or more</th><td class="num" data-label="Fragile only">£220</td><td class="num" data-label="Kitchen and breakables">£420</td><td class="num" data-label="Full packing">£960</td></tr>
+        </tbody>
+      </table>
+      <p class="table-note">Unpacking at the other end is half the packing price. Add packing to your move in the <a href="quote.html">estimate</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-kraft" id="fragile">
+  <div class="wrap">
+    <header class="section-head" data-reveal>
+      <p class="kicker">Fragile items</p>
+      <h2 class="h2">The breakable things, handled with care</h2>
+      <p>Most breakages happen in badly packed boxes, not in the van. This is how we pack the things that matter.</p>
+    </header>
+    <ul class="fragile-grid" data-reveal>
+      <li class="fragile">
+        <svg class="fragile-icon" aria-hidden="true"><use href="#i-plate"/></svg>
+        <h3>Plates and bowls</h3>
+        <p>Each one wrapped in paper and stood on its edge, never flat. Small boxes only, so they're never too heavy.</p>
+      </li>
+      <li class="fragile">
+        <svg class="fragile-icon" aria-hidden="true"><use href="#i-glass"/></svg>
+        <h3>Glasses</h3>
+        <p>In a divider box, one glass to a cell. Stems wrapped twice. The box is marked fragile and this way up.</p>
+      </li>
+      <li class="fragile">
+        <svg class="fragile-icon" aria-hidden="true"><use href="#i-frame"/></svg>
+        <h3>Pictures and mirrors</h3>
+        <p>Corner protectors, bubble wrap, then a picture box. They travel standing up, against a mattress.</p>
+      </li>
+      <li class="fragile">
+        <svg class="fragile-icon" aria-hidden="true"><use href="#i-tv"/></svg>
+        <h3>TVs and screens</h3>
+        <p>In the original box if you kept it, or our TV box with foam corners. Cables bagged and taped to the back.</p>
+      </li>
+      <li class="fragile">
+        <svg class="fragile-icon" aria-hidden="true"><use href="#i-sun"/></svg>
+        <h3>Lamps and shades</h3>
+        <p>Shades packed on their own so nothing presses on them. Bulbs out, bases wrapped, flexes tied.</p>
+      </li>
+      <li class="fragile">
+        <svg class="fragile-icon" aria-hidden="true"><use href="#i-up"/></svg>
+        <h3>Odd shapes</h3>
+        <p>Plants in open-top boxes, loaded last and out first. Anything that mustn't tip is marked this way up.</p>
+      </li>
+    </ul>
+    <p class="slots-note" data-reveal><svg class="icon"><use href="#i-info"/></svg> Antiques, artwork or a piano? Tell us before the day. We'll plan how to move it, or bring in a specialist.</p>
+  </div>
+</section>
+
+<section class="section" id="shop">
+  <div class="wrap">
+    <header class="section-head" data-reveal>
+      <p class="kicker">Box shop</p>
+      <h2 class="h2">Boxes, tape and covers, delivered</h2>
+      <p>Strong double-wall boxes that survive more than one move. Free delivery with a booked move. After the move, we collect the flattened boxes for free in our home patch.</p>
+    </header>
+    <div class="shop">
+      <form class="shop-list" data-shop novalidate aria-label="Materials order">
+        <div class="shop-guide">
+          <h3><svg class="icon"><use href="#i-info"/></svg> How many boxes?</h3>
+          <dl>
+            <div><dt>Studio</dt><dd>15 to 20</dd></div>
+            <div><dt>1 bedroom</dt><dd>25 to 35</dd></div>
+            <div><dt>2 bedrooms</dt><dd>40 to 55</dd></div>
+            <div><dt>3 bedrooms</dt><dd>60 to 80</dd></div>
+          </dl>
+          <p>About a third small, half medium and the rest large. Books always go in small boxes.</p>
+        </div>
+        <div data-shop-groups></div>
+      </form>
+
+      <aside class="order" id="order" aria-labelledby="order-title">
+        <div class="order-card">
+          <h3 class="order-title" id="order-title"><svg class="icon"><use href="#i-box"/></svg> Your order</h3>
+          <ul class="order-lines" data-order-lines>
+            <li class="order-empty">Nothing yet. Use the + buttons to add boxes and wrap.</li>
+          </ul>
+          <fieldset class="order-delivery">
+            <legend class="sub-legend">Delivery</legend>
+            <div data-delivery></div>
+          </fieldset>
+          <p class="order-total"><span>Total</span> <strong data-order-total aria-live="polite">£0.00</strong></p>
+          <div class="field">
+            <label for="order-name">Your name</label>
+            <input id="order-name" name="name" type="text" autocomplete="name" aria-describedby="order-name-error">
+            <p class="field-error" id="order-name-error" hidden>Please add your name.</p>
+          </div>
+          <div class="field">
+            <label for="order-postcode">Delivery postcode <span class="optional">(not needed if you're collecting)</span></label>
+            <input id="order-postcode" name="postcode" type="text" class="code-input" autocomplete="postal-code" aria-describedby="order-postcode-error">
+            <p class="field-error" id="order-postcode-error" hidden>Please add the postcode for delivery.</p>
+          </div>
+          <p class="field-error order-error" data-order-error hidden>Add at least one item to your order.</p>
+          <button class="btn btn-primary btn-block" type="button" data-order-send><svg class="icon"><use href="#i-chat"/></svg> Order on WhatsApp</button>
+          <p class="order-alt">Pay on delivery by card. Or call <a href="tel:+442079460538" data-contact="phone">020 7946 0538</a>.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-road" aria-hidden="true"></div>
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a class="brand brand-light" href="index.html" aria-label="Hither and Thither removals, home">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect class="bm-bg" width="40" height="40" rx="11"/><rect class="bm-post" x="18.5" y="6.5" width="3" height="27" rx="1.2"/><rect class="bm-post" x="14" y="31.5" width="12" height="3" rx="1.5"/><path class="bm-here" d="M5.5 13.5 9.5 9.5H27v8H9.5Z"/><path class="bm-there" d="M34.5 23.5 30.5 19.5H13v8h17.5Z"/></svg>
+        <span class="brand-text"><span class="brand-name">Hither <i>&amp;</i> Thither</span><span class="brand-sub">Removals &middot; man with a van</span></span>
+      </a>
+      <p>Home moves, student and single-item moves, small offices and packing, across London and beyond.</p>
+      <p class="footer-address"><svg class="icon"><use href="#i-pin"/></svg> Unit 2, Ostler Yard, Holloway, London N7</p>
+    </div>
+    <nav class="footer-nav" aria-label="Moves">
+      <h2 class="footer-title">Moves</h2>
+      <ul>
+        <li><a href="quote.html">Get an estimate</a></li>
+        <li><a href="book.html">Book a move</a></li>
+        <li><a href="packing.html">Packing and boxes</a></li>
+        <li><a href="areas.html">Areas we cover</a></li>
+      </ul>
+    </nav>
+    <nav class="footer-nav" aria-label="Help">
+      <h2 class="footer-title">Help</h2>
+      <ul>
+        <li><a href="checklist.html">Moving checklist</a></li>
+        <li><a href="index.html#move-day">How a move day works</a></li>
+        <li><a href="index.html#faq">Questions</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </nav>
+    <div class="footer-contact">
+      <h2 class="footer-title">Talk to us</h2>
+      <ul>
+        <li><a href="https://wa.me/447700900538" data-contact="whatsapp"><svg class="icon"><use href="#i-chat"/></svg> WhatsApp 07700 900538</a></li>
+        <li><a href="tel:+442079460538" data-contact="phone"><svg class="icon"><use href="#i-phone"/></svg> 020 7946 0538</a></li>
+        <li><a href="mailto:hello@hitherandthither.example" data-contact="email"><svg class="icon"><use href="#i-mail"/></svg> hello@hitherandthither.example</a></li>
+      </ul>
+      <p class="footer-hours">Office: Monday to Friday 8am to 6pm, Saturday 9am to 2pm. Moves seven days a week.</p>
+    </div>
+    <p class="footer-credit">A sample website by <a href="https://agilerelease.co.uk/#websites">Agile Release</a>. Hither &amp; Thither is made up. &copy; 2026 Agile Release Limited. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

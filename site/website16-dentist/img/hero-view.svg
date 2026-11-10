@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 640" width="600" height="640">
+  <title>Dawn over still water, with harebells in the foreground</title>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c9d8f0"/>
+      <stop offset="0.38" stop-color="#e3eaf6"/>
+      <stop offset="0.58" stop-color="#fbe6d6"/>
+      <stop offset="0.7" stop-color="#fcdcc4"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fbcfae" stop-opacity="0.95"/>
+      <stop offset="0.55" stop-color="#fbd9be" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#fbe2cf" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="lake" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f6dccb"/>
+      <stop offset="0.45" stop-color="#e2e7f3"/>
+      <stop offset="1" stop-color="#cdd9ef"/>
+    </linearGradient>
+    <linearGradient id="near" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5f7fbf"/>
+      <stop offset="1" stop-color="#4a68a6"/>
+    </linearGradient>
+    <linearGradient id="front" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3f5c99"/>
+      <stop offset="1" stop-color="#30497f"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="640" fill="url(#sky)"/>
+
+  <!-- the sun coming up -->
+  <circle cx="392" cy="352" r="168" fill="url(#glow)"/>
+  <circle cx="392" cy="352" r="62" fill="#f3a46f"/>
+  <circle cx="392" cy="352" r="62" fill="none" stroke="#f7c19c" stroke-width="3" opacity="0.6"/>
+
+  <!-- clouds -->
+  <path d="M74 182c0-13 11-23 25-23 2 0 4 0 6 1 7-15 21-24 38-24 21 0 38 15 41 34 14 0 25 7 25 12H74Z" fill="#ffffff" opacity="0.78"/>
+  <path d="M396 128c0-9 8-16 18-16h4c5-10 15-17 27-17 15 0 27 11 29 25 10 0 18 4 18 8H396Z" fill="#ffffff" opacity="0.62"/>
+  <path d="M250 236c0-6 6-11 13-11 4-8 11-12 20-12 11 0 20 7 21 17 7 0 12 3 12 6h-66Z" fill="#ffffff" opacity="0.5"/>
+
+  <!-- two birds -->
+  <g fill="none" stroke="#5470ab" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.8">
+    <path d="M150 262q8-8 16 0q8-8 16 0"/>
+    <path d="M196 240q5-5 10 0q5-5 10 0"/>
+  </g>
+
+  <!-- far and middle hills -->
+  <path d="M0 364c58-30 118-36 186-20 52 12 92 14 140 2 70-18 132-22 190-4 34 10 60 12 84 8v290H0Z" fill="#b6c7e8"/>
+  <path d="M0 404c74-26 150-22 222-6 66 15 126 12 196-6 66-17 128-12 182 8v240H0Z" fill="#8fa8d8"/>
+
+  <!-- still water, with the sun's reflection and slow ripples -->
+  <path d="M0 438c100-10 200-12 300-10s200 6 300 12v120H0Z" fill="url(#lake)"/>
+  <g stroke="#f2a771" stroke-linecap="round" fill="none">
+    <path d="M338 452h108" stroke-width="7" opacity="0.85"/>
+    <path d="M352 470h80" stroke-width="6" opacity="0.7"/>
+    <path d="M366 487h52" stroke-width="5" opacity="0.6"/>
+    <path d="M378 503h28" stroke-width="4" opacity="0.5"/>
+  </g>
+  <g stroke="#ffffff" stroke-linecap="round" fill="none" stroke-width="2.4" opacity="0.75">
+    <path d="M60 466h70"/>
+    <path d="M160 482h44"/>
+    <path d="M488 470h56"/>
+    <path d="M90 506h36"/>
+    <path d="M470 500h30"/>
+  </g>
+  <g fill="none" stroke="#6a8bc8" stroke-width="1.6" opacity="0.45">
+    <ellipse cx="206" cy="514" rx="34" ry="5"/>
+    <ellipse cx="206" cy="514" rx="58" ry="9"/>
+    <ellipse cx="206" cy="514" rx="84" ry="13"/>
+  </g>
+
+  <!-- near bank and foreground meadow -->
+  <path d="M0 530c90-26 190-30 290-12 88 16 170 30 250 18 26-4 44-10 60-16v120H0Z" fill="url(#near)"/>
+  <path d="M0 578c120-30 232-28 340-6 96 20 184 22 260 4v64H0Z" fill="url(#front)"/>
+
+  <!-- grasses -->
+  <g fill="none" stroke="#2b4377" stroke-width="2.4" stroke-linecap="round">
+    <path d="M40 640c2-30 8-52 20-70"/>
+    <path d="M52 640c0-24-4-44-14-60"/>
+    <path d="M226 640c3-26 10-44 22-58"/>
+    <path d="M520 640c-2-28-8-48-20-64"/>
+    <path d="M534 640c2-22 8-40 18-52"/>
+    <path d="M574 640c0-20-4-36-12-48"/>
+  </g>
+
+  <!-- harebells: thin stems that bend over, each with a nodding bell -->
+  <g fill="none" stroke="#2b4377" stroke-width="2.8" stroke-linecap="round">
+    <path d="M462 640c3-58-2-108-22-146-8-15-19-22-32-21"/>
+    <path d="M512 640c1-38-3-70-19-96-7-12-17-17-27-15"/>
+    <path d="M392 640c-1-30 1-56 10-76 5-11 12-16 20-16"/>
+    <path d="M452 560c-10-8-22-9-31-3"/>
+    <path d="M505 586c8-8 18-9 26-4"/>
+  </g>
+  <g transform="translate(404 478) rotate(16) scale(1.08)">
+      <path d="M-13 4c0-10 6-16 13-16s13 6 13 16v14c0 7 3 11 8 14l-6 3-5-3-5 4-5-4-5 4-5-4-5 3-6-3c5-3 8-7 8-14Z" fill="#a9bfe8"/>
+      <path d="M-13 4c0-10 6-16 13-16v46l-5 4-5-4-5 3-6-3c5-3 8-7 8-14Z" fill="#8aa6dd"/>
+      <path d="M0 34v8" stroke="#f3a46f" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(463 526) rotate(13) scale(0.86)">
+      <path d="M-13 4c0-10 6-16 13-16s13 6 13 16v14c0 7 3 11 8 14l-6 3-5-3-5 4-5-4-5 4-5-4-5 3-6-3c5-3 8-7 8-14Z" fill="#b8caee"/>
+      <path d="M-13 4c0-10 6-16 13-16v46l-5 4-5-4-5 3-6-3c5-3 8-7 8-14Z" fill="#97b0e2"/>
+      <path d="M0 34v8" stroke="#f3a46f" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(426 552) rotate(-12) scale(0.7)">
+      <path d="M-13 4c0-10 6-16 13-16s13 6 13 16v14c0 7 3 11 8 14l-6 3-5-3-5 4-5-4-5 4-5-4-5 3-6-3c5-3 8-7 8-14Z" fill="#c3d2f0"/>
+      <path d="M-13 4c0-10 6-16 13-16v46l-5 4-5-4-5 3-6-3c5-3 8-7 8-14Z" fill="#a3bae6"/>
+      <path d="M0 34v8" stroke="#f3a46f" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+</svg>

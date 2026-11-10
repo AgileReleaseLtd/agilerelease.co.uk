@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Get an estimate | Hither &amp; Thither removals (sample website)</title>
+<meta name="description" content="Work out the price of your move: size, distance, stairs, parking, day and packing. An estimate confirmed after a short video call. A sample website by Agile Release.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#ff7a2f">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="preload" href="css/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js" defer></script>
+<script src="js/postcodes.js" defer></script>
+<script src="js/estimate.js" defer></script>
+<script src="js/site.js" defer></script>
+<script src="js/quote.js" defer></script>
+</head>
+<body>
+<svg class="sprite" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 7 8.5-7"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.6v.1"/></symbol>
+  <symbol id="i-print" viewBox="0 0 24 24"><path d="M7 9V3.5h10V9"/><rect x="3.5" y="9" width="17" height="8" rx="2"/><path d="M7 14h10v6.5H7Z"/></symbol>
+  <symbol id="i-van" viewBox="0 0 24 24"><path d="M2.5 5.5h11.5v11H2.5Z"/><path d="M14 9h4l3 3.8v3.7h-7"/><circle cx="6.5" cy="17.5" r="2"/><circle cx="17" cy="17.5" r="2"/></symbol>
+  <symbol id="i-lorry" viewBox="0 0 24 24"><path d="M1.5 4.5h13.5v12H1.5Z"/><path d="M15 8.5h4l3 3.8v4.2h-7"/><circle cx="5.5" cy="17.5" r="2"/><circle cx="10" cy="17.5" r="2"/><circle cx="18.5" cy="17.5" r="2"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="M3.5 8 12 4l8.5 4v8.5L12 20.5l-8.5-4Z"/><path d="m3.5 8 8.5 4 8.5-4M12 12v8.5"/><path d="m7.8 6 8.5 4v3"/></symbol>
+  <symbol id="i-house" viewBox="0 0 24 24"><path d="M3.5 11 12 4l8.5 7"/><path d="M6 9.5V20h12V9.5"/><path d="M10 20v-5.5h4V20"/></symbol>
+  <symbol id="i-flat" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="17.5" rx="1"/><path d="M9.5 20.5v-4h5v4M8.5 7h2M13.5 7h2M8.5 11h2M13.5 11h2"/></symbol>
+  <symbol id="i-bed" viewBox="0 0 24 24"><path d="M3 19V6.5M3 14h18v5M21 14v-2a3 3 0 0 0-3-3h-7.5v5"/><circle cx="7" cy="11" r="1.8"/></symbol>
+  <symbol id="i-desk" viewBox="0 0 24 24"><path d="M2.5 11h19M4.5 11v9M19.5 11v9M13.5 11v4.5h6"/><rect x="6" y="3" width="9" height="5.5" rx="1"/><path d="M10.5 8.5V11"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 9.5a6 6 0 0 1 12 0v10a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1Z"/><path d="M9.5 4.2V3h5v1.2M9 13.5h6v3.5H9Z"/></symbol>
+  <symbol id="i-sofa" viewBox="0 0 24 24"><path d="M5 11V8a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3"/><path d="M3 13a2 2 0 0 1 4 0v2h10v-2a2 2 0 0 1 4 0v5H3Z"/><path d="M5 18v2M19 18v2"/></symbol>
+  <symbol id="i-tape" viewBox="0 0 24 24"><circle cx="10" cy="11" r="6.5"/><circle cx="10" cy="11" r="2.5"/><path d="M10 17.5h11"/></symbol>
+  <symbol id="i-glass" viewBox="0 0 24 24"><path d="M7 3.5h10l-.5 4.8a4.5 4.5 0 0 1-9 0Z"/><path d="M12 12.8v7.2M8.5 20.5h7"/><path d="m11 3.8 1.6 2.1-1.2 1.6"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="M8 19V5M4.5 8.5 8 5l3.5 3.5M16 19V5M12.5 8.5 16 5l3.5 3.5M4 20.5h16"/></symbol>
+  <symbol id="i-umbrella" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 18 0Z"/><path d="M12 12v6.5a2 2 0 0 1-4 0M12 3v.1"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3.5 19 6v5.5c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V6Z"/><path d="m8.8 12 2.3 2.3 4.3-4.6"/></symbol>
+  <symbol id="i-badge" viewBox="0 0 24 24"><circle cx="12" cy="9" r="5.5"/><path d="M8.5 13.3 7 21l5-2.5 5 2.5-1.5-7.7"/></symbol>
+  <symbol id="i-route" viewBox="0 0 24 24"><circle cx="5.5" cy="18" r="2.5"/><circle cx="18.5" cy="6" r="2.5"/><path d="M8 18h7.5a3 3 0 0 0 0-6h-7a3 3 0 0 1 0-6H16" stroke-dasharray="2.2 2.6"/></symbol>
+  <symbol id="i-stairs" viewBox="0 0 24 24"><path d="M3 20.5h4.5V16H12v-4.5h4.5V7H21"/></symbol>
+  <symbol id="i-lift" viewBox="0 0 24 24"><rect x="4.5" y="3.5" width="15" height="17" rx="2"/><path d="m9 9.5 3-3 3 3M9 14.5l3 3 3-3"/></symbol>
+  <symbol id="i-parking" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="3.5"/><path d="M9.5 17V7.5H13a2.7 2.7 0 0 1 0 5.4H9.5"/></symbol>
+  <symbol id="i-spanner" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.3 5.2L3.5 17.4a1.5 1.5 0 0 0 0 2.1l1 1a1.5 1.5 0 0 0 2.1 0l5.9-5.9a4 4 0 0 0 5.2-5.3l-2.5 2.5-2.4-.6-.6-2.4Z"/></symbol>
+  <symbol id="i-tv" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="12" rx="1.5"/><path d="M8.5 20.5h7M12 17v3.5"/></symbol>
+  <symbol id="i-frame" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="m7 16 3.5-4 2.5 3 2-2 2 3"/><circle cx="15" cy="8.5" r="1.3"/></symbol>
+  <symbol id="i-wardrobe" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="16.5" rx="1"/><path d="M12 3v16.5M10 10v2M14 10v2M6.5 19.5V21M17.5 19.5V21"/></symbol>
+  <symbol id="i-plate" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/></symbol>
+  <symbol id="i-video" viewBox="0 0 24 24"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="m16 10.5 5-3v9l-5-3"/></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24"><path d="M10 6.5h10M10 12h10M10 17.5h10"/><path d="m3.5 6.5 1.3 1.3 2.2-2.4M3.5 12l1.3 1.3 2.2-2.4M3.5 17.5l1.3 1.3 2.2-2.4"/></symbol>
+  <symbol id="i-blanket" viewBox="0 0 24 24"><path d="M4 5.5h16v13H4Z"/><path d="M4 10h16M4 14.5h16M9 5.5v13M15 5.5v13" stroke-dasharray="1.6 2"/></symbol>
+  <symbol id="i-people" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3.5 19.5a5.5 5.5 0 0 1 11 0"/><circle cx="17" cy="9" r="2.4"/><path d="M15.8 14.1a4.5 4.5 0 0 1 5.2 4.6"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="12" r="4"/><path d="M12 12h8.5M17.5 12v3M20.5 12v2.5"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<aside class="sample-bar" aria-label="About this sample website">
+  <div class="wrap sample-bar-inner">
+    <p><strong>Sample website by Agile Release.</strong> Hither &amp; Thither is not a real business: the prices, vans and people are examples.</p>
+    <a href="https://agilerelease.co.uk/#websites">Get a site like this <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a>
+  </div>
+</aside>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Hither and Thither removals, home">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect class="bm-bg" width="40" height="40" rx="11"/><rect class="bm-post" x="18.5" y="6.5" width="3" height="27" rx="1.2"/><rect class="bm-post" x="14" y="31.5" width="12" height="3" rx="1.5"/><path class="bm-here" d="M5.5 13.5 9.5 9.5H27v8H9.5Z"/><path class="bm-there" d="M34.5 23.5 30.5 19.5H13v8h17.5Z"/></svg>
+      <span class="brand-text"><span class="brand-name">Hither <i>&amp;</i> Thither</span><span class="brand-sub">Removals &middot; man with a van</span></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="quote.html" aria-current="page">Estimate</a></li>
+        <li><a href="packing.html">Packing</a></li>
+        <li><a href="areas.html">Areas</a></li>
+        <li><a href="checklist.html">Checklist</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li class="nav-book"><a href="book.html">Book a move</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary btn-sm header-cta" href="book.html">Book a move</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+      <svg class="icon"><use href="#i-menu"/></svg><span class="visually-hidden">Menu</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="page-head">
+  <div class="wrap page-head-inner">
+    <div>
+    <p class="kicker">Estimate</p>
+    <h1 class="h1">What will your move <em class="swoosh">cost?</em></h1>
+    <p class="lead">Answer five quick questions and the price updates as you go. It's an estimate: we confirm it after a short video call, or once you've sent us a list.</p>
+    <ul class="chips">
+      <li><svg class="icon"><use href="#i-clock"/></svg> About two minutes</li>
+      <li><svg class="icon"><use href="#i-check"/></svg> No sign-up, nothing stored</li>
+      <li><svg class="icon"><use href="#i-info"/></svg> Prices include VAT</li>
+    </ul>
+    </div>
+    <img class="page-head-art" src="img/estimate.svg" alt="" width="380" height="300">
+  </div>
+</section>
+
+<section class="section section-quote">
+  <div class="wrap quote-layout">
+    <form class="quote-form" data-quote novalidate aria-label="Move details">
+
+      <fieldset class="step" id="step-what">
+        <legend class="step-legend"><span class="step-num" aria-hidden="true">1</span> <h2 class="step-h">What are you moving?</h2></legend>
+        <div class="seg">
+          <input type="radio" name="mode" id="mode-rooms" value="rooms" checked>
+          <label for="mode-rooms"><svg class="icon"><use href="#i-house"/></svg> Home or office</label>
+          <input type="radio" name="mode" id="mode-items" value="items">
+          <label for="mode-items"><svg class="icon"><use href="#i-sofa"/></svg> A few items</label>
+        </div>
+
+        <div class="panel" data-panel="rooms">
+          <fieldset class="sub">
+            <legend class="sub-legend">How big is it?</legend>
+            <div class="choice-grid" data-sizes></div>
+          </fieldset>
+          <fieldset class="sub">
+            <legend class="sub-legend">How much stuff?</legend>
+            <div class="pill-row" data-fullness></div>
+          </fieldset>
+        </div>
+
+        <div class="panel" data-panel="items" hidden>
+          <p class="panel-intro">Student rooms, single items and small moves. Add what's going and we'll pick the van and the crew.</p>
+          <div class="item-groups" data-items></div>
+          <p class="item-total" data-item-total aria-live="polite"></p>
+        </div>
+      </fieldset>
+
+      <fieldset class="step" id="step-where">
+        <legend class="step-legend"><span class="step-num" aria-hidden="true">2</span> <h2 class="step-h">From and to</h2></legend>
+        <div class="route-fields">
+          <div class="field">
+            <label for="from"><span class="end-pin" aria-hidden="true">A</span> Moving from</label>
+            <input id="from" name="from" class="code-input" type="text" placeholder="e.g. N7" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-describedby="from-note postcode-help">
+            <p class="field-note" id="from-note" data-place="from"></p>
+          </div>
+          <div class="field">
+            <label for="to"><span class="end-pin end-pin-b" aria-hidden="true">B</span> Moving to</label>
+            <input id="to" name="to" class="code-input" type="text" placeholder="e.g. SE15" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-describedby="to-note postcode-help">
+            <p class="field-note" id="to-note" data-place="to"></p>
+          </div>
+        </div>
+        <p class="hint" id="postcode-help">The first part of each postcode (like N7 or SE15) is enough. Anywhere in Great Britain works.</p>
+        <p class="distance-line" data-distance hidden></p>
+        <div class="check">
+          <input type="checkbox" id="use-band" name="useBand">
+          <label for="use-band">I'd rather pick a distance band</label>
+        </div>
+        <fieldset class="sub" data-bands-box hidden>
+          <legend class="sub-legend">Roughly how far, by road?</legend>
+          <div class="pill-row pill-row-wide" data-bands></div>
+        </fieldset>
+        <p class="note-estimate"><svg class="icon"><use href="#i-info"/></svg> <span>There's no live map here. We work distances out from the middle of each postcode district, so they're estimates. We check the real route before we confirm.</span></p>
+        <p class="data-credit">Postcode positions from OS Code-Point Open (Open Government Licence v3.0). Contains Ordnance Survey data &copy; Crown copyright and database right 2026. Contains Royal Mail data &copy; Royal Mail copyright and database right 2026. Contains National Statistics data &copy; Crown copyright and database right 2026.</p>
+      </fieldset>
+
+      <fieldset class="step" id="step-access">
+        <legend class="step-legend"><span class="step-num" aria-hidden="true">3</span> <h2 class="step-h">Stairs, lifts and parking</h2></legend>
+        <div class="ends">
+          <div class="end" data-end="pickup">
+            <h3 class="end-title"><span class="end-pin" aria-hidden="true">A</span> At the pickup</h3>
+            <div class="field">
+              <label for="pickup-floor">Which floor?</label>
+              <select id="pickup-floor" name="pickupFloor" data-floors></select>
+            </div>
+            <div class="check">
+              <input type="checkbox" id="pickup-lift" name="pickupLift">
+              <label for="pickup-lift">There's a lift that takes furniture</label>
+            </div>
+            <div class="field">
+              <label for="pickup-parking">Parking for the van</label>
+              <select id="pickup-parking" name="pickupParking" data-parking></select>
+            </div>
+          </div>
+          <div class="end" data-end="dropoff">
+            <h3 class="end-title"><span class="end-pin end-pin-b" aria-hidden="true">B</span> At the drop-off</h3>
+            <div class="field">
+              <label for="dropoff-floor">Which floor?</label>
+              <select id="dropoff-floor" name="dropoffFloor" data-floors></select>
+            </div>
+            <div class="check">
+              <input type="checkbox" id="dropoff-lift" name="dropoffLift">
+              <label for="dropoff-lift">There's a lift that takes furniture</label>
+            </div>
+            <div class="field">
+              <label for="dropoff-parking">Parking for the van</label>
+              <select id="dropoff-parking" name="dropoffParking" data-parking></select>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="step" id="step-day">
+        <legend class="step-legend"><span class="step-num" aria-hidden="true">4</span> <h2 class="step-h">Which day of the week?</h2></legend>
+        <div class="day-row" data-days></div>
+        <p class="hint">Tuesday to Thursday are the easiest days to get, and the cheapest. Know your date? You'll pick it when you book.</p>
+      </fieldset>
+
+      <fieldset class="step" id="step-extras">
+        <legend class="step-legend"><span class="step-num" aria-hidden="true">5</span> <h2 class="step-h">Packing and extras</h2></legend>
+        <fieldset class="sub">
+          <legend class="sub-legend">Packing</legend>
+          <div class="pack-grid" data-packing></div>
+        </fieldset>
+        <fieldset class="sub">
+          <legend class="sub-legend">Furniture to take apart and put back together</legend>
+          <div class="stepper-list" data-dismantle></div>
+        </fieldset>
+        <fieldset class="sub">
+          <legend class="sub-legend">Fragile specials</legend>
+          <div class="stepper-list" data-specials></div>
+        </fieldset>
+        <p class="hint">Packing yourself? Order boxes, tape and covers from our <a href="packing.html#shop">box shop</a>.</p>
+      </fieldset>
+    </form>
+
+    <aside class="estimate" id="estimate" aria-labelledby="estimate-title">
+      <div class="estimate-card">
+        <div class="estimate-head">
+          <h2 class="estimate-title" id="estimate-title">Your estimate</h2>
+          <p class="estimate-route" data-est-route>Add both postcodes</p>
+        </div>
+        <p class="estimate-range" data-est-range aria-live="polite">£&mdash; to £&mdash;</p>
+        <p class="estimate-sub" data-est-sub>Fill in the size and both postcodes and your price appears here.</p>
+        <ul class="estimate-facts" data-est-facts hidden></ul>
+        <details class="breakdown" data-est-breakdown open hidden>
+          <summary>How we got there</summary>
+          <table class="breakdown-table">
+            <caption class="visually-hidden">Breakdown of the estimate</caption>
+            <tbody data-est-lines></tbody>
+          </table>
+        </details>
+        <ul class="estimate-notes" data-est-notes></ul>
+        <p class="estimate-label"><svg class="icon"><use href="#i-video"/></svg> <span><strong>This is an estimate.</strong> We confirm the price after a ten-minute video call, or once you've sent us a list and a few photos.</span></p>
+        <div class="estimate-actions">
+          <a class="btn btn-primary btn-block" href="book.html" data-book-link>Book this move <svg class="icon"><use href="#i-arrow"/></svg></a>
+          <button class="btn btn-outline btn-block" type="button" data-send><svg class="icon"><use href="#i-chat"/></svg> Send on WhatsApp</button>
+        </div>
+        <p class="estimate-alt">Or call <a href="tel:+442079460538" data-contact="phone">020 7946 0538</a>, or <a href="mailto:hello@hitherandthither.example" data-email>email it to us</a>.</p>
+      </div>
+    </aside>
+  </div>
+  <div class="estimate-bar" data-est-bar hidden>
+    <div class="wrap estimate-bar-inner">
+      <p><span class="estimate-bar-label">Estimate</span> <strong data-est-bar-range>£&mdash;</strong></p>
+      <a class="btn btn-primary btn-sm" href="#estimate">See the breakdown</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-road" aria-hidden="true"></div>
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a class="brand brand-light" href="index.html" aria-label="Hither and Thither removals, home">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect class="bm-bg" width="40" height="40" rx="11"/><rect class="bm-post" x="18.5" y="6.5" width="3" height="27" rx="1.2"/><rect class="bm-post" x="14" y="31.5" width="12" height="3" rx="1.5"/><path class="bm-here" d="M5.5 13.5 9.5 9.5H27v8H9.5Z"/><path class="bm-there" d="M34.5 23.5 30.5 19.5H13v8h17.5Z"/></svg>
+        <span class="brand-text"><span class="brand-name">Hither <i>&amp;</i> Thither</span><span class="brand-sub">Removals &middot; man with a van</span></span>
+      </a>
+      <p>Home moves, student and single-item moves, small offices and packing, across London and beyond.</p>
+      <p class="footer-address"><svg class="icon"><use href="#i-pin"/></svg> Unit 2, Ostler Yard, Holloway, London N7</p>
+    </div>
+    <nav class="footer-nav" aria-label="Moves">
+      <h2 class="footer-title">Moves</h2>
+      <ul>
+        <li><a href="quote.html">Get an estimate</a></li>
+        <li><a href="book.html">Book a move</a></li>
+        <li><a href="packing.html">Packing and boxes</a></li>
+        <li><a href="areas.html">Areas we cover</a></li>
+      </ul>
+    </nav>
+    <nav class="footer-nav" aria-label="Help">
+      <h2 class="footer-title">Help</h2>
+      <ul>
+        <li><a href="checklist.html">Moving checklist</a></li>
+        <li><a href="index.html#move-day">How a move day works</a></li>
+        <li><a href="index.html#faq">Questions</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </nav>
+    <div class="footer-contact">
+      <h2 class="footer-title">Talk to us</h2>
+      <ul>
+        <li><a href="https://wa.me/447700900538" data-contact="whatsapp"><svg class="icon"><use href="#i-chat"/></svg> WhatsApp 07700 900538</a></li>
+        <li><a href="tel:+442079460538" data-contact="phone"><svg class="icon"><use href="#i-phone"/></svg> 020 7946 0538</a></li>
+        <li><a href="mailto:hello@hitherandthither.example" data-contact="email"><svg class="icon"><use href="#i-mail"/></svg> hello@hitherandthither.example</a></li>
+      </ul>
+      <p class="footer-hours">Office: Monday to Friday 8am to 6pm, Saturday 9am to 2pm. Moves seven days a week.</p>
+    </div>
+    <p class="footer-credit">A sample website by <a href="https://agilerelease.co.uk/#websites">Agile Release</a>. Hither &amp; Thither is made up. &copy; 2026 Agile Release Limited. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

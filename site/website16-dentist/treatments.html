@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Treatments | Harebell Dental, Eltham (sample website)</title>
+<meta name="description" content="Check-ups, hygiene, fillings, root canal treatment, crowns, bridges, extractions, dentures, implants, whitening, clear aligners and children's dentistry, explained plainly. A sample website by Agile Release.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#faf7f2">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="preload" href="css/fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="css/fonts/nunito-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js" defer></script>
+<script src="js/clock.js" defer></script>
+<script src="js/site.js" defer></script>
+<script src="js/treatments.js" defer></script>
+</head>
+<body>
+
+<svg class="sprite" aria-hidden="true">
+  <symbol id="i-mirror" viewBox="0 0 24 24"><circle cx="15" cy="8.5" r="5"/><path d="M11.4 12.1 3.8 19.7"/><path d="M13 6.5a2.8 2.8 0 0 1 2.5-.9"/></symbol>
+  <symbol id="i-fill" viewBox="0 0 24 24"><path d="M12 3.5c4.6 0 8 2.9 8 7.4 0 5.1-3.6 9.6-8 9.6s-8-4.5-8-9.6c0-4.5 3.4-7.4 8-7.4Z"/><path d="M9.6 11.6c0-1.4 1.1-2.4 2.4-2.4s2.4 1 2.4 2.4-1 2.9-2.4 2.9-2.4-1.5-2.4-2.9Z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-roots" viewBox="0 0 24 24"><path d="M7.5 4h9"/><path d="M12 4v6"/><path d="M12 10c-2.6 1.6-3.6 5-3.6 10.5"/><path d="M12 10c2.6 1.6 3.6 5 3.6 10.5"/><path d="M12 13.5v4.5"/></symbol>
+  <symbol id="i-crown" viewBox="0 0 24 24"><path d="M4.6 17 3.5 8.5 8 12l4-6 4 6 4.5-3.5-1.1 8.5Z"/><path d="M5 20.5h14"/></symbol>
+  <symbol id="i-lift" viewBox="0 0 24 24"><rect x="3" y="11" width="4.6" height="9" rx="2.3"/><rect x="16.4" y="11" width="4.6" height="9" rx="2.3"/><rect x="9.7" y="5.5" width="4.6" height="9" rx="2.3"/><path d="M12 2.5v.5M9.7 18.5h4.6"/></symbol>
+  <symbol id="i-smile" viewBox="0 0 24 24"><path d="M3.5 9.5c2 6.8 15 6.8 17 0"/><path d="M3.5 9.5c4.3-1.5 12.7-1.5 17 0"/><path d="M9 11.4v1.8M12 11.6v2M15 11.4v1.8"/></symbol>
+  <symbol id="i-implant" viewBox="0 0 24 24"><path d="M8.5 3.5h7l-.8 3.2H9.3Z"/><path d="M12 6.7V21"/><path d="M9.6 10h4.8M9.9 13.2h4.2M10.3 16.4h3.4M10.8 19.4h2.4"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></symbol>
+  <symbol id="i-aligner" viewBox="0 0 24 24"><path d="M3.5 7.5c2.4 7 14.6 7 17 0"/><path d="M6.5 14.5c3.2 3 7.8 3 11 0"/><path d="M3.5 7.5c2.4 2.6 14.6 2.6 17 0"/></symbol>
+  <symbol id="i-balloon" viewBox="0 0 24 24"><path d="M12 2.8c3.4 0 5.8 2.7 5.8 6.2 0 3.9-2.8 6.6-5.8 6.6S6.2 12.9 6.2 9c0-3.5 2.4-6.2 5.8-6.2Z"/><path d="m10.9 15.6 1.1 1.2 1.1-1.2"/><path d="M12 16.8c-1.8 1.3 1.6 2.5-.3 4.7"/><path d="M9.3 7.6a2.8 2.8 0 0 1 2-1.9"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 7 8.5-7"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M10.3 4.4a2 2 0 0 1 3.4 0l7.4 12.9a2 2 0 0 1-1.7 3H4.6a2 2 0 0 1-1.7-3Z"/><path d="M12 9.5v4.5M12 17.2v.1"/></symbol>
+  <symbol id="i-access" viewBox="0 0 24 24"><circle cx="11.5" cy="4.5" r="1.6"/><path d="M11.5 7.8v5.7h4.8l2.2 5.5"/><path d="M11.5 10.5h4"/><path d="M8.6 10.6a5.5 5.5 0 1 0 7.1 7.9"/></symbol>
+  <symbol id="i-ear" viewBox="0 0 24 24"><path d="M6.5 9.5a5.5 5.5 0 0 1 11 0c0 3.2-3.2 4.2-3.2 7.3a3.2 3.2 0 0 1-5.8 1.8"/><path d="M9.6 10a2.4 2.4 0 0 1 4.8 0c0 1.2-1 1.7-1.6 2.3"/></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24"><rect x="3.5" y="11" width="17" height="6" rx="2"/><path d="m6 11 1.6-4a2 2 0 0 1 1.9-1.3h5a2 2 0 0 1 1.9 1.3L18 11M6.5 17v2.5M17.5 17v2.5M7 14h.01M17 14h.01"/></symbol>
+  <symbol id="i-train" viewBox="0 0 24 24"><rect x="6" y="3.5" width="12" height="13" rx="3"/><path d="M6 10.5h12M9.5 13.5h.01M14.5 13.5h.01M8.5 20.5l1.5-4M15.5 20.5l-1.5-4"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4.5 6v5.5c0 4.5 3.2 8 7.5 9.5 4.3-1.5 7.5-5 7.5-9.5V6Z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-hand" viewBox="0 0 24 24"><path d="M8.5 12.5V6a1.5 1.5 0 0 1 3 0v5"/><path d="M11.5 10.5V4.5a1.5 1.5 0 0 1 3 0v6"/><path d="M14.5 10.5V6a1.5 1.5 0 0 1 3 0v7.5a7 7 0 0 1-7 7H10a6 6 0 0 1-4.8-2.4l-2.6-3.5a1.5 1.5 0 0 1 2.4-1.8l2.5 2.7"/><path d="M8.5 12.5v3"/></symbol>
+  <symbol id="i-headphones" viewBox="0 0 24 24"><path d="M4 15v-3a8 8 0 0 1 16 0v3"/><rect x="3.5" y="14" width="4" height="6.5" rx="1.5"/><rect x="16.5" y="14" width="4" height="6.5" rx="1.5"/></symbol>
+  <symbol id="i-hourglass" viewBox="0 0 24 24"><path d="M6.5 3.5h11M6.5 20.5h11"/><path d="M8 3.5c0 4.2 4 5 4 8.5s-4 4.3-4 8.5M16 3.5c0 4.2-4 5-4 8.5s4 4.3 4 8.5"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M19.5 14.5A8 8 0 0 1 9.5 4.5a8 8 0 1 0 10 10Z"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.8v.1"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l10-6.5Z"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><path d="M9 5.5v13M15 5.5v13"/></symbol>
+  <symbol id="i-pencil" viewBox="0 0 24 24"><path d="M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16Z"/><path d="m13.5 6.5 4 4"/></symbol>
+  <symbol id="i-gel" viewBox="0 0 24 24"><path d="M12 3.5s-6 6.5-6 10.5a6 6 0 0 0 12 0c0-4-6-10.5-6-10.5Z"/><path d="M9.2 14.5a3 3 0 0 0 2.3 2.8"/></symbol>
+  <symbol id="i-sofa" viewBox="0 0 24 24"><path d="M5 11V8.5A2.5 2.5 0 0 1 7.5 6h9A2.5 2.5 0 0 1 19 8.5V11"/><path d="M3.5 12.5a1.5 1.5 0 0 1 3 0V14h11v-1.5a1.5 1.5 0 0 1 3 0V17a1.5 1.5 0 0 1-1.5 1.5h-14A1.5 1.5 0 0 1 3.5 17Z"/><path d="M6 18.5V20M18 18.5V20"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<aside class="sample-bar" aria-label="About this sample website">
+  <div class="wrap sample-bar-inner">
+    <p><strong>Sample website by Agile Release.</strong> Harebell Dental is not a real practice: the dentists, prices and hours are examples. The NHS charges and NHS advice are real.</p>
+    <a href="https://agilerelease.co.uk/#websites">Get a site like this <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a>
+  </div>
+</aside>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Harebell Dental, home">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><circle class="brand-halo" cx="20" cy="20" r="19"/><path class="brand-stem" d="M12.5 35C12 25 15.5 13.5 24 10.2"/><path class="brand-leaf" d="M13.6 27.6c1.9-3 4.6-4 7.3-3.4-1.6 2.8-4.3 4-7.3 3.4Z"/><path class="brand-bell" d="M20.6 15c0-2.6 1.6-4.4 3.9-4.4s3.9 1.8 3.9 4.4v4.4c0 2 .9 3.4 2.4 4.3l-1.9 1.3-1.6-1.1-1.4 1.3-1.4-1.3-1.4 1.3-1.6-1.1-1.9-1.3c1.5-.9 2.4-2.3 2.4-4.3Z"/><circle class="brand-dot" cx="24.5" cy="27.6" r="1.6"/></svg>
+      <span class="brand-text"><span class="brand-name">Harebell</span><span class="brand-sub">Dental · Eltham</span></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="treatments.html" aria-current="page">Treatments</a></li>
+        <li><a href="fees.html">Fees</a></li>
+        <li><a href="index.html#nervous">Nervous?</a></li>
+        <li><a href="index.html#team">Team</a></li>
+        <li><a href="index.html#visit">Visit</a></li>
+        <li class="nav-emergency"><a href="emergency.html"><span class="nav-dot" aria-hidden="true"></span>Emergency</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary btn-sm header-cta" href="register.html"><span class="header-cta-long">Join as a new patient</span><span class="header-cta-short">New patients</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+      <svg class="icon"><use href="#i-menu"/></svg><span class="visually-hidden">Menu</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="page-head">
+  <div class="ripples ripples-right" aria-hidden="true"></div>
+  <div class="wrap">
+    <p class="crumbs"><a href="index.html">Home</a> <span aria-hidden="true">/</span> Treatments</p>
+    <h1 class="h1">Treatments, <em>explained plainly</em></h1>
+    <p class="lead">What each treatment is, what happens in the chair, how long it takes and what it costs, on the NHS and privately. Your dentist will always talk you through your own plan before anything starts.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap treat-layout">
+    <aside class="treat-side" aria-label="Filter and jump to a treatment">
+      <div>
+        <p class="filter-label" id="filter-label">Show</p>
+        <div class="chips" role="group" aria-labelledby="filter-label" data-filters>
+          <button class="chip" type="button" data-filter="all" aria-pressed="true">All<span class="chip-count" data-count="all"></span></button>
+          <button class="chip" type="button" data-filter="nhs" aria-pressed="false">On the NHS<span class="chip-count" data-count="nhs"></span></button>
+          <button class="chip" type="button" data-filter="private" aria-pressed="false">Private only<span class="chip-count" data-count="private"></span></button>
+          <button class="chip" type="button" data-filter="children" aria-pressed="false">Children<span class="chip-count" data-count="children"></span></button>
+        </div>
+      </div>
+      <nav class="toc" aria-label="Treatments on this page" data-toc></nav>
+    </aside>
+
+    <div>
+      <p class="filter-status" data-filter-status aria-live="polite"></p>
+      <div class="treat-list" data-treat-list>
+        <p class="js-fallback">The treatment details need JavaScript. Please call us on 020 7946 0163 and we will talk you through them.</p>
+      </div>
+      <div class="inline-note" data-reveal>
+        <svg class="icon"><use href="#i-info"/></svg>
+        <div>
+          <p>This page explains treatments in general. It is not advice about your own teeth: only a dentist who has examined you can say what you need.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-cloud">
+  <div class="ripples ripples-left" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="nhs-banner" data-reveal>
+      <div class="nhs-banner-flag" data-nhs-flag>
+        <span class="flag-label">Accepting new NHS patients</span>
+        <span class="flag-value" data-nhs-yesno>No</span>
+      </div>
+      <p class="nhs-banner-text" data-nhs-long>NHS places for new patients are limited. We are not taking new adult NHS patients at the moment, but children under 18 are welcome on the NHS. Adults can join our NHS waiting list, or be seen privately in the meantime.</p>
+      <a class="btn btn-primary" href="register.html">Join as a new patient <svg class="icon"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a class="brand" href="index.html" aria-label="Harebell Dental, home">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><circle class="brand-halo" cx="20" cy="20" r="19"/><path class="brand-stem" d="M12.5 35C12 25 15.5 13.5 24 10.2"/><path class="brand-leaf" d="M13.6 27.6c1.9-3 4.6-4 7.3-3.4-1.6 2.8-4.3 4-7.3 3.4Z"/><path class="brand-bell" d="M20.6 15c0-2.6 1.6-4.4 3.9-4.4s3.9 1.8 3.9 4.4v4.4c0 2 .9 3.4 2.4 4.3l-1.9 1.3-1.6-1.1-1.4 1.3-1.4-1.3-1.4 1.3-1.6-1.1-1.9-1.3c1.5-.9 2.4-2.3 2.4-4.3Z"/><circle class="brand-dot" cx="24.5" cy="27.6" r="1.6"/></svg>
+        <span class="brand-text"><span class="brand-name">Harebell</span><span class="brand-sub">Dental · Eltham</span></span>
+      </a>
+      <p>An independent NHS and private dental practice for adults and children.</p>
+      <p class="footer-address">7 Linley Place, Eltham, London SE9<br>
+        <a href="tel:+442079460163" data-contact="phone">020 7946 0163</a> ·
+        <a href="mailto:hello@harebelldental.example" data-contact="email">hello@harebelldental.example</a></p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <h2 class="footer-title">The practice</h2>
+      <a href="treatments.html">Treatments</a>
+      <a href="fees.html">NHS and private fees</a>
+      <a href="register.html">Join as a new patient</a>
+      <a href="index.html#faq">Questions</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+    <div class="footer-urgent">
+      <h2 class="footer-title">Urgent help</h2>
+      <p>Emergency line <a href="tel:+442079460164" data-contact="phone">020 7946 0164</a>, weekdays from 8am.</p>
+      <p>When we are closed, call <strong>NHS 111</strong>. Call <strong>999</strong> if swelling affects your breathing or swallowing, or bleeding is heavy and will not stop.</p>
+      <a class="footer-link" href="emergency.html">Emergency appointments <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a>
+    </div>
+    <p class="footer-credit">A sample website by <a href="https://agilerelease.co.uk/#websites">Agile Release</a>. Harebell Dental is made up. &copy; 2026 Agile Release Limited. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nightjar Locksmiths | 24-hour locksmiths in Hornchurch and Havering (sample website)</title>
+<meta name="description" content="Locked out, lost keys or had a break-in? A local locksmith in Hornchurch, 24 hours a day. Prices on the website and agreed before we start. A sample website by Agile Release.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#1b2124">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="preload" href="css/fonts/atkinson-hyperlegible-next-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="css/fonts/bitter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js" defer></script>
+<script src="js/core.js" defer></script>
+<script src="js/site.js" defer></script>
+<script src="js/areas.js" defer></script>
+</head>
+<body>
+
+<svg class="sprite" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 7 8.5-7"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24"><circle cx="7.5" cy="15.5" r="4.5"/><path d="m10.7 12.3 9.3-9.3M15.5 7.5l3 3M13 10l2 2"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4.5" y="10.5" width="15" height="10.5" rx="2"/><path d="M8 10.5v-3a4 4 0 0 1 8 0v3M12 14.5V17"/></symbol>
+  <symbol id="i-handle" viewBox="0 0 24 24"><rect x="7" y="3" width="5.5" height="18" rx="2.75"/><path d="M9.75 8h9"/><path d="M9.75 14.5v2.5"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.4 7.5 9.5 4.3-1.1 7.5-4.9 7.5-9.5V6L12 3Z"/><path d="m9 12 2.2 2.2L15.5 10"/></symbol>
+  <symbol id="i-safe" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="15.5" rx="1.5"/><circle cx="11" cy="11.25" r="3.5"/><path d="M11 7.75v1M11 13.75v1M17.5 9.5v3.5M6.5 19v1.5M17.5 19v1.5"/></symbol>
+  <symbol id="i-break" viewBox="0 0 24 24"><path d="M5.5 21V4.5A1.5 1.5 0 0 1 7 3h10a1.5 1.5 0 0 1 1.5 1.5V21M3 21h18"/><path d="m18.5 7-3 3 2.2 2-2.7 3.5 1.5 1.5"/></symbol>
+  <symbol id="i-id" viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="2"/><circle cx="8.5" cy="10.5" r="2.2"/><path d="M5.3 16c.6-1.5 1.8-2.3 3.2-2.3s2.6.8 3.2 2.3M14.5 10h4M14.5 13.5h3"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5 2.5 20h19L12 3.5Z"/><path d="M12 10v4.5M12 17.25v.25"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M19.5 14.5A8 8 0 1 1 9.5 4.5a6.5 6.5 0 0 0 10 10Z"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></symbol>
+  <symbol id="i-sunset" viewBox="0 0 24 24"><path d="M3 17.5h18M6.5 17.5a5.5 5.5 0 0 1 11 0M12 5v3M5 9.5l1.5 1.5M19 9.5 17.5 11M8.5 21h7"/></symbol>
+  <symbol id="i-receipt" viewBox="0 0 24 24"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2V3Z"/><path d="M9 8h6M9 12h6M9 16h3"/></symbol>
+  <symbol id="i-door" viewBox="0 0 24 24"><path d="M5.5 21V4.5A1.5 1.5 0 0 1 7 3h10a1.5 1.5 0 0 1 1.5 1.5V21M3 21h18"/><path d="M15 11.5v1.5"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3.5 11 12 4l8.5 7M6 9.5V20h12V9.5"/><path d="M10 20v-5h4v5"/></symbol>
+  <symbol id="i-cut" viewBox="0 0 24 24"><path d="M3 9h11.5l1.5 2 1.5-2 1.5 2 1.5-2H21v6H3V9Z"/><circle cx="6.5" cy="12" r="1"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h3l1.5-2.5h7L17 8h3v11H4V8Z"/><circle cx="12" cy="13.25" r="3.25"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.75v.25"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m9 9 6 6M15 9l-6 6"/></symbol>
+  <symbol id="i-window" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="1.5"/><path d="M4 12h16M12 3v18"/></symbol>
+  <symbol id="i-hand" viewBox="0 0 24 24"><path d="M8 13V5.5a1.5 1.5 0 0 1 3 0V11M11 10V4a1.5 1.5 0 0 1 3 0v6M14 10.5V5.5a1.5 1.5 0 0 1 3 0V14a7 7 0 0 1-7 7h-.5a6 6 0 0 1-4.6-2.2L3.5 16a1.6 1.6 0 0 1 2.4-2.1L8 16"/></symbol>
+  <symbol id="i-pound" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15 8.5a2.8 2.8 0 0 0-5 1.7V16M8.5 12.5h5M8.5 16h7"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<aside class="sample-bar" aria-label="About this sample website">
+  <div class="wrap sample-bar-inner">
+    <p><strong>Sample website by Agile Release.</strong> Nightjar Locksmiths is not a real business: the prices, people and numbers are examples.</p>
+    <a href="https://agilerelease.co.uk/#websites">Get a site like this <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a>
+  </div>
+</aside>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Nightjar Locksmiths, home">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect class="mark-bg" width="40" height="40" rx="10"/><path class="mark-hole" d="M20 7.5a7.5 7.5 0 0 0-3.6 14.1L14.5 32h11l-1.9-10.4A7.5 7.5 0 0 0 20 7.5Z"/><circle class="mark-moon" cx="20" cy="15" r="4.4"/><circle class="mark-hole" cx="21.9" cy="13.4" r="3.8"/></svg>
+      <span class="brand-text"><span class="brand-name">Nightjar</span><span class="brand-sub">Locksmiths, Hornchurch</span></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="prices.html">Prices</a></li>
+        <li><a href="#areas">Areas</a></li>
+        <li><a href="locked-out.html">Locked out?</a></li>
+        <li><a href="security.html">Security</a></li>
+        <li><a href="prices.html#quote">Get a quote</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <a class="header-call" href="tel:+442079460247" data-contact="phone">
+      <svg class="icon"><use href="#i-phone"/></svg>
+      <span><small>24 hours, every day</small> 020 7946 0247</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+      <svg class="icon"><use href="#i-menu"/></svg><span class="visually-hidden">Menu</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero">
+  <svg class="hero-key" viewBox="0 0 600 220" aria-hidden="true">
+    <defs>
+      <linearGradient id="key-metal" x1="0" y1="0" x2="0" y2="1">
+        <stop class="metal-a" offset="0"/>
+        <stop class="metal-b" offset="0.55"/>
+        <stop class="metal-c" offset="1"/>
+      </linearGradient>
+    </defs>
+    <path class="key-body" fill="url(#key-metal)" fill-rule="evenodd" d="M190 58H222V74H248L258 96H266L276 74H292L302 108H310L320 74H336L346 88H354L364 74H380L390 114H398L408 74H424L434 100H442L452 74H468L478 92H486L496 74H548L572 100V124L552 150H222V162H190A95 95 0 1 1 190 58ZM64 88A22 22 0 1 0 64 132A22 22 0 1 0 64 88Z"/>
+    <path class="key-groove" d="M238 124H546M238 137H538"/>
+    <path class="key-bow-line" d="M150 74A50 50 0 0 1 150 146"/>
+  </svg>
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow"><svg class="icon icon-sm"><use href="#i-pin"/></svg> Hornchurch, Romford, Upminster and the rest of Havering</p>
+      <h1 class="display">Locked out? <span>You'll know the price before we set off.</span></h1>
+      <p class="lead">We're a small, local locksmith with a shop in Hornchurch. Day or night, a locksmith answers the phone, gives you a fixed price and an honest arrival time, then confirms that price at your door before touching the lock.</p>
+      <div class="hero-actions">
+        <a class="btn btn-go btn-lg" href="tel:+442079460247" data-contact="phone"><svg class="icon"><use href="#i-phone"/></svg> Call 020 7946 0247</a>
+        <a class="btn btn-outline btn-lg" href="https://wa.me/447700900247" data-contact="whatsapp"><svg class="icon"><use href="#i-chat"/></svg> WhatsApp us</a>
+      </div>
+      <ul class="hero-points">
+        <li><svg class="icon"><use href="#i-check"/></svg> Price agreed before we start. No call-out fee in our home patch.</li>
+        <li><svg class="icon"><use href="#i-check"/></svg> We check you live there before we open any door.</li>
+        <li><svg class="icon"><use href="#i-check"/></svg> 12-month guarantee on every lock we fit.</li>
+      </ul>
+    </div>
+
+    <div class="now-card" role="group" aria-labelledby="now-title">
+      <div class="now-head">
+        <h2 class="now-title" id="now-title"><span class="live-dot" aria-hidden="true"></span> Right now</h2>
+        <p class="now-time" data-now-time>Phones answered 24 hours</p>
+      </div>
+      <dl class="now-list">
+        <div class="now-row">
+          <dt><svg class="icon" data-now-icon><use href="#i-clock"/></svg> Rate</dt>
+          <dd><strong data-now-rate>Day, evening or night</strong> <span data-now-until></span></dd>
+        </div>
+        <div class="now-row">
+          <dt><svg class="icon"><use href="#i-key"/></svg> Lock-out entry</dt>
+          <dd><strong class="now-price" data-now-price="lockout">from £95</strong> <span>VAT included. No call-out fee in our home patch.</span></dd>
+        </div>
+      </dl>
+      <form class="area-form area-form-dark" data-area-form novalidate>
+        <label class="area-label" for="now-postcode">How long to reach you?</label>
+        <div class="area-row">
+          <input class="area-input" id="now-postcode" name="postcode" type="text" inputmode="text" autocomplete="postal-code" autocapitalize="characters" spellcheck="false" maxlength="9" placeholder="Postcode, like RM11" aria-describedby="now-result">
+          <button class="btn btn-light" type="submit">Check</button>
+        </div>
+        <p class="area-result" id="now-result" data-area-result aria-live="polite">Typical arrival across our area: 20 to 70 minutes.</p>
+      </form>
+      <p class="now-foot">A locksmith answers, not a call centre. Arrival times are typical, not promised: when you call, we tell you where we are and give you a real time.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-white" id="services">
+  <div class="wrap">
+    <header class="section-head" data-reveal>
+      <p class="kicker">What we do</p>
+      <h2 class="h2">Homes and small shops, doors and safes</h2>
+      <p>Everything below is done by the two of us, from one van and one small shop. Prices include VAT. Evening, weekend and night prices are on the <a href="prices.html">price guide</a>.</p>
+    </header>
+    <ul class="tags" data-reveal>
+      <li class="tag-card">
+        <svg class="tag-icon"><use href="#i-key"/></svg>
+        <h3>Lock-outs</h3>
+        <p>Locked out, lost your keys, or a key snapped in the lock. Most doors open without any damage.</p>
+        <p class="tag-price">From <strong data-from="lockout">£95</strong></p>
+        <a class="tag-link" href="locked-out.html">What to do while you wait <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a>
+      </li>
+      <li class="tag-card">
+        <svg class="tag-icon"><use href="#i-lock"/></svg>
+        <h3>Lock changes</h3>
+        <p>New locks after lost keys, a house move or a break-in. Euro cylinders, mortice deadlocks and nightlatches.</p>
+        <p class="tag-price">From <strong data-from="euro">£95</strong></p>
+        <a class="tag-link" href="prices.html#change">Lock change prices <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a>
+      </li>
+      <li class="tag-card">
+        <svg class="tag-icon"><use href="#i-shield"/></svg>
+        <h3>Anti-snap upgrades</h3>
+        <p>Basic cylinders swapped for 3-star or Diamond ones, keyed alike so one key opens every door.</p>
+        <p class="tag-price">From <strong data-from="snap3">£95</strong></p>
+        <a class="tag-link" href="security.html">Is your lock snap-proof? <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a>
+      </li>
+      <li class="tag-card">
+        <svg class="tag-icon"><use href="#i-handle"/></svg>
+        <h3>UPVC door repairs</h3>
+        <p>Floppy handle, stiff key, a door that has dropped or is stuck locked. We carry the common gearboxes in the van.</p>
+        <p class="tag-price">From <strong data-from="upvcAdjust">£85</strong></p>
+        <a class="tag-link" href="prices.html#upvc">UPVC prices <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a>
+      </li>
+      <li class="tag-card">
+        <svg class="tag-icon"><use href="#i-break"/></svg>
+        <h3>Burglary repairs</h3>
+        <p>Forced doors and split frames made secure the same day, with an itemised receipt for your insurer.</p>
+        <p class="tag-price">From <strong data-from="makeSafe">£145</strong></p>
+        <a class="tag-link" href="locked-out.html#burgled">If you've been burgled <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a>
+      </li>
+      <li class="tag-card">
+        <svg class="tag-icon"><use href="#i-safe"/></svg>
+        <h3>Safes</h3>
+        <p>Opened when the key or code is lost, bolted to the floor, or given a new combination.</p>
+        <p class="tag-price">From <strong data-from="safeCode">£65</strong></p>
+        <a class="tag-link" href="prices.html#safe">Safe prices <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a>
+      </li>
+    </ul>
+    <p class="services-note" data-reveal><svg class="icon"><use href="#i-cut"/></svg> <span>Keys cut while you wait at the shop in Bellcote Arcade, from <strong data-from="keyStd">£6</strong>. <span data-shop-status>Shop open Monday to Saturday.</span></span></p>
+  </div>
+</section>
+
+<section class="section section-dark" id="pricing">
+  <div class="wrap">
+    <header class="section-head" data-reveal>
+      <p class="kicker kicker-light">How we price</p>
+      <h2 class="h2">The price on the phone is the price on the bill</h2>
+      <p>Locksmith scams are real: a cheap advert, then a much bigger bill at the door. We work the other way round. Every step below has to line up before we start, like the pins in a lock.</p>
+    </header>
+
+    <div class="pins" data-reveal>
+      <svg class="pins-art" viewBox="0 0 960 150" aria-hidden="true">
+        <rect class="pins-housing" x="0" y="8" width="960" height="70" rx="8"/>
+        <rect class="pins-plug" x="0" y="80" width="960" height="62" rx="8"/>
+        <path class="pins-blade" d="M0 100H96L108 114H132L144 100H336L348 126H372L384 100H576L588 106H612L624 100H816L828 120H852L864 100H906L936 118L906 136H0Z"/>
+        <path class="pin-spring" d="M112 12L128 16L112 20L128 24L112 28L128 32"/>
+        <rect class="pin-driver" x="108" y="34" width="24" height="44" rx="4"/>
+        <rect class="pin-key" x="108" y="80" width="24" height="34" rx="4"/>
+        <path class="pin-spring" d="M352 12L368 16L352 20L368 24L352 28L368 32L352 36L368 40"/>
+        <rect class="pin-driver" x="348" y="44" width="24" height="34" rx="4"/>
+        <rect class="pin-key" x="348" y="80" width="24" height="46" rx="4"/>
+        <path class="pin-spring" d="M592 12L608 16L592 20L608 24"/>
+        <rect class="pin-driver" x="588" y="28" width="24" height="50" rx="4"/>
+        <rect class="pin-key" x="588" y="80" width="24" height="26" rx="4"/>
+        <path class="pin-spring" d="M832 12L848 16L832 20L848 24L832 28L848 32L832 36"/>
+        <rect class="pin-driver" x="828" y="38" width="24" height="40" rx="4"/>
+        <rect class="pin-key" x="828" y="80" width="24" height="40" rx="4"/>
+        <path class="pins-shear" d="M0 79H960"/>
+      </svg>
+      <p class="pins-caption"><span>Shear line</span> Phone price, door price and bill: the same number.</p>
+      <ol class="steps">
+        <li class="step">
+          <span class="step-num">1</span>
+          <h3>On the phone</h3>
+          <p>Tell us the door, the lock and your postcode. A photo on WhatsApp helps. We give you a total price with VAT, and an arrival time.</p>
+        </li>
+        <li class="step">
+          <span class="step-num">2</span>
+          <h3>Before we arrive</h3>
+          <p>We text you the locksmith's name and the price we agreed. If we're running late, we ring you to say so.</p>
+        </li>
+        <li class="step">
+          <span class="step-num">3</span>
+          <h3>At your door</h3>
+          <p>We look at the lock, check you live there, and confirm the price in writing before we start. If it has to change and you say no, you pay nothing.</p>
+        </li>
+        <li class="step">
+          <span class="step-num">4</span>
+          <h3>When we finish</h3>
+          <p>Pay by card, contactless or bank transfer. You get a receipt listing every part, and a 12-month guarantee.</p>
+        </li>
+      </ol>
+    </div>
+
+    <div class="scam" data-reveal>
+      <div class="scam-side">
+        <div class="scam-head">
+          <svg class="icon"><use href="#i-alert"/></svg>
+          <h3>Signs you're talking to the wrong locksmith</h3>
+        </div>
+        <p class="scam-foot">If the work hasn't started, you can still say no. That goes for us too.</p>
+        <a class="btn btn-dark btn-sm" href="prices.html">See every price we charge <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a>
+      </div>
+      <ul class="scam-list">
+        <li>An advert price like "from £39" that won't say what it includes.</li>
+        <li>No total price on the phone, just "we'll see when we get there".</li>
+        <li>Drilling the lock straight away, without trying to open it first.</li>
+        <li>Cash only, or a card machine in another company's name.</li>
+        <li>A call centre that can't tell you where the locksmith is based.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="areas">
+  <div class="wrap areas">
+    <div class="areas-intro" data-reveal>
+      <p class="kicker">Areas and arrival times</p>
+      <h2 class="h2">How long will you wait?</h2>
+      <p>Put in your postcode. We'll show the typical time it takes us to reach you at this time of day, and any travel charge. The first half of the postcode is enough.</p>
+      <form class="area-form" data-area-form novalidate>
+        <label class="area-label" for="area-postcode">Your postcode</label>
+        <div class="area-row">
+          <input class="area-input" id="area-postcode" name="postcode" type="text" autocomplete="postal-code" autocapitalize="characters" spellcheck="false" maxlength="9" placeholder="For example RM12" aria-describedby="area-result">
+          <button class="btn btn-dark" type="submit"><svg class="icon"><use href="#i-arrow"/></svg> Check</button>
+        </div>
+        <div class="area-result area-result-card" id="area-result" data-area-result data-area-detail aria-live="polite">
+          <p>Typical arrival across our area: 20 to 70 minutes, depending on where you are and the time of day.</p>
+        </div>
+      </form>
+      <div class="bands" data-bands>
+        <p class="bands-fallback">Home patch: no travel charge. Close by: £15. Further out: £30.</p>
+      </div>
+    </div>
+
+    <div class="patch" data-reveal>
+      <div class="patch-map" data-map>
+        <p class="patch-fallback">We cover Hornchurch, Romford, Upminster, Dagenham, Rainham, Ilford, Barking and Brentwood.</p>
+      </div>
+      <div class="patch-lists" data-district-lists></div>
+      <p class="patch-note">Outside these districts? We'd rather tell you now than keep you waiting. Look for a locksmith close to you, and use <a href="locked-out.html#checks">our checks</a> before you agree a price.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-white" id="help">
+  <div class="wrap">
+    <header class="section-head" data-reveal>
+      <p class="kicker">If something has gone wrong</p>
+      <h2 class="h2">Two short guides, written for a bad night</h2>
+    </header>
+    <div class="guides" data-reveal>
+      <a class="guide-card" href="locked-out.html">
+        <span class="guide-icon"><svg class="icon"><use href="#i-door"/></svg></span>
+        <span class="guide-title">Locked out right now</span>
+        <span class="guide-list">
+          <span>Get somewhere safe and warm</span>
+          <span>Check the other doors and windows</span>
+          <span>Try your landlord or letting agent</span>
+          <span>What proof we'll ask you for</span>
+        </span>
+        <span class="guide-go">Read the guide <svg class="icon icon-sm"><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="guide-card guide-card-alert" href="locked-out.html#burgled">
+        <span class="guide-icon"><svg class="icon"><use href="#i-alert"/></svg></span>
+        <span class="guide-title">Burgled?</span>
+        <span class="guide-list">
+          <span><strong>999</strong> if it's happening or they may still be inside</span>
+          <span><strong>101</strong> to report it once they've gone</span>
+          <span>Don't touch anything they may have touched</span>
+          <span>Get a crime reference number for your insurer</span>
+        </span>
+        <span class="guide-go">Read the guide <svg class="icon icon-sm"><use href="#i-arrow"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="snap">
+  <div class="wrap snap">
+    <div class="snap-art" data-reveal>
+      <svg viewBox="0 0 360 240" aria-hidden="true">
+        <rect class="snap-door" x="16" y="16" width="328" height="208" rx="14"/>
+        <path class="snap-bead" d="M40 40H112V200H40Z"/>
+        <rect class="snap-plate" x="132" y="30" width="56" height="180" rx="28"/>
+        <circle class="snap-rose" cx="160" cy="76" r="17"/>
+        <rect class="snap-lever" x="152" y="66" width="132" height="20" rx="10"/>
+        <path class="snap-cyl" d="M160 136a14 14 0 0 1 10 23.8V182a5 5 0 0 1-5 5h-10a5 5 0 0 1-5-5v-22.2A14 14 0 0 1 160 136Z"/>
+        <path class="snap-slot" d="M160 142l-2.5 6 3.5 5-3 6 3 6-1 10"/>
+        <path class="snap-leader" d="M178 150H226M172 176H226"/>
+        <rect class="snap-mark snap-mark-2" x="226" y="134" width="96" height="32" rx="6"/>
+        <text class="snap-mark-text" x="274" y="155" text-anchor="middle">TS 007</text>
+        <rect class="snap-mark" x="226" y="172" width="96" height="32" rx="6"/>
+        <text class="snap-mark-text" x="274" y="193" text-anchor="middle">3 STAR</text>
+      </svg>
+    </div>
+    <div class="snap-copy" data-reveal>
+      <p class="kicker">Security upgrades</p>
+      <h2 class="h2">Is your front door lock snap-proof?</h2>
+      <p>Most UPVC and composite doors are locked by a euro cylinder: the part the key goes into. Cheap ones can be snapped and the door opened in under a minute. A snap-resistant cylinder costs from <strong data-from="snap3">£95</strong> fitted.</p>
+      <p>Look at the face of the cylinder, by the keyhole. A <strong>TS 007 3-star</strong> or <strong>Sold Secure Diamond</strong> marking means it has been tested against snapping. No marking? It probably hasn't.</p>
+      <p class="snap-actions">
+        <a class="btn btn-dark" href="security.html">Find the right lock for your door <svg class="icon"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-outline" href="prices.html#quote">Get a quote</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-white" id="who">
+  <div class="wrap who">
+    <div class="who-copy" data-reveal>
+      <p class="kicker">Who comes out</p>
+      <h2 class="h2">Two locksmiths. You'll know which one is coming.</h2>
+      <p>We text you the name of the locksmith before they set off. Both carry a photo ID card. If anyone else turns up saying they're from us, don't open the door: call us.</p>
+      <ul class="people">
+        <li class="person">
+          <span class="monogram" aria-hidden="true">FA</span>
+          <div>
+            <h3>Femi Adeyemi</h3>
+            <p class="person-role">Owner. Locksmith since 2009.</p>
+            <p>Started Nightjar in 2016 after seven years with a lock shop in Romford. Takes most of the night calls.</p>
+          </div>
+        </li>
+        <li class="person">
+          <span class="monogram monogram-alt" aria-hidden="true">KN</span>
+          <div>
+            <h3>Kasia Nowak</h3>
+            <p class="person-role">Locksmith. With us since 2021.</p>
+            <p>Our UPVC door and safe specialist. Runs the shop on weekday mornings.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="creds" data-reveal>
+      <h3 class="creds-title">Memberships, checks and insurance</h3>
+      <p class="creds-intro">A real locksmith would show these here, with numbers you can check. On this sample site they are examples.</p>
+      <ul class="cred-list">
+        <li class="cred">
+          <span class="cred-badge" aria-hidden="true"><svg class="icon"><use href="#i-shield"/></svg></span>
+          <div><strong>Master Locksmiths Association</strong><span>Approved company, membership no. 000000</span></div>
+          <span class="example-tag">Example</span>
+        </li>
+        <li class="cred">
+          <span class="cred-badge" aria-hidden="true"><svg class="icon"><use href="#i-id"/></svg></span>
+          <div><strong>DBS checked locksmiths</strong><span>Certificates seen by the customer on request</span></div>
+          <span class="example-tag">Example</span>
+        </li>
+        <li class="cred">
+          <span class="cred-badge" aria-hidden="true"><svg class="icon"><use href="#i-receipt"/></svg></span>
+          <div><strong>Public liability insurance</strong><span>Insurer and policy no. 000000</span></div>
+          <span class="example-tag">Example</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="wrap faq-layout">
+    <header class="section-head section-head-left" data-reveal>
+      <p class="kicker">Questions</p>
+      <h2 class="h2">Asked on the phone every week</h2>
+      <p>Something else? <a href="#contact">Call or message us</a>. We'd rather you ask than worry.</p>
+    </header>
+    <div class="faq" data-reveal>
+      <details>
+        <summary>Do you charge a call-out fee?</summary>
+        <p>Not in our home patch (Hornchurch, Elm Park, Upminster, Gidea Park and Romford town centre). Further out there's a travel charge of £15 or £30, and we tell you on the phone. The lock-out price includes coming out and getting you in.</p>
+      </details>
+      <details>
+        <summary>How do you check I live there?</summary>
+        <p>We ask for photo ID with the address on it, or photo ID and a letter or bill in your name to that address. If it's all inside, we open the door and you show us before we leave. The <a href="locked-out.html#proof">locked-out guide</a> lists what counts.</p>
+      </details>
+      <details>
+        <summary>Will you damage my door or lock?</summary>
+        <p>Most doors open without damage. If a lock really has to be drilled, we tell you first and agree the price of the new lock before we drill.</p>
+      </details>
+      <details>
+        <summary>Do you really work all night and on bank holidays?</summary>
+        <p>Yes. The phone is answered 24 hours a day, every day of the year. Nights (10pm to 7am) and bank holidays are charged at the night rate, which is on the <a href="prices.html">price guide</a>.</p>
+      </details>
+      <details>
+        <summary>I rent. Can you change my locks?</summary>
+        <p>Usually, yes, but check your tenancy agreement first: most say you need your landlord's agreement and must give them a key. After a break-in we can make the door secure straight away and change the lock once your landlord or agent agrees.</p>
+      </details>
+      <details>
+        <summary>Can you get into my car?</summary>
+        <p>No. We work on homes, flats and small shops. For a car, call your breakdown cover or an auto locksmith.</p>
+      </details>
+      <details>
+        <summary>Is there a guarantee?</summary>
+        <p>Every lock we fit is guaranteed for 12 months, parts and labour. If something we fitted goes wrong, we come back and fix it at no charge.</p>
+      </details>
+      <details>
+        <summary>Are you members of a trade body?</summary>
+        <p>A real locksmith would name their trade body and membership number here, so you can check it. On this sample site, the memberships shown are examples.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark" id="contact">
+  <div class="wrap contact">
+    <div class="contact-main" data-reveal>
+      <p class="kicker kicker-light">Contact</p>
+      <h2 class="h2">Call any time. Visit the shop in the day.</h2>
+      <p>For a lock-out or a break-in, call: it's the quickest way. For anything that can wait, a WhatsApp message with a photo of the lock gets you a price within the hour while the shop is open.</p>
+      <div class="contact-actions">
+        <a class="btn btn-go btn-lg" href="tel:+442079460247" data-contact="phone"><svg class="icon"><use href="#i-phone"/></svg> Call 020 7946 0247</a>
+        <a class="btn btn-ghost-light" href="https://wa.me/447700900247" data-contact="whatsapp"><svg class="icon"><use href="#i-chat"/></svg> WhatsApp 07700 900247</a>
+        <a class="btn btn-ghost-light" href="mailto:help@nightjarlocks.example" data-contact="email"><svg class="icon"><use href="#i-mail"/></svg> help@nightjarlocks.example</a>
+      </div>
+      <p class="contact-quote"><a href="prices.html#quote">Book non-urgent work with the quote form <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a></p>
+    </div>
+    <div class="contact-side" data-reveal>
+      <h3 class="side-title"><svg class="icon"><use href="#i-clock"/></svg> Hours</h3>
+      <dl class="hours">
+        <div><dt>Phones and call-outs</dt><dd>24 hours, every day</dd></div>
+        <div><dt>Shop, Monday to Friday</dt><dd>8:30am to 5:30pm</dd></div>
+        <div><dt>Shop, Saturday</dt><dd>9am to 1pm</dd></div>
+        <div><dt>Shop, Sunday and bank holidays</dt><dd>Closed</dd></div>
+      </dl>
+      <p class="shop-now"><span class="shop-dot" data-shop-dot aria-hidden="true"></span> <span data-shop-status>The shop is open Monday to Saturday.</span></p>
+      <h3 class="side-title"><svg class="icon"><use href="#i-pin"/></svg> The shop</h3>
+      <p class="side-address">4 Bellcote Arcade, Hornchurch RM11<br>Five minutes' walk from Hornchurch station.</p>
+      <p><a class="side-link" href="https://www.google.com/maps/search/?api=1&amp;query=Hornchurch+RM11">Open Hornchurch in Google Maps <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a></p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a class="brand brand-light" href="index.html" aria-label="Nightjar Locksmiths, home">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect class="mark-bg" width="40" height="40" rx="10"/><path class="mark-hole" d="M20 7.5a7.5 7.5 0 0 0-3.6 14.1L14.5 32h11l-1.9-10.4A7.5 7.5 0 0 0 20 7.5Z"/><circle class="mark-moon" cx="20" cy="15" r="4.4"/><circle class="mark-hole" cx="21.9" cy="13.4" r="3.8"/></svg>
+        <span class="brand-text"><span class="brand-name">Nightjar</span><span class="brand-sub">Locksmiths, Hornchurch</span></span>
+      </a>
+      <p>Lock-outs, lock changes, UPVC door repairs, burglary repairs and safes. 24 hours a day across Havering and nearby.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="prices.html">Prices</a>
+      <a href="#areas">Areas</a>
+      <a href="locked-out.html">Locked out?</a>
+      <a href="security.html">Security</a>
+      <a href="prices.html#quote">Get a quote</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+    <p class="footer-credit">A sample website by <a href="https://agilerelease.co.uk/#websites">Agile Release</a>. Nightjar Locksmiths is made up. &copy; 2026 Agile Release Limited. All rights reserved.</p>
+  </div>
+</footer>
+
+<aside class="callbar" aria-label="Call us, 24 hours">
+  <a class="callbar-eta" href="#areas" data-callbar-eta><small>Typical arrival</small> <strong>20 to 70 min</strong></a>
+  <a class="callbar-call" href="tel:+442079460247" data-contact="phone"><svg class="icon"><use href="#i-phone"/></svg> <span><small>Call, 24 hours</small> 020 7946 0247</span></a>
+</aside>
+
+</body>
+</html>

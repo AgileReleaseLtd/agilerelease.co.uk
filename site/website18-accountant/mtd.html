@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Making Tax Digital for Income Tax, explained | Quarterday (sample website)</title>
+<meta name="description" content="Who has to join Making Tax Digital for Income Tax and when, quarterly updates, the tax return, penalties and HMRC-recognised software, checked on GOV.UK. A sample website by Agile Release.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#1d1b16">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="preload" href="css/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="css/fonts/literata-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js" defer></script>
+<script src="js/dates.js" defer></script>
+<script src="js/site.js" defer></script>
+<script src="js/mtd.js" defer></script>
+</head>
+<body class="page-mtd">
+
+<svg class="sprite" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/><path d="M9 10.5h6M9 13.5h4"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 7 8.5-7"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-person" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20.5a7.5 7.5 0 0 1 15 0"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="15" r="4.5"/><path d="m11.2 11.8 8.3-8.3M16.5 6.5l2.5 2.5M14 9l2 2"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24"><path d="M4 20.5V5.5l8-2.5v17.5M12 8h8v12.5M2.5 20.5h19"/><path d="M7 8.5h2M7 12h2M7 15.5h2M15 11.5h2M15 15h2"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5Z"/><path d="M4 20.5A2.5 2.5 0 0 0 6.5 23"/><path d="M8.5 8h7M8.5 11.5h7M8.5 15h4"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.2 7.5 9.5 4.3-1.3 7.5-4.9 7.5-9.5V6Z"/><path d="m9 12 2.2 2.2L15.5 10"/></symbol>
+  <symbol id="i-swap" viewBox="0 0 24 24"><path d="M4 8h14M14 4l4 4-4 4M20 16H6M10 12l-4 4 4 4"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 2.5h8l4.5 4.5v14.5H6Z"/><path d="M14 2.5V7h4.5M9 12h6M9 15.5h6"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.6v.1"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5 2.5 20h19Z"/><path d="M12 9.5v5M12 17.2v.1"/></symbol>
+  <symbol id="i-laptop" viewBox="0 0 24 24"><rect x="4.5" y="5" width="15" height="10.5" rx="1.5"/><path d="M2.5 19h19"/></symbol>
+  <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5.5H4.5V6H10"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V4M4 20h16"/><path d="m7.5 15 4-4.5 3 3L20 7"/></symbol>
+  <symbol id="i-pound" viewBox="0 0 24 24"><path d="M16.5 6.5A4 4 0 0 0 9 8.5V20M6 13h7M6 20h11.5"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<aside class="sample-bar" aria-label="About this sample website">
+  <div class="wrap sample-bar-inner">
+    <p><strong>Sample website by Agile Release.</strong> Quarterday is not a real practice: the fees, people and numbers are examples.</p>
+    <a href="https://agilerelease.co.uk/#websites">Get a site like this <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a>
+  </div>
+</aside>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Quarterday, home"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><circle class="brand-ring" cx="16" cy="16" r="12.5"/><path class="brand-quarter" d="M16 16V3.5A12.5 12.5 0 0 0 3.5 16Z"/><path class="brand-rule" d="M16 16h12.5M16 16v12.5"/></svg><span class="brand-text"><span class="brand-name">Quarterday</span><span class="brand-sub">Accountants &middot; Hammersmith</span></span></a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="mtd.html" aria-current="page">Making Tax Digital</a></li>
+        <li><a href="deadlines.html">Deadlines</a></li>
+        <li><a href="index.html#team">Team</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="enquire.html">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-ink btn-sm header-cta" href="enquire.html">Get a quote</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+      <svg class="icon"><use href="#i-menu"/></svg><span class="visually-hidden">Menu</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+<section class="page-head page-head-mtd">
+  <div class="wrap page-head-inner">
+    <div>
+      <p class="kicker">Making Tax Digital for Income Tax</p>
+      <h1 class="h1">MTD, in plain English</h1>
+      <p class="lead">Since 6 April 2026, many sole traders and landlords keep digital records and send HMRC a short update every quarter, as well as the yearly tax return. Here is who has to join, when, and what it means for you.</p>
+      <p class="checked"><svg class="icon icon-sm"><use href="#i-check"/></svg> Checked against GOV.UK on 10 November 2026. <a href="#sources">Sources</a></p>
+    </div>
+    <nav class="toc" aria-label="On this page">
+      <p class="toc-title">On this page</p>
+      <ol>
+        <li><a href="#who">Who has to join, and when</a></li>
+        <li><a href="#checker">Check when you join</a></li>
+        <li><a href="#how">What you do in MTD</a></li>
+        <li><a href="#penalties">Penalties</a></li>
+        <li><a href="#software">Software</a></li>
+        <li><a href="#help">How we help</a></li>
+      </ol>
+    </nav>
+  </div>
+</section>
+
+<section class="section" id="who" aria-labelledby="who-title">
+  <div class="wrap">
+    <header class="section-head section-head-left" data-reveal>
+      <p class="kicker">Who has to join, and when</p>
+      <h2 class="h2" id="who-title">It depends on your qualifying income</h2>
+      <p>MTD for Income Tax is for sole traders and landlords registered for Self Assessment. You join if your qualifying income is more than the threshold for the tax year HMRC looks at.</p>
+    </header>
+
+    <ol class="timeline" data-reveal data-timeline>
+      <li class="tl-phase">
+        <p class="tl-date">6 April 2026</p>
+        <p class="tl-amount"><span class="num">£50,000</span></p>
+        <p class="tl-basis">Qualifying income over £50,000 in 2024 to 2025</p>
+        <p class="tl-status" data-phase-status="2026-04-06"></p>
+      </li>
+      <li class="tl-phase">
+        <p class="tl-date">6 April 2027</p>
+        <p class="tl-amount"><span class="num">£30,000</span></p>
+        <p class="tl-basis">Qualifying income over £30,000 in 2025 to 2026</p>
+        <p class="tl-status" data-phase-status="2027-04-06"></p>
+      </li>
+      <li class="tl-phase">
+        <p class="tl-date">6 April 2028</p>
+        <p class="tl-amount"><span class="num">£20,000</span></p>
+        <p class="tl-basis">Qualifying income over £20,000 in 2026 to 2027</p>
+        <p class="tl-status" data-phase-status="2028-04-06"></p>
+      </li>
+    </ol>
+
+    <div class="who-rules" data-reveal>
+      <div class="rule-card">
+        <h3><svg class="icon" aria-hidden="true"><use href="#i-pound"/></svg> What counts as qualifying income</h3>
+        <ul class="ticks">
+          <li>Your income from self-employment and from property, <strong>added together</strong>.</li>
+          <li>Before any expenses: it is your turnover and rent, not your profit.</li>
+          <li>UK and foreign property both count if you were UK resident.</li>
+          <li>Own a property jointly? Only <strong>your share</strong> of the rent counts.</li>
+        </ul>
+      </div>
+      <div class="rule-card">
+        <h3><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg> What does not count</h3>
+        <ul class="crosses">
+          <li>Wages from a job taxed through PAYE.</li>
+          <li>Dividends, including from your own company.</li>
+          <li>Your share of profit as a partner in a partnership.</li>
+          <li>The State Pension and private pensions.</li>
+        </ul>
+      </div>
+      <div class="rule-card">
+        <h3><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg> Good to know</h3>
+        <ul class="ticks">
+          <li>HMRC writes to people who need to join, but it is your job to check.</li>
+          <li>Some people are exempt, for example if you are digitally excluded. Some exemptions must be applied for.</li>
+          <li>Partnerships will join later; no date is set yet. Limited companies are not part of MTD for Income Tax.</li>
+          <li>Once in, you can choose to leave if your qualifying income stays under the threshold for three tax years in a row.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-tint" id="checker" aria-labelledby="checker-title">
+  <div class="wrap checker-layout">
+    <header class="section-head section-head-left" data-reveal>
+      <p class="kicker">Check when you join</p>
+      <h2 class="h2" id="checker-title">Put in your figures</h2>
+      <p>Use the turnover and rent for one tax year, before expenses. The checker compares them with that year's threshold. It runs in your browser and sends nothing.</p>
+      <p class="advice-note"><svg class="icon"><use href="#i-info"/></svg> <span>A quick guide, not advice. Exemptions, a business that started or stopped part-way through the year, and other details can change the answer.</span></p>
+    </header>
+    <form class="checker" data-checker novalidate>
+      <div class="field">
+        <label class="field-label" for="ck-year">Tax year</label>
+        <select id="ck-year" name="year" aria-describedby="ck-year-hint">
+          <option value="0">2024 to 2025</option>
+          <option value="1" selected>2025 to 2026</option>
+          <option value="2">2026 to 2027</option>
+        </select>
+        <span class="field-hint" id="ck-year-hint">Each tax year runs from 6 April to the next 5 April.</span>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label class="field-label" for="ck-self">Self-employment turnover</label>
+          <span class="money"><span aria-hidden="true">£</span><input id="ck-self" name="self" type="text" inputmode="decimal" autocomplete="off" placeholder="0" aria-describedby="ck-self-hint"></span>
+          <span class="field-hint" id="ck-self-hint">Sales before expenses. Leave empty if none.</span>
+        </div>
+        <div class="field">
+          <label class="field-label" for="ck-rent">Rent received, your share</label>
+          <span class="money"><span aria-hidden="true">£</span><input id="ck-rent" name="rent" type="text" inputmode="decimal" autocomplete="off" placeholder="0" aria-describedby="ck-rent-hint"></span>
+          <span class="field-hint" id="ck-rent-hint">UK and foreign property, before expenses.</span>
+        </div>
+      </div>
+      <div class="checker-result" data-checker-result aria-live="polite">
+        <p class="checker-empty">Your qualifying income and what it means will appear here.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="section" id="how" aria-labelledby="how-title">
+  <div class="wrap">
+    <header class="section-head" data-reveal>
+      <p class="kicker">What you do in MTD</p>
+      <h2 class="h2" id="how-title">Four steps a year, the same every year</h2>
+      <p>The tax you pay and the dates you pay it do not change. What changes is how often HMRC hears from you.</p>
+    </header>
+    <ol class="how-steps" data-reveal>
+      <li class="how-step">
+        <span class="how-num num">365 <small>days of records</small></span>
+        <h3>Keep digital records</h3>
+        <p>Record your self-employment and property income and expenses in HMRC-recognised software as you go, or in a spreadsheet linked to bridging software.</p>
+      </li>
+      <li class="how-step">
+        <span class="how-num num">4 <small>updates a year</small></span>
+        <h3>Send quarterly updates</h3>
+        <p>Totals of your income and expenses for the tax year so far, sent from your software. Updates are summaries, not tax returns, and no tax is paid with them.</p>
+      </li>
+      <li class="how-step">
+        <span class="how-num num">1 <small>tax return a year</small></span>
+        <h3>Send your tax return by 31 January</h3>
+        <p>After the tax year, through your MTD software. You add other income, such as savings interest or dividends, and any adjustments. You may hear it called the final declaration.</p>
+      </li>
+      <li class="how-step">
+        <span class="how-num num">2 <small>payment dates, as now</small></span>
+        <h3>Pay as you do now</h3>
+        <p>Payment dates stay the same: 31 January, and 31 July if you make payments on account.</p>
+      </li>
+    </ol>
+
+    <div class="quarters" data-reveal>
+      <div class="quarters-head">
+        <h3 class="h3">Quarterly update deadlines, <span data-q-year>2026 to 2027</span></h3>
+        <p>Standard periods run from 6 April and each update covers the year so far. If your accounts run to 31 March, you can pick calendar quarters in your software before your first update.</p>
+      </div>
+      <table class="q-table">
+        <caption class="visually-hidden">Quarterly update periods and deadlines for the current tax year</caption>
+        <thead>
+          <tr><th scope="col">Update</th><th scope="col">Period covered</th><th scope="col">Deadline</th><th scope="col"><span class="visually-hidden">Status</span></th></tr>
+        </thead>
+        <tbody data-q-rows>
+          <tr><th scope="row">1</th><td>6 April to 5 July</td><td>7 August</td><td></td></tr>
+          <tr><th scope="row">2</th><td>6 April to 5 October</td><td>7 November</td><td></td></tr>
+          <tr><th scope="row">3</th><td>6 April to 5 January</td><td>7 February</td><td></td></tr>
+          <tr><th scope="row">4</th><td>6 April to 5 April</td><td>7 May</td><td></td></tr>
+        </tbody>
+      </table>
+      <p class="quarters-note"><svg class="icon icon-sm"><use href="#i-check"/></svg> <span>Spotted a mistake? Correct your records and it goes into the next update. You do not need to resend earlier ones.</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-ink" id="penalties" aria-labelledby="pen-title">
+  <div class="wrap">
+    <header class="section-head" data-reveal>
+      <p class="kicker kicker-light">Penalties</p>
+      <h2 class="h2" id="pen-title">A gentle first year, then points</h2>
+      <p>Late updates and returns earn penalty points, like a driving licence. Points only turn into a fine once you reach the limit.</p>
+    </header>
+    <ul class="pen-grid" data-reveal>
+      <li>
+        <p class="pen-num num">0</p>
+        <h3>Points for late updates in 2026 to 2027</h3>
+        <p>No penalty points for a late quarterly update in the first year. You still need to send all four before your tax return.</p>
+      </li>
+      <li>
+        <p class="pen-num num">4 = £200</p>
+        <h3>From 2027 to 2028</h3>
+        <p>One point for each missed update or tax return deadline. At 4 points you pay £200, and another £200 for each deadline missed after that.</p>
+      </li>
+      <li>
+        <p class="pen-num num">24</p>
+        <h3>Months until a point expires</h3>
+        <p>Below 4 points, each point is removed 24 months after the deadline you missed.</p>
+      </li>
+    </ul>
+    <p class="pen-note" data-reveal>Paying late is separate: penalties start after 15 days (30 days in your first year under the new rules), and HMRC charges interest from the day after the payment was due.</p>
+  </div>
+</section>
+
+<section class="section" id="software" aria-labelledby="soft-title">
+  <div class="wrap soft-layout">
+    <div class="soft-copy" data-reveal>
+      <p class="kicker">Software</p>
+      <h2 class="h2" id="soft-title">You need HMRC-recognised software</h2>
+      <p>Your records, your quarterly updates and your tax return all go through software that works with MTD for Income Tax. HMRC publishes a list of recognised products, and a finder that asks a few questions to narrow it down. HMRC does not recommend any one product.</p>
+      <ul class="soft-ways">
+        <li><strong>All-in-one software</strong> keeps your records and sends everything to HMRC.</li>
+        <li><strong>Bridging software</strong> sends updates from the spreadsheet you already keep.</li>
+        <li><strong>Free products</strong> exist for simple tax affairs, though some limit what you can do, such as the number of transactions.</li>
+      </ul>
+      <p><a class="link-out" href="https://www.gov.uk/guidance/find-software-thats-compatible-with-making-tax-digital-for-income-tax">HMRC's list of recognised software, on GOV.UK <svg class="icon icon-sm"><use href="#i-external"/></svg></a></p>
+    </div>
+    <section class="soft-card" aria-labelledby="soft-card-title" data-reveal>
+      <p class="soft-card-kicker">Software we can set you up with</p>
+      <h3 class="soft-card-title" id="soft-card-title">EasyTaxer</h3>
+      <p>HMRC-recognised software for MTD for Income Tax, made for sole traders and landlords. Keep digital records, send quarterly updates and submit your end-of-year return, with a running tax estimate as you go. It also has a view for accountants acting for clients.</p>
+      <p><a class="btn btn-outline btn-sm" href="https://www.easytaxer.com">Visit easytaxer.com <svg class="icon icon-sm"><use href="#i-external"/></svg></a></p>
+      <p class="soft-card-note">One option among many: we also set clients up in other recognised products, or work from your spreadsheet. EasyTaxer is made by Agile Release, who built this sample website.</p>
+    </section>
+  </div>
+</section>
+
+<section class="section section-tint" id="help" aria-labelledby="help-title">
+  <div class="wrap help-layout">
+    <header class="section-head section-head-left" data-reveal>
+      <p class="kicker">How we help</p>
+      <h2 class="h2" id="help-title">You keep the receipts. We do the quarters.</h2>
+      <p>Our Making Tax Digital packages start at <strong><span class="num" data-mtd-from="landlord">£55</span> a month</strong> for landlords and <strong><span class="num" data-mtd-from="sole">£65</span> a month</strong> for sole traders, plus VAT, with the year-end tax return included.</p>
+      <div class="help-actions">
+        <a class="btn btn-ochre" href="packages.html#finder">Find your package <svg class="icon"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-outline" href="enquire.html">Ask us a question</a>
+      </div>
+    </header>
+    <ol class="help-list" data-reveal>
+      <li><strong>Check</strong> whether and when you need to join, every year, from your real figures.</li>
+      <li><strong>Sign you up</strong> with HMRC, as your agent.</li>
+      <li><strong>Set up your software</strong>, yours or one we choose with you, connect your bank feed and show you around in 30 minutes.</li>
+      <li><strong>Check your records</strong> every quarter, ask about anything odd and send the update for you.</li>
+      <li><strong>Send your tax return</strong> and tell you the bill, months before 31 January.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="section section-tight" id="sources" aria-labelledby="sources-title">
+  <div class="wrap sources">
+    <h2 class="h3" id="sources-title">Sources</h2>
+    <p>Checked on 10 November 2026 against HMRC guidance on GOV.UK. The rules change, so check the latest guidance or ask us before you rely on them.</p>
+    <ul>
+      <li><a href="https://www.gov.uk/guidance/find-out-if-and-when-you-need-to-use-making-tax-digital-for-income-tax">Find out if and when you need to use Making Tax Digital for Income Tax</a> (updated 26 March 2026)</li>
+      <li><a href="https://www.gov.uk/guidance/work-out-your-qualifying-income-for-making-tax-digital-for-income-tax">Work out your qualifying income for Making Tax Digital for Income Tax</a> (updated 11 September 2026)</li>
+      <li><a href="https://www.gov.uk/guidance/use-making-tax-digital-for-income-tax/send-quarterly-updates">Send quarterly updates</a> and <a href="https://www.gov.uk/guidance/use-making-tax-digital-for-income-tax/submit-your-tax-return">Submit your tax return</a> (updated 16 October 2026)</li>
+      <li><a href="https://www.gov.uk/guidance/penalties-for-making-tax-digital-for-income-tax">Penalties for Making Tax Digital for Income Tax</a> (updated 30 March 2026)</li>
+      <li><a href="https://www.gov.uk/guidance/find-software-thats-compatible-with-making-tax-digital-for-income-tax">Choose the right software for Making Tax Digital for Income Tax</a> (updated 13 July 2026)</li>
+    </ul>
+    <p class="sources-licence">Contains public sector information licensed under the Open Government Licence v3.0. This page is general information, not tax advice for your situation.</p>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a class="brand brand-light" href="index.html" aria-label="Quarterday, home"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><circle class="brand-ring" cx="16" cy="16" r="12.5"/><path class="brand-quarter" d="M16 16V3.5A12.5 12.5 0 0 0 3.5 16Z"/><path class="brand-rule" d="M16 16h12.5M16 16v12.5"/></svg><span class="brand-text"><span class="brand-name">Quarterday</span><span class="brand-sub">Accountants &middot; Hammersmith</span></span></a>
+      <p>Accountants and bookkeepers for sole traders, freelancers, landlords and small limited companies.</p>
+      <p class="footer-address">First floor, 27 Penwick Row<br>Hammersmith, London W6</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="packages.html">Packages and fees</a>
+      <a href="packages.html#finder">Package finder</a>
+      <a href="mtd.html">Making Tax Digital</a>
+      <a href="deadlines.html">Tax deadlines</a>
+      <a href="index.html#switching">Switching to us</a>
+      <a href="enquire.html">Contact</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+    <div class="footer-contact">
+      <a href="https://wa.me/447700900131" data-contact="whatsapp"><svg class="icon icon-sm"><use href="#i-chat"/></svg> WhatsApp 07700 900131</a>
+      <a href="tel:+442079460131" data-contact="phone"><svg class="icon icon-sm"><use href="#i-phone"/></svg> 020 7946 0131</a>
+      <a href="mailto:hello@quarterday.example" data-contact="email"><svg class="icon icon-sm"><use href="#i-mail"/></svg> hello@quarterday.example</a>
+    </div>
+    <p class="footer-note">General information about UK tax, not advice for your situation. Rules checked on GOV.UK on 10 November 2026.</p>
+    <p class="footer-credit">A sample website by <a href="https://agilerelease.co.uk/#websites">Agile Release</a>. Quarterday is made up. &copy; 2026 Agile Release Limited. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

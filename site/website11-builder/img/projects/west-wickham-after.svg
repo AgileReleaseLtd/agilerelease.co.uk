@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+<defs>
+<pattern id="earth" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="14" height="14" fill="#d8d0bf"/><line x1="0" y1="0" x2="0" y2="14" stroke="#c9bfaa" stroke-width="2"/></pattern>
+<pattern id="cut" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="7" height="7" fill="#ece6da"/><line x1="0" y1="0" x2="0" y2="7" stroke="#5d6167" stroke-width="1.6"/></pattern>
+<pattern id="cutred" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="7" height="7" fill="#f3d8cd"/><line x1="0" y1="0" x2="0" y2="7" stroke="#b93a1f" stroke-width="1.6"/></pattern>
+<pattern id="stock" width="30" height="12" patternUnits="userSpaceOnUse"><rect width="30" height="12" fill="#d6b57c"/><path d="M0 0.5H30M0 6.5H30M7 0.5V6.5M22 6.5V12.5" stroke="#b9975d" stroke-width="1"/></pattern>
+<pattern id="redbrick" width="30" height="12" patternUnits="userSpaceOnUse"><rect width="30" height="12" fill="#b93a1f"/><path d="M0 0.5H30M0 6.5H30M7 0.5V6.5M22 6.5V12.5" stroke="#8f2c17" stroke-width="1"/></pattern>
+<pattern id="brick1930" width="30" height="12" patternUnits="userSpaceOnUse"><rect width="30" height="12" fill="#c98a6b"/><path d="M0 0.5H30M0 6.5H30M7 0.5V6.5M22 6.5V12.5" stroke="#a8694c" stroke-width="1"/></pattern>
+<pattern id="pebble" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#e9e4d8"/><circle cx="2" cy="3" r="1" fill="#d8d0c0"/><circle cx="7" cy="7" r="1.1" fill="#d8d0c0"/><circle cx="8" cy="2" r="0.7" fill="#d8d0c0"/></pattern>
+<pattern id="tiles" width="40" height="20" patternUnits="userSpaceOnUse"><rect width="40" height="20" fill="#b9b5aa"/><path d="M0 19.5H40M0 9.5H40M10 0V9.5M30 9.5V20" stroke="#5d6167" stroke-width="1"/></pattern>
+<pattern id="slate" width="26" height="12" patternUnits="userSpaceOnUse"><rect width="26" height="12" fill="#6e747b"/><path d="M0 11.5H26M13 0V11.5" stroke="#555b62" stroke-width="1"/></pattern>
+<pattern id="rooftile" width="22" height="12" patternUnits="userSpaceOnUse"><rect width="22" height="12" fill="#a5543b"/><path d="M0 11.5H22M11 0V11.5" stroke="#843f2b" stroke-width="1.2"/></pattern>
+<pattern id="insul" width="24" height="16" patternUnits="userSpaceOnUse"><rect width="24" height="16" fill="#e7d8a8"/><path d="M0 8C4 2 8 2 12 8S20 14 24 8" fill="none" stroke="#c9b67d" stroke-width="1.4"/></pattern>
+<pattern id="grid" width="25" height="25" patternUnits="userSpaceOnUse"><path d="M25 0V25H0" fill="none" stroke="#ece9e1" stroke-width="1"/></pattern>
+</defs>
+<rect width="800" height="600" fill="#fbfaf6"/>
+<rect width="800" height="600" fill="url(#grid)"/>
+<rect x="0" y="520" width="800" height="80" fill="url(#earth)" stroke="none" stroke-width="0"/>
+<rect x="150" y="230" width="470" height="140" fill="#f2ede2" stroke="#25282c" stroke-width="2"/>
+<rect x="150" y="370" width="470" height="150" fill="url(#brick1930)" stroke="#25282c" stroke-width="2"/>
+<rect x="110" y="260" width="40" height="260" fill="url(#brick1930)" stroke="#25282c" stroke-width="1.5"/>
+<rect x="110" y="260" width="40" height="110" fill="#f2ede2" stroke="#25282c" stroke-width="1.5"/>
+<polygon points="104,262 150,240 150,262" fill="url(#rooftile)" stroke="#25282c" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="150,232 385,80 606,80 606,206 630,232" fill="#f2ede2" stroke="#25282c" stroke-width="2.5" stroke-linejoin="round"/>
+<polygon points="136,236 385,72 385,82 150,234" fill="url(#rooftile)" stroke="#25282c" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="383" y="70" width="232" height="12" fill="#e9e3d6" stroke="#25282c" stroke-width="2"/>
+<polygon points="606,206 642,234 606,234" fill="url(#rooftile)" stroke="#25282c" stroke-width="1.5" stroke-linejoin="round"/>
+<line x1="606" y1="82" x2="606" y2="206" stroke="#25282c" stroke-width="1.2"/>
+<rect x="330" y="130" width="110" height="80" fill="#c4dde5" stroke="#25282c" stroke-width="2.5"/>
+<line x1="385.0" y1="130" x2="385.0" y2="210" stroke="#25282c" stroke-width="2.5"/>
+<rect x="324" y="210" width="122" height="7" fill="#ffffff" stroke="#25282c" stroke-width="1.2"/>
+<g stroke="#ffffff" stroke-width="3" opacity="0.55" stroke-linecap="round"><line x1="346.8" y1="185.5" x2="362.2" y2="149.2"/><line x1="354.72" y1="188.8" x2="365.28" y2="163.72"/></g>
+<rect x="360" y="40" width="40" height="34" fill="url(#brick1930)" stroke="#25282c" stroke-width="1.5"/>
+<rect x="354" y="34" width="52" height="9" fill="#ece6da" stroke="#25282c" stroke-width="1.5"/>
+<line x1="650" y1="80" x2="670" y2="80" stroke="#b93a1f" stroke-width="1"/>
+<line x1="650" y1="232" x2="670" y2="232" stroke="#b93a1f" stroke-width="1"/>
+<line x1="660" y1="72" x2="660" y2="240" stroke="#b93a1f" stroke-width="1.2"/>
+<line x1="655" y1="85" x2="665" y2="75" stroke="#b93a1f" stroke-width="2"/>
+<line x1="655" y1="237" x2="665" y2="227" stroke="#b93a1f" stroke-width="2"/>
+<g transform="translate(656 156.0) rotate(-90)">
+<rect x="-27.0" y="-14" width="54" height="20" fill="#fbfaf6" stroke="none" stroke-width="0"/>
+<text x="0" y="1" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="0.5" fill="#b93a1f" text-anchor="middle">2.6 m</text>
+</g>
+<text x="500" y="160" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="0.5" fill="#b93a1f" text-anchor="middle">NEW GABLE</text>
+<rect x="240" y="270" width="70" height="70" fill="#c4dde5" stroke="#25282c" stroke-width="2.5"/>
+<rect x="470" y="270" width="70" height="70" fill="#c4dde5" stroke="#25282c" stroke-width="2.5"/>
+<rect x="420" y="400" width="60" height="120" fill="#7f8c7a" stroke="#25282c" stroke-width="1.5"/>
+<rect x="430" y="410" width="40" height="34" fill="#c4dde5" stroke="#25282c" stroke-width="1.2"/>
+<polygon points="410,398 490,398 480,386 420,386" fill="#ece6da" stroke="#25282c" stroke-width="1.5" stroke-linejoin="round"/>
+<rect x="230" y="410" width="90" height="60" fill="#c4dde5" stroke="#25282c" stroke-width="2.5"/>
+<line x1="275.0" y1="410" x2="275.0" y2="470" stroke="#25282c" stroke-width="2.5"/>
+<rect x="606" y="232" width="7" height="288" fill="#2c3036" stroke="none" stroke-width="0"/>
+<rect x="40" y="520" width="560" height="8" fill="#d4cdbf" stroke="#25282c" stroke-width="1"/>
+<rect x="640" y="430" width="160" height="90" fill="#d9b98a" stroke="#25282c" stroke-width="1.5"/>
+<line x1="640" y1="430" x2="640" y2="520" stroke="#5d6167" stroke-width="1"/>
+<line x1="656" y1="430" x2="656" y2="520" stroke="#5d6167" stroke-width="1"/>
+<line x1="672" y1="430" x2="672" y2="520" stroke="#5d6167" stroke-width="1"/>
+<line x1="688" y1="430" x2="688" y2="520" stroke="#5d6167" stroke-width="1"/>
+<line x1="704" y1="430" x2="704" y2="520" stroke="#5d6167" stroke-width="1"/>
+<line x1="720" y1="430" x2="720" y2="520" stroke="#5d6167" stroke-width="1"/>
+<line x1="736" y1="430" x2="736" y2="520" stroke="#5d6167" stroke-width="1"/>
+<line x1="752" y1="430" x2="752" y2="520" stroke="#5d6167" stroke-width="1"/>
+<line x1="768" y1="430" x2="768" y2="520" stroke="#5d6167" stroke-width="1"/>
+<line x1="784" y1="430" x2="784" y2="520" stroke="#5d6167" stroke-width="1"/>
+<text x="80" y="580" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="0.5" fill="#5d6167" text-anchor="start">FRONT</text>
+<text x="720" y="580" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="0.5" fill="#5d6167" text-anchor="end">GARDEN</text>
+<g transform="translate(70 520) scale(0.8)"><path d="M0 -30 C-22 -46 -30 -70 -18 -92 C-8 -74 -2 -54 0 -30Z" fill="#6f8f5f" stroke="#25282c" stroke-width="1.2"/><path d="M2 -30 C14 -56 34 -66 46 -64 C36 -48 22 -36 2 -30Z" fill="#6f8f5f" stroke="#25282c" stroke-width="1.2"/><path d="M0 -32 C4 -62 14 -84 30 -100 C30 -76 20 -50 0 -32Z" fill="#6f8f5f" stroke="#25282c" stroke-width="1.2"/><path d="M-16 -30 H18 L13 0 H-11Z" fill="#b8673f" stroke="#25282c" stroke-width="1.4"/></g>
+</svg>

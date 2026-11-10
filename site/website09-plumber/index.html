@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pinn Plumbing &amp; Heating | Boilers, heating and plumbing in Pinner and Harrow (sample website)</title>
+<meta name="description" content="Gas Safe registered plumbing and heating engineers in Pinner, Harrow and Ruislip. Boiler services, repairs, leaks and new boilers, with prices up front. A sample website by Agile Release.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0c3a42">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="preload" href="css/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="css/fonts/overpass-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js" defer></script>
+<script src="js/time.js" defer></script>
+<script src="js/site.js" defer></script>
+</head>
+<body class="page-home">
+
+<svg class="sprite" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.6 3.5h2.8l1.6 4.3-2 1.3a10.5 10.5 0 0 0 5.9 5.9l1.3-2 4.3 1.6v2.8a2 2 0 0 1-2 2A16.6 16.6 0 0 1 4.6 5.5a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M12 3.5a8.5 8.5 0 0 0-7.3 12.8L3.5 20.5l4.3-1.2A8.5 8.5 0 1 0 12 3.5Z"/><path d="M8.5 10.5h7M8.5 13.5h4.5"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 7 8.5-7"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-cross" viewBox="0 0 24 24"><path d="M7 7l10 10M17 7 7 17"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-chevron-left" viewBox="0 0 24 24"><path d="m14.5 6-6 6 6 6"/></symbol>
+  <symbol id="i-chevron-right" viewBox="0 0 24 24"><path d="m9.5 6 6 6-6 6"/></symbol>
+  <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3.5s6 6.4 6 11a6 6 0 0 1-12 0c0-4.6 6-11 6-11Z"/><path d="M9.2 14.8a2.9 2.9 0 0 0 2.6 2.7"/></symbol>
+  <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 21.5c-3.6 0-6.5-2.7-6.5-6.3 0-3.9 3.3-6 4.3-10.7 2.3 1.6 3.4 3.8 3.4 6 .9-.6 1.6-1.6 1.9-3 1.9 1.8 3.4 4.6 3.4 7.7 0 3.6-2.9 6.3-6.5 6.3Z"/><path d="M12 21.5a3 3 0 0 1-3-3c0-1.8 1.6-2.8 3-4.6 1.4 1.8 3 2.8 3 4.6a3 3 0 0 1-3 3Z"/></symbol>
+  <symbol id="i-radiator" viewBox="0 0 24 24"><rect x="4" y="5" width="4" height="14" rx="2"/><rect x="10" y="5" width="4" height="14" rx="2"/><rect x="16" y="5" width="4" height="14" rx="2"/><path d="M2 9h2M20 9h2M6 19v2M18 19v2"/></symbol>
+  <symbol id="i-tap" viewBox="0 0 24 24"><path d="M3 8h9a5 5 0 0 1 5 5v1.5M3 11.5h8a2.5 2.5 0 0 1 2.5 2.5v.5"/><path d="M12.5 14.5h5.5M8 8V4.5M5.5 4.5h5"/><path d="M15.5 18v1.5"/></symbol>
+  <symbol id="i-boiler" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="15" rx="2"/><path d="M8.5 7h7"/><circle cx="12" cy="12.5" r="2.5"/><path d="M8.5 18v3M12 18v3M15.5 18v3"/></symbol>
+  <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76Z"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M3.5 8.5A1.5 1.5 0 0 1 5 7h2.5L9 4.5h6L16.5 7H19a1.5 1.5 0 0 1 1.5 1.5v9A1.5 1.5 0 0 1 19 19H5a1.5 1.5 0 0 1-1.5-1.5Z"/><circle cx="12" cy="12.8" r="3.4"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v5.5c0 4.5 3 8 7 9.5 4-1.5 7-5 7-9.5V6Z"/><path d="m9 12 2.2 2.2L15.5 10"/></symbol>
+  <symbol id="i-id" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><rect x="6" y="8.5" width="5" height="6.5" rx="1"/><path d="M14 10h4M14 13.5h3"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M10.3 4.4 2.9 17.6A2 2 0 0 0 4.6 20.5h14.8a2 2 0 0 0 1.7-2.9L13.7 4.4a2 2 0 0 0-3.4 0Z"/><path d="M12 9.5v4.5M12 17v.2"/></symbol>
+  <symbol id="i-valve" viewBox="0 0 24 24"><path d="M2.5 14h3M18.5 14h3"/><path d="M5.5 9.5 18.5 18.5V9.5L5.5 18.5Z"/><path d="M12 14V5.5M8.5 5.5h7"/></symbol>
+  <symbol id="i-pound" viewBox="0 0 24 24"><path d="M16.5 6.8A3.6 3.6 0 0 0 9.8 8.5V18M7 12.5h6.5M7 18h10.5"/></symbol>
+  <symbol id="i-van" viewBox="0 0 24 24"><path d="M2.5 6.5h11.5v10H2.5zM14 9.5h4.2l3.3 3.6v3.4H14"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17.5" cy="17.5" r="1.8"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 3h8.5L19 7.5V21H6Z"/><path d="M14 3v5h5M9 12.5h6.5M9 16h6.5"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M4 10.5 12 4l8 6.5V20H4Z"/><path d="M10 20v-5.5h4V20"/></symbol>
+  <symbol id="i-thermo" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="m12 12 3.6-3.6M12 5.5v1.2M5.5 12h1.2M17.3 12h1.2"/></symbol>
+  <symbol id="i-question" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.6a2.5 2.5 0 1 1 3.5 2.2c-.7.4-1.1.9-1.1 1.8v.4M12 16.8v.3"/></symbol>
+  <symbol id="i-clip" viewBox="0 0 24 24"><path d="m20 11.5-8 8a5 5 0 0 1-7-7l8.5-8.5a3.3 3.3 0 0 1 4.7 4.7L9.7 17.2a1.7 1.7 0 0 1-2.4-2.4L15 7"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<aside class="sample-bar" aria-label="About this sample website">
+  <div class="wrap sample-bar-inner">
+    <p><strong>Sample website by Agile Release.</strong> Pinn Plumbing &amp; Heating is not a real business: the prices, people and numbers are examples.</p>
+    <a href="https://agilerelease.co.uk/#websites">Get a site like this <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a>
+  </div>
+</aside>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Pinn Plumbing and Heating, home">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect class="brand-bg" width="40" height="40" rx="11"/><path class="brand-pipe" d="M12.5 32V8.5h8a8 8 0 0 1 0 16h-8"/><path class="brand-drop" d="M20.5 12.6s3.3 3.5 3.3 5.8a3.3 3.3 0 0 1-6.6 0c0-2.3 3.3-5.8 3.3-5.8Z"/></svg>
+      <span class="brand-text"><span class="brand-name">Pinn</span><span class="brand-sub">Plumbing &amp; Heating</span></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#prices">Prices</a></li>
+        <li><a href="boiler-service.html">Boiler service</a></li>
+        <li><a href="quote.html">Get a quote</a></li>
+        <li><a href="#areas">Areas</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <a class="header-call" href="tel:+442079460583" data-contact="phone"><span class="header-call-label">24-hour line</span> <span class="header-call-number">020 7946 0583</span></a>
+    <a class="btn btn-signal btn-sm header-emergency" href="emergency.html"><svg class="icon"><use href="#i-alert"/></svg> Emergency?</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+      <svg class="icon"><use href="#i-menu"/></svg><span class="visually-hidden">Menu</span>
+    </button>
+  </div>
+</header>
+
+<nav class="callbar" aria-label="Call us">
+  <a class="callbar-btn callbar-call" href="tel:+442079460583" data-contact="phone"><svg class="icon"><use href="#i-phone"/></svg> <span>Call, 24 hours</span></a>
+  <a class="callbar-btn callbar-alt" href="emergency.html"><svg class="icon"><use href="#i-alert"/></svg> <span>Emergency help</span></a>
+</nav>
+
+<main id="main">
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <p class="kicker kicker-light"><svg class="icon"><use href="#i-pin"/></svg> Pinner, Harrow and Ruislip</p>
+      <h1 class="display">Warm homes.<br><span class="display-accent">Dry floors.</span></h1>
+      <p class="lead">Boilers, central heating and plumbing from a small, Gas Safe registered firm. You get a price before we start, an engineer who turns up when we said, and a phone that is answered 24 hours a day.</p>
+      <div class="hero-actions">
+        <a class="btn btn-signal" href="boiler-service.html"><svg class="icon"><use href="#i-calendar"/></svg> Book a boiler service</a>
+        <a class="btn btn-ghost-light" href="quote.html"><svg class="icon"><use href="#i-camera"/></svg> Get a quote with photos</a>
+      </div>
+      <ul class="hero-facts">
+        <li><svg class="icon"><use href="#i-pound"/></svg> <span>Boiler service <strong data-price="service">£95</strong>, all in</span></li>
+        <li><svg class="icon"><use href="#i-shield"/></svg> <span>12 months' guarantee on our work</span></li>
+        <li><svg class="icon"><use href="#i-id"/></svg> <span>Gas Safe ID shown at the door</span></li>
+      </ul>
+    </div>
+
+    <figure class="hero-art" aria-hidden="true">
+      <svg class="schematic" viewBox="0 0 580 480">
+        <defs>
+          <pattern id="sx-grid" width="20" height="20" patternUnits="userSpaceOnUse"><circle class="sx-dot" cx="1.5" cy="1.5" r="1.1"/></pattern>
+        </defs>
+        <rect class="sx-paper" x="0" y="0" width="580" height="480" rx="24" fill="url(#sx-grid)"/>
+
+        <path class="sx-cold" d="M42 452V24H540V138"/>
+        <path class="sx-cold" d="M42 176H60"/>
+        <path class="sx-hot" d="M190 70V50H450V138"/>
+        <path class="sx-gas" d="M82 452V270"/>
+        <path class="sx-ret" d="M132 270V426H526V362M376 362V426"/>
+        <path class="sx-hot" d="M108 270V400H122a10 10 0 0 1 20 0H366a10 10 0 0 1 20 0H438V362M288 400V362"/>
+        <path class="sx-wire" d="M220 196H322"/>
+
+        <rect class="sx-boiler" x="60" y="70" width="160" height="200" rx="16"/>
+        <rect class="sx-panel" x="80" y="90" width="120" height="38" rx="8"/>
+        <text class="sx-readout" x="134" y="115" text-anchor="middle">FLOW 65°C</text>
+        <circle class="sx-led" cx="186" cy="109" r="4"/>
+        <circle class="sx-gauge" cx="140" cy="196" r="36"/>
+        <path class="sx-tick" d="M114 211 110.6 213M120.7 173 118.1 170M159.3 173 161.9 170M166 211 169.4 213"/>
+        <path class="sx-zone" d="M123.3 176.1A26 26 0 0 1 140 170"/>
+        <path class="sx-needle" d="M140 196 130.2 174.1"/>
+        <circle class="sx-hub" cx="140" cy="196" r="3.5"/>
+        <text class="sx-label" x="140" y="221" text-anchor="middle">BAR</text>
+        <text class="sx-label sx-label-strong" x="140" y="255" text-anchor="middle">1.2 BAR</text>
+
+        <g class="sx-rad">
+          <rect x="280" y="282" width="16" height="80" rx="8"/><rect x="302" y="282" width="16" height="80" rx="8"/><rect x="324" y="282" width="16" height="80" rx="8"/><rect x="346" y="282" width="16" height="80" rx="8"/><rect x="368" y="282" width="16" height="80" rx="8"/>
+          <rect x="430" y="282" width="16" height="80" rx="8"/><rect x="452" y="282" width="16" height="80" rx="8"/><rect x="474" y="282" width="16" height="80" rx="8"/><rect x="496" y="282" width="16" height="80" rx="8"/><rect x="518" y="282" width="16" height="80" rx="8"/>
+        </g>
+        <path class="sx-valve" d="M282 373H294L282 387H294ZM370 373H382L370 387H382ZM432 373H444L432 387H444ZM520 373H532L520 387H532Z"/>
+        <path class="sx-valve sx-valve-cold" d="M35 400H49L35 416H49Z"/>
+        <path class="sx-valve sx-valve-gas" d="M75 400H89L75 416H89Z"/>
+
+        <circle class="sx-stat" cx="346" cy="196" r="24"/>
+        <text class="sx-readout" x="346" y="201" text-anchor="middle">20°</text>
+
+        <g class="sx-tap">
+          <rect x="441" y="138" width="18" height="18" rx="5"/><path d="M459 149H471a6 6 0 0 1 6 6v6M441 147H432M432 141V153"/>
+          <rect x="531" y="138" width="18" height="18" rx="5"/><path d="M549 149H561a6 6 0 0 1 6 6v6M531 147H522M522 141V153"/>
+        </g>
+        <path class="sx-drop" d="M567 172s5 5.6 5 9a5 5 0 0 1-10 0c0-3.4 5-9 5-9Z"/>
+
+        <text class="sx-label" x="300" y="14">COLD WATER</text>
+        <text class="sx-label" x="300" y="42">HOT WATER 55°C</text>
+        <text class="sx-label" x="196" y="392">FLOW</text>
+        <text class="sx-label" x="196" y="446">RETURN</text>
+        <text class="sx-label" x="346" y="240" text-anchor="middle">THERMOSTAT</text>
+        <text class="sx-label" x="30" y="446" transform="rotate(-90 30 446)">MAINS WATER IN</text>
+        <text class="sx-label" x="94" y="452">GAS IN</text>
+      </svg>
+    </figure>
+  </div>
+</section>
+
+<section class="triage" aria-labelledby="triage-title">
+  <div class="wrap">
+    <div class="triage-card">
+      <div class="triage-head">
+        <h2 class="triage-title" id="triage-title"><svg class="icon"><use href="#i-alert"/></svg> Is it an emergency?</h2>
+        <p>Pick what is happening and we will tell you what to do in the next five minutes.</p>
+      </div>
+      <ul class="triage-grid">
+        <li>
+          <a class="tile tile-leak" href="emergency.html#leak">
+            <span class="tile-icon"><svg class="icon"><use href="#i-drop"/></svg></span>
+            <span class="tile-title">Water is leaking</span>
+            <span class="tile-text">Turn off the stopcock first</span>
+            <span class="tile-go">What to do <svg class="icon icon-sm"><use href="#i-arrow"/></svg></span>
+          </a>
+        </li>
+        <li class="tile tile-gas">
+          <span class="tile-icon"><svg class="icon"><use href="#i-flame"/></svg></span>
+          <span class="tile-title">I can smell gas</span>
+          <span class="tile-text">Get out, then call the National Gas Emergency Service</span>
+          <a class="tile-call" href="tel:0800111999"><svg class="icon"><use href="#i-phone"/></svg> 0800 111 999</a>
+          <a class="tile-more" href="emergency.html#gas">What to do <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a>
+        </li>
+        <li>
+          <a class="tile tile-heat" href="emergency.html#heating">
+            <span class="tile-icon"><svg class="icon"><use href="#i-radiator"/></svg></span>
+            <span class="tile-title">No heating or hot water</span>
+            <span class="tile-text">Five checks before you call</span>
+            <span class="tile-go">What to do <svg class="icon icon-sm"><use href="#i-arrow"/></svg></span>
+          </a>
+        </li>
+        <li>
+          <a class="tile tile-call-us" href="tel:+442079460583" data-contact="phone">
+            <span class="tile-icon"><svg class="icon"><use href="#i-phone"/></svg></span>
+            <span class="tile-title">Call us, 24 hours</span>
+            <span class="tile-text mono">020 7946 0583</span>
+            <span class="tile-go">A person answers, day and night</span>
+          </a>
+        </li>
+      </ul>
+      <p class="triage-foot"><svg class="icon"><use href="#i-clock"/></svg> <span data-rate-now>Emergency call-outs from £95 for the first hour.</span> <a href="emergency.html#rates">Out-of-hours prices</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="wrap">
+    <header class="section-head" data-reveal>
+      <p class="kicker"><svg class="icon"><use href="#i-valve"/></svg> What we do</p>
+      <h2 class="h2">Gas, heating and water, done by people who know them</h2>
+      <p>Three of us, two vans and a lot of spare parts. We work in homes and flats across Pinner, Harrow, Ruislip and the streets around them.</p>
+    </header>
+    <ul class="service-grid" data-reveal>
+      <li class="service">
+        <svg class="service-icon"><use href="#i-boiler"/></svg>
+        <h3>Boiler servicing and repairs</h3>
+        <p>All the main makes. We carry common parts in the van, so most repairs are finished on the first visit.</p>
+        <p class="service-price">Service <strong data-price="service">£95</strong></p>
+        <a class="service-link" href="boiler-service.html">Book a service <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a>
+      </li>
+      <li class="service">
+        <svg class="service-icon"><use href="#i-flame"/></svg>
+        <h3>New boilers</h3>
+        <p>A free survey, a written fixed price and a choice of reliable boilers, usually fitted in a day. We register it with Building Control for you.</p>
+        <p class="service-price">Combi <strong data-price="boiler">from £2,650</strong></p>
+        <a class="service-link" href="quote.html?job=new-boiler">Ask for a survey <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a>
+      </li>
+      <li class="service">
+        <svg class="service-icon"><use href="#i-radiator"/></svg>
+        <h3>Radiators and heating</h3>
+        <p>Cold radiators, noisy pipes, new valves and smart thermostats. Power flushes for sludgy old systems.</p>
+        <p class="service-price">Power flush <strong data-price="flush">£495</strong></p>
+        <a class="service-link" href="quote.html?job=heating">Get a quote <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a>
+      </li>
+      <li class="service">
+        <svg class="service-icon"><use href="#i-drop"/></svg>
+        <h3>Leaks and burst pipes</h3>
+        <p>Found, stopped and repaired, day or night. We can fit isolating valves too, so next time you turn off one tap, not the whole house.</p>
+        <p class="service-price">First hour <strong data-rate="day.firstHour">£95</strong></p>
+        <a class="service-link" href="emergency.html#leak">Leaking now? <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a>
+      </li>
+      <li class="service">
+        <svg class="service-icon"><use href="#i-tap"/></svg>
+        <h3>Taps, toilets and showers</h3>
+        <p>Dripping taps, toilets that keep running, weak showers and new fittings you have bought yourself.</p>
+        <p class="service-price">New tap fitted <strong data-price="tap">£125</strong></p>
+        <a class="service-link" href="quote.html?job=fixtures">Get a quote <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a>
+      </li>
+      <li class="service">
+        <svg class="service-icon"><use href="#i-doc"/></svg>
+        <h3>Landlords and letting agents</h3>
+        <p>Gas safety certificates (CP12) with a reminder before the next one is due. We can arrange the visit with your tenants.</p>
+        <p class="service-price">CP12 <strong data-price="cp12">£80</strong></p>
+        <a class="service-link" href="boiler-service.html?job=cp12">Book a CP12 <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a>
+      </li>
+    </ul>
+    <p class="not-us" data-reveal><strong>What we do not do:</strong> oil boilers, heat pumps, or blocked drains and sewers outside your home (your water company deals with shared drains). We will gladly point you to someone who does.</p>
+  </div>
+</section>
+
+<section class="section section-tint" id="prices">
+  <div class="wrap">
+    <header class="section-head" data-reveal>
+      <p class="kicker"><svg class="icon"><use href="#i-valve"/></svg> Prices</p>
+      <h2 class="h2">Prices you can see before we come</h2>
+      <p>Every price includes VAT. Parts are extra at what we pay for them, and we show you the price before we fit anything.</p>
+    </header>
+    <div class="prices">
+      <div class="price-block" data-reveal>
+        <h3 class="block-title"><svg class="icon"><use href="#i-clock"/></svg> Call-outs and hourly work</h3>
+        <p class="block-intro">No separate call-out fee. The first hour covers getting to you and the first hour on the job; after that we charge by the half hour.</p>
+        <ol class="rates" data-rates>
+          <li class="rate">Working hours: £95 for the first hour.</li>
+        </ol>
+        <p class="worked worked-inline"><span class="worked-label">Example</span> A leak on a Sunday evening that takes 1 hour 20 minutes: <span data-rate="night.firstHour">£195</span> plus one half hour at <span data-rate="night.halfHour">£80</span> comes to <strong data-example-total>£275</strong>, plus parts.</p>
+        <p class="block-foot">Postcodes further out add £20 travel. <a href="#areas">Check your postcode</a>.</p>
+      </div>
+      <div class="price-block" data-reveal>
+        <h3 class="block-title"><svg class="icon"><use href="#i-pound"/></svg> Fixed prices</h3>
+        <p class="block-intro">The price is the price, however long the job takes us.</p>
+        <ul class="fixed" data-fixed-prices>
+          <li class="fixed-item">Annual boiler service: £95.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark" id="how">
+  <div class="wrap">
+    <header class="section-head" data-reveal>
+      <p class="kicker kicker-light"><svg class="icon"><use href="#i-valve"/></svg> How it works</p>
+      <h2 class="h2">From first message to a working boiler</h2>
+    </header>
+    <ol class="steps" data-reveal>
+      <li class="step">
+        <span class="step-num">1</span>
+        <h3>Tell us what is wrong</h3>
+        <p>Call us, or send a WhatsApp with a photo or two. A boiler service you can book here in a minute.</p>
+      </li>
+      <li class="step">
+        <span class="step-num">2</span>
+        <h3>Get the price first</h3>
+        <p>A fixed price for the jobs on our list. For anything else, an estimate in writing before we start.</p>
+      </li>
+      <li class="step">
+        <span class="step-num">3</span>
+        <h3>We arrive when we said</h3>
+        <p>In a morning or afternoon slot. We text when we are on the way and show our Gas Safe ID at the door.</p>
+      </li>
+      <li class="step">
+        <span class="step-num">4</span>
+        <h3>Fixed, tidy, guaranteed</h3>
+        <p>Dust sheets down, old parts taken away, and 12 months' guarantee. Pay by card or bank transfer when it is done.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="section" id="guarantee">
+  <div class="wrap promise">
+    <div class="promise-badge" data-reveal>
+      <svg class="promise-ring" viewBox="0 0 200 200" aria-hidden="true">
+        <circle class="promise-track" cx="100" cy="100" r="88"/>
+        <circle class="promise-arc" cx="100" cy="100" r="88"/>
+        <path class="promise-valve" d="M88 18H112L88 34H112Z"/>
+      </svg>
+      <p class="promise-figure"><strong>12</strong> <span>month guarantee</span></p>
+    </div>
+    <div class="promise-copy" data-reveal>
+      <p class="kicker"><svg class="icon"><use href="#i-valve"/></svg> Our guarantee</p>
+      <h2 class="h2">If it goes wrong, we come back</h2>
+      <p>Every job we do is guaranteed for 12 months. If something we fixed or fitted fails in that time, we come back and put it right at no charge. Parts also carry the maker's own warranty, and new boilers come with up to 10 years from the maker when they are serviced every year.</p>
+      <ul class="ticks">
+        <li><svg class="icon"><use href="#i-check"/></svg> <span><strong>The price is agreed first.</strong> If a job turns out bigger, we stop and ask before we carry on.</span></li>
+        <li><svg class="icon"><use href="#i-check"/></svg> <span><strong>We leave it tidy.</strong> Dust sheets, shoe covers, and we take the old parts away.</span></li>
+        <li><svg class="icon"><use href="#i-check"/></svg> <span><strong>The paperwork is done.</strong> Service records, gas safety certificates and Building Regulations notices, sent by email.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section section-tint" id="gas-safe">
+  <div class="wrap gassafe">
+    <div class="gassafe-copy" data-reveal>
+      <p class="kicker"><svg class="icon"><use href="#i-id"/></svg> Gas Safe</p>
+      <h2 class="h2">Check who is at your door</h2>
+      <p>By law, anyone who works on gas in your home must be on the Gas Safe Register. Every Pinn gas engineer carries a Gas Safe ID card. Ask to see it, and check three things:</p>
+      <ol class="checks">
+        <li><span class="check-num">1</span> <span><strong>The photo</strong> matches the person at your door.</span></li>
+        <li><span class="check-num">2</span> <span><strong>The licence number and dates.</strong> Check the number on the <a href="https://www.gassaferegister.co.uk/">Gas Safe Register</a> website, or call them free on 0800 408 5500.</span></li>
+        <li><span class="check-num">3</span> <span><strong>The back of the card</strong> lists the gas work they are qualified to do, such as boilers or cookers. Make sure your job is on it.</span></li>
+      </ol>
+      <div class="badge-slot">
+        <span class="example-tag">Example</span>
+        <svg class="badge-slot-icon"><use href="#i-shield"/></svg>
+        <div>
+          <p class="badge-slot-title">Gas Safe registered</p>
+          <p class="badge-slot-number">Registration no. <span class="mono">000000</span></p>
+          <p class="badge-slot-note">On the real website, the Gas Safe Register badge and the firm's own number go here.</p>
+        </div>
+      </div>
+    </div>
+
+    <figure class="idcard" data-reveal>
+      <svg class="idcard-art" viewBox="0 0 420 470" role="img" aria-labelledby="idcard-title">
+        <title id="idcard-title">An example Gas Safe ID card. The front shows the engineer's photo, name, licence number and dates. The back lists the gas work they can do.</title>
+        <g class="idc">
+          <rect class="idc-card" x="10" y="10" width="340" height="210" rx="16"/>
+          <rect class="idc-band" x="10" y="10" width="340" height="44" rx="16"/>
+          <rect class="idc-band" x="10" y="34" width="340" height="20"/>
+          <text class="idc-head" x="30" y="38">ENGINEER ID CARD · FRONT</text>
+          <rect class="idc-photo" x="30" y="72" width="88" height="110" rx="8"/>
+          <path class="idc-hatch" d="M30 112 70 72M30 152 110 72M40 182 118 104M80 182 118 144"/>
+          <text class="idc-small" x="74" y="200" text-anchor="middle">PHOTO</text>
+          <text class="idc-label" x="158" y="86">NAME</text>
+          <rect class="idc-line" x="158" y="94" width="70" height="10" rx="5"/>
+          <text class="idc-label" x="158" y="128">LICENCE NO.</text>
+          <text class="idc-value" x="158" y="148">0000000</text>
+          <text class="idc-label" x="158" y="176">VALID</text>
+          <text class="idc-value" x="158" y="196">MM/YY to MM/YY</text>
+          <circle class="idc-holo" cx="322" cy="150" r="16"/>
+          <g transform="rotate(-8 286 75)"><rect class="idc-stamp" x="236" y="62" width="100" height="26" rx="6"/><text class="idc-stamp-text" x="286" y="80" text-anchor="middle">EXAMPLE</text></g>
+        </g>
+        <g class="idc">
+          <rect class="idc-card" x="70" y="250" width="340" height="210" rx="16"/>
+          <text class="idc-head idc-head-dark" x="92" y="284">BACK · GAS WORK THEY CAN DO</text>
+          <path class="idc-tick" d="m94 310 6 6 12-12"/><text class="idc-row" x="124" y="316">Boilers and central heating</text>
+          <path class="idc-tick" d="m94 342 6 6 12-12"/><text class="idc-row" x="124" y="348">Cookers and hobs</text>
+          <path class="idc-tick" d="m94 374 6 6 12-12"/><text class="idc-row" x="124" y="380">Gas fires</text>
+          <path class="idc-cross" d="M96 402 108 414M108 402 96 414"/><text class="idc-row idc-row-off" x="124" y="412">Commercial catering</text>
+          <g transform="rotate(-8 344 433)"><rect class="idc-stamp" x="294" y="420" width="100" height="26" rx="6"/><text class="idc-stamp-text" x="344" y="438" text-anchor="middle">EXAMPLE</text></g>
+        </g>
+        <g class="idc-callouts">
+          <circle cx="30" cy="72" r="13"/><text x="30" y="77" text-anchor="middle">1</text>
+          <circle cx="137" cy="134" r="13"/><text x="137" y="139" text-anchor="middle">2</text>
+          <circle cx="70" cy="250" r="13"/><text x="70" y="255" text-anchor="middle">3</text>
+        </g>
+      </svg>
+      <figcaption>An example of what to look for. The real card's design is set by the Gas Safe Register.</figcaption>
+    </figure>
+  </div>
+
+  <div class="wrap team-wrap">
+    <h3 class="team-title" data-reveal>Who you will meet</h3>
+    <ul class="team" data-reveal>
+      <li class="person">
+        <p class="person-tag tag-gas"><svg class="icon icon-sm"><use href="#i-flame"/></svg> Gas Safe engineer</p>
+        <h4>Kemi</h4>
+        <p class="person-role">Owner</p>
+        <p>Started Pinn in 2015 after twelve years servicing boilers for a national firm. Does most of the boiler work, and answers most of the calls.</p>
+      </li>
+      <li class="person">
+        <p class="person-tag tag-gas"><svg class="icon icon-sm"><use href="#i-flame"/></svg> Gas Safe engineer</p>
+        <h4>Rhys</h4>
+        <p class="person-role">Heating engineer</p>
+        <p>Boilers, radiators and power flushes. Happy to show you what the pressure gauge is for, so you never need a call-out for it.</p>
+      </li>
+      <li class="person">
+        <p class="person-tag tag-water"><svg class="icon icon-sm"><use href="#i-drop"/></svg> Plumbing only</p>
+        <h4>Tomás</h4>
+        <p class="person-role">Plumber</p>
+        <p>Leaks, taps, toilets, showers and radiators. He is not a gas engineer, so he will never work on your boiler, and he will tell you so.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="areas">
+  <div class="wrap areas">
+    <div class="areas-copy" data-reveal>
+      <p class="kicker"><svg class="icon"><use href="#i-pin"/></svg> Areas we cover</p>
+      <h2 class="h2">Are you in our area?</h2>
+      <p>We cover Pinner and twenty postcode districts around it, from Watford to Wembley. Put in your postcode to see how soon we can usually reach you in an emergency, and whether there is a travel charge.</p>
+      <div class="checker-card">
+        <form class="checker" data-area-checker novalidate>
+          <label class="field-label" for="area-postcode">Your postcode</label>
+          <div class="checker-row">
+            <input id="area-postcode" name="postcode" type="text" autocomplete="postal-code" autocapitalize="characters" spellcheck="false" maxlength="10" placeholder="Like HA5 3AB">
+            <button class="btn btn-dark" type="submit">Check</button>
+          </div>
+        </form>
+        <div class="area-result" data-area-result aria-live="polite"></div>
+      </div>
+      <p class="areas-note"><svg class="icon"><use href="#i-van"/></svg> <span>Just outside the list? Call us anyway. If we are already working nearby, we can often fit you in.</span></p>
+    </div>
+    <div class="zones" data-zones data-reveal></div>
+  </div>
+</section>
+
+<section class="section section-tint" id="faq">
+  <div class="wrap faq-layout">
+    <header class="section-head section-head-left" data-reveal>
+      <p class="kicker"><svg class="icon"><use href="#i-question"/></svg> Questions</p>
+      <h2 class="h2">Good questions to ask a plumber</h2>
+      <p>Anything else? <a href="#contact">Ask us</a>. We would rather explain than surprise you.</p>
+    </header>
+    <div class="faq" data-reveal>
+      <details>
+        <summary>Is there a call-out fee?</summary>
+        <p>No separate one. The first hour's price covers getting to you and the first hour of work. After that we charge by the half hour, and parts are extra at cost. Postcodes in our outer area add £20 for travel.</p>
+      </details>
+      <details>
+        <summary>How quickly can you get here in an emergency?</summary>
+        <p>In Pinner, Eastcote, Ruislip, Northwood and North Harrow, usually within the hour; further out, within 90 minutes to two hours. If we cannot make it in good time, we will say so on the phone, so you can call someone else.</p>
+      </details>
+      <details>
+        <summary>How long does a boiler service take, and what do you check?</summary>
+        <p>About an hour. We check the burner, seals and safety devices, test the flue gases with an analyser, clean the condensate trap, check the pressure and controls, and give you a written report. If anything needs fixing, we tell you the price before we do it.</p>
+      </details>
+      <details>
+        <summary>I am a landlord. What does a gas safety certificate cover?</summary>
+        <p>The law asks for a gas safety check every 12 months. We check every gas appliance, flue and the ventilation, and email the certificate (often called a CP12) the same day. Give your tenants a copy within 28 days of the check, and new tenants before they move in. We send you a reminder before the next one is due.</p>
+      </details>
+      <details>
+        <summary>Do you fit new boilers?</summary>
+        <p>Yes. We come round for a free survey, then send a written fixed price with a choice of boilers. Most swaps take a day. We register the new boiler with Building Control through the Gas Safe Register, and the maker's warranty, often 7 to 10 years, stays valid as long as it is serviced every year.</p>
+      </details>
+      <details>
+        <summary>Can I send photos instead of having someone visit?</summary>
+        <p>Please do. Photos let us price most small jobs without a visit, and bring the right parts first time. Use the <a href="quote.html">quote form</a>, then attach the photos in WhatsApp.</p>
+      </details>
+      <details>
+        <summary>How do I pay?</summary>
+        <p>By card or bank transfer when the job is done. For a new boiler, we ask for 20% when you order, and the rest when it is fitted and working.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="wrap contact">
+    <div class="contact-card" data-reveal>
+      <p class="kicker kicker-light"><svg class="icon"><use href="#i-phone"/></svg> Contact</p>
+      <h2 class="h2">Talk to a person</h2>
+      <p>A person answers the phone, day and night. For anything that is not urgent, WhatsApp is quickest, and you can send photos.</p>
+      <div class="contact-actions">
+        <a class="btn btn-signal btn-block" href="tel:+442079460583" data-contact="phone"><svg class="icon"><use href="#i-phone"/></svg> Call 020 7946 0583</a>
+        <a class="btn btn-ghost-light btn-block" href="https://wa.me/447700900583" data-contact="whatsapp"><svg class="icon"><use href="#i-chat"/></svg> WhatsApp 07700 900583</a>
+        <a class="btn btn-ghost-light btn-block" href="mailto:hello@pinnheating.example" data-contact="email"><svg class="icon"><use href="#i-mail"/></svg> Email us</a>
+      </div>
+      <p class="contact-email">Email: hello@pinnheating.example</p>
+      <p class="office-status" data-office-status></p>
+    </div>
+    <div class="contact-info" data-reveal>
+      <h3 class="info-title"><svg class="icon"><use href="#i-clock"/></svg> When we are around</h3>
+      <dl class="hours">
+        <div><dt>Emergency line</dt><dd>24 hours, every day</dd></div>
+        <div><dt>Office and booked work</dt><dd>Monday to Friday, 8am to 6pm</dd></div>
+        <div><dt>Saturday</dt><dd>8am to 1pm</dd></div>
+        <div><dt>Sunday and bank holidays</dt><dd>Emergencies only</dd></div>
+      </dl>
+      <h3 class="info-title"><svg class="icon"><use href="#i-pin"/></svg> The workshop</h3>
+      <p>Unit 4, Brindle Mews, Pinner HA5</p>
+      <p class="info-note">This is where the vans and parts live, not a shop. We come to you.</p>
+      <p><a class="text-link" href="https://www.google.com/maps/search/?api=1&amp;query=Pinner%20HA5">Open in Google Maps <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a></p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a class="brand brand-light" href="index.html" aria-label="Pinn Plumbing and Heating, home">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect class="brand-bg" width="40" height="40" rx="11"/><path class="brand-pipe" d="M12.5 32V8.5h8a8 8 0 0 1 0 16h-8"/><path class="brand-drop" d="M20.5 12.6s3.3 3.5 3.3 5.8a3.3 3.3 0 0 1-6.6 0c0-2.3 3.3-5.8 3.3-5.8Z"/></svg>
+      <span class="brand-text"><span class="brand-name">Pinn</span><span class="brand-sub">Plumbing &amp; Heating</span></span>
+    </a>
+      <p>Gas Safe registered plumbing and heating engineers for Pinner, Harrow, Ruislip and the streets around them.</p>
+      <p class="footer-gassafe">Gas Safe registration no. <span class="mono">000000</span> <span class="example-tag">Example</span></p>
+    </div>
+    <div class="footer-col">
+      <h2 class="footer-title">Get in touch</h2>
+      <ul class="footer-list">
+        <li><a href="tel:+442079460583" data-contact="phone">020 7946 0583</a> <span>24 hours</span></li>
+        <li><a href="https://wa.me/447700900583" data-contact="whatsapp">WhatsApp 07700 900583</a></li>
+        <li><a href="mailto:hello@pinnheating.example" data-contact="email">hello@pinnheating.example</a></li>
+        <li>Unit 4, Brindle Mews, Pinner HA5</li>
+      </ul>
+    </div>
+    <nav class="footer-col" aria-label="Footer">
+      <h2 class="footer-title">Pages</h2>
+      <ul class="footer-list">
+        <li><a href="emergency.html">Emergency help</a></li>
+        <li><a href="boiler-service.html">Book a boiler service</a></li>
+        <li><a href="quote.html">Get a quote</a></li>
+        <li><a href="index.html#prices">Prices</a></li>
+        <li><a href="index.html#areas">Areas we cover</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </nav>
+    <p class="footer-gas"><svg class="icon"><use href="#i-alert"/></svg> <span>Smell gas? Leave the building and call the National Gas Emergency Service free on <a href="tel:0800111999">0800&nbsp;111&nbsp;999</a>, 24 hours a day.</span></p>
+    <p class="footer-credit">A sample website by <a href="https://agilerelease.co.uk/#websites">Agile Release</a>. Pinn Plumbing &amp; Heating is made up. &copy; 2026 Agile Release Limited. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

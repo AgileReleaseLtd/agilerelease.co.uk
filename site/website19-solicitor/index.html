@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quinlan Mensah Solicitors | Solicitors in Chiswick, W4 (sample website)</title>
+<meta name="description" content="Plain-English solicitors in Chiswick: buying and selling homes, wills, probate, lasting powers of attorney, family law and landlord and tenant advice. A sample website by Agile Release.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#f7f5ee">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="preload" href="css/fonts/public-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="css/fonts/petrona-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js" defer></script>
+<script src="js/dates.js" defer></script>
+<script src="js/fees.js" defer></script>
+<script src="js/site.js" defer></script>
+<script src="js/areas.js" defer></script>
+<script src="js/team.js" defer></script>
+</head>
+<body>
+
+<svg class="sprite" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 7 8.5-7"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3.5 5 6v5.5c0 4.3 3 7.8 7 9 4-1.2 7-4.7 7-9V6l-7-2.5Z"/><path d="m9 12 2.2 2.2L15.5 10"/></symbol>
+  <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4.5h5.5V10M19.5 4.5 11 13M17.5 14v4.5a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1v-11a1 1 0 0 1 1-1H10"/></symbol>
+  <symbol id="i-calc" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8.5 11h.01M12 11h.01M15.5 11h.01M8.5 14.5h.01M12 14.5h.01M15.5 14.5h.01M8.5 18h.01M12 18h.01M15.5 18h.01"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 3.5H7a1.5 1.5 0 0 0-1.5 1.5v14A1.5 1.5 0 0 0 7 20.5h10a1.5 1.5 0 0 0 1.5-1.5V8L14 3.5Z"/><path d="M14 3.5V8h4.5M9 12.5h6M9 16h4"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.5h.01"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></symbol>
+  <symbol id="i-house" viewBox="0 0 24 24"><path d="M3.5 11 12 4l8.5 7"/><path d="M5.5 9.5V20h13V9.5"/><path d="M10 20v-5.5h4V20"/></symbol>
+  <symbol id="i-quill" viewBox="0 0 24 24"><path d="M19.5 4.5c-6 .5-10.5 5-12 12.5"/><path d="M19.5 4.5c.5 6-3 10-9.5 10.5"/><path d="M4.5 20.5 7.5 17"/></symbol>
+  <symbol id="i-hands" viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 8a4.2 4.2 0 0 1 7.5 2.5c0 5.4-7.5 10-7.5 10Z"/><path d="M9 12.5h6"/></symbol>
+  <symbol id="i-people" viewBox="0 0 24 24"><circle cx="8.5" cy="8" r="3"/><circle cx="16.5" cy="9.5" r="2.5"/><path d="M3 19.5a5.5 5.5 0 0 1 11 0"/><path d="M14 15a4.5 4.5 0 0 1 7 4"/></symbol>
+  <symbol id="i-door" viewBox="0 0 24 24"><path d="M6 20.5V4.5a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v16"/><path d="M3.5 20.5h17"/><circle cx="14.5" cy="12.5" r="1"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6.5h11M9 12h11M9 17.5h11M4.5 6.5h.01M4.5 12h.01M4.5 17.5h.01"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5 2.5 20h19L12 3.5Z"/><path d="M12 10v4.5M12 17.5h.01"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<aside class="sample-bar" aria-label="About this sample website">
+  <div class="wrap sample-bar-inner">
+    <p><strong>Sample website by Agile Release.</strong> Quinlan Mensah Solicitors is not a real firm: the people, prices and regulatory numbers are examples.</p>
+    <a href="https://agilerelease.co.uk/#websites">Get a site like this <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a>
+  </div>
+</aside>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Quinlan Mensah Solicitors, home">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect class="bm-tab bm-tab-1" x="5" y="3" width="9" height="9" rx="2"/><rect class="bm-tab bm-tab-2" x="15.5" y="3" width="9" height="9" rx="2"/><rect class="bm-tab bm-tab-3" x="26" y="3" width="9" height="9" rx="2"/><rect class="bm-sheet" x="3" y="8" width="34" height="29" rx="5"/><path class="bm-line" d="M10 17.5h20M10 23h20M10 28.5h12"/></svg>
+      <span class="brand-text"><span class="brand-name">Quinlan Mensah</span><span class="brand-sub">Solicitors</span></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="practice-areas.html">Practice areas</a></li>
+        <li><a href="prices.html">Prices</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <a class="nav-phone" href="tel:+442079460659" data-contact="phone"><svg class="icon"><use href="#i-phone"/></svg> 020 7946 0659</a>
+      <a class="btn btn-primary nav-cta" href="enquiry.html">Make an enquiry</a>
+    </nav>
+    <a class="btn btn-primary btn-sm header-cta" href="enquiry.html">Make an enquiry</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+      <svg class="icon"><use href="#i-menu"/></svg><span class="visually-hidden">Menu</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <p class="tab-kicker">Solicitors in Chiswick, London W4</p>
+      <h1 class="display">Clear legal help for your home <em>and your family.</em></h1>
+      <p class="lead">Buying or selling a home, making a will, sorting out an estate, planning ahead with a lasting power of attorney, separating, or letting a property. We explain each step in plain English and tell you the price before we start.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="enquiry.html">Make an enquiry <svg class="icon"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-outline" href="prices.html#calculator"><svg class="icon"><use href="#i-calc"/></svg> Work out a conveyancing fee</a>
+      </div>
+      <ul class="hero-points">
+        <li><svg class="icon"><use href="#i-check"/></svg> Prices published in full, with VAT shown</li>
+        <li><svg class="icon"><use href="#i-check"/></svg> One named person on every matter</li>
+        <li><svg class="icon"><use href="#i-check"/></svg> A reply within one working day</li>
+      </ul>
+    </div>
+
+    <div class="hero-art">
+      <svg class="hero-illustration" viewBox="0 0 480 430" aria-hidden="true">
+        <g class="hi-sheets">
+          <rect class="hi-tab tab-olive" x="40" y="34" width="76" height="52" rx="11"/>
+          <rect class="hi-tab tab-heather" x="122" y="34" width="76" height="52" rx="11"/>
+          <rect class="hi-tab tab-mist" x="204" y="34" width="76" height="52" rx="11"/>
+          <rect class="hi-tab tab-clay" x="286" y="34" width="76" height="52" rx="11"/>
+          <rect class="hi-tab tab-sand" x="368" y="34" width="76" height="52" rx="11"/>
+          <text class="hi-tab-label" x="78" y="62">Home</text>
+          <text class="hi-tab-label" x="160" y="62">Wills</text>
+          <text class="hi-tab-label" x="242" y="62">LPA</text>
+          <text class="hi-tab-label" x="324" y="62">Family</text>
+          <text class="hi-tab-label" x="406" y="62">Lettings</text>
+          <rect class="hi-edge" x="32" y="86" width="432" height="326" rx="16"/>
+          <rect class="hi-edge" x="28" y="82" width="432" height="326" rx="16"/>
+          <rect class="hi-doc" x="24" y="76" width="432" height="326" rx="16"/>
+          <text class="hi-title" x="56" y="128">Report on title</text>
+          <rect class="hi-bar" x="56" y="144" width="236" height="8" rx="4"/>
+          <rect class="hi-bar" x="56" y="162" width="188" height="8" rx="4"/>
+          <g class="hi-house">
+            <path d="M344 136 384 104l40 32"/>
+            <path d="M354 128v44h60v-44"/>
+            <path d="M376 172v-22h16v22"/>
+          </g>
+          <g class="hi-row">
+            <circle class="hi-done" cx="67" cy="206" r="11"/>
+            <path class="hi-tick" d="m62 206 3.5 3.5 6.5-7"/>
+            <text class="hi-text" x="88" y="211">Searches back and checked</text>
+          </g>
+          <g class="hi-row">
+            <circle class="hi-done" cx="67" cy="242" r="11"/>
+            <path class="hi-tick" d="m62 242 3.5 3.5 6.5-7"/>
+            <text class="hi-text" x="88" y="247">Mortgage offer checked</text>
+          </g>
+          <g class="hi-row">
+            <circle class="hi-todo" cx="67" cy="278" r="10"/>
+            <circle class="hi-dot" cx="67" cy="278" r="3.5"/>
+            <text class="hi-text" x="88" y="283">Ready to exchange</text>
+          </g>
+          <path class="hi-rule" d="M56 314h368"/>
+          <text class="hi-x" x="56" y="364">×</text>
+          <path class="hi-sign" d="M80 360c8-22 14-28 18-20s-6 26 2 22 10-30 18-26-4 22 6 20 12-14 18-12 2 12 10 10 16-8 24-6"/>
+          <path class="hi-line" d="M56 372h250"/>
+          <text class="hi-small" x="56" y="392">Signature</text>
+          <path class="hi-flag" d="M476 348H418l-16 18 16 18h58Z"/>
+          <text class="hi-flag-text" x="444" y="371">Sign here</text>
+        </g>
+      </svg>
+
+      <div class="status-card" data-status-card>
+        <p class="status-line"><span class="status-dot" aria-hidden="true"></span> <span data-status-text>Office hours: Monday to Friday, 9:00am to 5:30pm</span></p>
+        <p class="status-sub" data-reply-by>We reply to every enquiry within one working day.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="areas">
+  <div class="wrap">
+    <header class="section-head" data-reveal>
+      <p class="tab-kicker">How we help</p>
+      <h2 class="h2">Five kinds of work, done every day</h2>
+      <p>We stick to the work a high-street firm does all the time, so the person handling your matter has done it many times before.</p>
+    </header>
+    <ul class="divider-grid" data-area-cards>
+      <li class="divider-fallback"><a href="practice-areas.html#conveyancing">Residential conveyancing</a></li>
+      <li class="divider-fallback"><a href="practice-areas.html#wills">Wills and probate</a></li>
+      <li class="divider-fallback"><a href="practice-areas.html#lpa">Lasting powers of attorney</a></li>
+      <li class="divider-fallback"><a href="practice-areas.html#family">Family law</a></li>
+      <li class="divider-fallback"><a href="practice-areas.html#landlord">Landlord and tenant</a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section-olive" id="how">
+  <div class="wrap">
+    <header class="section-head" data-reveal>
+      <p class="tab-kicker tab-kicker-dark">How it works</p>
+      <h2 class="h2">From first message to a price in writing</h2>
+      <p>No obligation until you have our quote and our terms in front of you, and you are happy with both.</p>
+    </header>
+    <ol class="steps" data-reveal>
+      <li class="step">
+        <span class="step-num">1</span>
+        <h3>Tell us what you need</h3>
+        <p>Use the enquiry form, WhatsApp, a phone call or just drop in. A few lines is enough.</p>
+      </li>
+      <li class="step">
+        <span class="step-num">2</span>
+        <h3>A free 15-minute call</h3>
+        <p>We check we can help and that we don't already act for the other side, and answer your first questions.</p>
+      </li>
+      <li class="step">
+        <span class="step-num">3</span>
+        <h3>Your price and terms</h3>
+        <p>We send a fixed fee or an estimate, the name of the person doing the work, and our client care letter.</p>
+      </li>
+      <li class="step">
+        <span class="step-num">4</span>
+        <h3>We get on with it</h3>
+        <p>You hear from us at every key stage, and you can always reach the person handling your matter directly.</p>
+      </li>
+    </ol>
+    <div class="fraud-note" data-reveal>
+      <svg class="icon"><use href="#i-lock"/></svg>
+      <div>
+        <h3>Protect your money</h3>
+        <p>Our bank details will not change during your matter, and we never send them by email alone. Before you send money, ring us on <a href="tel:+442079460659" data-contact="phone">020 7946 0659</a> to check the details. If an email says our details have changed, do not pay: call us.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="prices">
+  <div class="wrap prices-teaser">
+    <header class="section-head section-head-left" data-reveal>
+      <p class="tab-kicker">Prices</p>
+      <h2 class="h2">Prices published in full</h2>
+      <p>The Solicitors Regulation Authority asks firms to publish prices for residential conveyancing and for probate. We publish ours for everything we can, with VAT and the other costs shown.</p>
+      <div class="teaser-actions">
+        <a class="btn btn-primary" href="prices.html#calculator"><svg class="icon"><use href="#i-calc"/></svg> Conveyancing fee calculator</a>
+        <a class="btn btn-outline" href="prices.html">All our prices</a>
+      </div>
+    </header>
+    <div class="price-list-card" data-reveal>
+      <h3 class="price-list-title">Some of our fixed fees</h3>
+      <dl class="price-list" data-price-summary>
+        <div><dt>Buying a home</dt><dd>from £1,195 + VAT</dd></div>
+        <div><dt>Selling a home</dt><dd>from £950 + VAT</dd></div>
+        <div><dt>Remortgage</dt><dd>from £595 + VAT</dd></div>
+        <div><dt>Probate, grant only</dt><dd>£1,650 + VAT</dd></div>
+        <div><dt>Will for one person</dt><dd>£350 + VAT</dd></div>
+        <div><dt>One lasting power of attorney</dt><dd>£450 + VAT</dd></div>
+        <div><dt>Family law first meeting</dt><dd>£250 + VAT</dd></div>
+      </dl>
+      <p class="price-list-note">VAT is 20%. Searches, Land Registry, court and registration fees are extra. The <a href="prices.html">prices page</a> lists them all.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-tint" id="team">
+  <div class="wrap">
+    <header class="section-head" data-reveal>
+      <p class="tab-kicker">Our team</p>
+      <h2 class="h2">You'll know who is doing your work</h2>
+      <p>Seven of us in one office. Every matter has a named person, and a partner who checks it.</p>
+    </header>
+    <ul class="team-strip" data-team-strip data-reveal>
+      <li class="team-fallback">Niamh Quinlan, Abena Mensah, Tomasz Wrona, Leila Haddad, Rhys Morgan, Grace Liu and Marcia Fenton.</li>
+    </ul>
+    <p class="section-cta" data-reveal><a class="btn btn-outline" href="team.html">Meet the team <svg class="icon"><use href="#i-arrow"/></svg></a></p>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="wrap faq-layout">
+    <header class="section-head section-head-left" data-reveal>
+      <p class="tab-kicker">Questions</p>
+      <h2 class="h2">Before you get in touch</h2>
+      <p>Anything else? <a href="enquiry.html">Send us an enquiry</a> or ring <a href="tel:+442079460659" data-contact="phone">020 7946 0659</a>.</p>
+    </header>
+    <div class="faq" data-reveal>
+      <details>
+        <summary>How much will it cost?</summary>
+        <p>Most of our work is for a fixed fee, and our <a href="prices.html">prices page</a> lists them with VAT and the other costs. Before we start, we confirm the price in writing. If something unexpected comes up that needs more work, we tell you and agree it with you first.</p>
+      </details>
+      <details>
+        <summary>Does sending an enquiry make you my solicitors?</summary>
+        <p>No. We only act for you once we have checked we can (for example, that we don't already act for someone on the other side), confirmed your identity, and you have agreed our terms in our client care letter. Until then, please don't rely on anything we say as legal advice.</p>
+      </details>
+      <details>
+        <summary>How quickly will you reply?</summary>
+        <p>Within one working day. <span data-reply-by-inline>If you send an enquiry today, you'll hear from us by the end of the next working day.</span></p>
+      </details>
+      <details>
+        <summary>Do I need to come into the office?</summary>
+        <p>Usually not. We can meet by video or phone, and identity checks are done electronically. The exception is signing a will: in England and Wales it must be signed in front of two witnesses in person. You can do that at our office, or we can come to you.</p>
+      </details>
+      <details>
+        <summary>What is a disbursement?</summary>
+        <p>A cost we pay to someone else for you, such as search fees, the HM Land Registry fee or a court fee. We list the likely disbursements for each kind of work on the <a href="prices.html">prices page</a>, and pass them on at cost.</p>
+      </details>
+      <details>
+        <summary>Can you act for both the buyer and the seller?</summary>
+        <p>No. We act for one side only, so you always know whose interests we are looking after.</p>
+      </details>
+      <details>
+        <summary>Do you do legal aid work?</summary>
+        <p>No, we do not. Legal aid can be available for some family cases, for example where there has been domestic abuse. You can check on GOV.UK at <a href="https://www.gov.uk/check-legal-aid">gov.uk/check-legal-aid</a>.</p>
+      </details>
+      <details>
+        <summary>Is my money safe with you?</summary>
+        <p>Money we hold for you goes into a separate client account, as the SRA Accounts Rules require. Our bank details will not change. Always ring us on a number you trust before sending money.</p>
+      </details>
+      <details>
+        <summary>What if I'm unhappy with your service?</summary>
+        <p>Tell the person handling your matter, or Niamh Quinlan, and we will try to put it right. Our <a href="complaints.html">complaints procedure</a> explains the steps, and when you can go to the Legal Ombudsman.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="section section-tint" id="contact">
+  <div class="wrap visit">
+    <div class="visit-info" data-reveal>
+      <p class="tab-kicker">Visit or get in touch</p>
+      <h2 class="h2">Find us off Chiswick High Road</h2>
+      <p class="visit-line"><svg class="icon"><use href="#i-pin"/></svg> <span>6 Halyard Walk, Chiswick, London W4</span></p>
+      <p class="visit-sub">A ground-floor office with step-free access and a private meeting room. Five minutes' walk from Turnham Green station (District line). <a href="https://www.google.com/maps/search/?api=1&amp;query=Turnham+Green+Chiswick+London+W4">Open the area in Google Maps <svg class="icon icon-sm"><use href="#i-external"/></svg></a></p>
+      <h3 class="visit-hours-title"><svg class="icon"><use href="#i-clock"/></svg> Opening hours <span class="hours-status" data-hours-status></span></h3>
+      <dl class="hours" data-hours>
+        <div data-day="1"><dt>Monday</dt><dd>9:00am to 5:30pm</dd></div>
+        <div data-day="2"><dt>Tuesday</dt><dd>9:00am to 5:30pm</dd></div>
+        <div data-day="3"><dt>Wednesday</dt><dd>9:00am to 5:30pm</dd></div>
+        <div data-day="4"><dt>Thursday</dt><dd>9:00am to 5:30pm</dd></div>
+        <div data-day="5"><dt>Friday</dt><dd>9:00am to 5:30pm</dd></div>
+        <div data-day="6"><dt>Saturday</dt><dd>First Saturday of the month, 9:30am to 12:30pm, wills and LPAs by appointment</dd></div>
+        <div data-day="0"><dt>Sunday</dt><dd>Closed</dd></div>
+      </dl>
+      <p class="hours-extra" data-hours-extra>Closed on bank holidays, and between Christmas and New Year.</p>
+    </div>
+    <div class="contact-card" data-reveal>
+      <h2 class="contact-title">Talk to us first</h2>
+      <p>A short message is all we need to start. We'll ring or write back within one working day.</p>
+      <div class="contact-actions">
+        <a class="btn btn-heather btn-block" href="enquiry.html"><svg class="icon"><use href="#i-doc"/></svg> Make an enquiry</a>
+        <a class="btn btn-ghost-light btn-block" href="https://wa.me/447700900659" data-contact="whatsapp"><svg class="icon"><use href="#i-chat"/></svg> WhatsApp 07700 900659</a>
+        <a class="btn btn-ghost-light btn-block" href="tel:+442079460659" data-contact="phone"><svg class="icon"><use href="#i-phone"/></svg> Call 020 7946 0659</a>
+        <a class="btn btn-ghost-light btn-block" href="mailto:hello@quinlanmensah.example" data-contact="email"><svg class="icon"><use href="#i-mail"/></svg> hello@quinlanmensah.example</a>
+      </div>
+      <p class="contact-note"><svg class="icon"><use href="#i-info"/></svg> <span>Please keep your first message short and leave out confidential details. Contacting us does not make us your solicitors.</span></p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-top">
+    <div class="footer-brand">
+      <a class="brand brand-light" href="index.html" aria-label="Quinlan Mensah Solicitors, home">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect class="bm-tab bm-tab-1" x="5" y="3" width="9" height="9" rx="2"/><rect class="bm-tab bm-tab-2" x="15.5" y="3" width="9" height="9" rx="2"/><rect class="bm-tab bm-tab-3" x="26" y="3" width="9" height="9" rx="2"/><rect class="bm-sheet" x="3" y="8" width="34" height="29" rx="5"/><path class="bm-line" d="M10 17.5h20M10 23h20M10 28.5h12"/></svg>
+      <span class="brand-text"><span class="brand-name">Quinlan Mensah</span><span class="brand-sub">Solicitors</span></span>
+    </a>
+      <p>Conveyancing, wills, probate, lasting powers of attorney, family law and landlord and tenant advice, from our office in Chiswick.</p>
+      <p class="footer-address"><svg class="icon"><use href="#i-pin"/></svg> <span>6 Halyard Walk, Chiswick, London W4</span></p>
+      <p class="footer-address"><svg class="icon"><use href="#i-clock"/></svg> <span>Monday to Friday, 9:00am to 5:30pm</span></p>
+    </div>
+    <nav class="footer-nav" aria-label="Practice areas">
+      <h2 class="footer-title">How we help</h2>
+      <ul>
+        <li><a href="practice-areas.html#conveyancing">Residential conveyancing</a></li>
+        <li><a href="practice-areas.html#wills">Wills and probate</a></li>
+        <li><a href="practice-areas.html#lpa">Lasting powers of attorney</a></li>
+        <li><a href="practice-areas.html#family">Family law</a></li>
+        <li><a href="practice-areas.html#landlord">Landlord and tenant</a></li>
+      </ul>
+    </nav>
+    <nav class="footer-nav" aria-label="The firm">
+      <h2 class="footer-title">The firm</h2>
+      <ul>
+        <li><a href="prices.html">Prices and fee calculator</a></li>
+        <li><a href="team.html">Our team</a></li>
+        <li><a href="enquiry.html">Make an enquiry</a></li>
+        <li><a href="complaints.html">Complaints procedure</a></li>
+        <li><a href="complaints.html#regulatory">Regulatory information</a></li>
+        <li><a href="privacy.html">Privacy notice</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="wrap footer-reg">
+    <div class="reg-text">
+      <p>Quinlan Mensah Solicitors is authorised and regulated by the Solicitors Regulation Authority, SRA number: <span class="example-slot">example</span>. The SRA's rules are the <a href="https://www.sra.org.uk/solicitors/standards-regulations/">SRA Standards and Regulations</a>.</p>
+      <p>Quinlan Mensah Solicitors is the trading name of Quinlan Mensah Limited, a company registered in England and Wales, company number: <span class="example-slot">example</span>. Registered office: 6 Halyard Walk, Chiswick, London W4.</p>
+      <p>Not happy with our service? Read our <a href="complaints.html">complaints procedure</a>. If we cannot put things right, you may be able to complain to the <a href="complaints.html#legal-ombudsman">Legal Ombudsman</a>.</p>
+    </div>
+    <div class="sra-badge" role="note" aria-label="SRA digital badge, example slot">
+      <span class="sra-badge-head"><svg class="icon"><use href="#i-shield"/></svg> SRA digital badge</span>
+      <span class="sra-badge-body">Example slot. A real firm shows its live badge here. It links to the firm's entry on the SRA register.</span>
+      <span class="example-slot">example</span>
+    </div>
+  </div>
+  <div class="wrap footer-base">
+    <p class="footer-credit">A sample website by <a href="https://agilerelease.co.uk/#websites">Agile Release</a>. Quinlan Mensah Solicitors is made up. &copy; 2026 Agile Release Limited. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

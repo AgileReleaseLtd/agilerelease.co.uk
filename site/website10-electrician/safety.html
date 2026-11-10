@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Electrical safety at home | Earthpin Electrical (sample website)</title>
+<meta name="description" content="What to do if your fuse box keeps tripping, if you see exposed wires or smell burning, in a power cut, and more. A sample website by Agile Release.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0b1730">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="preload" href="css/fonts/hubot-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="css/fonts/mona-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js" defer></script>
+<script src="js/dates.js" defer></script>
+<script src="js/site.js" defer></script>
+<script src="js/safety.js" defer></script>
+</head>
+<body>
+
+<svg class="sprite" aria-hidden="true">
+  <symbol id="i-cable" viewBox="0 0 24 24"><path d="M2.5 19.5h3a4 4 0 0 0 4-4v-3a4 4 0 0 1 4-4h2.5"/><path d="M16 6.5v4h2v-4z"/><path d="M18 7.2l3.5-2.2M18 8.5h3.8M18 9.8l3.5 2.2"/></symbol>
+  <symbol id="i-board" viewBox="0 0 24 24"><rect x="2.5" y="4" width="19" height="16" rx="2"/><path d="M2.5 8.5h19M2.5 16h19"/><path d="M6.5 11v2.5M10 11v2.5M13.5 11v2.5M17 11v2.5"/></symbol>
+  <symbol id="i-ev" viewBox="0 0 24 24"><rect x="3.5" y="2.5" width="11" height="15" rx="2.5"/><path d="M10 6 7.6 10h3l-2.4 4"/><path d="M9 17.5v1a2.5 2.5 0 0 0 5 0V14a2.5 2.5 0 0 1 5 0v7.5"/></symbol>
+  <symbol id="i-report" viewBox="0 0 24 24"><rect x="4.5" y="4" width="15" height="17.5" rx="2"/><path d="M9 2.5h6v3.2H9z"/><path d="m8.5 13.2 2.4 2.4 4.6-5"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18.5h6M10 21.5h4"/><path d="M12 2.5a6.5 6.5 0 0 0-3.9 11.7c.6.5.9 1.1.9 1.9v.4h6v-.4c0-.8.3-1.4.9-1.9A6.5 6.5 0 0 0 12 2.5Z"/></symbol>
+  <symbol id="i-socket" viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M9 8.6v3.2M5.8 15h2.4M9.8 15h2.4"/><rect x="15.6" y="9" width="2.6" height="6" rx="0.8"/></symbol>
+  <symbol id="i-fault" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="7"/><path d="m15.6 15.6 5.4 5.4"/><path d="M11.6 6 9 10.6h3.2L9.8 15"/></symbol>
+  <symbol id="i-alarm" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5.5"/><circle cx="12" cy="12" r="1.6"/><path d="M4.6 8a9 9 0 0 0 0 8M19.4 8a9 9 0 0 1 0 8M2 5.5a13 13 0 0 0 0 13M22 5.5a13 13 0 0 1 0 13"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 7 8.5-7"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.3 7.5 9.5 4.3-1.2 7.5-4.9 7.5-9.5V6L12 3Z"/><path d="m8.8 12 2.2 2.2 4.2-4.4"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 7.5h3L8.5 5h7L17 7.5h3a1 1 0 0 1 1 1V18a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V8.5a1 1 0 0 1 1-1Z"/><circle cx="12" cy="13" r="3.5"/></symbol>
+  <symbol id="i-warning" viewBox="0 0 24 24"><path d="M10.3 4.2 2.6 17.6A2 2 0 0 0 4.3 20.6h15.4a2 2 0 0 0 1.7-3L13.7 4.2a2 2 0 0 0-3.4 0Z"/><path d="M12 9.5v4.5M12 17.3v.2"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24"><circle cx="7.5" cy="15.5" r="4"/><path d="m10.4 12.6 9.1-9.1M16.5 6.5l2.5 2.5M14 9l2 2"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M4 10.5 12 4l8 6.5V20H4z"/><path d="M10 20v-5.5h4V20"/></symbol>
+  <symbol id="i-shop" viewBox="0 0 24 24"><path d="M4.5 10.5V20h15v-9.5"/><path d="M3 9.5 4.8 4h14.4L21 9.5a2.4 2.4 0 0 1-4.5 1.2 2.4 2.4 0 0 1-4.5 0 2.4 2.4 0 0 1-4.5 0A2.4 2.4 0 0 1 3 9.5Z"/><path d="M10 20v-5h4v5"/></symbol>
+  <symbol id="i-pound" viewBox="0 0 24 24"><path d="M16.5 7A4 4 0 0 0 9 8.8V20M6.5 13h7M6.5 20h11"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-power" viewBox="0 0 24 24"><path d="M12 3v8"/><path d="M6.6 6.8a8 8 0 1 0 10.8 0"/></symbol>
+  <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3.5s6 6.4 6 10.5a6 6 0 0 1-12 0c0-4.1 6-10.5 6-10.5Z"/></symbol>
+  <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 21a6.5 6.5 0 0 0 6.5-6.5c0-4.2-3.2-6.6-4.5-10-1.6 2.1-2.2 3.8-2.2 5.4-1-.9-1.6-2-1.9-3.1C8 9.6 5.5 12 5.5 14.5A6.5 6.5 0 0 0 12 21Z"/></symbol>
+  <symbol id="i-plug" viewBox="0 0 24 24"><path d="M9 2.5v4.5M15 2.5v4.5"/><path d="M6.5 7h11v3.5a5.5 5.5 0 0 1-11 0z"/><path d="M12 16v5.5"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 2.5h8.5L19 7v14.5H6z"/><path d="M14 2.5V7h5"/><path d="m9 14.5 2 2 4-4.5"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24"><path d="M3.5 3.5h7.6l9.4 9.4-7.6 7.6-9.4-9.4z"/><circle cx="8" cy="8" r="1.6"/></symbol>
+  <symbol id="i-hand" viewBox="0 0 24 24"><path d="M8 13V5.5a1.5 1.5 0 0 1 3 0V11"/><path d="M11 10V4a1.5 1.5 0 0 1 3 0v6"/><path d="M14 10V5.5a1.5 1.5 0 0 1 3 0V13"/><path d="M17 11a1.5 1.5 0 0 1 3 0v3a7 7 0 0 1-7 7h-1.2a6 6 0 0 1-4.6-2.2L4 15.6a1.5 1.5 0 0 1 2.3-1.9L8 15.5"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.8v.2"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<aside class="sample-bar" aria-label="About this sample website">
+  <div class="wrap sample-bar-inner">
+    <p><strong>Sample website by Agile Release.</strong> Earthpin Electrical is not a real business: the prices, registrations and numbers are examples.</p>
+    <a href="https://agilerelease.co.uk/#websites">Get a site like this <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a>
+  </div>
+</aside>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Earthpin Electrical, home">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect class="bm-bg" width="32" height="32" rx="8"/><rect class="bm-earth" x="13.9" y="5.5" width="4.2" height="9.5" rx="1.1"/><rect class="bm-pin" x="5.8" y="19.2" width="8.4" height="4" rx="1.1"/><rect class="bm-pin" x="17.8" y="19.2" width="8.4" height="4" rx="1.1"/></svg>
+      <span class="brand-text"><span class="brand-name">Earthpin</span><span class="brand-sub">Electrical</span></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="quote.html">Guide prices</a></li>
+        <li><a href="landlords.html">Landlords</a></li>
+        <li><a href="index.html#areas">Areas</a></li>
+        <li><a href="safety.html" aria-current="page">Safety</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li class="nav-extra"><a href="tel:+442079460742" data-contact="phone">Call 020 7946 0742</a></li>
+      </ul>
+    </nav>
+    <a class="header-phone" href="tel:+442079460742" data-contact="phone"><small>Call us</small><span>020 7946 0742</span></a>
+    <a class="btn btn-primary btn-sm header-cta" href="quote.html">Get a guide price</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+      <svg class="icon"><use href="#i-menu"/></svg> Menu
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="page-head">
+  <div class="wrap page-head-inner">
+    <div>
+      <p class="tape"><span class="tape-no">C6</span><span>Safety</span></p>
+      <h1 class="h1">Electrical safety <em>at home</em></h1>
+      <p class="lead">What to do when something goes wrong, in plain steps. If you're ever unsure, switch off at the main switch and call an electrician.</p>
+    </div>
+    <div class="page-head-aside">
+      <p><strong>Call 999</strong> if someone is hurt, or if there's smoke or fire.</p>
+      <p><strong>Power cut?</strong> Call 105, free, from any phone.</p>
+      <p><strong>Anything else:</strong> <a href="https://wa.me/447700900742" data-contact="whatsapp">WhatsApp us</a> or call 020 7946 0742.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-white">
+  <div class="wrap">
+    <ul class="emergency">
+      <li class="em"><span class="em-num">999</span><h2>Someone's had an electric shock</h2><p>Don't touch them while they may still be touching the source. <a href="#shock">What to do</a></p></li>
+      <li class="em"><span class="em-num">999</span><h2>Smoke, sparks or fire</h2><p>Get everyone out, close the door and call 999. Never use water on an electrical fire.</p></li>
+      <li class="em"><span class="em-num is-ink">105</span><h2>Power cut in the street</h2><p>Free, from any phone, to report a cut or get updates. <a href="#power-cut">Power cuts</a></p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="know">
+  <div class="wrap know">
+    <figure class="know-art">
+<svg viewBox="0 0 520 300" role="img" aria-labelledby="know-title">
+<title id="know-title">A fuse box with the main switch (1), an RCD with its test button (2), the circuit breakers (3) and the labels (4) marked</title>
+<rect class="ba-box" x="20" y="44" width="480" height="236" rx="16"/>
+<rect class="ba-window" x="36" y="72" width="448" height="138" rx="7"/>
+<rect class="ba-rail" x="36" y="136" width="448" height="9"/>
+<rect class="ba-device" x="48" y="82" width="58" height="118" rx="3"/>
+<text class="ba-text ba-tiny" x="77.0" y="97" text-anchor="middle">MAIN</text>
+<rect class="ba-slot" x="64.0" y="106" width="26" height="40" rx="3"/>
+<rect class="ba-lever-main" x="67.0" y="109" width="20" height="17" rx="2"/>
+<text class="ba-text ba-small" x="77.0" y="188" text-anchor="middle">100A</text>
+<rect class="ba-device" x="110" y="82" width="54" height="118" rx="3"/>
+<text class="ba-text ba-tiny" x="137.0" y="97" text-anchor="middle">RCD</text>
+<rect class="ba-slot" x="124.0" y="106" width="26" height="40" rx="3"/>
+<rect class="ba-lever" x="127.0" y="109" width="20" height="17" rx="2"/>
+<circle class="ba-test" cx="137.0" cy="168" r="7"/><text class="ba-text ba-tiny" x="137.0" y="171" text-anchor="middle">T</text>
+<rect class="ba-device" x="168" y="82" width="27" height="118" rx="3"/>
+<rect class="ba-slot" x="174.0" y="106" width="15" height="40" rx="3"/>
+<rect class="ba-lever" x="177.0" y="109" width="9" height="17" rx="2"/>
+<text class="ba-text ba-small" x="181.5" y="188" text-anchor="middle">B6</text>
+<rect class="ba-device" x="197" y="82" width="27" height="118" rx="3"/>
+<rect class="ba-slot" x="203.0" y="106" width="15" height="40" rx="3"/>
+<rect class="ba-lever" x="206.0" y="109" width="9" height="17" rx="2"/>
+<text class="ba-text ba-small" x="210.5" y="188" text-anchor="middle">B32</text>
+<rect class="ba-device" x="226" y="82" width="27" height="118" rx="3"/>
+<rect class="ba-slot" x="232.0" y="106" width="15" height="40" rx="3"/>
+<rect class="ba-lever" x="235.0" y="109" width="9" height="17" rx="2"/>
+<text class="ba-text ba-small" x="239.5" y="188" text-anchor="middle">B32</text>
+<rect class="ba-device" x="255" y="82" width="27" height="118" rx="3"/>
+<rect class="ba-slot" x="261.0" y="106" width="15" height="40" rx="3"/>
+<rect class="ba-lever" x="264.0" y="109" width="9" height="17" rx="2"/>
+<text class="ba-text ba-small" x="268.5" y="188" text-anchor="middle">B16</text>
+<rect class="ba-device" x="290" y="82" width="54" height="118" rx="3"/>
+<text class="ba-text ba-tiny" x="317.0" y="97" text-anchor="middle">RCD</text>
+<rect class="ba-slot" x="304.0" y="106" width="26" height="40" rx="3"/>
+<rect class="ba-lever" x="307.0" y="109" width="20" height="17" rx="2"/>
+<circle class="ba-test" cx="317.0" cy="168" r="7"/><text class="ba-text ba-tiny" x="317.0" y="171" text-anchor="middle">T</text>
+<rect class="ba-device" x="348" y="82" width="27" height="118" rx="3"/>
+<rect class="ba-slot" x="354.0" y="106" width="15" height="40" rx="3"/>
+<rect class="ba-lever" x="357.0" y="109" width="9" height="17" rx="2"/>
+<text class="ba-text ba-small" x="361.5" y="188" text-anchor="middle">B6</text>
+<rect class="ba-device" x="377" y="82" width="27" height="118" rx="3"/>
+<rect class="ba-slot" x="383.0" y="106" width="15" height="40" rx="3"/>
+<rect class="ba-lever" x="386.0" y="109" width="9" height="17" rx="2"/>
+<text class="ba-text ba-small" x="390.5" y="188" text-anchor="middle">B32</text>
+<rect class="ba-device" x="406" y="82" width="27" height="118" rx="3"/>
+<rect class="ba-slot" x="412.0" y="106" width="15" height="40" rx="3"/>
+<rect class="ba-lever" x="415.0" y="109" width="9" height="17" rx="2"/>
+<text class="ba-text ba-small" x="419.5" y="188" text-anchor="middle">B40</text>
+<rect class="ba-device" x="435" y="82" width="27" height="118" rx="3"/>
+<rect class="ba-slot" x="441.0" y="106" width="15" height="40" rx="3"/>
+<rect class="ba-lever" x="444.0" y="109" width="9" height="17" rx="2"/>
+<text class="ba-text ba-small" x="448.5" y="188" text-anchor="middle">B32</text>
+<rect class="ba-tape" x="48" y="222" width="424" height="22" rx="3"/>
+<text class="ba-text ba-tape-text" x="77" y="237" text-anchor="middle">MAIN</text>
+<text class="ba-text ba-tape-text" x="137" y="237" text-anchor="middle">RCD 1</text>
+<text class="ba-text ba-tape-text" x="182" y="237" text-anchor="middle">1</text>
+<text class="ba-text ba-tape-text" x="211" y="237" text-anchor="middle">2</text>
+<text class="ba-text ba-tape-text" x="240" y="237" text-anchor="middle">3</text>
+<text class="ba-text ba-tape-text" x="269" y="237" text-anchor="middle">4</text>
+<text class="ba-text ba-tape-text" x="317" y="237" text-anchor="middle">RCD 2</text>
+<text class="ba-text ba-tape-text" x="362" y="237" text-anchor="middle">5</text>
+<text class="ba-text ba-tape-text" x="391" y="237" text-anchor="middle">6</text>
+<text class="ba-text ba-tape-text" x="420" y="237" text-anchor="middle">7</text>
+<text class="ba-text ba-tape-text" x="449" y="237" text-anchor="middle">8</text>
+<path class="ka-line" d="M77 22L77 82"/>
+<circle class="ka-callout" cx="77" cy="22" r="13"/><text class="ka-callout-text" x="77" y="26.5" text-anchor="middle">1</text>
+<path class="ka-line" d="M137 22L137 82"/>
+<circle class="ka-callout" cx="137" cy="22" r="13"/><text class="ka-callout-text" x="137" y="26.5" text-anchor="middle">2</text>
+<path class="ka-line" d="M226 22L226 82"/>
+<circle class="ka-callout" cx="226" cy="22" r="13"/><text class="ka-callout-text" x="226" y="26.5" text-anchor="middle">3</text>
+<path class="ka-line" d="M500 233L472 233"/>
+<circle class="ka-callout" cx="500" cy="233" r="13"/><text class="ka-callout-text" x="500" y="237.5" text-anchor="middle">4</text>
+</svg>
+
+    </figure>
+    <div>
+      <h2 class="h2">Know your fuse box</h2>
+      <p class="lead">Find it before you need it: often under the stairs, in a hall cupboard or by the front door. A modern one (a consumer unit) looks something like this.</p>
+      <ol class="parts">
+        <li><b>1</b><div><strong>Main switch</strong><p>Turns off the electricity to the whole home. Use it in an emergency.</p></div></li>
+        <li><b>2</b><div><strong>RCD (has a T or Test button)</strong><p>Cuts the power in a fraction of a second if electricity leaks to earth, for example through a person. Press Test every six months: it should switch off. Then switch it back on.</p></div></li>
+        <li><b>3</b><div><strong>Circuit breakers</strong><p>One for each circuit: lights, sockets, cooker. Each switches off if its circuit is overloaded or has a fault.</p></div></li>
+        <li><b>4</b><div><strong>Labels</strong><p>Which switch does what. No labels? We'll add them next time we visit.</p></div></li>
+      </ol>
+      <div class="callout"><svg class="icon"><use href="#i-warning"/></svg><p>Fuse wire in a holder instead of switches means an old fuse box. Never replace fuse wire with anything thicker, or with anything that isn't fuse wire.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark" id="tripping">
+  <div class="wrap">
+    <header class="section-head">
+      <p class="tape tape-dark"><span class="tape-no">!</span><span>Tripping</span></p>
+      <h2 class="h2">If your fuse box keeps tripping</h2>
+      <p>A trip is the fuse box doing its job: something on that circuit isn't right. Most of the time it's an appliance, and you can find it yourself.</p>
+    </header>
+    <div class="trip">
+      <div>
+        <p class="q-label" id="trip-label">Which switch has gone down?</p>
+        <div class="trip-tabs" role="tablist" aria-labelledby="trip-label" aria-orientation="vertical" data-tabs hidden>
+          <button class="trip-tab" type="button" role="tab" id="tab-mcb" aria-controls="panel-mcb" aria-selected="true"><b>3</b><strong>One circuit breaker</strong><small>A single small switch</small></button>
+          <button class="trip-tab" type="button" role="tab" id="tab-rcd" aria-controls="panel-rcd" aria-selected="false" tabindex="-1"><b>2</b><strong>An RCD</strong><small>The switch with a T or Test button</small></button>
+          <button class="trip-tab" type="button" role="tab" id="tab-main" aria-controls="panel-main" aria-selected="false" tabindex="-1"><b>1</b><strong>The main switch</strong><small>Everything is off</small></button>
+        </div>
+      </div>
+      <div>
+        <div class="trip-panel" role="tabpanel" id="panel-mcb" aria-labelledby="tab-mcb" tabindex="0">
+          <h3>One circuit breaker has tripped</h3>
+          <ol class="numbered">
+            <li>Switch off or unplug everything on that circuit. For a lighting circuit, switch the lights off.</li>
+            <li>Push the breaker fully down, then back up to on.</li>
+            <li>Turn things back on one at a time. If it trips when you plug something in, that appliance is probably faulty: leave it unplugged.</li>
+            <li>If it trips with nothing plugged in, or straight away, leave it off and call us.</li>
+          </ol>
+          <div class="callout is-info"><svg class="icon"><use href="#i-info"/></svg><p>Trips when a heater, kettle and washing machine all run at once? The circuit may be overloaded. Spread things out and tell us: it may need another circuit.</p></div>
+        </div>
+        <div class="trip-panel" role="tabpanel" id="panel-rcd" aria-labelledby="tab-rcd" tabindex="0">
+          <h3>An RCD has tripped</h3>
+          <ol class="numbered">
+            <li>An RCD covers several circuits, so first unplug everything on them, and switch off outside lights.</li>
+            <li>Switch the RCD back on. If a breaker under it has also gone down, switch that on too.</li>
+            <li>Plug things back in one at a time, waiting a minute between each. Kettles, washing machines, dishwashers and outside lights are common causes.</li>
+            <li>If it trips with everything unplugged, the fault is in the wiring. Leave it off and call us.</li>
+          </ol>
+          <div class="callout is-info"><svg class="icon"><use href="#i-drop"/></svg><p>Trips when it rains? An outside light or socket may have water in it. Leave it off until it's checked.</p></div>
+        </div>
+        <div class="trip-panel" role="tabpanel" id="panel-main" aria-labelledby="tab-main" tabindex="0">
+          <h3>The main switch is off</h3>
+          <ol class="numbered">
+            <li>The main switch rarely trips by itself. Someone may have switched it off, or your board may have a main RCD (with a T button) that tripped.</li>
+            <li>Look for anything obvious: water near sockets or lights, a burning smell, scorch marks. If you find any, leave it off and call us.</li>
+            <li>Otherwise switch it back on. If it goes off again, leave it off and call us.</li>
+            <li>Main switch on but the whole home dark? Check whether your neighbours have power, and your credit if you have a prepayment meter. If the street is off, call 105.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <ul class="never">
+      <li><strong>Never hold a switch up or tape it on.</strong> It's switching off to protect you.</li>
+      <li><strong>Don't keep resetting it.</strong> If it trips twice with the cause unplugged, leave it off and call us.</li>
+      <li><strong>Keep the cover on.</strong> There's nothing inside a fuse box you need to touch.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <header class="section-head">
+      <h2 class="h2">When something looks or smells wrong</h2>
+      <p>Plain do's and don'ts. When in doubt, switch off and call.</p>
+    </header>
+    <div class="advice">
+      <article class="adv adv-danger" id="wires">
+        <div class="adv-head"><span class="tip-icon is-danger" aria-hidden="true"><svg class="icon"><use href="#i-hand"/></svg></span><h2>Exposed wires or damaged sockets</h2></div>
+        <ul class="ticks">
+          <li>Never touch exposed wires, even if you think the power is off.</li>
+          <li>Keep children and pets away.</li>
+          <li>If you can reach it safely, switch off at the main switch with dry hands. Don't touch a fuse box that is wet or damaged.</li>
+          <li>Don't use a cracked, loose or scorched socket, or anything with a damaged cable.</li>
+          <li>Call us. Don't tape it up and carry on.</li>
+        </ul>
+      </article>
+      <article class="adv adv-danger" id="burning">
+        <div class="adv-head"><span class="tip-icon is-danger" aria-hidden="true"><svg class="icon"><use href="#i-flame"/></svg></span><h2>Burning smell, buzzing or scorch marks</h2></div>
+        <ul class="ticks">
+          <li>Switch off that circuit at the fuse box, or the main switch if you're not sure which one.</li>
+          <li>Unplug anything nearby, if it's safe to.</li>
+          <li>Smoke or flames: get out, close the door behind you and call 999.</li>
+          <li>Never use water on an electrical fire.</li>
+          <li>Have it checked before you use it again.</li>
+        </ul>
+      </article>
+      <article class="adv adv-danger" id="shock">
+        <div class="adv-head"><span class="tip-icon is-danger" aria-hidden="true"><svg class="icon"><use href="#i-warning"/></svg></span><h2>If someone gets an electric shock</h2></div>
+        <ul class="ticks">
+          <li>Don't touch them if they may still be in contact with the electricity.</li>
+          <li>Switch off at the main switch. If you can't, push the source away with something dry that doesn't conduct, like a wooden broom handle, while standing on something dry.</li>
+          <li>Call 999. Even a small shock can affect the heart, so they should be checked over.</li>
+        </ul>
+      </article>
+      <article class="adv" id="water">
+        <div class="adv-head"><span class="tip-icon" aria-hidden="true"><svg class="icon"><use href="#i-drop"/></svg></span><h2>Water and electrics</h2></div>
+        <ul class="ticks">
+          <li>Water coming through a light or onto sockets? Switch off at the main switch, if you can reach it without touching water.</li>
+          <li>Don't touch switches with wet hands, or stand in water to reach the fuse box.</li>
+          <li>Stop the leak at the stopcock and let everything dry out.</li>
+          <li>Have the circuits tested before you switch them back on.</li>
+        </ul>
+      </article>
+      <article class="adv" id="power-cut">
+        <div class="adv-head"><span class="tip-icon" aria-hidden="true"><svg class="icon"><use href="#i-power"/></svg></span><h2>Power cuts</h2></div>
+        <ul class="ticks">
+          <li>Check whether your neighbours or the street lights are off too.</li>
+          <li>If they are, it's the network: call 105, free, for updates. In most of London the network is run by UK Power Networks.</li>
+          <li>If it's just you, check your fuse box for a tripped switch, and your meter credit if you're on prepayment.</li>
+          <li>Switch off heaters, irons and anything else that shouldn't start up by itself when the power comes back.</li>
+        </ul>
+      </article>
+      <article class="adv" id="leads">
+        <div class="adv-head"><span class="tip-icon" aria-hidden="true"><svg class="icon"><use href="#i-plug"/></svg></span><h2>Extension leads and adaptors</h2></div>
+        <ul class="ticks">
+          <li>Never plug one extension lead into another.</li>
+          <li>Plug heaters and other power-hungry appliances straight into a wall socket.</li>
+          <li>A 13 amp lead shares 13 amps: a kettle, a heater and a toaster together are too much.</li>
+          <li>Unwind cable reels fully before use. Coiled up, they can overheat.</li>
+        </ul>
+      </article>
+      <article class="adv" id="alarms">
+        <div class="adv-head"><span class="tip-icon" aria-hidden="true"><svg class="icon"><use href="#i-alarm"/></svg></span><h2>Smoke and heat alarms</h2></div>
+        <ul class="ticks">
+          <li>Press the test button once a month.</li>
+          <li>Replace alarms every ten years, or sooner if the maker says so.</li>
+          <li>Use a heat alarm in the kitchen, not a smoke alarm, so cooking doesn't set it off.</li>
+        </ul>
+      </article>
+      <article class="adv" id="diy">
+        <div class="adv-head"><span class="tip-icon" aria-hidden="true"><svg class="icon"><use href="#i-socket"/></svg></span><h2>Doing it yourself</h2></div>
+        <ul class="ticks">
+          <li>Small like-for-like swaps, such as a socket faceplate or a light fitting, are allowed in England. Switch off at the fuse box first: a light switch alone isn't enough.</li>
+          <li>A new circuit, a new fuse box, or work in a bathroom must be notified to building control. Leave those to a registered electrician who can certify them.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap band-inner">
+    <div>
+      <h2 class="h2">Still tripping, or not sure?</h2>
+      <p>Send us a photo of your fuse box and tell us what happened. We'll tell you whether it needs a visit, and what that costs.</p>
+      <div class="band-actions">
+        <a class="btn btn-volt" href="quote.html?job=faults">Fault finding guide price <svg class="icon"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-ghost-light" href="https://wa.me/447700900742" data-contact="whatsapp"><svg class="icon"><use href="#i-chat"/></svg> Send a photo on WhatsApp</a>
+      </div>
+    </div>
+    <div class="band-figure">
+      <h3>Fault finding</h3>
+      <dl class="band-prices">
+        <div><dt>Visit and first hour</dt><dd data-rate="firstHour">£110</dd></div>
+        <div><dt>Each half hour after</dt><dd data-rate="halfHour">£35</dd></div>
+      </dl>
+      <p>Including VAT. Most faults are found in the first hour or two, and we price any repair before we do it.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a class="brand" href="index.html" aria-label="Earthpin Electrical, home">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect class="bm-bg" width="32" height="32" rx="8"/><rect class="bm-earth" x="13.9" y="5.5" width="4.2" height="9.5" rx="1.1"/><rect class="bm-pin" x="5.8" y="19.2" width="8.4" height="4" rx="1.1"/><rect class="bm-pin" x="17.8" y="19.2" width="8.4" height="4" rx="1.1"/></svg>
+      <span class="brand-text"><span class="brand-name">Earthpin</span><span class="brand-sub">Electrical</span></span>
+    </a>
+      <p>Electricians for homes and small businesses in North Finchley, Barnet and nearby. Rewires, fuse boxes, EV chargers, EICRs and the smaller jobs too.</p>
+    </div>
+    <nav class="footer-col" aria-label="Footer">
+      <h2>Pages</h2>
+      <ul>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="quote.html">Get a guide price</a></li>
+        <li><a href="landlords.html">EICRs for landlords</a></li>
+        <li><a href="safety.html">Electrical safety</a></li>
+        <li><a href="index.html#areas">Areas we cover</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </nav>
+    <div class="footer-col">
+      <h2>Contact</h2>
+      <p><a href="https://wa.me/447700900742" data-contact="whatsapp">WhatsApp 07700 900742</a></p>
+      <p><a href="tel:+442079460742" data-contact="phone">Call 020 7946 0742</a></p>
+      <p><a href="mailto:hello@earthpin.example" data-contact="email">hello@earthpin.example</a></p>
+      <p>Unit 3, Kestle Mews, North Finchley, London N12</p>
+    </div>
+    <p class="footer-credit">A sample website by <a href="https://agilerelease.co.uk/#websites">Agile Release</a>. Earthpin Electrical is made up. &copy; 2026 Agile Release Limited. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crumb &amp; Candle | Bakery and celebration cakes in Surbiton (sample website)</title>
+<meta name="description" content="Sourdough, pastries and celebration cakes from an independent bakery on Cardell Row, Surbiton. Order a cake online. A sample website by Agile Release.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#fff6f2">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="preload" href="css/fonts/shrikhand-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="css/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js" defer></script>
+<script src="js/time.js" defer></script>
+<script src="js/cake-art.js" defer></script>
+<script src="js/site.js" defer></script>
+<script src="js/gallery.js" defer></script>
+</head>
+<body>
+
+<svg class="sprite" aria-hidden="true">
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 7 8.5-7"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z"/><circle cx="12" cy="13" r="3.5"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.5v.2"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5 2.5 20h19L12 3.5Z"/><path d="M12 10v4.5M12 17.2v.2"/></symbol>
+  <symbol id="i-prev" viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></symbol>
+  <symbol id="i-next" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+  <symbol id="i-loaf" viewBox="0 0 24 24"><path d="M3.8 17.5C3 12 7 7 12 7s9 5 8.2 10.5Z"/><path d="M8.5 11c2-1.3 5-1.3 7 0M8 14c2.4-1.2 5.6-1.2 8 0"/></symbol>
+  <symbol id="i-croissant" viewBox="0 0 24 24"><path d="M2.8 17.2C3.4 11.3 7.2 7.2 12 7.2s8.6 4.1 9.2 10c-1.7-1.3-3.4-1.8-5-1.6-1.2-1.4-2.6-2.1-4.2-2.1s-3 .7-4.2 2.1c-1.6-.2-3.3.3-5 1.6Z"/><path d="M7.8 15.6 6.6 9.6M16.2 15.6l1.2-6M12 13.5V7.2"/></symbol>
+  <symbol id="i-slice" viewBox="0 0 24 24"><path d="M3 15.5 20 9v10H3Z"/><path d="M3 15.5h17M3 12.5l17-6.5"/><circle cx="17.5" cy="5" r="1.8"/></symbol>
+  <symbol id="i-cake" viewBox="0 0 24 24"><path d="M4 20v-7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v7M2.5 20h19"/><path d="M4 15c1.3 1 2.7 1 4 0s2.7-1 4 0 2.7 1 4 0 2.7-1 4 0"/><path d="M12 11V7.5"/><path d="M12 3.2c.9.9 1.1 1.9 0 2.8-1.1-.9-.9-1.9 0-2.8Z"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1 12.5H6L5 8Z"/><path d="M9 10V6.5a3 3 0 0 1 6 0V10"/></symbol>
+  <symbol id="i-train" viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="13.5" rx="3"/><path d="M6 10h12M9 20.5l-1.8 1.5M15 20.5l1.8 1.5M9.5 13.4v.2M14.5 13.4v.2"/></symbol>
+  <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3c.6 4.6 1.9 5.9 6.5 6.5-4.6.6-5.9 1.9-6.5 6.5-.6-4.6-1.9-5.9-6.5-6.5C10.1 8.9 11.4 7.6 12 3Z"/><path d="M18.5 15.5v4M16.5 17.5h4"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14Z"/><path d="M5 19 13 11"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<aside class="sample-bar" aria-label="About this sample website">
+  <div class="wrap sample-bar-inner">
+    <p><strong>Sample website by Agile Release.</strong> Crumb &amp; Candle is not a real bakery: the prices, hours and address are examples.</p>
+    <a href="https://agilerelease.co.uk/#websites">Get a site like this <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a>
+  </div>
+</aside>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Crumb and Candle, home">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect x="1.5" y="1.5" width="37" height="37" rx="11" fill="#c4164e" stroke="#2b0d1e" stroke-width="3"/><path d="M19.5 7.2c2.6 2.7 3.1 5.3.5 6.9-2.6-1.6-2.1-4.2-.5-6.9Z" fill="#ffd15c" stroke="#2b0d1e" stroke-width="1.8" stroke-linejoin="round"/><rect x="18.2" y="14" width="3.6" height="8" rx="1" fill="#fff3dc" stroke="#2b0d1e" stroke-width="1.8"/><path d="M8.5 22.5h23v7.3a2.7 2.7 0 0 1-2.7 2.7H11.2a2.7 2.7 0 0 1-2.7-2.7Z" fill="#fff3dc" stroke="#2b0d1e" stroke-width="2.2" stroke-linejoin="round"/><path d="M8.5 22.5h23v2.6c0 1.2-.8 1.9-1.6 1.9s-1.6-.7-1.6-1.9v1.6c0 1.5-.9 2.2-1.8 2.2s-1.8-.7-1.8-2.2v-1c0 1.1-.8 1.7-1.6 1.7s-1.6-.6-1.6-1.7v2.3c0 1.4-.9 2.1-1.8 2.1s-1.8-.7-1.8-2.1v-2.6c0 1-.8 1.6-1.6 1.6s-1.6-.6-1.6-1.6v1.1c0 1.2-.8 1.8-1.6 1.8s-1.6-.6-1.6-1.8Z" fill="#ff8fab" stroke="#2b0d1e" stroke-width="1.8" stroke-linejoin="round"/></svg>
+      <span class="brand-text"><span class="brand-name">Crumb <span class="brand-amp">&amp;</span> Candle</span><span class="brand-tag">Bakery, Surbiton</span></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="shop.html">Bread &amp; pastries</a></li>
+        <li><a href="cakes.html">Celebration cakes</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="shop.html#allergens">Allergens</a></li>
+        <li><a href="index.html#find-us">Find us</a></li>
+        <li class="nav-order"><a href="cakes.html#order">Order a cake</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary btn-sm header-cta" href="cakes.html#order">Order a cake</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+      <svg class="icon"><use href="#i-menu"/></svg><span class="visually-hidden">Menu</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow">Independent bakery on Cardell Row, Surbiton</p>
+      <h1 class="display">Baked this morning. <span class="display-accent">Iced for your big day.</span></h1>
+      <p class="lead">Sourdough and pastries from our own ovens every morning, and celebration cakes made to order for birthdays, weddings and everything in between.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="cakes.html#order">Order a cake <svg class="icon"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-light" href="shop.html#bakes">Today's bakes</a>
+      </div>
+      <p class="status" data-status>
+        <span class="status-dot" aria-hidden="true"></span>
+        <span><strong data-status-text>Open Tuesday to Sunday</strong> <span data-status-detail>from 7:30am</span></span>
+      </p>
+    </div>
+    <div class="hero-art">
+      <svg class="hero-svg" viewBox="0 0 560 540" aria-hidden="true" focusable="false">
+<circle cx="290" cy="262" r="230" fill="#ffd2da"/>
+<circle class="hero-ring" cx="290" cy="262" r="252" fill="none" stroke="#2b0d1e" stroke-width="5" stroke-linecap="round" stroke-dasharray="0.1 16"/>
+<rect x="530.9" y="255.1" width="5" height="14" rx="2.5" fill="#ff7aa2" stroke="#2b0d1e" stroke-width="2" transform="rotate(144 533.4 262.1)"/><rect x="536.1" y="208.6" width="5" height="14" rx="2.5" fill="#ffd15c" stroke="#2b0d1e" stroke-width="2" transform="rotate(20 538.6 215.6)"/><rect x="36.6" y="333.9" width="5" height="14" rx="2.5" fill="#7cc4ef" stroke="#2b0d1e" stroke-width="2" transform="rotate(86 39.1 340.9)"/><rect x="313.3" y="18.8" width="5" height="14" rx="2.5" fill="#9ccf6e" stroke="#2b0d1e" stroke-width="2" transform="rotate(12 315.8 25.8)"/><rect x="39.8" y="334.2" width="5" height="14" rx="2.5" fill="#c9a8f5" stroke="#2b0d1e" stroke-width="2" transform="rotate(136 42.3 341.2)"/><rect x="487.1" y="79.6" width="5" height="14" rx="2.5" fill="#ffffff" stroke="#2b0d1e" stroke-width="2" transform="rotate(56 489.6 86.6)"/><rect x="93.3" y="61.5" width="5" height="14" rx="2.5" fill="#ff7aa2" stroke="#2b0d1e" stroke-width="2" transform="rotate(125 95.8 68.5)"/><rect x="428.7" y="41.3" width="5" height="14" rx="2.5" fill="#ffd15c" stroke="#2b0d1e" stroke-width="2" transform="rotate(140 431.2 48.3)"/><rect x="459.2" y="56.9" width="5" height="14" rx="2.5" fill="#7cc4ef" stroke="#2b0d1e" stroke-width="2" transform="rotate(123 461.7 63.9)"/><rect x="534.6" y="195.5" width="5" height="14" rx="2.5" fill="#9ccf6e" stroke="#2b0d1e" stroke-width="2" transform="rotate(167 537.1 202.5)"/><rect x="486.7" y="107.3" width="5" height="14" rx="2.5" fill="#c9a8f5" stroke="#2b0d1e" stroke-width="2" transform="rotate(25 489.2 114.3)"/><rect x="45.4" y="294.7" width="5" height="14" rx="2.5" fill="#ffffff" stroke="#2b0d1e" stroke-width="2" transform="rotate(90 47.9 301.7)"/><rect x="123.7" y="39.3" width="5" height="14" rx="2.5" fill="#ff7aa2" stroke="#2b0d1e" stroke-width="2" transform="rotate(158 126.2 46.3)"/><rect x="50.2" y="339.1" width="5" height="14" rx="2.5" fill="#ffd15c" stroke="#2b0d1e" stroke-width="2" transform="rotate(147 52.7 346.1)"/><rect x="29.6" y="206.0" width="5" height="14" rx="2.5" fill="#7cc4ef" stroke="#2b0d1e" stroke-width="2" transform="rotate(91 32.1 213.0)"/><rect x="40.9" y="322.8" width="5" height="14" rx="2.5" fill="#9ccf6e" stroke="#2b0d1e" stroke-width="2" transform="rotate(40 43.4 329.8)"/><rect x="314.5" y="13.3" width="5" height="14" rx="2.5" fill="#c9a8f5" stroke="#2b0d1e" stroke-width="2" transform="rotate(84 317.0 20.3)"/><rect x="30.2" y="337.3" width="5" height="14" rx="2.5" fill="#ffffff" stroke="#2b0d1e" stroke-width="2" transform="rotate(168 32.7 344.3)"/><rect x="58.0" y="329.0" width="5" height="14" rx="2.5" fill="#ff7aa2" stroke="#2b0d1e" stroke-width="2" transform="rotate(26 60.5 336.0)"/><rect x="155.9" y="29.6" width="5" height="14" rx="2.5" fill="#ffd15c" stroke="#2b0d1e" stroke-width="2" transform="rotate(95 158.4 36.6)"/><rect x="412.9" y="45.2" width="5" height="14" rx="2.5" fill="#7cc4ef" stroke="#2b0d1e" stroke-width="2" transform="rotate(105 415.4 52.2)"/><rect x="88.9" y="101.0" width="5" height="14" rx="2.5" fill="#9ccf6e" stroke="#2b0d1e" stroke-width="2" transform="rotate(26 91.4 108.0)"/><rect x="381.6" y="17.5" width="5" height="14" rx="2.5" fill="#c9a8f5" stroke="#2b0d1e" stroke-width="2" transform="rotate(108 384.1 24.5)"/><rect x="64.1" y="135.2" width="5" height="14" rx="2.5" fill="#ffffff" stroke="#2b0d1e" stroke-width="2" transform="rotate(165 66.6 142.2)"/><rect x="66.1" y="355.1" width="5" height="14" rx="2.5" fill="#ff7aa2" stroke="#2b0d1e" stroke-width="2" transform="rotate(147 68.6 362.1)"/><rect x="54.3" y="297.5" width="5" height="14" rx="2.5" fill="#ffd15c" stroke="#2b0d1e" stroke-width="2" transform="rotate(131 56.8 304.5)"/>
+<path transform="translate(78 96) scale(1)" d="M0 -14 C2 -4 4 -2 14 0 C4 2 2 4 0 14 C-2 4 -4 2 -14 0 C-4 -2 -2 -4 0 -14 Z" fill="#ffd15c" stroke="#2b0d1e" stroke-width="2.4" stroke-linejoin="round"/><path transform="translate(512 70) scale(0.8)" d="M0 -14 C2 -4 4 -2 14 0 C4 2 2 4 0 14 C-2 4 -4 2 -14 0 C-4 -2 -2 -4 0 -14 Z" fill="#ffd15c" stroke="#2b0d1e" stroke-width="2.4" stroke-linejoin="round"/><path transform="translate(530 300) scale(0.65)" d="M0 -14 C2 -4 4 -2 14 0 C4 2 2 4 0 14 C-2 4 -4 2 -14 0 C-4 -2 -2 -4 0 -14 Z" fill="#ffd15c" stroke="#2b0d1e" stroke-width="2.4" stroke-linejoin="round"/><path transform="translate(40 300) scale(0.6)" d="M0 -14 C2 -4 4 -2 14 0 C4 2 2 4 0 14 C-2 4 -4 2 -14 0 C-4 -2 -2 -4 0 -14 Z" fill="#ffd15c" stroke="#2b0d1e" stroke-width="2.4" stroke-linejoin="round"/>
+<svg x="60" y="6" width="460" height="380" viewBox="0 50 400 330"><ellipse cx="200" cy="372" rx="120" ry="6" fill="#2b0d1e" opacity="0.12"/><g class="cake-stand"><path d="M162 352 Q170 338 172 338 H228 Q230 338 238 352 Z" fill="#fff" stroke="#2b0d1e" stroke-width="3" stroke-linejoin="round"/><ellipse cx="200" cy="360" rx="64" ry="11" fill="#fff" stroke="#2b0d1e" stroke-width="3"/><path d="M32 330 v6 A168 17 0 0 0 368 336 v-6" fill="#f4e9ec" stroke="#2b0d1e" stroke-width="3"/><ellipse cx="200" cy="330" rx="168" ry="17" fill="#fff" stroke="#2b0d1e" stroke-width="3"/></g><g class="cake-tier"><path d="M78 226 V330 A122 28.1 0 0 0 322 330 V226 Z" fill="#ffc6d2"/><path d="M273.2 248.4 V352.4 A122 28.1 0 0 0 322 330 V226 A122 28.1 0 0 1 273.2 248.4 Z" fill="#f59db2" opacity="0.75"/><rect x="95.1" y="264.1" width="7" height="49.9" rx="3.5" fill="#fff" opacity="0.55"/><path d="M78 226 V330 A122 28.1 0 0 0 322 330 V226 Z" fill="none" stroke="#2b0d1e" stroke-width="3" stroke-linejoin="round"/><ellipse cx="200" cy="226" rx="122" ry="28.1" fill="#ffd4e0" stroke="#2b0d1e" stroke-width="3"/><circle cx="83" cy="330.6" r="5.5" fill="#ffd4e0" stroke="#2b0d1e" stroke-width="2"/><circle cx="96" cy="340.3" r="5.5" fill="#ffd4e0" stroke="#2b0d1e" stroke-width="2"/><circle cx="109" cy="344.9" r="5.5" fill="#ffd4e0" stroke="#2b0d1e" stroke-width="2"/><circle cx="122" cy="348.1" r="5.5" fill="#ffd4e0" stroke="#2b0d1e" stroke-width="2"/><circle cx="135" cy="350.4" r="5.5" fill="#ffd4e0" stroke="#2b0d1e" stroke-width="2"/><circle cx="148" cy="352.2" r="5.5" fill="#ffd4e0" stroke="#2b0d1e" stroke-width="2"/><circle cx="161" cy="353.5" r="5.5" fill="#ffd4e0" stroke="#2b0d1e" stroke-width="2"/><circle cx="174" cy="354.4" r="5.5" fill="#ffd4e0" stroke="#2b0d1e" stroke-width="2"/><circle cx="187" cy="354.9" r="5.5" fill="#ffd4e0" stroke="#2b0d1e" stroke-width="2"/><circle cx="200" cy="355.1" r="5.5" fill="#ffd4e0" stroke="#2b0d1e" stroke-width="2"/><circle cx="213" cy="354.9" r="5.5" fill="#ffd4e0" stroke="#2b0d1e" stroke-width="2"/><circle cx="226" cy="354.4" r="5.5" fill="#ffd4e0" stroke="#2b0d1e" stroke-width="2"/><circle cx="239" cy="353.5" r="5.5" fill="#ffd4e0" stroke="#2b0d1e" stroke-width="2"/><circle cx="252" cy="352.2" r="5.5" fill="#ffd4e0" stroke="#2b0d1e" stroke-width="2"/><circle cx="265" cy="350.4" r="5.5" fill="#ffd4e0" stroke="#2b0d1e" stroke-width="2"/><circle cx="278" cy="348.1" r="5.5" fill="#ffd4e0" stroke="#2b0d1e" stroke-width="2"/><circle cx="291" cy="344.9" r="5.5" fill="#ffd4e0" stroke="#2b0d1e" stroke-width="2"/><circle cx="304" cy="340.3" r="5.5" fill="#ffd4e0" stroke="#2b0d1e" stroke-width="2"/><circle cx="317" cy="330.6" r="5.5" fill="#ffd4e0" stroke="#2b0d1e" stroke-width="2"/></g><g class="cake-tier"><path d="M114 137.8 V235.8 A86 19.8 0 0 0 286 235.8 V137.8 Z" fill="#ffc6d2"/><path d="M251.6 153.6 V251.6 A86 19.8 0 0 0 286 235.8 V137.8 A86 19.8 0 0 1 251.6 153.6 Z" fill="#f59db2" opacity="0.75"/><rect x="126" y="167.6" width="7" height="52.2" rx="3.5" fill="#fff" opacity="0.55"/><path d="M114 137.8 V235.8 A86 19.8 0 0 0 286 235.8 V137.8 Z" fill="none" stroke="#2b0d1e" stroke-width="3" stroke-linejoin="round"/><ellipse cx="200" cy="137.8" rx="86" ry="19.8" fill="#ffd4e0" stroke="#2b0d1e" stroke-width="3"/><circle cx="122" cy="238.9" r="5.5" fill="#ffd4e0" stroke="#2b0d1e" stroke-width="2"/><circle cx="135" cy="244.9" r="5.5" fill="#ffd4e0" stroke="#2b0d1e" stroke-width="2"/><circle cx="148" cy="248.1" r="5.5" fill="#ffd4e0" stroke="#2b0d1e" stroke-width="2"/><circle cx="161" cy="250.2" r="5.5" fill="#ffd4e0" stroke="#2b0d1e" stroke-width="2"/><circle cx="174" cy="251.6" r="5.5" fill="#ffd4e0" stroke="#2b0d1e" stroke-width="2"/><circle cx="187" cy="252.4" r="5.5" fill="#ffd4e0" stroke="#2b0d1e" stroke-width="2"/><circle cx="200" cy="252.6" r="5.5" fill="#ffd4e0" stroke="#2b0d1e" stroke-width="2"/><circle cx="213" cy="252.4" r="5.5" fill="#ffd4e0" stroke="#2b0d1e" stroke-width="2"/><circle cx="226" cy="251.6" r="5.5" fill="#ffd4e0" stroke="#2b0d1e" stroke-width="2"/><circle cx="239" cy="250.2" r="5.5" fill="#ffd4e0" stroke="#2b0d1e" stroke-width="2"/><circle cx="252" cy="248.1" r="5.5" fill="#ffd4e0" stroke="#2b0d1e" stroke-width="2"/><circle cx="265" cy="244.9" r="5.5" fill="#ffd4e0" stroke="#2b0d1e" stroke-width="2"/><circle cx="278" cy="238.9" r="5.5" fill="#ffd4e0" stroke="#2b0d1e" stroke-width="2"/><path d="M114 137.8 L114 144.9 L118 151.4 L122 154.2 L126 156.1 L130 157.5 L134 157.5 C135 163.5 135 192.5 135 192.5 A6.1 6.1 0 0 0 147.2 192.5 C147.2 192.5 147.2 166.6 148.2 160.6 L148.2 159.8 L152.2 160.1 L156.2 160.6 L160.2 161.3 L164.2 162.1 L168.2 163.2 C169.2 169.2 169.2 192.4 169.2 192.4 A7.1 7.1 0 0 0 183.3 192.4 C183.3 192.4 183.3 170.3 184.3 164.3 L184.3 165.5 L188.3 165.5 L192.3 165.2 L196.3 164.6 C197.3 170.6 197.3 196.5 197.3 196.5 A6.1 6.1 0 0 0 209.5 196.5 C209.5 196.5 209.5 170.5 210.5 164.5 L210.5 163.3 L214.5 163.2 L218.5 163.2 L222.5 163.4 L226.5 163.7 L230.5 163.3 C231.5 169.3 231.5 205.1 231.5 205.1 A5.9 5.9 0 0 0 243.3 205.1 C243.3 205.1 243.3 167.8 244.3 161.8 L244.3 162.9 L248.3 161.9 L252.3 160.8 L256.3 159.5 L260.3 158.9 C261.3 164.9 261.3 193.5 261.3 193.5 A6.5 6.5 0 0 0 274.4 193.5 C274.4 193.5 274.4 160.3 275.4 154.3 L275.4 153.5 L279.4 152 L283.4 149.8 L286 137.8 A86 19.8 0 0 0 114 137.8 Z" fill="#d3245c" stroke="#2b0d1e" stroke-width="3" stroke-linejoin="round"/><path d="M152.7 132.9 Q182.8 126.9 212.9 127.9" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity="0.35"/></g><rect x="215.1" y="141.3" width="3.2" height="9" rx="1.6" fill="#ff7aa2" transform="rotate(71 216.7 145.8)"/><rect x="158.5" y="142.3" width="3.2" height="9" rx="1.6" fill="#ffd15c" transform="rotate(23 160.1 146.8)"/><rect x="152.9" y="126" width="3.2" height="9" rx="1.6" fill="#7cc4ef" transform="rotate(75 154.5 130.5)"/><rect x="235" y="120.8" width="3.2" height="9" rx="1.6" fill="#9ccf6e" transform="rotate(138 236.6 125.3)"/><rect x="174.6" y="145.4" width="3.2" height="9" rx="1.6" fill="#ffffff" transform="rotate(45 176.2 149.9)"/><rect x="257.4" y="138.3" width="3.2" height="9" rx="1.6" fill="#ff7aa2" transform="rotate(176 259 142.8)"/><rect x="190.3" y="139.5" width="3.2" height="9" rx="1.6" fill="#ffd15c" transform="rotate(134 191.9 144)"/><rect x="167.2" y="143.6" width="3.2" height="9" rx="1.6" fill="#7cc4ef" transform="rotate(104 168.8 148.1)"/><rect x="214" y="128.1" width="3.2" height="9" rx="1.6" fill="#9ccf6e" transform="rotate(153 215.6 132.6)"/><rect x="217.8" y="123.9" width="3.2" height="9" rx="1.6" fill="#ffffff" transform="rotate(5 219.4 128.4)"/><rect x="257.8" y="140.5" width="3.2" height="9" rx="1.6" fill="#ff7aa2" transform="rotate(90 259.4 145)"/><rect x="160.9" y="131.9" width="3.2" height="9" rx="1.6" fill="#ffd15c" transform="rotate(90 162.5 136.4)"/><rect x="196.2" y="128.3" width="3.2" height="9" rx="1.6" fill="#7cc4ef" transform="rotate(116 197.8 132.8)"/><rect x="245.2" y="136.5" width="3.2" height="9" rx="1.6" fill="#9ccf6e" transform="rotate(114 246.8 141)"/><rect x="246" y="132.2" width="3.2" height="9" rx="1.6" fill="#ffffff" transform="rotate(84 247.6 136.7)"/><rect x="188.7" y="136.3" width="3.2" height="9" rx="1.6" fill="#ff7aa2" transform="rotate(132 190.3 140.8)"/><rect x="142.7" y="140.4" width="3.2" height="9" rx="1.6" fill="#ffd15c" transform="rotate(54 144.3 144.9)"/><rect x="157.8" y="130" width="3.2" height="9" rx="1.6" fill="#7cc4ef" transform="rotate(152 159.4 134.5)"/><rect x="211.9" y="138.2" width="3.2" height="9" rx="1.6" fill="#9ccf6e" transform="rotate(113 213.5 142.7)"/><rect x="179.9" y="129.1" width="3.2" height="9" rx="1.6" fill="#ffffff" transform="rotate(66 181.5 133.6)"/><rect x="147.5" y="144.6" width="3.2" height="9" rx="1.6" fill="#ff7aa2" transform="rotate(154 149.1 149.1)"/><rect x="166.3" y="125.5" width="3.2" height="9" rx="1.6" fill="#ffd15c" transform="rotate(165 167.9 130)"/><g class="cake-candle"><circle class="cake-glow" cx="167" cy="96.6" r="13" fill="#ffd15c" opacity="0.35"/><rect x="163" y="107.6" width="8" height="34" rx="2" fill="#ff8fab" stroke="#2b0d1e" stroke-width="2"/><path d="M163 117.6 l8 -5 M163 128.6 l8 -5 M163 139.6 l8 -5" stroke="#fff" stroke-width="2.4"/><path d="M167 107.6 v-5" stroke="#2b0d1e" stroke-width="2" stroke-linecap="round"/><path class="cake-flame" d="M167 82.6 C174.5 92.6 173.5 102.6 167 103.1 C160.5 102.6 159.5 92.6 167 82.6 Z" fill="#ffc93c" stroke="#2b0d1e" stroke-width="2" stroke-linejoin="round"/></g><g class="cake-candle"><circle class="cake-glow" cx="200" cy="87.1" r="13" fill="#ffd15c" opacity="0.35"/><rect x="196" y="98.1" width="8" height="34" rx="2" fill="#7cc4ef" stroke="#2b0d1e" stroke-width="2"/><path d="M196 108.1 l8 -5 M196 119.1 l8 -5 M196 130.1 l8 -5" stroke="#fff" stroke-width="2.4"/><path d="M200 98.1 v-5" stroke="#2b0d1e" stroke-width="2" stroke-linecap="round"/><path class="cake-flame" d="M200 73.1 C207.5 83.1 206.5 93.1 200 93.6 C193.5 93.1 192.5 83.1 200 73.1 Z" fill="#ffc93c" stroke="#2b0d1e" stroke-width="2" stroke-linejoin="round"/></g><g class="cake-candle"><circle class="cake-glow" cx="233" cy="95.8" r="13" fill="#ffd15c" opacity="0.35"/><rect x="229" y="106.8" width="8" height="34" rx="2" fill="#ffd15c" stroke="#2b0d1e" stroke-width="2"/><path d="M229 116.8 l8 -5 M229 127.8 l8 -5 M229 138.8 l8 -5" stroke="#fff" stroke-width="2.4"/><path d="M233 106.8 v-5" stroke="#2b0d1e" stroke-width="2" stroke-linecap="round"/><path class="cake-flame" d="M233 81.8 C240.5 91.8 239.5 101.8 233 102.3 C226.5 101.8 225.5 91.8 233 81.8 Z" fill="#ffc93c" stroke="#2b0d1e" stroke-width="2" stroke-linejoin="round"/></g></svg>
+<g transform="translate(24 350)">
+<ellipse cx="128" cy="150" rx="132" ry="8" fill="#2b0d1e" opacity="0.12"/>
+<rect x="232" y="124" width="46" height="16" rx="8" fill="#e2a467" stroke="#2b0d1e" stroke-width="3"/>
+<rect x="0" y="116" width="250" height="28" rx="14" fill="#e2a467" stroke="#2b0d1e" stroke-width="3"/>
+<path d="M22 126 H226" stroke="#c98647" stroke-width="3" stroke-linecap="round"/>
+<path d="M20 122 C14 54 62 18 125 18 C188 18 236 54 230 122 Z" fill="#d68a43" stroke="#2b0d1e" stroke-width="3" stroke-linejoin="round"/>
+<path d="M176 26 C212 42 236 78 230 122 H196 C204 86 198 54 176 26 Z" fill="#b8692c" opacity="0.5"/>
+<path d="M56 66 C92 34 162 30 198 60 C160 50 96 52 56 66 Z" fill="#f3d29b" stroke="#2b0d1e" stroke-width="2.6" stroke-linejoin="round"/>
+<path d="M66 96 C100 80 150 78 186 92" fill="none" stroke="#2b0d1e" stroke-width="2.6" stroke-linecap="round"/>
+<path d="M46 74 C52 54 68 40 88 32" fill="none" stroke="#f6c68c" stroke-width="5" stroke-linecap="round"/>
+<circle cx="92" cy="44" r="3" fill="#fffaf0" opacity="0.85"/><circle cx="122" cy="32" r="2.6" fill="#fffaf0" opacity="0.85"/><circle cx="152" cy="38" r="3" fill="#fffaf0" opacity="0.85"/><circle cx="106" cy="56" r="2.2" fill="#fffaf0" opacity="0.85"/><circle cx="140" cy="50" r="2.4" fill="#fffaf0" opacity="0.85"/><circle cx="172" cy="48" r="2.2" fill="#fffaf0" opacity="0.85"/><circle cx="80" cy="60" r="2" fill="#fffaf0" opacity="0.85"/><circle cx="196" cy="70" r="2" fill="#fffaf0" opacity="0.85"/><circle cx="130" cy="24" r="2" fill="#fffaf0" opacity="0.85"/>
+</g>
+<g transform="translate(446 466) rotate(-6)">
+<ellipse cx="0" cy="34" rx="96" ry="7" fill="#2b0d1e" opacity="0.12"/>
+<ellipse cx="-76" cy="14" rx="21" ry="12" transform="rotate(-38 -76 14)" fill="#e9a04a" stroke="#2b0d1e" stroke-width="3"/><ellipse cx="76" cy="14" rx="21" ry="12" transform="rotate(38 76 14)" fill="#e9a04a" stroke="#2b0d1e" stroke-width="3"/>
+<ellipse cx="-46" cy="0" rx="27" ry="21" transform="rotate(-22 -46 0)" fill="#e9a04a" stroke="#2b0d1e" stroke-width="3"/><ellipse cx="46" cy="0" rx="27" ry="21" transform="rotate(22 46 0)" fill="#e9a04a" stroke="#2b0d1e" stroke-width="3"/>
+<path d="M-62 -6 Q-52 -16 -38 -16" fill="none" stroke="#f8d08f" stroke-width="4" stroke-linecap="round"/><path d="M30 -16 Q44 -16 56 -8" fill="none" stroke="#f8d08f" stroke-width="4" stroke-linecap="round"/>
+<ellipse cx="0" cy="-8" rx="33" ry="28" transform="rotate(0 0 -8)" fill="#e9a04a" stroke="#2b0d1e" stroke-width="3"/>
+<path d="M-18 -26 Q-4 -34 12 -30" fill="none" stroke="#f8d08f" stroke-width="4" stroke-linecap="round"/>
+<path d="M-12 18 Q0 22 12 18" fill="none" stroke="#2b0d1e" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+</g>
+</svg>
+    </div>
+  </div>
+</section>
+
+<section class="section oven-section" id="oven" aria-labelledby="oven-title">
+  <div class="wrap">
+    <div class="oven-head" data-reveal>
+      <div>
+        <p class="kicker">Out of the oven</p>
+        <h2 class="h2" id="oven-title"><span data-oven-title>Every morning at the bakery</span></h2>
+      </div>
+      <a class="text-link" href="shop.html#bakes">Bake times for every day <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a>
+    </div>
+    <ol class="oven" data-oven data-reveal>
+      <li class="oven-item"><span class="oven-time">7:30am</span><span class="oven-name">Croissants and pain au chocolat</span></li>
+      <li class="oven-item"><span class="oven-time">8am</span><span class="oven-name">Sourdough loaves</span></li>
+      <li class="oven-item"><span class="oven-time">9am</span><span class="oven-name">Cinnamon and cardamom buns</span></li>
+      <li class="oven-item"><span class="oven-time">10:30am</span><span class="oven-name">Rosemary focaccia</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section counter-section" aria-labelledby="counter-title">
+  <div class="wrap">
+    <header class="section-head" data-reveal>
+      <p class="kicker">On the counter</p>
+      <h2 class="h2" id="counter-title">Bread, pastries and cake by the slice</h2>
+      <p>Everything is made in the room behind the counter. Come early on Saturdays: the seeded sourdough is usually gone by eleven.</p>
+    </header>
+    <div class="counter-grid" data-range-featured data-reveal>
+      <noscript><p class="noscript-note">See the full range and prices on the <a href="shop.html#range">Bread &amp; pastries page</a>.</p></noscript>
+    </div>
+    <p class="section-cta" data-reveal><a class="btn btn-light" href="shop.html#range">See the full range and prices <svg class="icon"><use href="#i-arrow"/></svg></a></p>
+  </div>
+</section>
+
+<section class="section cakes-band" aria-labelledby="cakes-title">
+  <div class="wrap cakes-band-inner">
+    <div class="cakes-band-copy" data-reveal>
+      <p class="kicker kicker-light">Celebration cakes</p>
+      <h2 class="h2" id="cakes-title">Cakes for the big days</h2>
+      <p>Three layers of sponge, your choice of filling, and a finish to suit the party. Build your cake online and see the price as you go.</p>
+      <ul class="ticks">
+        <li><svg class="icon"><use href="#i-check"/></svg> <span>From <strong data-fill="cake-from">£58</strong> for a 6 inch cake that serves 12 to 14</span></li>
+        <li><svg class="icon"><use href="#i-check"/></svg> <span>Order at least 5 days ahead, or 14 days for tiered cakes</span></li>
+        <li><svg class="icon"><use href="#i-check"/></svg> <span>Eggless, vegan and made-without-gluten sponges</span></li>
+        <li><svg class="icon"><use href="#i-check"/></svg> <span>Collected from the shop in a time slot you choose</span></li>
+      </ul>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="cakes.html#order">Start your cake order <svg class="icon"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-ghost-light" href="cakes.html#sizes">Sizes and prices</a>
+      </div>
+    </div>
+    <ol class="mini-steps" data-reveal>
+      <li><span class="mini-step-no">1</span><div><h3>Build your cake</h3><p>Pick the size, sponge, filling and finish. The price updates as you go.</p></div></li>
+      <li><span class="mini-step-no">2</span><div><h3>Send it on WhatsApp</h3><p>Your order arrives as a ready-written message. Add a photo of a cake you like.</p></div></li>
+      <li><span class="mini-step-no">3</span><div><h3>Pay half to book it</h3><p>We reply within a working day with the final price. Your date is held once the deposit is paid.</p></div></li>
+      <li><span class="mini-step-no">4</span><div><h3>Collect and celebrate</h3><p>Pay the rest when you collect, boxed and ready to go.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section gallery-preview" aria-labelledby="recent-title">
+  <div class="wrap">
+    <div class="oven-head" data-reveal>
+      <div>
+        <p class="kicker">From the gallery</p>
+        <h2 class="h2" id="recent-title">A few of our cakes</h2>
+      </div>
+      <a class="text-link" href="gallery.html">See the gallery <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a>
+    </div>
+    <p class="placeholder-note" data-reveal><svg class="icon"><use href="#i-camera"/></svg> <span>These are drawings for now. On the bakery's real website, each tile is a photo of a cake they have made.</span></p>
+    <ul class="tiles tiles-preview" data-gallery data-gallery-preview data-reveal></ul>
+  </div>
+</section>
+
+<section class="section allergen-strip" aria-labelledby="allergy-title">
+  <div class="wrap">
+    <div class="allergy-card" data-reveal>
+      <svg class="allergy-icon" aria-hidden="true"><use href="#i-info"/></svg>
+      <div>
+        <h2 class="h3" id="allergy-title">We bake with gluten, eggs, milk and nuts</h2>
+        <p>All four are used in our one small kitchen, so any item may contain traces of them. Every label in the shop lists the allergens in that item, and we are happy to show you the ingredients.</p>
+      </div>
+      <a class="btn btn-light" href="shop.html#allergens">Allergen information</a>
+    </div>
+  </div>
+</section>
+
+<section class="section faq-section" id="faq" aria-labelledby="faq-title">
+  <div class="wrap faq-layout">
+    <header class="section-head section-head-left" data-reveal>
+      <p class="kicker">Questions</p>
+      <h2 class="h2" id="faq-title">Good to know</h2>
+      <p>Anything else? <a href="#find-us">Send us a message</a> and we will reply.</p>
+    </header>
+    <div class="faq" data-reveal>
+      <details>
+        <summary>Can you keep a loaf back for me?</summary>
+        <p>Yes. Message us by 4pm the day before and we will put it aside until noon. You pay when you collect.</p>
+      </details>
+      <details>
+        <summary>Can I order a cake for this weekend?</summary>
+        <p>We need 5 days' notice for most cakes and 14 days for tiered ones, so the order form only offers days we can do. If you are in a hurry, message us: there is sometimes a spare 6 inch cake in the shop.</p>
+      </details>
+      <details>
+        <summary>Do you deliver?</summary>
+        <p>Not bread or everyday cakes. We deliver and set up tiered wedding cakes within 8 miles of the shop for £35. Everything else is collected from the shop.</p>
+      </details>
+      <details>
+        <summary>Is there anything for coeliacs?</summary>
+        <p>We are sorry, but no. We make sponges without gluten, but in the same kitchen as wheat flour, so we cannot promise they are free from traces.</p>
+      </details>
+      <details>
+        <summary>Do you sell coffee? Can I sit in?</summary>
+        <p>Filter coffee and tea to take away. The shop is small, so there is no seating inside, but there is a bench outside the window.</p>
+      </details>
+      <details>
+        <summary>How can I pay?</summary>
+        <p>Card, contactless or cash in the shop. Cake deposits are paid by a secure card link we send you on WhatsApp or by email.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="section find-section" id="find-us" aria-labelledby="find-title">
+  <div class="wrap find">
+    <div class="find-info" data-reveal>
+      <p class="kicker">Find us</p>
+      <h2 class="h2" id="find-title">Cardell Row, five minutes from Surbiton station</h2>
+      <p class="find-line"><svg class="icon"><use href="#i-pin"/></svg> <span>14 Cardell Row, Surbiton, KT6</span></p>
+      <p class="find-line"><svg class="icon"><use href="#i-train"/></svg> <span>Five minutes' walk from Surbiton station, with trains from London Waterloo.</span></p>
+      <p class="find-line"><svg class="icon"><use href="#i-bag"/></svg> <span>Pay-and-display parking on the street. Bike rack outside.</span></p>
+      <p class="find-map"><a class="text-link" href="https://www.google.com/maps/search/?api=1&amp;query=Surbiton+station+Surbiton+KT6">Surbiton station on Google Maps <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a></p>
+      <div class="hours-card">
+        <div class="hours-head">
+          <h3 class="h4"><svg class="icon"><use href="#i-clock"/></svg> Opening hours</h3>
+          <p class="status status-small" data-status>
+            <span class="status-dot" aria-hidden="true"></span>
+            <span><strong data-status-text>Closed on Mondays</strong> <span data-status-detail></span></span>
+          </p>
+        </div>
+        <dl class="hours" data-hours>
+          <div><dt>Monday</dt><dd>Closed</dd></div>
+          <div><dt>Tuesday to Friday</dt><dd>7:30am to 5pm</dd></div>
+          <div><dt>Saturday</dt><dd>8am to 5pm</dd></div>
+          <div><dt>Sunday</dt><dd>8:30am to 2pm</dd></div>
+        </dl>
+        <div class="holidays" data-holidays hidden></div>
+      </div>
+    </div>
+    <div class="contact-card" data-reveal>
+      <h2 class="contact-title">Questions, orders, a loaf kept back?</h2>
+      <p>WhatsApp is quickest. We read messages from 7am to 6pm, Tuesday to Sunday. If you ring while the shop is busy, leave a message and we will call you back.</p>
+      <div class="contact-actions">
+        <a class="btn btn-primary btn-block" href="https://wa.me/447700900736" data-contact="whatsapp"><svg class="icon"><use href="#i-chat"/></svg> Message us on WhatsApp</a>
+        <a class="btn btn-ghost-light btn-block" href="tel:+442079460736" data-contact="phone"><svg class="icon"><use href="#i-phone"/></svg> Call 020 7946 0736</a>
+        <a class="btn btn-ghost-light btn-block" href="mailto:hello@crumbandcandle.example" data-contact="email"><svg class="icon"><use href="#i-mail"/></svg> Email us</a>
+      </div>
+      <p class="contact-email">hello@crumbandcandle.example</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a class="brand brand-light" href="index.html" aria-label="Crumb and Candle, home">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect x="1.5" y="1.5" width="37" height="37" rx="11" fill="#c4164e" stroke="#2b0d1e" stroke-width="3"/><path d="M19.5 7.2c2.6 2.7 3.1 5.3.5 6.9-2.6-1.6-2.1-4.2-.5-6.9Z" fill="#ffd15c" stroke="#2b0d1e" stroke-width="1.8" stroke-linejoin="round"/><rect x="18.2" y="14" width="3.6" height="8" rx="1" fill="#fff3dc" stroke="#2b0d1e" stroke-width="1.8"/><path d="M8.5 22.5h23v7.3a2.7 2.7 0 0 1-2.7 2.7H11.2a2.7 2.7 0 0 1-2.7-2.7Z" fill="#fff3dc" stroke="#2b0d1e" stroke-width="2.2" stroke-linejoin="round"/><path d="M8.5 22.5h23v2.6c0 1.2-.8 1.9-1.6 1.9s-1.6-.7-1.6-1.9v1.6c0 1.5-.9 2.2-1.8 2.2s-1.8-.7-1.8-2.2v-1c0 1.1-.8 1.7-1.6 1.7s-1.6-.6-1.6-1.7v2.3c0 1.4-.9 2.1-1.8 2.1s-1.8-.7-1.8-2.1v-2.6c0 1-.8 1.6-1.6 1.6s-1.6-.6-1.6-1.6v1.1c0 1.2-.8 1.8-1.6 1.8s-1.6-.6-1.6-1.8Z" fill="#ff8fab" stroke="#2b0d1e" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        <span class="brand-text"><span class="brand-name">Crumb <span class="brand-amp">&amp;</span> Candle</span><span class="brand-tag">Bakery, Surbiton</span></span>
+      </a>
+      <p>Bread and pastries baked every morning, and celebration cakes made to order.</p>
+      <p class="footer-address"><svg class="icon"><use href="#i-pin"/></svg> <span>14 Cardell Row, Surbiton, KT6</span></p>
+      <p class="footer-hours"><svg class="icon"><use href="#i-clock"/></svg> <span>Tuesday to Sunday from 7:30am. Closed on Mondays.</span></p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="shop.html">Bread &amp; pastries</a>
+      <a href="cakes.html">Celebration cakes</a>
+      <a href="cakes.html#order">Order a cake</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="shop.html#allergens">Allergens</a>
+      <a href="index.html#find-us">Find us</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+    <p class="footer-credit">A sample website by <a href="https://agilerelease.co.uk/#websites">Agile Release</a>. Crumb &amp; Candle is made up. &copy; 2026 Agile Release Limited. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

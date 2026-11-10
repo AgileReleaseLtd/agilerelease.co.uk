@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Landlord services and fees | Transom &amp; Co (sample website)</title>
+<meta name="description" content="Let only, rent collection and fully managed lettings in Bow, with every fee shown including VAT, what tenants pay, and a landlord's legal duties. A sample website by Agile Release.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#3a312e">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="preload" href="css/fonts/onest-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="css/fonts/besley-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js" defer></script>
+<script src="js/art.js" defer></script>
+<script src="js/site.js" defer></script>
+<script src="js/landlords.js" defer></script>
+</head>
+<body>
+
+<svg class="sprite" aria-hidden="true">
+  <symbol id="i-bed" viewBox="0 0 24 24"><path d="M3 18.5v-7A2 2 0 0 1 5 9.5h14a2 2 0 0 1 2 2v7M3 15.5h18M3 18.5V21M21 18.5V21M6 9.5V7a1.5 1.5 0 0 1 1.5-1.5h3A1.5 1.5 0 0 1 12 7v2.5"/></symbol>
+  <symbol id="i-bath" viewBox="0 0 24 24"><path d="M3.5 12h17v2a5 5 0 0 1-5 5h-7a5 5 0 0 1-5-5v-2ZM6 12V6.2a2.2 2.2 0 0 1 4-1.2M7.5 19l-1 2M16.5 19l1 2"/></symbol>
+  <symbol id="i-sofa" viewBox="0 0 24 24"><path d="M5 11V8a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3M3 13.2a2 2 0 0 1 4 0V15h10v-1.8a2 2 0 0 1 4 0V18a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4.8ZM5.5 19v2M18.5 19v2"/></symbol>
+  <symbol id="i-area" viewBox="0 0 24 24"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5M8 8l8 8M16 8l-8 8" /></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h3l1.6-2.2h6.8L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z"/><circle cx="12" cy="13.2" r="3.4"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 7 8.5-7"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></symbol>
+  <symbol id="i-filter" viewBox="0 0 24 24"><path d="M4 6h16M7 12h10M10 18h4"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M4 11 12 4l8 7M6 9.5V20h12V9.5M10 20v-5h4v5"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="M11 12 19 4M16 7l2.5 2.5M13.5 9.5l2 2"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.5 3 8 7 10 4-2 7-5.5 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 3c1.2 3.2 5 5.4 5 10a5 5 0 0 1-10 0c0-2.6 1.4-4.2 2.6-5.2.2 1.6.9 2.6 2 3.1.5-3-.6-5.6.4-7.9Z"/></symbol>
+  <symbol id="i-plug" viewBox="0 0 24 24"><path d="M9 3v5M15 3v5M6.5 8h11v3a5.5 5.5 0 0 1-11 0V8ZM12 16.5V21"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19c0-8 5-14 15-14 0 10-6 15-14 15M5 19l8-8"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9.5" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+  <symbol id="i-id" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2.2"/><path d="M5.8 16c.6-1.4 1.8-2 3.2-2s2.6.6 3.2 2M14.5 10h4M14.5 13.5h3"/></symbol>
+  <symbol id="i-alarm" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="2.6"/><path d="M12 5.8v.4M17.8 12h-.4M6.2 12h.4"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7V3Z"/><path d="M14 3v4h4M10 12h5M10 16h5"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.6v.2"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+  <symbol id="i-tools" viewBox="0 0 24 24"><path d="M14.6 6.4a4 4 0 0 0-5.2 5.2L4 17l3 3 5.4-5.4a4 4 0 0 0 5.2-5.2l-2.6 2.6-2.4-.6-.6-2.4 2.6-2.6Z"/></symbol>
+  <symbol id="i-pound" viewBox="0 0 24 24"><path d="M16.5 6.8A3.6 3.6 0 0 0 9.8 8.2v4.4c0 2.1-1 4-3 5.4h11M7.6 12.6h6"/></symbol>
+  <symbol id="i-people" viewBox="0 0 24 24"><circle cx="9" cy="8.5" r="3.2"/><path d="M3.5 19.5c.8-3 2.9-4.6 5.5-4.6s4.7 1.6 5.5 4.6M15.5 5.6a3.2 3.2 0 0 1 0 6M17 14.9c1.9.4 3 1.9 3.5 4.6"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<aside class="sample-bar" aria-label="About this sample website">
+  <div class="wrap sample-bar-inner">
+    <p><strong>Sample website by Agile Release.</strong> Transom &amp; Co is not a real agent: the homes, prices and people are examples.</p>
+    <a href="https://agilerelease.co.uk/#websites">Get a site like this <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a>
+  </div>
+</aside>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Transom and Co, home">
+      <svg class="brand-mark" viewBox="0 0 36 36" aria-hidden="true"><rect class="bm-bg" width="36" height="36" rx="9"/><rect class="bm-frame" x="10" y="5.5" width="16" height="25.5" rx="1"/><rect class="bm-glass" x="12" y="7.5" width="12" height="6"/><rect class="bm-door" x="12" y="15.5" width="12" height="15.5"/><circle class="bm-knob" cx="21.4" cy="23.6" r="1.1"/><rect class="bm-frame" x="8" y="31" width="20" height="2"/></svg>
+      <span class="brand-text"><span class="brand-name">Transom <em>&amp; Co</em></span><span class="brand-tag">Estate &amp; letting agents, Bow</span></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="properties.html?mode=sale">Buy</a></li>
+        <li><a href="properties.html?mode=let">Rent</a></li>
+        <li><a href="valuation.html">Sell</a></li>
+        <li><a href="landlords.html" aria-current="page">Landlords</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <a class="btn btn-primary btn-sm nav-cta" href="valuation.html">Free valuation</a>
+    </nav>
+    <a class="btn btn-primary btn-sm header-cta" href="valuation.html">Free valuation</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+      <svg class="icon"><use href="#i-menu"/></svg><span class="visually-hidden">Menu</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="page-head page-head-dark">
+  <div class="wrap page-head-grid">
+    <div>
+      <p class="kicker kicker-light">Landlords</p>
+      <h1 class="h1">Letting and management, done properly</h1>
+      <p class="lead">We let and look after about 140 homes in Bow and Mile End, most of them for landlords with one or two properties. Every fee is below, including VAT.</p>
+      <p class="page-head-actions">
+        <a class="btn btn-pink" href="valuation.html?mode=let">Book a rental valuation</a>
+        <a class="btn btn-ghost-light" href="#fees">See the fees</a>
+      </p>
+    </div>
+    <ul class="head-facts">
+      <li><strong>3 working days</strong> <span>from the tenant paying to the rent reaching you</span></li>
+      <li><strong>5 days</strong> <span>to protect a deposit. The law allows 30</span></li>
+      <li><strong>0%</strong> <span>mark-up on contractors' invoices</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="fees">
+  <div class="wrap">
+    <header class="section-head" data-reveal>
+      <p class="kicker"><span class="no">No. 1</span> Services and fees</p>
+      <h2 class="h2">Three ways to let with us</h2>
+      <p>Fees are a percentage of the rent and include VAT at 20%. You can move up or down a level at any time with a month's notice.</p>
+    </header>
+    <ul class="tiers" data-tiers data-reveal></ul>
+  </div>
+</section>
+
+<section class="section section-tint" id="calculator">
+  <div class="wrap calc-layout">
+    <header class="section-head section-head-left" data-reveal>
+      <p class="kicker"><span class="no">No. 2</span> Fee calculator</p>
+      <h2 class="h2">What would it cost?</h2>
+      <p>Type the monthly rent to see each fee in pounds, including VAT. Let only is charged once for the first year; the others are taken from each month's rent.</p>
+    </header>
+    <form class="calc" data-calc novalidate data-reveal>
+      <div class="field">
+        <label for="rent">Monthly rent</label>
+        <div class="input-prefix"><span aria-hidden="true">£</span><input id="rent" name="rent" type="text" inputmode="numeric" value="2400" autocomplete="off" aria-describedby="rent-error rent-hint"></div>
+        <p class="field-hint" id="rent-hint">Between £300 and £20,000 a month.</p>
+        <p class="field-error" id="rent-error" hidden>Please enter a monthly rent between £300 and £20,000.</p>
+      </div>
+      <table class="calc-table">
+        <caption data-calc-rent></caption>
+        <thead><tr><th scope="col">Service</th><th scope="col">Each month</th><th scope="col">First year</th></tr></thead>
+        <tbody data-calc-rows></tbody>
+      </table>
+    </form>
+  </div>
+</section>
+
+<section class="section" id="extras">
+  <div class="wrap">
+    <header class="section-head" data-reveal>
+      <p class="kicker"><span class="no">No. 3</span> Other fees</p>
+      <h2 class="h2">One-off costs, all including VAT</h2>
+      <p>The same for every service unless it says otherwise. We never add commission to a contractor's invoice.</p>
+    </header>
+    <table class="fee-table" data-reveal>
+      <caption class="visually-hidden">One-off fees to landlords, including VAT</caption>
+      <thead><tr><th scope="col">What it covers</th><th scope="col">Fee</th></tr></thead>
+      <tbody data-extras></tbody>
+    </table>
+  </div>
+</section>
+
+<section class="section section-dark" id="duties">
+  <div class="wrap">
+    <header class="section-head" data-reveal>
+      <p class="kicker kicker-light"><span class="no">No. 4</span> The law</p>
+      <h2 class="h2">A landlord's legal responsibilities</h2>
+      <p>These apply to every private let in England, whoever manages it. On our managed service we book, track and keep the paperwork for all of them. On Let only, we check them before the tenant moves in.</p>
+    </header>
+    <ul class="duties" data-reveal>
+      <li class="duty">
+        <svg class="duty-icon"><use href="#i-flame"/></svg>
+        <h3 class="h4">Gas safety</h3>
+        <p>Every gas appliance, pipe and flue checked by a Gas Safe registered engineer every year. Tenants get a copy of the record before they move in, and within 28 days of each check.</p>
+      </li>
+      <li class="duty">
+        <svg class="duty-icon"><use href="#i-plug"/></svg>
+        <h3 class="h4">Electrical safety (EICR)</h3>
+        <p>The wiring inspected and tested by a qualified electrician at least every five years, with any urgent faults fixed. Tenants get a copy of the report.</p>
+      </li>
+      <li class="duty">
+        <svg class="duty-icon"><use href="#i-leaf"/></svg>
+        <h3 class="h4">Energy Performance Certificate</h3>
+        <p>A valid EPC given to tenants, rated E or better to let the home. The government has confirmed a rise to the equivalent of C by 1 October 2030, subject to Parliament.</p>
+      </li>
+      <li class="duty">
+        <svg class="duty-icon"><use href="#i-lock"/></svg>
+        <h3 class="h4">Deposit protection</h3>
+        <p>The deposit protected in a government-approved scheme within 30 days of receiving it, and the prescribed information given to the tenant in the same 30 days.</p>
+      </li>
+      <li class="duty">
+        <svg class="duty-icon"><use href="#i-id"/></svg>
+        <h3 class="h4">Right to Rent</h3>
+        <p>Every adult who will live in the home checked for the right to rent in England before the tenancy starts, with copies of the documents kept.</p>
+      </li>
+      <li class="duty">
+        <svg class="duty-icon"><use href="#i-alarm"/></svg>
+        <h3 class="h4">Smoke and carbon monoxide alarms</h3>
+        <p>A smoke alarm on every floor with living space, a carbon monoxide alarm in any room with a fixed fuel-burning appliance (not gas cookers), and all of them working on move-in day.</p>
+      </li>
+      <li class="duty">
+        <svg class="duty-icon"><use href="#i-doc"/></svg>
+        <h3 class="h4">Written terms and the information sheet</h3>
+        <p>Since 1 May 2026, tenants must get the tenancy terms in writing and the government's Renters' Rights Act information sheet.</p>
+      </li>
+      <li class="duty">
+        <svg class="duty-icon"><use href="#i-home"/></svg>
+        <h3 class="h4">Repairs and a safe home</h3>
+        <p>The structure, heating, hot water, drains and wiring kept in repair, and the home free from serious hazards such as damp and mould.</p>
+      </li>
+    </ul>
+    <p class="source" data-reveal>Sources: GOV.UK, <a href="https://www.gov.uk/renting-out-a-property/landlord-responsibilities">Renting out your property: landlord responsibilities</a>, <a href="https://www.gov.uk/guidance/renters-rights-act-an-overview-for-landlords">Renters' Rights Act: an overview for landlords</a> (published 1 May 2026) and <a href="https://www.gov.uk/government/consultations/improving-the-energy-performance-of-privately-rented-homes-2025-update">Improving the energy performance of privately rented homes</a> (government response, updated 21 January 2026). Checked on 10 November 2026.</p>
+  </div>
+</section>
+
+<section class="section" id="changes">
+  <div class="wrap changes">
+    <header class="section-head section-head-left" data-reveal>
+      <p class="kicker"><span class="no">No. 5</span> What changed</p>
+      <h2 class="h2">The Renters' Rights Act, in plain words</h2>
+      <p>The biggest change to renting in decades started on 1 May 2026. Here is what it means for a landlord in Bow.</p>
+    </header>
+    <ul class="change-list" data-reveal>
+      <li><strong>No more fixed terms.</strong> Tenancies are assured periodic tenancies that roll on month to month. Tenants can leave with two months' notice.</li>
+      <li><strong>No more section 21.</strong> To end a tenancy you need a legal reason, such as selling or moving in. You cannot use those two in the first 12 months.</li>
+      <li><strong>An asking rent, and no bidding.</strong> Adverts must show the rent, and landlords and agents cannot ask for or accept offers above it.</li>
+      <li><strong>One month's rent in advance at most.</strong> And nothing until the tenancy agreement is signed.</li>
+      <li><strong>Rent goes up once a year.</strong> Using the section 13 notice, with at least two months' warning.</li>
+      <li><strong>Pets.</strong> Tenants can ask to keep a pet, and you must consider it and give a reason if you say no.</li>
+      <li><strong>No "no DSS" or "no children".</strong> It is illegal to turn people away because they have children or receive benefits.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section-tint" id="tenant-fees">
+  <div class="wrap">
+    <header class="section-head" data-reveal>
+      <p class="kicker"><span class="no">No. 6</span> For tenants</p>
+      <h2 class="h2">What tenants pay, and what they don't</h2>
+      <p>Fees to tenants are limited by the Tenant Fees Act 2019, as amended by the Renters' Rights Act 2025. These are the only payments a landlord or agent in England can ask a tenant for. We do not charge tenants anything for viewings, references, contracts, inventories or check-out.</p>
+    </header>
+    <div class="tenant-fees" data-reveal>
+      <dl class="fee-list">
+        <div><dt>Rent</dt><dd>Up to one month in advance, and only after you have signed the tenancy agreement.</dd></div>
+        <div><dt>Refundable tenancy deposit</dt><dd>At most five weeks' rent, or six weeks' if the rent is £50,000 a year or more. Protected in a government-approved scheme.</dd></div>
+        <div><dt>Refundable holding deposit</dt><dd>At most one week's rent, to reserve a home while checks are done. Refunded, or put towards the first rent with your agreement.</dd></div>
+        <div><dt>Changes you ask for</dt><dd>Up to £50 if you ask to change the tenancy, for example to add a sharer, or more only if the extra cost is shown to be reasonable.</dd></div>
+        <div><dt>Leaving without the right notice</dt><dd>No more than the rent you would have paid if you had given proper notice.</dd></div>
+        <div><dt>Bills, if the agreement says so</dt><dd>Utilities, broadband, phone, council tax and the TV licence.</dd></div>
+        <div><dt>Lost keys</dt><dd>The reasonable cost of replacing them, with the evidence, if the agreement says so.</dd></div>
+        <div><dt>Late rent</dt><dd>Only once rent is at least 14 days late: up to 3% above the Bank of England base rate on the overdue amount, if the agreement says so.</dd></div>
+      </dl>
+      <p class="source">Source: GOV.UK, <a href="https://www.gov.uk/guidance/fees-you-can-charge-as-part-of-a-tenancy">Fees you can charge as part of a tenancy</a> (published 1 May 2026, updated 7 July 2026). Checked on 10 November 2026.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-sky cta-band">
+  <div class="wrap cta-inner" data-reveal>
+    <div>
+      <h2 class="h2">Thinking of letting?</h2>
+      <p>We will tell you the rent we would advertise at, what the home needs before it can be let, and which service suits you. No charge, no obligation.</p>
+    </div>
+    <p class="cta-actions">
+      <a class="btn btn-primary" href="valuation.html?mode=let">Book a rental valuation</a>
+      <a class="btn btn-outline" href="https://wa.me/447700900391" data-contact="whatsapp"><svg class="icon"><use href="#i-chat"/></svg> Ask on WhatsApp</a>
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <a class="brand brand-light" href="index.html" aria-label="Transom and Co, home">
+        <svg class="brand-mark" viewBox="0 0 36 36" aria-hidden="true"><rect class="bm-bg" width="36" height="36" rx="9"/><rect class="bm-frame" x="10" y="5.5" width="16" height="25.5" rx="1"/><rect class="bm-glass" x="12" y="7.5" width="12" height="6"/><rect class="bm-door" x="12" y="15.5" width="12" height="15.5"/><circle class="bm-knob" cx="21.4" cy="23.6" r="1.1"/><rect class="bm-frame" x="8" y="31" width="20" height="2"/></svg>
+        <span class="brand-text"><span class="brand-name">Transom <em>&amp; Co</em></span><span class="brand-tag">Estate &amp; letting agents, Bow</span></span>
+      </a>
+      <p>Independent estate and letting agents for Bow, Old Ford, Mile End and Fish Island.</p>
+      <p class="footer-address"><svg class="icon"><use href="#i-pin"/></svg> 41 Cordwain Street, Bow, London E3</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <h2 class="footer-head">Homes and services</h2>
+      <ul>
+        <li><a href="properties.html?mode=sale">Homes for sale</a></li>
+        <li><a href="properties.html?mode=let">Homes to rent</a></li>
+        <li><a href="valuation.html">Free valuation</a></li>
+        <li><a href="landlords.html">Landlords and fees</a></li>
+        <li><a href="landlords.html#tenant-fees">What tenants pay</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </nav>
+    <div class="footer-contact">
+      <h2 class="footer-head">Talk to us</h2>
+      <ul>
+        <li><a href="https://wa.me/447700900391" data-contact="whatsapp"><svg class="icon"><use href="#i-chat"/></svg> WhatsApp 07700 900391</a></li>
+        <li><a href="tel:+442079460391" data-contact="phone"><svg class="icon"><use href="#i-phone"/></svg> 020 7946 0391</a></li>
+        <li><a href="mailto:hello@transom.example" data-contact="email"><svg class="icon"><use href="#i-mail"/></svg> hello@transom.example</a></li>
+      </ul>
+      <p class="footer-hours">Monday to Friday 9am to 6:30pm, Saturday 9:30am to 4pm.</p>
+    </div>
+  </div>
+  <div class="wrap footer-legal">
+    <p class="footer-credit">A sample website by <a href="https://agilerelease.co.uk/#websites">Agile Release</a>. Transom &amp; Co is made up. &copy; 2026 Agile Release Limited. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

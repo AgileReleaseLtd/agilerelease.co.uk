@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Repair quote | Gantry Motor Works, Walthamstow (sample website)</title>
+<meta name="description" content="Get a repair quote by registration: tell us the car and the problem, and we reply with a price. A sample website by Agile Release.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#141619">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="preload" href="css/fonts/anybody-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="css/fonts/ibm-plex-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js" defer></script>
+<script src="js/core.js" defer></script>
+<script src="js/site.js" defer></script>
+<script src="js/quote.js" defer></script>
+</head>
+<body class="page-quote">
+
+<svg class="sprite" aria-hidden="true">
+  <symbol id="i-mot" viewBox="0 0 24 24"><path d="M6 4.5h12v16H6z"/><path d="M9.5 4.5V3h5v1.5M9 12.5l2.2 2.2 4-4.4"/></symbol>
+  <symbol id="i-spanner" viewBox="0 0 24 24"><path d="M14.6 3.3a5 5 0 0 0-4.7 6.9L3.6 16.5a2.1 2.1 0 0 0 3 3l6.3-6.3a5 5 0 0 0 6.9-4.7l-3 1.4-2.6-1.1-1.1-2.6 1.5-2.9Z"/></symbol>
+  <symbol id="i-brake" viewBox="0 0 24 24"><circle cx="11" cy="13" r="8"/><circle cx="11" cy="13" r="2.4"/><path d="M15.5 3.4a10.6 10.6 0 0 1 5.1 5.4M11 8.2v.1M6.2 13h.1M15.8 13h.1M11 17.8v.1"/></symbol>
+  <symbol id="i-scan" viewBox="0 0 24 24"><path d="M3 4.5h18v12H3zM8 20.5h8M12 16.5v4"/><path d="M6 11h2.5l1.5-3 3 6 1.5-3H18"/></symbol>
+  <symbol id="i-gear" viewBox="0 0 24 24"><path d="M10.2 2.8h3.6l.5 2.6 1.6.9 2.5-.9 1.8 3.1-2 1.7v1.8l2 1.7-1.8 3.1-2.5-.9-1.6.9-.5 2.6h-3.6l-.5-2.6-1.6-.9-2.5.9-1.8-3.1 2-1.7v-1.8l-2-1.7 1.8-3.1 2.5.9 1.6-.9Z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-belt" viewBox="0 0 24 24"><path d="M11.5 18.8L19.7 8.9A3.3 3.3 0 0 0 15.4 4L4.6 11.2A5.2 5.2 0 1 0 11.5 18.8Z"/><circle cx="7.5" cy="15.5" r="2.6"/><circle cx="17.2" cy="6.8" r="1.2"/></symbol>
+  <symbol id="i-spring" viewBox="0 0 24 24"><path d="M5 3.5h14M5 20.5h14M7 6.4l10 1.7-10 1.7 10 1.7-10 1.7 10 1.7-10 1.7 10 1.7"/></symbol>
+  <symbol id="i-exhaust" viewBox="0 0 24 24"><path d="M2 15h3.5M5.5 11.5h9v7h-9zM14.5 15H20"/><circle cx="20.6" cy="10.6" r="1.3"/><circle cx="17.6" cy="6.6" r="1.9"/></symbol>
+  <symbol id="i-snow" viewBox="0 0 24 24"><path d="M12 2.5v19M3.8 7.2l16.4 9.6M3.8 16.8l16.4-9.6M9.3 4.2 12 6.6l2.7-2.4M9.3 19.8l2.7-2.4 2.7 2.4M3.6 11.2l3.5 1 .9 3.4M20.4 12.8l-3.5-1-.9-3.4"/></symbol>
+  <symbol id="i-battery" viewBox="0 0 24 24"><path d="M3 7.5h18v12H3zM6.5 7.5v-3h3v3M14.5 7.5v-3h3v3M6 13.5h4M14.5 13.5h4M16.5 11.5v4"/></symbol>
+  <symbol id="i-tyre" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><path d="M12 3v4.5M12 16.5V21M3 12h4.5M16.5 12H21M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M18.4 5.6l-2.8 2.8M8.4 15.6l-2.8 2.8"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13.5 2.5 5 13.5h6l-1 8 8.5-11h-6l1-8Z"/></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24"><path d="M2.5 16.5v-4l2.3-5h10.4l3.6 4.4 2.7 1v3.6"/><path d="M2.5 16.5h2M9.6 16.5h5M19.6 16.5h1.9M5.5 11.9h13"/><circle cx="7" cy="17" r="2.4"/><circle cx="17" cy="17" r="2.4"/></symbol>
+  <symbol id="i-pound" viewBox="0 0 24 24"><path d="M16.5 6.5A4 4 0 0 0 9 8.4V20M6 13h8M6 20h12"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2.8 4.5 5.6v6c0 4.6 3.1 8 7.5 9.6 4.4-1.6 7.5-5 7.5-9.6v-6L12 2.8Z"/><path d="m8.6 12.2 2.4 2.4 4.4-4.6"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 4.5h11a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3v-13ZM4 17.5a3 3 0 0 1 3-3h11"/><path d="M8 8.5h6"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24"><circle cx="7.5" cy="15.5" r="4.5"/><path d="M10.7 12.3 20 3M16 7l3 3M18.5 4.5l2 2"/></symbol>
+  <symbol id="i-train" viewBox="0 0 24 24"><path d="M6 3.5h12v12.5H6zM6 10h12M9.5 20.5 8 16M14.5 20.5 16 16M7.5 18.5h9"/><path d="M9 13h.1M15 13h.1"/></symbol>
+  <symbol id="i-park" viewBox="0 0 24 24"><path d="M4 3.5h16v17H4z"/><path d="M9.5 16.5v-9h3.5a2.75 2.75 0 0 1 0 5.5H9.5"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><path d="M3 5.5h18v13H3z"/><path d="m3.5 6.5 8.5 7 8.5-7"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><path d="M3.5 5h17v15.5h-17zM3.5 10h17M8 3v4M16 3v4"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<aside class="sample-bar" aria-label="About this sample website">
+  <div class="wrap sample-bar-inner">
+    <p><span class="sample-tag">Sample</span> <strong>A sample website by Agile Release.</strong> Gantry Motor Works is not a real garage: the prices, hours and details are examples.</p>
+    <a href="https://agilerelease.co.uk/#websites">Get a site like this <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  </div>
+</aside>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Gantry Motor Works, home">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect class="brand-bg" width="32" height="32" rx="3"/><path class="brand-lift" d="M8 26V8.5h16V26M11.5 19.5h9"/></svg>
+      <span class="brand-text"><span class="brand-name">Gantry</span><span class="brand-sub">Motor Works</span></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="mot.html">Book an MOT</a></li>
+        <li><a href="prices.html">Servicing &amp; prices</a></li>
+        <li><a href="quote.html" aria-current="page">Repair quote</a></li>
+        <li><a href="index.html#collect">Collection</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="index.html#visit">Find us</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-signal btn-sm header-cta" href="mot.html">Book MOT</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+      <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg><span class="visually-hidden">Menu</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="page-head">
+  <div class="wrap page-head-inner">
+    <div class="page-head-copy">
+      <p class="bay bay-dark"><span>Quote</span> Repairs</p>
+      <h1 class="h1">Get a repair quote</h1>
+      <p class="lead">Tell us the car and what's wrong. We look the car up ourselves and reply with a price, usually the same working day.</p>
+    </div>
+    <ul class="head-facts">
+      <li><strong>Free</strong><span>Quotes cost nothing and you're under no obligation.</span></li>
+      <li><strong>12</strong><span>Months' guarantee on parts and labour (or 12,000 miles).</span></li>
+      <li><strong data-fill="labour-rate">£96</strong><span>An hour for labour, VAT included.</span></li>
+    </ul>
+  </div>
+  <div class="hazard-band" aria-hidden="true"></div>
+</section>
+
+<section class="booking-section">
+  <div class="wrap booking quote">
+    <form class="booking-form" id="quote-form" data-quote novalidate>
+      <noscript>
+        <p class="noscript-note">The quote form needs JavaScript. You can still ask for a quote by WhatsApp on 07700 900584 or by phone on 020 7946 0584: tell us the registration and what's wrong.</p>
+      </noscript>
+
+      <fieldset class="panel">
+        <legend class="panel-title"><span class="panel-num">1</span> Your car</legend>
+        <div class="plate-row">
+          <div class="field field-plate">
+            <label class="field-label" for="quote-reg">Registration</label>
+            <div class="plate plate-lg">
+              <span class="plate-band" aria-hidden="true">UK</span>
+              <input class="plate-input" id="quote-reg" name="reg" type="text" maxlength="8" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="AB12 CDE" required aria-describedby="quote-reg-status">
+            </div>
+            <p class="plate-status" id="quote-reg-status" data-plate-status>Current plates look like AB12 CDE. Older and private plates work too.</p>
+          </div>
+          <div class="lookup-note">
+            <p class="lookup-title"><svg class="icon" aria-hidden="true"><use href="#i-eye"/></svg> No automatic look-up</p>
+            <p>This form only checks the format of the registration. It doesn't look your car up. We do that ourselves when we price the job, so the quote is for the right parts.</p>
+          </div>
+        </div>
+        <div class="field-row">
+          <label class="field">
+            <span class="field-label">Make and model <span class="field-optional">If you know it</span></span>
+            <input class="input" name="car" type="text" maxlength="60" placeholder="For example Ford Focus 1.6 petrol">
+          </label>
+          <label class="field">
+            <span class="field-label">Mileage <span class="field-optional">Roughly</span></span>
+            <input class="input" name="mileage" type="text" inputmode="numeric" maxlength="9" placeholder="For example 72,000" aria-describedby="mileage-error">
+            <span class="field-error" id="mileage-error" data-error-for="mileage" hidden></span>
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset class="panel">
+        <legend class="panel-title"><span class="panel-num">2</span> What needs doing?</legend>
+        <p class="panel-sub">Tick everything that applies.</p>
+        <div class="chips" data-jobs></div>
+        <label class="field field-details">
+          <span class="field-label">Tell us more <span class="field-optional" data-details-optional>Optional</span></span>
+          <textarea class="input" name="details" rows="4" maxlength="600" placeholder="What happens, and when? For example: grinding from the front left when I brake, worse when it's cold." aria-describedby="details-error"></textarea>
+          <span class="field-error" id="details-error" data-error-for="details" hidden></span>
+        </label>
+      </fieldset>
+
+      <fieldset class="panel">
+        <legend class="panel-title"><span class="panel-num">3</span> Your details</legend>
+        <div class="field-row">
+          <label class="field">
+            <span class="field-label">Your name</span>
+            <input class="input" name="name" type="text" maxlength="60" autocomplete="name" required aria-describedby="qname-error">
+            <span class="field-error" id="qname-error" data-error-for="name" hidden></span>
+          </label>
+          <label class="field">
+            <span class="field-label">Mobile number</span>
+            <input class="input" name="phone" type="tel" maxlength="20" autocomplete="tel" required aria-describedby="qphone-error">
+            <span class="field-error" id="qphone-error" data-error-for="phone" hidden></span>
+          </label>
+        </div>
+        <fieldset class="field">
+          <legend class="field-label">How should we send the quote?</legend>
+          <div class="segmented segmented-2">
+            <label class="seg"><input type="radio" name="reply" value="WhatsApp" checked><span><strong>WhatsApp message</strong></span></label>
+            <label class="seg"><input type="radio" name="reply" value="phone call"><span><strong>Phone call</strong></span></label>
+          </div>
+        </fieldset>
+      </fieldset>
+
+      <div class="send-bar">
+        <button class="btn btn-signal" type="submit" value="whatsapp"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg> Send on WhatsApp</button>
+        <button class="btn btn-outline" type="submit" value="email"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg> Email it instead</button>
+        <p class="send-note">Your request goes from your own phone or email. This website does not keep your details.</p>
+      </div>
+    </form>
+
+    <div class="quote-side">
+      <div class="side-card">
+        <h2 class="side-title">How quotes work</h2>
+        <ol class="side-steps">
+          <li><strong>You send the reg and the problem.</strong> A photo of a warning light helps: add it in WhatsApp after you send.</li>
+          <li><strong>We look the car up</strong> and price the parts and labour for your exact car.</li>
+          <li><strong>You get a fixed price</strong>, or a range if we need to see the car first. Then book in if you're happy.</li>
+        </ol>
+      </div>
+      <div class="side-card side-card-concrete">
+        <h2 class="side-title">Guide prices</h2>
+        <ul class="guide-list" data-guide-list>
+          <li><span>Diagnostic check</span><b>£60</b></li>
+          <li><span>Front brake pads</span><b>from £120</b></li>
+          <li><span>Air-con regas</span><b>from £79</b></li>
+          <li><span>Clutch replacement</span><b>from £550</b></li>
+        </ul>
+        <a class="side-link" href="prices.html#repairs">All prices <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="side-card side-card-signal">
+        <h2 class="side-title">Rather talk?</h2>
+        <p>Ring the workshop and a mechanic will talk it through.</p>
+        <a class="btn btn-dark btn-block" href="tel:+442079460584" data-contact="phone"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> Call 020 7946 0584</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a class="brand" href="index.html" aria-label="Gantry Motor Works, home">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect class="brand-bg" width="32" height="32" rx="3"/><path class="brand-lift" d="M8 26V8.5h16V26M11.5 19.5h9"/></svg>
+        <span class="brand-text"><span class="brand-name">Gantry</span><span class="brand-sub">Motor Works</span></span>
+      </a>
+      <p>Independent garage for MOTs, servicing and repairs. Unit 3, Linnet Yard, Walthamstow, London E17.</p>
+    </div>
+    <div class="footer-contact">
+      <p class="footer-head">Workshop</p>
+      <p><a href="tel:+442079460584" data-contact="phone">020 7946 0584</a><br><a href="https://wa.me/447700900584" data-contact="whatsapp">WhatsApp 07700 900584</a></p>
+      <p data-hours-summary>Monday to Friday 8am to 6pm<br>Saturday 8am to 1pm</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="mot.html">Book an MOT</a>
+      <a href="prices.html">Servicing &amp; prices</a>
+      <a href="quote.html">Repair quote</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+    <p class="footer-credit">A sample website by <a href="https://agilerelease.co.uk/#websites">Agile Release</a>. Gantry Motor Works is made up. &copy; 2026 Agile Release Limited. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

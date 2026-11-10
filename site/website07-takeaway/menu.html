@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Menu and order | Kor Charcoal Grill (sample website)</title>
+<meta name="description" content="The full menu: charcoal grill, lahmacun and pide, meze, desserts and meal deals. Build your order, then send it on WhatsApp and pay on the door. A sample website by Agile Release.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#c81e18">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="preload" href="css/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js" defer></script>
+<script src="js/hours.js" defer></script>
+<script src="js/basket.js" defer></script>
+<script src="js/site.js" defer></script>
+<script src="js/order.js" defer></script>
+</head>
+<body class="page-menu">
+
+<svg class="sprite" aria-hidden="true">
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 7 8.5-7"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5.5 8h13l-1 12.5h-11L5.5 8Z"/><path d="M9 10V7a3 3 0 0 1 6 0v3"/></symbol>
+  <symbol id="i-scooter" viewBox="0 0 24 24"><circle cx="5.5" cy="17.5" r="2.5"/><circle cx="18.5" cy="17.5" r="2.5"/><path d="M8 17.5h6c0-3.5 1.5-6 4-7"/><path d="M18 10.5 16 5h-2.5"/><rect x="2" y="7.5" width="7.5" height="6" rx="1"/></symbol>
+  <symbol id="i-store" viewBox="0 0 24 24"><path d="M4.5 11v9h15v-9"/><path d="M3 10.5 4.5 4.5h15l1.5 6"/><path d="M3 10.5a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0"/><path d="M10 20v-5h4v5"/></symbol>
+  <symbol id="i-card" viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="2"/><path d="M2.5 10h19M6.5 15h4"/></symbol>
+  <symbol id="i-cash" viewBox="0 0 24 24"><rect x="2.5" y="6.5" width="19" height="11" rx="1.5"/><circle cx="12" cy="12" r="2.5"/><path d="M6.2 12h.01M17.8 12h.01"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.6v.2"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5 2.5 20h19L12 3.5Z"/><path d="M12 10v4.5M12 17.4v.2"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></symbol>
+  <symbol id="i-flame" viewBox="0 0 32 32"><path d="M16.6 2.8c1.2 4.6 7.6 7.4 7.6 15.1 0 5-3.6 8.9-8.3 8.9s-8.1-3.7-8.1-8.4c0-3.7 2-6.2 3.9-7.8.1 2.4 1 4.1 2.6 4.9-.8-5.2.3-9.5 2.3-12.7Z"/></symbol>
+  <symbol id="i-chilli" viewBox="0 0 24 24"><path d="M8.2 8.6c1.6 6 6 10.6 12.6 12 .9.2 1.2-1 .4-1.4-4.7-2.3-7.4-6.4-7.8-11-.1-1.6-1.9-2.5-3.3-1.6l-.9.6c-.8.5-1.2 1.4-1 2.4Z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M9.4 7.4c-.4-2 .5-3.7 2.8-4.4"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M4.5 19.5C4.5 10.5 10 5 20 4.5c0 9.5-5.5 15-14.5 15h-1Z"/></symbol>
+  <symbol id="i-deal" viewBox="0 0 48 48"><path fill="#ffc61a" stroke="#1c1411" stroke-width="2" stroke-linejoin="round" d="M24 3l4.4 5.6 6.9-1.9.6 7.1 6.6 2.7-3.3 6.3 3.3 6.3-6.6 2.7-.6 7.1-6.9-1.9L24 43l-4.4-5.6-6.9 1.9-.6-7.1-6.6-2.7 3.3-6.3-3.3-6.3 6.6-2.7.6-7.1 6.9 1.9Z"/><circle cx="18.5" cy="18" r="3.2" fill="#c81e18"/><circle cx="29.5" cy="28.5" r="3.2" fill="#c81e18"/><path stroke="#c81e18" stroke-width="3.2" stroke-linecap="round" d="M30.5 16.5 17.5 30"/></symbol>
+  <symbol id="i-skewer" viewBox="0 0 48 48"><g transform="rotate(-38 24 24)"><path stroke="#8f979e" stroke-width="2.6" stroke-linecap="round" d="M2 24h40"/><rect x="39" y="20.5" width="8" height="7" rx="2" fill="#6b4a2e"/><rect x="7" y="16" width="9.5" height="16" rx="4" fill="#8a3818" stroke="#1c1411" stroke-width="1.6"/><rect x="18" y="17.5" width="4" height="13" rx="1.5" fill="#3d8b2f"/><rect x="23.5" y="16" width="9.5" height="16" rx="4" fill="#e2a145" stroke="#1c1411" stroke-width="1.6"/><path stroke="#6e2b10" stroke-width="1.6" stroke-linecap="round" d="M10 21l3 6M27 21l3 6"/><rect x="34.2" y="17.5" width="3.6" height="13" rx="1.5" fill="#e0392a"/></g></symbol>
+  <symbol id="i-pide" viewBox="0 0 48 48"><g transform="rotate(-24 24 24)"><path fill="#e3b270" stroke="#1c1411" stroke-width="2" stroke-linejoin="round" d="M1.5 24.5c3-1.5 5-4 9-5.5 9-3.2 18-3.2 27 0 4 1.5 6 4 9 5.5-3 1.5-5 4-9 5.5-9 3.2-18 3.2-27 0-4-1.5-6-4-9-5.5Z"/><path fill="#a8431d" d="M9 24.5c8-5 22-5 30 0-8 5-22 5-30 0Z"/><circle cx="15" cy="23.6" r="1.5" fill="#e0392a"/><circle cx="22" cy="25.6" r="1.5" fill="#3d8b2f"/><circle cx="28" cy="23.4" r="1.5" fill="#e0392a"/><circle cx="34" cy="25.2" r="1.4" fill="#3d8b2f"/><path stroke="#fff5e1" stroke-width="1.8" d="M18.5 20.5v8M25.5 20v9M32 20.5v8"/></g></symbol>
+  <symbol id="i-chips" viewBox="0 0 48 48"><g stroke="#1c1411" stroke-width="1.6"><rect x="13" y="6" width="4.6" height="22" rx="1.5" fill="#ffc61a" transform="rotate(-12 15 17)"/><rect x="19.5" y="3.5" width="4.6" height="24" rx="1.5" fill="#ffd84d"/><rect x="25.5" y="5" width="4.6" height="23" rx="1.5" fill="#ffc61a" transform="rotate(8 27 16)"/><rect x="31" y="8" width="4.6" height="20" rx="1.5" fill="#ffd84d" transform="rotate(16 33 18)"/></g><path fill="#c81e18" stroke="#1c1411" stroke-width="2" stroke-linejoin="round" d="M10 20h28l-3.5 24h-21L10 20Z"/><path fill="none" stroke="#fff5e1" stroke-width="2.4" d="M12 26h24"/><path fill="#fff5e1" d="M21 32.5c1.3-2 4.7-2 6 0-1 .7-1.3 2.1-1 3.5h-4c.3-1.4 0-2.8-1-3.5Z"/></symbol>
+  <symbol id="i-baklava" viewBox="0 0 48 48"><path fill="#b87425" stroke="#1c1411" stroke-width="1.8" stroke-linejoin="round" d="M4 30 15 21l11 9-11 9-11-9Z"/><path fill="#d99a3e" stroke="#1c1411" stroke-width="1.8" stroke-linejoin="round" d="M22 30 33 21l11 9-11 9-11-9Z"/><path fill="#e8b25a" stroke="#1c1411" stroke-width="1.8" stroke-linejoin="round" d="M13 19 24 10l11 9-11 9-11-9Z"/><path fill="none" stroke="#9b5a17" stroke-width="1.2" d="M17 19h14M8 30h14M26 30h14"/><circle cx="24" cy="19" r="2.6" fill="#6ba539"/><circle cx="15" cy="30" r="2.4" fill="#6ba539"/><circle cx="33" cy="30" r="2.4" fill="#6ba539"/></symbol>
+  <symbol id="i-cup" viewBox="0 0 48 48"><path stroke="#c81e18" stroke-width="2.4" stroke-linecap="round" d="M27 3.5 24.5 14"/><path fill="#fffdf7" stroke="#1c1411" stroke-width="2" stroke-linejoin="round" d="M12 12h24l-3 32H15l-3-32Z"/><path fill="#1d56a3" d="M13.4 22h21.2l-1.2 12H14.6Z"/><path fill="none" stroke="#fff" stroke-width="1.6" d="M17 28h14"/><rect x="10" y="9.5" width="28" height="5" rx="2" fill="#fff5e1" stroke="#1c1411" stroke-width="2"/></symbol>
+  <symbol id="i-wrap" viewBox="0 0 48 48"><g transform="rotate(-28 24 24)"><rect x="15" y="3" width="18" height="41" rx="9" fill="#efd3a0" stroke="#1c1411" stroke-width="2"/><ellipse cx="24" cy="9.5" rx="6.5" ry="3.8" fill="#8a3818"/><circle cx="20.5" cy="8" r="1.8" fill="#3d8b2f"/><circle cx="27" cy="8.5" r="1.7" fill="#e0392a"/><circle cx="24" cy="11.5" r="1.5" fill="#5baa45"/><circle cx="21" cy="17" r="1" fill="#c98a45"/><circle cx="27" cy="20" r="1.2" fill="#c98a45"/><path fill="#fffdf7" stroke="#1c1411" stroke-width="2" stroke-linejoin="round" d="M14 25h20v14a6 6 0 0 1-6 6h-8a6 6 0 0 1-6-6Z"/><path stroke="#c81e18" stroke-width="3" d="M15 31h18M15 37h18"/></g></symbol>
+  <symbol id="i-lahmacun" viewBox="0 0 48 48"><circle cx="23" cy="24" r="20" fill="#e3b270" stroke="#1c1411" stroke-width="2"/><circle cx="23" cy="24" r="15.5" fill="#b5451f"/><circle cx="16" cy="19" r="2" fill="#7e2a10"/><circle cx="27" cy="16" r="1.6" fill="#7e2a10"/><circle cx="21" cy="30" r="2" fill="#7e2a10"/><circle cx="30" cy="27" r="1.7" fill="#7e2a10"/><circle cx="19" cy="24" r="1.3" fill="#e0392a"/><circle cx="25" cy="22" r="1.4" fill="#e0392a"/><path fill="#3d8b2f" d="M13 26c2-2 4-2 5 0-2 1-4 1-5 0ZM24 12c2-1 4 0 4 2-2 0-3 0-4-2ZM26 32c2-2 4-1 4 1-2 1-3 0-4-1Z"/><path fill="#ffd84d" stroke="#1c1411" stroke-width="1.8" stroke-linejoin="round" d="M33 33a9 9 0 0 0 12.5-1.5L39 26Z"/></symbol>
+  <symbol id="i-dip" viewBox="0 0 48 48"><circle cx="24" cy="25" r="20" fill="#1d56a3" stroke="#1c1411" stroke-width="2"/><g fill="#fff"><circle cx="24" cy="8.5" r="1.8"/><circle cx="35.7" cy="13.3" r="1.8"/><circle cx="40.5" cy="25" r="1.8"/><circle cx="35.7" cy="36.7" r="1.8"/><circle cx="24" cy="41.5" r="1.8"/><circle cx="12.3" cy="36.7" r="1.8"/><circle cx="7.5" cy="25" r="1.8"/><circle cx="12.3" cy="13.3" r="1.8"/></g><circle cx="24" cy="25" r="12.5" fill="#f3e3c2"/><path fill="none" stroke="#d2a21f" stroke-width="2.2" stroke-linecap="round" d="M17 25c2-6 11-6 12 0 1 4-5 5-6 1"/><circle cx="29" cy="20" r="1.3" fill="#c81e18"/><circle cx="19" cy="30" r="1.2" fill="#3d8b2f"/><circle cx="28" cy="31" r="1.2" fill="#c81e18"/></symbol>
+  <symbol id="i-coal" viewBox="0 0 48 48"><path fill="#ffc61a" d="M24 4c2 6 10 9 10 18 0 4-2 7-5 8 1-4-1-7-3-8 0 3-2 5-4 6 1-3-1-6-3-7 0 3-3 5-3 9-3-2-4-5-4-8 0-9 10-12 12-18Z"/><path fill="#e0291f" d="M24 12c1 4 6 6 6 12 0 2-1 4-2 5 0-3-2-5-4-6 0 2-1 4-3 5 0-3-1-5-3-6 0 2-1 3-1 5-1-1-2-3-2-5 0-6 8-7 9-10Z"/><path fill="#2a1c17" stroke="#1c1411" stroke-width="1.6" d="M6 38c0-4 4-6 8-5 2-3 7-3 9 0 3-2 8-2 10 1 4-1 9 1 9 5v3H6v-4Z"/><circle cx="14" cy="38" r="1.6" fill="#e0291f"/><circle cx="26" cy="37" r="1.4" fill="#ffc61a"/><circle cx="35" cy="39" r="1.6" fill="#e0291f"/></symbol>
+  <symbol id="i-oven" viewBox="0 0 48 48"><path fill="#d9774a" stroke="#1c1411" stroke-width="2" d="M4 42V24a20 20 0 0 1 40 0v18H4Z"/><path fill="none" stroke="#a8431d" stroke-width="1.6" d="M9 22h7M32 22h7M8 31h5M35 31h5M12 15l4 3M36 15l-4 3M24 7v4"/><path fill="#1c1411" d="M14 42V31a10 10 0 0 1 20 0v11H14Z"/><path fill="#ffc61a" d="M24 30c1 3 5 4 5 8 0 2-1 4-5 4s-5-2-5-4c0-2 1-3 2-4 0 1 1 2 2 2-1-2 0-4 1-6Z"/><path fill="#e0291f" d="M24 35c.5 1.5 2.5 2 2.5 4 0 1.5-1 2.5-2.5 2.5s-2.5-1-2.5-2.5c0-1 .5-1.5 1-2 0 .5.5 1 1 1-.5-1 0-2 .5-3Z"/></symbol>
+  <symbol id="i-paperbag" viewBox="0 0 48 48"><path fill="#d6a46a" stroke="#1c1411" stroke-width="2" stroke-linejoin="round" d="M9 14h30l2 30H7l2-30Z"/><path fill="#c08a4e" d="M9 14h30l.4 5H8.6Z"/><path fill="none" stroke="#1c1411" stroke-width="2" stroke-linecap="round" d="M18 18v-7a6 6 0 0 1 12 0v7"/><circle cx="24" cy="31" r="7" fill="#c81e18" stroke="#1c1411" stroke-width="1.6"/><path fill="#fff5e1" d="M24.3 25.6c.4 1.8 3 2.8 3 5.7 0 1.9-1.4 3.3-3.2 3.3s-3.1-1.4-3.1-3.2c0-1.4.8-2.4 1.5-3 0 .9.4 1.6 1 1.9-.3-2 .1-3.6.8-4.7Z"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<aside class="sample-bar" aria-label="About this sample website">
+  <div class="wrap sample-bar-inner">
+    <p><strong>Sample website by Agile Release.</strong> Kor Charcoal Grill is not a real business: the menu, prices and numbers are examples.</p>
+    <a href="https://agilerelease.co.uk/#websites">Get a site like this <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a>
+  </div>
+</aside>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Kor Charcoal Grill, home">
+      <img class="brand-mark" src="img/favicon.svg" alt="" width="44" height="44">
+      <span class="brand-name"><b>Kor</b><small>Charcoal grill</small></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="menu.html" aria-current="page">Menu</a></li>
+        <li><a href="index.html#deals">Deals</a></li>
+        <li><a href="index.html#delivery">Delivery</a></li>
+        <li><a href="index.html#hours">Hours</a></li>
+        <li><a href="allergens.html">Allergens</a></li>
+        <li><a href="index.html#about">About</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-red btn-sm header-order" href="menu.html" data-header-order><svg class="icon"><use href="#i-bag"/></svg> Order <span class="basket-badge" data-basket-count hidden>0</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+      <svg class="icon"><use href="#i-menu"/></svg><span class="visually-hidden">Menu</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="page-head" aria-labelledby="page-title">
+  <div class="awning" aria-hidden="true"></div>
+  <div class="wrap page-head-inner">
+    <h1 class="h1" id="page-title">Menu</h1>
+    <p class="lead">Add your food, choose delivery or collection, and send the order to us on WhatsApp. You pay on the door, cash or card.</p>
+    <p class="status" data-status><span class="status-dot" aria-hidden="true"></span> <span data-status-text>Open every evening from 5pm.</span></p>
+  </div>
+</section>
+
+<nav class="cat-nav" aria-label="Menu sections">
+  <div class="wrap">
+    <ul data-cat-nav></ul>
+  </div>
+</nav>
+
+<div class="wrap order-layout">
+  <div class="menu-main" data-menu>
+    <noscript>
+      <p class="menu-noscript">The menu and the basket need JavaScript. You can still order by phone on 020 7946 0734, or on WhatsApp on 07700 900734.</p>
+    </noscript>
+  </div>
+  <aside class="order-aside" aria-labelledby="aside-title">
+    <div data-basket="aside"></div>
+    <p class="aside-help">Food allergy? Please <a href="tel:+442079460734" data-contact="phone">call us on 020 7946 0734</a> before you order. <a href="allergens.html">Allergens in every dish</a>.</p>
+  </aside>
+</div>
+
+</main>
+
+<div class="basket-bar" data-basket-bar hidden>
+  <button class="btn btn-yellow" type="button" data-open-basket aria-haspopup="dialog">
+    <span class="basket-bar-count"><svg class="icon"><use href="#i-bag"/></svg> View your order <span class="basket-badge" data-bar-count>0</span></span>
+    <span data-bar-total>£0.00</span>
+  </button>
+</div>
+
+<dialog class="dialog sheet" id="basket-sheet" aria-labelledby="sheet-title">
+  <div class="dialog-body">
+    <div class="dialog-head">
+      <h2 class="dialog-title" id="sheet-title">Your order</h2>
+      <button type="button" class="dialog-close" data-close aria-label="Close"><svg class="icon"><use href="#i-close"/></svg></button>
+    </div>
+    <div data-basket="sheet"></div>
+  </div>
+</dialog>
+
+<dialog class="dialog" id="item-dialog" aria-labelledby="item-title">
+  <form class="dialog-body" data-item-form novalidate>
+    <div class="dialog-head">
+      <div>
+        <h2 class="dialog-title" id="item-title" data-item-name>Dish</h2>
+        <p class="dialog-sub" data-item-desc></p>
+      </div>
+      <button type="button" class="dialog-close" data-close aria-label="Close"><svg class="icon"><use href="#i-close"/></svg></button>
+    </div>
+    <div class="dialog-groups" data-item-groups></div>
+    <p class="item-allergens" data-item-allergens></p>
+    <div class="qty-row">
+      <span class="field-label" id="item-qty-label">How many?</span>
+      <div class="qty qty-lg" role="group" aria-labelledby="item-qty-label">
+        <button type="button" data-qty-minus aria-label="One fewer"><svg class="icon"><use href="#i-minus"/></svg></button>
+        <output data-qty aria-live="polite">1</output>
+        <button type="button" data-qty-plus aria-label="One more"><svg class="icon"><use href="#i-plus"/></svg></button>
+      </div>
+    </div>
+    <div class="dialog-foot">
+      <button type="submit" class="btn btn-yellow add-to-order"><span>Add to order</span> <span data-item-total>£0.00</span></button>
+    </div>
+  </form>
+</dialog>
+
+<dialog class="dialog" id="checkout-dialog" aria-labelledby="checkout-title">
+  <form class="dialog-body" data-checkout-form novalidate>
+    <div class="dialog-head">
+      <div>
+        <h2 class="dialog-title" id="checkout-title">Check out</h2>
+        <p class="dialog-sub" data-checkout-sub></p>
+      </div>
+      <button type="button" class="dialog-close" data-close aria-label="Close"><svg class="icon"><use href="#i-close"/></svg></button>
+    </div>
+    <div class="notice notice-preorder" data-preorder-note hidden>
+      <svg class="icon"><use href="#i-calendar"/></svg>
+      <p data-preorder-text></p>
+    </div>
+    <div class="checkout-summary" data-checkout-summary></div>
+    <label class="field">
+      <span class="field-label">Your name</span>
+      <input type="text" name="name" autocomplete="name" maxlength="60" aria-describedby="name-error">
+      <span class="field-error" id="name-error" data-error-for="name" hidden>Please add your name, so the driver knows who to ask for.</span>
+    </label>
+    <div class="field-set" data-delivery-fields>
+      <label class="field">
+        <span class="field-label">House number and street</span>
+        <input type="text" name="address" autocomplete="address-line1" maxlength="100" aria-describedby="address-error">
+        <span class="field-error" id="address-error" data-error-for="address" hidden>Please add your house number and street.</span>
+      </label>
+      <div class="field-row">
+        <label class="field">
+          <span class="field-label">Flat or buzzer <span class="field-optional">Optional</span></span>
+          <input type="text" name="flat" autocomplete="address-line2" maxlength="60">
+        </label>
+        <label class="field">
+          <span class="field-label">Postcode</span>
+          <input type="text" class="input-postcode" name="postcode" autocomplete="postal-code" maxlength="10" autocapitalize="characters" spellcheck="false" aria-describedby="postcode-error">
+          <span class="field-error" id="postcode-error" data-error-for="postcode" hidden></span>
+        </label>
+      </div>
+    </div>
+    <label class="field">
+      <span class="field-label" data-when-label>When do you want it?</span>
+      <select name="when" data-when></select>
+    </label>
+    <fieldset class="field">
+      <legend class="field-label">How will you pay?</legend>
+      <div class="choices">
+        <label class="choice"><input type="radio" name="pay" value="cash" checked> <span class="choice-text"><b>Cash</b><small data-pay-cash>On the door</small></span></label>
+        <label class="choice"><input type="radio" name="pay" value="card"> <span class="choice-text"><b>Card</b><small data-pay-card>Our driver brings a card machine</small></span></label>
+      </div>
+    </fieldset>
+    <label class="field">
+      <span class="field-label">Notes <span class="field-optional">Optional</span></span>
+      <textarea name="notes" rows="2" maxlength="300" placeholder="For example: no onions on the Adana, or ring the top bell"></textarea>
+    </label>
+    <div class="allergy-warning">
+      <svg class="icon"><use href="#i-info"/></svg>
+      <p>Food allergy? Please <a href="tel:+442079460734" data-contact="phone">call us on 020 7946 0734</a> before you order, rather than writing it in the notes.</p>
+    </div>
+    <button type="submit" class="btn btn-red btn-block"><svg class="icon"><use href="#i-chat"/></svg> <span data-send-label>Send order on WhatsApp</span></button>
+    <div class="alt-actions">
+      <a class="btn" href="tel:+442079460734" data-contact="phone"><svg class="icon"><use href="#i-phone"/></svg> Order by phone</a>
+      <button type="button" class="btn" data-email-order><svg class="icon"><use href="#i-mail"/></svg> Email it instead</button>
+    </div>
+    <p class="form-note">Your order goes as a message from your own phone or email. This website does not keep your details.</p>
+  </form>
+
+  <div class="dialog-body" data-sent hidden>
+    <div class="dialog-head">
+      <h2 class="dialog-title" data-sent-title tabindex="-1">Your order message</h2>
+      <button type="button" class="dialog-close" data-close aria-label="Close"><svg class="icon"><use href="#i-close"/></svg></button>
+    </div>
+    <div class="chat">
+      <p class="chat-to"><svg class="icon icon-sm"><use href="#i-chat"/></svg> <span data-sent-to>To Kor Charcoal Grill on WhatsApp</span></p>
+      <p class="bubble" data-message></p>
+    </div>
+    <div class="sample-note">
+      <p><strong>This is a sample website, so nothing was sent.</strong></p>
+      <p>On the takeaway's real website, this button opens WhatsApp with the order above ready to send. The shop replies to confirm it and give a time.</p>
+    </div>
+    <div class="dialog-actions">
+      <button type="button" class="btn" data-back>Back to the order</button>
+      <button type="button" class="btn btn-dark" data-new-order>Clear the basket</button>
+    </div>
+  </div>
+</dialog>
+
+<p class="toast is-hidden" role="status" data-toast></p>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a class="brand brand-light" href="index.html" aria-label="Kor Charcoal Grill, home">
+        <img class="brand-mark" src="img/favicon.svg" alt="" width="44" height="44">
+        <span class="brand-name"><b>Kor</b><small>Charcoal grill</small></span>
+      </a>
+      <p>Turkish charcoal grill, takeaway and delivery. 41 Varley Parade, Kilburn, London NW6. Open every evening.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="menu.html">Menu and order</a>
+      <a href="index.html#hours">Opening times</a>
+      <a href="index.html#delivery">Delivery areas</a>
+      <a href="allergens.html">Allergens</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+    <p class="footer-credit">A sample website by <a href="https://agilerelease.co.uk/#websites">Agile Release</a>. Kor Charcoal Grill is made up. &copy; 2026 Agile Release Limited. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

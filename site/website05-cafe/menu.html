@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Menu and ordering ahead | Cobnut Café (sample website)</title>
+<meta name="description" content="Coffee, breakfast, lunch and cakes, with vegan, vegetarian and gluten-free dishes marked. Order ahead for collection on WhatsApp. A sample website by Agile Release.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#f5ecdd">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="preload" href="css/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js" defer></script>
+<script src="js/days.js" defer></script>
+<script src="js/site.js" defer></script>
+<script src="js/menu.js" defer></script>
+</head>
+<body class="page-menu">
+
+<svg class="sprite" aria-hidden="true">
+  <symbol id="i-cup" viewBox="0 0 24 24"><path d="M4 9.5h13v4.5a6 6 0 0 1-6 6h-1a6 6 0 0 1-6-6Z"/><path d="M17 11.5h1.2a2.5 2.5 0 0 1 0 5H16.6"/><path d="M8 3.5c-.8 1 .8 2 0 3.2M12 3.5c-.8 1 .8 2 0 3.2"/></symbol>
+  <symbol id="i-egg" viewBox="0 0 24 24"><path d="M3.8 13.6c-1.3-3.5 1.3-7 4.8-6.8 1.8-2.4 5.9-2.7 7.9-.2 2.9.4 4.8 3.5 3.7 6.3-.6 1.8.2 3.7-1.5 5.1-1.9 1.6-4.3.8-6.2 1.4-2.3.8-5.2.4-6.6-1.4-.9-1.2-1.6-2.6-2.1-4.4Z"/><circle cx="11.6" cy="12.6" r="2.9"/></symbol>
+  <symbol id="i-bowl" viewBox="0 0 24 24"><path d="M3.5 11.5h17a8.5 8.5 0 0 1-17 0Z"/><path d="M9 20.5h6"/><path d="M8.5 8c-.8-1 .8-2 0-3.2M12 8c-.8-1 .8-2 0-3.2M15.5 8c-.8-1 .8-2 0-3.2"/></symbol>
+  <symbol id="i-cake" viewBox="0 0 24 24"><path d="M3.5 12.5 19.5 7v5.5"/><path d="M3.5 12.5h16v7.5h-16Z"/><path d="M3.5 16.2h16"/><circle cx="17.5" cy="4.6" r="1.6"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19c0-8 5-14 15-14 0 9-5 14-12 14Z"/><path d="M5 19l8.5-8.5"/></symbol>
+  <symbol id="i-sprout" viewBox="0 0 24 24"><path d="M12 20.5v-8"/><path d="M12 12.5C12 8.5 9.2 6.5 5 6.5c0 4 2.8 6 7 6Z"/><path d="M12 10.5c0-3.6 2.6-5.6 7-5.6 0 3.6-2.6 5.6-7 5.6Z"/></symbol>
+  <symbol id="i-wheat" viewBox="0 0 24 24"><path d="M12 21V9.5"/><path d="M12 9.5c-2.4 0-3.4-1.9-3.4-3.9 2.4 0 3.4 1.9 3.4 3.9Zm0 0c2.4 0 3.4-1.9 3.4-3.9-2.4 0-3.4 1.9-3.4 3.9Z"/><path d="M12 14.5c-2.4 0-3.4-1.9-3.4-3.9 2.4 0 3.4 1.9 3.4 3.9Zm0 0c2.4 0 3.4-1.9 3.4-3.9-2.4 0-3.4 1.9-3.4 3.9Z"/><path d="M4 4l16 16"/></symbol>
+  <symbol id="i-dog" viewBox="0 0 24 24"><path d="M5.5 9.5 4 4.5l4.6 2.6h6.8L20 4.5l-1.5 5"/><path d="M5.5 9.5c0 6 2.6 10.5 6.5 10.5s6.5-4.5 6.5-10.5"/><path d="M11 15.8h2l-1 1.3Z"/><path d="M9.3 12.2h.01M14.7 12.2h.01" stroke-width="2.4"/></symbol>
+  <symbol id="i-wifi" viewBox="0 0 24 24"><path d="M3 9.5a13 13 0 0 1 18 0M6 13a8.5 8.5 0 0 1 12 0M9 16.5a4 4 0 0 1 6 0"/><path d="M12 19.8h.01" stroke-width="2.8"/></symbol>
+  <symbol id="i-access" viewBox="0 0 24 24"><circle cx="11" cy="4.5" r="1.8"/><path d="M11 7.8v5.7h5l2.5 5.5"/><path d="M11 10.2h4.5"/><path d="M8.3 11a5.2 5.2 0 1 0 7.2 6.8"/></symbol>
+  <symbol id="i-pram" viewBox="0 0 24 24"><path d="M3.5 10h14a7 7 0 0 1-14 0Z"/><path d="M10.5 10V3.5a7 7 0 0 1 7 6.5"/><path d="M17.5 10l2.5-3.5"/><circle cx="6.5" cy="20" r="1.5"/><circle cx="14.5" cy="20" r="1.5"/></symbol>
+  <symbol id="i-card" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h3"/></symbol>
+  <symbol id="i-keepcup" viewBox="0 0 24 24"><path d="M6.2 7h11.6L16.4 20.5H7.6Z"/><path d="M5 7h14M8 3.5h8L17 7H7Z"/><path d="M6.9 12.5h10.2"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-train" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="14" rx="3"/><path d="M5 10h14M8.5 21 10 17M15.5 21 14 17"/><path d="M9 13.6h.01M15 13.6h.01" stroke-width="2.4"/></symbol>
+  <symbol id="i-bus" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="15" rx="3"/><path d="M4 7.5h16M4 12h16M8 18v2.5M16 18v2.5"/><path d="M8 15h.01M16 15h.01" stroke-width="2.4"/></symbol>
+  <symbol id="i-tube" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><path d="M2.5 12h19"/></symbol>
+  <symbol id="i-bike" viewBox="0 0 24 24"><circle cx="5.5" cy="16" r="3.5"/><circle cx="18.5" cy="16" r="3.5"/><path d="M5.5 16 9.5 9h6.5l2.5 7M9.5 9l3.5 7H5.5M8.5 6h3"/></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24"><path d="M4.5 16.5v-4.3l2.2-5h10.6l2.2 5v4.3Z"/><path d="M4.5 12.2h15M7 16.5v2.5M17 16.5v2.5"/><path d="M8 14.3h.01M16 14.3h.01" stroke-width="2.4"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 7 8.5-7"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-out" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9"/><path d="M18 14v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1 12.5H6Z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-quiz" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/><path d="M10 9.4a2.2 2.2 0 1 1 3 2.1c-.7.3-1 .8-1 1.5"/><path d="M12 15.8h.01" stroke-width="2.4"/></symbol>
+  <symbol id="i-guitar" viewBox="0 0 24 24"><path d="M13.5 10.5 19.5 4.5"/><path d="M18 3l3 3"/><path d="M11.6 8.8c-1.4-.6-3-.3-4 .7-1 1-.7 2.3-1.6 3.2s-2.2.7-2.8 2.3c-.7 2 .4 4.4 2.5 5.3 1.6.6 3.2.2 4-.8.9-.9.8-2.6 1.7-3.4.9-.9 2.2-.6 3.2-1.6 1-1 1.3-2.6.7-4"/><circle cx="10" cy="14" r="1.5"/></symbol>
+  <symbol id="i-palette" viewBox="0 0 24 24"><path d="M12 3.5a8.5 8.5 0 1 0 0 17c1.2 0 1.8-.8 1.8-1.7 0-1.4-1.2-1.5-1.2-2.8 0-1.1.9-1.8 2-1.8h2.2a3.7 3.7 0 0 0 3.7-3.7C20.5 6.9 16.7 3.5 12 3.5Z"/><path d="M8 10.5h.01M12 7.5h.01M16 10.5h.01M8.5 15h.01" stroke-width="2.6"/></symbol>
+  <symbol id="i-yarn" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7.5"/><path d="M5.5 7.5c4 0 9 3 10.5 9M4 12c3.5-.5 8 1.5 10 6.5M8 4.2c3.5 1 7 4.6 7.8 10.8"/><path d="M17 16.5c1.5 1 2.5 2.5 3.5 4"/></symbol>
+  <symbol id="i-dripper" viewBox="0 0 24 24"><path d="M4.5 5.5h15L14 12.5h-4Z"/><path d="M9.5 12.5V14h5v-1.5"/><path d="M6.5 17h11l-1 3.5h-9Z"/><path d="M12 14.8v.9"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h3l1.5-2.5h7L17 8h3v11H4Z"/><circle cx="12" cy="13.5" r="3.5"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5"/><path d="M12 7.8h.01" stroke-width="2.6"/></symbol>
+  <symbol id="i-people" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 19.5c.6-3.4 3-5.5 6-5.5s5.4 2.1 6 5.5"/><path d="M15.5 4.9a3.2 3.2 0 0 1 0 6.2M17.5 14.3c2 .7 3.2 2.5 3.5 5.2"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24"><path d="M3.5 12V4.5H11l9.5 9.5-7.5 7.5Z"/><path d="M7.8 8.3h.01" stroke-width="2.6"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3.5" y="8.5" width="17" height="4" rx="1"/><path d="M5 12.5v8h14v-8M12 8.5v12"/><path d="M12 8.5C10.5 5 7 4.5 7 6.5s3 2 5 2Zm0 0c1.5-3.5 5-4 5-2s-3 2-5 2Z"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<aside class="sample-bar" aria-label="About this sample website">
+  <div class="wrap sample-bar-inner">
+    <p><strong>Sample website by Agile Release.</strong> Cobnut Café is not a real business: the menu, prices, events and people are examples.</p>
+    <a href="https://agilerelease.co.uk/#websites">Get a site like this <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a>
+  </div>
+</aside>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Cobnut Café, home">
+      <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="#234034"/><path d="M24 7.5c2.6 2.4 10.2 6.6 10.2 16.4 0 6.8-4.4 11.6-10.2 11.6s-10.2-4.8-10.2-11.6C13.8 14.1 21.4 9.9 24 7.5Z" fill="#b5773f"/><path d="M19 15.5c-1.6 2-2.4 4.4-2.3 7" stroke="#f6ead2" stroke-opacity=".6" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M8.6 24.6l2.6 1.6 1-2.8 2.2 2.3 1.6-2.6 1.8 2.6 2-2.3 1.6 2.7 2.6-2.2 2.6 2.2 1.6-2.7 2 2.3 1.8-2.6 1.6 2.6 2.2-2.3 1 2.8 2.6-1.6c-.2 9.6-6.6 16.2-15.4 16.2S8.8 34.2 8.6 24.6Z" fill="#7f9a4a"/><path d="M18.6 29.6l1.4 6.6M29.4 29.6 28 36.2M24 30.4v7" stroke="#5f7a32" stroke-width="1.4" stroke-linecap="round"/></svg>
+      <span class="brand-text" aria-hidden="true"><span class="brand-name">Cobnut</span><span class="brand-tag">café · Herne Hill</span></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="menu.html" aria-current="page">Menu</a></li>
+        <li><a href="whats-on.html">What's on</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#find-us">Find us</a></li>
+        <li><a href="index.html#hours">Opening hours</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary btn-sm header-cta" href="menu.html#order">Order ahead</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+      <svg class="icon"><use href="#i-menu"/></svg><span class="visually-hidden">Menu</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="page-head" aria-labelledby="page-title">
+  <div class="awning" aria-hidden="true"></div>
+  <div class="wrap page-head-inner">
+    <p class="kicker">Eat in or take away</p>
+    <h1 class="h1" id="page-title">The menu</h1>
+    <p class="lead">Breakfast until 11:30am on weekdays and 12 noon at weekends. Lunch from 11:30am. Cakes all day, while they last. Press Add to <a href="#order">order ahead for collection</a>.</p>
+    <svg class="page-head-art" viewBox="0 0 300 180" aria-hidden="true">
+      <g fill="none" stroke="#2b1a10" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+        <ellipse cx="92" cy="150" rx="74" ry="13" fill="#fffaf1"/>
+        <ellipse cx="92" cy="148" rx="40" ry="6" stroke-opacity=".35"/>
+        <path d="M44 84h96v26c0 22-21 38-48 38s-48-16-48-38Z" fill="#fffaf1"/>
+        <path d="M140 94c26-2 28 34 0 34" />
+        <path d="M140 102c14 0 14 18-1 18" stroke-opacity=".5"/>
+        <ellipse cx="92" cy="84" rx="48" ry="8" fill="#8a5a33"/>
+        <path d="M72 80c6-3 14-3 20 0s14 3 20 0" stroke="#f6ead2" stroke-width="2"/>
+        <path d="M74 66c-8-9 8-14 0-24M94 62c-8-9 8-14 0-24M114 66c-8-9 8-14 0-24" stroke="#a63d22"/>
+        <path d="M58 110c4 10 14 18 28 20" stroke-opacity=".3"/>
+        <path d="M178 156c2-30 28-50 58-50s56 20 58 50c-8-8-18-11-26-9-14-12-50-12-64 0-8-2-18 1-26 9Z" fill="#e9b44c"/>
+        <path d="M210 112c-6 10-7 22-4 34M236 106c-2 12-2 24 0 36M262 112c6 10 7 22 4 34" />
+        <path d="M196 132c4-3 9-4 12-3M246 130c5-2 10-1 14 2" stroke-opacity=".4" stroke-width="2"/>
+        <path d="M156 136c6 0 13 7 13 13s-6 9-13 9-13-3-13-9 7-13 13-13Z" fill="#b5773f"/>
+        <path d="M142 140c2-6 8-9 14-8 6-1 12 2 14 8" fill="#7f9a4a"/>
+        <path d="M24 44l4 8M18 50l8 2M30 40l-1 6" stroke="#a63d22" stroke-width="2.2"/>
+        <path d="M270 46l3 7M264 52l7 1M276 42l-1 5" stroke="#a63d22" stroke-width="2.2"/>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<div class="menu-tools" data-menu-tools>
+  <div class="wrap menu-tools-inner">
+    <nav class="menu-jump" aria-label="Menu sections" data-menu-jump>
+      <a href="#drinks">Coffee &amp; drinks</a>
+      <a href="#breakfast">Breakfast</a>
+      <a href="#lunch">Lunch</a>
+      <a href="#bakes">Cakes &amp; bakes</a>
+    </nav>
+    <fieldset class="diet-filters" data-filters hidden>
+      <legend>Show only:</legend>
+      <button type="button" class="chip chip-vg" data-diet="vg" aria-pressed="false"><svg class="icon"><use href="#i-leaf"/></svg> Vegan</button>
+      <button type="button" class="chip chip-v" data-diet="v" aria-pressed="false"><svg class="icon"><use href="#i-sprout"/></svg> Vegetarian</button>
+      <button type="button" class="chip chip-gf" data-diet="gf" aria-pressed="false"><svg class="icon"><use href="#i-wheat"/></svg> Gluten-free</button>
+    </fieldset>
+    <p class="menu-count" data-menu-count aria-live="polite" hidden></p>
+  </div>
+</div>
+
+<section class="menu-page" aria-label="Menu">
+  <div class="wrap menu-layout">
+    <div class="menu-main">
+      <div class="allergens" id="allergens">
+        <svg class="icon"><use href="#i-info"/></svg>
+        <h2>Allergies and intolerances</h2>
+        <p>Please tell us before you order. We keep allergen information for every dish and drink, covering the 14 allergens that UK law says food businesses must tell you about, and we are happy to show it to you. Our small kitchen uses nuts, gluten, milk and eggs, so we cannot promise that any dish is free of traces.</p>
+        <details>
+          <summary>The 14 allergens</summary>
+          <ul>
+            <li>Celery</li>
+            <li>Cereals containing gluten</li>
+            <li>Crustaceans</li>
+            <li>Eggs</li>
+            <li>Fish</li>
+            <li>Lupin</li>
+            <li>Milk</li>
+            <li>Molluscs</li>
+            <li>Mustard</li>
+            <li>Tree nuts</li>
+            <li>Peanuts</li>
+            <li>Sesame</li>
+            <li>Soya</li>
+            <li>Sulphur dioxide and sulphites</li>
+          </ul>
+        </details>
+      </div>
+
+      <p class="order-help" data-order-help><svg class="icon"><use href="#i-bag"/></svg> <span><strong>Order ahead:</strong> press Add on anything, then <strong>Review and send</strong> at the bottom of the screen. Pay when you collect.</span></p>
+
+      <div data-menu>
+        <noscript>
+          <p class="menu-noscript">The menu needs JavaScript to show. You can ask for it on WhatsApp on 07700 900582, or see it on the board in the café.</p>
+        </noscript>
+      </div>
+    </div>
+
+    <section class="card order-card" id="order" aria-labelledby="order-title" tabindex="-1">
+      <h2 class="card-title" id="order-title"><svg class="icon"><use href="#i-bag"/></svg> Your order</h2>
+      <p class="order-intro">Order ahead and collect from the counter. Pay when you pick it up.</p>
+      <div data-order-panel>
+        <p class="order-empty">Nothing here yet. Press <strong>Add</strong> on anything you fancy.</p>
+      </div>
+    </section>
+  </div>
+</section>
+
+</main>
+
+<div class="order-bar" data-order-bar>
+  <div class="wrap order-bar-inner">
+    <p><strong data-bar-total>£0.00</strong> <span data-bar-count>0 items</span></p>
+    <button type="button" class="btn btn-primary btn-sm" data-open-order><svg class="icon"><use href="#i-bag"/></svg> Review and send</button>
+  </div>
+</div>
+
+<dialog class="dialog" id="order-dialog" aria-labelledby="order-dialog-title">
+  <form class="dialog-body" data-order-form novalidate>
+    <div class="dialog-head">
+      <h2 class="dialog-title" id="order-dialog-title">Order to collect</h2>
+      <button type="button" class="dialog-close" data-close aria-label="Close"><svg class="icon"><use href="#i-close"/></svg></button>
+    </div>
+    <div class="summary" data-order-summary></div>
+    <label class="field">
+      <span class="field-label">Collection time</span>
+      <select name="time" required aria-describedby="time-hint" data-time-select></select>
+      <span class="field-hint" id="time-hint" data-time-hint>Ready from 15 minutes after you send it.</span>
+    </label>
+    <label class="field">
+      <span class="field-label">Your name</span>
+      <input type="text" name="name" autocomplete="name" maxlength="60" required aria-describedby="name-error">
+      <span class="field-error" id="name-error" data-error-for="name" hidden>Please add your name, so we can write it on the bag.</span>
+    </label>
+    <label class="field">
+      <span class="field-label">Anything we should know? <span class="field-optional">Optional</span></span>
+      <textarea name="note" rows="2" maxlength="300" placeholder="For example: oat milk in both, extra hot, no butter"></textarea>
+    </label>
+    <button type="submit" class="btn btn-primary btn-block"><svg class="icon"><use href="#i-chat"/></svg> Send order on WhatsApp</button>
+    <p class="form-note">Your order goes as a WhatsApp message from your own phone. This website does not keep your details. Pay when you collect.</p>
+  </form>
+
+  <div class="dialog-body" data-sent hidden>
+    <div class="dialog-head">
+      <h2 class="dialog-title" data-sent-title tabindex="-1">Your order message</h2>
+      <button type="button" class="dialog-close" data-close aria-label="Close"><svg class="icon"><use href="#i-close"/></svg></button>
+    </div>
+    <div class="chat">
+      <p class="chat-to"><svg class="icon icon-sm"><use href="#i-chat"/></svg> To Cobnut Café on WhatsApp</p>
+      <p class="bubble" data-message></p>
+    </div>
+    <div class="sample-note">
+      <p><strong>This is a sample website, so nothing was sent.</strong></p>
+      <p>On the café's real website, this button opens WhatsApp with the message above ready to send. The café replies to confirm the order.</p>
+    </div>
+    <div class="dialog-actions">
+      <button type="button" class="btn" data-close>Back to the menu</button>
+      <button type="button" class="btn btn-dark" data-done>Done</button>
+    </div>
+  </div>
+</dialog>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a class="brand brand-light" href="index.html" aria-label="Cobnut Café, home">
+        <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="#234034"/><path d="M24 7.5c2.6 2.4 10.2 6.6 10.2 16.4 0 6.8-4.4 11.6-10.2 11.6s-10.2-4.8-10.2-11.6C13.8 14.1 21.4 9.9 24 7.5Z" fill="#b5773f"/><path d="M19 15.5c-1.6 2-2.4 4.4-2.3 7" stroke="#f6ead2" stroke-opacity=".6" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M8.6 24.6l2.6 1.6 1-2.8 2.2 2.3 1.6-2.6 1.8 2.6 2-2.3 1.6 2.7 2.6-2.2 2.6 2.2 1.6-2.7 2 2.3 1.8-2.6 1.6 2.6 2.2-2.3 1 2.8 2.6-1.6c-.2 9.6-6.6 16.2-15.4 16.2S8.8 34.2 8.6 24.6Z" fill="#7f9a4a"/><path d="M18.6 29.6l1.4 6.6M29.4 29.6 28 36.2M24 30.4v7" stroke="#5f7a32" stroke-width="1.4" stroke-linecap="round"/></svg>
+        <span class="brand-text" aria-hidden="true"><span class="brand-name">Cobnut</span><span class="brand-tag">café · Herne Hill</span></span>
+      </a>
+      <p>Coffee, breakfast, lunch and cakes baked every morning. 6 Wickfield Parade, Herne Hill, London SE24.</p>
+    </div>
+    <div class="footer-hours">
+      <h2 class="footer-title">Opening hours</h2>
+      <dl class="hours" data-hours>
+        <div><dt>Monday to Friday</dt><dd>7:30am to 5pm</dd></div>
+        <div><dt>Saturday</dt><dd>8:30am to 5pm</dd></div>
+        <div><dt>Sunday</dt><dd>9am to 4pm</dd></div>
+      </dl>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="menu.html">Menu</a>
+      <a href="whats-on.html">What's on</a>
+      <a href="index.html#find-us">Find us</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+    <p class="footer-credit">A sample website by <a href="https://agilerelease.co.uk/#websites">Agile Release</a>. Cobnut Café is made up. &copy; 2026 Agile Release Limited. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

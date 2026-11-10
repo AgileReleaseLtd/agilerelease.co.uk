@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book a free trial lesson | Markwell Tuition (sample website)</title>
+<meta name="description" content="Book a free trial: one group session or a 30-minute one-to-one taster in maths, English, science or 11+. Choose a class from the timetable and send the request on WhatsApp. A sample website by Agile Release.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="preload" href="css/fonts/lexend-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="css/fonts/young-serif-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js" defer></script>
+<script src="js/terms.js" defer></script>
+<script src="js/site.js" defer></script>
+<script src="js/trial.js" defer></script>
+</head>
+<body class="page-trial" id="top">
+
+<svg class="sprite" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-tick" viewBox="0 0 24 24"><path d="M4 13.2c1.9 1.1 3.5 2.7 5 5C11.6 12.4 15.2 7.6 20.5 4"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 7 8.5-7"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 19.5c0-3.4 2.7-5.8 6-5.8s6 2.4 6 5.8"/><circle cx="17" cy="9" r="2.5"/><path d="M16.6 13.7c2.6.3 4.4 2.4 4.4 5.2"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.6"/><path d="M5 20c0-3.9 3.1-6.6 7-6.6s7 2.7 7 6.6"/></symbol>
+  <symbol id="i-laptop" viewBox="0 0 24 24"><rect x="4.5" y="5" width="15" height="10.5" rx="1.5"/><path d="M2.5 19h19"/></symbol>
+  <symbol id="i-door" viewBox="0 0 24 24"><path d="M6.5 21V3.5h11V21M3.5 21h17M14.5 12.5v.5"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 19 6v5c0 4.6-3 8.3-7 10-4-1.7-7-5.4-7-10V6l7-3Z"/><path d="m9 12 2.2 2.2L15.5 10"/></symbol>
+  <symbol id="i-report" viewBox="0 0 24 24"><path d="M6.5 3h8l4 4v14h-12Z"/><path d="M14 3v4.5h4.5M9.5 12h6M9.5 16h4"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r=".8"/></symbol>
+  <symbol id="i-meeting" viewBox="0 0 24 24"><path d="M3.5 6.5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H9l-3.5 3v-3a2 2 0 0 1-2-2Z"/><path d="M18 9h.5a2 2 0 0 1 2 2v4.5a2 2 0 0 1-2 2v2.5l-3-2.5h-3.5a2 2 0 0 1-2-1.6"/></symbol>
+  <symbol id="i-pencil" viewBox="0 0 24 24"><path d="m4 20 1-4.2L15.8 5a2 2 0 0 1 2.9 0l.3.3a2 2 0 0 1 0 2.9L8.2 19Z"/><path d="m14 7 3 3"/></symbol>
+  <symbol id="i-maths" viewBox="0 0 24 24"><path d="M4 7h6M7 4v6M14 7h6M4.5 15.5l5 5M9.5 15.5l-5 5M14 16h6M14 20h6"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M3.5 5.5C6 4 9.5 4 12 5.5v14C9.5 18 6 18 3.5 19.5Z"/><path d="M12 5.5C14.5 4 18 4 20.5 5.5v14C18 18 14.5 18 12 19.5"/></symbol>
+  <symbol id="i-flask" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6.2L4.6 18.4A1.8 1.8 0 0 0 6.2 21h11.6a1.8 1.8 0 0 0 1.6-2.6L14 9.2V3"/><path d="M7.2 15h9.6"/></symbol>
+  <symbol id="i-shapes" viewBox="0 0 24 24"><circle cx="7" cy="7" r="3.2"/><path d="m17 3.8 3.6 6.2h-7.2Z"/><rect x="3.8" y="14" width="6.4" height="6.4" rx=".8"/><path d="M14 17.2h6.4M17.2 14v6.4"/></symbol>
+  <symbol id="i-headset" viewBox="0 0 24 24"><path d="M4 14.5V12a8 8 0 0 1 16 0v2.5"/><path d="M4 14h3.2v5.5H5.2A1.2 1.2 0 0 1 4 18.3ZM20 14h-3.2v5.5h2A1.2 1.2 0 0 0 20 18.3Z"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8.5" y="8.5" width="11.5" height="11.5" rx="2"/><path d="M15.5 8.5V5.5a1.5 1.5 0 0 0-1.5-1.5H5.5A1.5 1.5 0 0 0 4 5.5V14a1.5 1.5 0 0 0 1.5 1.5h3"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.6v.4"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4.5 7h15M10 7V4.5h4V7M6.8 7l.9 13h8.6l.9-13"/></symbol>
+  <symbol id="i-train" viewBox="0 0 24 24"><rect x="5.5" y="3" width="13" height="13.5" rx="3"/><path d="M5.5 10.5h13M9 20.5l-2 1.5M15 20.5l2 1.5M9 13.5v.1M15 13.5v.1"/></symbol>
+  <symbol id="i-pound" viewBox="0 0 24 24"><path d="M16.5 7.2A3.6 3.6 0 0 0 9.6 8.8V18M7 13h6.5M7 18.5h10.5"/></symbol>
+  <symbol id="i-ring" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<aside class="sample-bar" aria-label="About this sample website">
+  <div class="wrap sample-bar-inner">
+    <p><strong>Sample website by Agile Release.</strong> Markwell Tuition is not a real business: the classes, prices and tutors are examples.</p>
+    <a href="https://agilerelease.co.uk/#websites">Get a site like this <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a>
+  </div>
+</aside>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Markwell Tuition, home">
+      <svg class="brand-mark" viewBox="0 0 34 34" aria-hidden="true"><rect class="bm-box" x="2.5" y="8.5" width="23" height="23" rx="6.5"/><path class="bm-tick" d="M8.2 20.2c1.9 1.2 3.5 2.8 4.9 4.9C16.6 17.6 22.3 9.9 31 3.5"/></svg>
+      <span class="brand-name">Markwell <span>Tuition</span></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html#subjects">Subjects</a></li>
+        <li><a href="timetable.html">Timetable</a></li>
+        <li><a href="index.html#progress">Progress</a></li>
+        <li><a href="index.html#tutors">Tutors</a></li>
+        <li><a href="parents.html">Fees &amp; info</a></li>
+        <li><a href="index.html#visit">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary btn-sm header-cta" href="trial.html" aria-current="page">Book a free trial</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+      <svg class="icon"><use href="#i-menu"/></svg><span class="visually-hidden">Menu</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="page-head">
+  <div class="wrap">
+    <p class="kicker">Free trial</p>
+    <h1 class="h1">Book a free trial lesson</h1>
+    <p class="lead">One group session, or a 30-minute one-to-one taster. Four short steps, then your request goes to us as a WhatsApp message. We reply the same working day.</p>
+  </div>
+</section>
+
+<div class="wrap trial">
+  <form class="trial-form" data-trial-form novalidate>
+    <div class="form-errors" data-errors tabindex="-1" hidden>
+      <h2>Please check these</h2>
+      <ul data-error-list></ul>
+    </div>
+
+    <fieldset class="step" data-step="child">
+      <legend><span class="step-num">1</span> Your child</legend>
+      <div class="field-row">
+        <div class="field">
+          <label class="field-label" for="f-year">School year</label>
+          <select name="year" id="f-year" required aria-describedby="year-hint year-error">
+            <option value="">Choose a year</option>
+          </select>
+          <p class="field-hint" id="year-hint" data-year-hint>The year they are in now.</p>
+          <p class="field-error" id="year-error" hidden>Please choose your child's school year.</p>
+        </div>
+        <div class="field">
+          <label class="field-label" for="f-child">Child's first name</label>
+          <input type="text" name="child" id="f-child" autocomplete="off" maxlength="40" required aria-describedby="child-hint child-error">
+          <p class="field-hint" id="child-hint">First name only, please. We do not need their surname or school.</p>
+          <p class="field-error" id="child-error" hidden>Please add your child's first name.</p>
+        </div>
+      </div>
+      <div class="step-note" data-young-note hidden>
+        <svg class="icon"><use href="#i-info"/></svg>
+        <div>
+          <p data-young-text>Our classes start in Year 3.</p>
+          <p><a href="https://wa.me/447700900649" data-contact="whatsapp">Message us</a> and we will gladly talk it through.</p>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset class="step" data-step="subject">
+      <legend><span class="step-num">2</span> Subject</legend>
+      <div class="choices choices-2" data-subject-choices>
+        <label class="choice"><input type="radio" name="subject" value="maths"><span class="choice-body"><strong>Maths</strong></span></label>
+        <label class="choice"><input type="radio" name="subject" value="english"><span class="choice-body"><strong>English</strong></span></label>
+        <label class="choice"><input type="radio" name="subject" value="science"><span class="choice-body"><strong>Science</strong></span></label>
+        <label class="choice"><input type="radio" name="subject" value="elevenplus"><span class="choice-body"><strong>11+ preparation</strong></span></label>
+      </div>
+      <p class="field-error" id="subject-error" hidden>Please choose a subject.</p>
+      <div class="field board-field" data-board-field hidden>
+        <label class="field-label" for="f-board">Exam board <span class="field-optional">Optional</span></label>
+        <select name="board" id="f-board">
+          <option value="">Not sure</option>
+        </select>
+      </div>
+    </fieldset>
+
+    <fieldset class="step" data-step="type">
+      <legend><span class="step-num">3</span> Group or one-to-one</legend>
+      <div class="choices choices-2">
+        <label class="choice"><input type="radio" name="type" value="group"><span class="choice-body"><strong><svg class="icon"><use href="#i-users"/></svg> Group class</strong><span data-group-sub>Join one real session free, in a group of up to six.</span></span></label>
+        <label class="choice"><input type="radio" name="type" value="one"><span class="choice-body"><strong><svg class="icon"><use href="#i-user"/></svg> One-to-one</strong><span>A free 30-minute taster with a tutor, in the centre or online.</span></span></label>
+      </div>
+      <p class="field-error" id="type-error" hidden>Please choose a group class or one-to-one.</p>
+
+      <div class="type-panel" data-group-panel hidden>
+        <p class="panel-label" id="slot-label">Choose a class</p>
+        <div class="slot-list" role="radiogroup" aria-labelledby="slot-label" data-slot-list></div>
+        <div class="dates" data-dates hidden>
+          <p class="panel-label" id="date-label">Choose the date of the trial</p>
+          <div class="date-choices" role="radiogroup" aria-labelledby="date-label" data-date-choices></div>
+        </div>
+        <div class="step-note" data-full-note hidden>
+          <svg class="icon"><use href="#i-info"/></svg>
+          <p>This class is full. Send the request anyway and we will put your child on the waiting list and suggest another class or a one-to-one taster in the meantime.</p>
+        </div>
+        <p class="field-error" id="slot-error" hidden>Please choose a class and a date.</p>
+      </div>
+
+      <div class="type-panel" data-one-panel hidden>
+        <fieldset class="field">
+          <legend class="panel-label">Where</legend>
+          <div class="choices choices-2">
+            <label class="choice choice-compact"><input type="radio" name="where" value="centre" checked><span class="choice-body"><strong><svg class="icon"><use href="#i-door"/></svg> In the centre</strong></span></label>
+            <label class="choice choice-compact"><input type="radio" name="where" value="online"><span class="choice-body"><strong><svg class="icon"><use href="#i-laptop"/></svg> Online</strong></span></label>
+          </div>
+        </fieldset>
+        <fieldset class="field">
+          <legend class="panel-label">Preferred days</legend>
+          <div class="choices choices-days" data-day-choices></div>
+          <p class="field-error" id="days-error" hidden>Please tick at least one day.</p>
+        </fieldset>
+        <fieldset class="field">
+          <legend class="panel-label">Preferred times</legend>
+          <div class="choices choices-2" data-time-choices></div>
+          <p class="field-error" id="times-error" hidden>Please tick at least one time.</p>
+        </fieldset>
+      </div>
+    </fieldset>
+
+    <fieldset class="step" data-step="you">
+      <legend><span class="step-num">4</span> Your details</legend>
+      <div class="field-row">
+        <div class="field">
+          <label class="field-label" for="f-parent">Your name</label>
+          <input type="text" name="parent" id="f-parent" autocomplete="name" maxlength="60" required aria-describedby="parent-error">
+          <p class="field-error" id="parent-error" hidden>Please add your name.</p>
+        </div>
+        <div class="field">
+          <label class="field-label" for="f-phone">Mobile number</label>
+          <input type="tel" name="phone" id="f-phone" autocomplete="tel" inputmode="tel" maxlength="20" required aria-describedby="phone-hint phone-error">
+          <p class="field-hint" id="phone-hint">We reply on WhatsApp or by text.</p>
+          <p class="field-error" id="phone-error" hidden>Please add a UK mobile number, like 07700 900123.</p>
+        </div>
+      </div>
+      <div class="field">
+        <label class="field-label" for="f-email">Email <span class="field-optional">Optional</span></label>
+        <input type="email" name="email" id="f-email" autocomplete="email" maxlength="80" aria-describedby="email-error">
+        <p class="field-error" id="email-error" hidden>That email address does not look right.</p>
+      </div>
+      <div class="field">
+        <label class="field-label" for="f-note">Anything the tutor should know? <span class="field-optional">Optional</span></label>
+        <textarea name="note" id="f-note" rows="3" maxlength="300" aria-describedby="note-hint" placeholder="For example: finds fractions hard, or has a school test coming up"></textarea>
+        <p class="field-hint" id="note-hint">Please do not send medical details or school reports here. We will ask at the first meeting if we need them.</p>
+      </div>
+    </fieldset>
+
+    <div class="submit-row" data-submit-row>
+      <button type="submit" class="btn btn-primary"><svg class="icon"><use href="#i-chat"/></svg> Send request on WhatsApp</button>
+      <p class="form-note">Nothing is sent until you press send in WhatsApp. This website does not keep your details. <a href="privacy.html">Privacy</a></p>
+    </div>
+    <p class="alt-contact">Rather not use WhatsApp? Call <a href="tel:+442079460649" data-contact="phone">020 7946 0649</a> or email <a href="mailto:hello@markwell.example" data-contact="email">hello@markwell.example</a>.</p>
+  </form>
+
+  <aside class="trial-aside" aria-label="Your request so far">
+    <div class="summary-card">
+      <h2>Your trial request</h2>
+      <dl class="summary-list" data-summary>
+        <div><dt>Child</dt><dd class="is-empty">Not chosen yet</dd></div>
+      </dl>
+    </div>
+    <div class="next-card">
+      <h2>What happens next</h2>
+      <ol>
+        <li>We reply to confirm, usually the same working day.</li>
+        <li>Arrive ten minutes early, or join the video link we send. The tutor says hello and shows your child around.</li>
+        <li>Afterwards the tutor tells you how it went and where your child might start.</li>
+        <li>Then decide, with no pressure, whether to book the term.</li>
+      </ol>
+    </div>
+  </aside>
+</div>
+
+</main>
+
+<dialog class="dialog" id="sent-dialog" aria-labelledby="sent-title">
+  <div class="dialog-body">
+    <div class="dialog-head">
+      <h2 class="dialog-title" id="sent-title" tabindex="-1">Your trial request</h2>
+      <button type="button" class="dialog-close" data-close aria-label="Close"><svg class="icon"><use href="#i-close"/></svg></button>
+    </div>
+    <div class="chat">
+      <p class="chat-to"><svg class="icon icon-sm"><use href="#i-chat"/></svg> To Markwell Tuition on WhatsApp</p>
+      <p class="bubble" data-message></p>
+    </div>
+    <p class="copy-status" data-copy-status aria-live="polite"></p>
+    <div class="sample-note">
+      <p><strong>This is a sample website, so nothing was sent.</strong></p>
+      <p>On the centre's real website, this button opens WhatsApp with the message above ready to send. The centre replies to confirm the trial.</p>
+    </div>
+    <div class="dialog-actions">
+      <button type="button" class="btn btn-outline" data-copy><svg class="icon"><use href="#i-copy"/></svg> Copy message</button>
+      <a class="btn btn-outline" href="mailto:hello@markwell.example" data-contact="email" data-email-link><svg class="icon"><use href="#i-mail"/></svg> Email it instead</a>
+      <button type="button" class="btn btn-dark" data-close>Done</button>
+    </div>
+  </div>
+</dialog>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a class="brand brand-light" href="index.html" aria-label="Markwell Tuition, home">
+        <svg class="brand-mark" viewBox="0 0 34 34" aria-hidden="true"><rect class="bm-box" x="2.5" y="8.5" width="23" height="23" rx="6.5"/><path class="bm-tick" d="M8.2 20.2c1.9 1.2 3.5 2.8 4.9 4.9C16.6 17.6 22.3 9.9 31 3.5"/></svg>
+        <span class="brand-name">Markwell <span>Tuition</span></span>
+      </a>
+      <p>Maths, English, science and 11+ tuition for Year 3 to Year 13, in small groups and one-to-one.</p>
+      <p class="footer-address"><svg class="icon icon-sm"><use href="#i-pin"/></svg> 14 Inkpen Terrace, Bexleyheath DA6</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="timetable.html">Timetable</a>
+      <a href="trial.html">Free trial</a>
+      <a href="parents.html#fees">Fees</a>
+      <a href="parents.html#safeguarding">Safeguarding</a>
+      <a href="parents.html#faq">FAQ</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+    <p class="footer-credit">A sample website by <a href="https://agilerelease.co.uk/#websites">Agile Release</a>. Markwell Tuition is made up. &copy; 2026 Agile Release Limited. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

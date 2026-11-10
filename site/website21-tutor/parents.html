@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fees, terms and policies | Markwell Tuition (sample website)</title>
+<meta name="description" content="Fees for group classes and one-to-one tuition, a term fee calculator with the sibling discount, term dates, cancelling, online lessons and our safeguarding policy. A sample website by Agile Release.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="preload" href="css/fonts/lexend-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="css/fonts/young-serif-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js" defer></script>
+<script src="js/terms.js" defer></script>
+<script src="js/site.js" defer></script>
+<script src="js/parents.js" defer></script>
+</head>
+<body class="page-parents" id="top">
+
+<svg class="sprite" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-tick" viewBox="0 0 24 24"><path d="M4 13.2c1.9 1.1 3.5 2.7 5 5C11.6 12.4 15.2 7.6 20.5 4"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 7 8.5-7"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 19.5c0-3.4 2.7-5.8 6-5.8s6 2.4 6 5.8"/><circle cx="17" cy="9" r="2.5"/><path d="M16.6 13.7c2.6.3 4.4 2.4 4.4 5.2"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.6"/><path d="M5 20c0-3.9 3.1-6.6 7-6.6s7 2.7 7 6.6"/></symbol>
+  <symbol id="i-laptop" viewBox="0 0 24 24"><rect x="4.5" y="5" width="15" height="10.5" rx="1.5"/><path d="M2.5 19h19"/></symbol>
+  <symbol id="i-door" viewBox="0 0 24 24"><path d="M6.5 21V3.5h11V21M3.5 21h17M14.5 12.5v.5"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 19 6v5c0 4.6-3 8.3-7 10-4-1.7-7-5.4-7-10V6l7-3Z"/><path d="m9 12 2.2 2.2L15.5 10"/></symbol>
+  <symbol id="i-report" viewBox="0 0 24 24"><path d="M6.5 3h8l4 4v14h-12Z"/><path d="M14 3v4.5h4.5M9.5 12h6M9.5 16h4"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r=".8"/></symbol>
+  <symbol id="i-meeting" viewBox="0 0 24 24"><path d="M3.5 6.5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H9l-3.5 3v-3a2 2 0 0 1-2-2Z"/><path d="M18 9h.5a2 2 0 0 1 2 2v4.5a2 2 0 0 1-2 2v2.5l-3-2.5h-3.5a2 2 0 0 1-2-1.6"/></symbol>
+  <symbol id="i-pencil" viewBox="0 0 24 24"><path d="m4 20 1-4.2L15.8 5a2 2 0 0 1 2.9 0l.3.3a2 2 0 0 1 0 2.9L8.2 19Z"/><path d="m14 7 3 3"/></symbol>
+  <symbol id="i-maths" viewBox="0 0 24 24"><path d="M4 7h6M7 4v6M14 7h6M4.5 15.5l5 5M9.5 15.5l-5 5M14 16h6M14 20h6"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M3.5 5.5C6 4 9.5 4 12 5.5v14C9.5 18 6 18 3.5 19.5Z"/><path d="M12 5.5C14.5 4 18 4 20.5 5.5v14C18 18 14.5 18 12 19.5"/></symbol>
+  <symbol id="i-flask" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6.2L4.6 18.4A1.8 1.8 0 0 0 6.2 21h11.6a1.8 1.8 0 0 0 1.6-2.6L14 9.2V3"/><path d="M7.2 15h9.6"/></symbol>
+  <symbol id="i-shapes" viewBox="0 0 24 24"><circle cx="7" cy="7" r="3.2"/><path d="m17 3.8 3.6 6.2h-7.2Z"/><rect x="3.8" y="14" width="6.4" height="6.4" rx=".8"/><path d="M14 17.2h6.4M17.2 14v6.4"/></symbol>
+  <symbol id="i-headset" viewBox="0 0 24 24"><path d="M4 14.5V12a8 8 0 0 1 16 0v2.5"/><path d="M4 14h3.2v5.5H5.2A1.2 1.2 0 0 1 4 18.3ZM20 14h-3.2v5.5h2A1.2 1.2 0 0 0 20 18.3Z"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8.5" y="8.5" width="11.5" height="11.5" rx="2"/><path d="M15.5 8.5V5.5a1.5 1.5 0 0 0-1.5-1.5H5.5A1.5 1.5 0 0 0 4 5.5V14a1.5 1.5 0 0 0 1.5 1.5h3"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.6v.4"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4.5 7h15M10 7V4.5h4V7M6.8 7l.9 13h8.6l.9-13"/></symbol>
+  <symbol id="i-train" viewBox="0 0 24 24"><rect x="5.5" y="3" width="13" height="13.5" rx="3"/><path d="M5.5 10.5h13M9 20.5l-2 1.5M15 20.5l2 1.5M9 13.5v.1M15 13.5v.1"/></symbol>
+  <symbol id="i-pound" viewBox="0 0 24 24"><path d="M16.5 7.2A3.6 3.6 0 0 0 9.6 8.8V18M7 13h6.5M7 18.5h10.5"/></symbol>
+  <symbol id="i-ring" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<aside class="sample-bar" aria-label="About this sample website">
+  <div class="wrap sample-bar-inner">
+    <p><strong>Sample website by Agile Release.</strong> Markwell Tuition is not a real business: the classes, prices and tutors are examples.</p>
+    <a href="https://agilerelease.co.uk/#websites">Get a site like this <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a>
+  </div>
+</aside>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Markwell Tuition, home">
+      <svg class="brand-mark" viewBox="0 0 34 34" aria-hidden="true"><rect class="bm-box" x="2.5" y="8.5" width="23" height="23" rx="6.5"/><path class="bm-tick" d="M8.2 20.2c1.9 1.2 3.5 2.8 4.9 4.9C16.6 17.6 22.3 9.9 31 3.5"/></svg>
+      <span class="brand-name">Markwell <span>Tuition</span></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html#subjects">Subjects</a></li>
+        <li><a href="timetable.html">Timetable</a></li>
+        <li><a href="index.html#progress">Progress</a></li>
+        <li><a href="index.html#tutors">Tutors</a></li>
+        <li><a href="parents.html" aria-current="page">Fees &amp; info</a></li>
+        <li><a href="index.html#visit">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary btn-sm header-cta" href="trial.html">Book a free trial</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+      <svg class="icon"><use href="#i-menu"/></svg><span class="visually-hidden">Menu</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="page-head">
+  <div class="wrap">
+    <p class="kicker">Fees and information</p>
+    <h1 class="h1">Fees, terms and policies</h1>
+    <p class="lead">What it costs, when terms run, how to book and cancel, how online lessons work, and how we keep children safe. No registration fee, and the first lesson is free.</p>
+  </div>
+</section>
+
+<nav class="page-nav" aria-label="On this page">
+  <div class="wrap">
+    <ul>
+      <li><a href="#fees">Fees</a></li>
+      <li><a href="#calculator">Fee calculator</a></li>
+      <li><a href="#terms">Term dates</a></li>
+      <li><a href="#booking">Booking and cancelling</a></li>
+      <li><a href="#online">Online lessons</a></li>
+      <li><a href="#safeguarding">Safeguarding</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="section" id="fees">
+  <div class="wrap">
+    <header class="section-head section-head-split">
+      <div>
+        <p class="kicker">Fees</p>
+        <h2 class="h2">Clear prices, paid by the term</h2>
+      </div>
+      <p>Books, worksheets and the baseline assessment are included. There is no registration fee and no deposit.</p>
+    </header>
+    <div class="fee-grid">
+      <article class="fee-card">
+        <p class="subject-tab"><svg class="icon"><use href="#i-users"/></svg> Group classes</p>
+        <h3>Up to six pupils</h3>
+        <p>The price of one session, and of a whole term of one class a week.</p>
+        <table class="fee-table" data-group-fees>
+          <thead><tr><th scope="col">Level</th><th scope="col">A session</th><th scope="col" data-term-head>A term</th></tr></thead>
+          <tbody><tr><th scope="row">Key Stage 2<span class="fee-sub">60 minutes</span></th><td>£24</td><td>-</td></tr></tbody>
+        </table>
+        <p class="fee-points" data-term-foot>Terms have 10 to 14 weeks of classes. Join part-way through a term and you pay only for the sessions left.</p>
+      </article>
+      <article class="fee-card fee-card-sun">
+        <p class="subject-tab"><svg class="icon"><use href="#i-user"/></svg> One-to-one</p>
+        <h3>One tutor, one child</h3>
+        <p>An hour, in the centre or online. The same price either way.</p>
+        <table class="fee-table" data-one-fees>
+          <thead><tr><th scope="col">Level</th><th scope="col">An hour</th></tr></thead>
+          <tbody><tr><th scope="row">Year 3 to Year 6</th><td>£50</td></tr></tbody>
+        </table>
+        <ul class="ticks fee-points">
+          <li>The first 30-minute taster is free.</li>
+          <li>Paid at the start of each month for the lessons booked.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section-mist" id="calculator">
+  <div class="wrap">
+    <header class="section-head section-head-split">
+      <div>
+        <p class="kicker kicker-jade">Fee calculator</p>
+        <h2 class="h2">Work out a term's fees</h2>
+      </div>
+      <p>Choose the classes for each child. It counts the sessions in the term, leaves out half-term and bank holidays, and takes off the discount for brothers and sisters.</p>
+    </header>
+    <div class="calc">
+      <div class="calc-panel">
+        <fieldset class="field calc-term">
+          <legend class="panel-label">Which term?</legend>
+          <div class="choices choices-2" data-calc-terms></div>
+        </fieldset>
+        <p class="panel-label" id="calc-classes-label">Classes</p>
+        <ul class="calc-rows" data-calc-rows aria-labelledby="calc-classes-label"></ul>
+        <button type="button" class="add-row" data-calc-add><svg class="icon"><use href="#i-plus"/></svg> Add another class</button>
+        <p class="field-hint">Up to six classes. One-to-one lessons are paid monthly, so they are not in this total.</p>
+        <noscript><p class="field-hint">The calculator needs JavaScript. Ask us on WhatsApp and we will work it out for you.</p></noscript>
+      </div>
+      <div class="calc-result">
+        <h3>The term's fees</h3>
+        <p class="calc-term-label" data-calc-term-label></p>
+        <ul class="calc-lines" data-calc-lines aria-live="polite"></ul>
+        <p class="calc-total"><span>Total</span><strong data-calc-total>£0</strong></p>
+        <p class="calc-instal" data-calc-instal></p>
+        <button type="button" class="btn btn-sun btn-block" data-calc-book><svg class="icon"><use href="#i-chat"/></svg> Ask to book these places</button>
+        <p class="field-error calc-error" data-calc-error hidden>Choose at least one class first.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="terms">
+  <div class="wrap">
+    <header class="section-head section-head-split">
+      <div>
+        <p class="kicker">Term dates</p>
+        <h2 class="h2" data-terms-title>This school year</h2>
+      </div>
+      <p>Our terms follow local school terms closely. There are no group classes in half-term weeks or on bank holidays.</p>
+    </header>
+    <div class="terms-grid" data-terms>
+      <p>Autumn, spring and summer terms, each with a half-term week off.</p>
+    </div>
+    <div class="rebook" data-rebook></div>
+  </div>
+</section>
+
+<section class="section section-sun-wash" id="booking">
+  <div class="wrap">
+    <header class="section-head">
+      <p class="kicker">Booking and cancelling</p>
+      <h2 class="h2">Fair rules, written down</h2>
+    </header>
+    <div class="policy-grid policy-grid-2">
+      <article class="policy">
+        <span class="policy-icon"><svg class="icon"><use href="#i-calendar"/></svg></span>
+        <h3>Booking a term</h3>
+        <ul class="ticks">
+          <li>Pay for the term at the start, or in three monthly payments.</li>
+          <li>Joining part-way through? You pay only for the sessions left.</li>
+          <li>Your child keeps their place each term if you rebook by the date we send you, three weeks before the end of term.</li>
+          <li>Bank transfer, or card at the front desk.</li>
+        </ul>
+      </article>
+      <article class="policy">
+        <span class="policy-icon"><svg class="icon"><use href="#i-users"/></svg></span>
+        <h3>Brothers and sisters</h3>
+        <ul class="ticks">
+          <li><strong>10% off</strong> the fees of each brother or sister after the first, for group classes and one-to-one.</li>
+          <li>The child with the highest fees pays the full price; the discount comes off the others.</li>
+          <li>Nothing to claim: we take it off the invoice.</li>
+        </ul>
+      </article>
+      <article class="policy">
+        <span class="policy-icon"><svg class="icon"><use href="#i-clock"/></svg></span>
+        <h3>Missed lessons and cancelling</h3>
+        <ul class="ticks">
+          <li>Group classes: no refund for a missed session, but we send the worksheet, and offer a catch-up in another group that week if there is room.</li>
+          <li>One-to-one: cancel by WhatsApp at least 24 hours before and there is no charge. Later than that, the lesson is charged, except for the first illness each term.</li>
+          <li>Leaving? Tell us before half-term and you will not be charged for the next term.</li>
+        </ul>
+      </article>
+      <article class="policy">
+        <span class="policy-icon"><svg class="icon"><use href="#i-shield"/></svg></span>
+        <h3>If we have to cancel</h3>
+        <ul class="ticks">
+          <li>If a tutor is ill, another tutor covers the class, or it moves online for that week.</li>
+          <li>If neither is possible, the session comes off your next invoice.</li>
+          <li>If snow or a closure stops lessons in the centre, classes move online.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="online">
+  <div class="wrap">
+    <header class="section-head section-head-split">
+      <div>
+        <p class="kicker kicker-jade">Online lessons</p>
+        <h2 class="h2">Setting up for online lessons</h2>
+      </div>
+      <p>Online classes and one-to-ones are live, with the same tutors, the same groups of up to six and the same reports.</p>
+    </header>
+    <div class="online">
+      <ol class="online-steps">
+        <li>
+          <h3>We send a link</h3>
+          <p>The day before the first lesson, we email a link to the lesson. It opens in a web browser, so there is nothing to install.</p>
+        </li>
+        <li>
+          <h3>A short test first</h3>
+          <p>For the first lesson, the tutor joins ten minutes early to check the sound and camera with you.</p>
+        </li>
+        <li>
+          <h3>During the lesson</h3>
+          <p>Cameras stay on. The tutor works on a shared whiteboard that your child can write on too, or they can hold work up to the camera.</p>
+        </li>
+        <li>
+          <h3>After the lesson</h3>
+          <p>Notes and homework arrive by email. Your child sends back a photo of their written work.</p>
+        </li>
+        <li>
+          <h3>Staying safe</h3>
+          <p>For children in Year 6 and below, a parent or carer stays at home and nearby. Lessons use the centre's accounts only and are not recorded.</p>
+        </li>
+      </ol>
+      <div class="checklist" data-checklist>
+        <div class="checklist-head">
+          <h3 id="checklist-title">Ready for the first lesson?</h3>
+          <span class="checklist-count" data-checklist-count aria-live="polite">0 of 6 ready</span>
+        </div>
+        <ul class="choices" aria-labelledby="checklist-title">
+          <li><label class="choice choice-check choice-compact"><input type="checkbox" name="ready"><span class="choice-body"><strong>A laptop or tablet</strong><span>A phone screen is too small for worksheets.</span></span></label></li>
+          <li><label class="choice choice-check choice-compact"><input type="checkbox" name="ready"><span class="choice-body"><strong>Broadband that copes with a video call</strong><span>Sit near the router if the signal is weak.</span></span></label></li>
+          <li><label class="choice choice-check choice-compact"><input type="checkbox" name="ready"><span class="choice-body"><strong>Earphones or a headset with a microphone</strong><span>So the tutor can hear clearly, and the house can't.</span></span></label></li>
+          <li><label class="choice choice-check choice-compact"><input type="checkbox" name="ready"><span class="choice-body"><strong>A table in a shared room</strong><span>Or a bedroom with the door open. Not in bed.</span></span></label></li>
+          <li><label class="choice choice-check choice-compact"><input type="checkbox" name="ready"><span class="choice-body"><strong>Paper, pencil, ruler and calculator</strong><span>A calculator from Year 7 up.</span></span></label></li>
+          <li><label class="choice choice-check choice-compact"><input type="checkbox" name="ready"><span class="choice-body"><strong>The worksheet, printed or on a second screen</strong><span>We email it the day before.</span></span></label></li>
+        </ul>
+        <p class="checklist-done" data-checklist-done hidden>All set. See you in the lesson.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-mist" id="safeguarding">
+  <div class="wrap">
+    <header class="section-head section-head-split">
+      <div>
+        <p class="kicker kicker-jade">Safeguarding</p>
+        <h2 class="h2">Keeping children safe</h2>
+      </div>
+      <p>A summary of our safeguarding policy, which follows the Department for Education's guidance for out-of-school settings. Ask us for the full policy at any time.</p>
+    </header>
+    <div class="safe">
+      <div class="safe-points">
+        <ul class="ticks">
+          <li>Every tutor and member of staff has an enhanced DBS check before they start (an example claim on this sample site).</li>
+          <li>Everyone who works here does safeguarding training every year, and the safeguarding leads more often.</li>
+          <li>Pupils sign in and out. Children in Year 6 and below are collected by an adult you have named; older pupils can walk home with your written agreement.</li>
+          <li>There are always at least two adults in the building while children are here.</li>
+          <li>Tutors never contact pupils on personal phones or social media. Messages go to parents, or to sixth formers through the centre's account with a parent copied in.</li>
+          <li>Online lessons use the centre's accounts only and are not recorded. We do not take photos of pupils.</li>
+          <li>Any worry about a child goes to the safeguarding lead the same day, and is written down.</li>
+        </ul>
+      </div>
+      <aside class="dsl-card" aria-labelledby="dsl-title">
+        <h3 id="dsl-title">Who to talk to <span class="tag tag-example">Example</span></h3>
+        <div data-dsl>
+          <div class="dsl-person"><span class="monogram m-english" aria-hidden="true">E</span><p><strong>Esther M., Head of centre</strong><span>Designated safeguarding lead</span></p></div>
+        </div>
+        <p class="dsl-contact">Email <a href="mailto:safeguarding@markwell.example" data-contact="email">safeguarding@markwell.example</a> or call <a href="tel:+442079460649" data-contact="phone">020 7946 0649</a> and ask for the safeguarding lead.</p>
+        <p class="dsl-urgent"><strong>If a child is in danger now, call 999.</strong> You can also contact your local council's children's services or the NSPCC.</p>
+        <p class="dsl-note">On a real centre's site, this slot names its own safeguarding leads and links to the full policy.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="wrap faq-layout">
+    <header class="section-head">
+      <p class="kicker">Questions</p>
+      <h2 class="h2">Questions parents ask</h2>
+      <p>Anything else? <a href="index.html#visit">Message us</a> and we will reply the same working day.</p>
+    </header>
+    <div class="faq">
+      <details>
+        <summary>How big are the groups?</summary>
+        <p>Six pupils at most, and five for A level. Most groups have four or five, so the tutor can check every child's work in every lesson.</p>
+      </details>
+      <details>
+        <summary>My child is behind, or ahead. Will a group suit them?</summary>
+        <p>The baseline assessment in the first two weeks shows where they are. Groups are set by school year and, for GCSE maths and science, by tier. If a group is not the right fit, we will say so and suggest one-to-one instead.</p>
+      </details>
+      <details>
+        <summary>Do you follow my child's exam board?</summary>
+        <p>Yes. Tell us the board and the specification, and we teach to it: AQA, Pearson Edexcel, OCR or WJEC Eduqas. If you do not know, ask the school or look at the front of an exercise book or a mock paper.</p>
+      </details>
+      <details>
+        <summary>Is there homework?</summary>
+        <p>Yes, a little and often: about 20 minutes a week at Key Stage 2, and up to 45 minutes for GCSE and A level. It is marked by the next lesson.</p>
+      </details>
+      <details>
+        <summary>Do you help children with dyslexia or other additional needs?</summary>
+        <p>Our tutors are teachers, not specialist assessors. Tell us what helps your child, such as shorter tasks, coloured paper or extra time, and we will adapt. If a specialist would serve your child better, we will tell you honestly.</p>
+      </details>
+      <details>
+        <summary>Can my child switch between the centre and online?</summary>
+        <p>For one-to-one lessons, yes, any week with 24 hours' notice. Online group classes are separate groups, so moving between them depends on places.</p>
+      </details>
+      <details>
+        <summary>Can I stay during the lesson?</summary>
+        <p>There is a small waiting area by the door. Parents do not sit in group lessons, so pupils can relax, but the tutor always talks to you after the free trial.</p>
+      </details>
+      <details>
+        <summary>What happens in the school holidays?</summary>
+        <p>There are no group classes in half-term or the holidays. One-to-one lessons can carry on if you ask. We run Easter revision mornings for Year 11 and Year 13, and tell current families the dates each spring.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<dialog class="dialog" id="book-dialog" aria-labelledby="book-title">
+  <div class="dialog-body">
+    <div class="dialog-head">
+      <h2 class="dialog-title" id="book-title" tabindex="-1">Your booking request</h2>
+      <button type="button" class="dialog-close" data-close aria-label="Close"><svg class="icon"><use href="#i-close"/></svg></button>
+    </div>
+    <div class="chat">
+      <p class="chat-to"><svg class="icon icon-sm"><use href="#i-chat"/></svg> To Markwell Tuition on WhatsApp</p>
+      <p class="bubble" data-message></p>
+    </div>
+    <div class="sample-note">
+      <p><strong>This is a sample website, so nothing was sent.</strong></p>
+      <p>On the centre's real website, this button opens WhatsApp with the message above ready to send. The centre replies to confirm the places and sends an invoice.</p>
+    </div>
+    <div class="dialog-actions">
+      <a class="btn btn-outline" href="mailto:hello@markwell.example" data-contact="email" data-email-link><svg class="icon"><use href="#i-mail"/></svg> Email it instead</a>
+      <button type="button" class="btn btn-dark" data-close>Done</button>
+    </div>
+  </div>
+</dialog>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a class="brand brand-light" href="index.html" aria-label="Markwell Tuition, home">
+        <svg class="brand-mark" viewBox="0 0 34 34" aria-hidden="true"><rect class="bm-box" x="2.5" y="8.5" width="23" height="23" rx="6.5"/><path class="bm-tick" d="M8.2 20.2c1.9 1.2 3.5 2.8 4.9 4.9C16.6 17.6 22.3 9.9 31 3.5"/></svg>
+        <span class="brand-name">Markwell <span>Tuition</span></span>
+      </a>
+      <p>Maths, English, science and 11+ tuition for Year 3 to Year 13, in small groups and one-to-one.</p>
+      <p class="footer-address"><svg class="icon icon-sm"><use href="#i-pin"/></svg> 14 Inkpen Terrace, Bexleyheath DA6</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="timetable.html">Timetable</a>
+      <a href="trial.html">Free trial</a>
+      <a href="parents.html#fees">Fees</a>
+      <a href="parents.html#safeguarding">Safeguarding</a>
+      <a href="parents.html#faq">FAQ</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+    <p class="footer-credit">A sample website by <a href="https://agilerelease.co.uk/#websites">Agile Release</a>. Markwell Tuition is made up. &copy; 2026 Agile Release Limited. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

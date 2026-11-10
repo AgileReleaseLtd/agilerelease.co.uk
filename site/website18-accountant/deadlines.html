@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UK tax deadlines for the next 12 months | Quarterday (sample website)</title>
+<meta name="description" content="Self Assessment, Making Tax Digital, employer and limited company deadlines, worked out from today's date. A sample website by Agile Release.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#1d1b16">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="preload" href="css/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="css/fonts/literata-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js" defer></script>
+<script src="js/dates.js" defer></script>
+<script src="js/site.js" defer></script>
+<script src="js/deadlines.js" defer></script>
+</head>
+<body class="page-deadlines">
+
+<svg class="sprite" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/><path d="M9 10.5h6M9 13.5h4"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 7 8.5-7"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-person" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20.5a7.5 7.5 0 0 1 15 0"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="15" r="4.5"/><path d="m11.2 11.8 8.3-8.3M16.5 6.5l2.5 2.5M14 9l2 2"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24"><path d="M4 20.5V5.5l8-2.5v17.5M12 8h8v12.5M2.5 20.5h19"/><path d="M7 8.5h2M7 12h2M7 15.5h2M15 11.5h2M15 15h2"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5Z"/><path d="M4 20.5A2.5 2.5 0 0 0 6.5 23"/><path d="M8.5 8h7M8.5 11.5h7M8.5 15h4"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.2 7.5 9.5 4.3-1.3 7.5-4.9 7.5-9.5V6Z"/><path d="m9 12 2.2 2.2L15.5 10"/></symbol>
+  <symbol id="i-swap" viewBox="0 0 24 24"><path d="M4 8h14M14 4l4 4-4 4M20 16H6M10 12l-4 4 4 4"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 2.5h8l4.5 4.5v14.5H6Z"/><path d="M14 2.5V7h4.5M9 12h6M9 15.5h6"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.6v.1"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5 2.5 20h19Z"/><path d="M12 9.5v5M12 17.2v.1"/></symbol>
+  <symbol id="i-laptop" viewBox="0 0 24 24"><rect x="4.5" y="5" width="15" height="10.5" rx="1.5"/><path d="M2.5 19h19"/></symbol>
+  <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5.5H4.5V6H10"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V4M4 20h16"/><path d="m7.5 15 4-4.5 3 3L20 7"/></symbol>
+  <symbol id="i-pound" viewBox="0 0 24 24"><path d="M16.5 6.5A4 4 0 0 0 9 8.5V20M6 13h7M6 20h11.5"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<aside class="sample-bar" aria-label="About this sample website">
+  <div class="wrap sample-bar-inner">
+    <p><strong>Sample website by Agile Release.</strong> Quarterday is not a real practice: the fees, people and numbers are examples.</p>
+    <a href="https://agilerelease.co.uk/#websites">Get a site like this <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a>
+  </div>
+</aside>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Quarterday, home"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><circle class="brand-ring" cx="16" cy="16" r="12.5"/><path class="brand-quarter" d="M16 16V3.5A12.5 12.5 0 0 0 3.5 16Z"/><path class="brand-rule" d="M16 16h12.5M16 16v12.5"/></svg><span class="brand-text"><span class="brand-name">Quarterday</span><span class="brand-sub">Accountants &middot; Hammersmith</span></span></a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="mtd.html">Making Tax Digital</a></li>
+        <li><a href="deadlines.html" aria-current="page">Deadlines</a></li>
+        <li><a href="index.html#team">Team</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="enquire.html">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-ink btn-sm header-cta" href="enquire.html">Get a quote</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+      <svg class="icon"><use href="#i-menu"/></svg><span class="visually-hidden">Menu</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+<section class="page-head">
+  <div class="wrap page-head-inner">
+    <div>
+      <p class="kicker">Tax deadlines</p>
+      <h1 class="h1">Every date that matters, counted from today</h1>
+      <p class="lead">Self Assessment, Making Tax Digital and payroll dates for the next twelve months, with the next ones first. Company dates depend on your year end: work yours out further down.</p>
+    </div>
+    <div class="next-card" data-next-card aria-live="polite">
+      <p class="next-label">Next deadline</p>
+      <p class="next-fallback">31 January: online Self Assessment returns and payment.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-tight" aria-labelledby="list-title">
+  <div class="wrap">
+    <div class="list-head">
+      <h2 class="h2" id="list-title">The next twelve months</h2>
+      <div class="filters" role="group" aria-label="Show deadlines for" data-filters>
+        <button type="button" class="chip" data-filter="all" aria-pressed="true">Everything</button>
+        <button type="button" class="chip chip-sa" data-filter="sa" aria-pressed="false">Self Assessment</button>
+        <button type="button" class="chip chip-mtd" data-filter="mtd" aria-pressed="false">Making Tax Digital</button>
+        <button type="button" class="chip chip-payroll" data-filter="payroll" aria-pressed="false">Employers</button>
+      </div>
+    </div>
+    <div class="months" data-months>
+      <noscript><p>The deadline list needs JavaScript. The main dates are 31 January (online tax return and payment), 31 July (second payment on account) and 5 October (register for Self Assessment).</p></noscript>
+    </div>
+    <p class="list-note"><svg class="icon icon-sm"><use href="#i-info"/></svg> <span>Bank transfers can take up to three working days to reach HMRC, so pay a few days early when a deadline falls on a weekend.</span></p>
+  </div>
+</section>
+
+<section class="section section-tint" id="company" aria-labelledby="co-title">
+  <div class="wrap co-layout">
+    <header class="section-head section-head-left" data-reveal>
+      <p class="kicker">Limited companies</p>
+      <h2 class="h2" id="co-title">Your company's dates</h2>
+      <p>Company deadlines run from your year end (the accounting reference date), not from the tax year. Choose yours to see when your accounts, tax and return are due.</p>
+      <p class="advice-note"><svg class="icon"><use href="#i-info"/></svg> <span>For a company's first accounts the dates are different: usually 21 months after the company was set up.</span></p>
+    </header>
+    <form class="co-form" data-company novalidate>
+      <div class="field-row">
+        <div class="field">
+          <label class="field-label" for="co-day">Year end: day</label>
+          <select id="co-day" name="day" data-co-day></select>
+        </div>
+        <div class="field">
+          <label class="field-label" for="co-month">Month</label>
+          <select id="co-month" name="month" data-co-month></select>
+        </div>
+      </div>
+      <div class="field">
+        <label class="field-label" for="co-inc">Date the company was set up <span class="field-optional">Optional, for the confirmation statement</span></label>
+        <input id="co-inc" name="inc" type="date" data-co-inc>
+      </div>
+      <div class="co-result" data-co-result aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="other-title">
+  <div class="wrap">
+    <header class="section-head" data-reveal>
+      <p class="kicker">Dates that depend on you</p>
+      <h2 class="h2" id="other-title">Three more to know about</h2>
+    </header>
+    <ul class="other-grid" data-reveal>
+      <li>
+        <p class="other-num num">1m + 7d</p>
+        <h3>VAT returns</h3>
+        <p>Your VAT return and payment are due one month and seven days after the end of each VAT period.</p>
+      </li>
+      <li>
+        <p class="other-num num">30 days</p>
+        <h3>Registering for VAT</h3>
+        <p>Once your VAT-taxable sales go over £90,000 in any 12 months, register within 30 days of the end of that month.</p>
+      </li>
+      <li>
+        <p class="other-num num">60 days</p>
+        <h3>Selling a second home or a let property</h3>
+        <p>If there is Capital Gains Tax to pay, report it and pay it within 60 days of completion.</p>
+      </li>
+    </ul>
+    <p class="advice-line" data-reveal>General information about UK tax, not advice for your situation. Worried about a deadline? <a href="enquire.html">Tell us which one</a> and we will reply within one working day.</p>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a class="brand brand-light" href="index.html" aria-label="Quarterday, home"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><circle class="brand-ring" cx="16" cy="16" r="12.5"/><path class="brand-quarter" d="M16 16V3.5A12.5 12.5 0 0 0 3.5 16Z"/><path class="brand-rule" d="M16 16h12.5M16 16v12.5"/></svg><span class="brand-text"><span class="brand-name">Quarterday</span><span class="brand-sub">Accountants &middot; Hammersmith</span></span></a>
+      <p>Accountants and bookkeepers for sole traders, freelancers, landlords and small limited companies.</p>
+      <p class="footer-address">First floor, 27 Penwick Row<br>Hammersmith, London W6</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="packages.html">Packages and fees</a>
+      <a href="packages.html#finder">Package finder</a>
+      <a href="mtd.html">Making Tax Digital</a>
+      <a href="deadlines.html">Tax deadlines</a>
+      <a href="index.html#switching">Switching to us</a>
+      <a href="enquire.html">Contact</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+    <div class="footer-contact">
+      <a href="https://wa.me/447700900131" data-contact="whatsapp"><svg class="icon icon-sm"><use href="#i-chat"/></svg> WhatsApp 07700 900131</a>
+      <a href="tel:+442079460131" data-contact="phone"><svg class="icon icon-sm"><use href="#i-phone"/></svg> 020 7946 0131</a>
+      <a href="mailto:hello@quarterday.example" data-contact="email"><svg class="icon icon-sm"><use href="#i-mail"/></svg> hello@quarterday.example</a>
+    </div>
+    <p class="footer-note">General information about UK tax, not advice for your situation. Rules checked on GOV.UK on 10 November 2026.</p>
+    <p class="footer-credit">A sample website by <a href="https://agilerelease.co.uk/#websites">Agile Release</a>. Quarterday is made up. &copy; 2026 Agile Release Limited. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

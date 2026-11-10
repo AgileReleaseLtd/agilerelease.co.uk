@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hither &amp; Thither | Removals and man with a van in Holloway, London N7 (sample website)</title>
+<meta name="description" content="Home moves, student and single-item moves, small office moves and packing across London, from a friendly crew in Holloway. Instant estimate online. A sample website by Agile Release.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#ff7a2f">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="preload" href="css/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js" defer></script>
+<script src="js/postcodes.js" defer></script>
+<script src="js/estimate.js" defer></script>
+<script src="js/site.js" defer></script>
+<script src="js/checker.js" defer></script>
+<script src="js/home.js" defer></script>
+</head>
+<body>
+<svg class="sprite" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 7 8.5-7"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.6v.1"/></symbol>
+  <symbol id="i-print" viewBox="0 0 24 24"><path d="M7 9V3.5h10V9"/><rect x="3.5" y="9" width="17" height="8" rx="2"/><path d="M7 14h10v6.5H7Z"/></symbol>
+  <symbol id="i-van" viewBox="0 0 24 24"><path d="M2.5 5.5h11.5v11H2.5Z"/><path d="M14 9h4l3 3.8v3.7h-7"/><circle cx="6.5" cy="17.5" r="2"/><circle cx="17" cy="17.5" r="2"/></symbol>
+  <symbol id="i-lorry" viewBox="0 0 24 24"><path d="M1.5 4.5h13.5v12H1.5Z"/><path d="M15 8.5h4l3 3.8v4.2h-7"/><circle cx="5.5" cy="17.5" r="2"/><circle cx="10" cy="17.5" r="2"/><circle cx="18.5" cy="17.5" r="2"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="M3.5 8 12 4l8.5 4v8.5L12 20.5l-8.5-4Z"/><path d="m3.5 8 8.5 4 8.5-4M12 12v8.5"/><path d="m7.8 6 8.5 4v3"/></symbol>
+  <symbol id="i-house" viewBox="0 0 24 24"><path d="M3.5 11 12 4l8.5 7"/><path d="M6 9.5V20h12V9.5"/><path d="M10 20v-5.5h4V20"/></symbol>
+  <symbol id="i-flat" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="17.5" rx="1"/><path d="M9.5 20.5v-4h5v4M8.5 7h2M13.5 7h2M8.5 11h2M13.5 11h2"/></symbol>
+  <symbol id="i-bed" viewBox="0 0 24 24"><path d="M3 19V6.5M3 14h18v5M21 14v-2a3 3 0 0 0-3-3h-7.5v5"/><circle cx="7" cy="11" r="1.8"/></symbol>
+  <symbol id="i-desk" viewBox="0 0 24 24"><path d="M2.5 11h19M4.5 11v9M19.5 11v9M13.5 11v4.5h6"/><rect x="6" y="3" width="9" height="5.5" rx="1"/><path d="M10.5 8.5V11"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 9.5a6 6 0 0 1 12 0v10a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1Z"/><path d="M9.5 4.2V3h5v1.2M9 13.5h6v3.5H9Z"/></symbol>
+  <symbol id="i-sofa" viewBox="0 0 24 24"><path d="M5 11V8a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3"/><path d="M3 13a2 2 0 0 1 4 0v2h10v-2a2 2 0 0 1 4 0v5H3Z"/><path d="M5 18v2M19 18v2"/></symbol>
+  <symbol id="i-tape" viewBox="0 0 24 24"><circle cx="10" cy="11" r="6.5"/><circle cx="10" cy="11" r="2.5"/><path d="M10 17.5h11"/></symbol>
+  <symbol id="i-glass" viewBox="0 0 24 24"><path d="M7 3.5h10l-.5 4.8a4.5 4.5 0 0 1-9 0Z"/><path d="M12 12.8v7.2M8.5 20.5h7"/><path d="m11 3.8 1.6 2.1-1.2 1.6"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="M8 19V5M4.5 8.5 8 5l3.5 3.5M16 19V5M12.5 8.5 16 5l3.5 3.5M4 20.5h16"/></symbol>
+  <symbol id="i-umbrella" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 18 0Z"/><path d="M12 12v6.5a2 2 0 0 1-4 0M12 3v.1"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3.5 19 6v5.5c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V6Z"/><path d="m8.8 12 2.3 2.3 4.3-4.6"/></symbol>
+  <symbol id="i-badge" viewBox="0 0 24 24"><circle cx="12" cy="9" r="5.5"/><path d="M8.5 13.3 7 21l5-2.5 5 2.5-1.5-7.7"/></symbol>
+  <symbol id="i-route" viewBox="0 0 24 24"><circle cx="5.5" cy="18" r="2.5"/><circle cx="18.5" cy="6" r="2.5"/><path d="M8 18h7.5a3 3 0 0 0 0-6h-7a3 3 0 0 1 0-6H16" stroke-dasharray="2.2 2.6"/></symbol>
+  <symbol id="i-stairs" viewBox="0 0 24 24"><path d="M3 20.5h4.5V16H12v-4.5h4.5V7H21"/></symbol>
+  <symbol id="i-lift" viewBox="0 0 24 24"><rect x="4.5" y="3.5" width="15" height="17" rx="2"/><path d="m9 9.5 3-3 3 3M9 14.5l3 3 3-3"/></symbol>
+  <symbol id="i-parking" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="3.5"/><path d="M9.5 17V7.5H13a2.7 2.7 0 0 1 0 5.4H9.5"/></symbol>
+  <symbol id="i-spanner" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.3 5.2L3.5 17.4a1.5 1.5 0 0 0 0 2.1l1 1a1.5 1.5 0 0 0 2.1 0l5.9-5.9a4 4 0 0 0 5.2-5.3l-2.5 2.5-2.4-.6-.6-2.4Z"/></symbol>
+  <symbol id="i-tv" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="12" rx="1.5"/><path d="M8.5 20.5h7M12 17v3.5"/></symbol>
+  <symbol id="i-frame" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="m7 16 3.5-4 2.5 3 2-2 2 3"/><circle cx="15" cy="8.5" r="1.3"/></symbol>
+  <symbol id="i-wardrobe" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="16.5" rx="1"/><path d="M12 3v16.5M10 10v2M14 10v2M6.5 19.5V21M17.5 19.5V21"/></symbol>
+  <symbol id="i-plate" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/></symbol>
+  <symbol id="i-video" viewBox="0 0 24 24"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="m16 10.5 5-3v9l-5-3"/></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24"><path d="M10 6.5h10M10 12h10M10 17.5h10"/><path d="m3.5 6.5 1.3 1.3 2.2-2.4M3.5 12l1.3 1.3 2.2-2.4M3.5 17.5l1.3 1.3 2.2-2.4"/></symbol>
+  <symbol id="i-blanket" viewBox="0 0 24 24"><path d="M4 5.5h16v13H4Z"/><path d="M4 10h16M4 14.5h16M9 5.5v13M15 5.5v13" stroke-dasharray="1.6 2"/></symbol>
+  <symbol id="i-people" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3.5 19.5a5.5 5.5 0 0 1 11 0"/><circle cx="17" cy="9" r="2.4"/><path d="M15.8 14.1a4.5 4.5 0 0 1 5.2 4.6"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="12" r="4"/><path d="M12 12h8.5M17.5 12v3M20.5 12v2.5"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<aside class="sample-bar" aria-label="About this sample website">
+  <div class="wrap sample-bar-inner">
+    <p><strong>Sample website by Agile Release.</strong> Hither &amp; Thither is not a real business: the prices, vans and people are examples.</p>
+    <a href="https://agilerelease.co.uk/#websites">Get a site like this <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a>
+  </div>
+</aside>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Hither and Thither removals, home">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect class="bm-bg" width="40" height="40" rx="11"/><rect class="bm-post" x="18.5" y="6.5" width="3" height="27" rx="1.2"/><rect class="bm-post" x="14" y="31.5" width="12" height="3" rx="1.5"/><path class="bm-here" d="M5.5 13.5 9.5 9.5H27v8H9.5Z"/><path class="bm-there" d="M34.5 23.5 30.5 19.5H13v8h17.5Z"/></svg>
+      <span class="brand-text"><span class="brand-name">Hither <i>&amp;</i> Thither</span><span class="brand-sub">Removals &middot; man with a van</span></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="quote.html">Estimate</a></li>
+        <li><a href="packing.html">Packing</a></li>
+        <li><a href="areas.html">Areas</a></li>
+        <li><a href="checklist.html">Checklist</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="nav-book"><a href="book.html">Book a move</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary btn-sm header-cta" href="book.html">Book a move</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+      <svg class="icon"><use href="#i-menu"/></svg><span class="visually-hidden">Menu</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow"><svg class="icon"><use href="#i-pin"/></svg> Holloway, N7 &middot; all of London</p>
+      <h1 class="display">Here to there, <em class="swoosh">handled.</em></h1>
+      <p class="lead">Home moves, student moves, single items and small offices across London, with packing if you want it. Friendly crews, clear prices, and an estimate in two minutes.</p>
+      <div class="hero-actions">
+        <a class="btn btn-dark" href="quote.html">Get an estimate <svg class="icon"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-outline" href="book.html">Book a move</a>
+      </div>
+      <ul class="hero-facts">
+        <li><strong data-rate="small,1">£50</strong> an hour for a van and a mover</li>
+        <li><strong>7 days</strong> a week, from 8am</li>
+        <li><strong>Same crew</strong> from first box to last</li>
+      </ul>
+    </div>
+
+    <form class="quick" data-quick novalidate aria-labelledby="quick-title">
+      <p class="quick-kicker"><svg class="icon"><use href="#i-route"/></svg> Quick estimate</p>
+      <h2 class="quick-title" id="quick-title">What are you moving?</h2>
+      <div class="field">
+        <label for="q-size">Size of move</label>
+        <select id="q-size" name="size">
+          <option value="items">A few items, or a student room</option>
+          <option value="studio">Studio flat</option>
+          <option value="bed1" selected>1-bedroom flat</option>
+          <option value="bed2">2-bedroom flat or house</option>
+          <option value="bed3">3-bedroom house</option>
+          <option value="bed4">4-bedroom house</option>
+          <option value="bed5">5 bedrooms or more</option>
+          <option value="office1">Small office (up to 5 desks)</option>
+          <option value="office2">Office (6 to 12 desks)</option>
+        </select>
+      </div>
+      <div class="quick-route">
+        <div class="field">
+          <label for="q-from">From</label>
+          <input id="q-from" name="from" type="text" placeholder="e.g. N7" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-describedby="q-hint">
+        </div>
+        <svg class="quick-arrow icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+        <div class="field">
+          <label for="q-to">To</label>
+          <input id="q-to" name="to" type="text" placeholder="e.g. SE15" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-describedby="q-hint">
+        </div>
+      </div>
+      <p class="quick-hint" id="q-hint">The first part of each postcode is enough.</p>
+      <div class="quick-result" data-quick-result aria-live="polite">
+        <p class="quick-idle">A 1-bedroom flat across London is usually <strong>£400 to £600</strong> on a weekday.</p>
+      </div>
+      <a class="btn btn-primary btn-block" href="quote.html" data-quick-link>Fine-tune your estimate <svg class="icon"><use href="#i-arrow"/></svg></a>
+    </form>
+  </div>
+
+  <div class="road" aria-hidden="true">
+    <svg class="signpost" viewBox="0 0 170 150">
+      <rect class="sp-post" x="80" y="10" width="10" height="140" rx="3"/>
+      <path class="sp-arm sp-here" d="M6 42 24 22h122v40H24Z"/>
+      <text class="sp-text" x="34" y="49">Hither</text>
+      <path class="sp-arm sp-there" d="M164 92 146 72H24v40h122Z"/>
+      <text class="sp-text sp-text-dark" x="38" y="99">Thither</text>
+    </svg>
+    <svg class="van" viewBox="0 0 300 150">
+      <g class="van-speed"><path d="M-70 52h50M-96 74h70M-58 96h38"/></g>
+      <g class="van-body">
+        <rect class="v-box" x="8" y="12" width="200" height="102" rx="10"/>
+        <path class="v-box" d="M204 12h38a8 8 0 0 1 8 8v24h-46Z"/>
+        <rect class="v-stripe" x="10" y="84" width="196" height="12"/>
+        <text class="v-name" x="26" y="52">Hither &amp; Thither</text>
+        <text class="v-sub" x="26" y="72">REMOVALS · LONDON N7</text>
+        <path class="v-cab" d="M206 46h42c6 0 10 3 13 8l18 30c3 5 4 9 4 14v16h-77Z"/>
+        <path class="v-window" d="M218 54h28c3 0 5 1 7 4l13 23h-48Z"/>
+        <path class="v-line" d="M238 92h10M214 54v58"/>
+        <rect class="v-light" x="272" y="99" width="11" height="7" rx="2"/>
+        <rect class="v-chassis" x="4" y="110" width="284" height="9" rx="4.5"/>
+      </g>
+      <g class="wheel wheel-back"><circle class="v-tyre" cx="62" cy="122" r="18"/><circle class="v-hub" cx="62" cy="122" r="7"/><path class="v-spoke" d="M62 115v14M55 122h14"/></g>
+      <g class="wheel wheel-front"><circle class="v-tyre" cx="240" cy="122" r="18"/><circle class="v-hub" cx="240" cy="122" r="7"/><path class="v-spoke" d="M240 115v14M233 122h14"/></g>
+    </svg>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="wrap">
+    <header class="section-head" data-reveal>
+      <p class="kicker">What we move</p>
+      <h2 class="h2">Big moves, small moves, and everything between</h2>
+      <p>One firm for the whole job: the van, the crew, the boxes and the packing.</p>
+    </header>
+    <ul class="boxes">
+      <li class="box-card" data-reveal>
+        <span class="box-marks" aria-hidden="true"><svg class="icon"><use href="#i-up"/></svg><svg class="icon"><use href="#i-umbrella"/></svg></span>
+        <svg class="box-icon" aria-hidden="true"><use href="#i-house"/></svg>
+        <h3>Home moves</h3>
+        <p>Flats and houses, from a studio to five bedrooms. Furniture wrapped, floors protected, and beds taken apart and put back up.</p>
+        <p class="box-price"><span>Luton van and 2 movers</span> <strong data-rate="luton,2">£90</strong> an hour</p>
+        <a class="box-link" href="quote.html">Estimate a home move <svg class="icon"><use href="#i-arrow"/></svg></a>
+      </li>
+      <li class="box-card" data-reveal>
+        <span class="box-marks" aria-hidden="true"><svg class="icon"><use href="#i-up"/></svg><svg class="icon"><use href="#i-glass"/></svg></span>
+        <svg class="box-icon" aria-hidden="true"><use href="#i-bag"/></svg>
+        <h3>Student and single items</h3>
+        <p>Halls to a house share, a sofa from Marketplace, a desk across town. Two-hour minimum, and evenings are fine.</p>
+        <p class="box-price"><span>Small van and 1 mover</span> <strong data-rate="small,1">£50</strong> an hour</p>
+        <a class="box-link" href="quote.html?mode=items">Price your items <svg class="icon"><use href="#i-arrow"/></svg></a>
+      </li>
+      <li class="box-card" data-reveal>
+        <span class="box-marks" aria-hidden="true"><svg class="icon"><use href="#i-up"/></svg><svg class="icon"><use href="#i-umbrella"/></svg></span>
+        <svg class="box-icon" aria-hidden="true"><use href="#i-desk"/></svg>
+        <h3>Small office moves</h3>
+        <p>Up to a dozen desks, moved on a Friday evening or at the weekend, so you're working again on Monday. Screens boxed and every cable labelled.</p>
+        <p class="box-price"><span>Luton van and 3 movers</span> <strong data-rate="luton,3">£120</strong> an hour</p>
+        <a class="box-link" href="quote.html?size=office1">Estimate an office move <svg class="icon"><use href="#i-arrow"/></svg></a>
+      </li>
+      <li class="box-card" data-reveal>
+        <span class="box-marks" aria-hidden="true"><svg class="icon"><use href="#i-glass"/></svg><svg class="icon"><use href="#i-up"/></svg></span>
+        <svg class="box-icon" aria-hidden="true"><use href="#i-box"/></svg>
+        <h3>Packing and boxes</h3>
+        <p>Full or partial packing, fragile things wrapped properly, and boxes, tape and covers delivered to your door.</p>
+        <p class="box-price"><span>Boxes, tape and covers</span> from <strong data-material="box-s">£2.20</strong> a box</p>
+        <a class="box-link" href="packing.html">Packing and boxes <svg class="icon"><use href="#i-arrow"/></svg></a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section-kraft" id="prices">
+  <div class="wrap prices">
+    <div class="prices-copy" data-reveal>
+      <p class="kicker">Prices</p>
+      <h2 class="h2">Clear prices, by the hour</h2>
+      <p>You pay for the van and the people, from the moment we arrive to the moment we finish. Everything else is on the estimate before you book.</p>
+      <ul class="ticks">
+        <li><svg class="icon"><use href="#i-clock"/></svg><span>Two hours minimum, then by the half hour.</span></li>
+        <li><svg class="icon"><use href="#i-route"/></svg><span>Travel to you: free in our home patch, £25 across London, £45 in outer London.</span></li>
+        <li><svg class="icon"><use href="#i-calendar"/></svg><span>Fridays add 10%. Weekends and bank holidays add 15%.</span></li>
+        <li><svg class="icon"><use href="#i-check"/></svg><span>Prices include VAT. Pay on the day by card or bank transfer. A £75 deposit holds a date for a home move.</span></li>
+      </ul>
+      <a class="btn btn-dark" href="quote.html">Work out your price <svg class="icon"><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="rate-card" data-reveal>
+      <table class="rates">
+        <caption>Van and crew, per hour</caption>
+        <thead>
+          <tr><th scope="col">Van and crew</th><th scope="col" class="rates-fits">Good for</th><th scope="col" class="num">An hour</th></tr>
+        </thead>
+        <tbody data-rates>
+          <tr><th scope="row"><span class="rate-van">Small van</span> <span class="rate-crew">+ 1 mover</span></th><td class="rates-fits">a student room or a few big items</td><td class="num">£50</td></tr>
+          <tr><th scope="row"><span class="rate-van">Long-wheelbase van</span> <span class="rate-crew">+ 1 mover</span></th><td class="rates-fits">a studio flat or a small office</td><td class="num">£54</td></tr>
+          <tr><th scope="row"><span class="rate-van">Long-wheelbase van</span> <span class="rate-crew">+ 2 movers</span></th><td class="rates-fits">a studio flat or a small office</td><td class="num">£84</td></tr>
+          <tr><th scope="row"><span class="rate-van">Luton van with tail lift</span> <span class="rate-crew">+ 2 movers</span></th><td class="rates-fits">a one- or two-bedroom flat</td><td class="num">£90</td></tr>
+          <tr><th scope="row"><span class="rate-van">Luton van with tail lift</span> <span class="rate-crew">+ 3 movers</span></th><td class="rates-fits">a one- or two-bedroom flat</td><td class="num">£120</td></tr>
+          <tr><th scope="row"><span class="rate-van">7.5-tonne lorry</span> <span class="rate-crew">+ 3 movers</span></th><td class="rates-fits">a three- or four-bedroom house</td><td class="num">£134</td></tr>
+          <tr><th scope="row"><span class="rate-van">7.5-tonne lorry</span> <span class="rate-crew">+ 4 movers</span></th><td class="rates-fits">a three- or four-bedroom house</td><td class="num">£164</td></tr>
+        </tbody>
+      </table>
+      <p class="rate-note">Blankets, sofa covers, mattress bags, floor runners and tools come with every van.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-cocoa" id="move-day">
+  <div class="wrap">
+    <header class="section-head" data-reveal>
+      <p class="kicker kicker-light">How a move day works</p>
+      <h2 class="h2">No surprises on the day</h2>
+      <p>The same crew from the first box to the last, and one crew lead in charge who you can talk to.</p>
+    </header>
+    <ol class="journey" data-reveal>
+      <li class="stop">
+        <span class="stop-pin" aria-hidden="true"><svg class="icon"><use href="#i-video"/></svg></span>
+        <p class="stop-time">Before</p>
+        <h3>A video call or a list</h3>
+        <p>Ten minutes on a video call, or send a list and a few photos. We confirm the price, the van and the crew in writing.</p>
+      </li>
+      <li class="stop">
+        <span class="stop-pin" aria-hidden="true"><svg class="icon"><use href="#i-box"/></svg></span>
+        <p class="stop-time">The day before</p>
+        <h3>Packing, if you booked it</h3>
+        <p>For bigger homes our packers come the day before. Your crew lead texts to confirm the arrival time.</p>
+      </li>
+      <li class="stop">
+        <span class="stop-pin" aria-hidden="true"><svg class="icon"><use href="#i-key"/></svg></span>
+        <p class="stop-time">8:00am</p>
+        <h3>Arrive and walk round</h3>
+        <p>We walk through every room with you, then put down floor runners and door protectors.</p>
+      </li>
+      <li class="stop">
+        <span class="stop-pin" aria-hidden="true"><svg class="icon"><use href="#i-blanket"/></svg></span>
+        <p class="stop-time">8:30am</p>
+        <h3>Wrap and load</h3>
+        <p>Furniture in blankets, sofas and mattresses in covers, beds taken apart. Heavy things go in first.</p>
+      </li>
+      <li class="stop">
+        <span class="stop-pin" aria-hidden="true"><svg class="icon"><use href="#i-van"/></svg></span>
+        <p class="stop-time">On the road</p>
+        <h3>Straight there</h3>
+        <p>No other jobs on the way. You get a message when we're fifteen minutes from the new place.</p>
+      </li>
+      <li class="stop">
+        <span class="stop-pin" aria-hidden="true"><svg class="icon"><use href="#i-house"/></svg></span>
+        <p class="stop-time">Unload</p>
+        <h3>Room by room</h3>
+        <p>Boxes go to the room on their label. Furniture goes where you want it, not just through the door.</p>
+      </li>
+      <li class="stop">
+        <span class="stop-pin" aria-hidden="true"><svg class="icon"><use href="#i-check"/></svg></span>
+        <p class="stop-time">Finish</p>
+        <h3>Beds up, last look</h3>
+        <p>We rebuild what we took apart, do a last walk-round with you, and you pay by card or bank transfer.</p>
+      </li>
+      <li class="stop-done">
+        <p class="stop-time">How long it takes</p>
+        <p>Most one-bedroom flats take four to five hours, door to door. A three-bedroom house is a full day.</p>
+        <a class="text-link" href="quote.html">Estimate yours <svg class="icon"><use href="#i-arrow"/></svg></a>
+      </li>
+    </ol>
+    <p class="section-cta" data-reveal><a class="btn btn-primary" href="book.html">Book your move day <svg class="icon"><use href="#i-arrow"/></svg></a> <a class="btn btn-light" href="checklist.html">Moving checklist</a></p>
+  </div>
+</section>
+
+<section class="section" id="areas">
+  <div class="wrap areas-home">
+    <div class="areas-copy" data-reveal>
+      <p class="kicker">Where we go</p>
+      <h2 class="h2">Based in Holloway. Moving all over London.</h2>
+      <p>Our yard is in N7, so north and central London is on our doorstep. We work across the whole of London every day, and further afield when you need us.</p>
+      <ul class="ring-list" data-ring-list>
+        <li class="ring-home"><strong>Home patch</strong> <span>Within about 3&frac12; miles of N7. No travel fee.</span></li>
+        <li class="ring-london"><strong>Across London</strong> <span>Up to about 9 miles. £25 travel fee.</span></li>
+        <li class="ring-outer"><strong>Outer London</strong> <span>Up to about 17 miles. £45 travel fee.</span></li>
+        <li class="ring-far"><strong>Longer distance</strong> <span>Anywhere in Great Britain. Priced by time and miles.</span></li>
+      </ul>
+      <a class="text-link" href="areas.html">How we price longer moves <svg class="icon"><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="map-card" data-checker-scope data-reveal>
+      <svg class="dotmap" data-dotmap role="img" aria-label="A dot for each postcode district around our yard in N7, shaded by travel fee"></svg>
+      <ul class="map-legend" aria-hidden="true">
+        <li><i class="lg-home"></i> Home patch</li>
+        <li><i class="lg-london"></i> Across London</li>
+        <li><i class="lg-outer"></i> Outer London</li>
+        <li><i class="lg-far"></i> Further</li>
+      </ul>
+    <form class="checker" data-checker novalidate>
+      <h3 class="checker-title"><svg class="icon"><use href="#i-pin"/></svg> Do you cover my postcode?</h3>
+      <label for="checker-input">Postcode district</label>
+      <div class="checker-row">
+        <input id="checker-input" name="district" type="text" placeholder="e.g. N4 or SE15" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-describedby="checker-help">
+        <button class="btn btn-dark" type="submit">Check</button>
+      </div>
+      <p class="checker-help" id="checker-help">The first part of your postcode, before the space.</p>
+      <div class="checker-result" data-checker-result aria-live="polite"></div>
+    </form>
+    <p class="data-credit">Postcode positions from OS Code-Point Open (Open Government Licence v3.0). Contains Ordnance Survey data &copy; Crown copyright and database right 2026. Contains Royal Mail data &copy; Royal Mail copyright and database right 2026. Contains National Statistics data &copy; Crown copyright and database right 2026.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-tint" id="insurance">
+  <div class="wrap">
+    <header class="section-head" data-reveal>
+      <p class="kicker">Insurance and standards</p>
+      <h2 class="h2">If something gets damaged, it's on us</h2>
+      <p>Accidents are rare, but they happen. Tell us within seven days, with a photo, and we'll put it right quickly.</p>
+    </header>
+    <ul class="slots" data-reveal>
+      <li class="slot">
+        <svg class="slot-icon" aria-hidden="true"><use href="#i-shield"/></svg>
+        <h3>Goods in transit insurance</h3>
+        <p>Covers your things while they're in our hands and in our van.</p>
+        <p class="slot-value"><span class="tag-example">Example</span> Cover per move and insurer shown here</p>
+      </li>
+      <li class="slot">
+        <svg class="slot-icon" aria-hidden="true"><use href="#i-house"/></svg>
+        <h3>Public liability insurance</h3>
+        <p>Covers damage to buildings, like a scraped door frame, a stair rail or a lift.</p>
+        <p class="slot-value"><span class="tag-example">Example</span> Cover amount and insurer shown here</p>
+      </li>
+      <li class="slot">
+        <svg class="slot-icon" aria-hidden="true"><use href="#i-badge"/></svg>
+        <h3>British Association of Removers</h3>
+        <p>A member firm shows the logo and its membership number here, and follows the BAR code of practice.</p>
+        <p class="slot-value"><span class="tag-example">Example</span> Membership number shown here</p>
+      </li>
+    </ul>
+    <p class="slots-note" data-reveal><svg class="icon"><use href="#i-info"/></svg> Things you pack yourself are covered if the box itself is damaged. Keep cash, jewellery, passports and documents with you.</p>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="wrap faq-layout">
+    <header class="section-head section-head-left" data-reveal>
+      <p class="kicker">Questions</p>
+      <h2 class="h2">Good to know before you book</h2>
+      <p>Anything else? <a href="#contact">Send us a message</a> and we'll reply the same day in office hours.</p>
+    </header>
+    <div class="faq" data-reveal>
+      <details>
+        <summary>How close will the online estimate be?</summary>
+        <p>Usually within the range it shows. Distances come from postcode districts, not a route planner, and every home is different. A ten-minute video call or a list from you lets us fix the price before the day.</p>
+      </details>
+      <details>
+        <summary>How far ahead should I book?</summary>
+        <p>Two to four weeks for most moves. Fridays, Saturdays and the last few days of the month go first, because that's when house sales complete. Small moves can often be done in a day or two.</p>
+      </details>
+      <details>
+        <summary>What if the keys are late on completion day?</summary>
+        <p>It happens. The first 30 minutes of waiting are free. After that, waiting time is charged at the normal hourly rate, by the half hour. We'll keep you posted, and we can often start loading while you wait.</p>
+      </details>
+      <details>
+        <summary>Do I need to empty drawers and wardrobes?</summary>
+        <p>Light clothes can stay in drawers if the furniture is solid. Empty anything heavy or fragile. Hanging clothes go into wardrobe boxes, which we can bring.</p>
+      </details>
+      <details>
+        <summary>Can you move a piano, a safe or an American fridge?</summary>
+        <p>Upright pianos and big fridges, yes, with an extra mover. Send us a photo and the stairs at both ends first. For grand pianos and safes we'll put you in touch with a specialist.</p>
+      </details>
+      <details>
+        <summary>What won't you move?</summary>
+        <p>Gas bottles, petrol, paint thinners and other things that can catch fire, and anything alive except house plants. Cash, jewellery and important papers should travel with you.</p>
+      </details>
+      <details>
+        <summary>Who sorts out parking?</summary>
+        <p>Tell us what the parking is like at both ends. If the van needs a bay suspension or a visitor permit, we can apply to the council for you. Some councils need two weeks' notice.</p>
+      </details>
+      <details>
+        <summary>Can I change the date or cancel?</summary>
+        <p>Yes, free of charge up to seven days before. After that we keep the £75 deposit, because we'll have turned other work away. Small moves don't need a deposit.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="section section-kraft" id="contact">
+  <div class="wrap contact">
+    <div class="contact-info" data-reveal>
+      <p class="kicker">Contact</p>
+      <h2 class="h2">Moving soon? Say hello.</h2>
+      <p>WhatsApp is quickest: send your postcodes and a few photos and we'll come back with a price. If you ring while we're on a job, leave a message and the office will call you back.</p>
+      <dl class="hours">
+        <div><dt>Office</dt><dd>Monday to Friday, 8am to 6pm</dd></div>
+        <div><dt>Saturday</dt><dd>9am to 2pm</dd></div>
+        <div><dt>Moves</dt><dd>Seven days a week, from 8am</dd></div>
+      </dl>
+      <p class="contact-address"><svg class="icon"><use href="#i-pin"/></svg> <span>Unit 2, Ostler Yard, Holloway, London N7. Visits by appointment: it's a yard full of vans.</span></p>
+    </div>
+    <div class="contact-card" data-reveal>
+      <h3 class="contact-title">Message, call or email</h3>
+      <div class="contact-actions">
+        <a class="btn btn-primary btn-block" href="https://wa.me/447700900538" data-contact="whatsapp"><svg class="icon"><use href="#i-chat"/></svg> WhatsApp 07700 900538</a>
+        <a class="btn btn-light btn-block" href="tel:+442079460538" data-contact="phone"><svg class="icon"><use href="#i-phone"/></svg> Call 020 7946 0538</a>
+        <a class="btn btn-light btn-block" href="mailto:hello@hitherandthither.example" data-contact="email"><svg class="icon"><use href="#i-mail"/></svg> hello@hitherandthither.example</a>
+      </div>
+      <p class="contact-small">Or <a href="book.html">send a booking request</a> with your date and list.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-road" aria-hidden="true"></div>
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a class="brand brand-light" href="index.html" aria-label="Hither and Thither removals, home">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect class="bm-bg" width="40" height="40" rx="11"/><rect class="bm-post" x="18.5" y="6.5" width="3" height="27" rx="1.2"/><rect class="bm-post" x="14" y="31.5" width="12" height="3" rx="1.5"/><path class="bm-here" d="M5.5 13.5 9.5 9.5H27v8H9.5Z"/><path class="bm-there" d="M34.5 23.5 30.5 19.5H13v8h17.5Z"/></svg>
+        <span class="brand-text"><span class="brand-name">Hither <i>&amp;</i> Thither</span><span class="brand-sub">Removals &middot; man with a van</span></span>
+      </a>
+      <p>Home moves, student and single-item moves, small offices and packing, across London and beyond.</p>
+      <p class="footer-address"><svg class="icon"><use href="#i-pin"/></svg> Unit 2, Ostler Yard, Holloway, London N7</p>
+    </div>
+    <nav class="footer-nav" aria-label="Moves">
+      <h2 class="footer-title">Moves</h2>
+      <ul>
+        <li><a href="quote.html">Get an estimate</a></li>
+        <li><a href="book.html">Book a move</a></li>
+        <li><a href="packing.html">Packing and boxes</a></li>
+        <li><a href="areas.html">Areas we cover</a></li>
+      </ul>
+    </nav>
+    <nav class="footer-nav" aria-label="Help">
+      <h2 class="footer-title">Help</h2>
+      <ul>
+        <li><a href="checklist.html">Moving checklist</a></li>
+        <li><a href="#move-day">How a move day works</a></li>
+        <li><a href="#faq">Questions</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </nav>
+    <div class="footer-contact">
+      <h2 class="footer-title">Talk to us</h2>
+      <ul>
+        <li><a href="https://wa.me/447700900538" data-contact="whatsapp"><svg class="icon"><use href="#i-chat"/></svg> WhatsApp 07700 900538</a></li>
+        <li><a href="tel:+442079460538" data-contact="phone"><svg class="icon"><use href="#i-phone"/></svg> 020 7946 0538</a></li>
+        <li><a href="mailto:hello@hitherandthither.example" data-contact="email"><svg class="icon"><use href="#i-mail"/></svg> hello@hitherandthither.example</a></li>
+      </ul>
+      <p class="footer-hours">Office: Monday to Friday 8am to 6pm, Saturday 9am to 2pm. Moves seven days a week.</p>
+    </div>
+    <p class="footer-credit">A sample website by <a href="https://agilerelease.co.uk/#websites">Agile Release</a>. Hither &amp; Thither is made up. &copy; 2026 Agile Release Limited. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

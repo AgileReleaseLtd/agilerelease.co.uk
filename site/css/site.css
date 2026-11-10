@@ -1,5 +1,174 @@
 /* Hand-written styles for what css/tailwind.css (prebuilt, only the classes already in use) does not have:
-   the website prices and the contact form on the home page. Colours follow the brand (sky) and slate scales. */
+   the sample websites, the website prices and the contact form on the home page. Colours follow the brand (sky)
+   and slate scales. */
+
+/* ── Sample websites ──────────────────────────────────────────────────────────────────────────── */
+.samples {
+    margin-top: 6rem;
+}
+
+/* Two columns on phones (name only), three on tablets, four on desktops. */
+.samples-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.875rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@media (min-width: 640px) {
+    .samples-grid {
+        gap: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .samples-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1024px) {
+    .samples-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+.samples-grid li {
+    display: flex;
+}
+
+/* The whole card is one link, so keyboard users meet each sample once. */
+.sample-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    border-radius: 1.25rem;
+    background: #fff;
+    box-shadow: 0 1px 2px rgb(15 23 42 / 0.05);
+    color: inherit;
+    transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+}
+
+.sample-card:hover {
+    border-color: #cbd5e1;
+    box-shadow: 0 16px 32px -18px rgb(15 23 42 / 0.4);
+    transform: translateY(-2px);
+}
+
+.sample-card:focus-visible {
+    outline: 3px solid #0284c7;
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sample-card {
+        transition: none;
+    }
+
+    .sample-card:hover {
+        transform: none;
+    }
+}
+
+.sample-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 8 / 5;
+    border-bottom: 1px solid #f1f5f9;
+    background: #f1f5f9;
+}
+
+.sample-body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 0.75rem 0.85rem 0.9rem;
+}
+
+.sample-type {
+    color: #64748b;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    line-height: 1.3;
+    text-transform: uppercase;
+}
+
+.sample-name {
+    margin-top: 0.25rem;
+    color: #0f172a;
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.sample-text {
+    display: none;
+    margin-top: 0.5rem;
+    color: #475569;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.sample-open {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: auto;
+    padding-top: 0.75rem;
+    color: #0369a1;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.sample-open i {
+    font-size: 0.7rem;
+}
+
+.sample-card:hover .sample-open {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+@media (min-width: 640px) {
+    .sample-body {
+        padding: 1.1rem 1.25rem 1.25rem;
+    }
+
+    .sample-type {
+        font-size: 0.72rem;
+    }
+
+    .sample-name {
+        font-size: 1.1rem;
+    }
+
+    .sample-text {
+        display: block;
+    }
+
+    .sample-open {
+        padding-top: 1rem;
+        font-size: 0.875rem;
+    }
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+}
 
 /* ── Website prices ───────────────────────────────────────────────────────────────────────────── */
 .prices {

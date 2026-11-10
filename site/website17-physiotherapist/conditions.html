@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conditions we treat | Spindle Physio (sample website)</title>
+<meta name="description" content="Back and neck pain, sports and running injuries, knee, shoulder and ankle problems, and rehab after surgery. Browse by body area. A sample website by Agile Release.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#14202e">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="preload" href="css/fonts/geologica-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js" defer></script>
+<script src="js/core.js" defer></script>
+<script src="js/site.js" defer></script>
+<script src="js/conditions.js" defer></script>
+</head>
+<body>
+
+<svg class="sprite" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 7 8.5-7"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M10.3 4.2 2.8 17.5A2 2 0 0 0 4.5 20.5h15a2 2 0 0 0 1.7-3L13.7 4.2a2 2 0 0 0-3.4 0Z"/><path d="M12 9.5v4.5M12 17.2v.1"/></symbol>
+  <symbol id="i-train" viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="14" rx="3"/><path d="M6 10.5h12M9.5 14h.01M14.5 14h.01M8.5 17 7 21M15.5 17 17 21"/></symbol>
+  <symbol id="i-parking" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M10 17V8h3.2a2.6 2.6 0 0 1 0 5.2H10"/></symbol>
+  <symbol id="i-access" viewBox="0 0 24 24"><circle cx="11" cy="4.5" r="1.6"/><path d="M11 7.5V13h5l2.5 5.5"/><path d="M11 10h4"/><path d="M14.5 16.5a5 5 0 1 1-6.8-5.8"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4.5 6v5.5c0 4.5 3.2 8 7.5 9.5 4.3-1.5 7.5-5 7.5-9.5V6Z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-receipt" viewBox="0 0 24 24"><path d="M6 3h12v18l-2-1.5-2 1.5-2-1.5-2 1.5-2-1.5L6 21Z"/><path d="M9 8h6M9 12h6M9 16h3"/></symbol>
+  <symbol id="i-rom" viewBox="0 0 24 24"><path d="M4 18.5h16"/><path d="m4 18.5 11-11"/><path d="M11.5 18.5a7.5 7.5 0 0 0-2.2-5.3"/><circle cx="4" cy="18.5" r="1.6"/><path d="M15 7.5 17 5.5"/></symbol>
+  <symbol id="i-hand" viewBox="0 0 24 24"><path d="M7.5 11.5V6a1.5 1.5 0 0 1 3 0v4.5M10.5 10V4.5a1.5 1.5 0 0 1 3 0v6M13.5 10.5v-5a1.5 1.5 0 0 1 3 0V11M16.5 10V8.5a1.5 1.5 0 0 1 3 0v5A7.5 7.5 0 0 1 12 21h-.7a6 6 0 0 1-4.6-2.2l-2.9-3.6a1.6 1.6 0 0 1 2.4-2.1l1.3 1.4"/></symbol>
+  <symbol id="i-video" viewBox="0 0 24 24"><rect x="2.5" y="6" width="13.5" height="12" rx="2.5"/><path d="m16 10.5 5.5-3.5v10L16 13.5"/></symbol>
+  <symbol id="i-shorts" viewBox="0 0 24 24"><path d="M5 4h14l1.5 15.5h-6.2L12 10.5l-2.3 9H3.5Z"/><path d="M5 7.5h14"/></symbol>
+  <symbol id="i-vest" viewBox="0 0 24 24"><path d="M8.5 3c.2 2 1.7 3.5 3.5 3.5S15.3 5 15.5 3"/><path d="M8.5 3 6.5 4c.6 2.6.2 4.6-1 6.8V21h13V10.8c-1.2-2.2-1.6-4.2-1-6.8l-2-1"/></symbol>
+  <symbol id="i-shoe" viewBox="0 0 24 24"><path d="M3 17.5V9l4 1.6L10 7l2.2.6c.9 3.1 3.9 5 7.3 5.6A2 2 0 0 1 21 15.2v2.3Z"/><path d="M3 17.5h18M10.6 10.6l1.6.6M12.2 13.2l1.6.5"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7Z"/><path d="M14 3v4h4M10 12h5M10 16h5"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.8v.1"/></symbol>
+  <symbol id="i-tape" viewBox="0 0 24 24"><path d="M4.5 15.5 15.5 4.5a2.8 2.8 0 0 1 4 4l-11 11a2.8 2.8 0 0 1-4-4Z"/><path d="m9 11 4 4M12 8l4 4"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<aside class="sample-bar" aria-label="About this sample website">
+  <div class="wrap sample-bar-inner">
+    <p><strong>Sample website by Agile Release.</strong> Spindle Physio is not a real clinic: the people, prices and times are examples.</p>
+    <a href="https://agilerelease.co.uk/#websites">Get a site like this <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a>
+  </div>
+</aside>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Spindle Physio, home">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect class="mark-bg" width="32" height="32" rx="9"/><path class="mark-arc" d="M24.5 25A15.5 15.5 0 0 0 9 9.5"/><path class="mark-line" d="M6 25h20.5"/><path class="mark-arm" d="M9.6 24.4C11.6 18 17.6 12 24.4 9.6 22.4 16 16.4 22 9.6 24.4Z"/><circle class="mark-pivot" cx="9" cy="25" r="2.7"/></svg>
+      <span class="brand-name">Spindle <span>Physio</span></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="conditions.html" aria-current="page">Conditions</a></li>
+        <li><a href="index.html#first-visit">First visit</a></li>
+        <li><a href="index.html#team">Team</a></li>
+        <li><a href="fees.html">Prices &amp; insurance</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="index.html#visit">Find us</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary btn-sm header-cta" href="book.html"><span>Book<span class="hide-sm"> online</span></span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+      <svg class="icon"><use href="#i-menu"/></svg><span class="visually-hidden">Menu</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="page-head">
+  <svg class="page-head-arc" viewBox="0 0 400 400" aria-hidden="true" focusable="false"><circle cx="200" cy="200" r="190"/><circle class="arc-ticks" cx="200" cy="200" r="172"/><circle cx="200" cy="200" r="140"/><circle class="arc-coral" cx="200" cy="200" r="140" pathLength="1000" transform="rotate(100 200 200)"/></svg>
+  <div class="wrap">
+    <p class="kicker">What we treat</p>
+    <h1 class="h1">Conditions we treat</h1>
+    <p class="lead">Pick an area on the body chart, choose a topic or search. Each entry says what the problem is, how physio can help and what we might do at your appointment.</p>
+    <p class="head-note"><svg class="icon"><use href="#i-alert"/></svg> <span>Some symptoms need urgent medical help, not physio. <a href="#red-flags">Check the warning signs</a>.</span></p>
+  </div>
+</section>
+
+<section class="section" aria-label="Browse conditions">
+  <div class="wrap explorer">
+    <div class="explorer-chart">
+      <h2 id="chart-title">Body chart</h2>
+      <p>Choose an area. Choose it again to show everything.</p>
+      <div class="chart" data-chart role="group" aria-labelledby="chart-title">
+        <svg class="chart-svg" viewBox="0 0 360 400" aria-hidden="true" focusable="false"><defs><clipPath id="chart-clip"><path d="M87.5 50.0 C87.8 53.3 86.1 56.2 88.5 61.0 C90.9 65.8 90.2 63.8 95.5 66.0 C100.8 68.2 100.3 66.7 106.0 68.5 C111.7 70.3 109.8 68.8 114.5 72.0 C119.2 75.2 118.5 73.3 121.5 79.0 C124.5 84.7 122.8 82.6 124.5 91.0 C126.2 99.4 125.3 97.1 127.0 107.0 C128.7 116.9 127.9 113.8 130.0 124.0 C132.1 134.2 131.6 130.8 134.0 141.0 C136.4 151.2 135.6 147.8 138.0 158.0 C140.4 168.2 139.8 165.1 142.0 175.0 C144.2 184.9 143.2 183.5 145.5 191.0 C147.8 198.5 147.6 194.0 149.5 200.0 C151.4 206.0 151.6 204.4 152.0 211.0 C152.4 217.6 152.5 216.4 151.0 222.0 C149.5 227.6 149.6 227.8 147.0 229.5 C144.4 231.2 144.4 230.9 142.5 227.5 C140.6 224.1 141.7 224.4 140.5 218.0 C139.3 211.6 140.0 212.9 138.5 206.0 C137.0 199.1 137.9 203.4 135.5 195.0 C133.1 186.6 133.5 188.2 130.5 178.0 C127.5 167.8 128.5 171.2 125.5 161.0 C122.5 150.8 123.2 154.2 120.5 144.0 C117.8 133.8 118.8 136.6 116.5 127.0 C114.2 117.4 115.2 119.8 113.0 112.0 C110.8 104.2 110.7 101.0 109.0 101.0 C107.3 101.0 108.2 104.2 107.5 112.0 C106.8 119.8 107.4 117.7 106.5 127.0 C105.6 136.3 105.0 133.7 104.5 143.0 C104.0 152.3 103.3 148.4 105.0 158.0 C106.7 167.6 107.3 164.5 110.0 175.0 C112.7 185.5 112.7 181.6 114.0 193.0 C115.3 204.4 114.8 199.2 114.5 213.0 C114.2 226.8 114.5 223.7 113.0 239.0 C111.5 254.3 111.5 250.5 109.5 264.0 C107.5 277.5 107.1 273.2 106.5 284.0 C105.9 294.8 106.6 289.8 107.5 300.0 C108.4 310.2 110.0 306.0 109.5 318.0 C109.0 330.0 108.4 327.7 106.0 340.0 C103.6 352.3 102.5 349.7 101.5 359.0 C100.5 368.3 100.8 364.4 102.5 371.0 C104.2 377.6 106.1 375.8 107.0 381.0 C107.9 386.2 108.8 385.6 105.5 388.5 C102.2 391.4 101.1 390.8 96.0 390.5 C90.9 390.2 91.3 391.6 88.5 387.5 C85.7 383.4 86.9 384.4 86.5 377.0 C86.1 369.6 87.1 373.5 87.2 363.0 C87.3 352.5 87.4 354.9 86.8 342.0 C86.2 329.1 85.3 332.6 85.3 320.0 C85.3 307.4 86.0 310.8 86.8 300.0 C87.6 289.2 87.9 294.8 88.0 284.0 C88.1 273.2 87.8 277.2 87.2 264.0 C86.6 250.8 87.0 253.2 86.0 240.0 C85.0 226.8 85.8 229.3 84.0 220.0 C82.2 210.7 82.4 209.0 80.0 209.0 C77.6 209.0 77.8 210.7 76.0 220.0 C74.2 229.3 75.0 226.8 74.0 240.0 C73.0 253.2 73.4 250.8 72.8 264.0 C72.2 277.2 71.9 273.2 72.0 284.0 C72.1 294.8 72.4 289.2 73.2 300.0 C74.0 310.8 74.7 307.4 74.7 320.0 C74.7 332.6 73.8 329.1 73.2 342.0 C72.6 354.9 72.7 352.5 72.8 363.0 C72.9 373.5 73.9 369.6 73.5 377.0 C73.1 384.4 74.3 383.4 71.5 387.5 C68.7 391.6 69.1 390.2 64.0 390.5 C58.9 390.8 57.8 391.4 54.5 388.5 C51.2 385.6 52.1 386.2 53.0 381.0 C53.9 375.8 55.9 377.6 57.5 371.0 C59.1 364.4 59.5 368.3 58.5 359.0 C57.5 349.7 56.4 352.3 54.0 340.0 C51.6 327.7 51.0 330.0 50.5 318.0 C50.0 306.0 51.6 310.2 52.5 300.0 C53.4 289.8 54.1 294.8 53.5 284.0 C52.9 273.2 52.5 277.5 50.5 264.0 C48.5 250.5 48.5 254.3 47.0 239.0 C45.5 223.7 45.8 226.8 45.5 213.0 C45.2 199.2 44.6 204.4 46.0 193.0 C47.4 181.6 47.3 185.5 50.0 175.0 C52.7 164.5 53.4 167.6 55.0 158.0 C56.6 148.4 56.0 152.3 55.5 143.0 C55.0 133.7 54.4 136.3 53.5 127.0 C52.6 117.7 53.2 119.8 52.5 112.0 C51.8 104.2 52.6 101.0 51.0 101.0 C49.4 101.0 49.2 104.2 47.0 112.0 C44.8 119.8 45.8 117.4 43.5 127.0 C41.2 136.6 42.2 133.8 39.5 144.0 C36.8 154.2 37.5 150.8 34.5 161.0 C31.5 171.2 32.5 167.8 29.5 178.0 C26.5 188.2 26.9 186.6 24.5 195.0 C22.1 203.4 23.0 199.1 21.5 206.0 C20.0 212.9 20.7 211.6 19.5 218.0 C18.3 224.4 19.4 224.1 17.5 227.5 C15.6 230.9 15.6 231.2 13.0 229.5 C10.4 227.8 10.5 227.6 9.0 222.0 C7.5 216.4 7.5 217.6 8.0 211.0 C8.4 204.4 8.6 206.0 10.5 200.0 C12.4 194.0 12.2 198.5 14.5 191.0 C16.8 183.5 15.8 184.9 18.0 175.0 C20.2 165.1 19.6 168.2 22.0 158.0 C24.4 147.8 23.6 151.2 26.0 141.0 C28.4 130.8 27.9 134.2 30.0 124.0 C32.1 113.8 31.4 116.9 33.0 107.0 C34.6 97.1 33.9 99.4 35.5 91.0 C37.1 82.6 35.5 84.7 38.5 79.0 C41.5 73.3 40.9 75.2 45.5 72.0 C50.1 68.8 48.3 70.3 54.0 68.5 C59.7 66.7 59.2 68.2 64.5 66.0 C69.8 63.8 69.1 65.8 71.5 61.0 C73.9 56.2 72.2 53.3 72.5 50.0"/><path d="M80 5 C92 5 99 14.5 99 28 C99 40.5 92 51.5 80 51.5 C68 51.5 61 40.5 61 28 C61 14.5 68 5 80 5 Z"/></clipPath><pattern id="chart-hatch" width="4.5" height="4.5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path class="hatch-line" d="M0 0V4.5"/></pattern></defs><g class="fig fig-front" transform="translate(0 0)"><path class="fig-fill" d="M87.5 50.0 C87.8 53.3 86.1 56.2 88.5 61.0 C90.9 65.8 90.2 63.8 95.5 66.0 C100.8 68.2 100.3 66.7 106.0 68.5 C111.7 70.3 109.8 68.8 114.5 72.0 C119.2 75.2 118.5 73.3 121.5 79.0 C124.5 84.7 122.8 82.6 124.5 91.0 C126.2 99.4 125.3 97.1 127.0 107.0 C128.7 116.9 127.9 113.8 130.0 124.0 C132.1 134.2 131.6 130.8 134.0 141.0 C136.4 151.2 135.6 147.8 138.0 158.0 C140.4 168.2 139.8 165.1 142.0 175.0 C144.2 184.9 143.2 183.5 145.5 191.0 C147.8 198.5 147.6 194.0 149.5 200.0 C151.4 206.0 151.6 204.4 152.0 211.0 C152.4 217.6 152.5 216.4 151.0 222.0 C149.5 227.6 149.6 227.8 147.0 229.5 C144.4 231.2 144.4 230.9 142.5 227.5 C140.6 224.1 141.7 224.4 140.5 218.0 C139.3 211.6 140.0 212.9 138.5 206.0 C137.0 199.1 137.9 203.4 135.5 195.0 C133.1 186.6 133.5 188.2 130.5 178.0 C127.5 167.8 128.5 171.2 125.5 161.0 C122.5 150.8 123.2 154.2 120.5 144.0 C117.8 133.8 118.8 136.6 116.5 127.0 C114.2 117.4 115.2 119.8 113.0 112.0 C110.8 104.2 110.7 101.0 109.0 101.0 C107.3 101.0 108.2 104.2 107.5 112.0 C106.8 119.8 107.4 117.7 106.5 127.0 C105.6 136.3 105.0 133.7 104.5 143.0 C104.0 152.3 103.3 148.4 105.0 158.0 C106.7 167.6 107.3 164.5 110.0 175.0 C112.7 185.5 112.7 181.6 114.0 193.0 C115.3 204.4 114.8 199.2 114.5 213.0 C114.2 226.8 114.5 223.7 113.0 239.0 C111.5 254.3 111.5 250.5 109.5 264.0 C107.5 277.5 107.1 273.2 106.5 284.0 C105.9 294.8 106.6 289.8 107.5 300.0 C108.4 310.2 110.0 306.0 109.5 318.0 C109.0 330.0 108.4 327.7 106.0 340.0 C103.6 352.3 102.5 349.7 101.5 359.0 C100.5 368.3 100.8 364.4 102.5 371.0 C104.2 377.6 106.1 375.8 107.0 381.0 C107.9 386.2 108.8 385.6 105.5 388.5 C102.2 391.4 101.1 390.8 96.0 390.5 C90.9 390.2 91.3 391.6 88.5 387.5 C85.7 383.4 86.9 384.4 86.5 377.0 C86.1 369.6 87.1 373.5 87.2 363.0 C87.3 352.5 87.4 354.9 86.8 342.0 C86.2 329.1 85.3 332.6 85.3 320.0 C85.3 307.4 86.0 310.8 86.8 300.0 C87.6 289.2 87.9 294.8 88.0 284.0 C88.1 273.2 87.8 277.2 87.2 264.0 C86.6 250.8 87.0 253.2 86.0 240.0 C85.0 226.8 85.8 229.3 84.0 220.0 C82.2 210.7 82.4 209.0 80.0 209.0 C77.6 209.0 77.8 210.7 76.0 220.0 C74.2 229.3 75.0 226.8 74.0 240.0 C73.0 253.2 73.4 250.8 72.8 264.0 C72.2 277.2 71.9 273.2 72.0 284.0 C72.1 294.8 72.4 289.2 73.2 300.0 C74.0 310.8 74.7 307.4 74.7 320.0 C74.7 332.6 73.8 329.1 73.2 342.0 C72.6 354.9 72.7 352.5 72.8 363.0 C72.9 373.5 73.9 369.6 73.5 377.0 C73.1 384.4 74.3 383.4 71.5 387.5 C68.7 391.6 69.1 390.2 64.0 390.5 C58.9 390.8 57.8 391.4 54.5 388.5 C51.2 385.6 52.1 386.2 53.0 381.0 C53.9 375.8 55.9 377.6 57.5 371.0 C59.1 364.4 59.5 368.3 58.5 359.0 C57.5 349.7 56.4 352.3 54.0 340.0 C51.6 327.7 51.0 330.0 50.5 318.0 C50.0 306.0 51.6 310.2 52.5 300.0 C53.4 289.8 54.1 294.8 53.5 284.0 C52.9 273.2 52.5 277.5 50.5 264.0 C48.5 250.5 48.5 254.3 47.0 239.0 C45.5 223.7 45.8 226.8 45.5 213.0 C45.2 199.2 44.6 204.4 46.0 193.0 C47.4 181.6 47.3 185.5 50.0 175.0 C52.7 164.5 53.4 167.6 55.0 158.0 C56.6 148.4 56.0 152.3 55.5 143.0 C55.0 133.7 54.4 136.3 53.5 127.0 C52.6 117.7 53.2 119.8 52.5 112.0 C51.8 104.2 52.6 101.0 51.0 101.0 C49.4 101.0 49.2 104.2 47.0 112.0 C44.8 119.8 45.8 117.4 43.5 127.0 C41.2 136.6 42.2 133.8 39.5 144.0 C36.8 154.2 37.5 150.8 34.5 161.0 C31.5 171.2 32.5 167.8 29.5 178.0 C26.5 188.2 26.9 186.6 24.5 195.0 C22.1 203.4 23.0 199.1 21.5 206.0 C20.0 212.9 20.7 211.6 19.5 218.0 C18.3 224.4 19.4 224.1 17.5 227.5 C15.6 230.9 15.6 231.2 13.0 229.5 C10.4 227.8 10.5 227.6 9.0 222.0 C7.5 216.4 7.5 217.6 8.0 211.0 C8.4 204.4 8.6 206.0 10.5 200.0 C12.4 194.0 12.2 198.5 14.5 191.0 C16.8 183.5 15.8 184.9 18.0 175.0 C20.2 165.1 19.6 168.2 22.0 158.0 C24.4 147.8 23.6 151.2 26.0 141.0 C28.4 130.8 27.9 134.2 30.0 124.0 C32.1 113.8 31.4 116.9 33.0 107.0 C34.6 97.1 33.9 99.4 35.5 91.0 C37.1 82.6 35.5 84.7 38.5 79.0 C41.5 73.3 40.9 75.2 45.5 72.0 C50.1 68.8 48.3 70.3 54.0 68.5 C59.7 66.7 59.2 68.2 64.5 66.0 C69.8 63.8 69.1 65.8 71.5 61.0 C73.9 56.2 72.2 53.3 72.5 50.0"/><path class="fig-fill" d="M80 5 C92 5 99 14.5 99 28 C99 40.5 92 51.5 80 51.5 C68 51.5 61 40.5 61 28 C61 14.5 68 5 80 5 Z"/><g clip-path="url(#chart-clip)"><g class="zone" data-zone="shoulder"><ellipse cx="117" cy="82" rx="14" ry="15"/><g transform="matrix(-1 0 0 1 160 0)"><ellipse cx="117" cy="82" rx="14" ry="15"/></g></g><g class="zone" data-zone="arm"><ellipse cx="134.5" cy="176" rx="11" ry="52" transform="rotate(-14 134.5 176)"/><g transform="matrix(-1 0 0 1 160 0)"><ellipse cx="134.5" cy="176" rx="11" ry="52" transform="rotate(-14 134.5 176)"/></g></g><g class="zone" data-zone="hip"><ellipse cx="101" cy="194" rx="17" ry="19"/><g transform="matrix(-1 0 0 1 160 0)"><ellipse cx="101" cy="194" rx="17" ry="19"/></g></g><g class="zone" data-zone="leg"><ellipse cx="99" cy="240" rx="13" ry="28"/><g transform="matrix(-1 0 0 1 160 0)"><ellipse cx="99" cy="240" rx="13" ry="28"/></g><ellipse cx="99" cy="322" rx="10" ry="28" transform="rotate(4 99 322)"/><g transform="matrix(-1 0 0 1 160 0)"><ellipse cx="99" cy="322" rx="10" ry="28" transform="rotate(4 99 322)"/></g></g><g class="zone" data-zone="knee"><ellipse cx="97" cy="284" rx="13" ry="16"/><g transform="matrix(-1 0 0 1 160 0)"><ellipse cx="97" cy="284" rx="13" ry="16"/></g></g><g class="zone" data-zone="foot"><ellipse cx="96" cy="373" rx="14" ry="19"/><g transform="matrix(-1 0 0 1 160 0)"><ellipse cx="96" cy="373" rx="14" ry="19"/></g></g><g class="zone" data-zone="neck"><ellipse cx="80" cy="60" rx="10" ry="9"/></g></g><g class="fig-detail"><path d="M85 73.5C91 71.5 99 71 106.5 72.5 110 73.2 112.5 74.6 114.5 76.5"/><ellipse cx="96.6" cy="283.5" rx="5.2" ry="6.6"/><path d="M104.5 182C99.5 190 92.5 197 86.5 201"/><g transform="matrix(-1 0 0 1 160 0)"><path d="M85 73.5C91 71.5 99 71 106.5 72.5 110 73.2 112.5 74.6 114.5 76.5"/></g><g transform="matrix(-1 0 0 1 160 0)"><ellipse cx="96.6" cy="283.5" rx="5.2" ry="6.6"/></g><g transform="matrix(-1 0 0 1 160 0)"><path d="M104.5 182C99.5 190 92.5 197 86.5 201"/></g></g><path class="fig-line" d="M87.5 50.0 C87.8 53.3 86.1 56.2 88.5 61.0 C90.9 65.8 90.2 63.8 95.5 66.0 C100.8 68.2 100.3 66.7 106.0 68.5 C111.7 70.3 109.8 68.8 114.5 72.0 C119.2 75.2 118.5 73.3 121.5 79.0 C124.5 84.7 122.8 82.6 124.5 91.0 C126.2 99.4 125.3 97.1 127.0 107.0 C128.7 116.9 127.9 113.8 130.0 124.0 C132.1 134.2 131.6 130.8 134.0 141.0 C136.4 151.2 135.6 147.8 138.0 158.0 C140.4 168.2 139.8 165.1 142.0 175.0 C144.2 184.9 143.2 183.5 145.5 191.0 C147.8 198.5 147.6 194.0 149.5 200.0 C151.4 206.0 151.6 204.4 152.0 211.0 C152.4 217.6 152.5 216.4 151.0 222.0 C149.5 227.6 149.6 227.8 147.0 229.5 C144.4 231.2 144.4 230.9 142.5 227.5 C140.6 224.1 141.7 224.4 140.5 218.0 C139.3 211.6 140.0 212.9 138.5 206.0 C137.0 199.1 137.9 203.4 135.5 195.0 C133.1 186.6 133.5 188.2 130.5 178.0 C127.5 167.8 128.5 171.2 125.5 161.0 C122.5 150.8 123.2 154.2 120.5 144.0 C117.8 133.8 118.8 136.6 116.5 127.0 C114.2 117.4 115.2 119.8 113.0 112.0 C110.8 104.2 110.7 101.0 109.0 101.0 C107.3 101.0 108.2 104.2 107.5 112.0 C106.8 119.8 107.4 117.7 106.5 127.0 C105.6 136.3 105.0 133.7 104.5 143.0 C104.0 152.3 103.3 148.4 105.0 158.0 C106.7 167.6 107.3 164.5 110.0 175.0 C112.7 185.5 112.7 181.6 114.0 193.0 C115.3 204.4 114.8 199.2 114.5 213.0 C114.2 226.8 114.5 223.7 113.0 239.0 C111.5 254.3 111.5 250.5 109.5 264.0 C107.5 277.5 107.1 273.2 106.5 284.0 C105.9 294.8 106.6 289.8 107.5 300.0 C108.4 310.2 110.0 306.0 109.5 318.0 C109.0 330.0 108.4 327.7 106.0 340.0 C103.6 352.3 102.5 349.7 101.5 359.0 C100.5 368.3 100.8 364.4 102.5 371.0 C104.2 377.6 106.1 375.8 107.0 381.0 C107.9 386.2 108.8 385.6 105.5 388.5 C102.2 391.4 101.1 390.8 96.0 390.5 C90.9 390.2 91.3 391.6 88.5 387.5 C85.7 383.4 86.9 384.4 86.5 377.0 C86.1 369.6 87.1 373.5 87.2 363.0 C87.3 352.5 87.4 354.9 86.8 342.0 C86.2 329.1 85.3 332.6 85.3 320.0 C85.3 307.4 86.0 310.8 86.8 300.0 C87.6 289.2 87.9 294.8 88.0 284.0 C88.1 273.2 87.8 277.2 87.2 264.0 C86.6 250.8 87.0 253.2 86.0 240.0 C85.0 226.8 85.8 229.3 84.0 220.0 C82.2 210.7 82.4 209.0 80.0 209.0 C77.6 209.0 77.8 210.7 76.0 220.0 C74.2 229.3 75.0 226.8 74.0 240.0 C73.0 253.2 73.4 250.8 72.8 264.0 C72.2 277.2 71.9 273.2 72.0 284.0 C72.1 294.8 72.4 289.2 73.2 300.0 C74.0 310.8 74.7 307.4 74.7 320.0 C74.7 332.6 73.8 329.1 73.2 342.0 C72.6 354.9 72.7 352.5 72.8 363.0 C72.9 373.5 73.9 369.6 73.5 377.0 C73.1 384.4 74.3 383.4 71.5 387.5 C68.7 391.6 69.1 390.2 64.0 390.5 C58.9 390.8 57.8 391.4 54.5 388.5 C51.2 385.6 52.1 386.2 53.0 381.0 C53.9 375.8 55.9 377.6 57.5 371.0 C59.1 364.4 59.5 368.3 58.5 359.0 C57.5 349.7 56.4 352.3 54.0 340.0 C51.6 327.7 51.0 330.0 50.5 318.0 C50.0 306.0 51.6 310.2 52.5 300.0 C53.4 289.8 54.1 294.8 53.5 284.0 C52.9 273.2 52.5 277.5 50.5 264.0 C48.5 250.5 48.5 254.3 47.0 239.0 C45.5 223.7 45.8 226.8 45.5 213.0 C45.2 199.2 44.6 204.4 46.0 193.0 C47.4 181.6 47.3 185.5 50.0 175.0 C52.7 164.5 53.4 167.6 55.0 158.0 C56.6 148.4 56.0 152.3 55.5 143.0 C55.0 133.7 54.4 136.3 53.5 127.0 C52.6 117.7 53.2 119.8 52.5 112.0 C51.8 104.2 52.6 101.0 51.0 101.0 C49.4 101.0 49.2 104.2 47.0 112.0 C44.8 119.8 45.8 117.4 43.5 127.0 C41.2 136.6 42.2 133.8 39.5 144.0 C36.8 154.2 37.5 150.8 34.5 161.0 C31.5 171.2 32.5 167.8 29.5 178.0 C26.5 188.2 26.9 186.6 24.5 195.0 C22.1 203.4 23.0 199.1 21.5 206.0 C20.0 212.9 20.7 211.6 19.5 218.0 C18.3 224.4 19.4 224.1 17.5 227.5 C15.6 230.9 15.6 231.2 13.0 229.5 C10.4 227.8 10.5 227.6 9.0 222.0 C7.5 216.4 7.5 217.6 8.0 211.0 C8.4 204.4 8.6 206.0 10.5 200.0 C12.4 194.0 12.2 198.5 14.5 191.0 C16.8 183.5 15.8 184.9 18.0 175.0 C20.2 165.1 19.6 168.2 22.0 158.0 C24.4 147.8 23.6 151.2 26.0 141.0 C28.4 130.8 27.9 134.2 30.0 124.0 C32.1 113.8 31.4 116.9 33.0 107.0 C34.6 97.1 33.9 99.4 35.5 91.0 C37.1 82.6 35.5 84.7 38.5 79.0 C41.5 73.3 40.9 75.2 45.5 72.0 C50.1 68.8 48.3 70.3 54.0 68.5 C59.7 66.7 59.2 68.2 64.5 66.0 C69.8 63.8 69.1 65.8 71.5 61.0 C73.9 56.2 72.2 53.3 72.5 50.0"/><path class="fig-line" d="M80 5 C92 5 99 14.5 99 28 C99 40.5 92 51.5 80 51.5 C68 51.5 61 40.5 61 28 C61 14.5 68 5 80 5 Z"/></g><g class="fig fig-back" transform="translate(200 0)"><path class="fig-fill" d="M87.5 50.0 C87.8 53.3 86.1 56.2 88.5 61.0 C90.9 65.8 90.2 63.8 95.5 66.0 C100.8 68.2 100.3 66.7 106.0 68.5 C111.7 70.3 109.8 68.8 114.5 72.0 C119.2 75.2 118.5 73.3 121.5 79.0 C124.5 84.7 122.8 82.6 124.5 91.0 C126.2 99.4 125.3 97.1 127.0 107.0 C128.7 116.9 127.9 113.8 130.0 124.0 C132.1 134.2 131.6 130.8 134.0 141.0 C136.4 151.2 135.6 147.8 138.0 158.0 C140.4 168.2 139.8 165.1 142.0 175.0 C144.2 184.9 143.2 183.5 145.5 191.0 C147.8 198.5 147.6 194.0 149.5 200.0 C151.4 206.0 151.6 204.4 152.0 211.0 C152.4 217.6 152.5 216.4 151.0 222.0 C149.5 227.6 149.6 227.8 147.0 229.5 C144.4 231.2 144.4 230.9 142.5 227.5 C140.6 224.1 141.7 224.4 140.5 218.0 C139.3 211.6 140.0 212.9 138.5 206.0 C137.0 199.1 137.9 203.4 135.5 195.0 C133.1 186.6 133.5 188.2 130.5 178.0 C127.5 167.8 128.5 171.2 125.5 161.0 C122.5 150.8 123.2 154.2 120.5 144.0 C117.8 133.8 118.8 136.6 116.5 127.0 C114.2 117.4 115.2 119.8 113.0 112.0 C110.8 104.2 110.7 101.0 109.0 101.0 C107.3 101.0 108.2 104.2 107.5 112.0 C106.8 119.8 107.4 117.7 106.5 127.0 C105.6 136.3 105.0 133.7 104.5 143.0 C104.0 152.3 103.3 148.4 105.0 158.0 C106.7 167.6 107.3 164.5 110.0 175.0 C112.7 185.5 112.7 181.6 114.0 193.0 C115.3 204.4 114.8 199.2 114.5 213.0 C114.2 226.8 114.5 223.7 113.0 239.0 C111.5 254.3 111.5 250.5 109.5 264.0 C107.5 277.5 107.1 273.2 106.5 284.0 C105.9 294.8 106.6 289.8 107.5 300.0 C108.4 310.2 110.0 306.0 109.5 318.0 C109.0 330.0 108.4 327.7 106.0 340.0 C103.6 352.3 102.5 349.7 101.5 359.0 C100.5 368.3 100.8 364.4 102.5 371.0 C104.2 377.6 106.1 375.8 107.0 381.0 C107.9 386.2 108.8 385.6 105.5 388.5 C102.2 391.4 101.1 390.8 96.0 390.5 C90.9 390.2 91.3 391.6 88.5 387.5 C85.7 383.4 86.9 384.4 86.5 377.0 C86.1 369.6 87.1 373.5 87.2 363.0 C87.3 352.5 87.4 354.9 86.8 342.0 C86.2 329.1 85.3 332.6 85.3 320.0 C85.3 307.4 86.0 310.8 86.8 300.0 C87.6 289.2 87.9 294.8 88.0 284.0 C88.1 273.2 87.8 277.2 87.2 264.0 C86.6 250.8 87.0 253.2 86.0 240.0 C85.0 226.8 85.8 229.3 84.0 220.0 C82.2 210.7 82.4 209.0 80.0 209.0 C77.6 209.0 77.8 210.7 76.0 220.0 C74.2 229.3 75.0 226.8 74.0 240.0 C73.0 253.2 73.4 250.8 72.8 264.0 C72.2 277.2 71.9 273.2 72.0 284.0 C72.1 294.8 72.4 289.2 73.2 300.0 C74.0 310.8 74.7 307.4 74.7 320.0 C74.7 332.6 73.8 329.1 73.2 342.0 C72.6 354.9 72.7 352.5 72.8 363.0 C72.9 373.5 73.9 369.6 73.5 377.0 C73.1 384.4 74.3 383.4 71.5 387.5 C68.7 391.6 69.1 390.2 64.0 390.5 C58.9 390.8 57.8 391.4 54.5 388.5 C51.2 385.6 52.1 386.2 53.0 381.0 C53.9 375.8 55.9 377.6 57.5 371.0 C59.1 364.4 59.5 368.3 58.5 359.0 C57.5 349.7 56.4 352.3 54.0 340.0 C51.6 327.7 51.0 330.0 50.5 318.0 C50.0 306.0 51.6 310.2 52.5 300.0 C53.4 289.8 54.1 294.8 53.5 284.0 C52.9 273.2 52.5 277.5 50.5 264.0 C48.5 250.5 48.5 254.3 47.0 239.0 C45.5 223.7 45.8 226.8 45.5 213.0 C45.2 199.2 44.6 204.4 46.0 193.0 C47.4 181.6 47.3 185.5 50.0 175.0 C52.7 164.5 53.4 167.6 55.0 158.0 C56.6 148.4 56.0 152.3 55.5 143.0 C55.0 133.7 54.4 136.3 53.5 127.0 C52.6 117.7 53.2 119.8 52.5 112.0 C51.8 104.2 52.6 101.0 51.0 101.0 C49.4 101.0 49.2 104.2 47.0 112.0 C44.8 119.8 45.8 117.4 43.5 127.0 C41.2 136.6 42.2 133.8 39.5 144.0 C36.8 154.2 37.5 150.8 34.5 161.0 C31.5 171.2 32.5 167.8 29.5 178.0 C26.5 188.2 26.9 186.6 24.5 195.0 C22.1 203.4 23.0 199.1 21.5 206.0 C20.0 212.9 20.7 211.6 19.5 218.0 C18.3 224.4 19.4 224.1 17.5 227.5 C15.6 230.9 15.6 231.2 13.0 229.5 C10.4 227.8 10.5 227.6 9.0 222.0 C7.5 216.4 7.5 217.6 8.0 211.0 C8.4 204.4 8.6 206.0 10.5 200.0 C12.4 194.0 12.2 198.5 14.5 191.0 C16.8 183.5 15.8 184.9 18.0 175.0 C20.2 165.1 19.6 168.2 22.0 158.0 C24.4 147.8 23.6 151.2 26.0 141.0 C28.4 130.8 27.9 134.2 30.0 124.0 C32.1 113.8 31.4 116.9 33.0 107.0 C34.6 97.1 33.9 99.4 35.5 91.0 C37.1 82.6 35.5 84.7 38.5 79.0 C41.5 73.3 40.9 75.2 45.5 72.0 C50.1 68.8 48.3 70.3 54.0 68.5 C59.7 66.7 59.2 68.2 64.5 66.0 C69.8 63.8 69.1 65.8 71.5 61.0 C73.9 56.2 72.2 53.3 72.5 50.0"/><path class="fig-fill" d="M80 5 C92 5 99 14.5 99 28 C99 40.5 92 51.5 80 51.5 C68 51.5 61 40.5 61 28 C61 14.5 68 5 80 5 Z"/><g clip-path="url(#chart-clip)"><g class="zone" data-zone="neck"><ellipse cx="80" cy="60" rx="12" ry="11"/></g><g class="zone" data-zone="upper-back"><ellipse cx="80" cy="104" rx="28" ry="30"/></g><g class="zone" data-zone="lower-back"><ellipse cx="80" cy="162" rx="25" ry="22"/></g><g class="zone" data-zone="shoulder"><ellipse cx="117" cy="84" rx="14" ry="15"/><g transform="matrix(-1 0 0 1 160 0)"><ellipse cx="117" cy="84" rx="14" ry="15"/></g></g><g class="zone" data-zone="arm"><ellipse cx="134.5" cy="176" rx="11" ry="52" transform="rotate(-14 134.5 176)"/><g transform="matrix(-1 0 0 1 160 0)"><ellipse cx="134.5" cy="176" rx="11" ry="52" transform="rotate(-14 134.5 176)"/></g></g><g class="zone" data-zone="hip"><ellipse cx="97" cy="198" rx="16" ry="15"/><g transform="matrix(-1 0 0 1 160 0)"><ellipse cx="97" cy="198" rx="16" ry="15"/></g></g><g class="zone" data-zone="leg"><ellipse cx="98" cy="246" rx="13" ry="28"/><g transform="matrix(-1 0 0 1 160 0)"><ellipse cx="98" cy="246" rx="13" ry="28"/></g><ellipse cx="98" cy="320" rx="10" ry="24" transform="rotate(4 98 320)"/><g transform="matrix(-1 0 0 1 160 0)"><ellipse cx="98" cy="320" rx="10" ry="24" transform="rotate(4 98 320)"/></g></g><g class="zone" data-zone="knee"><ellipse cx="97" cy="287" rx="11" ry="10"/><g transform="matrix(-1 0 0 1 160 0)"><ellipse cx="97" cy="287" rx="11" ry="10"/></g></g><g class="zone" data-zone="foot"><ellipse cx="95" cy="370" rx="10" ry="19"/><g transform="matrix(-1 0 0 1 160 0)"><ellipse cx="95" cy="370" rx="10" ry="19"/></g></g></g><g class="fig-detail"><path d="M90.5 82C97 79.8 103.5 80.8 106.5 85 103.5 95 99.5 105 96.2 113 92.3 106 90 95 90.5 82Z"/><path d="M82 212.5C89 216.5 99 216.5 109 212"/><path d="M90.5 287C94.5 289 100 289 104 287"/><g transform="matrix(-1 0 0 1 160 0)"><path d="M90.5 82C97 79.8 103.5 80.8 106.5 85 103.5 95 99.5 105 96.2 113 92.3 106 90 95 90.5 82Z"/></g><g transform="matrix(-1 0 0 1 160 0)"><path d="M82 212.5C89 216.5 99 216.5 109 212"/></g><g transform="matrix(-1 0 0 1 160 0)"><path d="M90.5 287C94.5 289 100 289 104 287"/></g><path class="spine" d="M80 60V198"/></g><path class="fig-line" d="M87.5 50.0 C87.8 53.3 86.1 56.2 88.5 61.0 C90.9 65.8 90.2 63.8 95.5 66.0 C100.8 68.2 100.3 66.7 106.0 68.5 C111.7 70.3 109.8 68.8 114.5 72.0 C119.2 75.2 118.5 73.3 121.5 79.0 C124.5 84.7 122.8 82.6 124.5 91.0 C126.2 99.4 125.3 97.1 127.0 107.0 C128.7 116.9 127.9 113.8 130.0 124.0 C132.1 134.2 131.6 130.8 134.0 141.0 C136.4 151.2 135.6 147.8 138.0 158.0 C140.4 168.2 139.8 165.1 142.0 175.0 C144.2 184.9 143.2 183.5 145.5 191.0 C147.8 198.5 147.6 194.0 149.5 200.0 C151.4 206.0 151.6 204.4 152.0 211.0 C152.4 217.6 152.5 216.4 151.0 222.0 C149.5 227.6 149.6 227.8 147.0 229.5 C144.4 231.2 144.4 230.9 142.5 227.5 C140.6 224.1 141.7 224.4 140.5 218.0 C139.3 211.6 140.0 212.9 138.5 206.0 C137.0 199.1 137.9 203.4 135.5 195.0 C133.1 186.6 133.5 188.2 130.5 178.0 C127.5 167.8 128.5 171.2 125.5 161.0 C122.5 150.8 123.2 154.2 120.5 144.0 C117.8 133.8 118.8 136.6 116.5 127.0 C114.2 117.4 115.2 119.8 113.0 112.0 C110.8 104.2 110.7 101.0 109.0 101.0 C107.3 101.0 108.2 104.2 107.5 112.0 C106.8 119.8 107.4 117.7 106.5 127.0 C105.6 136.3 105.0 133.7 104.5 143.0 C104.0 152.3 103.3 148.4 105.0 158.0 C106.7 167.6 107.3 164.5 110.0 175.0 C112.7 185.5 112.7 181.6 114.0 193.0 C115.3 204.4 114.8 199.2 114.5 213.0 C114.2 226.8 114.5 223.7 113.0 239.0 C111.5 254.3 111.5 250.5 109.5 264.0 C107.5 277.5 107.1 273.2 106.5 284.0 C105.9 294.8 106.6 289.8 107.5 300.0 C108.4 310.2 110.0 306.0 109.5 318.0 C109.0 330.0 108.4 327.7 106.0 340.0 C103.6 352.3 102.5 349.7 101.5 359.0 C100.5 368.3 100.8 364.4 102.5 371.0 C104.2 377.6 106.1 375.8 107.0 381.0 C107.9 386.2 108.8 385.6 105.5 388.5 C102.2 391.4 101.1 390.8 96.0 390.5 C90.9 390.2 91.3 391.6 88.5 387.5 C85.7 383.4 86.9 384.4 86.5 377.0 C86.1 369.6 87.1 373.5 87.2 363.0 C87.3 352.5 87.4 354.9 86.8 342.0 C86.2 329.1 85.3 332.6 85.3 320.0 C85.3 307.4 86.0 310.8 86.8 300.0 C87.6 289.2 87.9 294.8 88.0 284.0 C88.1 273.2 87.8 277.2 87.2 264.0 C86.6 250.8 87.0 253.2 86.0 240.0 C85.0 226.8 85.8 229.3 84.0 220.0 C82.2 210.7 82.4 209.0 80.0 209.0 C77.6 209.0 77.8 210.7 76.0 220.0 C74.2 229.3 75.0 226.8 74.0 240.0 C73.0 253.2 73.4 250.8 72.8 264.0 C72.2 277.2 71.9 273.2 72.0 284.0 C72.1 294.8 72.4 289.2 73.2 300.0 C74.0 310.8 74.7 307.4 74.7 320.0 C74.7 332.6 73.8 329.1 73.2 342.0 C72.6 354.9 72.7 352.5 72.8 363.0 C72.9 373.5 73.9 369.6 73.5 377.0 C73.1 384.4 74.3 383.4 71.5 387.5 C68.7 391.6 69.1 390.2 64.0 390.5 C58.9 390.8 57.8 391.4 54.5 388.5 C51.2 385.6 52.1 386.2 53.0 381.0 C53.9 375.8 55.9 377.6 57.5 371.0 C59.1 364.4 59.5 368.3 58.5 359.0 C57.5 349.7 56.4 352.3 54.0 340.0 C51.6 327.7 51.0 330.0 50.5 318.0 C50.0 306.0 51.6 310.2 52.5 300.0 C53.4 289.8 54.1 294.8 53.5 284.0 C52.9 273.2 52.5 277.5 50.5 264.0 C48.5 250.5 48.5 254.3 47.0 239.0 C45.5 223.7 45.8 226.8 45.5 213.0 C45.2 199.2 44.6 204.4 46.0 193.0 C47.4 181.6 47.3 185.5 50.0 175.0 C52.7 164.5 53.4 167.6 55.0 158.0 C56.6 148.4 56.0 152.3 55.5 143.0 C55.0 133.7 54.4 136.3 53.5 127.0 C52.6 117.7 53.2 119.8 52.5 112.0 C51.8 104.2 52.6 101.0 51.0 101.0 C49.4 101.0 49.2 104.2 47.0 112.0 C44.8 119.8 45.8 117.4 43.5 127.0 C41.2 136.6 42.2 133.8 39.5 144.0 C36.8 154.2 37.5 150.8 34.5 161.0 C31.5 171.2 32.5 167.8 29.5 178.0 C26.5 188.2 26.9 186.6 24.5 195.0 C22.1 203.4 23.0 199.1 21.5 206.0 C20.0 212.9 20.7 211.6 19.5 218.0 C18.3 224.4 19.4 224.1 17.5 227.5 C15.6 230.9 15.6 231.2 13.0 229.5 C10.4 227.8 10.5 227.6 9.0 222.0 C7.5 216.4 7.5 217.6 8.0 211.0 C8.4 204.4 8.6 206.0 10.5 200.0 C12.4 194.0 12.2 198.5 14.5 191.0 C16.8 183.5 15.8 184.9 18.0 175.0 C20.2 165.1 19.6 168.2 22.0 158.0 C24.4 147.8 23.6 151.2 26.0 141.0 C28.4 130.8 27.9 134.2 30.0 124.0 C32.1 113.8 31.4 116.9 33.0 107.0 C34.6 97.1 33.9 99.4 35.5 91.0 C37.1 82.6 35.5 84.7 38.5 79.0 C41.5 73.3 40.9 75.2 45.5 72.0 C50.1 68.8 48.3 70.3 54.0 68.5 C59.7 66.7 59.2 68.2 64.5 66.0 C69.8 63.8 69.1 65.8 71.5 61.0 C73.9 56.2 72.2 53.3 72.5 50.0"/><path class="fig-line" d="M80 5 C92 5 99 14.5 99 28 C99 40.5 92 51.5 80 51.5 C68 51.5 61 40.5 61 28 C61 14.5 68 5 80 5 Z"/></g></svg>
+        <p class="chart-cap chart-cap-front" aria-hidden="true">Front</p>
+        <p class="chart-cap chart-cap-back" aria-hidden="true">Back</p>
+        <button type="button" class="spot spot-neck" data-area="neck" aria-pressed="false"><span class="spot-label">Neck</span></button>
+        <button type="button" class="spot spot-shoulder" data-area="shoulder" aria-pressed="false"><span class="spot-label">Shoulder</span></button>
+        <button type="button" class="spot spot-upper-back" data-area="upper-back" aria-pressed="false"><span class="spot-label">Upper back and ribs</span></button>
+        <button type="button" class="spot spot-lower-back" data-area="lower-back" aria-pressed="false"><span class="spot-label">Lower back</span></button>
+        <button type="button" class="spot spot-arm" data-area="arm" aria-pressed="false"><span class="spot-label">Elbow, wrist and hand</span></button>
+        <button type="button" class="spot spot-hip" data-area="hip" aria-pressed="false"><span class="spot-label">Hip and groin</span></button>
+        <button type="button" class="spot spot-leg" data-area="leg" aria-pressed="false"><span class="spot-label">Thigh, calf and shin</span></button>
+        <button type="button" class="spot spot-knee" data-area="knee" aria-pressed="false"><span class="spot-label">Knee</span></button>
+        <button type="button" class="spot spot-foot" data-area="foot" aria-pressed="false"><span class="spot-label">Ankle and foot</span></button>
+      </div>
+    </div>
+
+    <div class="explorer-list">
+      <div class="filters">
+        <span class="filter-label" id="area-label">Body area</span>
+        <div class="chips" role="group" aria-labelledby="area-label" data-area-chips></div>
+        <span class="filter-label" id="topic-label">Or a topic</span>
+        <div class="chips" role="group" aria-labelledby="topic-label" data-tag-chips></div>
+        <label class="search">
+          <span class="visually-hidden">Search conditions</span>
+          <svg class="icon"><use href="#i-search"/></svg>
+          <input type="search" data-search placeholder="Search, for example tendon" autocomplete="off" maxlength="60">
+        </label>
+      </div>
+
+      <div class="results-bar">
+        <p class="results-count" data-count aria-live="polite">26 conditions</p>
+        <button type="button" class="reset" data-reset hidden>Show everything</button>
+      </div>
+      <ul class="conditions" data-conditions></ul>
+      <p class="no-results" data-none hidden>Nothing matches that search. Try another word, or <a href="book.html?type=initial">book an assessment</a> and we will find out what is going on.</p>
+      <noscript><p class="no-results">The condition list needs JavaScript. We treat back and neck pain, shoulder, elbow, wrist, hip, knee, ankle and foot problems, sports and running injuries, and rehab after surgery. Message us on WhatsApp on 07700 900715 to ask about anything else.</p></noscript>
+    </div>
+  </div>
+</section>
+
+<section class="section section-white" id="red-flags" aria-labelledby="red-flags-title">
+  <div class="wrap">
+    <header class="section-head">
+      <p class="kicker">Warning signs</p>
+      <h2 class="h2" id="red-flags-title">When to get urgent help instead</h2>
+      <p>Physiotherapy is not an emergency service. If you have any of these, do not wait for a physio appointment. This list is based on NHS advice; for the latest, see <a href="https://www.nhs.uk/">nhs.uk</a>.</p>
+    </header>
+    <div class="flags">
+      <article class="flag-card flag-999">
+        <div class="flag-head">
+          <h3>Call 999 or go to A&amp;E now</h3>
+          <p>Do not drive yourself. Ask someone to take you, or call 999.</p>
+        </div>
+        <ul>
+          <li>Back pain with numbness or tingling around your genitals or bottom.</li>
+          <li>Back pain with changes in your bladder or bowels, such as difficulty peeing, or peeing or pooing yourself.</li>
+          <li>Pain, tingling, weakness or numbness in both legs.</li>
+          <li>Pain that started after a serious accident, such as a car crash or a bad fall.</li>
+          <li>Chest pain, or sudden breathlessness, especially with a painful, swollen leg.</li>
+          <li>An injury where you heard a crack, or the body part has changed shape, is numb, or looks blue or grey and feels cold.</li>
+          <li>A sudden, extremely painful headache, or a headache with weakness or numbness in the face or body, or trouble speaking, seeing or balancing.</li>
+        </ul>
+      </article>
+      <article class="flag-card flag-111">
+        <div class="flag-head">
+          <h3>Get help today: NHS 111 or an urgent GP appointment</h3>
+          <p>Call 111 or use 111.nhs.uk, any time of day or night.</p>
+        </div>
+        <ul>
+          <li>Throbbing pain and swelling in one leg, usually the calf, with red or darkened skin. It could be a blood clot, especially after an operation, a long journey or time in bed.</li>
+          <li>Pain with a high temperature, or feeling hot, cold, shivery or generally unwell.</li>
+          <li>A hot, red, swollen joint.</li>
+          <li>Severe pain that started suddenly, or is getting worse quickly.</li>
+          <li>After an injury, you cannot put weight on it or walk more than a few steps.</li>
+          <li>After an operation, the wound is hot, red, leaking or more painful.</li>
+        </ul>
+      </article>
+      <article class="flag-card flag-gp">
+        <div class="flag-head">
+          <h3>See your GP</h3>
+          <p>Not an emergency, but get it checked before physio.</p>
+        </div>
+        <ul>
+          <li>You have lost weight without trying.</li>
+          <li>Pain that does not ease with rest, or is worse at night.</li>
+          <li>A lump or swelling, or your back has changed shape.</li>
+          <li>You have had cancer, and now have new back or bone pain.</li>
+          <li>Pain that is not getting better, or is stopping you doing day-to-day things, and you are worried.</li>
+        </ul>
+      </article>
+    </div>
+    <div class="flags-foot">
+      <p><strong>At the clinic.</strong> We ask about these signs at every first appointment. If one turns up, we stop and help you get the right care, and we do not charge for the appointment.</p>
+      <p><strong>Not sure?</strong> Call NHS 111. It is free, open 24 hours a day, and can tell you where to go.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="cta-band">
+      <div>
+        <h2 class="h2">Not sure what it is?</h2>
+        <p>That is what the first appointment is for. Book an initial assessment and we will work it out together.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn btn-primary" href="book.html?type=initial">Book an assessment</a>
+        <a class="btn btn-ghost-light" href="https://wa.me/447700900715" data-contact="whatsapp"><svg class="icon"><use href="#i-chat"/></svg> Ask a question</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a class="brand" href="index.html" aria-label="Spindle Physio, home">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect class="mark-bg" width="32" height="32" rx="9"/><path class="mark-arc" d="M24.5 25A15.5 15.5 0 0 0 9 9.5"/><path class="mark-line" d="M6 25h20.5"/><path class="mark-arm" d="M9.6 24.4C11.6 18 17.6 12 24.4 9.6 22.4 16 16.4 22 9.6 24.4Z"/><circle class="mark-pivot" cx="9" cy="25" r="2.7"/></svg>
+        <span class="brand-name">Spindle <span>Physio</span></span>
+      </a>
+      <p>Physiotherapy and sports massage in Twickenham.<br>3 Wherry Passage, Twickenham TW1.</p>
+      <p class="open-line" data-open-now><span class="dot" aria-hidden="true"></span><span class="open-text">Open Monday to Saturday</span> <span class="open-detail"></span></p>
+    </div>
+    <div>
+      <h2>Pages</h2>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="conditions.html">Conditions we treat</a>
+        <a href="book.html">Book an appointment</a>
+        <a href="fees.html">Prices and insurance</a>
+        <a href="conditions.html#red-flags">When to get urgent help</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </div>
+    <div class="footer-contact">
+      <h2>Contact</h2>
+      <p><a href="https://wa.me/447700900715" data-contact="whatsapp">WhatsApp 07700 900715</a></p>
+      <p><a href="tel:+442079460715" data-contact="phone">Call 020 7946 0715</a></p>
+      <p><a href="mailto:hello@spindlephysio.example" data-contact="email">hello@spindlephysio.example</a></p>
+    </div>
+    <p class="footer-credit">A sample website by <a href="https://agilerelease.co.uk/#websites">Agile Release</a>. Spindle Physio is made up. &copy; 2026 Agile Release Limited. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

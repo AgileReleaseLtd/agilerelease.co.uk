@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Make an enquiry | Quinlan Mensah Solicitors (sample website)</title>
+<meta name="description" content="Tell us what you need help with. The form writes a short enquiry for you to send on WhatsApp or by email. A sample website by Agile Release.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#f7f5ee">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="preload" href="css/fonts/public-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="css/fonts/petrona-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js" defer></script>
+<script src="js/dates.js" defer></script>
+<script src="js/fees.js" defer></script>
+<script src="js/site.js" defer></script>
+<script src="js/enquiry.js" defer></script>
+</head>
+<body>
+
+<svg class="sprite" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 7 8.5-7"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3.5 5 6v5.5c0 4.3 3 7.8 7 9 4-1.2 7-4.7 7-9V6l-7-2.5Z"/><path d="m9 12 2.2 2.2L15.5 10"/></symbol>
+  <symbol id="i-house" viewBox="0 0 24 24"><path d="M3.5 11 12 4l8.5 7"/><path d="M5.5 9.5V20h13V9.5"/><path d="M10 20v-5.5h4V20"/></symbol>
+  <symbol id="i-quill" viewBox="0 0 24 24"><path d="M19.5 4.5c-6 .5-10.5 5-12 12.5"/><path d="M19.5 4.5c.5 6-3 10-9.5 10.5"/><path d="M4.5 20.5 7.5 17"/></symbol>
+  <symbol id="i-hands" viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.6-7.5-10A4.2 4.2 0 0 1 12 8a4.2 4.2 0 0 1 7.5 2.5c0 5.4-7.5 10-7.5 10Z"/><path d="M9 12.5h6"/></symbol>
+  <symbol id="i-people" viewBox="0 0 24 24"><circle cx="8.5" cy="8" r="3"/><circle cx="16.5" cy="9.5" r="2.5"/><path d="M3 19.5a5.5 5.5 0 0 1 11 0"/><path d="M14 15a4.5 4.5 0 0 1 7 4"/></symbol>
+  <symbol id="i-door" viewBox="0 0 24 24"><path d="M6 20.5V4.5a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v16"/><path d="M3.5 20.5h17"/><circle cx="14.5" cy="12.5" r="1"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.5h.01"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5 2.5 20h19L12 3.5Z"/><path d="M12 10v4.5M12 17.5h.01"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></symbol>
+  <symbol id="i-edit" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16v4Z"/><path d="m13.5 6.5 4 4"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 3.5H7a1.5 1.5 0 0 0-1.5 1.5v14A1.5 1.5 0 0 0 7 20.5h10a1.5 1.5 0 0 0 1.5-1.5V8L14 3.5Z"/><path d="M14 3.5V8h4.5M9 12.5h6M9 16h4"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8.5" y="8.5" width="11" height="11" rx="2"/><path d="M15.5 8.5V6a1.5 1.5 0 0 0-1.5-1.5H6A1.5 1.5 0 0 0 4.5 6v8A1.5 1.5 0 0 0 6 15.5h2.5"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<aside class="sample-bar" aria-label="About this sample website">
+  <div class="wrap sample-bar-inner">
+    <p><strong>Sample website by Agile Release.</strong> Quinlan Mensah Solicitors is not a real firm: the people, prices and regulatory numbers are examples.</p>
+    <a href="https://agilerelease.co.uk/#websites">Get a site like this <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a>
+  </div>
+</aside>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Quinlan Mensah Solicitors, home">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect class="bm-tab bm-tab-1" x="5" y="3" width="9" height="9" rx="2"/><rect class="bm-tab bm-tab-2" x="15.5" y="3" width="9" height="9" rx="2"/><rect class="bm-tab bm-tab-3" x="26" y="3" width="9" height="9" rx="2"/><rect class="bm-sheet" x="3" y="8" width="34" height="29" rx="5"/><path class="bm-line" d="M10 17.5h20M10 23h20M10 28.5h12"/></svg>
+      <span class="brand-text"><span class="brand-name">Quinlan Mensah</span><span class="brand-sub">Solicitors</span></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="practice-areas.html">Practice areas</a></li>
+        <li><a href="prices.html">Prices</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <a class="nav-phone" href="tel:+442079460659" data-contact="phone"><svg class="icon"><use href="#i-phone"/></svg> 020 7946 0659</a>
+      <a class="btn btn-primary nav-cta" href="enquiry.html">Make an enquiry</a>
+    </nav>
+    <a class="btn btn-primary btn-sm header-cta" href="enquiry.html">Make an enquiry</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+      <svg class="icon"><use href="#i-menu"/></svg><span class="visually-hidden">Menu</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+<section class="page-head page-head-compact">
+  <div class="wrap">
+    <p class="tab-kicker">Make an enquiry</p>
+    <h1 class="h1">Tell us what you need</h1>
+    <p class="lead">Answer a few questions and the form writes a short message for you to send us on WhatsApp or by email. Nothing is sent until you choose to send it.</p>
+  </div>
+</section>
+
+<section class="section section-tight">
+  <div class="wrap enquiry-layout">
+    <form class="enquiry" data-enquiry novalidate>
+      <div class="js-needed js-needed-box">This form needs JavaScript turned on. You can also ring us on <a href="tel:+442079460659">020 7946 0659</a> or email <a href="mailto:hello@quinlanmensah.example">hello@quinlanmensah.example</a>.</div>
+
+      <ul class="form-notes">
+        <li><svg class="icon"><use href="#i-lock"/></svg> <span>Please don't send confidential details in your first message.</span></li>
+        <li><svg class="icon"><use href="#i-info"/></svg> <span>Sending an enquiry does not make us your solicitors. We act for you only once you have agreed our terms.</span></li>
+      </ul>
+
+      <fieldset class="step-block" id="matter-block">
+        <legend class="step-legend"><span class="step-legend-num">1</span> What is it about?</legend>
+        <p class="error" data-error="matter" id="matter-error" hidden>Choose what your enquiry is about.</p>
+        <div class="matter-grid" data-matters>
+          <label class="matter-opt tab-olive"><input type="radio" name="matter" value="conveyancing" aria-describedby="matter-error"> <span class="matter-card"><svg class="icon"><use href="#i-house"/></svg><b>Buying, selling or remortgaging</b><small>Residential conveyancing</small></span></label>
+          <label class="matter-opt tab-heather"><input type="radio" name="matter" value="will"> <span class="matter-card"><svg class="icon"><use href="#i-quill"/></svg><b>Making a will</b><small>New will or a change</small></span></label>
+          <label class="matter-opt tab-heather"><input type="radio" name="matter" value="probate"> <span class="matter-card"><svg class="icon"><use href="#i-doc"/></svg><b>Probate or an estate</b><small>After someone has died</small></span></label>
+          <label class="matter-opt tab-mist"><input type="radio" name="matter" value="lpa"> <span class="matter-card"><svg class="icon"><use href="#i-hands"/></svg><b>Lasting power of attorney</b><small>Planning ahead</small></span></label>
+          <label class="matter-opt tab-clay"><input type="radio" name="matter" value="family"> <span class="matter-card"><svg class="icon"><use href="#i-people"/></svg><b>Family matter</b><small>Divorce, money, children</small></span></label>
+          <label class="matter-opt tab-sand"><input type="radio" name="matter" value="landlord"> <span class="matter-card"><svg class="icon"><use href="#i-door"/></svg><b>Landlord or tenant</b><small>Homes in England</small></span></label>
+          <label class="matter-opt tab-plain"><input type="radio" name="matter" value="other"> <span class="matter-card"><svg class="icon"><use href="#i-edit"/></svg><b>Something else</b><small>Tell us in a few words</small></span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="step-block" data-details hidden>
+        <legend class="step-legend"><span class="step-legend-num">2</span> <span data-details-title>A few details</span></legend>
+        <p class="hint">Only the basics for now. We'll ask for the rest once we know we can help.</p>
+
+        <!-- Conveyancing -->
+        <div class="q-group" data-q="conveyancing" hidden>
+          <fieldset class="field">
+            <legend>Are you buying, selling or remortgaging?</legend>
+            <div class="seg seg-wrap">
+              <label class="seg-opt"><input type="radio" name="deal" value="buy" checked> <span>Buying</span></label>
+              <label class="seg-opt"><input type="radio" name="deal" value="sell"> <span>Selling</span></label>
+              <label class="seg-opt"><input type="radio" name="deal" value="both"> <span>Selling and buying</span></label>
+              <label class="seg-opt"><input type="radio" name="deal" value="remortgage"> <span>Remortgaging</span></label>
+            </div>
+          </fieldset>
+          <div class="field-row">
+            <div class="field" data-show-deal="buy both">
+              <label for="q-buy-price">Price of the home you're buying</label>
+              <div class="money-input"><span aria-hidden="true">£</span><input id="q-buy-price" name="buyPrice" type="text" inputmode="numeric" autocomplete="off"></div>
+            </div>
+            <div class="field" data-show-deal="sell both">
+              <label for="q-sell-price">Price of the home you're selling</label>
+              <div class="money-input"><span aria-hidden="true">£</span><input id="q-sell-price" name="sellPrice" type="text" inputmode="numeric" autocomplete="off"></div>
+            </div>
+            <div class="field" data-show-deal="remortgage">
+              <label for="q-loan">Amount of the new mortgage</label>
+              <div class="money-input"><span aria-hidden="true">£</span><input id="q-loan" name="loan" type="text" inputmode="numeric" autocomplete="off"></div>
+            </div>
+          </div>
+          <fieldset class="field" data-show-deal="buy both">
+            <legend>Will you have a mortgage on the new home?</legend>
+            <div class="seg seg-3">
+              <label class="seg-opt"><input type="radio" name="mortgage" value="Yes" checked> <span>Yes</span></label>
+              <label class="seg-opt"><input type="radio" name="mortgage" value="No"> <span>No</span></label>
+              <label class="seg-opt"><input type="radio" name="mortgage" value="Not sure yet"> <span>Not sure</span></label>
+            </div>
+          </fieldset>
+          <fieldset class="field">
+            <legend>Freehold or leasehold?</legend>
+            <div class="seg seg-3">
+              <label class="seg-opt"><input type="radio" name="tenure" value="Freehold"> <span>Freehold</span></label>
+              <label class="seg-opt"><input type="radio" name="tenure" value="Leasehold"> <span>Leasehold</span></label>
+              <label class="seg-opt"><input type="radio" name="tenure" value="Not sure" checked> <span>Not sure</span></label>
+            </div>
+          </fieldset>
+          <div class="field">
+            <label for="q-stage">Where are you up to?</label>
+            <select id="q-stage" name="stage">
+              <option>Just getting quotes</option>
+              <option>Offer accepted</option>
+              <option>Already under way, want to change solicitor</option>
+            </select>
+          </div>
+          <label class="check" data-show-deal="buy both"><input type="checkbox" name="firstTime"> <span>We are first-time buyers</span></label>
+        </div>
+
+        <!-- Will -->
+        <div class="q-group" data-q="will" hidden>
+          <fieldset class="field">
+            <legend>Who is the will for?</legend>
+            <div class="seg seg-2">
+              <label class="seg-opt"><input type="radio" name="willFor" value="Just me" checked> <span>Just me</span></label>
+              <label class="seg-opt"><input type="radio" name="willFor" value="Me and my partner (mirror wills)"> <span>Me and my partner</span></label>
+            </div>
+          </fieldset>
+          <label class="check"><input type="checkbox" name="willChildren"> <span>I have children under 18</span></label>
+          <label class="check"><input type="checkbox" name="willAbroad"> <span>I own property outside England and Wales</span></label>
+          <label class="check"><input type="checkbox" name="willExisting"> <span>I already have a will and want to change it</span></label>
+          <div class="field">
+            <label for="q-meet">How would you like to meet?</label>
+            <select id="q-meet" name="meet">
+              <option>At your office</option>
+              <option>By video call</option>
+              <option>At my home</option>
+              <option>On a Saturday morning</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Probate -->
+        <div class="q-group" data-q="probate" hidden>
+          <fieldset class="field">
+            <legend>Is there a will?</legend>
+            <div class="seg seg-3">
+              <label class="seg-opt"><input type="radio" name="probWill" value="Yes" checked> <span>Yes</span></label>
+              <label class="seg-opt"><input type="radio" name="probWill" value="No"> <span>No</span></label>
+              <label class="seg-opt"><input type="radio" name="probWill" value="Not sure"> <span>Not sure</span></label>
+            </div>
+          </fieldset>
+          <fieldset class="field">
+            <legend>Did they own a home or other property?</legend>
+            <div class="seg seg-3">
+              <label class="seg-opt"><input type="radio" name="probHome" value="Yes" checked> <span>Yes</span></label>
+              <label class="seg-opt"><input type="radio" name="probHome" value="No"> <span>No</span></label>
+              <label class="seg-opt"><input type="radio" name="probHome" value="Not sure"> <span>Not sure</span></label>
+            </div>
+          </fieldset>
+          <div class="field">
+            <label for="q-prob-help">What help would you like?</label>
+            <select id="q-prob-help" name="probHelp">
+              <option>Not sure yet</option>
+              <option>Getting the grant of probate only</option>
+              <option>Dealing with the whole estate</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="q-prob-role">You are</label>
+            <select id="q-prob-role" name="probRole">
+              <option>An executor named in the will</option>
+              <option>A close relative (no will, or not sure)</option>
+              <option>Helping someone else</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- LPA -->
+        <div class="q-group" data-q="lpa" hidden>
+          <div class="field">
+            <label for="q-lpa-type">Which kind of LPA?</label>
+            <select id="q-lpa-type" name="lpaType">
+              <option>Both kinds</option>
+              <option>Property and financial affairs</option>
+              <option>Health and welfare</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <fieldset class="field">
+            <legend>Who is it for?</legend>
+            <div class="seg seg-3">
+              <label class="seg-opt"><input type="radio" name="lpaFor" value="Me" checked> <span>Me</span></label>
+              <label class="seg-opt"><input type="radio" name="lpaFor" value="Me and my partner"> <span>Me and my partner</span></label>
+              <label class="seg-opt"><input type="radio" name="lpaFor" value="A relative"> <span>A relative</span></label>
+            </div>
+          </fieldset>
+          <p class="inline-note" data-lpa-note hidden><svg class="icon"><use href="#i-info"/></svg> <span>The person making the LPA must make their own decisions and have mental capacity. We will need to speak to them directly.</span></p>
+        </div>
+
+        <!-- Family -->
+        <div class="q-group" data-q="family" hidden>
+          <div class="field">
+            <label for="q-family-topic">What is it about?</label>
+            <select id="q-family-topic" name="familyTopic">
+              <option>Divorce or ending a civil partnership</option>
+              <option>Money and property after separating</option>
+              <option>Arrangements for children</option>
+              <option>A cohabitation or pre-nuptial agreement</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <label class="check"><input type="checkbox" name="familyCourt"> <span>There is already a court date or a deadline</span></label>
+          <p class="inline-note inline-note-alert"><svg class="icon"><use href="#i-alert"/></svg> <span>If you or your children are in danger, call 999. The National Domestic Abuse Helpline is free, day and night, on <a href="tel:08082000247">0808 2000 247</a>.</span></p>
+          <p class="hint">We'll ask for your former partner's name when we call, so we can check we don't already act for them.</p>
+        </div>
+
+        <!-- Landlord and tenant -->
+        <div class="q-group" data-q="landlord" hidden>
+          <fieldset class="field">
+            <legend>Are you the landlord or the tenant?</legend>
+            <div class="seg seg-3">
+              <label class="seg-opt"><input type="radio" name="ltRole" value="Landlord" checked> <span>Landlord</span></label>
+              <label class="seg-opt"><input type="radio" name="ltRole" value="Tenant"> <span>Tenant</span></label>
+              <label class="seg-opt"><input type="radio" name="ltRole" value="Letting agent"> <span>Letting agent</span></label>
+            </div>
+          </fieldset>
+          <div class="field">
+            <label for="q-lt-issue">What is it about?</label>
+            <select id="q-lt-issue" name="ltIssue">
+              <option>Getting a property back</option>
+              <option>Rent arrears</option>
+              <option>A rent increase</option>
+              <option>A tenancy agreement</option>
+              <option>A deposit</option>
+              <option>Repairs</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <label class="check"><input type="checkbox" name="ltNotice"> <span>A notice has already been served</span></label>
+          <label class="check"><input type="checkbox" name="ltEngland" checked> <span>The property is in England</span></label>
+          <p class="inline-note" data-lt-wales hidden><svg class="icon"><use href="#i-info"/></svg> <span>We only advise on homes in England. Renting law in Wales is different.</span></p>
+        </div>
+
+        <div class="field">
+          <label for="q-note">Anything else, in a sentence or two <span class="optional">(optional)</span></label>
+          <textarea id="q-note" name="note" rows="3" maxlength="400" aria-describedby="q-note-hint"></textarea>
+          <p class="hint" id="q-note-hint">Please leave out confidential details for now. <span data-note-count>400 characters left.</span></p>
+          <p class="error" data-error="note" id="note-error" hidden>Tell us briefly what it is about.</p>
+        </div>
+      </fieldset>
+
+      <fieldset class="step-block" data-contact-block hidden>
+        <legend class="step-legend"><span class="step-legend-num">3</span> Your contact details</legend>
+        <div class="field-row">
+          <div class="field">
+            <label for="q-name">Your name</label>
+            <input id="q-name" name="name" type="text" autocomplete="name" aria-describedby="name-error">
+            <p class="error" data-error="name" id="name-error" hidden>Enter your name.</p>
+          </div>
+          <div class="field">
+            <label for="q-heard">How did you hear about us? <span class="optional">(optional)</span></label>
+            <select id="q-heard" name="heard">
+              <option value="">Choose one</option>
+              <option>Recommended by a friend or family</option>
+              <option>Estate agent or mortgage broker</option>
+              <option>Search engine</option>
+              <option>Walked past the office</option>
+              <option>I have used you before</option>
+              <option>Social media</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+        <fieldset class="field">
+          <legend>How should we reply?</legend>
+          <div class="seg seg-3">
+            <label class="seg-opt"><input type="radio" name="replyBy" value="phone" checked> <span>Phone call</span></label>
+            <label class="seg-opt"><input type="radio" name="replyBy" value="email"> <span>Email</span></label>
+            <label class="seg-opt"><input type="radio" name="replyBy" value="whatsapp"> <span>WhatsApp</span></label>
+          </div>
+        </fieldset>
+        <div class="field-row">
+          <div class="field" data-need="phone whatsapp">
+            <label for="q-phone">Phone number</label>
+            <input id="q-phone" name="phone" type="tel" autocomplete="tel" aria-describedby="phone-error">
+            <p class="error" data-error="phone" id="phone-error" hidden>Enter a phone number we can reach you on.</p>
+          </div>
+          <div class="field" data-need="email">
+            <label for="q-email">Email address</label>
+            <input id="q-email" name="email" type="email" autocomplete="email" aria-describedby="email-error">
+            <p class="error" data-error="email" id="email-error" hidden>Enter an email address, like name@example.com.</p>
+          </div>
+          <div class="field" data-need="phone">
+            <label for="q-time">Best time to call</label>
+            <select id="q-time" name="time">
+              <option>Any time</option>
+              <option>Morning</option>
+              <option>Lunchtime</option>
+              <option>Afternoon</option>
+            </select>
+          </div>
+        </div>
+        <label class="check check-agree"><input type="checkbox" name="understand" aria-describedby="understand-error"> <span>I understand that sending this enquiry does not make Quinlan Mensah my solicitors, and that I should not include confidential details yet.</span></label>
+        <p class="error" data-error="understand" id="understand-error" hidden>Please tick to confirm you have read this.</p>
+        <button class="btn btn-primary btn-lg" type="submit">Write my enquiry <svg class="icon"><use href="#i-arrow"/></svg></button>
+      </fieldset>
+    </form>
+
+    <div class="enquiry-aside">
+      <div class="aside-card aside-card-heather">
+        <h2 class="aside-title"><svg class="icon"><use href="#i-lock"/></svg> Keep it short</h2>
+        <p>Please don't send confidential details in your first message: no account numbers, no copies of documents, and nothing about the other side you would not want them to see. We'll ask for what we need once we have agreed to act for you.</p>
+      </div>
+      <div class="aside-card">
+        <h2 class="aside-title"><svg class="icon"><use href="#i-info"/></svg> We are not your solicitors yet</h2>
+        <p>Sending an enquiry does not create a solicitor and client relationship. We first check we can act (for example, that we don't already act for someone on the other side), confirm your identity and send our terms. We only act for you once you have agreed them. Until then, please don't rely on anything we say as legal advice.</p>
+      </div>
+      <div class="aside-card">
+        <h2 class="aside-title"><svg class="icon"><use href="#i-clock"/></svg> What happens next</h2>
+        <p data-reply-by-inline>We reply within one working day.</p>
+        <p>Or call us on <a href="tel:+442079460659" data-contact="phone">020 7946 0659</a>, Monday to Friday, 9:00am to 5:30pm.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<dialog class="dialog dialog-wide" id="preview-dialog" aria-labelledby="preview-title">
+  <div class="dialog-body">
+    <div class="dialog-head">
+      <h2 class="dialog-title" id="preview-title" tabindex="-1">Check your message</h2>
+      <button class="dialog-close" type="button" data-close aria-label="Close"><svg class="icon"><use href="#i-close"/></svg></button>
+    </div>
+    <p>This is what you'll send us. Nothing has been sent yet.</p>
+    <pre class="message" data-message></pre>
+    <div class="sample-note" data-sample-note hidden>
+      <p><strong>This is a sample site.</strong> On a real firm's website, the buttons below open WhatsApp or your email app with this message ready to send. Quinlan Mensah Solicitors is made up, so nothing is sent.</p>
+    </div>
+    <div class="dialog-actions dialog-actions-stack">
+      <button class="btn btn-primary" type="button" data-send="whatsapp"><svg class="icon"><use href="#i-chat"/></svg> Send on WhatsApp</button>
+      <button class="btn btn-outline" type="button" data-send="email"><svg class="icon"><use href="#i-mail"/></svg> Send by email</button>
+      <button class="btn btn-text" type="button" data-close><svg class="icon"><use href="#i-edit"/></svg> Change my answers</button>
+    </div>
+    <p class="dialog-status" data-send-status role="status"></p>
+  </div>
+</dialog>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-top">
+    <div class="footer-brand">
+      <a class="brand brand-light" href="index.html" aria-label="Quinlan Mensah Solicitors, home">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect class="bm-tab bm-tab-1" x="5" y="3" width="9" height="9" rx="2"/><rect class="bm-tab bm-tab-2" x="15.5" y="3" width="9" height="9" rx="2"/><rect class="bm-tab bm-tab-3" x="26" y="3" width="9" height="9" rx="2"/><rect class="bm-sheet" x="3" y="8" width="34" height="29" rx="5"/><path class="bm-line" d="M10 17.5h20M10 23h20M10 28.5h12"/></svg>
+      <span class="brand-text"><span class="brand-name">Quinlan Mensah</span><span class="brand-sub">Solicitors</span></span>
+    </a>
+      <p>Conveyancing, wills, probate, lasting powers of attorney, family law and landlord and tenant advice, from our office in Chiswick.</p>
+      <p class="footer-address"><svg class="icon"><use href="#i-pin"/></svg> <span>6 Halyard Walk, Chiswick, London W4</span></p>
+      <p class="footer-address"><svg class="icon"><use href="#i-clock"/></svg> <span>Monday to Friday, 9:00am to 5:30pm</span></p>
+    </div>
+    <nav class="footer-nav" aria-label="Practice areas">
+      <h2 class="footer-title">How we help</h2>
+      <ul>
+        <li><a href="practice-areas.html#conveyancing">Residential conveyancing</a></li>
+        <li><a href="practice-areas.html#wills">Wills and probate</a></li>
+        <li><a href="practice-areas.html#lpa">Lasting powers of attorney</a></li>
+        <li><a href="practice-areas.html#family">Family law</a></li>
+        <li><a href="practice-areas.html#landlord">Landlord and tenant</a></li>
+      </ul>
+    </nav>
+    <nav class="footer-nav" aria-label="The firm">
+      <h2 class="footer-title">The firm</h2>
+      <ul>
+        <li><a href="prices.html">Prices and fee calculator</a></li>
+        <li><a href="team.html">Our team</a></li>
+        <li><a href="enquiry.html">Make an enquiry</a></li>
+        <li><a href="complaints.html">Complaints procedure</a></li>
+        <li><a href="complaints.html#regulatory">Regulatory information</a></li>
+        <li><a href="privacy.html">Privacy notice</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="wrap footer-reg">
+    <div class="reg-text">
+      <p>Quinlan Mensah Solicitors is authorised and regulated by the Solicitors Regulation Authority, SRA number: <span class="example-slot">example</span>. The SRA's rules are the <a href="https://www.sra.org.uk/solicitors/standards-regulations/">SRA Standards and Regulations</a>.</p>
+      <p>Quinlan Mensah Solicitors is the trading name of Quinlan Mensah Limited, a company registered in England and Wales, company number: <span class="example-slot">example</span>. Registered office: 6 Halyard Walk, Chiswick, London W4.</p>
+      <p>Not happy with our service? Read our <a href="complaints.html">complaints procedure</a>. If we cannot put things right, you may be able to complain to the <a href="complaints.html#legal-ombudsman">Legal Ombudsman</a>.</p>
+    </div>
+    <div class="sra-badge" role="note" aria-label="SRA digital badge, example slot">
+      <span class="sra-badge-head"><svg class="icon"><use href="#i-shield"/></svg> SRA digital badge</span>
+      <span class="sra-badge-body">Example slot. A real firm shows its live badge here. It links to the firm's entry on the SRA register.</span>
+      <span class="example-slot">example</span>
+    </div>
+  </div>
+  <div class="wrap footer-base">
+    <p class="footer-credit">A sample website by <a href="https://agilerelease.co.uk/#websites">Agile Release</a>. Quinlan Mensah Solicitors is made up. &copy; 2026 Agile Release Limited. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

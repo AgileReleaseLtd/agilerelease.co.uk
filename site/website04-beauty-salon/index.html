@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lunette Beauty Rooms | Nails, lashes, brows and facials in Ealing (sample website)</title>
+<meta name="description" content="A calm beauty salon in Ealing for gel and BIAB nails, lash extensions and lifts, brows, facials and waxing. Book online by WhatsApp. A sample website by Agile Release.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#f7f4ef">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="preload" href="css/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="css/fonts/jost-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js" defer></script>
+<script src="js/hours.js" defer></script>
+<script src="js/site.js" defer></script>
+</head>
+<body>
+
+<svg class="sprite" aria-hidden="true">
+  <symbol id="i-polish" viewBox="0 0 24 24"><path d="M10 2.75h4a1 1 0 0 1 1 1V9H9V3.75a1 1 0 0 1 1-1Z"/><path d="M8 9h8a2.5 2.5 0 0 1 2.5 2.5v7.25a2.5 2.5 0 0 1-2.5 2.5H8a2.5 2.5 0 0 1-2.5-2.5V11.5A2.5 2.5 0 0 1 8 9Z"/><path d="M9 14.75h6"/></symbol>
+  <symbol id="i-lash" viewBox="0 0 24 24"><path d="M3 9.5c2.6 3.4 5.6 5 9 5s6.4-1.6 9-5"/><path d="m5.6 12.4-1.5 2.2M8.6 13.9l-.8 2.6M12 14.5v2.8M15.4 13.9l.8 2.6M18.4 12.4l1.5 2.2"/></symbol>
+  <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3.2s6 6.3 6 10.8a6 6 0 0 1-12 0c0-4.5 6-10.8 6-10.8Z"/><path d="M9.2 14.4a3 3 0 0 0 2.6 2.8"/></symbol>
+  <symbol id="i-wax" viewBox="0 0 24 24"><path d="M4.6 11.5h14.8l-1.1 7.2A2.8 2.8 0 0 1 15.5 21h-7a2.8 2.8 0 0 1-2.8-2.3Z"/><path d="M3.5 11.5h17"/><path d="m12.6 11.5 4.6-8a1.2 1.2 0 0 1 2.1 1.2l-3.9 6.8"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3.5" y="8" width="17" height="4.5" rx="1"/><path d="M5 12.5v7a1.5 1.5 0 0 0 1.5 1.5h11a1.5 1.5 0 0 0 1.5-1.5v-7M12 8v13"/><path d="M12 8C10.6 5.2 7.4 4 6.6 5.8 5.9 7.4 8.4 8 12 8Zm0 0c1.4-2.8 4.6-4 5.4-2.2.7 1.6-1.8 2.2-5.4 2.2Z"/></symbol>
+  <symbol id="i-care" viewBox="0 0 24 24"><path d="M11 3.5c.6 4.3 2.2 5.9 6.5 6.5-4.3.6-5.9 2.2-6.5 6.5-.6-4.3-2.2-5.9-6.5-6.5 4.3-.6 5.9-2.2 6.5-6.5Z"/><path d="M18.5 14.5c.25 1.6.9 2.25 2.5 2.5-1.6.25-2.25.9-2.5 2.5-.25-1.6-.9-2.25-2.5-2.5 1.6-.25 2.25-.9 2.5-2.5Z"/></symbol>
+  <symbol id="i-patch" viewBox="0 0 24 24"><path d="M4.3 15.1 15.1 4.3a3.3 3.3 0 0 1 4.6 4.6L8.9 19.7a3.3 3.3 0 0 1-4.6-4.6Z"/><path d="m9.2 9.2 5.6 5.6"/><path d="M11.4 12h.1M12.9 10.5h.1M12 13.5h.1M13.5 12h.1"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 7 8.5-7"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+  <symbol id="i-train" viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="13.5" rx="3"/><path d="M6 10.5h12M9 21l1.6-4.5M15 21l-1.6-4.5M9.5 13.6h.1M14.5 13.6h.1"/></symbol>
+  <symbol id="i-door" viewBox="0 0 24 24"><path d="M4.5 21h15M7 21V4.5A1.5 1.5 0 0 1 8.5 3h7A1.5 1.5 0 0 1 17 4.5V21"/><path d="M14 12.5h.1"/></symbol>
+  <symbol id="i-card" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3 10h18M6.5 14.5h4"/></symbol>
+  <symbol id="i-print" viewBox="0 0 24 24"><path d="M7 9V3.5h10V9"/><rect x="3.5" y="9" width="17" height="8" rx="1.5"/><path d="M7 14h10v6.5H7Z"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5.5M12 7.7v.1"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5.5v13M5.5 12h13"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 8h16M4 16h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<aside class="sample-bar" aria-label="About this sample website">
+  <div class="wrap sample-bar-inner">
+    <p><strong>Sample website by Agile Release.</strong> Lunette Beauty Rooms is not a real salon: the treatments, prices and address are examples.</p>
+    <a href="https://agilerelease.co.uk/#websites">Get a site like this <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  </div>
+</aside>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Lunette Beauty Rooms, home">
+      <svg class="brand-mark" viewBox="0 0 36 40" aria-hidden="true"><path class="brand-arch" d="M4 39V18a14 14 0 0 1 28 0v21Z"/><path class="brand-moon" d="M10.5 39a7.5 7.5 0 0 1 15 0Z"/><path class="brand-line" d="M8.5 18.5a9.5 9.5 0 0 1 19 0"/></svg>
+      <span class="brand-text"><span class="brand-name">Lunette</span><span class="brand-sub">Beauty Rooms</span></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="treatments.html">Treatments</a></li>
+        <li><a href="book.html">Book</a></li>
+        <li><a href="vouchers.html">Gift vouchers</a></li>
+        <li><a href="aftercare.html">Aftercare</a></li>
+        <li><a href="#visit">Visit us</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary btn-sm header-cta" href="book.html">Book now</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+      <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg><span class="visually-hidden">Menu</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <p class="kicker">Nails, lashes, brows, facials and waxing</p>
+      <h1 class="display">Unhurried beauty in <em>Ealing</em></h1>
+      <p class="lead">A small salon on Quince Row, five minutes from Ealing Broadway station. We book every appointment with time to spare, so you are never rushed out of the chair.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="book.html">Book an appointment</a>
+        <a class="btn btn-outline" href="treatments.html">Treatments and prices</a>
+      </div>
+      <ul class="hero-facts">
+        <li><span class="status-dot" aria-hidden="true"></span> <span data-open-status>Open Tuesday to Sunday</span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-patch"/></svg> Free patch tests, no appointment needed</li>
+      </ul>
+    </div>
+
+    <div class="hero-art">
+      <div class="arch arch-hero">
+        <svg class="still-life" viewBox="0 0 400 500" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+          <rect width="400" height="500" fill="#e2e8ec"/>
+          <circle cx="282" cy="150" r="84" fill="#f1e7d8"/>
+          <path d="M214 92c.9 6.4 3.3 8.8 9.7 9.7-6.4.9-8.8 3.3-9.7 9.7-.9-6.4-3.3-8.8-9.7-9.7 6.4-.9 8.8-3.3 9.7-9.7Z" fill="#a8834e"/>
+          <path d="M364 226c.6 4.3 2.2 5.9 6.5 6.5-4.3.6-5.9 2.2-6.5 6.5-.6-4.3-2.2-5.9-6.5-6.5 4.3-.6 5.9-2.2 6.5-6.5Z" fill="#a8834e"/>
+          <g fill="none" stroke="#26303d" stroke-width="2.2" stroke-linecap="round">
+            <path d="M240 146Q282 186 324 146"/>
+            <path d="M252.6 156.2l-7 10M265.2 162.8l-3.5 12M282 166v12.5M298.8 162.8l3.5 12M311.4 156.2l7 10"/>
+          </g>
+          <path d="M353 392C351 334 344 274 320 214" fill="none" stroke="#5d7774" stroke-width="2.4" stroke-linecap="round"/>
+          <g fill="#6f8a86">
+            <path d="M351 356c-8-14-22-20-36-18 9 10 22 18 36 18Z"/>
+            <path d="M349 322c7-14 20-21 34-20-8 11-20 19-34 20Z"/>
+            <path d="M343 290c-9-12-23-17-37-14 10 9 23 15 37 14Z"/>
+            <path d="M336 260c6-14 18-22 32-22-7 11-18 19-32 22Z"/>
+            <path d="M324 228c-10-10-24-13-37-8 11 7 25 11 37 8Z"/>
+            <path d="M320 214c2-13 9-22 20-27-1 12-8 22-20 27Z"/>
+          </g>
+          <rect x="0" y="340" width="212" height="160" fill="#f8f3ec"/>
+          <rect x="0" y="340" width="212" height="7" fill="#fffbf5"/>
+          <rect x="212" y="392" width="188" height="108" fill="#eadfd0"/>
+          <rect x="212" y="392" width="188" height="6" fill="#f3eadf"/>
+          <ellipse cx="112" cy="340" rx="50" ry="5" fill="#26303d" opacity=".08"/>
+          <rect x="93" y="156" width="38" height="86" rx="7" fill="#26303d"/>
+          <rect x="101" y="166" width="5" height="64" rx="2.5" fill="#fff" opacity=".16"/>
+          <rect x="96" y="238" width="32" height="16" rx="3" fill="#5f2030"/>
+          <rect x="72" y="252" width="80" height="88" rx="16" fill="#7a2c3b"/>
+          <rect x="84" y="266" width="9" height="58" rx="4.5" fill="#fff" opacity=".2"/>
+          <ellipse cx="182" cy="340" rx="26" ry="4" fill="#26303d" opacity=".08"/>
+          <rect x="160" y="300" width="44" height="40" rx="8" fill="#f1e7d8" stroke="#a8834e" stroke-width="1.5"/>
+          <rect x="156" y="289" width="52" height="15" rx="5" fill="#a8834e"/>
+          <ellipse cx="361" cy="392" rx="16" ry="3" fill="#26303d" opacity=".1"/>
+          <rect x="352" y="344" width="18" height="48" rx="9" fill="#f8f3ec" stroke="#a8834e" stroke-width="1.5"/>
+          <g transform="translate(286 388)">
+            <g transform="rotate(-40)"><rect x="-2" y="-24" width="4" height="24" fill="#a8834e"/><path d="M0-102c12 14 14 42 13 64-1 10-6 14-13 14s-12-4-13-14c-1-22 1-50 13-64Z" fill="#e7d3c4"/></g>
+            <g transform="rotate(-20)"><rect x="-2" y="-24" width="4" height="24" fill="#a8834e"/><path d="M0-102c12 14 14 42 13 64-1 10-6 14-13 14s-12-4-13-14c-1-22 1-50 13-64Z" fill="#c9d3dc"/></g>
+            <g><rect x="-2" y="-24" width="4" height="24" fill="#a8834e"/><path d="M0-102c12 14 14 42 13 64-1 10-6 14-13 14s-12-4-13-14c-1-22 1-50 13-64Z" fill="#a8834e"/></g>
+            <g transform="rotate(20)"><rect x="-2" y="-24" width="4" height="24" fill="#a8834e"/><path d="M0-102c12 14 14 42 13 64-1 10-6 14-13 14s-12-4-13-14c-1-22 1-50 13-64Z" fill="#26303d"/></g>
+            <g transform="rotate(40)"><rect x="-2" y="-24" width="4" height="24" fill="#a8834e"/><path d="M0-102c12 14 14 42 13 64-1 10-6 14-13 14s-12-4-13-14c-1-22 1-50 13-64Z" fill="#7a2c3b"/></g>
+            <circle r="6" fill="#f8f3ec" stroke="#a8834e" stroke-width="2"/>
+          </g>
+        </svg>
+      </div>
+      <a class="hero-voucher" href="vouchers.html">
+        <svg class="icon" aria-hidden="true"><use href="#i-gift"/></svg>
+        <span><strong>Gift vouchers</strong> By email, or a printed card to collect</span>
+        <svg class="icon icon-sm hero-voucher-arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="treatments" aria-labelledby="treatments-title">
+  <div class="wrap">
+    <header class="section-head" data-reveal>
+      <p class="kicker">Treatments</p>
+      <h2 class="h2" id="treatments-title">Four things, done properly</h2>
+      <p>We keep the menu short, so everyone here knows every treatment on it inside out.</p>
+    </header>
+    <ul class="cat-grid" data-reveal>
+      <li>
+        <a class="cat-card" href="treatments.html#nails">
+          <span class="cat-arch"><svg class="cat-icon" aria-hidden="true"><use href="#i-polish"/></svg></span>
+          <span class="cat-body">
+            <span class="cat-name">Nails</span>
+            <span class="cat-text">Gel polish, BIAB, manicures and pedicures.</span>
+            <span class="cat-meta"><span data-cat-from="nails">From £30</span> <span data-cat-count="nails">8 treatments</span></span>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a class="cat-card" href="treatments.html#lashes">
+          <span class="cat-arch"><svg class="cat-icon" aria-hidden="true"><use href="#i-lash"/></svg></span>
+          <span class="cat-body">
+            <span class="cat-name">Lashes &amp; brows</span>
+            <span class="cat-text">Extensions, lash lifts, tints, lamination and shaping.</span>
+            <span class="cat-meta"><span data-cat-from="lashes">From £14</span> <span data-cat-count="lashes">11 treatments</span></span>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a class="cat-card" href="treatments.html#facials">
+          <span class="cat-arch"><svg class="cat-icon" aria-hidden="true"><use href="#i-drop"/></svg></span>
+          <span class="cat-body">
+            <span class="cat-name">Facials</span>
+            <span class="cat-text">From a lunchtime refresh to a deep cleanse.</span>
+            <span class="cat-meta"><span data-cat-from="facials">From £45</span> <span data-cat-count="facials">5 treatments</span></span>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a class="cat-card" href="treatments.html#waxing">
+          <span class="cat-arch"><svg class="cat-icon" aria-hidden="true"><use href="#i-wax"/></svg></span>
+          <span class="cat-body">
+            <span class="cat-name">Waxing</span>
+            <span class="cat-text">Hot wax for small and intimate areas, warm wax for legs.</span>
+            <span class="cat-meta"><span data-cat-from="waxing">From £10</span> <span data-cat-count="waxing">8 treatments</span></span>
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section-tight work" aria-labelledby="work-title">
+  <div class="wrap">
+    <header class="work-head" data-reveal>
+      <div>
+        <p class="kicker">Recent work</p>
+        <h2 class="h2" id="work-title">Fresh from the chair</h2>
+      </div>
+      <p>Sets, lifts and brows from the last few weeks. <span class="work-note">On this sample site the frames are placeholders: the salon's own photos go here.</span></p>
+    </header>
+    <ul class="work-grid" data-reveal>
+      <li>
+        <figure class="work-tile">
+          <div class="work-frame work-lines"><span class="work-badge"><svg class="icon" aria-hidden="true"><use href="#i-polish"/></svg></span><span class="work-tag">Photo to come</span></div>
+          <figcaption><strong>Almond gel, garnet</strong> Gel polish, hands</figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure class="work-tile">
+          <div class="work-frame work-dots"><span class="work-badge"><svg class="icon" aria-hidden="true"><use href="#i-lash"/></svg></span><span class="work-tag">Photo to come</span></div>
+          <figcaption><strong>Soft lift and tint</strong> Lash lift &amp; tint</figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure class="work-tile">
+          <div class="work-frame work-stripes"><span class="work-badge"><svg class="icon" aria-hidden="true"><use href="#i-polish"/></svg></span><span class="work-tag">Photo to come</span></div>
+          <figcaption><strong>Milky BIAB, chrome tips</strong> BIAB overlay and nail art</figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure class="work-tile">
+          <div class="work-frame work-grid-pattern"><span class="work-badge"><svg class="icon" aria-hidden="true"><use href="#i-care"/></svg></span><span class="work-tag">Photo to come</span></div>
+          <figcaption><strong>Brushed-up brows</strong> Brow lamination &amp; tint</figcaption>
+        </figure>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section-mist" id="how" aria-labelledby="how-title">
+  <div class="wrap how">
+    <header class="section-head section-head-left" data-reveal>
+      <p class="kicker">Booking</p>
+      <h2 class="h2" id="how-title">Booked in a few taps, confirmed by a person</h2>
+      <p>No app and no account. You tell us what you would like and when, and one of us replies.</p>
+      <p class="how-cta"><a class="btn btn-primary" href="book.html">Start a booking</a></p>
+    </header>
+    <ol class="how-steps" data-reveal>
+      <li>
+        <span class="how-num" aria-hidden="true">i.</span>
+        <h3>Choose your treatments</h3>
+        <p>Pick one or several. We add up the time and the price as you go.</p>
+      </li>
+      <li>
+        <span class="how-num" aria-hidden="true">ii.</span>
+        <h3>Pick a day and a time</h3>
+        <p>Up to five weeks ahead. You only see start times that fit before we close.</p>
+      </li>
+      <li>
+        <span class="how-num" aria-hidden="true">iii.</span>
+        <h3>Send it on WhatsApp</h3>
+        <p>Your request arrives as a ready-written message. We reply to confirm, usually within the hour while we are open.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="section voucher-band" aria-labelledby="gift-title">
+  <div class="wrap voucher-band-inner">
+    <div class="voucher-band-copy" data-reveal>
+      <p class="kicker kicker-light">Gift vouchers</p>
+      <h2 class="h2" id="gift-title">A present that is an afternoon off</h2>
+      <p>Choose an amount or a particular treatment, add your own message, and pick an e-voucher by email or a printed card in an envelope, ready to collect from the salon.</p>
+      <ul class="tick-list">
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> From £20, or any treatment on the menu</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Valid for twelve months</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> No online payment: we send you a secure card payment link</li>
+      </ul>
+      <a class="btn btn-light" href="vouchers.html">Create a voucher</a>
+    </div>
+    <div class="voucher-stack" data-reveal aria-hidden="true">
+      <div class="voucher v-porcelain voucher-back">
+        <div class="v-top"><span class="v-brand">Lunette</span></div>
+      </div>
+      <div class="voucher v-garnet voucher-front">
+        <svg class="v-art" viewBox="0 0 200 240" preserveAspectRatio="xMaxYMax meet"><path d="M30 240V110a70 70 0 0 1 140 0v130"/><path d="M50 240V112a50 50 0 0 1 100 0v128"/><path d="M70 240V114a30 30 0 0 1 60 0v126"/><path class="v-art-moon" d="M78 240a22 22 0 0 1 44 0Z"/></svg>
+        <div class="v-top"><span class="v-brand">Lunette</span><span class="v-label">Gift voucher</span></div>
+        <div class="v-main">
+          <p class="v-value">£75</p>
+          <p class="v-sub">to spend on any treatment</p>
+        </div>
+        <div class="v-people">
+          <p class="v-for">For <span>Amira</span></p>
+          <p class="v-msg">Happy birthday. Take an afternoon just for you.</p>
+          <p class="v-from">From <span>Jo</span></p>
+        </div>
+        <div class="v-foot"><span>Valid for 12 months</span><span>Example</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="policies" aria-labelledby="policies-title">
+  <div class="wrap">
+    <header class="section-head" data-reveal>
+      <p class="kicker">Good to know</p>
+      <h2 class="h2" id="policies-title">Before you book</h2>
+      <p>Three things we ask of everyone. They keep treatments safe and the diary fair.</p>
+    </header>
+    <div class="policy-grid" data-reveal>
+      <article class="policy" id="patch-tests">
+        <span class="policy-icon"><svg class="icon" aria-hidden="true"><use href="#i-patch"/></svg></span>
+        <h3>Patch tests</h3>
+        <p>Lash and brow tints, lash lifts, brow lamination and lash extensions all need a patch test at least 48 hours before your appointment.</p>
+        <p>It is free and takes five minutes. Pop in any time we are open; no appointment needed. We repeat it every six months, and sooner if you have reacted to anything, changed medication or become pregnant.</p>
+        <p>Please tell us if you have ever reacted to hair dye or a black henna tattoo. No patch test means no treatment: a reaction near the eyes can be serious, so we do not make exceptions.</p>
+      </article>
+      <article class="policy" id="cancelling">
+        <span class="policy-icon"><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg></span>
+        <h3>Cancelling or moving</h3>
+        <p>Message us at least 48 hours before to cancel or move your appointment, and there is no charge.</p>
+        <p>With less notice we may charge half the treatment price, and the full price if you do not come at all. That pays for a slot we could have given to someone else.</p>
+        <p>If you are ill, tell us as soon as you can. We will be reasonable.</p>
+      </article>
+      <article class="policy" id="deposits">
+        <span class="policy-icon"><svg class="icon" aria-hidden="true"><use href="#i-card"/></svg></span>
+        <h3>Deposits and running late</h3>
+        <p>Lash extension full sets, and bookings over £100, need a £20 deposit. It comes off your bill, and we send a secure card payment link when we confirm.</p>
+        <p>Running late? Message us. If you are more than 15 minutes late we may need to shorten your treatment, so the next person is not kept waiting.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section-oat" id="visit" aria-labelledby="visit-title">
+  <div class="wrap visit">
+    <div class="visit-info" data-reveal>
+      <p class="kicker">Visit us</p>
+      <h2 class="h2" id="visit-title">Finding the salon</h2>
+      <p class="visit-address"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> <span>12 Quince Row, Ealing, London W5</span></p>
+      <ul class="visit-notes">
+        <li><svg class="icon" aria-hidden="true"><use href="#i-train"/></svg> <span>Five minutes' walk from Ealing Broadway station (Central, District and Elizabeth lines). Look for the arched window between the bookshop and the florist.</span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-door"/></svg> <span>Step-free entrance and a ground-floor treatment room. Tell us if you need anything and we will plan for it.</span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg> <span>Pay-and-display parking on nearby streets; check the signs, as some bays are for residents only.</span></li>
+      </ul>
+      <h3 class="hours-title"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg> Opening hours <span class="hours-status" data-open-status></span></h3>
+      <dl class="hours" data-hours>
+        <div><dt>Monday</dt><dd class="is-shut">Closed</dd></div>
+        <div><dt>Tuesday</dt><dd>10am to 7pm</dd></div>
+        <div><dt>Wednesday</dt><dd>10am to 7pm</dd></div>
+        <div><dt>Thursday</dt><dd>10am to 8pm</dd></div>
+        <div><dt>Friday</dt><dd>10am to 8pm</dd></div>
+        <div><dt>Saturday</dt><dd>9am to 6pm</dd></div>
+        <div><dt>Sunday</dt><dd>10am to 4pm</dd></div>
+      </dl>
+      <div class="specials" data-specials hidden>
+        <h4>Coming up</h4>
+        <ul></ul>
+      </div>
+    </div>
+
+    <div class="visit-side" data-reveal>
+      <figure class="map-card">
+        <svg class="map" viewBox="0 0 400 280" role="img" aria-labelledby="map-title">
+          <title id="map-title">Map: the salon on Quince Row, a five-minute walk south of Ealing Broadway station, with Walpole Park to the south-west.</title>
+          <rect width="400" height="280" fill="#f3ede4"/>
+          <path d="M-10 196C40 180 70 186 104 214S150 280 150 300H-10Z" fill="#d7e0d4"/>
+          <g fill="none" stroke="#fffdf8" stroke-linecap="round">
+            <path d="M-10 120C80 116 170 126 410 112" stroke-width="12"/>
+            <path d="M232 -10C226 70 236 170 222 300" stroke-width="14"/>
+            <path d="M120 -10C132 60 150 110 170 300" stroke-width="9"/>
+            <path d="M300 -10C304 80 320 190 340 300" stroke-width="9"/>
+            <path d="M232 196C290 192 340 202 410 200" stroke-width="9"/>
+          </g>
+          <path d="M-10 66C100 74 200 82 410 58" fill="none" stroke="#a7aeb6" stroke-width="5"/>
+          <path d="M-10 66C100 74 200 82 410 58" fill="none" stroke="#f3ede4" stroke-width="2" stroke-dasharray="6 6"/>
+          <rect x="196" y="62" width="58" height="24" rx="12" fill="#26303d"/>
+          <g fill="none" stroke="#fffdf8" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="219" y="66.5" width="12" height="11.5" rx="3"/>
+            <path d="M219 72h12M221.5 78l-2 3M228.5 78l2 3"/>
+          </g>
+          <circle cx="222" cy="75.2" r=".9" fill="#fffdf8"/>
+          <circle cx="228" cy="75.2" r=".9" fill="#fffdf8"/>
+          <path d="M232 92C234 120 233 150 230 168" fill="none" stroke="#7a2c3b" stroke-width="2.4" stroke-dasharray="1 6" stroke-linecap="round"/>
+          <path d="M229 186s-15-13.2-15-24.5a15 15 0 0 1 30 0C244 172.8 229 186 229 186Z" fill="#7a2c3b"/>
+          <circle cx="229" cy="161.5" r="5.5" fill="#fffdf8"/>
+          <g class="map-label">
+            <text x="262" y="78">Ealing Broadway</text>
+            <text x="252" y="160" class="map-label-strong">Lunette</text>
+            <text x="252" y="176">12 Quince Row</text>
+            <text x="18" y="252">Walpole Park</text>
+          </g>
+          <g fill="none" stroke="#5b616a" stroke-width="1.4" stroke-linecap="round">
+            <path d="M372 34v-16M366 24l6-6 6 6"/>
+          </g>
+          <text class="map-north" x="372" y="46">N</text>
+        </svg>
+        <figcaption>Not to scale. <a href="https://www.google.com/maps/search/?api=1&amp;query=Ealing+Broadway+station+London">Ealing Broadway station on Google Maps</a></figcaption>
+      </figure>
+
+      <div class="contact-card">
+        <h3 class="contact-title">Questions? Message us.</h3>
+        <p>We reply fastest on WhatsApp. If we are with a client when you call, leave a message and we will ring you back.</p>
+        <div class="contact-actions">
+          <a class="btn btn-primary btn-block" href="https://wa.me/447700900482" data-contact="whatsapp"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg> Message us on WhatsApp</a>
+          <a class="btn btn-ghost btn-block" href="tel:+442079460482" data-contact="phone"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> Call 020 7946 0482</a>
+          <a class="btn btn-ghost btn-block" href="mailto:hello@lunette.example" data-contact="email"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg> hello@lunette.example</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq" aria-labelledby="faq-title">
+  <div class="wrap faq-layout">
+    <header class="section-head section-head-left" data-reveal>
+      <p class="kicker">Questions</p>
+      <h2 class="h2" id="faq-title">Asked at the desk</h2>
+      <p>Anything else? <a href="#visit">Message us</a> and we will reply.</p>
+    </header>
+    <div class="faq" data-reveal>
+      <details>
+        <summary>How do I book, and how do I know it is confirmed?</summary>
+        <p>Choose your treatments and a time on the <a href="book.html">booking page</a>, then send the request on WhatsApp or by email. Nothing is booked until we reply to confirm, usually within the hour while we are open. You can also simply call us.</p>
+      </details>
+      <details>
+        <summary>Do I need a patch test?</summary>
+        <p>Yes, for lash and brow tints, lash lifts, brow lamination and lash extensions. It is free, takes five minutes and must be at least 48 hours before your appointment. Pop in any time we are open. <a href="#patch-tests">More about patch tests</a>.</p>
+      </details>
+      <details>
+        <summary>How long do gel and BIAB last?</summary>
+        <p>Gel polish lasts about two weeks on hands and three to four weeks on toes. BIAB lasts three to four weeks, then needs an infill or a removal. Please do not peel either off: it takes layers of your own nail with it. <a href="aftercare.html#nails">Nail aftercare</a>.</p>
+      </details>
+      <details>
+        <summary>What should I do before a wax?</summary>
+        <p>Let the hair grow to about 5 mm, roughly four weeks after shaving. Exfoliate gently a day or two before, and skip body lotion on the day. Tell us if you use retinoids or acne medication, as we may not be able to wax that area.</p>
+      </details>
+      <details>
+        <summary>Can I book if I am pregnant?</summary>
+        <p>Most treatments, yes, so please tell us when you book. Some facial treatments are best avoided, we will help you get comfortable on the couch, and hormones can make waxing more sensitive and lash lifts less predictable. If in doubt, check with your midwife.</p>
+      </details>
+      <details>
+        <summary>Is there a minimum age?</summary>
+        <p>We do not do lash extensions, tints, lifts or intimate waxing for anyone under 16. Sixteen and seventeen year olds need a parent or guardian with them for those. Nails are fine from 12 with an adult.</p>
+      </details>
+      <details>
+        <summary>How can I pay?</summary>
+        <p>Card, Apple Pay, Google Pay or cash, at the end of your appointment. Gift vouchers are taken at the desk: just mention the voucher when you book.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a class="brand brand-light" href="index.html" aria-label="Lunette Beauty Rooms, home">
+      <svg class="brand-mark" viewBox="0 0 36 40" aria-hidden="true"><path class="brand-arch" d="M4 39V18a14 14 0 0 1 28 0v21Z"/><path class="brand-moon" d="M10.5 39a7.5 7.5 0 0 1 15 0Z"/><path class="brand-line" d="M8.5 18.5a9.5 9.5 0 0 1 19 0"/></svg>
+      <span class="brand-text"><span class="brand-name">Lunette</span><span class="brand-sub">Beauty Rooms</span></span>
+    </a>
+      <p>Nails, lashes and brows, facials and waxing on Quince Row, Ealing.</p>
+      <p class="footer-contact">12 Quince Row, Ealing, London W5<br>
+        <a href="tel:+442079460482" data-contact="phone">020 7946 0482</a><br>
+        <a href="mailto:hello@lunette.example" data-contact="email">hello@lunette.example</a></p>
+    </div>
+    <nav class="footer-nav" aria-labelledby="footer-nav-title">
+      <h2 class="footer-title" id="footer-nav-title">The salon</h2>
+      <ul>
+        <li><a href="treatments.html">Treatments and prices</a></li>
+        <li><a href="book.html">Book an appointment</a></li>
+        <li><a href="vouchers.html">Gift vouchers</a></li>
+        <li><a href="aftercare.html">Aftercare</a></li>
+        <li><a href="index.html#policies">Patch tests and cancelling</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </nav>
+    <div class="footer-hours">
+      <h2 class="footer-title">Opening hours</h2>
+      <ul class="hours-compact" data-hours-compact>
+        <li><span>Monday</span> Closed</li>
+        <li><span>Tue to Wed</span> 10am to 7pm</li>
+        <li><span>Thu to Fri</span> 10am to 8pm</li>
+        <li><span>Saturday</span> 9am to 6pm</li>
+        <li><span>Sunday</span> 10am to 4pm</li>
+      </ul>
+    </div>
+    <p class="footer-credit">A sample website by <a href="https://agilerelease.co.uk/#websites">Agile Release</a>. Lunette Beauty Rooms is made up. &copy; 2026 Agile Release Limited. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

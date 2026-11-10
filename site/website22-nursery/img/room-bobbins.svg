@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200">
+  <defs><filter id="felt" x="-6%" y="-6%" width="112%" height="112%" color-interpolation-filters="sRGB"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="5" result="wobble"/><feDisplacementMap in="SourceGraphic" in2="wobble" scale="4" xChannelSelector="R" yChannelSelector="G" result="cut"/><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="11" result="grain"/><feColorMatrix in="grain" type="matrix" values="0 0 0 0 0.17  0 0 0 0 0.15  0 0 0 0 0.22  0.42 0 0 0 -0.16" result="specks"/><feComposite in="specks" in2="cut" operator="in" result="specksIn"/><feMerge><feMergeNode in="cut"/><feMergeNode in="specksIn"/></feMerge></filter></defs>
+  <g filter="url(#felt)">
+    <path d="M160 0 V26" stroke="#9a6b4c" stroke-width="3" stroke-linecap="round"/>
+    <path d="M60 30 Q160 18 260 30" fill="none" stroke="#9a6b4c" stroke-width="8" stroke-linecap="round"/>
+    <path d="M78 30 V78 M160 24 V104 M242 30 V70" stroke="#5d5869" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 5"/>
+    <path d="M60 92 A26 26 0 1 0 98 70 A20 20 0 1 1 60 92 Z" fill="#f4bf55"/>
+    <path d="M70 92 A17 17 0 0 0 92 80" fill="none" stroke="#c98a1d" stroke-width="2.2" stroke-dasharray="4 5" stroke-linecap="round"/>
+    <path d="M160 98 L168 116 L188 118 L173 131 L178 151 L160 140 L142 151 L147 131 L132 118 L152 116 Z" fill="#b9a8e2"/>
+    <path d="M160 108 L165 120 L177 121 L168 129 L171 141 L160 134 L149 141 L152 129 L143 121 L155 120 Z" fill="none" stroke="#8f7cc9" stroke-width="2" stroke-dasharray="4 4"/>
+    <path d="M214 92 C206 76 226 64 238 74 C244 60 266 62 268 78 C282 78 286 96 272 100 L222 102 C210 102 206 96 214 92 Z" fill="#fffaf3"/>
+    <path d="M224 94 L266 94" stroke="#e9cdb6" stroke-width="2" stroke-dasharray="5 6" stroke-linecap="round"/>
+    <circle cx="232" cy="84" r="1.8" fill="#2b2838"/><circle cx="250" cy="84" r="1.8" fill="#2b2838"/>
+    <path d="M236 90 Q241 94 246 90" fill="none" stroke="#2b2838" stroke-width="1.6" stroke-linecap="round"/>
+    <circle cx="160" cy="176" r="15" fill="#ec9a92"/>
+    <circle cx="155" cy="171" r="2.2" fill="#a33d43"/><circle cx="165" cy="171" r="2.2" fill="#a33d43"/><circle cx="155" cy="181" r="2.2" fill="#a33d43"/><circle cx="165" cy="181" r="2.2" fill="#a33d43"/>
+    <circle cx="92" cy="166" r="8" fill="#a9c8e6"/><circle cx="234" cy="160" r="10" fill="#f3a679"/>
+  </g>
+</svg>

@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy | Earthpin Electrical (sample website)</title>
+<meta name="description" content="How Earthpin Electrical's website handles your details. A sample website by Agile Release.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0b1730">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="preload" href="css/fonts/hubot-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="css/fonts/mona-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js" defer></script>
+<script src="js/dates.js" defer></script>
+<script src="js/site.js" defer></script>
+</head>
+<body>
+
+<svg class="sprite" aria-hidden="true">
+  <symbol id="i-cable" viewBox="0 0 24 24"><path d="M2.5 19.5h3a4 4 0 0 0 4-4v-3a4 4 0 0 1 4-4h2.5"/><path d="M16 6.5v4h2v-4z"/><path d="M18 7.2l3.5-2.2M18 8.5h3.8M18 9.8l3.5 2.2"/></symbol>
+  <symbol id="i-board" viewBox="0 0 24 24"><rect x="2.5" y="4" width="19" height="16" rx="2"/><path d="M2.5 8.5h19M2.5 16h19"/><path d="M6.5 11v2.5M10 11v2.5M13.5 11v2.5M17 11v2.5"/></symbol>
+  <symbol id="i-ev" viewBox="0 0 24 24"><rect x="3.5" y="2.5" width="11" height="15" rx="2.5"/><path d="M10 6 7.6 10h3l-2.4 4"/><path d="M9 17.5v1a2.5 2.5 0 0 0 5 0V14a2.5 2.5 0 0 1 5 0v7.5"/></symbol>
+  <symbol id="i-report" viewBox="0 0 24 24"><rect x="4.5" y="4" width="15" height="17.5" rx="2"/><path d="M9 2.5h6v3.2H9z"/><path d="m8.5 13.2 2.4 2.4 4.6-5"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18.5h6M10 21.5h4"/><path d="M12 2.5a6.5 6.5 0 0 0-3.9 11.7c.6.5.9 1.1.9 1.9v.4h6v-.4c0-.8.3-1.4.9-1.9A6.5 6.5 0 0 0 12 2.5Z"/></symbol>
+  <symbol id="i-socket" viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M9 8.6v3.2M5.8 15h2.4M9.8 15h2.4"/><rect x="15.6" y="9" width="2.6" height="6" rx="0.8"/></symbol>
+  <symbol id="i-fault" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="7"/><path d="m15.6 15.6 5.4 5.4"/><path d="M11.6 6 9 10.6h3.2L9.8 15"/></symbol>
+  <symbol id="i-alarm" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5.5"/><circle cx="12" cy="12" r="1.6"/><path d="M4.6 8a9 9 0 0 0 0 8M19.4 8a9 9 0 0 1 0 8M2 5.5a13 13 0 0 0 0 13M22 5.5a13 13 0 0 1 0 13"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 7 8.5-7"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.3 7.5 9.5 4.3-1.2 7.5-4.9 7.5-9.5V6L12 3Z"/><path d="m8.8 12 2.2 2.2 4.2-4.4"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 7.5h3L8.5 5h7L17 7.5h3a1 1 0 0 1 1 1V18a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V8.5a1 1 0 0 1 1-1Z"/><circle cx="12" cy="13" r="3.5"/></symbol>
+  <symbol id="i-warning" viewBox="0 0 24 24"><path d="M10.3 4.2 2.6 17.6A2 2 0 0 0 4.3 20.6h15.4a2 2 0 0 0 1.7-3L13.7 4.2a2 2 0 0 0-3.4 0Z"/><path d="M12 9.5v4.5M12 17.3v.2"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24"><circle cx="7.5" cy="15.5" r="4"/><path d="m10.4 12.6 9.1-9.1M16.5 6.5l2.5 2.5M14 9l2 2"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M4 10.5 12 4l8 6.5V20H4z"/><path d="M10 20v-5.5h4V20"/></symbol>
+  <symbol id="i-shop" viewBox="0 0 24 24"><path d="M4.5 10.5V20h15v-9.5"/><path d="M3 9.5 4.8 4h14.4L21 9.5a2.4 2.4 0 0 1-4.5 1.2 2.4 2.4 0 0 1-4.5 0 2.4 2.4 0 0 1-4.5 0A2.4 2.4 0 0 1 3 9.5Z"/><path d="M10 20v-5h4v5"/></symbol>
+  <symbol id="i-pound" viewBox="0 0 24 24"><path d="M16.5 7A4 4 0 0 0 9 8.8V20M6.5 13h7M6.5 20h11"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-power" viewBox="0 0 24 24"><path d="M12 3v8"/><path d="M6.6 6.8a8 8 0 1 0 10.8 0"/></symbol>
+  <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3.5s6 6.4 6 10.5a6 6 0 0 1-12 0c0-4.1 6-10.5 6-10.5Z"/></symbol>
+  <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 21a6.5 6.5 0 0 0 6.5-6.5c0-4.2-3.2-6.6-4.5-10-1.6 2.1-2.2 3.8-2.2 5.4-1-.9-1.6-2-1.9-3.1C8 9.6 5.5 12 5.5 14.5A6.5 6.5 0 0 0 12 21Z"/></symbol>
+  <symbol id="i-plug" viewBox="0 0 24 24"><path d="M9 2.5v4.5M15 2.5v4.5"/><path d="M6.5 7h11v3.5a5.5 5.5 0 0 1-11 0z"/><path d="M12 16v5.5"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 2.5h8.5L19 7v14.5H6z"/><path d="M14 2.5V7h5"/><path d="m9 14.5 2 2 4-4.5"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24"><path d="M3.5 3.5h7.6l9.4 9.4-7.6 7.6-9.4-9.4z"/><circle cx="8" cy="8" r="1.6"/></symbol>
+  <symbol id="i-hand" viewBox="0 0 24 24"><path d="M8 13V5.5a1.5 1.5 0 0 1 3 0V11"/><path d="M11 10V4a1.5 1.5 0 0 1 3 0v6"/><path d="M14 10V5.5a1.5 1.5 0 0 1 3 0V13"/><path d="M17 11a1.5 1.5 0 0 1 3 0v3a7 7 0 0 1-7 7h-1.2a6 6 0 0 1-4.6-2.2L4 15.6a1.5 1.5 0 0 1 2.3-1.9L8 15.5"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.8v.2"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<aside class="sample-bar" aria-label="About this sample website">
+  <div class="wrap sample-bar-inner">
+    <p><strong>Sample website by Agile Release.</strong> Earthpin Electrical is not a real business: the prices, registrations and numbers are examples.</p>
+    <a href="https://agilerelease.co.uk/#websites">Get a site like this <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a>
+  </div>
+</aside>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Earthpin Electrical, home">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect class="bm-bg" width="32" height="32" rx="8"/><rect class="bm-earth" x="13.9" y="5.5" width="4.2" height="9.5" rx="1.1"/><rect class="bm-pin" x="5.8" y="19.2" width="8.4" height="4" rx="1.1"/><rect class="bm-pin" x="17.8" y="19.2" width="8.4" height="4" rx="1.1"/></svg>
+      <span class="brand-text"><span class="brand-name">Earthpin</span><span class="brand-sub">Electrical</span></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="quote.html">Guide prices</a></li>
+        <li><a href="landlords.html">Landlords</a></li>
+        <li><a href="index.html#areas">Areas</a></li>
+        <li><a href="safety.html">Safety</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li class="nav-extra"><a href="tel:+442079460742" data-contact="phone">Call 020 7946 0742</a></li>
+      </ul>
+    </nav>
+    <a class="header-phone" href="tel:+442079460742" data-contact="phone"><small>Call us</small><span>020 7946 0742</span></a>
+    <a class="btn btn-primary btn-sm header-cta" href="quote.html">Get a guide price</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+      <svg class="icon"><use href="#i-menu"/></svg> Menu
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="page-head">
+  <div class="wrap page-head-inner">
+    <div>
+      <p class="tape"><span class="tape-no">i</span><span>Privacy</span></p>
+      <h1 class="h1">Your details</h1>
+      <p class="lead">Short version: this website doesn't collect or keep anything about you.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-white">
+  <div class="wrap prose">
+    <h2>Guide prices and bookings</h2>
+    <p>When you use the guide price form or book an EICR, the website writes your message on your own device. Nothing is sent until you press send in WhatsApp or your email app, and the website itself never receives or stores your name, postcode, notes or number.</p>
+    <p>Once you send it, we see your message and your number or email address, like any other message. We use them only to price and arrange your job, and to send your certificates. We keep job records and certificates for six years, because building control and insurers can ask for them. We delete enquiries that don't become a job after twelve months.</p>
+    <h2>Tenants' details</h2>
+    <p>If you're a landlord or agent and share your tenants' contact details with us, we use them only to arrange access for the inspection, and delete them when the job is done.</p>
+    <h2>Cookies and tracking</h2>
+    <p>This website sets no cookies, uses no analytics and loads nothing from other websites, including fonts.</p>
+    <h2>Your rights</h2>
+    <p>You can ask us what we hold about you, or ask us to delete it, by WhatsApp or by email to hello@earthpin.example. You can also complain to the Information Commissioner's Office (ico.org.uk).</p>
+    <p class="prose-note">Earthpin Electrical is a made-up business on a sample website, so this notice is an example of what a small electrical firm's privacy page could say.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a class="brand" href="index.html" aria-label="Earthpin Electrical, home">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect class="bm-bg" width="32" height="32" rx="8"/><rect class="bm-earth" x="13.9" y="5.5" width="4.2" height="9.5" rx="1.1"/><rect class="bm-pin" x="5.8" y="19.2" width="8.4" height="4" rx="1.1"/><rect class="bm-pin" x="17.8" y="19.2" width="8.4" height="4" rx="1.1"/></svg>
+      <span class="brand-text"><span class="brand-name">Earthpin</span><span class="brand-sub">Electrical</span></span>
+    </a>
+      <p>Electricians for homes and small businesses in North Finchley, Barnet and nearby. Rewires, fuse boxes, EV chargers, EICRs and the smaller jobs too.</p>
+    </div>
+    <nav class="footer-col" aria-label="Footer">
+      <h2>Pages</h2>
+      <ul>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="quote.html">Get a guide price</a></li>
+        <li><a href="landlords.html">EICRs for landlords</a></li>
+        <li><a href="safety.html">Electrical safety</a></li>
+        <li><a href="index.html#areas">Areas we cover</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </nav>
+    <div class="footer-col">
+      <h2>Contact</h2>
+      <p><a href="https://wa.me/447700900742" data-contact="whatsapp">WhatsApp 07700 900742</a></p>
+      <p><a href="tel:+442079460742" data-contact="phone">Call 020 7946 0742</a></p>
+      <p><a href="mailto:hello@earthpin.example" data-contact="email">hello@earthpin.example</a></p>
+      <p>Unit 3, Kestle Mews, North Finchley, London N12</p>
+    </div>
+    <p class="footer-credit">A sample website by <a href="https://agilerelease.co.uk/#websites">Agile Release</a>. Earthpin Electrical is made up. &copy; 2026 Agile Release Limited. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gift vouchers | Lunette Beauty Rooms (sample website)</title>
+<meta name="description" content="Give an amount or a treatment, add a message, and choose an e-voucher by email or a printed card to collect. A sample website by Agile Release.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#f7f4ef">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="preload" href="css/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="css/fonts/jost-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js" defer></script>
+<script src="js/hours.js" defer></script>
+<script src="js/site.js" defer></script>
+<script src="js/vouchers.js" defer></script>
+</head>
+<body>
+
+<svg class="sprite" aria-hidden="true">
+  <symbol id="i-polish" viewBox="0 0 24 24"><path d="M10 2.75h4a1 1 0 0 1 1 1V9H9V3.75a1 1 0 0 1 1-1Z"/><path d="M8 9h8a2.5 2.5 0 0 1 2.5 2.5v7.25a2.5 2.5 0 0 1-2.5 2.5H8a2.5 2.5 0 0 1-2.5-2.5V11.5A2.5 2.5 0 0 1 8 9Z"/><path d="M9 14.75h6"/></symbol>
+  <symbol id="i-lash" viewBox="0 0 24 24"><path d="M3 9.5c2.6 3.4 5.6 5 9 5s6.4-1.6 9-5"/><path d="m5.6 12.4-1.5 2.2M8.6 13.9l-.8 2.6M12 14.5v2.8M15.4 13.9l.8 2.6M18.4 12.4l1.5 2.2"/></symbol>
+  <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3.2s6 6.3 6 10.8a6 6 0 0 1-12 0c0-4.5 6-10.8 6-10.8Z"/><path d="M9.2 14.4a3 3 0 0 0 2.6 2.8"/></symbol>
+  <symbol id="i-wax" viewBox="0 0 24 24"><path d="M4.6 11.5h14.8l-1.1 7.2A2.8 2.8 0 0 1 15.5 21h-7a2.8 2.8 0 0 1-2.8-2.3Z"/><path d="M3.5 11.5h17"/><path d="m12.6 11.5 4.6-8a1.2 1.2 0 0 1 2.1 1.2l-3.9 6.8"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3.5" y="8" width="17" height="4.5" rx="1"/><path d="M5 12.5v7a1.5 1.5 0 0 0 1.5 1.5h11a1.5 1.5 0 0 0 1.5-1.5v-7M12 8v13"/><path d="M12 8C10.6 5.2 7.4 4 6.6 5.8 5.9 7.4 8.4 8 12 8Zm0 0c1.4-2.8 4.6-4 5.4-2.2.7 1.6-1.8 2.2-5.4 2.2Z"/></symbol>
+  <symbol id="i-care" viewBox="0 0 24 24"><path d="M11 3.5c.6 4.3 2.2 5.9 6.5 6.5-4.3.6-5.9 2.2-6.5 6.5-.6-4.3-2.2-5.9-6.5-6.5 4.3-.6 5.9-2.2 6.5-6.5Z"/><path d="M18.5 14.5c.25 1.6.9 2.25 2.5 2.5-1.6.25-2.25.9-2.5 2.5-.25-1.6-.9-2.25-2.5-2.5 1.6-.25 2.25-.9 2.5-2.5Z"/></symbol>
+  <symbol id="i-patch" viewBox="0 0 24 24"><path d="M4.3 15.1 15.1 4.3a3.3 3.3 0 0 1 4.6 4.6L8.9 19.7a3.3 3.3 0 0 1-4.6-4.6Z"/><path d="m9.2 9.2 5.6 5.6"/><path d="M11.4 12h.1M12.9 10.5h.1M12 13.5h.1M13.5 12h.1"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 7 8.5-7"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+  <symbol id="i-train" viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="13.5" rx="3"/><path d="M6 10.5h12M9 21l1.6-4.5M15 21l-1.6-4.5M9.5 13.6h.1M14.5 13.6h.1"/></symbol>
+  <symbol id="i-door" viewBox="0 0 24 24"><path d="M4.5 21h15M7 21V4.5A1.5 1.5 0 0 1 8.5 3h7A1.5 1.5 0 0 1 17 4.5V21"/><path d="M14 12.5h.1"/></symbol>
+  <symbol id="i-card" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3 10h18M6.5 14.5h4"/></symbol>
+  <symbol id="i-print" viewBox="0 0 24 24"><path d="M7 9V3.5h10V9"/><rect x="3.5" y="9" width="17" height="8" rx="1.5"/><path d="M7 14h10v6.5H7Z"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5.5M12 7.7v.1"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5.5v13M5.5 12h13"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 8h16M4 16h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<aside class="sample-bar" aria-label="About this sample website">
+  <div class="wrap sample-bar-inner">
+    <p><strong>Sample website by Agile Release.</strong> Lunette Beauty Rooms is not a real salon: the treatments, prices and address are examples.</p>
+    <a href="https://agilerelease.co.uk/#websites">Get a site like this <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  </div>
+</aside>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Lunette Beauty Rooms, home">
+      <svg class="brand-mark" viewBox="0 0 36 40" aria-hidden="true"><path class="brand-arch" d="M4 39V18a14 14 0 0 1 28 0v21Z"/><path class="brand-moon" d="M10.5 39a7.5 7.5 0 0 1 15 0Z"/><path class="brand-line" d="M8.5 18.5a9.5 9.5 0 0 1 19 0"/></svg>
+      <span class="brand-text"><span class="brand-name">Lunette</span><span class="brand-sub">Beauty Rooms</span></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="treatments.html">Treatments</a></li>
+        <li><a href="book.html">Book</a></li>
+        <li><a href="vouchers.html" aria-current="page">Gift vouchers</a></li>
+        <li><a href="aftercare.html">Aftercare</a></li>
+        <li><a href="index.html#visit">Visit us</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary btn-sm header-cta" href="book.html">Book now</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+      <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg><span class="visually-hidden">Menu</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+<section class="page-head page-head-compact">
+  <div class="wrap">
+    <p class="kicker">Gift vouchers</p>
+    <h1 class="h1">Give someone an afternoon off</h1>
+    <p class="lead">Choose an amount or a treatment and add your message. The voucher on the right changes as you go. We email it, or have a printed card ready to collect.</p>
+  </div>
+</section>
+
+<form class="voucher-section" data-voucher novalidate>
+  <div class="wrap voucher-layout">
+    <div class="voucher-steps">
+
+      <section class="step-card" id="v-what" aria-labelledby="v1-title">
+        <div class="step-head">
+          <span class="step-no" aria-hidden="true">i.</span>
+          <div>
+            <h2 class="step-title" id="v1-title">What would you like to give?</h2>
+            <p class="step-sub">An amount to spend on anything, or one particular treatment.</p>
+          </div>
+        </div>
+        <fieldset class="field">
+          <legend class="visually-hidden">Kind of voucher</legend>
+          <div class="segmented">
+            <label><input type="radio" name="kind" value="amount" checked> <span>An amount</span></label>
+            <label><input type="radio" name="kind" value="treatment"> <span>A treatment</span></label>
+          </div>
+        </fieldset>
+
+        <div class="kind-panel" data-kind-panel="amount">
+          <fieldset class="field" id="amount" aria-describedby="amount-error">
+            <legend class="field-label">Amount</legend>
+            <div class="amount-grid" data-amounts>
+              <label class="amount-chip"><input type="radio" name="amount" value="25"> <span>£25</span></label>
+              <label class="amount-chip"><input type="radio" name="amount" value="50" checked> <span>£50</span></label>
+              <label class="amount-chip"><input type="radio" name="amount" value="75"> <span>£75</span></label>
+              <label class="amount-chip"><input type="radio" name="amount" value="100"> <span>£100</span></label>
+              <label class="amount-chip"><input type="radio" name="amount" value="150"> <span>£150</span></label>
+              <label class="amount-chip"><input type="radio" name="amount" value="other"> <span>Other</span></label>
+            </div>
+          </fieldset>
+          <div class="field other-amount" data-other hidden>
+            <label class="field-label" for="other-amount" data-other-label>Other amount, £20 to £500</label>
+            <span class="input-prefix"><span aria-hidden="true">£</span><input type="text" inputmode="numeric" id="other-amount" name="other" maxlength="3" autocomplete="off" aria-describedby="amount-error"></span>
+          </div>
+          <p class="field-error" id="amount-error" data-error="amount" hidden>Enter whole pounds, from £20 to £500.</p>
+          <p class="hint">Spend it on any treatment, over as many visits as they like.</p>
+        </div>
+
+        <div class="kind-panel" data-kind-panel="treatment" hidden>
+          <div class="field">
+            <label class="field-label" for="treatment">Treatment</label>
+            <select id="treatment" name="treatment" aria-describedby="treatment-error treatment-info">
+              <option value="">Choose a treatment</option>
+            </select>
+            <p class="hint" id="treatment-info" data-treatment-info>The voucher covers the treatment, even if its price goes up.</p>
+            <p class="field-error" id="treatment-error" data-error="treatment" hidden>Choose a treatment.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="step-card" id="v-personal" aria-labelledby="v2-title">
+        <div class="step-head">
+          <span class="step-no" aria-hidden="true">ii.</span>
+          <div>
+            <h2 class="step-title" id="v2-title">Make it personal</h2>
+            <p class="step-sub">Their name, a few words from you, and a design.</p>
+          </div>
+        </div>
+        <div class="fields">
+          <div class="field">
+            <label class="field-label" for="to">Who is it for?</label>
+            <input type="text" id="to" name="to" maxlength="30" autocomplete="off" aria-describedby="to-error">
+            <span class="field-error" id="to-error" data-error="to" hidden>Add their name.</span>
+          </div>
+          <div class="field">
+            <label class="field-label" for="from">Who is it from?</label>
+            <input type="text" id="from" name="from" maxlength="30" autocomplete="given-name" aria-describedby="from-error">
+            <span class="field-error" id="from-error" data-error="from" hidden>Add your name, as it should appear.</span>
+          </div>
+          <div class="field field-wide">
+            <label class="field-label" for="message">Your message <span class="field-optional">Optional</span></label>
+            <textarea id="message" name="message" rows="3" maxlength="140" aria-describedby="message-count"></textarea>
+            <span class="hint" id="message-count" data-count>Up to 140 characters.</span>
+          </div>
+          <fieldset class="field field-wide">
+            <legend class="field-label">Design</legend>
+            <div class="swatches" data-designs>
+              <label class="swatch swatch-garnet"><input type="radio" name="design" value="garnet" checked> <span><i aria-hidden="true"></i>Garnet</span></label>
+              <label class="swatch swatch-slate"><input type="radio" name="design" value="slate"> <span><i aria-hidden="true"></i>Slate</span></label>
+              <label class="swatch swatch-porcelain"><input type="radio" name="design" value="porcelain"> <span><i aria-hidden="true"></i>Porcelain</span></label>
+            </div>
+          </fieldset>
+        </div>
+      </section>
+
+      <section class="step-card" id="v-delivery" aria-labelledby="v3-title">
+        <div class="step-head">
+          <span class="step-no" aria-hidden="true">iii.</span>
+          <div>
+            <h2 class="step-title" id="v3-title">Email or printed card?</h2>
+            <p class="step-sub">Both are free.</p>
+          </div>
+        </div>
+        <fieldset class="field">
+          <legend class="visually-hidden">How it should arrive</legend>
+          <div class="choice-cards">
+            <label class="choice-card">
+              <input type="radio" name="delivery" value="email" checked>
+              <span class="choice-card-body">
+                <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>
+                <strong>E-voucher by email</strong>
+                <span>A voucher to print or show on a phone, emailed once it is paid.</span>
+              </span>
+            </label>
+            <label class="choice-card">
+              <input type="radio" name="delivery" value="card">
+              <span class="choice-card-body">
+                <svg class="icon" aria-hidden="true"><use href="#i-print"/></svg>
+                <strong>Printed card to collect</strong>
+                <span>In an envelope at the salon desk, ready from <span data-ready-date>the next day we are open</span>.</span>
+              </span>
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="fields" data-delivery-panel="email">
+          <div class="field">
+            <label class="field-label" for="email">Email it to</label>
+            <input type="email" id="email" name="email" maxlength="80" autocomplete="email" aria-describedby="email-hint email-error">
+            <span class="hint" id="email-hint">Yours, to forward or print, or theirs, to surprise them.</span>
+            <span class="field-error" id="email-error" data-error="email" hidden>Enter an email address, like name@example.com.</span>
+          </div>
+          <div class="field">
+            <label class="field-label" for="send-on">Send it on <span class="field-optional">Optional</span></label>
+            <input type="date" id="send-on" name="sendOn" aria-describedby="send-hint send-error">
+            <span class="hint" id="send-hint">A birthday, say. Leave it empty and we send it once it is paid.</span>
+            <span class="field-error" id="send-error" data-error="sendOn" hidden>Choose a date in the next three months, or leave it empty.</span>
+          </div>
+        </div>
+
+        <div class="fields" data-delivery-panel="card" hidden>
+          <fieldset class="field field-wide">
+            <legend class="field-label">How would you like to pay?</legend>
+            <div class="choice-row">
+              <label class="choice"><input type="radio" name="pay" value="link" checked> <span><strong>Send me a payment link</strong> Pay by card now, from your phone</span></label>
+              <label class="choice"><input type="radio" name="pay" value="collect"> <span><strong>I will pay when I collect</strong> Card or cash at the desk</span></label>
+            </div>
+          </fieldset>
+        </div>
+      </section>
+    </div>
+
+    <div class="voucher-side">
+      <div class="voucher-side-inner">
+        <h2 class="preview-title" id="preview-title">Your voucher</h2>
+        <div class="voucher v-garnet" data-preview>
+          <svg class="v-art" viewBox="0 0 200 240" preserveAspectRatio="xMaxYMax meet" aria-hidden="true"><path d="M30 240V110a70 70 0 0 1 140 0v130"/><path d="M50 240V112a50 50 0 0 1 100 0v128"/><path d="M70 240V114a30 30 0 0 1 60 0v126"/><path class="v-art-moon" d="M78 240a22 22 0 0 1 44 0Z"/></svg>
+          <div class="v-top"><span class="v-brand">Lunette</span><span class="v-label">Gift voucher</span></div>
+          <div class="v-main">
+            <p class="v-value" data-pv-value>£50</p>
+            <p class="v-sub" data-pv-sub>to spend on any treatment</p>
+          </div>
+          <div class="v-people">
+            <p class="v-for">For <span class="is-placeholder" data-pv-to>their name</span></p>
+            <p class="v-msg is-placeholder" data-pv-msg>Your message appears here.</p>
+            <p class="v-from">From <span class="is-placeholder" data-pv-from>you</span></p>
+          </div>
+          <div class="v-foot"><span data-pv-valid>Valid for 12 months</span><span data-pv-kind>E-voucher</span></div>
+        </div>
+
+        <div class="order-card">
+          <dl class="summary-totals">
+            <div><dt>Voucher</dt><dd data-order-value>£50</dd></div>
+            <div><dt>Delivery</dt><dd data-order-delivery>Email, free</dd></div>
+            <div class="is-total"><dt>To pay</dt><dd data-order-total>£50</dd></div>
+          </dl>
+          <div class="error-summary" data-error-summary tabindex="-1" hidden>
+            <p><strong>Nearly there.</strong> Before we can write your order:</p>
+            <ul></ul>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block" data-via="whatsapp"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg> Order on WhatsApp</button>
+          <button type="submit" class="btn btn-text btn-block" data-via="email"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-mail"/></svg> Or order by email</button>
+          <div class="pay-note">
+            <h3 class="pay-title"><svg class="icon" aria-hidden="true"><use href="#i-card"/></svg> How paying works</h3>
+            <p>There is no payment on this website. When your order arrives, we reply with a secure card payment link from our card machine provider, or take payment over the phone if you prefer. Printed cards can also be paid for at the desk.</p>
+            <p>We email the e-voucher, or put the card out for you, once it is paid. Your voucher number is on it.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+<section class="section section-oat" aria-labelledby="terms-title">
+  <div class="wrap terms">
+    <header class="section-head section-head-left">
+      <p class="kicker">The small print</p>
+      <h2 class="h2" id="terms-title">Voucher terms</h2>
+    </header>
+    <ul class="terms-list">
+      <li>Vouchers are valid for 12 months from the day they are paid for. The date is printed on the voucher.</li>
+      <li>Amount vouchers can be spent on any treatment, over as many visits as you like, until the balance runs out.</li>
+      <li>Treatment vouchers cover that treatment, even if its price goes up.</li>
+      <li>To use one, mention the voucher number when you book. Patch tests still apply for tints, lifts and lash extensions.</li>
+      <li>Vouchers cannot be swapped for cash. If an e-voucher goes missing, we will resend it.</li>
+      <li>Changed your mind? We refund unused vouchers within 14 days of buying them.</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a class="brand brand-light" href="index.html" aria-label="Lunette Beauty Rooms, home">
+      <svg class="brand-mark" viewBox="0 0 36 40" aria-hidden="true"><path class="brand-arch" d="M4 39V18a14 14 0 0 1 28 0v21Z"/><path class="brand-moon" d="M10.5 39a7.5 7.5 0 0 1 15 0Z"/><path class="brand-line" d="M8.5 18.5a9.5 9.5 0 0 1 19 0"/></svg>
+      <span class="brand-text"><span class="brand-name">Lunette</span><span class="brand-sub">Beauty Rooms</span></span>
+    </a>
+      <p>Nails, lashes and brows, facials and waxing on Quince Row, Ealing.</p>
+      <p class="footer-contact">12 Quince Row, Ealing, London W5<br>
+        <a href="tel:+442079460482" data-contact="phone">020 7946 0482</a><br>
+        <a href="mailto:hello@lunette.example" data-contact="email">hello@lunette.example</a></p>
+    </div>
+    <nav class="footer-nav" aria-labelledby="footer-nav-title">
+      <h2 class="footer-title" id="footer-nav-title">The salon</h2>
+      <ul>
+        <li><a href="treatments.html">Treatments and prices</a></li>
+        <li><a href="book.html">Book an appointment</a></li>
+        <li><a href="vouchers.html">Gift vouchers</a></li>
+        <li><a href="aftercare.html">Aftercare</a></li>
+        <li><a href="index.html#policies">Patch tests and cancelling</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </nav>
+    <div class="footer-hours">
+      <h2 class="footer-title">Opening hours</h2>
+      <ul class="hours-compact" data-hours-compact>
+        <li><span>Monday</span> Closed</li>
+        <li><span>Tue to Wed</span> 10am to 7pm</li>
+        <li><span>Thu to Fri</span> 10am to 8pm</li>
+        <li><span>Saturday</span> 9am to 6pm</li>
+        <li><span>Sunday</span> 10am to 4pm</li>
+      </ul>
+    </div>
+    <p class="footer-credit">A sample website by <a href="https://agilerelease.co.uk/#websites">Agile Release</a>. Lunette Beauty Rooms is made up. &copy; 2026 Agile Release Limited. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

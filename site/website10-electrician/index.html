@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Earthpin Electrical | Electricians in North Finchley and Barnet (sample website)</title>
+<meta name="description" content="Rewires, fuse box upgrades, EV chargers, EICRs and smaller electrical jobs in North Finchley, Barnet and nearby. Guide prices online. A sample website by Agile Release.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0b1730">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="preload" href="css/fonts/hubot-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="css/fonts/mona-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js" defer></script>
+<script src="js/dates.js" defer></script>
+<script src="js/prices.js" defer></script>
+<script src="js/site.js" defer></script>
+<script src="js/services.js" defer></script>
+<script src="js/areas.js" defer></script>
+</head>
+<body>
+
+<svg class="sprite" aria-hidden="true">
+  <symbol id="i-cable" viewBox="0 0 24 24"><path d="M2.5 19.5h3a4 4 0 0 0 4-4v-3a4 4 0 0 1 4-4h2.5"/><path d="M16 6.5v4h2v-4z"/><path d="M18 7.2l3.5-2.2M18 8.5h3.8M18 9.8l3.5 2.2"/></symbol>
+  <symbol id="i-board" viewBox="0 0 24 24"><rect x="2.5" y="4" width="19" height="16" rx="2"/><path d="M2.5 8.5h19M2.5 16h19"/><path d="M6.5 11v2.5M10 11v2.5M13.5 11v2.5M17 11v2.5"/></symbol>
+  <symbol id="i-ev" viewBox="0 0 24 24"><rect x="3.5" y="2.5" width="11" height="15" rx="2.5"/><path d="M10 6 7.6 10h3l-2.4 4"/><path d="M9 17.5v1a2.5 2.5 0 0 0 5 0V14a2.5 2.5 0 0 1 5 0v7.5"/></symbol>
+  <symbol id="i-report" viewBox="0 0 24 24"><rect x="4.5" y="4" width="15" height="17.5" rx="2"/><path d="M9 2.5h6v3.2H9z"/><path d="m8.5 13.2 2.4 2.4 4.6-5"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18.5h6M10 21.5h4"/><path d="M12 2.5a6.5 6.5 0 0 0-3.9 11.7c.6.5.9 1.1.9 1.9v.4h6v-.4c0-.8.3-1.4.9-1.9A6.5 6.5 0 0 0 12 2.5Z"/></symbol>
+  <symbol id="i-socket" viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M9 8.6v3.2M5.8 15h2.4M9.8 15h2.4"/><rect x="15.6" y="9" width="2.6" height="6" rx="0.8"/></symbol>
+  <symbol id="i-fault" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="7"/><path d="m15.6 15.6 5.4 5.4"/><path d="M11.6 6 9 10.6h3.2L9.8 15"/></symbol>
+  <symbol id="i-alarm" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5.5"/><circle cx="12" cy="12" r="1.6"/><path d="M4.6 8a9 9 0 0 0 0 8M19.4 8a9 9 0 0 1 0 8M2 5.5a13 13 0 0 0 0 13M22 5.5a13 13 0 0 1 0 13"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 7 8.5-7"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.3 7.5 9.5 4.3-1.2 7.5-4.9 7.5-9.5V6L12 3Z"/><path d="m8.8 12 2.2 2.2 4.2-4.4"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 7.5h3L8.5 5h7L17 7.5h3a1 1 0 0 1 1 1V18a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V8.5a1 1 0 0 1 1-1Z"/><circle cx="12" cy="13" r="3.5"/></symbol>
+  <symbol id="i-warning" viewBox="0 0 24 24"><path d="M10.3 4.2 2.6 17.6A2 2 0 0 0 4.3 20.6h15.4a2 2 0 0 0 1.7-3L13.7 4.2a2 2 0 0 0-3.4 0Z"/><path d="M12 9.5v4.5M12 17.3v.2"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24"><circle cx="7.5" cy="15.5" r="4"/><path d="m10.4 12.6 9.1-9.1M16.5 6.5l2.5 2.5M14 9l2 2"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M4 10.5 12 4l8 6.5V20H4z"/><path d="M10 20v-5.5h4V20"/></symbol>
+  <symbol id="i-shop" viewBox="0 0 24 24"><path d="M4.5 10.5V20h15v-9.5"/><path d="M3 9.5 4.8 4h14.4L21 9.5a2.4 2.4 0 0 1-4.5 1.2 2.4 2.4 0 0 1-4.5 0 2.4 2.4 0 0 1-4.5 0A2.4 2.4 0 0 1 3 9.5Z"/><path d="M10 20v-5h4v5"/></symbol>
+  <symbol id="i-pound" viewBox="0 0 24 24"><path d="M16.5 7A4 4 0 0 0 9 8.8V20M6.5 13h7M6.5 20h11"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-power" viewBox="0 0 24 24"><path d="M12 3v8"/><path d="M6.6 6.8a8 8 0 1 0 10.8 0"/></symbol>
+  <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3.5s6 6.4 6 10.5a6 6 0 0 1-12 0c0-4.1 6-10.5 6-10.5Z"/></symbol>
+  <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 21a6.5 6.5 0 0 0 6.5-6.5c0-4.2-3.2-6.6-4.5-10-1.6 2.1-2.2 3.8-2.2 5.4-1-.9-1.6-2-1.9-3.1C8 9.6 5.5 12 5.5 14.5A6.5 6.5 0 0 0 12 21Z"/></symbol>
+  <symbol id="i-plug" viewBox="0 0 24 24"><path d="M9 2.5v4.5M15 2.5v4.5"/><path d="M6.5 7h11v3.5a5.5 5.5 0 0 1-11 0z"/><path d="M12 16v5.5"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 2.5h8.5L19 7v14.5H6z"/><path d="M14 2.5V7h5"/><path d="m9 14.5 2 2 4-4.5"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24"><path d="M3.5 3.5h7.6l9.4 9.4-7.6 7.6-9.4-9.4z"/><circle cx="8" cy="8" r="1.6"/></symbol>
+  <symbol id="i-hand" viewBox="0 0 24 24"><path d="M8 13V5.5a1.5 1.5 0 0 1 3 0V11"/><path d="M11 10V4a1.5 1.5 0 0 1 3 0v6"/><path d="M14 10V5.5a1.5 1.5 0 0 1 3 0V13"/><path d="M17 11a1.5 1.5 0 0 1 3 0v3a7 7 0 0 1-7 7h-1.2a6 6 0 0 1-4.6-2.2L4 15.6a1.5 1.5 0 0 1 2.3-1.9L8 15.5"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.8v.2"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<aside class="sample-bar" aria-label="About this sample website">
+  <div class="wrap sample-bar-inner">
+    <p><strong>Sample website by Agile Release.</strong> Earthpin Electrical is not a real business: the prices, registrations and numbers are examples.</p>
+    <a href="https://agilerelease.co.uk/#websites">Get a site like this <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a>
+  </div>
+</aside>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Earthpin Electrical, home">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect class="bm-bg" width="32" height="32" rx="8"/><rect class="bm-earth" x="13.9" y="5.5" width="4.2" height="9.5" rx="1.1"/><rect class="bm-pin" x="5.8" y="19.2" width="8.4" height="4" rx="1.1"/><rect class="bm-pin" x="17.8" y="19.2" width="8.4" height="4" rx="1.1"/></svg>
+      <span class="brand-text"><span class="brand-name">Earthpin</span><span class="brand-sub">Electrical</span></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="quote.html">Guide prices</a></li>
+        <li><a href="landlords.html">Landlords</a></li>
+        <li><a href="#areas">Areas</a></li>
+        <li><a href="safety.html">Safety</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="nav-extra"><a href="tel:+442079460742" data-contact="phone">Call 020 7946 0742</a></li>
+      </ul>
+    </nav>
+    <a class="header-phone" href="tel:+442079460742" data-contact="phone"><small>Call us</small><span>020 7946 0742</span></a>
+    <a class="btn btn-primary btn-sm header-cta" href="quote.html">Get a guide price</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+      <svg class="icon"><use href="#i-menu"/></svg> Menu
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="tape"><span class="tape-no">N12</span><span>Electricians in Finchley and Barnet</span></p>
+      <h1 class="display">Safe electrics, <em>neatly done.</em></h1>
+      <p class="lead">Rewires, fuse box upgrades, EV chargers and landlord safety checks for homes and small businesses across north London. A clear price before we start, every circuit labelled, and a certificate when we finish.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="quote.html">Get a guide price <svg class="icon"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-outline" href="landlords.html">Landlord EICRs</a>
+      </div>
+      <ul class="hero-points">
+        <li><span class="tick" aria-hidden="true"><svg class="icon"><use href="#i-check"/></svg></span> Guide prices online, and a fixed price before we start</li>
+        <li><span class="tick" aria-hidden="true"><svg class="icon"><use href="#i-check"/></svg></span> Every job tested, labelled and certified</li>
+        <li><span class="tick" aria-hidden="true"><svg class="icon"><use href="#i-check"/></svg></span> Two years' guarantee on our work</li>
+      </ul>
+    </div>
+    <figure class="hero-art">
+<svg class="board-art" viewBox="0 0 600 520" role="img" aria-labelledby="board-title">
+<title id="board-title">A new consumer unit with every circuit switched on and labelled, its circuit chart, and a tester showing a pass</title>
+<path class="ba-tail ba-tail-l" d="M104 0V76"/><path class="ba-tail ba-tail-n" d="M132 0V76"/>
+<path class="ba-earth" d="M168 0V76"/><path class="ba-earth-stripe" d="M168 0V76"/>
+<rect class="ba-shadow" x="46" y="80" width="520" height="262" rx="18"/>
+<rect class="ba-box" x="40" y="72" width="520" height="262" rx="18"/>
+<rect class="ba-gland" x="92" y="68" width="88" height="9" rx="3"/>
+<circle class="ba-screw" cx="58" cy="90" r="5"/><path class="ba-screw-slot" d="M55 93 61 87"/>
+<circle class="ba-screw" cx="542" cy="90" r="5"/><path class="ba-screw-slot" d="M539 93 545 87"/>
+<circle class="ba-screw" cx="58" cy="316" r="5"/><path class="ba-screw-slot" d="M55 319 61 313"/>
+<circle class="ba-screw" cx="542" cy="316" r="5"/><path class="ba-screw-slot" d="M539 319 545 313"/>
+<rect class="ba-window" x="64" y="102" width="472" height="180" rx="8"/>
+<rect class="ba-rail" x="64" y="186" width="472" height="10"/>
+<rect class="ba-device" x="80" y="114" width="76" height="158" rx="4"/>
+<text class="ba-text ba-tiny" x="118" y="133" text-anchor="middle">MAIN</text><text class="ba-text ba-tiny" x="118" y="143" text-anchor="middle">SWITCH</text>
+<rect class="ba-slot" x="101" y="154" width="34" height="58" rx="4"/>
+<g class="ba-switch ba-d0"><rect class="ba-lever-main" x="104" y="157" width="28" height="27" rx="3"/></g>
+<text class="ba-text ba-tiny" x="145" y="166" text-anchor="middle">I</text><text class="ba-text ba-tiny" x="145" y="208" text-anchor="middle">O</text>
+<text class="ba-text ba-small" x="118" y="240" text-anchor="middle">100A</text>
+<rect class="ba-device" x="160" y="114" width="38" height="158" rx="4"/>
+<text class="ba-text ba-tiny" x="179" y="133" text-anchor="middle">SPD</text>
+<rect class="ba-flag-ok" x="167" y="160" width="24" height="16" rx="2"/>
+<text class="ba-text ba-small" x="179" y="240" text-anchor="middle">T2</text>
+<rect class="ba-device" x="203" y="114" width="38" height="158" rx="4"/>
+<text class="ba-text ba-small" x="222" y="134" text-anchor="middle">B6</text>
+<rect class="ba-slot" x="214" y="150" width="16" height="50" rx="3"/>
+<g class="ba-switch ba-d1"><rect class="ba-lever" x="216" y="153" width="12" height="22" rx="2"/><rect class="ba-flag" x="215" y="212" width="14" height="8" rx="1.5"/></g>
+<circle class="ba-test" cx="222" cy="240" r="6"/><text class="ba-text ba-tiny" x="222" y="243" text-anchor="middle">T</text>
+<text class="ba-text ba-tiny" x="222" y="262" text-anchor="middle">30mA</text>
+<rect class="ba-device" x="243" y="114" width="38" height="158" rx="4"/>
+<text class="ba-text ba-small" x="262" y="134" text-anchor="middle">B6</text>
+<rect class="ba-slot" x="254" y="150" width="16" height="50" rx="3"/>
+<g class="ba-switch ba-d2"><rect class="ba-lever" x="256" y="153" width="12" height="22" rx="2"/><rect class="ba-flag" x="255" y="212" width="14" height="8" rx="1.5"/></g>
+<circle class="ba-test" cx="262" cy="240" r="6"/><text class="ba-text ba-tiny" x="262" y="243" text-anchor="middle">T</text>
+<text class="ba-text ba-tiny" x="262" y="262" text-anchor="middle">30mA</text>
+<rect class="ba-device" x="283" y="114" width="38" height="158" rx="4"/>
+<text class="ba-text ba-small" x="302" y="134" text-anchor="middle">B32</text>
+<rect class="ba-slot" x="294" y="150" width="16" height="50" rx="3"/>
+<g class="ba-switch ba-d3"><rect class="ba-lever" x="296" y="153" width="12" height="22" rx="2"/><rect class="ba-flag" x="295" y="212" width="14" height="8" rx="1.5"/></g>
+<circle class="ba-test" cx="302" cy="240" r="6"/><text class="ba-text ba-tiny" x="302" y="243" text-anchor="middle">T</text>
+<text class="ba-text ba-tiny" x="302" y="262" text-anchor="middle">30mA</text>
+<rect class="ba-device" x="323" y="114" width="38" height="158" rx="4"/>
+<text class="ba-text ba-small" x="342" y="134" text-anchor="middle">B32</text>
+<rect class="ba-slot" x="334" y="150" width="16" height="50" rx="3"/>
+<g class="ba-switch ba-d4"><rect class="ba-lever" x="336" y="153" width="12" height="22" rx="2"/><rect class="ba-flag" x="335" y="212" width="14" height="8" rx="1.5"/></g>
+<circle class="ba-test" cx="342" cy="240" r="6"/><text class="ba-text ba-tiny" x="342" y="243" text-anchor="middle">T</text>
+<text class="ba-text ba-tiny" x="342" y="262" text-anchor="middle">30mA</text>
+<rect class="ba-device" x="363" y="114" width="38" height="158" rx="4"/>
+<text class="ba-text ba-small" x="382" y="134" text-anchor="middle">B32</text>
+<rect class="ba-slot" x="374" y="150" width="16" height="50" rx="3"/>
+<g class="ba-switch ba-d5"><rect class="ba-lever" x="376" y="153" width="12" height="22" rx="2"/><rect class="ba-flag" x="375" y="212" width="14" height="8" rx="1.5"/></g>
+<circle class="ba-test" cx="382" cy="240" r="6"/><text class="ba-text ba-tiny" x="382" y="243" text-anchor="middle">T</text>
+<text class="ba-text ba-tiny" x="382" y="262" text-anchor="middle">30mA</text>
+<rect class="ba-device" x="403" y="114" width="38" height="158" rx="4"/>
+<text class="ba-text ba-small" x="422" y="134" text-anchor="middle">B32</text>
+<rect class="ba-slot" x="414" y="150" width="16" height="50" rx="3"/>
+<g class="ba-switch ba-d6"><rect class="ba-lever" x="416" y="153" width="12" height="22" rx="2"/><rect class="ba-flag" x="415" y="212" width="14" height="8" rx="1.5"/></g>
+<circle class="ba-test" cx="422" cy="240" r="6"/><text class="ba-text ba-tiny" x="422" y="243" text-anchor="middle">T</text>
+<text class="ba-text ba-tiny" x="422" y="262" text-anchor="middle">30mA</text>
+<rect class="ba-device" x="443" y="114" width="38" height="158" rx="4"/>
+<text class="ba-text ba-small" x="462" y="134" text-anchor="middle">B40</text>
+<rect class="ba-slot" x="454" y="150" width="16" height="50" rx="3"/>
+<g class="ba-switch ba-d7"><rect class="ba-lever" x="456" y="153" width="12" height="22" rx="2"/><rect class="ba-flag" x="455" y="212" width="14" height="8" rx="1.5"/></g>
+<circle class="ba-test" cx="462" cy="240" r="6"/><text class="ba-text ba-tiny" x="462" y="243" text-anchor="middle">T</text>
+<text class="ba-text ba-tiny" x="462" y="262" text-anchor="middle">30mA</text>
+<rect class="ba-device" x="483" y="114" width="38" height="158" rx="4"/>
+<text class="ba-text ba-small" x="502" y="134" text-anchor="middle">B32</text>
+<rect class="ba-slot" x="494" y="150" width="16" height="50" rx="3"/>
+<g class="ba-switch ba-d8"><rect class="ba-lever" x="496" y="153" width="12" height="22" rx="2"/><rect class="ba-flag" x="495" y="212" width="14" height="8" rx="1.5"/></g>
+<circle class="ba-test" cx="502" cy="240" r="6"/><text class="ba-text ba-tiny" x="502" y="243" text-anchor="middle">T</text>
+<text class="ba-text ba-tiny" x="502" y="262" text-anchor="middle">30mA</text>
+<rect class="ba-tape" x="80" y="290" width="442" height="24" rx="3"/>
+<text class="ba-text ba-tape-text" x="118" y="306" text-anchor="middle">MAIN</text>
+<text class="ba-text ba-tape-text" x="179" y="306" text-anchor="middle">SPD</text>
+<text class="ba-text ba-tape-text" x="222" y="306" text-anchor="middle">1</text>
+<text class="ba-text ba-tape-text" x="262" y="306" text-anchor="middle">2</text>
+<text class="ba-text ba-tape-text" x="302" y="306" text-anchor="middle">3</text>
+<text class="ba-text ba-tape-text" x="342" y="306" text-anchor="middle">4</text>
+<text class="ba-text ba-tape-text" x="382" y="306" text-anchor="middle">5</text>
+<text class="ba-text ba-tape-text" x="422" y="306" text-anchor="middle">6</text>
+<text class="ba-text ba-tape-text" x="462" y="306" text-anchor="middle">7</text>
+<text class="ba-text ba-tape-text" x="502" y="306" text-anchor="middle">8</text>
+<path class="ba-lead-red" d="M64 362c0-16-14-24-32-24S4 330 0 318"/>
+<path class="ba-lead-black" d="M90 362c0-22-22-30-44-30S8 318 0 300"/>
+<rect class="ba-tester" x="24" y="360" width="232" height="142" rx="18"/>
+<rect class="ba-tester-edge" x="32" y="368" width="216" height="126" rx="12"/>
+<rect class="ba-screen" x="44" y="380" width="128" height="62" rx="7"/>
+<text class="ba-text ba-screen-text" x="56" y="421">PASS</text>
+<path class="ba-screen-tick" d="M137 411l7 7 14-16"/>
+<text class="ba-text ba-tester-label" x="44" y="466">INSULATION 500 V</text>
+<text class="ba-text ba-tester-label" x="44" y="482">RCD 30 mA</text>
+<circle class="ba-dial" cx="212" cy="420" r="27"/><path class="ba-dial-mark" d="M212 420 199 401"/>
+<rect class="ba-card-shadow" x="306" y="338" width="276" height="182" rx="10"/>
+<rect class="ba-card" x="300" y="330" width="276" height="182" rx="10"/>
+<text class="ba-text ba-card-title" x="318" y="356">CIRCUIT CHART</text>
+<path class="ba-rule" d="M318 366H558"/>
+<text class="ba-text ba-row ba-row-no" x="318" y="384">1</text><text class="ba-text ba-row" x="336" y="384">Lights, upstairs</text><text class="ba-text ba-row ba-row-rating" x="558" y="384" text-anchor="end">B6</text>
+<text class="ba-text ba-row ba-row-no" x="318" y="400">2</text><text class="ba-text ba-row" x="336" y="400">Lights, downstairs</text><text class="ba-text ba-row ba-row-rating" x="558" y="400" text-anchor="end">B6</text>
+<text class="ba-text ba-row ba-row-no" x="318" y="416">3</text><text class="ba-text ba-row" x="336" y="416">Sockets, upstairs</text><text class="ba-text ba-row ba-row-rating" x="558" y="416" text-anchor="end">B32</text>
+<text class="ba-text ba-row ba-row-no" x="318" y="432">4</text><text class="ba-text ba-row" x="336" y="432">Sockets, downstairs</text><text class="ba-text ba-row ba-row-rating" x="558" y="432" text-anchor="end">B32</text>
+<text class="ba-text ba-row ba-row-no" x="318" y="448">5</text><text class="ba-text ba-row" x="336" y="448">Kitchen sockets</text><text class="ba-text ba-row ba-row-rating" x="558" y="448" text-anchor="end">B32</text>
+<text class="ba-text ba-row ba-row-no" x="318" y="464">6</text><text class="ba-text ba-row" x="336" y="464">Oven</text><text class="ba-text ba-row ba-row-rating" x="558" y="464" text-anchor="end">B32</text>
+<text class="ba-text ba-row ba-row-no" x="318" y="480">7</text><text class="ba-text ba-row" x="336" y="480">Shower</text><text class="ba-text ba-row ba-row-rating" x="558" y="480" text-anchor="end">B40</text>
+<text class="ba-text ba-row ba-row-no" x="318" y="496">8</text><text class="ba-text ba-row" x="336" y="496">EV charger</text><text class="ba-text ba-row ba-row-rating" x="558" y="496" text-anchor="end">B32</text>
+</svg>
+
+    </figure>
+  </div>
+</section>
+
+<div class="status-strip">
+  <div class="wrap status-inner">
+    <p class="status" data-status><span class="status-dot" aria-hidden="true"></span> <span><strong data-status-text>Phones open</strong> <span data-status-detail>Monday to Friday 7:30am to 6pm, Saturday 8am to 1pm.</span></span></p>
+    <div class="status-links">
+      <a href="https://wa.me/447700900742" data-contact="whatsapp"><svg class="icon"><use href="#i-chat"/></svg> WhatsApp 07700 900742</a>
+      <a href="tel:+442079460742" data-contact="phone"><svg class="icon"><use href="#i-phone"/></svg> 020 7946 0742</a>
+    </div>
+  </div>
+</div>
+
+<section class="section" id="services">
+  <div class="wrap">
+    <header class="section-head section-head-row" data-reveal>
+      <div>
+        <p class="tape"><span class="tape-no">C1</span><span>What we do</span></p>
+        <h2 class="h2">From one socket to a full rewire</h2>
+        <p>We're a small firm: two electricians, an apprentice and two vans. Homes are most of our work, plus shops, offices and cafés nearby. The prices are guides for typical jobs, with VAT included.</p>
+      </div>
+      <a class="link-arrow" href="services.html">Every service in detail <svg class="icon"><use href="#i-arrow"/></svg></a>
+    </header>
+
+    <div class="chart" data-reveal>
+      <div class="chart-head" aria-hidden="true"><span>Circuit</span><span>Service</span><span>Typical guide price</span><span></span></div>
+      <ol data-services-list>
+        <li class="chart-fallback">Rewires, consumer unit (fuse box) upgrades, EV chargers, EICRs, lighting, sockets, fault finding and smoke alarms. <a href="services.html">See every service</a>.</li>
+      </ol>
+    </div>
+
+    <div class="chart-foot" data-reveal>
+      <p class="biz-note"><svg class="icon"><use href="#i-shop"/></svg> <span><strong>Shops, offices and cafés:</strong> lighting, extra sockets, EICRs and fault finding, done early or late so you don't have to close.</span></p>
+      <a class="btn btn-outline" href="quote.html">Work out a guide price</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark" id="how">
+  <div class="wrap">
+    <header class="section-head" data-reveal>
+      <p class="tape tape-dark"><span class="tape-no">C2</span><span>How it works</span></p>
+      <h2 class="h2">How a job runs</h2>
+      <p>The same four steps for a new socket or a whole-house rewire.</p>
+    </header>
+    <ol class="flow" data-reveal>
+      <li class="flow-step">
+        <span class="flow-num">1</span>
+        <h3>Tell us about the job</h3>
+        <p>Use the guide price form, or WhatsApp us with photos. We reply the same working day.</p>
+      </li>
+      <li class="flow-step">
+        <span class="flow-num">2</span>
+        <h3>Get a fixed price</h3>
+        <p>Small jobs we price from your photos. For rewires and bigger jobs we visit first, free.</p>
+      </li>
+      <li class="flow-step">
+        <span class="flow-num">3</span>
+        <h3>We do the work</h3>
+        <p>On the day we agreed. Dust sheets down, and the power back on each evening wherever we can.</p>
+      </li>
+      <li class="flow-step">
+        <span class="flow-num">4</span>
+        <h3>Tested and certified</h3>
+        <p>Every circuit tested and labelled. Your certificate by email within five working days.</p>
+      </li>
+    </ol>
+    <div class="flow-cta" data-reveal>
+      <a class="btn btn-volt" href="quote.html">Start with a guide price <svg class="icon"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-ghost-light" href="https://wa.me/447700900742" data-contact="whatsapp"><svg class="icon"><use href="#i-chat"/></svg> Send photos on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-white" id="guarantee">
+  <div class="wrap promise-grid">
+    <div data-reveal>
+      <p class="tape"><span class="tape-no">C3</span><span>Our guarantee</span></p>
+      <h2 class="h2">What you can hold us to</h2>
+      <p class="lead">Four promises on every job, large or small.</p>
+      <ul class="promises">
+        <li class="promise">
+          <span class="promise-icon" aria-hidden="true"><svg class="icon"><use href="#i-pound"/></svg></span>
+          <div>
+            <h3>The price we agree is the price you pay</h3>
+            <p>If we find something that changes it, like hidden damage, we stop and ask you first. No surprises on the invoice.</p>
+          </div>
+        </li>
+        <li class="promise">
+          <span class="promise-icon" aria-hidden="true"><svg class="icon"><use href="#i-shield"/></svg></span>
+          <div>
+            <h3>Two years on our work</h3>
+            <p>If something we fitted fails because of how we fitted it, we come back and put it right, free. Parts carry the maker's warranty too.</p>
+          </div>
+        </li>
+        <li class="promise">
+          <span class="promise-icon" aria-hidden="true"><svg class="icon"><use href="#i-tag"/></svg></span>
+          <div>
+            <h3>Tidy, and labelled</h3>
+            <p>Floors and furniture covered, and our rubbish taken away. Every circuit in your fuse box is labelled before we leave.</p>
+          </div>
+        </li>
+        <li class="promise">
+          <span class="promise-icon" aria-hidden="true"><svg class="icon"><use href="#i-doc"/></svg></span>
+          <div>
+            <h3>Paperwork within five working days</h3>
+            <p>Your certificate comes by email. For work that has to be notified, the Building Regulations certificate follows by post.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <aside class="reg-card" aria-labelledby="reg-title" data-reveal>
+      <h3 class="h3" id="reg-title">Registrations and insurance</h3>
+      <p>A real electrician shows these here, with numbers you can check on the scheme's website. On this sample site they are examples.</p>
+      <ul class="reg-list">
+        <li class="reg">
+          <span class="example-badge">Example</span>
+          <h4>NICEIC or NAPIT approved contractor</h4>
+          <p>Registered with a government-approved scheme, which inspects samples of our work every year.</p>
+          <span class="reg-no">Registration number: example only</span>
+        </li>
+        <li class="reg">
+          <span class="example-badge">Example</span>
+          <h4>Part P: we notify building control</h4>
+          <p>Notifiable work, such as a new circuit, a new fuse box or work in a bathroom, is self-certified through our scheme. You get a Building Regulations compliance certificate.</p>
+        </li>
+        <li class="reg">
+          <span class="example-badge">Example</span>
+          <h4>Public liability insurance, £2 million</h4>
+          <p>Insurer and policy details are shown here, and sent with every quote.</p>
+        </li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<section class="band" id="landlords">
+  <div class="wrap band-inner">
+    <div data-reveal>
+      <p class="tape tape-dark"><span class="tape-no">C4</span><span>For landlords</span></p>
+      <h2 class="h2">EICRs for landlords, booked in a few minutes</h2>
+      <p>In England a rented home needs an EICR at least every five years, and your tenants need a copy. We make that part easy.</p>
+      <ul class="band-list">
+        <li><svg class="icon"><use href="#i-check"/></svg> Book several homes at once, with 10% off three or more</li>
+        <li><svg class="icon"><use href="#i-check"/></svg> We arrange a time with your tenants, or with you</li>
+        <li><svg class="icon"><use href="#i-check"/></svg> Reports by email within two working days, ready to send on</li>
+      </ul>
+      <div class="band-actions">
+        <a class="btn btn-volt" href="landlords.html#book">Book landlord EICRs <svg class="icon"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-ghost-light" href="landlords.html">What the law asks</a>
+      </div>
+    </div>
+    <div class="band-figure" data-reveal>
+      <h3>EICR guide prices</h3>
+      <dl class="band-prices" data-eicr-prices>
+        <div><dt>1-bedroom flat</dt><dd>£150 to £180</dd></div>
+      </dl>
+      <p>Including VAT. Repairs are quoted separately, and you choose who does them.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="areas">
+  <div class="wrap areas-grid">
+    <div data-reveal>
+      <p class="tape"><span class="tape-no">C5</span><span>Areas we cover</span></p>
+      <h2 class="h2">Do we cover you?</h2>
+      <p class="lead">We're based in North Finchley and work across Barnet and the streets around it. A little further out, we take on the bigger jobs.</p>
+      <form class="checker" data-checker novalidate>
+        <label for="pc-input">Your postcode</label>
+        <div class="checker-row">
+          <input id="pc-input" name="postcode" type="text" autocomplete="postal-code" inputmode="text" maxlength="9" placeholder="For example N12 8QJ" aria-describedby="pc-help">
+          <button class="btn btn-primary" type="submit">Check</button>
+        </div>
+        <p class="checker-help" id="pc-help">The first half is enough, like N12 or EN5.</p>
+        <div class="result" data-result role="status" aria-live="polite"></div>
+      </form>
+    </div>
+    <div class="tilemap-wrap" data-reveal>
+      <ul class="tilemap" data-tilemap aria-label="Postcode districts around our base"></ul>
+      <ul class="legend" aria-hidden="true">
+        <li><span class="key key-yes"></span> Every job</li>
+        <li><span class="key key-big"></span> Bigger jobs only</li>
+        <li><span class="key key-home"></span> Our base, N12</li>
+      </ul>
+      <p class="map-caption">Not to scale: the districts sit roughly where they are on a map, north at the top. Bigger jobs are rewires, fuse boxes, EV chargers and landlord EICRs.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-mist" id="safety">
+  <div class="wrap">
+    <header class="section-head section-head-row" data-reveal>
+      <div>
+        <p class="tape"><span class="tape-no">C6</span><span>Safety</span></p>
+        <h2 class="h2">When something goes wrong</h2>
+        <p>Plain advice for the common scares. If in doubt, switch off at the main switch and call us.</p>
+      </div>
+      <a class="link-arrow" href="safety.html">All our safety advice <svg class="icon"><use href="#i-arrow"/></svg></a>
+    </header>
+    <ul class="tips" data-reveal>
+      <li class="tip">
+        <span class="tip-icon" aria-hidden="true"><svg class="icon"><use href="#i-board"/></svg></span>
+        <h3>Fuse box keeps tripping?</h3>
+        <p>Unplug everything on that circuit, reset the switch, then plug things back in one at a time. The one that trips it is usually the culprit.</p>
+        <a class="link-arrow" href="safety.html#tripping">Step by step <svg class="icon"><use href="#i-arrow"/></svg></a>
+      </li>
+      <li class="tip">
+        <span class="tip-icon is-danger" aria-hidden="true"><svg class="icon"><use href="#i-warning"/></svg></span>
+        <h3>Exposed wires or a burning smell?</h3>
+        <p>Never touch them. Switch off at the main switch if you can do it safely, keep everyone away and call us.</p>
+        <a class="link-arrow" href="safety.html#wires">What to do <svg class="icon"><use href="#i-arrow"/></svg></a>
+      </li>
+      <li class="tip">
+        <span class="tip-icon" aria-hidden="true"><svg class="icon"><use href="#i-power"/></svg></span>
+        <h3>Power cut in the street?</h3>
+        <p>If your neighbours are off too, it's the local network, not your wiring. Call 105, free, to report it and get updates.</p>
+        <a class="link-arrow" href="safety.html#power-cut">Power cuts <svg class="icon"><use href="#i-arrow"/></svg></a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section-white" id="faq">
+  <div class="wrap faq-layout">
+    <header class="section-head" data-reveal>
+      <p class="tape"><span class="tape-no">C7</span><span>Questions</span></p>
+      <h2 class="h2">Before you book</h2>
+      <p>Anything else? Send us a message, with a photo if it helps, and we'll answer it.</p>
+      <p class="faq-cta"><a class="btn btn-outline" href="https://wa.me/447700900742" data-contact="whatsapp"><svg class="icon"><use href="#i-chat"/></svg> Ask on WhatsApp</a></p>
+    </header>
+    <div class="faq" data-reveal>
+      <details>
+        <summary>Do you charge for quotes?</summary>
+        <div><p>No. Small jobs we price from photos on WhatsApp. For rewires, fuse boxes on old wiring and long EV cable runs we visit first, free, anywhere in our area.</p></div>
+      </details>
+      <details>
+        <summary>Do your prices include VAT?</summary>
+        <div><p>Yes. Every price on this website includes VAT at 20%.</p></div>
+      </details>
+      <details>
+        <summary>How do I pay?</summary>
+        <div><p>By bank transfer or card. Small jobs are paid when we finish. For a rewire we take a 20% deposit to hold the dates, then you pay in stages as the work is done.</p></div>
+      </details>
+      <details>
+        <summary>Do I need to be at home?</summary>
+        <div><p>For most jobs, yes, or you can leave us a key. For a landlord EICR your tenants can let us in, and we arrange the time with them.</p></div>
+      </details>
+      <details>
+        <summary>Will I need to tell building control?</summary>
+        <div><p>Not yourself. Some work has to be notified: a new circuit, a new fuse box, or work in a bathroom. We do that through our scheme, and the Building Regulations certificate comes to you by post.</p></div>
+      </details>
+      <details>
+        <summary>Can you sign off work someone else did?</summary>
+        <div><p>No electrician can certify work they didn't do. We can inspect it and give you an EICR, and your council's building control team can tell you how to get it approved.</p></div>
+      </details>
+      <details>
+        <summary>Do you do emergencies?</summary>
+        <div><p>We're not a 24-hour service. On working days we try to reach urgent faults the same day. Out of hours, if something looks dangerous, switch off at the main switch. For a power cut, call 105.</p></div>
+      </details>
+      <details>
+        <summary>How much mess does a rewire make?</summary>
+        <div><p>Some. We cut channels in walls and lift floorboards. We cover floors and furniture, work room by room and clear up at the end of each day. Plastering afterwards is a separate job, which we can arrange.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="wrap">
+    <header class="section-head" data-reveal>
+      <p class="tape"><span class="tape-no">C8</span><span>Contact</span></p>
+      <h2 class="h2">Talk to an electrician</h2>
+    </header>
+    <div class="contact-grid">
+      <div class="contact-card" data-reveal>
+        <h3 class="h2">Message us</h3>
+        <p>WhatsApp is quickest, and you can send photos. When we're open we usually reply within the hour. If we're up a ladder, leave a message and we'll ring you back.</p>
+        <div class="contact-actions">
+          <a class="btn btn-volt" href="https://wa.me/447700900742" data-contact="whatsapp"><svg class="icon"><use href="#i-chat"/></svg> WhatsApp <span>07700 900742</span></a>
+          <a class="btn btn-ghost-light" href="tel:+442079460742" data-contact="phone"><svg class="icon"><use href="#i-phone"/></svg> Call <span>020 7946 0742</span></a>
+          <a class="btn btn-ghost-light" href="mailto:hello@earthpin.example" data-contact="email"><svg class="icon"><use href="#i-mail"/></svg> Email <span>hello@earthpin.example</span></a>
+        </div>
+      </div>
+      <div class="info-card" data-reveal>
+        <div>
+          <h3><svg class="icon"><use href="#i-clock"/></svg> Phones and WhatsApp</h3>
+          <dl class="hours" data-hours>
+            <div data-days="1 2 3 4 5"><dt>Monday to Friday</dt><dd>7:30am to 6pm</dd></div>
+            <div data-days="6"><dt>Saturday</dt><dd>8am to 1pm, EICRs and urgent faults</dd></div>
+            <div data-days="0"><dt>Sunday</dt><dd>Closed</dd></div>
+          </dl>
+        </div>
+        <div>
+          <h3><svg class="icon"><use href="#i-pin"/></svg> Office and stores</h3>
+          <p>Unit 3, Kestle Mews, North Finchley, London N12. No walk-ins: we're out on jobs most of the day.</p>
+        </div>
+        <p><a class="link-arrow" href="https://www.google.com/maps/search/?api=1&amp;query=North+Finchley+London+N12">North Finchley in Google Maps <svg class="icon"><use href="#i-arrow"/></svg></a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a class="brand" href="index.html" aria-label="Earthpin Electrical, home">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect class="bm-bg" width="32" height="32" rx="8"/><rect class="bm-earth" x="13.9" y="5.5" width="4.2" height="9.5" rx="1.1"/><rect class="bm-pin" x="5.8" y="19.2" width="8.4" height="4" rx="1.1"/><rect class="bm-pin" x="17.8" y="19.2" width="8.4" height="4" rx="1.1"/></svg>
+      <span class="brand-text"><span class="brand-name">Earthpin</span><span class="brand-sub">Electrical</span></span>
+    </a>
+      <p>Electricians for homes and small businesses in North Finchley, Barnet and nearby. Rewires, fuse boxes, EV chargers, EICRs and the smaller jobs too.</p>
+    </div>
+    <nav class="footer-col" aria-label="Footer">
+      <h2>Pages</h2>
+      <ul>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="quote.html">Get a guide price</a></li>
+        <li><a href="landlords.html">EICRs for landlords</a></li>
+        <li><a href="safety.html">Electrical safety</a></li>
+        <li><a href="#areas">Areas we cover</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </nav>
+    <div class="footer-col">
+      <h2>Contact</h2>
+      <p><a href="https://wa.me/447700900742" data-contact="whatsapp">WhatsApp 07700 900742</a></p>
+      <p><a href="tel:+442079460742" data-contact="phone">Call 020 7946 0742</a></p>
+      <p><a href="mailto:hello@earthpin.example" data-contact="email">hello@earthpin.example</a></p>
+      <p>Unit 3, Kestle Mews, North Finchley, London N12</p>
+    </div>
+    <p class="footer-credit">A sample website by <a href="https://agilerelease.co.uk/#websites">Agile Release</a>. Earthpin Electrical is made up. &copy; 2026 Agile Release Limited. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

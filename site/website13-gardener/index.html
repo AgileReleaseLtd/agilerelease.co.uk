@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hornbeam &amp; Hoe | Gardeners and landscapers in Carshalton and Sutton (sample website)</title>
+<meta name="description" content="Regular garden visits, seasonal jobs and small landscaping in Carshalton, Sutton, Wallington and Cheam. Green waste taken away. A sample website by Agile Release.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#123a2c">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="preload" href="css/fonts/alegreya-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="css/fonts/alegreya-sans-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js" defer></script>
+<script src="js/garden.js" defer></script>
+<script src="js/site.js" defer></script>
+<script src="js/home.js" defer></script>
+<script src="js/gallery.js" defer></script>
+</head>
+<body class="page-home">
+
+<svg class="sprite" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 7 8.5-7"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-sprout" viewBox="0 0 24 24"><path d="M12 21v-9"/><path d="M12 12c0-4.2 3-6.5 7.5-6.5 0 4.2-3 6.5-7.5 6.5Z"/><path d="M12 14.5c0-3.3-2.4-5.5-6.5-5.5 0 3.3 2.4 5.5 6.5 5.5Z"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19C5 10 10 5 20 4c-1 10-6 15-15 15Z"/><path d="M5 19 14 10M9.5 14.5h3.2M12 12V8.8"/></symbol>
+  <symbol id="i-snow" viewBox="0 0 24 24"><path d="M12 2.5v19M3.8 7.2l16.4 9.6M3.8 16.8l16.4-9.6"/><path d="m9.6 3.8 2.4 2 2.4-2M9.6 20.2l2.4-2 2.4 2"/></symbol>
+  <symbol id="i-shears" viewBox="0 0 24 24"><path d="M12 13.5 6.5 3.5M12 13.5l5.5-10"/><path d="m12 13.5-3.2 7M12 13.5l3.2 7"/><circle cx="12" cy="13.5" r="1.3"/></symbol>
+  <symbol id="i-spade" viewBox="0 0 24 24"><path d="M12 3v10M9 3h6"/><path d="M8 13h8v3.5a4 4 0 0 1-8 0Z"/></symbol>
+  <symbol id="i-fence" viewBox="0 0 24 24"><path d="M5 21V7l2-3 2 3v14M15 21V7l2-3 2 3v14"/><path d="M2.5 10h19M2.5 16h19"/></symbol>
+  <symbol id="i-van" viewBox="0 0 24 24"><path d="M2.5 6.5h11v10h-11zM13.5 10h4l4 3.5v3h-8"/><circle cx="6.5" cy="17.5" r="1.9"/><circle cx="17" cy="17.5" r="1.9"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4Z"/><circle cx="12" cy="13" r="3.5"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4.5 6v6c0 4.5 3.2 7.6 7.5 9 4.3-1.4 7.5-4.5 7.5-9V6Z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-bird" viewBox="0 0 24 24"><path d="M3 14c3.5 0 4.5-6 9.5-6 2.6 0 4.2 1.6 4.8 2.5L21 11l-3.6 1.3C17 16.6 14 19 10 19c-3.4 0-5.6-1.8-7-5Z"/><path d="M8 19.5 6.5 22M11 19.5 10.5 22"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<aside class="sample-bar" aria-label="About this sample website">
+  <div class="wrap sample-bar-inner">
+    <p><strong>Sample website by Agile Release.</strong> Hornbeam &amp; Hoe is not a real business: the prices, projects and details are examples.</p>
+    <a href="https://agilerelease.co.uk/#websites">Get a site like this <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  </div>
+</aside>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Hornbeam and Hoe, home">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect class="brand-bg" width="32" height="32" rx="16"/><path class="brand-leaf" d="M7.5 26L6.6 23.5 5.7 21 5.8 19.3 6 17.8 6.2 16.2 7.2 15.3 7.8 14 9.1 13.3 10 12.4 10.8 11.3 12.3 10.8 13.4 9.9 14.4 9 16.1 8.8 17.4 8.1 19.4 8 20.9 7.5 22.3 7 23.6 6.8 23.7 8.1 23.4 9.6 23.2 11.2 23.4 13.1 23 14.5 23 16.3 22.3 17.4 21.7 18.7 21.4 20.2 20.5 21.2 19.7 22.3 19.3 23.6 18.1 24.4 17.4 25.6 15.9 26 14.4 26.5 12.8 26.9 10.1 26.5Z"/><path class="brand-vein" d="M4.9 29.1L23.1 7.4M10.6 22.3L8.4 15.8M10.6 22.3L17.4 23.4M12.5 20.1L10.2 13.6M12.5 20.1L19.2 21.2M14.3 17.9L12.5 11.8M14.3 17.9L20.6 18.7M16.1 15.7L15 10.2M16.1 15.7L21.8 15.9M18 13.5L17.9 8.9M18 13.5L22.6 12.8"/></svg>
+      <span class="brand-name">Hornbeam <span class="amp">&amp;</span> Hoe</span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="#seasons">Seasons</a></li>
+        <li><a href="plans.html">Visit plans</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="#areas">Areas</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary btn-sm header-cta" href="quote.html">Get a quote</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+      <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg><span class="visually-hidden">Menu</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <p class="tag">Gardeners and landscapers in Carshalton and Sutton</p>
+      <h1 class="display">Gardens kept <em>well</em>, every season.</h1>
+      <p class="lead">Regular visits, seasonal jobs and small landscaping: patios, fences, new lawns and planting. A small local team, the same gardeners each visit, and your green waste taken away.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="quote.html">Get a free quote <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-quiet" href="plans.html"><span>Visit plans from <span data-plan-from>£90</span> a month</span></a>
+      </div>
+      <ul class="hero-facts">
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Free visit to look and quote</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> No contracts on visit plans</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg> Green waste composted, never tipped</li>
+      </ul>
+    </div>
+
+    <div class="hero-art">
+      <figure class="plate">
+        <img src="img/hornbeam.svg" alt="" width="520" height="640">
+        <figcaption class="plate-label"><i lang="la">Carpinus betulus</i>, hornbeam. <span>The hedge we cut most round here. It keeps its dry brown leaves all winter.</span></figcaption>
+      </figure>
+
+      <div class="now-card">
+        <p class="now-kicker"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg> <span data-now-kicker>This month in the garden</span></p>
+        <h2 class="now-title" id="now-title" data-now-title>This month</h2>
+        <ul class="now-list" data-now-list>
+          <li>Leaf clearance, lawn care and planting through autumn. <a href="#seasons">See the garden year</a>.</li>
+        </ul>
+        <a class="now-link" href="#seasons">The whole garden year <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="lawn-band" aria-hidden="true"></div>
+
+<section class="section" id="services">
+  <div class="wrap">
+    <header class="section-head" data-reveal>
+      <p class="tag">What we do</p>
+      <h2 class="h2">Three kinds of work, one small team</h2>
+      <p>We're five gardeners with two vans, working within about six miles of our yard in Carshalton.</p>
+    </header>
+    <ul class="services" data-reveal>
+      <li class="service">
+        <svg class="service-icon" aria-hidden="true"><use href="#i-sprout"/></svg>
+        <h3>Regular garden care</h3>
+        <p>Weekly, fortnightly or monthly visits. Mowing, edging, weeding, pruning and leaves, by the same two gardeners each time.</p>
+        <p class="service-price">From <strong data-plan-from>£90</strong> a month</p>
+        <a class="link-arrow" href="plans.html">Work out your plan <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </li>
+      <li class="service">
+        <svg class="service-icon" aria-hidden="true"><use href="#i-shears"/></svg>
+        <h3>Seasonal jobs</h3>
+        <p>Hedge cutting, leaf clearance, winter pruning, lawn renovation and bulb planting, each done at the right time of year.</p>
+        <p class="service-price">Hedges from <strong>£120</strong></p>
+        <a class="link-arrow" href="#seasons">See the garden year <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </li>
+      <li class="service">
+        <svg class="service-icon" aria-hidden="true"><use href="#i-spade"/></svg>
+        <h3>Small landscaping</h3>
+        <p>Patios and paths, new fences and gates, new lawns and planted borders. One crew from the first dig to the final sweep.</p>
+        <p class="service-price">Patios from <strong>£165</strong> a m²</p>
+        <a class="link-arrow" href="projects.html">See our projects <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </li>
+    </ul>
+
+    <div class="guides" data-reveal>
+      <h3 class="guides-title">Guide prices</h3>
+      <p class="guides-note">Including VAT. Every garden is different, so we confirm the price after a free visit.</p>
+      <dl class="guide-list" data-guides></dl>
+      <noscript><p class="guides-note">Ask us for a price on WhatsApp: <a href="quote.html">send a quote request</a>.</p></noscript>
+    </div>
+  </div>
+</section>
+
+<section class="section section-tint section-seasons" id="seasons" aria-labelledby="seasons-title">
+  <div class="wrap">
+    <header class="section-head" data-reveal>
+      <p class="tag">The garden year</p>
+      <h2 class="h2" id="seasons-title">What we're doing <em data-season-heading>this season</em></h2>
+      <p>Each job has a right time. Here's what we do through the year, starting with now.</p>
+    </header>
+
+    <div class="seasons" data-seasons>
+      <noscript><p class="season-fallback">Spring: first mowing, lawn feed, pruning roses and mulching. Summer: weekly mowing, hedge cutting after a nest check, deadheading. Autumn: leaf clearance, lawn renovation, new turf and bulbs. Winter: pruning, hedge renovation, fence repairs and bare-root planting.</p></noscript>
+    </div>
+
+    <div class="year" data-reveal>
+      <div class="year-head">
+        <h3 class="year-title">Month by month</h3>
+        <ul class="year-key">
+          <li><i class="key key-best" aria-hidden="true"></i> Best time</li>
+          <li><i class="key key-ok" aria-hidden="true"></i> Can be done</li>
+          <li><i class="key key-now" aria-hidden="true"></i> <span data-now-month>This month</span></li>
+        </ul>
+      </div>
+      <div class="year-chart" data-year></div>
+      <p class="nest-note"><svg class="icon" aria-hidden="true"><use href="#i-bird"/></svg> <span><strong>Nesting birds.</strong> From March to August we check every hedge for active nests before we cut. It's an offence under the Wildlife and Countryside Act 1981 to damage or destroy a wild bird's nest while it's being built or used, so a section with a nest waits until the young have flown.</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark" id="plans" aria-labelledby="plans-title">
+  <div class="wrap">
+    <header class="section-head" data-reveal>
+      <p class="tag tag-dark">Regular visits</p>
+      <h2 class="h2" id="plans-title">A visit plan for every garden</h2>
+      <p>Pick how often, tell us the size, and you'll know the monthly price before we visit. No contract: a month's notice ends it.</p>
+    </header>
+    <ul class="plan-teasers" data-plan-teasers data-reveal>
+      <li class="plan-teaser"><h3>Weekly</h3><p>Every week from March to October.</p></li>
+      <li class="plan-teaser"><h3>Fortnightly</h3><p>Every two weeks from March to October.</p></li>
+      <li class="plan-teaser"><h3>Monthly</h3><p>Once a month, all year round.</p></li>
+    </ul>
+    <p class="section-cta" data-reveal><a class="btn btn-shoot" href="plans.html">Work out your monthly price <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
+  </div>
+</section>
+
+<section class="section" id="projects" aria-labelledby="projects-title">
+  <div class="wrap">
+    <header class="section-head section-head-split" data-reveal>
+      <div>
+        <p class="tag">Projects</p>
+        <h2 class="h2" id="projects-title">Recent landscaping, before and after</h2>
+      </div>
+      <a class="link-arrow" href="projects.html">All projects <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </header>
+    <ul class="gallery gallery-teaser" data-gallery data-gallery-limit="3" data-reveal></ul>
+    <noscript><p><a href="projects.html">See our projects</a>.</p></noscript>
+  </div>
+</section>
+
+<section class="section section-tint" id="how" aria-labelledby="how-title">
+  <div class="wrap">
+    <header class="section-head" data-reveal>
+      <p class="tag">How we work</p>
+      <h2 class="h2" id="how-title">From a few photos to a finished garden</h2>
+    </header>
+    <ol class="steps" data-reveal>
+      <li class="step">
+        <h3>Send us a few photos</h3>
+        <p>On WhatsApp, with your postcode and what you'd like done. Or ring the office.</p>
+      </li>
+      <li class="step">
+        <h3>We come and look</h3>
+        <p>Free, usually within a week. Weekdays or Saturday mornings, and it takes about 20 minutes.</p>
+      </li>
+      <li class="step">
+        <h3>You get a written quote</h3>
+        <p>Within two working days. Projects are a fixed price, so the number won't creep up.</p>
+      </li>
+      <li class="step">
+        <h3>We do the work and clear up</h3>
+        <p>Paths swept, green waste taken away, and a photo on WhatsApp when we're done if you're out.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="section" id="areas" aria-labelledby="areas-title">
+  <div class="wrap areas">
+    <div class="areas-copy" data-reveal>
+      <p class="tag">Areas we cover</p>
+      <h2 class="h2" id="areas-title">Within about six miles of Carshalton</h2>
+      <p>Regular visits only work if we're nearby, so plans are for the inner ring. For one-off jobs and landscaping we go a little further.</p>
+      <form class="checker" data-checker novalidate>
+        <label class="field-label" for="check-postcode">Check your postcode</label>
+        <div class="checker-row">
+          <input id="check-postcode" name="postcode" type="text" inputmode="text" autocomplete="postal-code" autocapitalize="characters" spellcheck="false" maxlength="9" placeholder="SM5 3AB" aria-describedby="check-result">
+          <button class="btn btn-primary" type="submit">Check</button>
+        </div>
+        <p class="checker-result" id="check-result" data-check-result aria-live="polite">The first half is enough, for example SM5.</p>
+      </form>
+      <div class="area-lists" data-area-lists></div>
+    </div>
+    <figure class="ring-map" data-reveal>
+      <div class="ring-map-svg" data-ring-map></div>
+      <figcaption>Not to scale. Postcode districts around our yard in Carshalton.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section section-tint" id="waste" aria-labelledby="waste-title">
+  <div class="wrap waste">
+    <div class="waste-copy" data-reveal>
+      <p class="tag">Green waste</p>
+      <h2 class="h2" id="waste-title">Taken away properly, and composted</h2>
+      <p>Clippings, leaves and branches go in our own vans to a licensed composting site, not a lay-by. We're registered with the Environment Agency as an upper-tier waste carrier, because on landscaping jobs we also take away old slabs, soil and fence panels.</p>
+      <p>If you pay anyone to take rubbish away, the law expects you to check they're a registered waste carrier. If your waste is fly-tipped, you can be fined too. You can check any carrier on the <a href="https://environment.data.gov.uk/public-register/view/search-waste-carriers-brokers">Environment Agency's public register</a>.</p>
+    </div>
+    <div class="certs" data-reveal>
+      <div class="cert">
+        <svg class="icon cert-icon" aria-hidden="true"><use href="#i-van"/></svg>
+        <div>
+          <h3>Registered waste carrier</h3>
+          <p>Upper tier, registration <span class="cert-number">CBDU000000</span> <span class="example">Example</span></p>
+        </div>
+      </div>
+      <div class="cert">
+        <svg class="icon cert-icon" aria-hidden="true"><use href="#i-shield"/></svg>
+        <div>
+          <h3>Public liability insurance</h3>
+          <p>Cover up to <span class="cert-number">£5 million</span> <span class="example">Example</span></p>
+        </div>
+      </div>
+      <p class="certs-note">On a real site these show the firm's own numbers. We're happy to show the certificates when we visit.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq" aria-labelledby="faq-title">
+  <div class="wrap faq-layout">
+    <header class="section-head section-head-left" data-reveal>
+      <p class="tag">Questions</p>
+      <h2 class="h2" id="faq-title">Good to know</h2>
+      <p>Anything else? <a href="#contact">Send us a message</a> and we'll reply the same day.</p>
+    </header>
+    <div class="faq" data-reveal>
+      <details>
+        <summary>Do I need to be in when you come?</summary>
+        <p>No, as long as we can get into the garden: an unlocked side gate, a key safe or a code is fine. If the only way in is through the house, someone needs to be home, and we bring dust sheets and boot covers.</p>
+      </details>
+      <details>
+        <summary>What happens when it rains?</summary>
+        <p>We work in light rain. In heavy rain, frost or snow we don't walk on lawns or dig wet soil, because it does more harm than good. We move the visit and tell you on WhatsApp.</p>
+      </details>
+      <details>
+        <summary>Will you cut my hedge in spring or summer?</summary>
+        <p>Yes, after we've checked it for nesting birds. Any part with an active nest is left until the young have flown, which the law requires. If the hedge needs a big cut back, we book it for winter.</p>
+      </details>
+      <details>
+        <summary>Do you take on tree work?</summary>
+        <p>We prune small trees and fruit trees from the ground or a ladder, up to about four metres. For bigger trees we'll recommend a qualified tree surgeon. Carshalton village and some nearby streets are conservation areas, where most tree work needs six weeks' notice to Sutton Council first, and trees with a preservation order need consent.</p>
+      </details>
+      <details>
+        <summary>Is there a contract for a visit plan?</summary>
+        <p>No. You pay monthly by standing order and can stop with a month's notice. If you're away, we can pause visits or keep going as normal.</p>
+      </details>
+      <details>
+        <summary>Do you bring everything you need?</summary>
+        <p>Yes: tools, mowers, bags and the van to take green waste away. We use battery mowers and trimmers in most gardens, which keeps the noise down for your neighbours. We'll ask to use an outside tap for watering in new plants.</p>
+      </details>
+      <details>
+        <summary>How do I pay?</summary>
+        <p>Visit plans by monthly standing order. One-off jobs by bank transfer within seven days of the invoice. For landscaping over £1,000 we ask for a quarter up front when we order materials, and the rest when the job is finished.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="section section-tint" id="contact" aria-labelledby="contact-title">
+  <div class="wrap contact">
+    <div class="contact-info" data-reveal>
+      <p class="tag">Get in touch</p>
+      <h2 class="h2" id="contact-title">Talk to us about your garden</h2>
+      <p class="contact-line"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> <span>Yard: Unit 4, Osier Yard, Carshalton SM5. We're out in gardens most of the day, so please message before calling in.</span></p>
+      <h3 class="hours-title"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg> Office hours</h3>
+      <p class="office-status" data-office-status hidden></p>
+      <dl class="hours">
+        <div><dt>Monday to Friday</dt><dd>7:30am to 5:30pm</dd></div>
+        <div><dt>Saturday</dt><dd>8am to 12pm (quote visits)</dd></div>
+        <div><dt>Sunday</dt><dd>Closed</dd></div>
+      </dl>
+      <p class="hours-note">We start in gardens at 8am, never earlier, to keep the neighbours happy.</p>
+    </div>
+    <div class="contact-card" data-reveal>
+      <h3 class="contact-title">Message us, or ask for a quote</h3>
+      <p>WhatsApp is quickest: send a few photos of the garden and we'll come back to you the same day.</p>
+      <div class="contact-actions">
+        <a class="btn btn-shoot btn-block" href="quote.html">Ask for a quote <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-ghost-light btn-block" href="https://wa.me/447700900269" data-contact="whatsapp"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg> WhatsApp 07700 900269</a>
+        <a class="btn btn-ghost-light btn-block" href="tel:+442079460269" data-contact="phone"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> Call 020 7946 0269</a>
+        <a class="btn btn-ghost-light btn-block" href="mailto:hello@hornbeamandhoe.example" data-contact="email"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg> hello@hornbeamandhoe.example</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="lawn-band lawn-band-footer" aria-hidden="true"></div>
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a class="brand brand-light" href="index.html" aria-label="Hornbeam and Hoe, home">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect class="brand-bg" width="32" height="32" rx="16"/><path class="brand-leaf" d="M7.5 26L6.6 23.5 5.7 21 5.8 19.3 6 17.8 6.2 16.2 7.2 15.3 7.8 14 9.1 13.3 10 12.4 10.8 11.3 12.3 10.8 13.4 9.9 14.4 9 16.1 8.8 17.4 8.1 19.4 8 20.9 7.5 22.3 7 23.6 6.8 23.7 8.1 23.4 9.6 23.2 11.2 23.4 13.1 23 14.5 23 16.3 22.3 17.4 21.7 18.7 21.4 20.2 20.5 21.2 19.7 22.3 19.3 23.6 18.1 24.4 17.4 25.6 15.9 26 14.4 26.5 12.8 26.9 10.1 26.5Z"/><path class="brand-vein" d="M4.9 29.1L23.1 7.4M10.6 22.3L8.4 15.8M10.6 22.3L17.4 23.4M12.5 20.1L10.2 13.6M12.5 20.1L19.2 21.2M14.3 17.9L12.5 11.8M14.3 17.9L20.6 18.7M16.1 15.7L15 10.2M16.1 15.7L21.8 15.9M18 13.5L17.9 8.9M18 13.5L22.6 12.8"/></svg>
+        <span class="brand-name">Hornbeam <span class="amp">&amp;</span> Hoe</span>
+      </a>
+      <p>Gardeners and landscapers in Carshalton, Sutton, Wallington and Cheam.</p>
+    </div>
+    <div class="footer-contact">
+      <p>Unit 4, Osier Yard, Carshalton SM5</p>
+      <p><a href="tel:+442079460269" data-contact="phone">020 7946 0269</a> · <a href="https://wa.me/447700900269" data-contact="whatsapp">WhatsApp</a></p>
+      <p class="footer-small">Waste carrier CBDU000000 (example)</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="plans.html">Visit plans</a>
+      <a href="projects.html">Projects</a>
+      <a href="quote.html">Get a quote</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+    <p class="footer-credit">A sample website by <a href="https://agilerelease.co.uk/#websites">Agile Release</a>. Hornbeam &amp; Hoe is made up. &copy; 2026 Agile Release Limited. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

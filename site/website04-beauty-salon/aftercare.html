@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aftercare | Lunette Beauty Rooms (sample website)</title>
+<meta name="description" content="How to look after lash extensions, gel and BIAB nails and waxed skin, and when to get help. A sample website by Agile Release.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#f7f4ef">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="preload" href="css/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="css/fonts/jost-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js" defer></script>
+<script src="js/hours.js" defer></script>
+<script src="js/site.js" defer></script>
+</head>
+<body>
+
+<svg class="sprite" aria-hidden="true">
+  <symbol id="i-polish" viewBox="0 0 24 24"><path d="M10 2.75h4a1 1 0 0 1 1 1V9H9V3.75a1 1 0 0 1 1-1Z"/><path d="M8 9h8a2.5 2.5 0 0 1 2.5 2.5v7.25a2.5 2.5 0 0 1-2.5 2.5H8a2.5 2.5 0 0 1-2.5-2.5V11.5A2.5 2.5 0 0 1 8 9Z"/><path d="M9 14.75h6"/></symbol>
+  <symbol id="i-lash" viewBox="0 0 24 24"><path d="M3 9.5c2.6 3.4 5.6 5 9 5s6.4-1.6 9-5"/><path d="m5.6 12.4-1.5 2.2M8.6 13.9l-.8 2.6M12 14.5v2.8M15.4 13.9l.8 2.6M18.4 12.4l1.5 2.2"/></symbol>
+  <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3.2s6 6.3 6 10.8a6 6 0 0 1-12 0c0-4.5 6-10.8 6-10.8Z"/><path d="M9.2 14.4a3 3 0 0 0 2.6 2.8"/></symbol>
+  <symbol id="i-wax" viewBox="0 0 24 24"><path d="M4.6 11.5h14.8l-1.1 7.2A2.8 2.8 0 0 1 15.5 21h-7a2.8 2.8 0 0 1-2.8-2.3Z"/><path d="M3.5 11.5h17"/><path d="m12.6 11.5 4.6-8a1.2 1.2 0 0 1 2.1 1.2l-3.9 6.8"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3.5" y="8" width="17" height="4.5" rx="1"/><path d="M5 12.5v7a1.5 1.5 0 0 0 1.5 1.5h11a1.5 1.5 0 0 0 1.5-1.5v-7M12 8v13"/><path d="M12 8C10.6 5.2 7.4 4 6.6 5.8 5.9 7.4 8.4 8 12 8Zm0 0c1.4-2.8 4.6-4 5.4-2.2.7 1.6-1.8 2.2-5.4 2.2Z"/></symbol>
+  <symbol id="i-care" viewBox="0 0 24 24"><path d="M11 3.5c.6 4.3 2.2 5.9 6.5 6.5-4.3.6-5.9 2.2-6.5 6.5-.6-4.3-2.2-5.9-6.5-6.5 4.3-.6 5.9-2.2 6.5-6.5Z"/><path d="M18.5 14.5c.25 1.6.9 2.25 2.5 2.5-1.6.25-2.25.9-2.5 2.5-.25-1.6-.9-2.25-2.5-2.5 1.6-.25 2.25-.9 2.5-2.5Z"/></symbol>
+  <symbol id="i-patch" viewBox="0 0 24 24"><path d="M4.3 15.1 15.1 4.3a3.3 3.3 0 0 1 4.6 4.6L8.9 19.7a3.3 3.3 0 0 1-4.6-4.6Z"/><path d="m9.2 9.2 5.6 5.6"/><path d="M11.4 12h.1M12.9 10.5h.1M12 13.5h.1M13.5 12h.1"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5Z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 7 8.5-7"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+  <symbol id="i-train" viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="13.5" rx="3"/><path d="M6 10.5h12M9 21l1.6-4.5M15 21l-1.6-4.5M9.5 13.6h.1M14.5 13.6h.1"/></symbol>
+  <symbol id="i-door" viewBox="0 0 24 24"><path d="M4.5 21h15M7 21V4.5A1.5 1.5 0 0 1 8.5 3h7A1.5 1.5 0 0 1 17 4.5V21"/><path d="M14 12.5h.1"/></symbol>
+  <symbol id="i-card" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3 10h18M6.5 14.5h4"/></symbol>
+  <symbol id="i-print" viewBox="0 0 24 24"><path d="M7 9V3.5h10V9"/><rect x="3.5" y="9" width="17" height="8" rx="1.5"/><path d="M7 14h10v6.5H7Z"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5.5M12 7.7v.1"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5.5v13M5.5 12h13"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 8h16M4 16h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<aside class="sample-bar" aria-label="About this sample website">
+  <div class="wrap sample-bar-inner">
+    <p><strong>Sample website by Agile Release.</strong> Lunette Beauty Rooms is not a real salon: the treatments, prices and address are examples.</p>
+    <a href="https://agilerelease.co.uk/#websites">Get a site like this <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  </div>
+</aside>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Lunette Beauty Rooms, home">
+      <svg class="brand-mark" viewBox="0 0 36 40" aria-hidden="true"><path class="brand-arch" d="M4 39V18a14 14 0 0 1 28 0v21Z"/><path class="brand-moon" d="M10.5 39a7.5 7.5 0 0 1 15 0Z"/><path class="brand-line" d="M8.5 18.5a9.5 9.5 0 0 1 19 0"/></svg>
+      <span class="brand-text"><span class="brand-name">Lunette</span><span class="brand-sub">Beauty Rooms</span></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="treatments.html">Treatments</a></li>
+        <li><a href="book.html">Book</a></li>
+        <li><a href="vouchers.html">Gift vouchers</a></li>
+        <li><a href="aftercare.html" aria-current="page">Aftercare</a></li>
+        <li><a href="index.html#visit">Visit us</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary btn-sm header-cta" href="book.html">Book now</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+      <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg><span class="visually-hidden">Menu</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+<section class="page-head">
+  <div class="wrap">
+    <p class="kicker">Aftercare</p>
+    <h1 class="h1">Looking after it at home</h1>
+    <p class="lead">What to do, and what to avoid, in the days after your treatment. This is general advice. If something does not feel right, message us: we would much rather hear about it early.</p>
+  </div>
+</section>
+
+<nav class="jump-nav" aria-label="Aftercare topics">
+  <div class="wrap jump-nav-inner">
+    <a href="#lashes"><svg class="icon" aria-hidden="true"><use href="#i-lash"/></svg> Lash extensions</a>
+    <a href="#nails"><svg class="icon" aria-hidden="true"><use href="#i-polish"/></svg> Gel and BIAB</a>
+    <a href="#waxing"><svg class="icon" aria-hidden="true"><use href="#i-wax"/></svg> Waxing</a>
+    <a href="#lifts"><svg class="icon" aria-hidden="true"><use href="#i-care"/></svg> Lifts, tints and brows</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <aside class="urgent" aria-labelledby="urgent-title">
+    <svg class="icon" aria-hidden="true"><use href="#i-info"/></svg>
+    <div>
+      <h2 id="urgent-title">If you have a serious reaction</h2>
+      <p>If your eyes, face, lips or tongue swell, or you find it hard to breathe, <strong>call 999 straight away</strong>. For a reaction that is uncomfortable but not an emergency, speak to a pharmacist or call NHS 111, then let us know.</p>
+    </div>
+  </aside>
+</div>
+
+<section class="care" id="lashes" aria-labelledby="lashes-title">
+  <div class="wrap care-inner">
+    <header class="care-head">
+      <span class="cat-arch cat-arch-sm"><svg class="cat-icon" aria-hidden="true"><use href="#i-lash"/></svg></span>
+      <h2 class="h2" id="lashes-title">Lash extensions</h2>
+      <p>With good care, extensions look their best for two to three weeks, then need an infill. Losing a few each day is normal: your natural lashes shed, and the extensions go with them.</p>
+    </header>
+    <div class="care-grid">
+      <div class="care-card care-first">
+        <h3>First 24 hours</h3>
+        <ul>
+          <li>Keep them dry while the glue finishes setting: no face washing with water, steam, saunas or swimming.</li>
+          <li>Keep your face out of the shower spray, and skip very hot, steamy showers.</li>
+          <li>Try not to touch or rub them.</li>
+        </ul>
+      </div>
+      <div class="care-card">
+        <h3>Every day after that</h3>
+        <ul>
+          <li>Wash them every day with an oil-free lash cleanser and a soft brush, rinse, and pat dry. Clean lashes last longer and keep your eyelids healthy.</li>
+          <li>Brush them through gently with a clean spoolie, starting halfway down the lashes.</li>
+          <li>Sleep on your back if you can, or on a silk pillowcase.</li>
+        </ul>
+      </div>
+      <div class="care-card">
+        <h3>Please avoid</h3>
+        <ul>
+          <li>Oil-based make-up removers, eye creams and serums on the lash line: oil softens the glue.</li>
+          <li>Mascara, especially waterproof, and lash curlers.</li>
+          <li>Picking or pulling extensions off. They take your own lashes with them. Book a removal instead.</li>
+        </ul>
+      </div>
+      <div class="care-card care-help">
+        <h3>Message us if</h3>
+        <ul>
+          <li>Your eyes or eyelids are red, itchy, swollen or sore, or keep watering after the first day.</li>
+          <li>A lash points into your eye or feels scratchy.</li>
+          <li>You think you are reacting to them. We can remove them safely, usually the same or next day. Please do not try it at home.</li>
+        </ul>
+        <p>If your eye is painful or your sight changes, see a pharmacist, an optician or your GP, or call NHS 111.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="care care-alt" id="nails" aria-labelledby="nails-title">
+  <div class="wrap care-inner">
+    <header class="care-head">
+      <span class="cat-arch cat-arch-sm"><svg class="cat-icon" aria-hidden="true"><use href="#i-polish"/></svg></span>
+      <h2 class="h2" id="nails-title">Gel and BIAB nails</h2>
+      <p>Gel polish lasts about two weeks on hands, and BIAB three to four. Most problems start with lifting at the edges, usually from water, knocks or picking.</p>
+    </header>
+    <div class="care-grid">
+      <div class="care-card care-first">
+        <h3>First 24 hours</h3>
+        <ul>
+          <li>Your nails are fully set when you leave, so you can carry on as normal.</li>
+          <li>Avoid long hot baths, saunas and hot tubs for the first day: heat and soaking can make the edges lift.</li>
+        </ul>
+      </div>
+      <div class="care-card">
+        <h3>Every day</h3>
+        <ul>
+          <li>Rub cuticle oil into the skin around each nail once or twice a day. It keeps nails flexible and helps stop lifting and chips.</li>
+          <li>Wear gloves for washing up, cleaning and gardening.</li>
+          <li>If a nail needs shortening, file it gently rather than clipping it.</li>
+        </ul>
+      </div>
+      <div class="care-card">
+        <h3>Please avoid</h3>
+        <ul>
+          <li>Peeling, picking or biting it off. It takes layers of your own nail with it and leaves them thin and sore.</li>
+          <li>Using your nails as tools, to open cans or scrape off labels.</li>
+          <li>Gluing a lifted edge back down: water gets trapped underneath.</li>
+          <li>Acetone and strong solvents, which soften the gel.</li>
+        </ul>
+      </div>
+      <div class="care-card care-help">
+        <h3>Message us if</h3>
+        <ul>
+          <li>A nail lifts, chips or breaks. Come in and we will put it right.</li>
+          <li>You get itching, redness, a rash or swelling around your nails or fingertips, even weeks later. It can be an allergy to the products, and carrying on can make it worse, so tell us before your next appointment.</li>
+        </ul>
+        <p>If the skin around a nail is hot, swollen, painful or weeping, or you see green or dark marks under the product, it may be infected: see a pharmacist or your GP.</p>
+      </div>
+    </div>
+    <p class="care-next"><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg> Book an infill or a removal at three to four weeks. We can soak it off safely in 20 minutes.</p>
+  </div>
+</section>
+
+<section class="care" id="waxing" aria-labelledby="waxing-title">
+  <div class="wrap care-inner">
+    <header class="care-head">
+      <span class="cat-arch cat-arch-sm"><svg class="cat-icon" aria-hidden="true"><use href="#i-wax"/></svg></span>
+      <h2 class="h2" id="waxing-title">Waxing</h2>
+      <p>Some redness and small bumps are normal after waxing, and usually settle within a day or two. These steps help your skin settle and keep ingrown hairs away.</p>
+    </header>
+    <div class="care-grid">
+      <div class="care-card care-first">
+        <h3>First 48 hours</h3>
+        <ul>
+          <li>Avoid hot baths, saunas, steam rooms, pools and hot tubs.</li>
+          <li>No sunbathing, sunbeds or fake tan on the waxed skin.</li>
+          <li>Skip the gym and tight clothes. After an intimate wax, loose cotton underwear helps.</li>
+          <li>Keep perfumed products, and deodorant after an underarm wax, off the area.</li>
+        </ul>
+      </div>
+      <div class="care-card">
+        <h3>After that</h3>
+        <ul>
+          <li>Keep the area clean, and touch it as little as you can.</li>
+          <li>From the third day, exfoliate gently two or three times a week and moisturise daily. It is the best way to prevent ingrown hairs.</li>
+        </ul>
+      </div>
+      <div class="care-card">
+        <h3>Please avoid</h3>
+        <ul>
+          <li>Shaving between waxes. It restarts the hair cycle and makes the next wax harder.</li>
+          <li>Squeezing spots or digging at ingrown hairs.</li>
+          <li>Booking a wax on skin treated with retinoid creams in the last week, or while taking isotretinoin (and for six months after). Tell us about any skin medication.</li>
+        </ul>
+      </div>
+      <div class="care-card care-help">
+        <h3>Message us if</h3>
+        <ul>
+          <li>Redness, swelling or bumps last longer than three days.</li>
+          <li>Any skin was lifted or broken during the wax and is not healing.</li>
+        </ul>
+        <p>If the skin is weeping, hot or more and more painful, or the redness is spreading, it may be infected: see a pharmacist or your GP.</p>
+      </div>
+    </div>
+    <p class="care-next"><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg> Your next wax is best in four to six weeks, when the hair is about 5 mm long.</p>
+  </div>
+</section>
+
+<section class="care care-alt" id="lifts" aria-labelledby="lifts-title">
+  <div class="wrap care-inner">
+    <header class="care-head">
+      <span class="cat-arch cat-arch-sm"><svg class="cat-icon" aria-hidden="true"><use href="#i-care"/></svg></span>
+      <h2 class="h2" id="lifts-title">Lash lifts, tints and brows</h2>
+      <p>A lash lift lasts six to eight weeks, brow lamination about six, and tints four to six. The first day matters most.</p>
+    </header>
+    <div class="care-grid care-grid-3">
+      <div class="care-card care-first">
+        <h3>First 24 hours</h3>
+        <ul>
+          <li>Keep lashes and brows dry: no water, steam, saunas or swimming.</li>
+          <li>No mascara or brow make-up, and try not to rub them.</li>
+          <li>Sleep on your back if you can, so a fresh lift is not pressed flat.</li>
+        </ul>
+      </div>
+      <div class="care-card">
+        <h3>After that</h3>
+        <ul>
+          <li>Brush laminated brows into place each morning with a clean spoolie.</li>
+          <li>Be gentle with oil-based removers on tinted lashes and brows: they fade tint faster.</li>
+        </ul>
+      </div>
+      <div class="care-card care-help">
+        <h3>Message us if</h3>
+        <ul>
+          <li>You get itching, stinging, redness or swelling around your eyes or brows, during or after a tint. Rinse gently with cool water and contact us.</li>
+          <li>Something gets into your eye and stays sore after rinsing: see a pharmacist or an optician.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-mist" aria-labelledby="next-title">
+  <div class="wrap next-visit">
+    <header class="section-head section-head-left">
+      <p class="kicker">Next time</p>
+      <h2 class="h2" id="next-title">When to come back</h2>
+      <p>Booking your next visit before you leave is easiest, but these links work too.</p>
+    </header>
+    <ul class="next-list">
+      <li><span>Lash infill</span><span>every 2 to 3 weeks</span><a href="book.html?t=lash-infill">Book<span class="visually-hidden"> a lash infill</span></a></li>
+      <li><span>Gel polish</span><span>every 2 to 3 weeks</span><a href="book.html?t=gel-hands">Book<span class="visually-hidden"> gel polish</span></a></li>
+      <li><span>BIAB infill</span><span>every 3 to 4 weeks</span><a href="book.html?t=biab-infill">Book<span class="visually-hidden"> a BIAB infill</span></a></li>
+      <li><span>Waxing</span><span>every 4 to 6 weeks</span><a href="book.html?cat=waxing">Book<span class="visually-hidden"> waxing</span></a></li>
+      <li><span>Lash lift &amp; tint</span><span>every 6 to 8 weeks</span><a href="book.html?t=lash-lift">Book<span class="visually-hidden"> a lash lift and tint</span></a></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a class="brand brand-light" href="index.html" aria-label="Lunette Beauty Rooms, home">
+      <svg class="brand-mark" viewBox="0 0 36 40" aria-hidden="true"><path class="brand-arch" d="M4 39V18a14 14 0 0 1 28 0v21Z"/><path class="brand-moon" d="M10.5 39a7.5 7.5 0 0 1 15 0Z"/><path class="brand-line" d="M8.5 18.5a9.5 9.5 0 0 1 19 0"/></svg>
+      <span class="brand-text"><span class="brand-name">Lunette</span><span class="brand-sub">Beauty Rooms</span></span>
+    </a>
+      <p>Nails, lashes and brows, facials and waxing on Quince Row, Ealing.</p>
+      <p class="footer-contact">12 Quince Row, Ealing, London W5<br>
+        <a href="tel:+442079460482" data-contact="phone">020 7946 0482</a><br>
+        <a href="mailto:hello@lunette.example" data-contact="email">hello@lunette.example</a></p>
+    </div>
+    <nav class="footer-nav" aria-labelledby="footer-nav-title">
+      <h2 class="footer-title" id="footer-nav-title">The salon</h2>
+      <ul>
+        <li><a href="treatments.html">Treatments and prices</a></li>
+        <li><a href="book.html">Book an appointment</a></li>
+        <li><a href="vouchers.html">Gift vouchers</a></li>
+        <li><a href="aftercare.html">Aftercare</a></li>
+        <li><a href="index.html#policies">Patch tests and cancelling</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </nav>
+    <div class="footer-hours">
+      <h2 class="footer-title">Opening hours</h2>
+      <ul class="hours-compact" data-hours-compact>
+        <li><span>Monday</span> Closed</li>
+        <li><span>Tue to Wed</span> 10am to 7pm</li>
+        <li><span>Thu to Fri</span> 10am to 8pm</li>
+        <li><span>Saturday</span> 9am to 6pm</li>
+        <li><span>Sunday</span> 10am to 4pm</li>
+      </ul>
+    </div>
+    <p class="footer-credit">A sample website by <a href="https://agilerelease.co.uk/#websites">Agile Release</a>. Lunette Beauty Rooms is made up. &copy; 2026 Agile Release Limited. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

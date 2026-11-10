@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book a boiler service | Pinn Plumbing &amp; Heating (sample website)</title>
+<meta name="description" content="Book an annual boiler service or a landlord gas safety certificate (CP12). Pick a morning or afternoon and send it on WhatsApp. A sample website by Agile Release.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0c3a42">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+<link rel="preload" href="css/fonts/overpass-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="css/fonts/overpass-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js" defer></script>
+<script src="js/time.js" defer></script>
+<script src="js/site.js" defer></script>
+<script src="js/service.js" defer></script>
+</head>
+<body class="page-service">
+
+<svg class="sprite" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.6 3.5h2.8l1.6 4.3-2 1.3a10.5 10.5 0 0 0 5.9 5.9l1.3-2 4.3 1.6v2.8a2 2 0 0 1-2 2A16.6 16.6 0 0 1 4.6 5.5a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M12 3.5a8.5 8.5 0 0 0-7.3 12.8L3.5 20.5l4.3-1.2A8.5 8.5 0 1 0 12 3.5Z"/><path d="M8.5 10.5h7M8.5 13.5h4.5"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 7 8.5-7"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-cross" viewBox="0 0 24 24"><path d="M7 7l10 10M17 7 7 17"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-chevron-left" viewBox="0 0 24 24"><path d="m14.5 6-6 6 6 6"/></symbol>
+  <symbol id="i-chevron-right" viewBox="0 0 24 24"><path d="m9.5 6 6 6-6 6"/></symbol>
+  <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3.5s6 6.4 6 11a6 6 0 0 1-12 0c0-4.6 6-11 6-11Z"/><path d="M9.2 14.8a2.9 2.9 0 0 0 2.6 2.7"/></symbol>
+  <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 21.5c-3.6 0-6.5-2.7-6.5-6.3 0-3.9 3.3-6 4.3-10.7 2.3 1.6 3.4 3.8 3.4 6 .9-.6 1.6-1.6 1.9-3 1.9 1.8 3.4 4.6 3.4 7.7 0 3.6-2.9 6.3-6.5 6.3Z"/><path d="M12 21.5a3 3 0 0 1-3-3c0-1.8 1.6-2.8 3-4.6 1.4 1.8 3 2.8 3 4.6a3 3 0 0 1-3 3Z"/></symbol>
+  <symbol id="i-radiator" viewBox="0 0 24 24"><rect x="4" y="5" width="4" height="14" rx="2"/><rect x="10" y="5" width="4" height="14" rx="2"/><rect x="16" y="5" width="4" height="14" rx="2"/><path d="M2 9h2M20 9h2M6 19v2M18 19v2"/></symbol>
+  <symbol id="i-tap" viewBox="0 0 24 24"><path d="M3 8h9a5 5 0 0 1 5 5v1.5M3 11.5h8a2.5 2.5 0 0 1 2.5 2.5v.5"/><path d="M12.5 14.5h5.5M8 8V4.5M5.5 4.5h5"/><path d="M15.5 18v1.5"/></symbol>
+  <symbol id="i-boiler" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="15" rx="2"/><path d="M8.5 7h7"/><circle cx="12" cy="12.5" r="2.5"/><path d="M8.5 18v3M12 18v3M15.5 18v3"/></symbol>
+  <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76Z"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M3.5 8.5A1.5 1.5 0 0 1 5 7h2.5L9 4.5h6L16.5 7H19a1.5 1.5 0 0 1 1.5 1.5v9A1.5 1.5 0 0 1 19 19H5a1.5 1.5 0 0 1-1.5-1.5Z"/><circle cx="12" cy="12.8" r="3.4"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v5.5c0 4.5 3 8 7 9.5 4-1.5 7-5 7-9.5V6Z"/><path d="m9 12 2.2 2.2L15.5 10"/></symbol>
+  <symbol id="i-id" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><rect x="6" y="8.5" width="5" height="6.5" rx="1"/><path d="M14 10h4M14 13.5h3"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M10.3 4.4 2.9 17.6A2 2 0 0 0 4.6 20.5h14.8a2 2 0 0 0 1.7-2.9L13.7 4.4a2 2 0 0 0-3.4 0Z"/><path d="M12 9.5v4.5M12 17v.2"/></symbol>
+  <symbol id="i-valve" viewBox="0 0 24 24"><path d="M2.5 14h3M18.5 14h3"/><path d="M5.5 9.5 18.5 18.5V9.5L5.5 18.5Z"/><path d="M12 14V5.5M8.5 5.5h7"/></symbol>
+  <symbol id="i-pound" viewBox="0 0 24 24"><path d="M16.5 6.8A3.6 3.6 0 0 0 9.8 8.5V18M7 12.5h6.5M7 18h10.5"/></symbol>
+  <symbol id="i-van" viewBox="0 0 24 24"><path d="M2.5 6.5h11.5v10H2.5zM14 9.5h4.2l3.3 3.6v3.4H14"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17.5" cy="17.5" r="1.8"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 3h8.5L19 7.5V21H6Z"/><path d="M14 3v5h5M9 12.5h6.5M9 16h6.5"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M4 10.5 12 4l8 6.5V20H4Z"/><path d="M10 20v-5.5h4V20"/></symbol>
+  <symbol id="i-thermo" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="m12 12 3.6-3.6M12 5.5v1.2M5.5 12h1.2M17.3 12h1.2"/></symbol>
+  <symbol id="i-question" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.6a2.5 2.5 0 1 1 3.5 2.2c-.7.4-1.1.9-1.1 1.8v.4M12 16.8v.3"/></symbol>
+  <symbol id="i-clip" viewBox="0 0 24 24"><path d="m20 11.5-8 8a5 5 0 0 1-7-7l8.5-8.5a3.3 3.3 0 0 1 4.7 4.7L9.7 17.2a1.7 1.7 0 0 1-2.4-2.4L15 7"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<aside class="sample-bar" aria-label="About this sample website">
+  <div class="wrap sample-bar-inner">
+    <p><strong>Sample website by Agile Release.</strong> Pinn Plumbing &amp; Heating is not a real business: the prices, people and numbers are examples.</p>
+    <a href="https://agilerelease.co.uk/#websites">Get a site like this <svg class="icon icon-sm"><use href="#i-arrow"/></svg></a>
+  </div>
+</aside>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Pinn Plumbing and Heating, home">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect class="brand-bg" width="40" height="40" rx="11"/><path class="brand-pipe" d="M12.5 32V8.5h8a8 8 0 0 1 0 16h-8"/><path class="brand-drop" d="M20.5 12.6s3.3 3.5 3.3 5.8a3.3 3.3 0 0 1-6.6 0c0-2.3 3.3-5.8 3.3-5.8Z"/></svg>
+      <span class="brand-text"><span class="brand-name">Pinn</span><span class="brand-sub">Plumbing &amp; Heating</span></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#prices">Prices</a></li>
+        <li><a href="boiler-service.html" aria-current="page">Boiler service</a></li>
+        <li><a href="quote.html">Get a quote</a></li>
+        <li><a href="index.html#areas">Areas</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <a class="header-call" href="tel:+442079460583" data-contact="phone"><span class="header-call-label">24-hour line</span> <span class="header-call-number">020 7946 0583</span></a>
+    <a class="btn btn-signal btn-sm header-emergency" href="emergency.html"><svg class="icon"><use href="#i-alert"/></svg> Emergency?</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+      <svg class="icon"><use href="#i-menu"/></svg><span class="visually-hidden">Menu</span>
+    </button>
+  </div>
+</header>
+
+<nav class="callbar" aria-label="Call us">
+  <a class="callbar-btn callbar-call" href="tel:+442079460583" data-contact="phone"><svg class="icon"><use href="#i-phone"/></svg> <span>Call, 24 hours</span></a>
+  <a class="callbar-btn callbar-alt" href="emergency.html"><svg class="icon"><use href="#i-alert"/></svg> <span>Emergency help</span></a>
+</nav>
+
+<main id="main">
+
+<section class="page-head">
+  <div class="wrap page-head-inner">
+    <div class="page-head-copy">
+      <p class="kicker kicker-light"><svg class="icon"><use href="#i-calendar"/></svg> Boiler service</p>
+      <h1 class="h1">Book a boiler service</h1>
+      <p class="lead">Pick a morning or an afternoon in the next few weeks. Your booking reaches us as a WhatsApp message, and we reply to confirm, usually within the hour.</p>
+    </div>
+    <ul class="head-prices">
+      <li><span>Annual boiler service</span> <strong data-price="service">£95</strong></li>
+      <li><span>Landlord gas safety certificate (CP12)</span> <strong data-price="cp12">£80</strong></li>
+      <li><span>Both in one visit</span> <strong data-price="both">£150</strong></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section form-section">
+  <div class="wrap form-layout">
+    <form class="form" data-service-form novalidate>
+      <p class="form-errors" data-form-errors tabindex="-1" hidden></p>
+
+      <fieldset class="form-step">
+        <legend class="step-legend"><span class="step-badge">1</span> What do you need?</legend>
+        <div class="cards cards-3" data-job-options></div>
+        <div class="cp12-extra" data-cp12 hidden>
+          <label class="field">
+            <span class="field-label">How many gas appliances are there?</span>
+            <span class="field-hint" id="appliances-hint">The boiler, a hob, an oven and a gas fire count as one each. The price covers three; each extra one is £15.</span>
+            <select name="appliances" aria-describedby="appliances-hint" data-appliances></select>
+          </label>
+          <fieldset class="field">
+            <legend class="field-label">Who will let us in?</legend>
+            <div class="pills">
+              <label class="pill"><input type="radio" name="access" value="me" checked> <span>I will</span></label>
+              <label class="pill"><input type="radio" name="access" value="tenant"> <span>My tenant</span></label>
+              <label class="pill"><input type="radio" name="access" value="agent"> <span>The letting agent</span></label>
+            </div>
+          </fieldset>
+          <label class="field" data-access-contact hidden>
+            <span class="field-label">Their name and phone number</span>
+            <input type="text" name="accessContact" maxlength="80" autocomplete="off" aria-describedby="accessContact-error">
+            <span class="field-error" id="accessContact-error" data-error-for="accessContact" hidden>Add who we should arrange the visit with, so we can call them.</span>
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset class="form-step">
+        <legend class="step-legend"><span class="step-badge">2</span> About your boiler</legend>
+        <fieldset class="field">
+          <legend class="field-label">What type is it?</legend>
+          <div class="cards cards-4" data-boiler-types></div>
+          <span class="field-error" id="boilerType-error" data-error-for="boilerType" hidden>Choose a type, or Not sure.</span>
+        </fieldset>
+        <div class="field-row">
+          <label class="field">
+            <span class="field-label">Make</span>
+            <select name="make" data-makes aria-describedby="make-error" required></select>
+            <span class="field-error" id="make-error" data-error-for="make" hidden>Choose the make, or Not sure.</span>
+          </label>
+          <label class="field">
+            <span class="field-label">Model <span class="field-optional">Optional</span></span>
+            <input type="text" name="model" maxlength="60" placeholder="For example Greenstar 30i">
+          </label>
+        </div>
+        <label class="field">
+          <span class="field-label">How old is it?</span>
+          <select name="age" data-ages aria-describedby="age-error" required></select>
+          <span class="field-error" id="age-error" data-error-for="age" hidden>Choose roughly how old it is, or Not sure.</span>
+        </label>
+        <p class="tip" data-age-tip hidden></p>
+        <fieldset class="field">
+          <legend class="field-label">When was it last serviced?</legend>
+          <div class="field-row field-row-tight">
+            <select name="lastMonth" aria-label="Month of the last service" data-last-month></select>
+            <select name="lastYear" aria-label="Year of the last service" data-last-year></select>
+          </div>
+          <label class="check"><input type="checkbox" name="lastUnknown"> <span>Never, or I do not know</span></label>
+          <span class="field-error" id="last-error" data-error-for="last" hidden>Choose the month and year, or tick Never, or I do not know.</span>
+          <p class="tip" data-last-tip aria-live="polite" hidden></p>
+        </fieldset>
+      </fieldset>
+
+      <fieldset class="form-step">
+        <legend class="step-legend"><span class="step-badge">3</span> Pick a day and a time</legend>
+        <p class="step-intro">Mornings are 8am to 12pm and afternoons 12pm to 5pm. We text when the engineer is on the way.</p>
+        <div class="weekpicker">
+          <div class="week-nav">
+            <button type="button" class="week-btn" data-week-prev aria-label="Earlier week"><svg class="icon"><use href="#i-chevron-left"/></svg></button>
+            <p class="week-title" data-week-title aria-live="polite">This week</p>
+            <button type="button" class="week-btn" data-week-next aria-label="Later week"><svg class="icon"><use href="#i-chevron-right"/></svg></button>
+          </div>
+          <div class="week-days" data-week-days></div>
+        </div>
+        <span class="field-error" id="slot-error" data-error-for="slot" hidden>Pick a morning or an afternoon.</span>
+        <noscript><p class="tip">The booking calendar needs JavaScript. You can still book by WhatsApp on 07700 900583 or by phone on 020 7946 0583.</p></noscript>
+      </fieldset>
+
+      <fieldset class="form-step">
+        <legend class="step-legend"><span class="step-badge">4</span> Where, and who are you?</legend>
+        <label class="field">
+          <span class="field-label">Your name</span>
+          <input type="text" name="name" autocomplete="name" maxlength="60" required aria-describedby="name-error">
+          <span class="field-error" id="name-error" data-error-for="name" hidden>Add your name, so we know who to ask for.</span>
+        </label>
+        <div class="field-row field-row-address">
+          <label class="field">
+            <span class="field-label">First line of the address</span>
+            <input type="text" name="address" autocomplete="address-line1" maxlength="80" required aria-describedby="address-error">
+            <span class="field-error" id="address-error" data-error-for="address" hidden>Add the house number and street.</span>
+          </label>
+          <label class="field">
+            <span class="field-label">Postcode</span>
+            <input type="text" name="postcode" autocomplete="postal-code" autocapitalize="characters" spellcheck="false" maxlength="10" required aria-describedby="postcode-error postcode-note">
+            <span class="field-error" id="postcode-error" data-error-for="postcode" hidden>Add a postcode, like HA5 3AB.</span>
+          </label>
+        </div>
+        <p class="postcode-note" id="postcode-note" data-postcode-note aria-live="polite"></p>
+        <label class="field">
+          <span class="field-label">Anything we should know? <span class="field-optional">Optional</span></span>
+          <textarea name="note" rows="3" maxlength="400" placeholder="Parking, a gate code, where the boiler is, any problems with it"></textarea>
+        </label>
+      </fieldset>
+
+      <div class="form-submit">
+        <button type="submit" class="btn btn-signal btn-lg btn-block"><svg class="icon"><use href="#i-chat"/></svg> Send booking on WhatsApp</button>
+        <p class="form-note">Your booking goes as a WhatsApp message from your own phone. This website does not keep your details. Rather talk? Call <a href="tel:+442079460583" data-contact="phone">020 7946 0583</a>.</p>
+      </div>
+    </form>
+
+    <div class="form-aside">
+      <div class="summary-card" aria-labelledby="summary-title">
+        <h2 class="summary-title" id="summary-title">Your booking</h2>
+        <dl class="summary-list" data-summary></dl>
+        <p class="summary-total"><span>Price, VAT included</span> <strong data-summary-price>£95</strong></p>
+      </div>
+      <div class="aside-card">
+        <h2 class="aside-title"><svg class="icon"><use href="#i-boiler"/></svg> What a service covers</h2>
+        <ul class="ticks ticks-small">
+          <li><svg class="icon"><use href="#i-check"/></svg> <span>Burner, heat exchanger, seals and safety devices checked</span></li>
+          <li><svg class="icon"><use href="#i-check"/></svg> <span>Flue gases tested with an analyser</span></li>
+          <li><svg class="icon"><use href="#i-check"/></svg> <span>Condensate trap cleaned</span></li>
+          <li><svg class="icon"><use href="#i-check"/></svg> <span>Pressure, expansion vessel and controls checked</span></li>
+          <li><svg class="icon"><use href="#i-check"/></svg> <span>A written report, and the warranty log filled in</span></li>
+        </ul>
+      </div>
+      <div class="aside-card">
+        <h2 class="aside-title"><svg class="icon"><use href="#i-doc"/></svg> For landlords</h2>
+        <p>A gas safety check is needed every 12 months. We check every gas appliance and flue, and email the certificate the same day, with a reminder before the next one is due.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a class="brand brand-light" href="index.html" aria-label="Pinn Plumbing and Heating, home">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect class="brand-bg" width="40" height="40" rx="11"/><path class="brand-pipe" d="M12.5 32V8.5h8a8 8 0 0 1 0 16h-8"/><path class="brand-drop" d="M20.5 12.6s3.3 3.5 3.3 5.8a3.3 3.3 0 0 1-6.6 0c0-2.3 3.3-5.8 3.3-5.8Z"/></svg>
+      <span class="brand-text"><span class="brand-name">Pinn</span><span class="brand-sub">Plumbing &amp; Heating</span></span>
+    </a>
+      <p>Gas Safe registered plumbing and heating engineers for Pinner, Harrow, Ruislip and the streets around them.</p>
+      <p class="footer-gassafe">Gas Safe registration no. <span class="mono">000000</span> <span class="example-tag">Example</span></p>
+    </div>
+    <div class="footer-col">
+      <h2 class="footer-title">Get in touch</h2>
+      <ul class="footer-list">
+        <li><a href="tel:+442079460583" data-contact="phone">020 7946 0583</a> <span>24 hours</span></li>
+        <li><a href="https://wa.me/447700900583" data-contact="whatsapp">WhatsApp 07700 900583</a></li>
+        <li><a href="mailto:hello@pinnheating.example" data-contact="email">hello@pinnheating.example</a></li>
+        <li>Unit 4, Brindle Mews, Pinner HA5</li>
+      </ul>
+    </div>
+    <nav class="footer-col" aria-label="Footer">
+      <h2 class="footer-title">Pages</h2>
+      <ul class="footer-list">
+        <li><a href="emergency.html">Emergency help</a></li>
+        <li><a href="boiler-service.html">Book a boiler service</a></li>
+        <li><a href="quote.html">Get a quote</a></li>
+        <li><a href="index.html#prices">Prices</a></li>
+        <li><a href="index.html#areas">Areas we cover</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </nav>
+    <p class="footer-gas"><svg class="icon"><use href="#i-alert"/></svg> <span>Smell gas? Leave the building and call the National Gas Emergency Service free on <a href="tel:0800111999">0800&nbsp;111&nbsp;999</a>, 24 hours a day.</span></p>
+    <p class="footer-credit">A sample website by <a href="https://agilerelease.co.uk/#websites">Agile Release</a>. Pinn Plumbing &amp; Heating is made up. &copy; 2026 Agile Release Limited. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 300" fill="none">
+  <ellipse cx="190" cy="282" rx="170" ry="12" fill="#2a1d17" opacity=".18"/>
+  <!-- big box, bottom left -->
+  <g>
+    <rect x="22" y="128" width="176" height="150" rx="6" fill="#e7c995" stroke="#2a1d17" stroke-width="4"/>
+    <path d="M22 158h176" stroke="#2a1d17" stroke-width="3" opacity=".35"/>
+    <rect x="94" y="126" width="32" height="54" fill="#ff7a2f" opacity=".95"/>
+    <rect x="40" y="196" width="88" height="44" rx="4" fill="#fffaf3" stroke="#2a1d17" stroke-width="3"/>
+    <text x="84" y="224" text-anchor="middle" font-family="Rubik, Arial, sans-serif" font-size="17" font-weight="800" fill="#2a1d17">KITCHEN</text>
+    <g stroke="#2a1d17" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M156 252v-36M147 225l9-9 9 9M176 252v-36M167 225l9-9 9 9M144 258h44"/>
+    </g>
+  </g>
+  <!-- medium box, bottom right -->
+  <g>
+    <rect x="208" y="168" width="142" height="110" rx="6" fill="#d9b67a" stroke="#2a1d17" stroke-width="4"/>
+    <path d="M208 194h142" stroke="#2a1d17" stroke-width="3" opacity=".35"/>
+    <rect x="264" y="166" width="30" height="46" fill="#ff7a2f" opacity=".95"/>
+    <rect x="222" y="226" width="78" height="36" rx="4" fill="#fffaf3" stroke="#2a1d17" stroke-width="3"/>
+    <text x="261" y="250" text-anchor="middle" font-family="Rubik, Arial, sans-serif" font-size="15" font-weight="800" fill="#2a1d17">BOOKS</text>
+    <g stroke="#2a1d17" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M318 232h18l-2 16a7 7 0 0 1-14 0Z"/>
+      <path d="M327 255v8M321 264h12"/>
+    </g>
+  </g>
+  <!-- small box on top, slightly tipped -->
+  <g transform="rotate(-5 120 90)">
+    <rect x="60" y="34" width="124" height="94" rx="6" fill="#ecd3a6" stroke="#2a1d17" stroke-width="4"/>
+    <path d="M60 58h124" stroke="#2a1d17" stroke-width="3" opacity=".35"/>
+    <rect x="108" y="32" width="28" height="42" fill="#ff7a2f" opacity=".95"/>
+    <rect x="72" y="84" width="100" height="30" rx="4" fill="#ff7a2f" stroke="#2a1d17" stroke-width="3"/>
+    <text x="122" y="105" text-anchor="middle" font-family="Rubik, Arial, sans-serif" font-size="14" font-weight="800" letter-spacing="1.5" fill="#2a1d17">FRAGILE</text>
+  </g>
+  <!-- tape roll -->
+  <g>
+    <circle cx="292" cy="120" r="34" fill="#ff7a2f" stroke="#2a1d17" stroke-width="4"/>
+    <circle cx="292" cy="120" r="14" fill="#fffaf3" stroke="#2a1d17" stroke-width="4"/>
+    <path d="M318 142l40 14" stroke="#ff7a2f" stroke-width="16" stroke-linecap="butt"/>
+  </g>
+</svg>

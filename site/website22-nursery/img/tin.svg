@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200">
+  <defs><filter id="felt" x="-6%" y="-6%" width="112%" height="112%" color-interpolation-filters="sRGB"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="8" result="wobble"/><feDisplacementMap in="SourceGraphic" in2="wobble" scale="4" xChannelSelector="R" yChannelSelector="G" result="cut"/><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="13" result="grain"/><feColorMatrix in="grain" type="matrix" values="0 0 0 0 0.17  0 0 0 0 0.15  0 0 0 0 0.22  0.42 0 0 0 -0.16" result="specks"/><feComposite in="specks" in2="cut" operator="in" result="specksIn"/><feMerge><feMergeNode in="cut"/><feMergeNode in="specksIn"/></feMerge></filter></defs>
+  <g filter="url(#felt)">
+    <ellipse cx="236" cy="62" rx="62" ry="20" fill="#8f7cc9" transform="rotate(-14 236 62)"/>
+    <ellipse cx="236" cy="58" rx="54" ry="14" fill="none" stroke="#c9bbec" stroke-width="2.4" stroke-dasharray="6 6" transform="rotate(-14 236 58)"/>
+    <path d="M58 104 L58 160 C58 186 262 186 262 160 L262 104 Z" fill="#b9a8e2"/>
+    <path d="M58 128 C58 150 262 150 262 128" fill="none" stroke="#8f7cc9" stroke-width="2.4" stroke-dasharray="6 6"/>
+    <ellipse cx="160" cy="104" rx="102" ry="26" fill="#6f5bae"/>
+    <ellipse cx="160" cy="102" rx="92" ry="20" fill="#fff4e4"/>
+<circle cx="110" cy="96" r="14" fill="#f3a679"/><circle cx="105.8" cy="91.8" r="1.96" fill="#a3461a"/><circle cx="114.2" cy="91.8" r="1.96" fill="#a3461a"/><circle cx="105.8" cy="100.2" r="1.96" fill="#a3461a"/><circle cx="114.2" cy="100.2" r="1.96" fill="#a3461a"/>
+<circle cx="142" cy="90" r="12" fill="#f4c463"/><circle cx="138.4" cy="86.4" r="1.68" fill="#8a5a06"/><circle cx="145.6" cy="86.4" r="1.68" fill="#8a5a06"/><circle cx="138.4" cy="93.6" r="1.68" fill="#8a5a06"/><circle cx="145.6" cy="93.6" r="1.68" fill="#8a5a06"/>
+<circle cx="172" cy="98" r="15" fill="#ec9a92"/><circle cx="167.5" cy="93.5" r="2.10" fill="#9c3a3f"/><circle cx="176.5" cy="93.5" r="2.10" fill="#9c3a3f"/><circle cx="167.5" cy="102.5" r="2.10" fill="#9c3a3f"/><circle cx="176.5" cy="102.5" r="2.10" fill="#9c3a3f"/>
+<circle cx="204" cy="92" r="11" fill="#a9c8e6"/><circle cx="200.7" cy="88.7" r="1.54" fill="#2f5d86"/><circle cx="207.3" cy="88.7" r="1.54" fill="#2f5d86"/><circle cx="200.7" cy="95.3" r="1.54" fill="#2f5d86"/><circle cx="207.3" cy="95.3" r="1.54" fill="#2f5d86"/>
+<circle cx="128" cy="106" r="10" fill="#a9bf93"/><circle cx="125.0" cy="103.0" r="1.40" fill="#43603a"/><circle cx="131.0" cy="103.0" r="1.40" fill="#43603a"/><circle cx="125.0" cy="109.0" r="1.40" fill="#43603a"/><circle cx="131.0" cy="109.0" r="1.40" fill="#43603a"/>
+<circle cx="192" cy="108" r="9" fill="#f3a679"/><circle cx="189.3" cy="105.3" r="1.26" fill="#a3461a"/><circle cx="194.7" cy="105.3" r="1.26" fill="#a3461a"/><circle cx="189.3" cy="110.7" r="1.26" fill="#a3461a"/><circle cx="194.7" cy="110.7" r="1.26" fill="#a3461a"/>
+<circle cx="226" cy="102" r="10" fill="#ec9a92"/><circle cx="223.0" cy="99.0" r="1.40" fill="#9c3a3f"/><circle cx="229.0" cy="99.0" r="1.40" fill="#9c3a3f"/><circle cx="223.0" cy="105.0" r="1.40" fill="#9c3a3f"/><circle cx="229.0" cy="105.0" r="1.40" fill="#9c3a3f"/>
+<circle cx="92" cy="106" r="8" fill="#a9c8e6"/><circle cx="89.6" cy="103.6" r="1.12" fill="#2f5d86"/><circle cx="94.4" cy="103.6" r="1.12" fill="#2f5d86"/><circle cx="89.6" cy="108.4" r="1.12" fill="#2f5d86"/><circle cx="94.4" cy="108.4" r="1.12" fill="#2f5d86"/>
+<circle cx="40" cy="176" r="13" fill="#f4c463"/><circle cx="36.1" cy="172.1" r="1.82" fill="#8a5a06"/><circle cx="43.9" cy="172.1" r="1.82" fill="#8a5a06"/><circle cx="36.1" cy="179.9" r="1.82" fill="#8a5a06"/><circle cx="43.9" cy="179.9" r="1.82" fill="#8a5a06"/>
+<circle cx="290" cy="172" r="11" fill="#a9bf93"/><circle cx="286.7" cy="168.7" r="1.54" fill="#43603a"/><circle cx="293.3" cy="168.7" r="1.54" fill="#43603a"/><circle cx="286.7" cy="175.3" r="1.54" fill="#43603a"/><circle cx="293.3" cy="175.3" r="1.54" fill="#43603a"/>
+<circle cx="300" cy="128" r="8" fill="#ec9a92"/><circle cx="297.6" cy="125.6" r="1.12" fill="#9c3a3f"/><circle cx="302.4" cy="125.6" r="1.12" fill="#9c3a3f"/><circle cx="297.6" cy="130.4" r="1.12" fill="#9c3a3f"/><circle cx="302.4" cy="130.4" r="1.12" fill="#9c3a3f"/>
+    <path d="M262 150 C286 150 300 140 296 120 C292 104 276 110 280 122" fill="none" stroke="#a3461a" stroke-width="2.4" stroke-linecap="round"/>
+  </g>
+</svg>

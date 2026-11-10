@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" width="400" height="280">
+  <title>Drawing standing in for a photo of a treatment room</title>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#cddbf1"/>
+      <stop offset="1" stop-color="#fbe3d1"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="280" fill="#f3f6fb"/>
+  <rect y="222" width="400" height="58" fill="#e6edf6"/>
+  <!-- a calm picture on the wall -->
+  <rect x="40" y="36" width="150" height="104" rx="8" fill="url(#sky)"/>
+  <circle cx="132" cy="104" r="18" fill="#f4b083"/>
+  <path d="M40 112c30-16 62-18 94-8 20 6 38 6 56 0v28a8 8 0 0 1-8 8H48a8 8 0 0 1-8-8Z" fill="#a9bfe8"/>
+  <path d="M40 124c40-10 80-8 150 2v6a8 8 0 0 1-8 8H48a8 8 0 0 1-8-8Z" fill="#8aa6dd"/>
+  <rect x="40" y="36" width="150" height="104" rx="8" fill="none" stroke="#ffffff" stroke-width="7"/>
+  <!-- cupboards -->
+  <rect x="270" y="150" width="110" height="74" rx="8" fill="#ffffff"/>
+  <path d="M325 156v62M316 186h-6M340 186h-6" stroke="#dfe8f6" stroke-width="3" stroke-linecap="round"/>
+  <!-- the chair: backrest, seat and leg rest on a pedestal -->
+  <ellipse cx="178" cy="224" rx="44" ry="6" fill="#d5deeb"/>
+  <rect x="166" y="196" width="24" height="28" rx="4" fill="#9fb0c9"/>
+  <rect x="120" y="178" width="108" height="22" rx="11" fill="#3d5f9f"/>
+  <rect x="-13" y="-62" width="26" height="70" rx="12" fill="#3d5f9f" transform="translate(126 190) rotate(-52)"/>
+  <rect x="-12" y="-14" width="24" height="18" rx="8" fill="#31508c" transform="translate(76 152) rotate(-52)"/>
+  <rect x="-11" y="-6" width="64" height="20" rx="10" fill="#3d5f9f" transform="translate(222 186) rotate(24)"/>
+  <rect x="150" y="168" width="44" height="9" rx="4.5" fill="#6a8bc8"/>
+  <g fill="none" stroke="#6a8bc8" stroke-width="3" stroke-linecap="round">
+    <path d="M134 189h84"/>
+    <path d="M0 -50V0" transform="translate(126 190) rotate(-52)"/>
+    <path d="M2 4h42" transform="translate(222 186) rotate(24)"/>
+  </g>
+  <!-- the light on its arm -->
+  <path d="M300 0v40l-56 44" fill="none" stroke="#9fb0c9" stroke-width="5" stroke-linecap="round"/>
+  <ellipse cx="236" cy="92" rx="22" ry="10" fill="#ffffff" stroke="#c9d6ea" stroke-width="3"/>
+  <!-- headphones hanging ready -->
+  <path d="M352 112a16 16 0 0 1 32 0" fill="none" stroke="#f2a36c" stroke-width="4" stroke-linecap="round"/>
+  <rect x="348" y="110" width="9" height="16" rx="4" fill="#f2a36c"/>
+  <rect x="379" y="110" width="9" height="16" rx="4" fill="#f2a36c"/>
+</svg>
