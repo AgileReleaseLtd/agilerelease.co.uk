@@ -69,7 +69,7 @@ window.Cobnut = {
         { id: "pour-over", name: "Guest pour-over", price: 4.5, diet: ["vg", "gf"], desc: "This month's guest single origin, brewed by hand. It is on the specials board." },
         { id: "mocha", name: "Mocha", price: 4.3, diet: ["v", "gf"], can: ["vg"], canNote: "Vegan with oat or soya milk", desc: "Espresso, steamed milk and proper melted chocolate." },
         { id: "hot-chocolate", name: "Hot chocolate", price: 3.9, diet: ["v", "gf"], can: ["vg"], canNote: "Vegan with oat or soya milk", featured: true, desc: "Made with 54% dark chocolate, not powder. Marshmallows on request." },
-        { id: "chai", name: "Chai latte", price: 3.9, featured: true, diet: ["v"], can: ["vg"], canNote: "Vegan with oat or soya milk", desc: "Spiced black tea and steamed milk, sweetened with honey." },
+        { id: "chai", name: "Chai latte", price: 3.9, featured: true, diet: ["v"], can: ["vg"], canNote: "Vegan with oat or soya milk and maple syrup", desc: "Spiced black tea and steamed milk, sweetened with honey." },
         { id: "matcha", name: "Matcha latte", price: 4.2, diet: ["v", "gf"], can: ["vg"], canNote: "Vegan with oat or soya milk", desc: "Ceremonial-grade matcha, whisked to order." },
         { id: "tea", name: "Pot of tea", price: 3.0, diet: ["vg", "gf"], desc: "English breakfast, Earl Grey, green, peppermint or chamomile." },
         { id: "orange", name: "Fresh orange juice", price: 3.8, diet: ["vg", "gf"], desc: "Squeezed here, to order." },

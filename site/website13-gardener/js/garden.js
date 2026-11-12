@@ -128,6 +128,11 @@
     return { district: district, full: m[2] ? district + " " + m[2] : district, area: data.areas[district] || null };
   }
 
+  // Keeps a number and its unit together on screen ("60 m²"). Messages keep plain spaces.
+  function keepUnits(text) {
+    return String(text).replace(/ (m[²³])/g, "\u00a0$1");
+  }
+
   function money(n) {
     return "£" + Math.round(n).toLocaleString("en-GB");
   }
@@ -253,6 +258,7 @@
     jobsForMonth: jobsForMonth,
     lookup: lookup,
     money: money,
+    keepUnits: keepUnits,
     planPrice: planPrice,
     cheapestMonthly: cheapestMonthly,
     officeStatus: officeStatus,

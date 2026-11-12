@@ -9,7 +9,8 @@
     if (m < 0.5) {
       return "under half a mile";
     }
-    return (m < 10 ? Math.round(m * 10) / 10 : Math.round(m)) + (m === 1 ? " mile" : " miles");
+    var shown = m < 10 ? Math.round(m * 10) / 10 : Math.round(m);
+    return shown + (shown === 1 ? " mile" : " miles");
   }
 
   // Fills box with what we'd charge to come to this district. Returns the ring id, or "" if unknown.

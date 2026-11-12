@@ -1796,6 +1796,7 @@ textarea {
   color: var(--ink);
   font-weight: 700;
   font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }
 
 .contact-card {
@@ -1851,6 +1852,18 @@ textarea {
 
 .contact-card a:not(.btn) {
   color: var(--on-ink);
+}
+
+/* The narrowest phones: the three buttons fit the card, and the email address may break after the @. */
+@media (max-width: 400px) {
+  .contact-card {
+    padding-inline: 1rem;
+  }
+
+  .contact-actions .btn {
+    padding-inline: 0.75rem;
+    font-size: 0.94rem;
+  }
 }
 
 /* ---------- Page heads ---------- */
@@ -3954,6 +3967,12 @@ textarea:focus-visible {
 .seg input:focus-visible + span {
   outline: 3px solid var(--ochre-deep);
   outline-offset: 2px;
+}
+
+@media (max-width: 400px) {
+  .segmented {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 .submit-row {

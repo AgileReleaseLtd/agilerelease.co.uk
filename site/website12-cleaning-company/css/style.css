@@ -3449,6 +3449,27 @@ legend {
   }
 }
 
+/* 320 to 359px: a little less padding round the contact buttons, and the three checklist tabs share the
+   width equally and wrap onto two lines, so "Office" is never cut off at the edge. */
+@media (max-width: 359px) {
+  .contact-card {
+    padding-inline: 1rem;
+  }
+
+  /* So the WhatsApp number and the email address are not broken in the middle. */
+  .contact-actions .btn {
+    padding-inline: 0.6rem;
+  }
+
+  .tab {
+    flex: 1 1 0;
+    padding-inline: 0.35rem;
+    white-space: normal;
+    line-height: 1.15;
+    text-align: center;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

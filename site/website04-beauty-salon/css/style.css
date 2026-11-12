@@ -449,6 +449,7 @@ textarea {
 }
 
 .brand-mark {
+  flex: none;
   width: 2rem;
   height: 2.25rem;
 }
@@ -542,6 +543,7 @@ textarea {
 
 .menu-toggle {
   display: none;
+  flex: none;
   align-items: center;
   justify-content: center;
   width: 2.75rem;
@@ -611,6 +613,18 @@ textarea {
 
   .header-cta {
     padding-inline: 0.8rem;
+  }
+}
+
+/* The smallest phones (320 px) have no room for Book now next to the name and the menu; the hero and the
+   menu both lead to booking. */
+@media (max-width: 359px) {
+  .header-cta {
+    display: none;
+  }
+
+  .menu-toggle {
+    margin-left: auto;
   }
 }
 
@@ -1522,6 +1536,7 @@ textarea {
   font-family: var(--serif);
   font-size: 1.8rem;
   font-weight: 600;
+  line-height: 1.15;
 }
 
 .policy p {
@@ -3771,6 +3786,7 @@ body.has-tray {
 
   .segmented {
     display: flex;
+    justify-self: stretch;
   }
 
   .segmented label {

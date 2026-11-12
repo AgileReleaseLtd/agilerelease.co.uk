@@ -1614,6 +1614,13 @@ dd {
   color: var(--ink);
 }
 
+@media (max-width: 400px) {
+  .hours div {
+    grid-template-columns: 6rem 1fr;
+    gap: 0.6rem;
+  }
+}
+
 .hours-extra {
   max-width: 34rem;
   margin-top: 1rem;
@@ -1643,6 +1650,19 @@ dd {
 
 .contact-actions .btn {
   justify-content: flex-start;
+}
+
+/* The narrowest phones: the buttons fit the card, and the email address may break after the @. */
+@media (max-width: 400px) {
+  .contact-card {
+    padding-inline: 1rem;
+  }
+
+  .contact-actions .btn {
+    padding-inline: 0.8rem;
+    font-size: 0.94rem;
+    text-align: left;
+  }
 }
 
 .contact-note {
@@ -2787,10 +2807,6 @@ textarea:focus-visible {
   .option-card {
     padding: 1.25rem 1rem 1rem;
   }
-
-  .price-table {
-    font-size: 0.88rem;
-  }
 }
 
 .price-table {
@@ -2863,6 +2879,33 @@ textarea:focus-visible {
   color: var(--muted);
   font-size: 0.82rem;
   font-weight: 400;
+}
+
+/* Phones: smaller type, and "From £1,200" or "We give you a fixed quote" may wrap, so every table fits its
+   card down to 320px. (After the rules above, so it wins.) */
+@media (max-width: 480px) {
+  .price-table {
+    font-size: 0.88rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .price-table {
+    font-size: 0.84rem;
+  }
+
+  .price-table th,
+  .price-table td {
+    padding-inline: 0.25rem;
+  }
+
+  .price-table thead th {
+    letter-spacing: 0.03em;
+  }
+
+  .price-table .num {
+    white-space: normal;
+  }
 }
 
 .sources-note {

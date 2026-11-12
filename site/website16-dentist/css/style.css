@@ -564,6 +564,7 @@ textarea {
 
   .menu-toggle {
     display: inline-grid;
+    flex-shrink: 0;
     place-items: center;
     width: 2.9rem;
     height: 2.9rem;
@@ -662,9 +663,38 @@ textarea {
   }
 }
 
-@media (max-width: 359px) {
+/* Common 360 px phones: the brand, the button and the menu need the room, so the small line goes. */
+@media (max-width: 374px) {
   .brand-sub {
     display: none;
+  }
+}
+
+@media (max-width: 339px) {
+  .header-inner {
+    gap: 0.45rem;
+  }
+
+  .brand {
+    gap: 0.5rem;
+  }
+
+  .brand-mark {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+
+  .brand-name {
+    font-size: 1.3rem;
+  }
+
+  .header-cta {
+    padding-inline: 0.65rem;
+  }
+
+  .menu-toggle {
+    width: 2.75rem;
+    height: 2.75rem;
   }
 }
 
@@ -2784,6 +2814,11 @@ fieldset.field > legend {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
+  margin-bottom: 1.1rem;
+}
+
+.field-row > .field {
+  margin-bottom: 0;
 }
 
 .label,
@@ -3943,6 +3978,7 @@ fieldset.field > legend {
 
   .treatment-fees {
     grid-template-columns: 1fr 1fr;
+    align-items: start;
   }
 
   .treatment-fees .treatment-links {
@@ -3985,6 +4021,11 @@ fieldset.field > legend {
 
   .dob-inputs {
     gap: 0.5rem;
+  }
+
+  /* A long tag ("Free on the NHS for under-18s") may wrap rather than push a treatment off a small screen. */
+  .tag {
+    white-space: normal;
   }
 }
 

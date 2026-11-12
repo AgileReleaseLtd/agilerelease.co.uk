@@ -112,14 +112,17 @@
       inline.appendChild(more);
     }
 
-    // Homes like it on our books now, linking to the search.
+    // Homes like it on our books now, linking to the search. The search's bedrooms filter means "this many
+    // or more", so the count and the wording follow the same rule as the page the link opens.
     var m0 = modes[0];
+    var minBeds = Math.min(beds, 4); // the search goes up to "4 or more"
     var count = data.properties.filter(function (p) {
-      return p.mode === m0 && p.type === type && p.beds === beds;
+      return p.mode === m0 && p.type === type && p.beds >= minBeds;
     }).length;
     similar.textContent = "";
-    var a = T.el("a", "", count ? "See " + count + " similar " + (count === 1 ? "home" : "homes") + " on our books" : "See what is on our books now");
-    a.href = "properties.html?mode=" + m0 + "&type=" + type + (beds ? "&beds=" + beds : "");
+    var noun = type + (count === 1 ? "" : "s");
+    var a = T.el("a", "", count ? "See " + count + " " + noun + (m0 === "let" ? " to rent" : " for sale") + (minBeds ? " with " + minBeds + " or more bedrooms" : "") : "See what is on our books now");
+    a.href = "properties.html?mode=" + m0 + "&type=" + type + (minBeds ? "&beds=" + minBeds : "");
     similar.appendChild(a);
   }
 

@@ -2211,6 +2211,21 @@ textarea {
   }
 }
 
+/* The smallest phones (320 px): the name, Book and Menu fit on one line, and the footer name fits too. */
+@media (max-width: 359px) {
+  .header-inner {
+    gap: 0.5rem;
+  }
+
+  .brand-name {
+    font-size: 1.35rem;
+  }
+
+  .footer-word {
+    font-size: 2.9rem;
+  }
+}
+
 /* ---------- Page head (inner pages) ---------- */
 
 .page-head {

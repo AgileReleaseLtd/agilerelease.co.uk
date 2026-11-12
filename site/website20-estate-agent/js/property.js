@@ -379,7 +379,8 @@
     if (isLet) {
       lines.push("Move-in: " + chosenLabel(form.elements.move));
       lines.push("People living there: " + form.elements.people.value);
-      lines.push("Pets: " + (form.querySelector('input[name="pets"]:checked').value === "yes" ? "Yes (details in the note)" : "None"));
+      var hasNote = !!form.elements.note.value.trim();
+      lines.push("Pets: " + (form.querySelector('input[name="pets"]:checked').value === "yes" ? (hasNote ? "Yes (details in the note)" : "Yes") : "None"));
     } else {
       var position = chosenLabel(form.elements.position);
       if (form.elements.aip.checked) {

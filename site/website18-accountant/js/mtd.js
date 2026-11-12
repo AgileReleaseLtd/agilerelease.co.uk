@@ -159,7 +159,7 @@
     var p = el("p");
     var dateText = D.fmt.full.format(start);
     if (over) {
-      p.appendChild(el("strong", "", started ? "You should be using MTD since " + dateText : "You will need MTD from " + dateText));
+      p.appendChild(el("strong", "", started ? "You should have been using MTD since " + dateText : "You will need MTD from " + dateText));
       p.appendChild(document.createTextNode(money(total) + " is more than " + money(phase.threshold) + " for " + phase.taxYear + ". HMRC usually writes to tell you, but it is up to you to check." + (started ? " If you have not signed up yet, you still can: talk to us." : "")));
     } else {
       p.appendChild(el("strong", "", "Not from these figures"));

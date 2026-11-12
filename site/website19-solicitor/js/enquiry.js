@@ -199,7 +199,7 @@
         line(lines, "Court date or deadline", "Yes");
       }
     } else if (matter === "landlord") {
-      line(lines, "I am the", value("ltRole").toLowerCase());
+      line(lines, "I am", { Landlord: "The landlord", Tenant: "The tenant", "Letting agent": "A letting agent" }[value("ltRole")] || value("ltRole"));
       line(lines, "Issue", value("ltIssue"));
       if (f.ltNotice.checked) {
         line(lines, "Notice already served", "Yes");

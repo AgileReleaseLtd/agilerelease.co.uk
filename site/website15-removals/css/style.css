@@ -4178,6 +4178,9 @@ input:checked + .pack-card {
 
 .cal-day.is-closed {
   color: var(--muted);
+}
+
+.cal-day.is-closed .cal-num {
   text-decoration: line-through;
 }
 
@@ -4329,6 +4332,11 @@ input:checked + .pack-card {
 
   /* No room for "Popular" in a phone-sized day: the colour and the legend say it. */
   .cal-day.is-popular .cal-tag {
+    display: none;
+  }
+
+  /* Nor for "Closed", which ran into the next day: the struck-through date says it. */
+  .cal-day.is-closed .cal-tag {
     display: none;
   }
 }

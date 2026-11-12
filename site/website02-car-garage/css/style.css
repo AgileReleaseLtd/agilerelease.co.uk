@@ -423,6 +423,7 @@ textarea {
 }
 
 .brand-mark {
+  flex: none;
   width: 2.35rem;
   height: 2.35rem;
 }
@@ -510,6 +511,7 @@ textarea {
 
 .menu-toggle {
   display: none;
+  flex: none;
   align-items: center;
   justify-content: center;
   width: 2.75rem;
@@ -571,6 +573,18 @@ textarea {
   }
 }
 
+/* Phones: the logo, Book MOT and the menu button share one line without squashing the logo. */
+@media (max-width: 420px) {
+  .site-header .brand {
+    gap: 0.5rem;
+  }
+
+  .site-header .brand-mark {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
 @media (max-width: 400px) {
   .brand-sub {
     letter-spacing: 0.2em;
@@ -582,6 +596,28 @@ textarea {
 
   .header-cta {
     padding-inline: 0.8rem;
+  }
+}
+
+@media (max-width: 389px) {
+  .header-inner {
+    gap: 0.5rem;
+  }
+
+  .header-cta {
+    padding-inline: 0.6rem;
+    white-space: nowrap;
+  }
+}
+
+/* The smallest phones (320 px) have no room for Book MOT; the menu and the home page lead to booking. */
+@media (max-width: 359px) {
+  .header-cta {
+    display: none;
+  }
+
+  .menu-toggle {
+    margin-left: auto;
   }
 }
 
@@ -3688,6 +3724,7 @@ select.input {
 
 .prose p {
   color: #30353b;
+  overflow-wrap: break-word; /* the long email address on a 320 px phone */
 }
 
 .prose-note {

@@ -381,8 +381,9 @@
     });
     if (!fromQuote) {
       // Without an estimate we don't know the stairs or parking yet: leave those to the notes.
+      // There's no item list on this page either: say what kind of move it is, and the list follows below.
       moveLines = moveLines.map(function (l) {
-        return l.replace(/, ground floor or a house\. Parking: outside or on a driveway$/, "").replace(/^Online estimate: /, "Rough estimate, before stairs and parking: ");
+        return l.replace(/, ground floor or a house\. Parking: outside or on a driveway$/, "").replace(/^Online estimate: /, "Rough estimate, before stairs and parking: ").replace(/^Items: none yet$/, "Move: a few items, or a student room");
       });
     }
     lines = lines.concat(moveLines);

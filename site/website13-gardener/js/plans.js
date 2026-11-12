@@ -66,7 +66,7 @@
   var sizeInputs = [];
   Object.keys(data.sizes).forEach(function (key) {
     var s = data.sizes[key];
-    var o = option("size", key, s.name + ", " + s.area, [["option-sub", s.text]], sizePic(key));
+    var o = option("size", key, G.keepUnits(s.name + ", " + s.area), [["option-sub", s.text]], sizePic(key));
     sizeBox.appendChild(o.label);
     sizeInputs.push(o.input);
   });
@@ -156,7 +156,7 @@
       var tr = el("tr");
       var th = el("th", "", data.sizes[s].name);
       th.scope = "row";
-      th.appendChild(el("span", "", data.sizes[s].area));
+      th.appendChild(el("span", "", G.keepUnits(data.sizes[s].area)));
       tr.appendChild(th);
       Object.keys(data.plans).forEach(function (f) {
         var p = G.planPrice(f, s);

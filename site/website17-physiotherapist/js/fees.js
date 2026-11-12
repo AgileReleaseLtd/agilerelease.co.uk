@@ -60,7 +60,8 @@
 
   var rules = document.querySelector("[data-package-rules]");
   if (rules) {
-    rules.textContent = "Packages are for one person and last " + D.packageValidMonths + " months from the day you buy them. They cannot be used with an insurance claim. If you stop early, we refund the appointments you have not used, less the discount you have had so far.";
+    var months = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve"][D.packageValidMonths] || String(D.packageValidMonths);
+    rules.textContent = "Packages are for one person and last " + months + (D.packageValidMonths === 1 ? " month" : " months") + " from the day you buy them. They cannot be used with an insurance claim. If you stop early, we refund the appointments you have not used, less the discount you have had so far.";
   }
 
   var policy = D.cancellation;

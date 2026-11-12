@@ -1,6 +1,63 @@
 /* Hand-written styles for what css/tailwind.css (prebuilt, only the classes already in use) does not have:
-   the sample websites, the website prices and the contact form on the home page. Colours follow the brand (sky)
-   and slate scales. */
+   a few Tailwind classes the pages use that it lacks, the top bar on narrow phones and the cookie banner link
+   (every page), and the sample websites, the website prices and the contact form on the home page. Colours
+   follow the brand (sky) and slate scales. */
+
+/* ── Tailwind classes missing from css/tailwind.css ───────────────────────────────────────────── */
+/* Without these the headline gradient faded to nothing, the EasyTaxer card took one column of three, and the
+   logo did not change on hover. Values are Tailwind's own. */
+.to-violet-600 {
+    --tw-gradient-to: #7c3aed var(--tw-gradient-to-position);
+}
+
+.group:hover .group-hover\:bg-brand-800 {
+    background-color: rgb(7 89 133);
+}
+
+@media (min-width: 1024px) {
+    .lg\:col-span-2 {
+        grid-column: span 2 / span 2;
+    }
+}
+
+/* ── Top bar ──────────────────────────────────────────────────────────────────────────────────── */
+/* On phones narrower than 390px the name and "Start a project" each wrapped onto two lines: keep them on one,
+   a little smaller, and under 340px leave "Start a project" to the menu and the button below the headline. */
+.nav-name,
+.nav-cta {
+    white-space: nowrap;
+}
+
+@media (max-width: 389px) {
+    .nav-name {
+        font-size: 1.05rem;
+    }
+
+    .nav-cta {
+        padding-left: 0.9rem;
+        padding-right: 0.9rem;
+        font-size: 0.8125rem;
+    }
+}
+
+@media (max-width: 339px) {
+    .nav-cta {
+        display: none;
+    }
+}
+
+/* A bigger tap target for the menu button, without moving the icon. */
+.nav-menu-button {
+    padding: 0.6rem;
+    margin: -0.6rem -0.6rem -0.6rem 0;
+}
+
+/* ── Cookie banner (js/consent.js) ────────────────────────────────────────────────────────────── */
+/* Its link sits in a sentence, so it is underlined, not told apart by colour alone. */
+#cookie-banner a {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
 
 /* ── Sample websites ──────────────────────────────────────────────────────────────────────────── */
 .samples {

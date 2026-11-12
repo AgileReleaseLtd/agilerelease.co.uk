@@ -38,9 +38,26 @@
       button.setAttribute("aria-expanded", String(open));
     }
 
+    // The links come before the button in the page, so opening the menu moves focus to the first link (Tab
+    // then walks down the menu), and moving focus out of the header closes it again.
     button.addEventListener("click", function () {
-      set(!nav.classList.contains("is-open"));
+      var open = !nav.classList.contains("is-open");
+      set(open);
+      if (open) {
+        var first = nav.querySelector("a");
+        if (first) {
+          first.focus();
+        }
+      }
     });
+    var header = button.closest("header");
+    if (header) {
+      header.addEventListener("focusout", function (event) {
+        if (nav.classList.contains("is-open") && event.relatedTarget && !header.contains(event.relatedTarget)) {
+          set(false);
+        }
+      });
+    }
     nav.addEventListener("click", function (event) {
       if (event.target.closest("a")) {
         set(false);

@@ -44,8 +44,14 @@
       button.setAttribute("aria-expanded", String(open));
     }
 
-    button.addEventListener("click", function () {
-      set(!nav.classList.contains("is-open"));
+    button.addEventListener("click", function (event) {
+      var open = !nav.classList.contains("is-open");
+      set(open);
+      // The menu comes before the button in the page, so opened from the keyboard (detail 0), focus moves to
+      // its first link; otherwise Tab would skip the menu and go on into the page.
+      if (open && event.detail === 0) {
+        nav.querySelector("a").focus();
+      }
     });
     nav.addEventListener("click", function (event) {
       if (event.target.closest("a")) {

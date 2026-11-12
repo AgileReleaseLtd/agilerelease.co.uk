@@ -121,6 +121,10 @@
       if (close < K.toMinutes(data.dropOff[key].needsOpenUntil)) {
         return false;
       }
+      // We collect the car at one time of day only.
+      if (collectToggle.checked && key !== data.collect.dropOff) {
+        return false;
+      }
       if (svc && svc.fullDay && close < K.toMinutes(data.dropOff.afternoon.needsOpenUntil)) {
         return false;
       }
@@ -292,9 +296,15 @@
         text.textContent = readyText(key, selected);
       } else {
         var svc = data.services[serviceKey()];
-        text.textContent = svc && svc.morningOnly && slots.length
-          ? "A " + svc.name.toLowerCase() + " needs a morning drop-off."
-          : "Not on this day: we close at " + K.clock(K.hoursOn(selected).close) + ".";
+        var pickup = data.dropOff[data.collect.dropOff];
+        var closesEarly = K.toMinutes(K.hoursOn(selected).close) < K.toMinutes(data.dropOff[key].needsOpenUntil);
+        if (closesEarly) {
+          text.textContent = "Not on this day: we close at " + K.clock(K.hoursOn(selected).close) + ".";
+        } else if (svc && svc.morningOnly) {
+          text.textContent = "A " + svc.name.toLowerCase() + " needs a morning drop-off.";
+        } else {
+          text.textContent = "Not with collection: we collect between " + K.clock(pickup.from) + " and " + K.clock(pickup.to) + ".";
+        }
       }
     });
     // One time left: choose it.
@@ -359,6 +369,10 @@
 
   collectToggle.addEventListener("change", function () {
     renderCollection(false);
+    // Collection changes the drop-off times on offer.
+    renderCalendar();
+    markSelected();
+    renderDropoffs();
     updateTicket();
     if (collectToggle.checked) {
       form.elements.postcode.focus();
@@ -549,7 +563,7 @@
     });
     lines.push("");
     lines.push("Prices: " + parts.join("; "));
-    lines.push("Estimated total: " + K.money(total) + ", paid when I collect");
+    lines.push("Estimated total: " + K.money(total) + (c ? ", paid when you bring it back" : ", paid when I collect"));
     return lines.join("\n");
   }
 

@@ -184,7 +184,7 @@ window.Jonjoli = {
         ["From the fire", "Pork mtsvadi and chicken shkmeruli, with lobio and fried potatoes"],
         ["Sweet", "Pelamushi and churchkhela, with Georgian tea"]
       ],
-      allergens: "Contains gluten, milk, eggs, tree nuts (walnuts) and sulphites. We can change it for most allergies and for vegetarians with a day's notice."
+      allergens: "Contains gluten, milk, tree nuts (walnuts) and sulphites. We can change it for most allergies and for vegetarians with a day's notice."
     },
     {
       id: "garden", name: "The garden supra", price: 40, minGuests: 2, vegan: true,
@@ -200,7 +200,7 @@ window.Jonjoli = {
     },
     {
       id: "grand", name: "The grand supra", price: 62, minGuests: 9, groups: true,
-      blurb: "For groups. Everything in the supra, plus an Adjaruli khachapuri for every four people, chakapuli and trout, and a chacha toast.",
+      blurb: "For groups. A bigger supra, with an Adjaruli khachapuri for every four people, chakapuli and trout, and a chacha toast.",
       courses: [
         ["To start", "Pkhali trio, badrijani, satsivi, Georgian salad, gadazelili, pickles, mchadi"],
         ["From the oven", "Imeruli and Adjaruli khachapuri"],

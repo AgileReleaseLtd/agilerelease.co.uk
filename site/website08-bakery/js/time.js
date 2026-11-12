@@ -193,7 +193,8 @@
     return { open: false, soon: false, text: text, detail: detail };
   }
 
-  // The bakes on a date, in time order: [{ time, name, note }]. None on a closed day.
+  // The bakes on a date, in time order: [{ time, name, note }]. None on a closed day. A batch that comes
+  // out before the doors open (on later-opening days) shows the opening time: it is ready when we open.
   function bakesOn(d) {
     var h = hoursOn(d);
     if (!h) {
@@ -202,6 +203,8 @@
     var dow = d.getDay();
     return data.bakes.filter(function (b) {
       return (!b.days || b.days.indexOf(dow) !== -1) && minutes(b.time) < minutes(h[1]);
+    }).map(function (b) {
+      return minutes(b.time) < minutes(h[0]) ? Object.assign({}, b, { time: h[0] }) : b;
     }).sort(function (a, b) {
       return minutes(a.time) - minutes(b.time);
     });

@@ -21,6 +21,11 @@
     return node;
   }
 
+  // Small numbers in words, as in the rest of the page: 4 -> "four".
+  function count(n) {
+    return ["no", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"][n] || String(n);
+  }
+
   function phoneButton(className, label, tel, contact) {
     var a = el("a", "btn " + className);
     a.href = "tel:" + tel;
@@ -59,7 +64,7 @@
     var intro = document.querySelector("[data-slots-intro]");
     var weekday = (data.emergencySlots[1] || []).length;
     var saturday = (data.emergencySlots[6] || []).length;
-    intro.textContent = "Every weekday we hold back " + weekday + " appointments for emergencies, and " + saturday + " on Saturday mornings.";
+    intro.textContent = "Every weekday we hold back " + count(weekday) + (weekday === 1 ? " appointment" : " appointments") + " for emergencies, and " + count(saturday) + " on Saturday mornings.";
     title.textContent = "Held back today, " + clock.fmt.long.format(at);
     list.textContent = "";
     var left = today.filter(function (s) {
@@ -76,9 +81,14 @@
     if (!left.length) {
       var line = clock.status(data.emergencyLine, at);
       var reason = clock.closedReason(at);
-      var next = line.opens ? "The line opens " + clock.whenWords(line.opens.date, at) + " at " + clock.formatTime(line.opens.time) + "." : "";
-      none.textContent = (reason ? "We are closed today (" + reason + "). " : today.length ? "Today's slots have all gone. " : "No emergency slots today: we are closed. ") +
-        next + " For urgent help before then, call NHS 111.";
+      var first = reason ? "We are closed today (" + reason + "). " : today.length ? "Today's slots have all gone. " : "No emergency slots today: we are closed. ";
+      if (line.open) {
+        // The slots have gone but the line is still answered.
+        none.textContent = first + "The line is open until " + clock.formatTime(line.closes) + " if you need advice, or call NHS 111 for urgent help.";
+      } else {
+        var next = line.opens ? "The line opens " + clock.whenWords(line.opens.date, at) + " at " + clock.formatTime(line.opens.time) + ". For urgent help before then," : "For urgent help,";
+        none.textContent = first + next + " call NHS 111.";
+      }
       none.hidden = false;
     } else {
       none.hidden = true;

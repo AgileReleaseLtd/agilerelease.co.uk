@@ -2755,6 +2755,7 @@ textarea:focus-visible {
   font-family: var(--serif);
   font-size: 1.75rem;
   font-weight: 700;
+  line-height: 1.1;
 }
 
 .message-card h2:focus {
@@ -3251,14 +3252,57 @@ textarea:focus-visible {
   }
 }
 
-@media (max-width: 380px) {
+/* Keep "Get a quote" on one line and the menu button round on 360 to 414 px phones. */
+@media (max-width: 420px) {
   .header-cta {
     font-size: 0.9375rem;
     padding-inline: 0.7rem;
+    white-space: nowrap;
+  }
+
+  .menu-toggle {
+    flex-shrink: 0;
   }
 
   .brand-name {
     font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 370px) {
+  .header-inner {
+    gap: 0.5rem;
+  }
+
+  .brand {
+    gap: 0.5rem;
+  }
+
+  .brand-mark {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .brand-name {
+    font-size: 1.05rem;
+  }
+}
+
+/* The smallest phones (320 px) have no room for the button next to the name and the menu; the hero, the
+   page buttons and the footer all lead to the quote form. */
+@media (max-width: 349px) {
+  .header-cta {
+    display: none;
+  }
+
+  .menu-toggle {
+    margin-left: auto;
+  }
+
+  /* Room for the whole email address on one line under "hello@". */
+  .contact-actions .btn {
+    padding-inline: 1rem;
+    font-size: 1rem;
   }
 }
 

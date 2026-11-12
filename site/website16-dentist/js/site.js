@@ -53,9 +53,26 @@
       button.setAttribute("aria-expanded", String(open));
     }
 
+    // The links come before the button in the page, so opening the menu moves focus to the first link (Tab
+    // then walks down the menu), and moving focus out of the header closes it again.
     button.addEventListener("click", function () {
-      set(!nav.classList.contains("is-open"));
+      var open = !nav.classList.contains("is-open");
+      set(open);
+      if (open) {
+        var first = nav.querySelector("a");
+        if (first) {
+          first.focus();
+        }
+      }
     });
+    var header = button.closest("header");
+    if (header) {
+      header.addEventListener("focusout", function (event) {
+        if (nav.classList.contains("is-open") && event.relatedTarget && !header.contains(event.relatedTarget)) {
+          set(false);
+        }
+      });
+    }
     nav.addEventListener("click", function (event) {
       if (event.target.closest("a")) {
         set(false);
@@ -186,17 +203,21 @@
     });
   }
 
-  // A notice when the practice is closed for a bank holiday in the next three weeks.
+  // A notice when the practice is closed for a bank holiday in the next three weeks, naming every closed day
+  // in that time (Christmas and Easter close more than one day).
   function closureNotice() {
     var box = document.querySelector("[data-closure-notice]");
     if (!box) {
       return;
     }
-    var next = clock.nextClosure(clock.now(), 21);
-    if (!next) {
+    var days = clock.closuresWithin(clock.now(), 21).map(function (c) {
+      return c.when + " (" + c.reason + ")";
+    });
+    if (!days.length) {
       return;
     }
-    box.textContent = "We are closed " + next.when + " (" + next.reason + "). For dental emergencies when we are closed, call NHS 111.";
+    var list = days.length === 1 ? days[0] : days.slice(0, -1).join(", ") + " and " + days[days.length - 1];
+    box.textContent = "We are closed " + list + ". For dental emergencies when we are closed, call NHS 111.";
     box.hidden = false;
   }
 
@@ -218,9 +239,13 @@
     if (left.length && (line.open || opensToday)) {
       head.textContent = left.length + (left.length === 1 ? " emergency slot" : " emergency slots") + " held back for today";
       detail.textContent = line.open ? "In pain? Call " + data.emergencyPhone : "Emergency line opens at " + clock.formatTime(line.opens.time);
+    } else if (line.open) {
+      // Today's slots have gone, but the line is still answered.
+      head.textContent = "Emergency slots: none left today";
+      detail.textContent = "Line open until " + clock.formatTime(line.closes) + " for advice, or call NHS 111";
     } else {
       var next = line.opens;
-      head.textContent = "Emergency slots: none left today";
+      head.textContent = slots.length ? "Emergency slots: none left today" : "No emergency slots today";
       detail.textContent = next ? "Line opens " + clock.whenWords(next.date, at) + " at " + clock.formatTime(next.time) + ". Out of hours: NHS 111" : "Out of hours: call NHS 111";
     }
   }

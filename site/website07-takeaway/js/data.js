@@ -228,9 +228,11 @@ window.Kor = {
     }
   },
 
-  /* The menu. price = the lowest price, in pounds (choices with "add" cost more). worth = what the parts
-     of a meal deal cost on their own; feeds = how many people a deal is for. diet: "v" vegetarian, "vg"
-     vegan. hot: spicy as it comes. allergens: ids from the list above, for the dish as it comes; a choice
+  /* The menu. price = the lowest price, in pounds (choices with "add" cost more). saveUpTo = the most
+     a meal deal saves against buying its parts on their own, with the dearest choices (wrap meal: a
+     lamb shish wrap, chips and an ayran, £19.30 for £16.50; lahmacun trio: with an ayran, £17 for
+     £13). feeds = how many people a deal is for. diet: "v" vegetarian, "vg" vegan. hot: spicy as it
+     comes. allergens: ids from the list above, for the dish as it comes; a choice
      with its own "allergens" adds those when it is picked. featured: on the home page. icon: the
      category's picture; pic: a dish's own picture, if it has one; pics: what is in a meal deal. */
   menu: [
@@ -241,12 +243,12 @@ window.Kor = {
       blurb: "Bundles that cost less than buying each part.",
       items: [
         {
-          id: "wrap-meal", name: "Wrap meal", price: 14.5, worth: 16.6, pics: ["i-wrap", "i-chips", "i-cup"],
+          id: "wrap-meal", name: "Wrap meal", price: 14.5, saveUpTo: 2.8, pics: ["i-wrap", "i-chips", "i-cup"],
           desc: "Any wrap from the grill, regular chips and a drink.",
           options: ["dealWrap", "spice", "dealDrink"], allergens: ["gluten", "milk"]
         },
         {
-          id: "lahmacun-trio", name: "Lahmacun trio", price: 13, worth: 17, pics: ["i-lahmacun", "i-lahmacun", "i-cup"],
+          id: "lahmacun-trio", name: "Lahmacun trio", price: 13, saveUpTo: 4, pics: ["i-lahmacun", "i-lahmacun", "i-cup"],
           desc: "Three lahmacun with lemon and onion salad, and an ayran or a can.",
           options: ["spice", "dealDrink"], allergens: ["gluten", "sulphites"]
         },

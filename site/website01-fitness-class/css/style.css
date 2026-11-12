@@ -367,6 +367,7 @@ textarea {
 }
 
 .brand-mark {
+  flex: none;
   width: 2.25rem;
   height: 2.25rem;
 }
@@ -439,6 +440,7 @@ textarea {
 
 .menu-toggle {
   display: none;
+  flex: none;
   align-items: center;
   justify-content: center;
   width: 2.75rem;
@@ -509,6 +511,30 @@ textarea {
 
   .header-cta {
     padding-inline: 0.85rem;
+  }
+}
+
+/* Keep "Book a class" on one line on 360 px phones. */
+@media (max-width: 389px) {
+  .header-inner {
+    gap: 0.5rem;
+  }
+
+  .header-cta {
+    padding-inline: 0.75rem;
+    white-space: nowrap;
+  }
+}
+
+/* The smallest phones (320 px) have no room for the button next to the name and the menu; the hero and the
+   menu both lead to the timetable. */
+@media (max-width: 359px) {
+  .header-cta {
+    display: none;
+  }
+
+  .menu-toggle {
+    margin-left: auto;
   }
 }
 

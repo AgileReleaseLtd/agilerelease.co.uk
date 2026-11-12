@@ -572,8 +572,11 @@ textarea {
     gap: 0.75rem;
   }
 
+  /* The button comes before the menu in the page, so Tab goes from it into the open menu; it still sits
+     at the right-hand end, after the call button. */
   .menu-toggle:not([hidden]) {
     display: grid;
+    order: 1;
   }
 
   .header-call {
@@ -4558,8 +4561,10 @@ textarea.input {
     white-space: normal;
   }
 
-  .price-table td:last-child {
+  .price-table td:last-child,
+  .price-table tbody tr:last-child td:last-child {
     border-right: 0;
+    border-bottom-right-radius: 0;
   }
 
   .price-table td::before {

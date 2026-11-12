@@ -108,7 +108,7 @@
       day.appendChild(head);
       if (!info) {
         day.classList.add("is-off");
-        day.appendChild(el("p", "day-off", date < firstDay ? "Too soon to book" : "Not open for booking yet"));
+        day.appendChild(el("p", "day-off", date < T.startOfDay(now) ? "In the past" : date < firstDay ? "Too soon to book" : "Not open for booking yet"));
       } else if (info.reason) {
         day.classList.add("is-off");
         day.appendChild(el("p", "day-off", info.reason));

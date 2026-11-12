@@ -52,7 +52,7 @@
         tr.append(th, el("td", "", D.money(fee.price)), el("td", "", D.money(fee.price * n)));
         group.appendChild(tr);
       });
-      document.querySelector("[data-term-foot]").textContent = "A term here is the " + t.label + ": " + n + " weeks of classes, one a week. Terms have 10 to 14 weeks, and Monday classes in the summer term have one session fewer because of the May bank holiday. Join part-way through a term and you pay only for the sessions left.";
+      document.querySelector("[data-term-foot]").textContent = "A term here is the " + t.label + ": " + n + " weeks of classes, one a week. Terms have 10 to 14 weeks, and Monday classes can have a session or two fewer because of bank holidays. Join part-way through a term and you pay only for the sessions left.";
     }
     if (one) {
       one.textContent = "";

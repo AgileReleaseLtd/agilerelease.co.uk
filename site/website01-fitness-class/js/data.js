@@ -82,7 +82,7 @@ window.Ironfern = {
     3: [["06:30", "strength", "maya"], ["09:30", "vinyasa", "priya"], ["12:30", "circuits", "dan"], ["18:00", "boxfit", "dan"], ["19:15", "pilates", "leo"]],
     4: [["06:30", "hiit", "maya"], ["07:30", "mobility", "priya"], ["12:30", "circuits", "dan"], ["18:00", "strength", "maya"], ["19:15", "vinyasa", "priya"]],
     5: [["06:30", "boxfit", "dan"], ["09:30", "pilates", "leo"], ["12:30", "hiit", "maya"], ["17:30", "foundations", "leo"]],
-    6: [["08:30", "hiit", "maya"], ["09:45", "strength", "maya"], ["10:00", "boxfit", "dan"], ["11:15", "vinyasa", "priya"]],
+    6: [["08:30", "hiit", "maya"], ["09:45", "strength", "maya"], ["11:00", "boxfit", "dan"], ["11:15", "vinyasa", "priya"]],
     0: [["09:00", "pilates", "leo"], ["10:15", "vinyasa", "priya"], ["17:00", "mobility", "priya"]]
   }
 };

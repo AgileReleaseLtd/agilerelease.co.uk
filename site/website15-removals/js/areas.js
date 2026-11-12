@@ -6,20 +6,28 @@
   var S = window.HTSite;
   var P = window.HTPostcodes;
 
-  // Districts in the home patch, with split central districts (EC1A, EC1M ...) shown once as EC1.
+  // Districts in the home patch. A split central district (EC1A, EC1M ...) is shown once as EC1 when all
+  // of it is in the patch; when only some parts are (SW1A and SW1Y, but not the rest of SW1), those parts
+  // are listed instead, so the list agrees with the checker.
   var patch = document.querySelector('[data-patch="home"]');
   if (patch) {
-    var seen = {};
-    var codes = [];
+    var groups = {};
     Object.keys(P.districts).forEach(function (code) {
       var d = P.districts[code];
-      if (E.ringFor({ e: d[0], n: d[1] }).ring.id !== "home") {
-        return;
-      }
       var key = code.replace(/^([A-Z]+\d+)[A-Z]$/, "$1");
-      if (!seen[key]) {
-        seen[key] = true;
+      var g = groups[key] || (groups[key] = { home: [], all: 0 });
+      g.all += 1;
+      if (E.ringFor({ e: d[0], n: d[1] }).ring.id === "home") {
+        g.home.push(code);
+      }
+    });
+    var codes = [];
+    Object.keys(groups).forEach(function (key) {
+      var g = groups[key];
+      if (g.home.length && g.home.length === g.all) {
         codes.push(key);
+      } else {
+        codes = codes.concat(g.home);
       }
     });
     codes.sort(function (a, b) {

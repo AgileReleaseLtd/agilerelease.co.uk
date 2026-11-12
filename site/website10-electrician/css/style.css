@@ -1796,6 +1796,21 @@ textarea {
   font-size: 0.9rem;
 }
 
+/* On a 320px phone, room in the box for a whole postcode (and the placeholder) beside the button. */
+@media (max-width: 359px) {
+  .checker {
+    padding: 1rem;
+  }
+
+  .checker-row input {
+    padding-inline: 0.75rem;
+  }
+
+  .checker-row .btn {
+    padding-inline: 1rem;
+  }
+}
+
 .result {
   margin-top: 1rem;
   padding: 1rem 1.1rem;
@@ -2257,6 +2272,35 @@ textarea {
 @media (max-width: 860px) {
   .contact-grid {
     grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Under about 420px "Email hello@earthpin.example" no longer fits on one line: each number or address goes
+   on its own line, under the label, instead of pushing the buttons past the edge of the card. */
+@media (max-width: 420px) {
+  .contact-card {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .contact-actions .btn {
+    flex-wrap: wrap;
+    row-gap: 0.1rem;
+  }
+
+  .contact-actions .btn span {
+    flex-basis: 100%;
+    margin-left: 0;
+    text-align: left;
+  }
+}
+
+@media (max-width: 359px) {
+  .contact-card {
+    padding-inline: 1.25rem;
+  }
+
+  .contact-actions .btn {
+    padding-inline: 1rem;
   }
 }
 

@@ -1990,9 +1990,10 @@ button {
 
 .hygiene-scale span {
   display: grid;
+  flex: 0 1 2.2rem;
   place-items: center;
-  width: 2.2rem;
-  height: 2.2rem;
+  min-width: 0;
+  aspect-ratio: 1;
   border: 2px solid #8d7f73;
   border-radius: 50%;
   color: #5f5147;
@@ -2047,7 +2048,7 @@ button {
 
 @media (max-width: 940px) {
   .about-layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 

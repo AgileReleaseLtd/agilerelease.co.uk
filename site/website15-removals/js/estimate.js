@@ -409,7 +409,7 @@
       lines.push([travelLabel, travel, ""]);
     }
     if (emptyCost) {
-      lines.push(["Empty van to and from our yard", emptyCost, hoursText(emptyHours) + " at half rate"]);
+      lines.push(["Empty van to and from our yard", emptyCost, hoursShort(emptyHours) + " at half rate"]);
     }
     if (fuel) {
       lines.push(["Fuel and road costs", fuel, Math.round(fuelMiles) + " miles × " + moneyExact(LDp.fuelPerMile)]);
@@ -428,6 +428,14 @@
     }
     extras.forEach(function (e) {
       lines.push([e[0], e[1], ""]);
+    });
+
+    // Every line is shown in whole pounds, so the best guess is the sum of the rounded lines and the
+    // breakdown always adds up. (Pence first: 450 × 0.15 is 67.4999... in floating point.)
+    total = 0;
+    lines.forEach(function (line) {
+      line[1] = Math.round(Math.round(line[1] * 100) / 100);
+      total += line[1];
     });
 
     return { total: total, hours: hours, rate: rate, drive: drive, lines: lines, day: day, packing: packing, packingName: packingName };

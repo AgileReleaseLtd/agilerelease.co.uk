@@ -129,10 +129,22 @@
     return { first: first, last: addDays(first, data.booking.days - 1) };
   }
 
-  // Someone who has not had a patch test needs a day to come in for one, and then 48 hours.
+  // Someone who has not had a patch test needs a day to come in for one, and then 48 hours. That day is
+  // today while we are open, or else the next day we open (on a Sunday evening, the Tuesday).
   function patchTestEarliest(now) {
-    var days = Math.ceil(data.booking.patchTestHours / 24) + 1;
-    return addDays(startOfDay(now || new Date()), days);
+    now = now || new Date();
+    var testDay = startOfDay(now);
+    var mins = now.getHours() * 60 + now.getMinutes();
+    for (var i = 0; i <= 14; i++) {
+      var d = addDays(testDay, i);
+      var h = hoursOn(d);
+      // The test takes five minutes, so today counts until ten minutes before closing.
+      if (h && (i > 0 || mins <= h.close - 10)) {
+        testDay = d;
+        break;
+      }
+    }
+    return addDays(testDay, Math.ceil(data.booking.patchTestHours / 24) + 1);
   }
 
   // Start times on date d for an appointment of the given length, every booking.step minutes, finishing

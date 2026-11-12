@@ -98,8 +98,8 @@
     }
     li.appendChild(top);
     li.appendChild(el("p", "dish-desc", item.desc));
-    if (item.worth) {
-      li.appendChild(el("p", "dish-save", "You save " + B.money(item.worth - item.price) + " on the parts bought separately"));
+    if (item.saveUpTo) {
+      li.appendChild(el("p", "dish-save", "Save up to " + B.money(item.saveUpTo) + " on the parts bought separately"));
     }
     li.appendChild(el("p", "dish-allergens", allergenText(B.allergens(item))));
 
@@ -139,8 +139,8 @@
     });
     li.appendChild(pics);
     li.appendChild(el("h3", "", item.name));
-    if (item.worth) {
-      li.appendChild(el("p", "deal-tag", "Save " + B.money(item.worth - item.price)));
+    if (item.saveUpTo) {
+      li.appendChild(el("p", "deal-tag", "Save up to " + B.money(item.saveUpTo)));
     } else if (item.feeds) {
       li.appendChild(el("p", "deal-tag", "Feeds " + item.feeds));
     }
@@ -181,6 +181,17 @@
       if (event.key === "Escape" && nav.classList.contains("is-open")) {
         set(false);
         button.focus();
+      }
+    });
+    // The links come before the button in the page, so Tab from the button of an open menu would skip
+    // them and land on the page behind it: take it to the first link instead.
+    button.addEventListener("keydown", function (event) {
+      if (event.key === "Tab" && !event.shiftKey && nav.classList.contains("is-open")) {
+        var first = nav.querySelector("a");
+        if (first) {
+          event.preventDefault();
+          first.focus();
+        }
       }
     });
     window.matchMedia("(min-width: 941px)").addEventListener("change", function (event) {

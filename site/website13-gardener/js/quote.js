@@ -63,7 +63,8 @@
     return [k, FREQS[k], data.plans[k] ? data.plans[k].rhythm : ""];
   }));
   radios(form.querySelector("[data-sizes]"), "size", Object.keys(SIZES).map(function (k) {
-    var text = data.sizes[k] ? data.sizes[k].area + ". " + data.sizes[k].text : "We'll measure when we visit.";
+    var area = data.sizes[k] ? G.keepUnits(data.sizes[k].area) : "";
+    var text = area ? area.charAt(0).toUpperCase() + area.slice(1) + ". " + data.sizes[k].text : "We'll measure when we visit.";
     return [k, SIZES[k][0], text];
   }), "size-error");
   radios(form.querySelector("[data-access]"), "access", Object.keys(data.access).map(function (k) {

@@ -135,6 +135,15 @@
     document.querySelectorAll("[data-rate-name]").forEach(function (el) {
       el.textContent = D.rates[rate].long.toLowerCase();
     });
+    // The arrival range across the whole area at this rate, in the hero card before a postcode is checked.
+    // Only written when it changes, because it sits in a live region.
+    var spread = C.arrivalSpread(rate);
+    document.querySelectorAll("[data-now-spread]").forEach(function (el) {
+      var text = C.arrivalText(spread);
+      if (el.textContent !== text) {
+        el.textContent = text;
+      }
+    });
 
     var shop = C.shopStatus(now);
     document.querySelectorAll("[data-shop-status]").forEach(function (el) {

@@ -82,14 +82,36 @@
 
     var springStart = onOrAfter(md(y + 1, rules.springStartsOnOrAfter), 1);
     var springHalf = onOrAfter(md(y + 1, rules.springHalfTermOnOrAfter), 1);
+    // Easter: two weeks off from the first Monday on or after 29 March, as local schools do, whatever the
+    // date of Easter. If Good Friday comes just before the break, the spring term ends on the Thursday; if
+    // Easter Monday is the first day back, the summer term starts on the Tuesday. Any other Good Friday or
+    // Easter Monday in term is a bank holiday with no classes.
     var easterDay = easter(y + 1);
-    var easterBreak = addDays(easterDay, -6); // the Monday before Good Friday
+    var goodFriday = addDays(easterDay, -2);
+    var easterMonday = addDays(easterDay, 1);
+    var easterBreak = onOrAfter(md(y + 1, rules.easterBreakOnOrAfter), 1);
     var springEnd = addDays(easterBreak, -2); // the Saturday before it
+    if (sameDay(addDays(goodFriday, 1), springEnd)) {
+      springEnd = addDays(goodFriday, -1);
+    }
 
     var summerStart = addDays(easterBreak, 14);
+    if (sameDay(easterMonday, summerStart)) {
+      summerStart = addDays(summerStart, 1);
+    }
     var summerHalf = onOrBefore(new Date(y + 1, 4, 31), 1); // the late May bank holiday
     var summerEnd = onOrBefore(md(y + 1, rules.summerEndsOnOrBefore), 6);
     var earlyMay = onOrAfter(new Date(y + 1, 4, 1), 1); // the early May bank holiday
+    var springBank = [], summerBank = [];
+    [goodFriday, easterMonday].forEach(function (b) {
+      if (b >= springStart && b <= springEnd) {
+        springBank.push(b);
+      }
+      if (b >= summerStart && b <= summerEnd) {
+        summerBank.push(b);
+      }
+    });
+    summerBank.push(earlyMay);
 
     function term(id, name, year, start, end, half, bankHolidays) {
       return {
@@ -107,8 +129,8 @@
 
     return [
       term("autumn", "Autumn term", y, autumnStart, autumnEnd, autumnHalf),
-      term("spring", "Spring term", y + 1, springStart, springEnd, springHalf),
-      term("summer", "Summer term", y + 1, summerStart, summerEnd, summerHalf, [earlyMay])
+      term("spring", "Spring term", y + 1, springStart, springEnd, springHalf, springBank),
+      term("summer", "Summer term", y + 1, summerStart, summerEnd, summerHalf, summerBank)
     ];
   }
 

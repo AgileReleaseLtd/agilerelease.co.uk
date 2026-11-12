@@ -130,8 +130,14 @@
       button.setAttribute("aria-expanded", String(open));
     }
 
-    button.addEventListener("click", function () {
-      set(!nav.classList.contains("is-open"));
+    button.addEventListener("click", function (event) {
+      var open = !nav.classList.contains("is-open");
+      set(open);
+      // Opened from the keyboard (Enter or Space): the links come before this button in the page, so Tab
+      // would skip them. Take focus to the first link instead.
+      if (open && event.detail === 0 && nav.querySelector("a")) {
+        nav.querySelector("a").focus();
+      }
     });
     nav.addEventListener("click", function (event) {
       if (event.target.closest("a")) {

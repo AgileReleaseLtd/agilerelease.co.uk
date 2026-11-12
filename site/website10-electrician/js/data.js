@@ -433,7 +433,8 @@ window.Earthpin = {
       title: "Fault finding",
       icon: "i-fault",
       hint: "Tripping, no power, flicker",
-      base: [110, 230],
+      // One to two hours: the visit and first hour, up to two more half hours (see rates below).
+      base: [110, 180],
       // What we charge: the visit and first hour, then each half hour after. Shown on the safety page.
       rates: { firstHour: 110, halfHour: 35 },
       includes: ["The visit and the first hour", "Then charged by the half hour", "Repairs priced before we do them"],

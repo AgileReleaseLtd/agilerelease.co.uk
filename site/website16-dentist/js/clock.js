@@ -161,17 +161,18 @@
     });
   }
 
-  // The next closed day within `days` days (for a notice), or null.
-  function nextClosure(at, days) {
+  // Every closed day within `days` days (for a notice), soonest first: [{ date, reason, when }].
+  function closuresWithin(at, days) {
     at = at || now();
+    var found = [];
     for (var i = 0; i <= days; i++) {
       var d = addDays(startOfDay(at), i);
       var reason = closedReason(d);
       if (reason) {
-        return { date: d, reason: reason, when: whenWords(d, at) };
+        found.push({ date: d, reason: reason, when: whenWords(d, at) });
       }
     }
-    return null;
+    return found;
   }
 
   // Rows for an hours table, Monday first: { day, dow, text, today }.
@@ -211,7 +212,7 @@
     describe: describe,
     whenWords: whenWords,
     slotsToday: slotsToday,
-    nextClosure: nextClosure,
+    closuresWithin: closuresWithin,
     weekRows: weekRows,
     ageOn: ageOn
   };

@@ -1983,6 +1983,7 @@ textarea {
   margin: 0;
   color: var(--muted);
   font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }
 
 .hours .is-today {
@@ -2052,6 +2053,31 @@ textarea {
 @media (max-width: 520px) {
   .visit-grid {
     grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* The narrowest phones: opening times stay on one line, the contact buttons fit the card, and the email
+   address may break after the @. */
+@media (max-width: 360px) {
+  .hours {
+    font-size: 0.9rem;
+  }
+
+  .hours div {
+    gap: 0.5rem;
+    padding-inline: 0.6rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .contact-card {
+    padding-inline: 1rem;
+  }
+
+  .contact-actions .btn {
+    padding-inline: 0.9rem;
+    font-size: 0.94rem;
+    text-align: center;
   }
 }
 
@@ -2802,6 +2828,7 @@ textarea {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--muted);
+  white-space: nowrap;
 }
 
 .day-num {
@@ -3196,6 +3223,12 @@ textarea {
   font-style: var(--lean);
 }
 
+.summary-total dd.is-empty {
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .summary .btn {
   width: 100%;
 }
@@ -3261,6 +3294,21 @@ textarea {
 
   .times {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* The narrowest phones: seven days still fit across, labels included. */
+@media (max-width: 400px) {
+  .day-box {
+    padding-inline: 0;
+  }
+
+  .day-name {
+    letter-spacing: 0;
+  }
+
+  .day-free {
+    font-size: 0.62rem;
   }
 }
 

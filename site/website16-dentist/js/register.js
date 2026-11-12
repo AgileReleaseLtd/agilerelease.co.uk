@@ -112,8 +112,9 @@
       }
     } else if (care === "unsure") {
       note.textContent = nhsOpen
-        ? "No problem. We are taking new NHS patients at the moment, and we will explain the NHS and private options and prices when we call."
-        : "No problem. Our NHS list is full for adults right now, so we will explain the private options and prices, and the NHS waiting list, when we call.";
+        ? "No problem. We are taking new NHS patients " + (data.nhs.acceptingNew ? "at the moment" : "under 18") + ", and we will explain the NHS and private options and prices when we call."
+        : "No problem. Our NHS list is full for adults right now, so we will explain the private options and prices" +
+          (data.nhs.waitingList ? ", and the NHS waiting list," : "") + " when we call.";
       noteBox.classList.add("inline-note-good");
     }
     noteBox.hidden = !(care === "nhs" || care === "unsure");

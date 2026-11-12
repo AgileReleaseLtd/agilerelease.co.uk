@@ -102,7 +102,7 @@ window.Crumb = {
         { name: "Cinnamon and cardamom bun", detail: "", price: 3.6, allergens: ["gluten", "milk", "eggs"], featured: true },
         { name: "Almond croissant", detail: "Weekends", price: 4.2, allergens: ["gluten", "milk", "eggs", "nuts"], days: [6, 0] },
         { name: "Seasonal fruit danish", detail: "Fruit and custard, changes with the seasons", price: 3.9, allergens: ["gluten", "milk", "eggs"], featured: true },
-        { name: "Leek and cheddar swirl", detail: "", price: 3.8, allergens: ["gluten", "milk", "eggs"] },
+        { name: "Leek and cheddar swirl", detail: "Tuesday to Saturday", price: 3.8, allergens: ["gluten", "milk", "eggs"], days: [2, 3, 4, 5, 6] },
         { name: "Chocolate babka", detail: "Whole loaf, weekends", price: 13, allergens: ["gluten", "milk", "eggs"], days: [6, 0] }
       ]
     },

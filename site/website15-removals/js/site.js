@@ -66,8 +66,17 @@
       }
     }
 
-    button.addEventListener("click", function () {
-      set(!nav.classList.contains("is-open"));
+    button.addEventListener("click", function (event) {
+      var open = !nav.classList.contains("is-open");
+      set(open);
+      // The links come before this button in the page, so Tab would skip past the open menu. Opened
+      // from the keyboard (no pointer: detail is 0), go straight to the first link.
+      if (open && event.detail === 0) {
+        var first = nav.querySelector("a");
+        if (first) {
+          first.focus();
+        }
+      }
     });
     nav.addEventListener("click", function (event) {
       if (event.target.closest("a")) {

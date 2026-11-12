@@ -182,8 +182,9 @@ window.Gantry = {
       N18: ["Upper Edmonton", 15],
       IG8: ["Woodford Green", 15]
     },
-    // When we pick up and bring back.
+    // When we pick up and bring back. A collected car comes in at this drop-off time.
     pickup: "We collect between 8am and 9:30am and bring the car back by 6pm.",
+    dropOff: "morning",
     station: "8 minutes' walk from Blackhorse Road station (Victoria line and Overground)."
   }
 };

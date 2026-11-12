@@ -58,8 +58,14 @@
       button.setAttribute("aria-expanded", String(open));
     }
 
-    button.addEventListener("click", function () {
-      set(!nav.classList.contains("is-open"));
+    button.addEventListener("click", function (event) {
+      var open = !nav.classList.contains("is-open");
+      set(open);
+      // Opened from the keyboard (Enter or Space): the links come before this button in the page, so Tab
+      // would skip them. Take focus to the first link instead.
+      if (open && event.detail === 0 && nav.querySelector("a")) {
+        nav.querySelector("a").focus();
+      }
     });
     nav.addEventListener("click", function (event) {
       if (event.target.closest("a")) {
@@ -161,7 +167,10 @@
     }
     special.textContent = "";
     var count = 0;
-    for (var n = 0; n < 45; n++) {
+    // The next 45 days, carried on while closures follow each other (Christmas to New Year), so a run of
+    // closed days is never cut off half way.
+    var until = 45;
+    for (var n = 0; n < until; n++) {
       var day = C.addDays(C.startOfDay(today), n);
       var closed = C.closedReason(day);
       var sp = C.specialDay(day);
@@ -171,6 +180,7 @@
         li.appendChild(document.createTextNode(closed ? "closed (" + closed + ")" : hoursText(C.clinicHours(day)) + " (" + sp.name + ")"));
         special.appendChild(li);
         count++;
+        until = Math.max(until, n + 8);
       }
     }
     special.hidden = count === 0;

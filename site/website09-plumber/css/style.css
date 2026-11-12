@@ -4639,6 +4639,40 @@ textarea:focus {
   background: var(--white);
 }
 
+/* ---------- Narrow phones ---------- */
+
+/* Two equal halves, so "Emergency help" and "WhatsApp photos" stay on one line on a 360 to 400px phone. */
+@media (max-width: 400px) {
+  .callbar {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* 320 to 359px: a little less padding, so the phone numbers on the big buttons do not break in two. */
+@media (max-width: 359px) {
+  .callbar-btn {
+    font-size: 0.9375rem;
+    line-height: 1.15;
+    text-align: center;
+  }
+
+  .head-call {
+    padding: 1rem;
+  }
+
+  .head-call .btn-lg {
+    padding-inline: 0.9rem;
+  }
+
+  .contact-card {
+    padding-inline: 1rem;
+  }
+
+  .contact-actions .btn {
+    padding-inline: 0.6rem;
+  }
+}
+
 /* ---------- Motion ---------- */
 
 @media (prefers-reduced-motion: reduce) {

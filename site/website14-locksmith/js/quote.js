@@ -110,7 +110,7 @@
       return 1;
     }
     var n = Math.floor(+form.elements.count.value);
-    return n >= 1 && n <= 6 ? n : 1;
+    return n >= 1 ? Math.min(n, 6) : 1;
   }
 
   function update() {
@@ -149,9 +149,17 @@
 
   function summary(q, rate, a) {
     var text = basis(q, rate, a);
-    return text.charAt(0).toUpperCase() + text.slice(1) + "." + (q.from ? " The final price depends on your door; we confirm it before we start." : "");
+    return text.charAt(0).toUpperCase() + text.slice(1) + "." + (q.from ? " The final price depends on what we find; we confirm it before we start." : "");
   }
 
+  // Up to six locks a visit: a number outside 1 to 6 is put back in range when the field is left, so the
+  // field always matches the price and the message.
+  form.elements.count.addEventListener("change", function () {
+    var n = String(count());
+    if (!countField.hidden && form.elements.count.value !== n) {
+      form.elements.count.value = n;
+    }
+  });
   form.addEventListener("input", update);
   form.addEventListener("change", update);
 

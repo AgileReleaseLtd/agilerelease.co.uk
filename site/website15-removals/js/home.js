@@ -93,5 +93,16 @@
     event.preventDefault();
     window.location.href = link.href;
   });
+  // The form has two text fields and no submit button, so Enter (or Go on a phone keyboard) would do
+  // nothing on its own.
+  [from, to].forEach(function (field) {
+    field.addEventListener("keydown", function (event) {
+      if (event.key === "Enter" && !event.isComposing) {
+        event.preventDefault();
+        update();
+        window.location.href = link.href;
+      }
+    });
+  });
   update();
 })();

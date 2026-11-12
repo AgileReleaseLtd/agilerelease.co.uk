@@ -67,6 +67,9 @@
       <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect class="mark-bg" width="40" height="40" rx="10"/><path class="mark-hole" d="M20 7.5a7.5 7.5 0 0 0-3.6 14.1L14.5 32h11l-1.9-10.4A7.5 7.5 0 0 0 20 7.5Z"/><circle class="mark-moon" cx="20" cy="15" r="4.4"/><circle class="mark-hole" cx="21.9" cy="13.4" r="3.8"/></svg>
       <span class="brand-text"><span class="brand-name">Nightjar</span><span class="brand-sub">Locksmiths, Hornchurch</span></span>
     </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+      <svg class="icon"><use href="#i-menu"/></svg><span class="visually-hidden">Menu</span>
+    </button>
     <nav class="nav" id="site-nav" aria-label="Main">
       <ul>
         <li><a href="prices.html">Prices</a></li>
@@ -81,9 +84,6 @@
       <svg class="icon"><use href="#i-phone"/></svg>
       <span><small>24 hours, every day</small> 020 7946 0247</span>
     </a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
-      <svg class="icon"><use href="#i-menu"/></svg><span class="visually-hidden">Menu</span>
-    </button>
   </div>
 </header>
 
@@ -139,7 +139,7 @@
           <input class="area-input" id="now-postcode" name="postcode" type="text" inputmode="text" autocomplete="postal-code" autocapitalize="characters" spellcheck="false" maxlength="9" placeholder="Postcode, like RM11" aria-describedby="now-result">
           <button class="btn btn-light" type="submit">Check</button>
         </div>
-        <p class="area-result" id="now-result" data-area-result aria-live="polite">Typical arrival across our area: 20 to 70 minutes.</p>
+        <p class="area-result" id="now-result" data-area-result aria-live="polite">Typical arrival across our area right now: <span data-now-spread>20 to 70 minutes</span>.</p>
       </form>
       <p class="now-foot">A locksmith answers, not a call centre. Arrival times are typical, not promised: when you call, we tell you where we are and give you a real time.</p>
     </div>
@@ -431,7 +431,7 @@
       </details>
       <details>
         <summary>How do you check I live there?</summary>
-        <p>We ask for photo ID with the address on it, or photo ID and a letter or bill in your name to that address. If it's all inside, we open the door and you show us before we leave. The <a href="locked-out.html#proof">locked-out guide</a> lists what counts.</p>
+        <p>We ask for photo ID with the address on it, or photo ID and a letter or bill in your name to that address. If it's all inside, we open the door and you show us straight away, before we do anything else. The <a href="locked-out.html#proof">locked-out guide</a> lists what counts.</p>
       </details>
       <details>
         <summary>Will you damage my door or lock?</summary>

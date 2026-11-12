@@ -383,7 +383,7 @@
     setSum("when", whenText, !slot);
     setSum("pay", payText());
     var pay = payValue();
-    var price = t ? C.money(t.price) : "£0";
+    var price = t ? C.money(t.price) : "Not chosen yet";
     if (t && pay === "insurance") {
       price += ", billed to your insurer";
     } else if (t && pay === "package") {

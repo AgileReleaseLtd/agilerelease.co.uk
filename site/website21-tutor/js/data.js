@@ -278,10 +278,12 @@ window.Markwell = {
     autumnEndsOnOrBefore: [12, 19], // the last Saturday on or before 19 December
     springStartsOnOrAfter: [1, 4], // the first Monday on or after 4 January
     springHalfTermOnOrAfter: [2, 12], // half-term: the week of the first Monday on or after 12 February
+    easterBreakOnOrAfter: [3, 29], // Easter: two weeks off from the first Monday on or after 29 March
     summerEndsOnOrBefore: [7, 18], // the last Saturday on or before 18 July
     rebookWeeksBeforeEnd: 3 // current pupils keep their place for next term if they rebook by then
-    // Autumn half-term: the week of the last Monday in October. Easter: two weeks off from the Monday
-    // before Good Friday. Summer half-term: the week of the late May bank holiday.
+    // Autumn half-term: the week of the last Monday in October. Summer half-term: the week of the late May
+    // bank holiday. Easter: see easterBreakOnOrAfter; this matches the London Borough of Bexley's school
+    // holidays for 2027 (26 March to 9 April) and 2028 (3 to 17 April).
   },
   // Other days with no classes in term time. Format YYYY-MM-DD.
   closed: {},

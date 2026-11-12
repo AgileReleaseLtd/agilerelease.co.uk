@@ -283,7 +283,7 @@ window.Hornbeam = {
       after: "Garden plan after: a new striped lawn with a crisp steel edge, a gravel strip by the house and young shrubs along the fences."
     },
     {
-      id: "lawn-rescue", type: "lawn", area: "Worcester Park", days: "2 visits",
+      id: "lawn-rescue", type: "lawn", area: "North Cheam", days: "2 visits",
       title: "Mossy lawn brought back",
       text: "Scarified, aerated and overseeded in September, the edge recut into a smooth curve and the borders replanted. Kept on our fortnightly plan since.",
       before: "Garden plan before: a lawn with moss, bare brown patches, dandelions and ragged edges spilling into weedy beds.",

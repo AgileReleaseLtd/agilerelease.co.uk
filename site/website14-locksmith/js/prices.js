@@ -236,6 +236,14 @@
     book.href = "?job=" + key + "&count=" + q.count + "#quote";
   }
 
+  // Up to six locks a visit (as the price works out): a number outside 1 to 6 is put back in range when the
+  // field is left, so the field matches the price shown.
+  form.elements.count.addEventListener("change", function () {
+    var n = String(Math.max(1, Math.min(6, Math.floor(+form.elements.count.value) || 1)));
+    if (form.elements.count.value !== n) {
+      form.elements.count.value = n;
+    }
+  });
   form.addEventListener("input", update);
   form.addEventListener("change", update);
   form.addEventListener("submit", function (event) {

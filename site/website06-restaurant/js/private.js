@@ -27,7 +27,7 @@
     return guests >= s.seated[0] && guests <= Math.max(s.seated[1], s.standing || 0);
   }
 
-  // Minimum spends grouped into runs of days, Monday first: [["Tue to Thu", "£700"], ...].
+  // Minimum spends grouped into runs of days, Monday first: [["Tue to Thu", "£700"], ["Fri and Sat", ...], ...].
   function spendRuns(minSpend) {
     var order = [1, 2, 3, 4, 5, 6, 0];
     var runs = [];
@@ -41,7 +41,8 @@
       }
     });
     return runs.map(function (r) {
-      return [SHORT[r.from] + (r.to !== r.from ? " to " + SHORT[r.to] : ""), r.value];
+      var days = order.indexOf(r.to) - order.indexOf(r.from) + 1;
+      return [SHORT[r.from] + (days > 2 ? " to " + SHORT[r.to] : days === 2 ? " and " + SHORT[r.to] : ""), r.value];
     });
   }
 
