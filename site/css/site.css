@@ -59,6 +59,20 @@
     text-underline-offset: 2px;
 }
 
+/* ── Recent work (#websites) ──────────────────────────────────────────────────────────────────── */
+/* The projects stack on phones and tablets, and sit side by side from 1024px. */
+.recent-work {
+    display: grid;
+    gap: 2.5rem;
+}
+
+@media (min-width: 1024px) {
+    .recent-work {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2rem;
+    }
+}
+
 /* ── Sample websites ──────────────────────────────────────────────────────────────────────────── */
 .samples {
     margin-top: 6rem;

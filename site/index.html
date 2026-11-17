@@ -213,17 +213,34 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Reference: Seyma Driving School -->
-            <div class="md:col-span-2 bg-slate-50 rounded-3xl p-8 shadow-sm border border-slate-100 hover:shadow-md transition flex flex-col justify-between">
-                <div>
-                    <p class="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-6">Recent work</p>
-                    <img src="img/seymadrivingschool.png" width="1200" height="750" loading="lazy" decoding="async" alt="The Seyma Driving School home page" class="w-full rounded-2xl border border-slate-100 shadow-sm mb-6">
-                    <h3 class="text-2xl font-bold text-slate-900 mb-2">Seyma Driving School</h3>
-                    <p class="text-slate-600 mb-6">A site for an independent driving instructor in north-east London. We took the look from her flyer, set out her lessons, price and areas, added a revision page for the driving test, and built an enquiry form that opens WhatsApp with the pupil&apos;s details already written. It went from a newly registered domain to a live site in a day.</p>
+            <!-- Recent work: the projects stack, then sit side by side from 1024px (.recent-work in css/site.css) -->
+            <div class="md:col-span-2 bg-slate-50 rounded-3xl p-8 shadow-sm border border-slate-100 hover:shadow-md transition">
+                <p class="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-6">Recent work</p>
+                <div class="recent-work">
+                    <!-- Seyma Driving School -->
+                    <div class="flex flex-col justify-between">
+                        <div>
+                            <img src="img/seymadrivingschool.png" width="1200" height="750" loading="lazy" decoding="async" alt="The Seyma Driving School home page" class="w-full rounded-2xl border border-slate-100 shadow-sm mb-6">
+                            <h3 class="text-2xl font-bold text-slate-900 mb-2">Seyma Driving School</h3>
+                            <p class="text-slate-600 mb-6">A site for an independent driving instructor in north-east London. We took the look from her flyer, set out her lessons, price and areas, added a revision page for the driving test, and built an enquiry form that opens WhatsApp with the pupil&apos;s details already written. It went from a newly registered domain to a live site in a day.</p>
+                        </div>
+                        <a href="https://seymadrivingschool.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-brand-600 font-semibold hover:underline">
+                            Visit seymadrivingschool.com <i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                        </a>
+                    </div>
+
+                    <!-- sebzehali.com -->
+                    <div class="flex flex-col justify-between">
+                        <div>
+                            <img src="img/sebzehali.webp" width="1200" height="750" loading="lazy" decoding="async" alt="The sebzehali.com home page, with today&apos;s wholesale prices for the most searched-for products" class="w-full rounded-2xl border border-slate-100 shadow-sm mb-6">
+                            <h3 class="text-2xl font-bold text-slate-900 mb-2">sebzehali.com</h3>
+                            <p class="text-slate-600 mb-6">Daily wholesale fruit, vegetable and fish prices from Turkish city councils, in Turkish. We checked all 81 provinces for published price lists, and the site now reads 29 markets in 24 provinces, four times a day. Each market has its own page, each product a 90-day price chart, and a weekly page shows the biggest risers and fallers. There is no server or database to look after: it updates and publishes itself.</p>
+                        </div>
+                        <a href="https://www.sebzehali.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-brand-600 font-semibold hover:underline">
+                            Visit sebzehali.com <i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                        </a>
+                    </div>
                 </div>
-                <a href="https://seymadrivingschool.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-brand-600 font-semibold hover:underline">
-                    Visit seymadrivingschool.com <i aria-hidden="true" class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
-                </a>
             </div>
 
             <!-- What you get -->
